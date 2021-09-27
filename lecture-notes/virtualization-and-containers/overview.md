@@ -20,6 +20,10 @@
 | --- | --- |
 | 15 minutes | Slides |
 
+![A sketch of virtual machines \label{fig:vm-and-containers:vm-sketch}](virtualmachine-sketch.png)
+
+![A sketch of containers \label{fig:vm-and-containers:container-sketch}](container-sketch.png)
+
 - What is virtualization and what is containerization?
     - What problems do they solve? Why do we need them?
 - What are the differences between VMs and containers?
@@ -105,6 +109,7 @@
 - Shortly recap what we have learned about containers.
     - Fenced-off, relies on capabilities of OS etc.
 - LXD/LXC and its container registry [Linux containers](https://linuxcontainers.org/)
+- Short and incomplete overview over container technologies: Docker, Singularity, lxc/lxd, podman...
 
 **Note**: Students not running Linux or without sufficient rights on their machine should be able to use a virtual machine to run Docker/Singularity on their machine if they could get that installed.
 ## Docker

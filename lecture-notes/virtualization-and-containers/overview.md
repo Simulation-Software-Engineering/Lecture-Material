@@ -122,6 +122,8 @@
 - Short backstory:
     - Started as wrapper around lxc/lxd (Linux' native container format)
 - Quite strong encapsulation from Host (**TODO**: Check for file exchange, networking etc.)
+- Common commands:
+    - TODO
 - Explain text-based format (infrastructure as code)
   ```Dockerfile
   # Example taken from https://github.com/carlossg/docker-maven
@@ -163,26 +165,37 @@
     - Direct network and (some) hardware access (GPUs, accelerators)
     - Mounts common/important directories
     - Images can be based on Docker images (**TODO** check this). This is nice to prebuild parts of the image as Docker image since Singularity's format is not layer based. This means you have to rebuilt from scratch if it fails.
+    - Small runtime penalty.
 - Nowadays available on many HPC platforms
 - Show text-based file format. Is similar to Docker
-
+- Common commands:
+    - TODO
 ## Singularity practical example
 
 | Duration | Format |
 | --- | --- |
 | 15 minutes | Demo |
 
+- Write some Singularity recipe, build container and run it.
+    - Same example as for Docker?
+- Show the mounted filesystems and hardware access.
+- Show that we cannot run things as root.
+- (Optional if enoug time): Show Docker and Singulity container side by side
+
 ## Concluding remarks
 
 | Duration | Format |
 | --- | --- |
-| 5 minutes | Demo |
+| 5 minutes | Slides |
 
+- Docker is popular for encapsulating environments for testing (CI/CD, DevOps) as we will see later.
+- Singularity is a bit more "niche", but important in the computing/simulation business.
 
 ## Further reading
 
 ### Other
 
+- Stackoverflow discussion between creator of Docker and Vagrant on Stackoverflow: ["Should I use Vagrant or Docker for creating an isolated environment?"](https://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-for-creating-an-isolated-environment)
 
 ### References
 
@@ -199,3 +212,4 @@
 - [lxc/lxd](https://linuxcontainers.org/)
 - [podman](https://podman.io/)
 - [Linux containers](https://linuxcontainers.org/)
+- Singularity paper: [Singularity: Scientific containers for mobility of compute](https://doi.org/10.1371/journal.pone.0177459)

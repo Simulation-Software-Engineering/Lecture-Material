@@ -25,10 +25,10 @@
 - What are the differences between VMs and containers?
     - Virtual machines (VWs)
         - Emulating a complete computer.
-        - Has a (type 1/2) hypervisor. Type 1 runs on bare metal while type 2 runs within an operating system.
+        - Has a (type 1/2) hypervisor. Type 1 runs on bare metal while type 2 runs within an operating system. Distinction not always clear.
         - Might need/benefit from virtualization technologies (VT-X)
         - Great flexibility. Can run (normally) any operating system that runs on the virtualized platform.
-        - Strict separation from host operating system.
+        - Strict separation from host operating system. (Popular for safety critical tasks: c't banking os, Desinfec't, Remote laptops)
     - Containers
         - Low(er) overhead than virtual machines.
         - Container operates in "fenced off" part of the operating system (`cgroups`).
@@ -102,7 +102,9 @@
 | --- | --- |
 | 10 minutes | Slides |
 
-- Shortly recap what we have learned about container and virtual machines and what the differences are.
+- Shortly recap what we have learned about containers.
+    - Fenced-off, relies on capabilities of OS etc.
+- LXD/LXC and its container registry [Linux containers](https://linuxcontainers.org/)
 
 **Note**: Students not running Linux or without sufficient rights on their machine should be able to use a virtual machine to run Docker/Singularity on their machine if they could get that installed.
 ## Docker
@@ -111,17 +113,53 @@
 | --- | --- |
 | 15 minutes | Slides |
 
+- The most popular container framework one finds at the moment
+- Short backstory:
+    - Started as wrapper around lxc/lxd (Linux' native container format)
+- Quite strong encapsulation from Host (**TODO**: Check for file exchange, networking etc.)
+- Explain text-based format (infrastructure as code)
+  ```Dockerfile
+  # Example taken from https://github.com/carlossg/docker-maven
+  FROM openjdk:7-jdk-alpine
+
+  RUN apk add --no-cache curl tar bash
+  ```
+- One can pre-build own images to reuse them later.
+- Has a layer based build process (which is nice).
+- Images can be shared via DockerHub
+- Building an image can be pain in the neck as it depends on a fast internet connection.
+- Installation issue/security risks: Docker user group is basically root
+    - Rootless installation of Docker
+
 ## Docker practical example
 
 | Duration | Format |
 | --- | --- |
 | 15 minutes | Demo |
 
+- Write some Dockerfile, build container and run it.
+    - Cowsay example? That could be easily reused on the Singularity example.
+
 ## Singularity
 
 | Duration | Format |
 | --- | --- |
 | 15 minutes | Slides |
+
+- Back story
+    - Created at Lawrence Berkeley National Laboratory but now developed by SyLabs
+    - Based on Go
+- Container solution with high-performance computing in mind
+    - "Mobility of compute", "Bring your own environment"
+        - Mobility of your compute environment
+        - Normally immutable images
+    - Integration in scheduling systems
+    - Runs in *user-space* (no root privilege escalation)
+    - Direct network and (some) hardware access (GPUs, accelerators)
+    - Mounts common/important directories
+    - Images can be based on Docker images (**TODO** check this). This is nice to prebuild parts of the image as Docker image since Singularity's format is not layer based. This means you have to rebuilt from scratch if it fails.
+- Nowadays available on many HPC platforms
+- Show text-based file format. Is similar to Docker
 
 ## Singularity practical example
 
@@ -151,7 +189,7 @@
 - [Vagrant](https://www.vagrantup.com/)
 ### Containers
 
-- [docker](https://www.docker.com/)
+- [Docker](https://www.docker.com/)
 - [Singularity](https://sylabs.io/)
 - [lxc/lxd](https://linuxcontainers.org/)
 - [podman](https://podman.io/)

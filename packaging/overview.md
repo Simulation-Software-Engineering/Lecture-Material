@@ -70,3 +70,15 @@ Material: TODO: create a repo with raw Python code, master branch is protected, 
 2. Upload package to TestPyPI.
 3. Observe the remote webpage of the package and note down which information is parsed to the remote site.
 4. Install the package on your local machine using `pip`.
+
+## Advanced concepts and variants of packaging code
+
+TODO
+
+## Further reading
+
+* [The Hitchhiker's Guide to Python](https://docs.python-guide.org/shipping/packaging/)
+* [readthedocs guide](https://python-packaging.readthedocs.io/en/latest/)
+* [Python Packaging User Guide](https://packaging.python.org/)
+
+## Other

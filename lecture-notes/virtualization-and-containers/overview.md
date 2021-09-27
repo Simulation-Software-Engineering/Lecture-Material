@@ -121,6 +121,7 @@
 - The most popular container framework one finds at the moment
 - Short backstory:
     - Started as wrapper around lxc/lxd (Linux' native container format)
+- Docker, Docker Engine, Docker Compose, Docker Hub? What is going on?
 - Quite strong encapsulation from Host (**TODO**: Check for file exchange, networking etc.)
 - Common commands:
     - TODO
@@ -199,7 +200,8 @@
 
 ### References
 
-- [Docker documentation](https://docs.docker.com/engine/install/)
+- [Docker documentation](https://docs.docker.com/)
+- [Singularity documentation](https://sylabs.io/docs/)
 
 ### Virtualization tools
 
@@ -208,6 +210,7 @@
 ### Containers
 
 - [Docker](https://www.docker.com/)
+- [Docker Hub](https://hub.docker.com/)
 - [Singularity](https://sylabs.io/)
 - [lxc/lxd](https://linuxcontainers.org/)
 - [podman](https://podman.io/)

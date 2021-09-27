@@ -1,10 +1,18 @@
-# 6.1 -- Thu, November 25, 2021
+# Timetable
+
+## 6.1 -- Thu, November 25, 2021
 
 * *10* Interaction with students on prior experience with `pip`, Conda, PyPI
-* *20* Introduction to packaging
+* *30* Introduction to packaging
 
 questions
 
-* *15* Using a package manager
+* *20* Using a package manager
 
-# 6.2 -- Fri, November 26, 2021
+questions
+
+* *30* Exericse part 1
+
+## 6.2 -- Fri, November 26, 2021
+
+* *30* Exericse part 2

@@ -192,6 +192,15 @@
 - Docker is popular for encapsulating environments for testing (CI/CD, DevOps) as we will see later.
 - Singularity is a bit more "niche", but important in the computing/simulation business.
 
+## Exercise
+
+- [ ] Install Singularity (optional?)
+    - Compile by hand
+        - Install Go
+        - Compile Singularity
+    - Install Debian package or similar
+
+
 ## Further reading
 
 ### Other

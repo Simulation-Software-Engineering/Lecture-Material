@@ -1,0 +1,821 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="58.208332mm"
+   height="48.947918mm"
+   viewBox="0 0 58.208332 48.947916"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
+   sodipodi:docname="02-virtualmachines-containers.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-71.229023"
+     inkscape:cy="-126.88544"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:snap-bbox="true"
+     inkscape:window-width="1916"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="40"
+     inkscape:window-maximized="0"
+     inkscape:snap-text-baseline="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid8450"
+       originx="-75.406248"
+       originy="-238.12501" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-75.40625,-9.9270811)">
+    <rect
+       style="opacity:1;fill:#d8dee9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26250723;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8452"
+       width="58.208332"
+       height="48.947918"
+       x="3.96875"
+       y="9.927083" />
+    <rect
+       style="opacity:1;fill:#5e81ac;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22019272;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8454"
+       width="52.916664"
+       height="5.2916651"
+       x="6.6145835"
+       y="50.9375" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="21.166666"
+       y="45.869076"
+       id="text8458"><tspan
+         sodipodi:role="line"
+         id="tspan8456"
+         x="21.166666"
+         y="49.614582"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"></tspan><tspan
+         sodipodi:role="line"
+         x="21.166666"
+         y="54.90625"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8460">Hardware</tspan></text>
+    <rect
+       style="opacity:1;fill:#81a1c1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22019269;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8454-3"
+       width="52.916668"
+       height="5.2916627"
+       x="6.6145835"
+       y="44.322918" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="14.552083"
+       y="39.254494"
+       id="text8458-3"><tspan
+         sodipodi:role="line"
+         id="tspan8456-5"
+         x="14.552083"
+         y="43"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332" /><tspan
+         sodipodi:role="line"
+         x="14.552083"
+         y="48.291668"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8460-6">Operating system</tspan></text>
+    <rect
+       style="opacity:1;fill:#88c0d0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22019272;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8454-3-2"
+       width="52.916668"
+       height="5.2916646"
+       x="6.6145835"
+       y="37.708336" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="14.552083"
+       y="32.639912"
+       id="text8458-3-9"><tspan
+         sodipodi:role="line"
+         id="tspan8456-5-1"
+         x="14.552083"
+         y="36.385418"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332" /><tspan
+         sodipodi:role="line"
+         x="14.552083"
+         y="41.677086"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8544">Container system</tspan></text>
+    <rect
+       style="opacity:1;fill:#8fbcbb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22712049;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8548-6"
+       width="25.135418"
+       height="19.84375"
+       x="34.395828"
+       y="16.541668" />
+    <rect
+       style="opacity:1;fill:#bf616a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.31739685;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8594-1"
+       width="22.489584"
+       height="5.2916665"
+       x="35.718746"
+       y="23.15625" />
+    <rect
+       style="opacity:1;fill:#d08770;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.31739679;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8594-3-8"
+       width="22.489584"
+       height="5.2916656"
+       x="35.718746"
+       y="29.770834" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="39.313454"
+       y="33.619385"
+       id="text8615-7"><tspan
+         sodipodi:role="line"
+         id="tspan8613-9"
+         x="39.313454"
+         y="33.619385"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Software</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="37.12225"
+       y="26.97794"
+       id="text8615-6-2"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-0"
+         x="37.12225"
+         y="26.97794"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="38.271915"
+       y="20.938194"
+       id="text8615-6-6-2"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-2-3"
+         x="38.271915"
+         y="20.938194"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Container</tspan></text>
+    <rect
+       style="opacity:1;fill:#d8dee9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26250723;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8452-7"
+       width="58.208332"
+       height="48.947918"
+       x="75.40625"
+       y="9.9270811"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:#8fbcbb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.24879803;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8548-1"
+       width="25.135418"
+       height="23.812498"
+       x="78.052078"
+       y="12.572917"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:#bf616a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.31739685;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8594-9"
+       width="22.489584"
+       height="5.2916665"
+       x="79.375"
+       y="21.833334"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:#81a1c1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.35486042;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8594-3-4"
+       width="22.489584"
+       height="6.614583"
+       x="79.375"
+       y="28.447916"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="91.28125"
+       y="31.09375"
+       id="text8615-78"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8613-4"
+         x="91.28125"
+         y="31.09375"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';text-align:center;text-anchor:middle;fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Operating</tspan><tspan
+         sodipodi:role="line"
+         x="91.28125"
+         y="34.621529"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';text-align:center;text-anchor:middle;fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8991">System</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="80.778503"
+       y="25.65502"
+       id="text8615-6-5"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-03"
+         x="80.778503"
+         y="25.65502"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="89.958336"
+       y="16.541666"
+       id="text8615-6-6-6"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-2-1"
+         x="89.958336"
+         y="16.541666"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';text-align:center;text-anchor:middle;fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Virtual</tspan><tspan
+         sodipodi:role="line"
+         x="89.958336"
+         y="20.951387"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';text-align:center;text-anchor:middle;fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8989">machine</tspan></text>
+    <rect
+       style="opacity:1;fill:#8fbcbb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22712049;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8548-6-7"
+       width="25.135418"
+       height="19.84375"
+       x="6.6145806"
+       y="16.541668" />
+    <rect
+       style="opacity:1;fill:#bf616a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.31739685;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8594-1-4"
+       width="22.489584"
+       height="5.2916665"
+       x="7.9374986"
+       y="23.15625" />
+    <rect
+       style="opacity:1;fill:#d08770;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.31739679;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8594-3-8-4"
+       width="22.489584"
+       height="5.2916656"
+       x="7.9374986"
+       y="29.770836" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="11.532207"
+       y="33.619385"
+       id="text8615-7-3"><tspan
+         sodipodi:role="line"
+         id="tspan8613-9-07"
+         x="11.532207"
+         y="33.619385"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Software</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="9.3410025"
+       y="26.97794"
+       id="text8615-6-2-8"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-0-6"
+         x="9.3410025"
+         y="26.97794"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="10.490667"
+       y="20.938194"
+       id="text8615-6-6-2-8"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-2-3-8"
+         x="10.490667"
+         y="20.938194"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Container</tspan></text>
+    <rect
+       style="opacity:1;fill:#5e81ac;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22019272;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8454-4"
+       width="52.916668"
+       height="5.2916651"
+       x="78.052086"
+       y="50.937504"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="92.604172"
+       y="45.86908"
+       id="text8458-31"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8456-4"
+         x="92.604172"
+         y="49.614586"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332" /><tspan
+         sodipodi:role="line"
+         x="92.604172"
+         y="54.906254"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8460-9">Hardware</tspan></text>
+    <rect
+       style="opacity:1;fill:#81a1c1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22019269;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8454-3-20"
+       width="52.916668"
+       height="5.2916627"
+       x="78.052086"
+       y="44.322922"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="85.989586"
+       y="39.254498"
+       id="text8458-3-6"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8456-5-8"
+         x="85.989586"
+         y="43.000004"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332" /><tspan
+         sodipodi:role="line"
+         x="85.989586"
+         y="48.291672"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8460-6-9">Operating system</tspan></text>
+    <rect
+       style="opacity:1;fill:#88c0d0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22019272;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8454-3-2-2"
+       width="52.916668"
+       height="5.2916646"
+       x="78.052086"
+       y="37.708336"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="92.604164"
+       y="32.639908"
+       id="text8458-3-9-6"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8456-5-1-6"
+         x="92.604164"
+         y="36.385414"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332" /><tspan
+         sodipodi:role="line"
+         x="92.604164"
+         y="41.677082"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8544-4">Hypervisor</tspan></text>
+    <rect
+       style="opacity:1;fill:#8fbcbb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.24879803;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8548-1-9"
+       width="25.135418"
+       height="23.812498"
+       x="105.83334"
+       y="12.572916"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:#bf616a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.31739685;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8594-9-5"
+       width="22.489584"
+       height="5.2916665"
+       x="107.15625"
+       y="21.833334"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:#81a1c1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.35486042;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8594-3-4-0"
+       width="22.489584"
+       height="6.6145835"
+       x="107.15625"
+       y="28.447916"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222223px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="119.0625"
+       y="31.09375"
+       id="text8615-78-4"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8613-4-8"
+         x="119.0625"
+         y="31.09375"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';text-align:center;text-anchor:middle;fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Operating</tspan><tspan
+         sodipodi:role="line"
+         x="119.0625"
+         y="34.621529"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';text-align:center;text-anchor:middle;fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8991-7">System</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="108.55976"
+       y="25.65502"
+       id="text8615-6-5-1"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-03-7"
+         x="108.55976"
+         y="25.65502"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="117.73959"
+       y="16.541666"
+       id="text8615-6-6-6-2"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-2-1-7"
+         x="117.73959"
+         y="16.541666"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';text-align:center;text-anchor:middle;fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Virtual</tspan><tspan
+         sodipodi:role="line"
+         x="117.73959"
+         y="20.951387"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';text-align:center;text-anchor:middle;fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8989-2">machine</tspan></text>
+    <rect
+       style="opacity:1;fill:#d8dee9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.26250723;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8452-2"
+       width="58.208332"
+       height="48.947918"
+       x="2.6458359"
+       y="62.843746" />
+    <rect
+       style="opacity:1;fill:#5e81ac;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22019272;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8454-6"
+       width="52.916668"
+       height="5.2916651"
+       x="5.2916641"
+       y="103.85416" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="19.843758"
+       y="98.785744"
+       id="text8458-1"><tspan
+         sodipodi:role="line"
+         id="tspan8456-0"
+         x="19.843758"
+         y="102.53125"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332" /><tspan
+         sodipodi:role="line"
+         x="19.843758"
+         y="107.82291"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8460-61">Hardware</tspan></text>
+    <rect
+       style="opacity:1;fill:#81a1c1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22019269;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8454-3-5"
+       width="52.916668"
+       height="5.2916627"
+       x="5.2916641"
+       y="97.239578" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="13.229164"
+       y="92.171158"
+       id="text8458-3-94"><tspan
+         sodipodi:role="line"
+         id="tspan8456-5-9"
+         x="13.229164"
+         y="95.916664"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332" /><tspan
+         sodipodi:role="line"
+         x="13.229164"
+         y="101.20833"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8460-6-0">Operating system</tspan></text>
+    <rect
+       style="opacity:1;fill:#88c0d0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22019272;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8454-3-2-9"
+       width="52.916668"
+       height="5.2916646"
+       x="5.2916641"
+       y="90.625" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="13.229164"
+       y="85.55658"
+       id="text8458-3-9-1"><tspan
+         sodipodi:role="line"
+         id="tspan8456-5-1-7"
+         x="13.229164"
+         y="89.302086"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332" /><tspan
+         sodipodi:role="line"
+         x="13.229164"
+         y="94.59375"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8544-7">Container system</tspan></text>
+    <rect
+       style="opacity:1;fill:#8fbcbb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.17592679;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8548-6-1"
+       width="25.135418"
+       height="11.906253"
+       x="33.072914"
+       y="77.395836" />
+    <rect
+       style="opacity:1;fill:#bf616a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.31739685;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8594-1-1"
+       width="22.489584"
+       height="5.2916665"
+       x="34.395832"
+       y="82.6875" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="35.799335"
+       y="86.509193"
+       id="text8615-6-2-7"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-0-67"
+         x="35.799335"
+         y="86.509193"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="37.041668"
+       y="81.364586"
+       id="text8615-6-6-2-3"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-2-3-6"
+         x="37.041668"
+         y="81.364586"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Container</tspan></text>
+    <rect
+       style="opacity:1;fill:#8fbcbb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.17592679;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8548-6-7-5"
+       width="25.135418"
+       height="11.906253"
+       x="5.2916641"
+       y="77.395836" />
+    <rect
+       style="opacity:1;fill:#bf616a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.31739685;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8594-1-4-6"
+       width="22.489584"
+       height="5.2916665"
+       x="6.6145806"
+       y="82.6875" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="8.0180845"
+       y="86.509193"
+       id="text8615-6-2-8-8"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-0-6-1"
+         x="8.0180845"
+         y="86.509193"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="9.260417"
+       y="81.364586"
+       id="text8615-6-6-2-8-2"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-2-3-8-9"
+         x="9.260417"
+         y="81.364586"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Container</tspan></text>
+    <rect
+       style="opacity:1;fill:#d8dee9;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22835965;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8452-2-3"
+       width="58.208332"
+       height="37.041656"
+       x="2.6458333"
+       y="127.66666"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:#5e81ac;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22019272;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8454-6-9"
+       width="52.916668"
+       height="5.2916651"
+       x="5.2916617"
+       y="156.77083"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="19.843758"
+       y="151.70241"
+       id="text8458-1-0"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8456-0-8"
+         x="19.843758"
+         y="155.44792"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332" /><tspan
+         sodipodi:role="line"
+         x="19.843758"
+         y="160.73958"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8460-61-8">Hardware</tspan></text>
+    <rect
+       style="opacity:1;fill:#81a1c1;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22019269;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8454-3-5-5"
+       width="52.916668"
+       height="5.2916627"
+       x="5.2916617"
+       y="150.15625"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="13.229161"
+       y="145.08783"
+       id="text8458-3-94-0"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8456-5-9-9"
+         x="13.229161"
+         y="148.83334"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332" /><tspan
+         sodipodi:role="line"
+         x="13.229161"
+         y="154.125"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8460-6-0-6">Operating system</tspan></text>
+    <rect
+       style="opacity:1;fill:#88c0d0;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.22019272;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8454-3-2-9-3"
+       width="52.916668"
+       height="5.2916646"
+       x="5.2916617"
+       y="143.54167"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="13.229161"
+       y="138.47325"
+       id="text8458-3-9-1-8"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8456-5-1-7-5"
+         x="13.229161"
+         y="142.21877"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332" /><tspan
+         sodipodi:role="line"
+         x="13.229161"
+         y="147.51042"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332"
+         id="tspan8544-7-6">Container system</tspan></text>
+    <rect
+       style="opacity:1;fill:#8fbcbb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.17592679;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8548-6-1-1"
+       width="25.135418"
+       height="11.906253"
+       x="33.07291"
+       y="130.3125"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:#bf616a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.31739685;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8594-1-1-1"
+       width="22.489584"
+       height="5.2916665"
+       x="34.395828"
+       y="135.60416"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="35.799335"
+       y="139.42587"
+       id="text8615-6-2-7-5"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-0-67-9"
+         x="35.799335"
+         y="139.42587"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="37.041664"
+       y="134.28125"
+       id="text8615-6-6-2-3-8"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-2-3-6-4"
+         x="37.041664"
+         y="134.28125"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Container</tspan></text>
+    <rect
+       style="opacity:1;fill:#8fbcbb;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.17592679;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8548-6-7-5-8"
+       width="25.135418"
+       height="11.906253"
+       x="5.2916617"
+       y="130.3125"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="opacity:1;fill:#bf616a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.31739685;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       id="rect8594-1-4-6-1"
+       width="22.489584"
+       height="5.2916665"
+       x="6.6145778"
+       y="135.60416"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="8.0180826"
+       y="139.42587"
+       id="text8615-6-2-8-8-0"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-0-6-1-3"
+         x="8.0180826"
+         y="139.42587"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Application</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.52777767px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';letter-spacing:0px;word-spacing:0px;fill:#2e3440;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="9.2604151"
+       y="134.28125"
+       id="text8615-6-6-2-8-2-0"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan8613-0-2-3-8-9-4"
+         x="9.2604151"
+         y="134.28125"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';fill:#2e3440;fill-opacity:1;stroke-width:0.26458332">Container</tspan></text>
+  </g>
+</svg>

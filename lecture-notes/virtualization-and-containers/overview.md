@@ -20,9 +20,9 @@
 | --- | --- |
 | 15 minutes | Slides |
 
-![A sketch of virtual machines \label{fig:vm-and-containers:vm-sketch}](virtualmachine-sketch.png)
+![A sketch of virtual machines](virtualmachine-sketch.png)
 
-![A sketch of containers \label{fig:vm-and-containers:container-sketch}](container-sketch.png)
+![A sketch of containers](container-sketch.png)
 
 - What is virtualization and what is containerization?
     - What problems do they solve? Why do we need them?
@@ -145,8 +145,9 @@
 | --- | --- |
 | 15 minutes | Demo |
 
-- Write some Dockerfile, build container and run it.
+- Write some Dockerfile, build container and run it. Should be a simple container.
     - Cowsay example? That could be easily reused on the Singularity example.
+- Show an existing container. Could be FEniCS or DuMuX.
 
 ## Singularity
 
@@ -194,11 +195,19 @@
 
 ## Exercise
 
-- [ ] Install Singularity (optional?)
+1. [ ] Build a VirtualBox VM managed by Vagrand
+2. [ ] Build a Docker image containing some tooling for C++ and Python
+    - Has to be able to run some non-common dependency?! Maybe install preCICE in there.
+        - If preCICE, one could install it once from source and once as binary.
+    - Automatically test this via some GitHub action.
+        - Check for correct base image.
+        - Build the image.
+        - Check that code runs.
+3.  [ ] Install Singularity (optional?)
     - Compile by hand
         - Install Go
         - Compile Singularity
-    - Install Debian package or similar
+    - Install tooling as
 
 
 ## Further reading

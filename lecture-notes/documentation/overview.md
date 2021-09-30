@@ -211,6 +211,7 @@
 - DocString
     - Documentation in code
     - Generate API overview
+- Show some C++ and/or Python code example and generate the API documentation for this.
 
 ### Project and user documentation
 
@@ -235,6 +236,18 @@
         - Site generator
         - Python
         - Heavily integrated in the Python ecosystem for documentation and homepage generation.
+
+#### Demo
+
+- Create initial project for mkdocs and extend it.
+    - `mkdocs new PROJECTNAME`
+    - `mkdocs serve`
+    - Edit name of project in `mkdocs.yml`
+    - Add another file `example.md` in `docs/` and add it to `mkdocs.yml`
+    - Write something in the markdown files and check the rebuild home page.
+    - Change theme.
+- Repeat for Sphinx?
+
 
 ### Publication of user documentation
 

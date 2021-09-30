@@ -8,7 +8,7 @@
 | --- | --- |
 | 10 | Kick-off/Quiz |
 | 10 | Introduction |
-| 15 | Lightweight markup languages |
+| 10 | Lightweight markup languages |
 | 20 | API documentation |
 | 30 | Project and user documentation |
 | 10 | pandoc |

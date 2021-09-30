@@ -8,7 +8,10 @@
 | --- | --- |
 | 10 | Kick-off/Quiz |
 | 10 | Introduction |
-| XX | TBD |
+| 15 | Lightweight markup languages |
+| 20 | API documentation |
+| 30 | Project and user documentation |
+| 10 | pandoc |
 
 ## X Y.1 -- WEEKDAY, MONTH DAY, YEAR
 

@@ -194,14 +194,14 @@
     keyC:
         keyD: some suboption
     ```
+- In general: Use "simple" to write style that generates easy to read and search documentation.
 
-## Tools
+## API documentation
 
 | Duration | Format |
 | --- | --- |
-| 10 minutes | Slides |
+| 20 minutes | Slides |
 
-- In general: "Simple" to write style that generates easy to read and search documentation.
 - API documentation:
     - C++: Doxygen
     - Python: DocString
@@ -211,34 +211,51 @@
 - DocString
     - Documentation in code
     - Generate API overview
-- Project and user documentation
-    - Wiki (Most do not allow Docs as code)
-    - Markdown:
-        - [Jekyll](https://jekyllrb.com/): Ruby, Static site generator, initially microblogging engine, but can be use for everything.
-            - Examples:
-                - [precice.org](https://precice.org)
-        - [mkdocs](https://www.mkdocs.org): Python, Static site generator, focuses on documentation.
-            - Examples:
-                - [Our course homepage](https://simulation-software-engineering.github.io/homepage/) is based on mkdocs using the [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) theme. This includes some markdown extensions.
-        - HedgeDoc?
-            - Browser based.
-            - Not really documenting of code, but for meetings, project ideas etc.
-            - Allows to make slides as well.
-    - reStructuredText:
-        - Sphinx
-            - Site generator
-            - Python
-            - Heavily integrated in the Python ecosystem for documentation and homepage generation.
-    - Publication of documentations
-        - [ReadTheDocs](https://readthedocs.org/)
-        - GitHub Pages
-    - CI/CD for checking and deployment.
-        - markdownlint:
-            -Ruby
+
+### Project and user documentation
+
+| Duration | Format |
+| --- | --- |
+| 20 | Slides |
+
+- Wiki (Most do not allow Docs as code)
+- Markdown:
+    - [Jekyll](https://jekyllrb.com/): Ruby, Static site generator, initially microblogging engine, but can be use for everything.
+        - Examples:
+            - [precice.org](https://precice.org)
+    - [mkdocs](https://www.mkdocs.org): Python, Static site generator, focuses on documentation.
+        - Examples:
+            - [Our course homepage](https://simulation-software-engineering.github.io/homepage/) is based on mkdocs using the [mkdocs-material](https://squidfunk.github.io/mkdocs-material/) theme. This includes some markdown extensions.
+    - HedgeDoc?
+        - Browser based.
+        - Not really documenting of code, but for meetings, project ideas etc.
+        - Allows to make slides as well.
+- reStructuredText:
+    - Sphinx
+        - Site generator
+        - Python
+        - Heavily integrated in the Python ecosystem for documentation and homepage generation.
+
+### Publication of user documentation
+
+| Duration | Format |
+| --- | --- |
+| 10 of 30 minutes | Slides |
+
+- Publication of documentations
+    - [ReadTheDocs](https://readthedocs.org/)
+    - GitHub Pages
+- CI/CD for checking and deployment.
+    - markdownlint:
+        -Ruby
 - Focus on ways to organize "docs as code". (Git lecture "If git diff does not work, it is the wrong format".)
 
 
 ## A love letter to pandoc
+
+| Duration | Format |
+| --- | --- |
+| 20 minutes | Slides |
 
 - Written in Haskell
 - If you have structured text, it is easy to convert it to other formats
@@ -249,6 +266,10 @@
 
 ## Exercise
 
+| Duration | Format |
+| --- | --- |
+| 80-90 minutes | Exercise |
+
 - mkdocs
     - Set up a new project
     - Fill it with content
@@ -258,7 +279,9 @@
     - Do the same as for mkdocs, but now with sphinx
     - Alternative to GitHub pages one could publish something at ReadTheDocs.
 - pandoc
-    - Write some CV example.
+    - Write some CV example. This combines YAML with some LaTeX template.
+        - Add some extra information.
+        - Work smartly with lists of parameters. If one has a list of information, one wants proper separation via a comma for example.
 
 ## Further reading
 

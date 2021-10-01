@@ -2,7 +2,7 @@
 
 * **10** Corona rules
 * **10** Course intro (similar to video)
-* **10** Course rules (exercises, challenges, grading, contributing to course, GitHub account needed, SIM GitLab)
+* **10** Course rules (exercises, challenges, grading, contributing to course (we do it for the first time!), GitHub account needed (everybody OK with this?), SIM GitLab)
 * **10** Course planning: when/what, which chapters, when student presentations
 * **10** Intro to simulation software engineering
 

@@ -46,16 +46,17 @@ Format: slides
 Duration: 15 mins
 Format: poll, slides, demo
 
-*  Expert level poll: ask students to estimate their level.
+* Expert level poll on git: ask students to estimate their level.
   * Beginner: I have hardly ever used Git
   * User: pull, commit, push, status, diff
   * Developer: fork, branch, merge, checkout
-  * Maintainer: rebase, squash,
-  * Owner: Test me, I know it all
-  
-* show some overview picture: https://images.app.goo.gl/7bq21CbKk53HB7h57 and discuss
+  * Maintainer: rebase, squash, cherry-pick, bisect
+  * Owner: submodules
+
+* show some overview picture: https://merely-useful.tech/py-rse/git-cmdline.html#fig:git-cmdline-remote and discuss
   
 * `git --help`, `git commit --help`
+* also show incomplete statement `git comm`
 
 * Git, GitHub and GitLab: TODO
   * There is also SourceForge and Bitbucket
@@ -65,11 +66,14 @@ Format: poll, slides, demo
 Duration: 20 mins
 Format: demo
 
+Starting remark: There is not *the one solution* how to do things with git. I'll show you what I typically use.
+
 * (1) Look at GitHub 
   * organization, precice repository, forks, my fork
   
 * (2) working directory: 
-  * `git remote -v`
+  * `git remote -v` (I have upstream, myfork, ...)
+  * Mention difference between ssh and https
   * get newest changes `git pull upstream develop`
   * `git log` -> ~/.gitconfig, also check log on GitHub
   * `git branch`
@@ -78,12 +82,12 @@ Format: demo
   * btw, fancy ZSH shell shows git branches 
 
 * (3) first commit
-  * `vi src/com/Action.hpp` 
   * `git status` -> always tells you what you can do
+  * `vi src/action/Action.hpp`  -> add `#include "MagicHeader.hpp"`
   * `git diff`, `git diff src/com/Action.hpp` --color-words
   * `git add`, `git status`
   * `git commit` "Include MagicHeader in Action.hpp"
-  * `git status`, `git log`
+  * `git status`, `git log`, `git log -p`
   
 * (4) Change or revert stuff
   * I forgot to add sth: `git reset --soft HEAD~1`, `git status`
@@ -98,18 +102,19 @@ Format: demo
   * `git stash`
   * `git stash pop`
   
-* (6) squash
-  * do two commits, `git log`
-  * `git rebase -i HEAD~2` (i=interactive)
-  * change second to squash to only have first commit
-  * `git log`
-  * but really all changes? `git diff HEAD~1`
+* (6) create PR
+  * create commit again
+  * preview what will be in PR: `git diff develop..test_changes`
+  * `git push -u myfork/test_changes`
+  * explain target branch and "somebody else can edit"
   
-* (7) create PR
-  * target branch
-  * also look at existing PR
-  * suggestion feature
-
+* (7) Check out someone else's work
+  * have a look at an existing PR, look at all tabs, show suggestion feature
+  * but sometimes we want to really build and try sth out ... 
+  * `git remote -v` (ideally remote not yet known, maybe delete in preparation)
+  * `git remote add alex git@github.com:ajaust/precice.git` (or somebody else)
+  * `git fetch alex`
+  * `git checkout -t alex/[branch-name]`
 
 
 ## Clicker quiz about Git
@@ -126,6 +131,7 @@ Format: clicker quiz
   * https://merely-useful.tech/py-rse/git-cmdline.html#git-cmdline-ex-commit a single good question from the book
   * https://merely-useful.tech/py-rse/git-cmdline.html#git-cmdline-ex-history another good one
   * "Recovering older versions of a file"
+* question with gitignore, ! example in there, templates from GitHub: https://github.com/github/gitignore
 
 
 ## My favorite neat little Git trick
@@ -153,6 +159,8 @@ Format: slides
 TODO
 
 * why linear history is important
+* `git log --graph` is local view, https://github.com/precice/precice/network is global view
+
 
 ## GitHub standards
 
@@ -166,14 +174,25 @@ TODO
 * CONTRIBUTING.md
 * issue or PR templates
 
-## Working in teams
+## Working in teams / git workflows
 
 Duration: 15 mins
 Format: slides
 
 TODO
 
-* branching workflows
+* git workflows
+* https://www.atlassian.com/git/tutorials/comparing-workflows
+* GitHub flow: 
+  * https://guides.github.com/introduction/flow/ 
+  * https://docs.github.com/en/get-started/quickstart/github-flow
+  * https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
+* which ones does preCICE use?
+
+
+## Gitlab
+
+* Show DuMuX GitLab as a role model for archiving research results?
 
 
 
@@ -185,6 +204,8 @@ Prerequisites: everybody needs a GitHub account, everybody needs to have write a
 Material: TODO: create repo, master branch protected, one md file with title and some placeholder categories. license
 
 Let's create our own SSE Git cheat sheet written in markdown. Obviously, there are many great Git cheat sheets out there. There is also the official manual. Our goal is not make an even better cheat sheet. Instead, our goal is the process of how to get there: to learn how to work together as a team on GitHub and to maybe learn something new about Git on the way. Restrict the cheat sheet to the really important every-day Git commands. We want to have a usable cheat sheet in one hour.
+
+TODO: which git workflow should be used?
 
 1. Fork the [Git cheat sheet repository](TODO)
 2. Create issues (in the upstream repository) on what you think the group should work on. Examples: "Define categories" or "add `git pull and push`". Look for and avoid duplicates. Assign yourself if you want to work on an issue. If necessary, use the issue to discuss details. Don't open too many issues right away.
@@ -209,6 +230,16 @@ Minimal requirement to pass. Everybody should at least ...
 * Open and merge one PR
 * Give one review
 
+Discussion (at least 10 mins):
+
+* How did it work?
+* Where were problems?
+* What did you learn? Any other trick you want to share?
+
+Final remarks:
+
+* If you want continue with the cheat sheet or do more of them in other chapters of the lecture (docker, cmake, ...)
+
 
 
 
@@ -217,9 +248,10 @@ Minimal requirement to pass. Everybody should at least ...
 ### Quick things
 
 * [Video: Git in 15 minutes: basics, branching, no remote](https://www.youtube.com/watch?v=USjZcfj8yxE)
-* [The GitHub Blog: Commit are snapshots, not diffs](https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/)
+* [The GitHub Blog: Commits are snapshots, not diffs](https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/)
 * Chapters [6](https://merely-useful.tech/py-rse/git-cmdline.html) and [7](https://merely-useful.tech/py-rse/git-advanced.html) of Research Software Engineering with Python
 * [Podcast All Things Git: History of VC](https://www.allthingsgit.com/episodes/the_history_of_vc_with_eric_sink.html)
+* [git purr](https://girliemac.com/blog/2017/12/26/git-purr/)
 
 ### References
 

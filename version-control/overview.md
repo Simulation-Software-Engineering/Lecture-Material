@@ -87,7 +87,7 @@ Starting remark: There is not *the one solution* how to do things with git. I'll
   * `git diff`, `git diff src/com/Action.hpp` --color-words
   * `git add`, `git status`
   * `git commit` "Include MagicHeader in Action.hpp"
-  * `git status`, `git log`, `git log -p`
+  * `git status`, `git log`, `git log -p`, `git show`
   
 * (4) Change or revert stuff
   * I forgot to add sth: `git reset --soft HEAD~1`, `git status`
@@ -151,29 +151,6 @@ Remarks:
 * only use a GUI once you understand command-line Git
 
 
-## Merge vs. rebase
-
-Duration: 15 mins
-Format: slides
-
-TODO
-
-* why linear history is important
-* `git log --graph` is local view, https://github.com/precice/precice/network is global view
-
-
-## GitHub standards
-
-Duration: 15 mins
-Format: slides, demo
-
-TODO
-
-* README.md
-* license
-* CONTRIBUTING.md
-* issue or PR templates
-
 ## Working in teams / git workflows
 
 Duration: 15 mins
@@ -188,6 +165,78 @@ TODO
   * https://docs.github.com/en/get-started/quickstart/github-flow
   * https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
 * which ones does preCICE use?
+
+* keep PRs small
+  * easier to review
+  * faster to merge -> less conflict resolving
+  * easier to squash
+
+
+## Merge vs. rebase
+
+Duration: 15 mins
+Format: slides
+
+TODO: look for suitable pictures and create slides
+
+* what is a merge commit
+  * show picture with a linear history
+  * commits are snapshots, not diffs (but for linear history, this makes no difference)
+  * each normal commit has a parent commit, `c05f017` <- `c05f017^` (`^` is the same as `~1`)
+  * `git show` gives diff of commit to parent
+  * show picture with two branches and a merge commit and `git checkout main`, `git merge feature`
+  * a merge commit has two (also multiple, but that's not important) parent commits `c05f017^1` and `c05f017^2`, not one -> can't show unique diff (don't confuse `^2` with `~2`)
+  * first parent is to the current commit on the branch you are on
+  * `git show` of merge commit shows *combined diff*, GitHub shows `git show --first-parent` ... IMHO all not very helpful
+  * `git show -m` shows separate diff to all parents
+* why linear history is important
+  * merge commits are hard to understand per-se
+  * a merge takes all commits from `feature` to `main` -> no longer a linear history
+  * developers often follow project by reading commits -> becomes harder to read (where happened what)
+  * a bug was introduced between v1.3 and v1.4, a linear history allows to bisect
+  * real conflicts are very rare in real projects, most conflicts / merge commits are false positives -> they should be avoided
+* how to get a linear history?
+  * if there are not changes on `main`, just `git merge --fast-forward feature`
+  * if there are changes on `main` -> rebase
+* what is rebase?
+  * show same graph again, but now with a rebase, `git checkout feature`, `git rebase main`, `git checkout main`, `git merge feature --fast-forward` -> we can keep a linear history
+  * downside: history is rewritten, the commits are not the same, they have now different parent commits (similar to a force push)
+  * only use rebase if only you work on a branch (a local branch, a branch on your fork)
+  * if local changes, very helpful: `git pull --rebase` (fetch & rebase)
+* squash and merge
+  * GitHub offers three ways how to merge a non-conflicting (no changes in same files) PR: create a merge commit, squash and merge, rebase and merge
+  * let students explain options "create a merge commit", "rebase and merge". good or bad?
+  * "squash and merge" squashes all commits and the merge commit into one (often single commit of feature branch are important while developing the feature, but not when the feature is merged; keep feature PRs small)
+  * no linear history, but still very readable (as there was no conflict it makes no real difference what the parent commit of the squashed commit is; the diff is the same)
+  * if there are conflicts: resolve with rebase (recommended) or merge on `feature branch`
+  * delete `feature` branch after merging
+* summary
+  * try to keep a linear history with rebasing whereever reasonable
+  * don't use rebase on a public/shared branch
+  * squash before merging if reasonable
+    
+
+
+* `git log --graph` is local view, https://github.com/precice/precice/network is global view
+
+
+* [Bitbucket docs](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+* [Hackernoon](https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333)
+* refer to [The GitHub Blog: Commits are snapshots, not diffs](https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/)
+* [good stack overflow post](https://stackoverflow.com/questions/40986518/git-show-of-a-merge-commit?answertab=votes#tab-top)
+
+## GitHub standards
+
+Duration: 15 mins
+Format: slides, demo
+
+TODO
+
+* README.md
+* license
+* CONTRIBUTING.md
+* issue or PR templates
+
 
 
 ## Gitlab
@@ -212,8 +261,8 @@ TODO: which git workflow should be used?
 3. If you think you have a good first extension of the cheat sheet, open a PR from a feature branch on your fork to the upstream master branch. Keep PRs concise, such that they are easy to review and quick to merge. Briefly describe the rationale of the PR. Assign yourself to the PR. You are responsible for the life cycle of the PR.
 4. Find at least one reviewer for your PR (by asking around offline). Assign them as reviewers or let them assign themselves.
 5. Review other PRs. Give constructive feedback how to improve. Avoid endless discussions, better open additional issues if something goes beyond current PRs.
-6. Regularly rebase your PR on master (force push to your feature branch if necessary). Avoid merge commits. Ideally, we get a perfect linear history in the end.
-7. Merge the PR if you have at least one *approving* review and no *changes requested*. Squash if necessary.
+6. Regularly rebase your PR on master (force push to your feature branch if necessary). Avoid merge commits. Ideally, we get perfectly readable history in the end.
+7. Merge the PR if you have at least one *approving* review and no *changes requested*. Squash if necessary to get meaningful commits.
 8. Start at step 2 or step 5 again.
 
 Bonus:

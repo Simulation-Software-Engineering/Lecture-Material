@@ -61,7 +61,7 @@ Format: poll, slides, demo
 * Git, GitHub and GitLab: TODO
   * There is also SourceForge and Bitbucket
 
-## Show my workflow
+## Show how I work with Git and preCICE's workflow
 
 Duration: 20 mins
 Format: demo
@@ -156,15 +156,56 @@ Remarks:
 Duration: 15 mins
 Format: slides
 
-TODO
+
+* why workflows?
+  * git offers a lot of flexibility in managing changes. there is no standardized process on how to interact with git (cf. discussion "show my workflow"
+  * when working in a team, some agreements need to be made however (especially on how to work with branches)
+* which workflow?
+  * there are standard solutions
+  * it depends a lot on the size of the team (should enhance the effectiveness of the team and not be a burden that limits productivity)
+* Centralized Workflow
+  * only one branch: the `main` branch
+  * keep your changes in local commits till some feature is ready; if ready, directly push to `main`
+  * no PRs, now reviews, ...
+  * conflicts: fix locally (push not allowed anyway), use `git pull --rebase`
+  * good for: small teams, small projectsm, projects which are anyway reviewed over and over again
+  * example: (LaTeX) papers (put each section in separate file, each sentence in new line)
+* Feature Branch Workflow 
+  * each feature (or bugfix) in separate branch, push feature branch to remote; descriptive name, e.g. each feature branch closes one issue (issue number could be in name) 
+  * `main` should never contain broken code
+  * PR with review to merge from feature branch to `main`, protect direct push to master, CI run in PR
+  * PRs can also be opened as draft to only discuss things, let people know that you are working on a feature 
+  * rebase feature branch on `main` if necessary
+  * delete remote branch once merged and no longer needed (one click on GitHub after merge)
+  * good for: 2-3 person code projects, prototyping, no external users
+* Gitflow
+  * no longer a best practice (replaced by trunk-based workflows)
+  * there is a tool `git-flow`, a wrapper around git, e.g. `git flow init` ... but not really necessary IMHO
+  * `main` and `develop`; `main` contains releases as tags, `develop` latest features
+  * feature branches created of `develop`, PRs back to `develop`
+  * protect `main` and (if wanted) `develop` from direct pushes
+  * dedicated release branches (e.g., `v0.2`) created of `develop`, tested, fixed, merged to `main`, tagged, merged back to `develop`
+  * hotfix branches directly from and to `main`
+  * visualization: https://nvie.com/img/git-model@2x.png, by Vincent Driessen
+  * good for: software with users, larger teams; used more or less in preCICE
+* Forking workflow
+  * gitflow + feature branches on other forks
+  * more control over access rights, distniguish between maintainers and external contributors
+  * also use feature branches on forks for maintainers? makes overview of branches easier, distinguish between prototype branches (on fork, no PR), serious enhancements (on fork with PR), joint enhancements (on upstream)
+  * good for: open-source projects with external contributions
+* GitHub flow
+  * for software that is continuously delivered (web apps)
+* trunk-based development: https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development
+
 
 * git workflows
-* https://www.atlassian.com/git/tutorials/comparing-workflows
+* [Atlassian docs on workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
+* [Original gitflow blog post](https://nvie.com/posts/a-successful-git-branching-model/)
+
 * GitHub flow: 
   * https://guides.github.com/introduction/flow/ 
   * https://docs.github.com/en/get-started/quickstart/github-flow
   * https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
-* which ones does preCICE use?
 
 * keep PRs small
   * easier to review
@@ -236,6 +277,7 @@ TODO
 * license
 * CONTRIBUTING.md
 * issue or PR templates
+* closes #34
 
 
 

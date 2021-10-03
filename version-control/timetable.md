@@ -2,7 +2,7 @@
 
 * **10** Corona rules
 * **10** Course intro (similar to video)
-* **10** Course rules (exercises, challenges, grading, contributing to course (we do it for the first time!), GitHub account needed (everybody OK with this?), SIM GitLab)
+* **10** Course rules (exercises, challenges, grading, contributing to course (we do it for the first time!), GitHub account needed (everybody OK with this?), SIM GitLab, slido OK?)
 * **10** Course planning: when/what, which chapters, when student presentations
 * **10** Intro to simulation software engineering
 
@@ -15,7 +15,7 @@
 
 # 1.2 -- Fri, October 22, 2021
 
-* **25** Show my workflow
+* **25** Show how I work with Git and preCICE's workflow
 * **30-X** Clicker quiz about Git
 * **20** Presentation of possible simulation software and tell students how to submit a priority list
 * Ask students to prepare *My favorite neat little Git trick*

@@ -177,9 +177,9 @@ Format: slides
   * PRs can also be opened as draft to only discuss things, let people know that you are working on a feature 
   * rebase feature branch on `main` if necessary
   * delete remote branch once merged and no longer needed (one click on GitHub after merge)
-  * good for: 2-3 person code projects, prototyping, no external users
+  * good for: 2-3 person code projects, prototyping, websites, documentation 
+  * aka [trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development) or [GitHub flow](https://guides.github.com/introduction/flow/)
 * Gitflow
-  * no longer a best practice (replaced by trunk-based workflows)
   * there is a tool `git-flow`, a wrapper around git, e.g. `git flow init` ... but not really necessary IMHO
   * `main` and `develop`; `main` contains releases as tags, `develop` latest features
   * feature branches created of `develop`, PRs back to `develop`
@@ -190,27 +190,22 @@ Format: slides
   * good for: software with users, larger teams; used more or less in preCICE
 * Forking workflow
   * gitflow + feature branches on other forks
-  * more control over access rights, distniguish between maintainers and external contributors
+  * more control over access rights, distinguish between maintainers and external contributors
   * also use feature branches on forks for maintainers? makes overview of branches easier, distinguish between prototype branches (on fork, no PR), serious enhancements (on fork with PR), joint enhancements (on upstream)
   * good for: open-source projects with external contributions
-* GitHub flow
-  * for software that is continuously delivered (web apps)
-* trunk-based development: https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development
-
-
-* git workflows
-* [Atlassian docs on workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
-* [Original gitflow blog post](https://nvie.com/posts/a-successful-git-branching-model/)
-
-* GitHub flow: 
-  * https://guides.github.com/introduction/flow/ 
-  * https://docs.github.com/en/get-started/quickstart/github-flow
-  * https://lucamezzalira.com/2014/03/10/git-flow-vs-github-flow/
-
-* keep PRs small
+* For all workflows, it is better to do small PRs
   * easier to review
   * faster to merge -> less conflict resolving
   * easier to squash
+
+
+### Quick reads
+
+* [Atlassian docs on workflows](https://www.atlassian.com/git/tutorials/comparing-workflows)
+* [Original gitflow blog post](https://nvie.com/posts/a-successful-git-branching-model/)
+* [Trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development)
+* [GitHub flow](https://guides.github.com/introduction/flow/)
+* [How to Keep Pull Requests Manageable](https://gist.github.com/sktse/569cb192ce1518f83db58567591e3205)
 
 
 ## Merge vs. rebase

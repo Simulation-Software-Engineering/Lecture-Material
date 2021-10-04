@@ -12,37 +12,7 @@
 
 Duration: 15 mins
 Format: slides
-
-* very brief: why needed
-  * tracks changes to files and helps people share those changes with each other
-  * can also be done via email or Google Docs, but not so accurate and efficient
-  * originally developed for software development, but today cornerstone of reproducible research
-
-> If you can't git diff it, the file format is broken 
-
-* how it works
-  * master copy of code in repository, can't edit directly
-  * instead: check out a working copy of code, edit, commit changes back
-  * repository records complete revision history (you can go back in time & it's clear who did what and when)
-  
-[PhD Comics: A story told in file names](https://phdcomics.com/comics/archive_print.php?comicid=1323)
-
-* short history of version control
-  * RCS, later CVS became front end of RCS
-  * Microsoft Visual SourceSafe
-  * SVN
-  * centralized vs. distributed (memory vs. performance)
-  * distributed: Mercurial, Git (started more or less at same time, others as well, frustration over commercial Bitkeeper)
-  * past: highly fragmented market, today no longer: there is nearly only Git; TODO: stats over time
-    * TODO: our simulation software list: how many use Git?
-    * convergence to a single "standard" is also a good thing
-  * [Podcast All Things Git: History of VC](https://www.allthingsgit.com/episodes/the_history_of_vc_with_eric_sink.html)
-    
-  
-* Git itself is open-source: GPL license
-  * source on [GitHub](https://github.com/git/git), contributions are a bit more complicated than a simple PR
-  * written mainly in C
-  * started by Linus Torvalds, first release in 2005, core maintainer since later 2005: Junio Hamano
+Material: `intro_slides.md`
   
 ## Recap of Git basics
 

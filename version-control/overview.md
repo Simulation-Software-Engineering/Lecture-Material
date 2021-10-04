@@ -247,10 +247,10 @@ TODO: look for suitable pictures and create slides
 * squash and merge
   * GitHub offers three ways how to merge a non-conflicting (no changes in same files) PR: create a merge commit, squash and merge, rebase and merge
   * let students explain options "create a merge commit", "rebase and merge". good or bad?
-  * "squash and merge" squashes all commits and the merge commit into one (often single commit of feature branch are important while developing the feature, but not when the feature is merged; keep feature PRs small)
-  * no linear history, but still very readable (as there was no conflict it makes no real difference what the parent commit of the squashed commit is; the diff is the same)
+  * "squash and merge" squashes all commits into one (often single commit of feature branch are important while developing the feature, but not when the feature is merged; keep feature PRs small)
+  * also does a rebase, basically does a `git rebase -i`
   * if there are conflicts: resolve with rebase (recommended) or merge on `feature branch`
-  * delete `feature` branch after merging
+  * delete `feature` branch after merging (altered history)
 * summary
   * try to keep a linear history with rebasing whereever reasonable
   * don't use rebase on a public/shared branch

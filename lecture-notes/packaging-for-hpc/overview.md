@@ -10,14 +10,14 @@
 
 ## Quiz (optional)
 
-- Who is using containers or virtualization technologies?!
-- Which tools do you use/know?
+- Did you ever create your own Debian package?
+- How do you install software on a server/cluster?
 
 ## General package creation / Debian packages
 
 | Duration | Format |
 | --- | --- |
-| 15 minutes | Slides |
+| 20 minutes | Slides |
 
 - `deb` packages are common in the Linux world
     - Used by Debian its derivatives (such as Ubuntu)
@@ -35,11 +35,12 @@
 
 | Duration | Format |
 | --- | --- |
-| 20 minutes | Slides |
+| 30 minutes | Slides |
 
 - Challenge:
     1. Software should be easy to install
     2. I want high performance on a super computer -> Compile software with platform dependent optimization (`-march=native`). Might have vendor-specific libraries (MPI, BLAS etc.) that are crucial for performance.
+    3. Users do not have root rights.
 - This is a current topic of great interest: [European Environment for Scientific Software Installations (EESSI)](https://github.com/EESSI/)
 - Common in HPC environments:
     - EasyBuild
@@ -55,7 +56,19 @@
     - Can also be used to roll-out precompiled binaries
 - European Environment for Scientific Software Installations (EESSI) tries to simplify the installation routine by providing precompiled packages with optimizations enabled.
 
+## Spack demo
+
+| Duration | Format |
+| --- | --- |
+| XX minutes | Demo |
+
+- TBD
+
 ## xSDK
+
+| Duration | Format |
+| --- | --- |
+| 10 minutes | Slides |
 
 - Standardization effort for scientific
 
@@ -65,7 +78,11 @@
 | --- | --- |
 | XX minutes | Exercise |
 
-1. TBD
+- Install Spack
+- Set up spack environment using preinstalled packages `spack external find`
+- Install some package via Spack
+- Build a spack package for a C++ Code (CMake) and one for Python
+    - **TODO** Can we base that on some result from an earlier lecture?
 
 
 ## Further reading

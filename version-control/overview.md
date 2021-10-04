@@ -78,7 +78,7 @@ Starting remark: There is not *the one solution* how to do things with git. I'll
   * `git remote -v` (I have upstream, myfork, ...)
   * Mention difference between ssh and https
   * get newest changes `git pull upstream develop`
-  * `git log` -> ~/.gitconfig, also check log on GitHub
+  * `git log` -> ~/.gitconfig, also check log on GitHub; explain short hash
   * `git branch`
   * `git branch test_changes`
   * `git checkout test_changes`

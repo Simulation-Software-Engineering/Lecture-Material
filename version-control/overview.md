@@ -1,8 +1,11 @@
 # Git -- the standard version control system
 
-Learning goals:
-* we don't teach git in the course, we only recap
-* TODO
+*Learning goals*
+
+- Refresh and organize students' existing knowledge on git (learn how to learn more).
+- Students can explain difference between merge and rebase and when to use what.
+- How to use git workflows to organize research software development in a team.
+- Get to know a few useful GitHub/GitLab standards and a few helpful tools.
 
 
 ## Introduction to version control

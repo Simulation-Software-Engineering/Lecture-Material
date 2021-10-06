@@ -9,9 +9,9 @@ slideOptions:
 
 <style>
   .reveal strong {
-	font-weight: bold;
+  font-weight: bold;
     color: orange;
-  }  
+  }
   .reveal p {
     text-align: left;
   }
@@ -22,7 +22,6 @@ slideOptions:
     color: orange;
   }
 </style>
-
 
 # Course intro
 
@@ -42,7 +41,7 @@ TODO
 
 ---
 
-## The idea & learning goals 
+## The idea & learning goals
 
 - No (advanced) programming course
 - Learn about all the other things you need to develop research /
@@ -55,7 +54,7 @@ TODO
 ---
 
 ## Building blocks
-    
+
 Two parallel branches:
 
 - **Weekly lectures** (90 mins) and **exercises** (90 mins) to learn and train concepts and tools

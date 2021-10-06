@@ -8,6 +8,10 @@ slideOptions:
 ---
 
 <style>
+  .reveal strong {
+  font-weight: bold;
+    color: orange;
+  }
   .reveal p {
     text-align: left;
   }
@@ -20,7 +24,6 @@ slideOptions:
 </style>
 
 # Introduction to version control
-
 
 ---
 

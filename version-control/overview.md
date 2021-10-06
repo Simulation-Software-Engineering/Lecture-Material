@@ -17,7 +17,7 @@ Material: `intro_slides.md`
 ## Recap of Git basics
 
 Duration: 15 mins
-Format: poll, slides, demo
+Format: poll, picture, demo
 
 * Expert level poll on git: ask students to estimate their level.
   * Beginner: I have hardly ever used Git
@@ -26,10 +26,10 @@ Format: poll, slides, demo
   * Maintainer: rebase, squash, cherry-pick, bisect
   * Owner: submodules
 
-* show some overview picture: https://merely-useful.tech/py-rse/git-cmdline.html#fig:git-cmdline-remote and discuss
+![git overview picture from py-rse](https://merely-useful.tech/py-rse/figures/git-cmdline/git-remote.png) 
   
 * `git --help`, `git commit --help`
-* also show incomplete statement `git comm`
+* incomplete statement `git comm`
 
 * Git, GitHub and GitLab: TODO
   * There is also SourceForge and Bitbucket

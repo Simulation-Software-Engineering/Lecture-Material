@@ -23,11 +23,11 @@ slideOptions:
   }
 </style>
 
-# Course intro
+# Course Intro
 
 ---
 
-## Corona rules
+## Corona Rules
 
 TODO
 
@@ -35,25 +35,27 @@ TODO
 
 ## The Lecturers
 
-- Alex (Jaust)
-- Benjamin (Uekermann)
-- Ishaan (Desai)
+- Alex (Jaust) [`@ajaust`](https://github.com/ajaust)
+- Benjamin (Uekermann) [`@uekerman`](https://github.com/uekerman)
+- Ishaan (Desai) [`@IshaanDesai`](https://github.com/IshaanDesai)
 
 ---
 
-## The idea & learning goals
+## The Idea & Learning Goals
+
 
 - No (advanced) programming course
 - Learn about all the other things you need to develop research /
-  simulation software (to become a *Research Software Engineer*):
+  simulation software (to become a *"Research Software Engineer"*):
   continuous integration, virtualization, building & packaging, documentation, ...
 - Focus on tools for C++ and Python
-- More than a *3-days software carpentry workshop on Python and git*
+- More than a *"3-days software carpentry workshop on Python and git"*
 - Learn how to contribute to large-scale open-source simulation software projects
+- Learn which important simulation software packages exist and how to use them
 
 ---
 
-## Building blocks
+## Building Blocks
 
 Two parallel branches:
 
@@ -70,7 +72,7 @@ Two parallel branches:
 
 ---
 
-## Prerequisites: skills
+## Prerequisites: Skills
 
 - Basic programming (Python, C++)
 - Basic software development skills (bash, git, md, ...)
@@ -78,7 +80,7 @@ Two parallel branches:
 
 ---
 
-## Prerequisites: infrastructure
+## Prerequisites: Infrastructure
 
 - GitHub account
 - We'll create an IPVS GitLab account for everyone
@@ -98,14 +100,15 @@ Two parallel branches:
 
 ---
 
-## Contribute to the material
+## Contribute to the Material
 
 - You, no joke :see_no_evil:
 - Typos, broken links, ...
 - Additional material
-- By definition, we study quickly developing technology ... help us staying up to date
+- By definition, we study quickly evolving technology ... help us staying up to date
 - We do the course for the first time ... there will still be flaws
 - Contribute by opening PRs (we'll obviously acknowledge contributions)
+- Click `edit me` on website
 - For large parts (new tool, new chapter, ...), discuss in issue first
 - See also [`CONTRIBUTING.md`](TODO)
 
@@ -123,16 +126,16 @@ Two parallel branches:
 
 ---
 
-## The challenge
+## The Challenge
 
 1. Pick a large-scale open-source simulation software (FEniCS, PETSc, SU2, TRILINOS, ...) (till **Oct 28**, evening)
-2. Present the software: how you got it, what are main features, some tutorials you did, ...) (**Nov 11**)
-3. Present *RSE infrastructure* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 16**)
-4. Contribute something small (but not trivial) to the software (*good first issue*). Run through complete contribution cycle (issue, discussion, PR, review, merge). Present what you did. Examples: feature, tutorial, documentation, support of new packaging tool, bugfix, ... (**Feb 10**)
+2. Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 11**)
+3. Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 16**)
+4. Contribute something small (but not trivial) to the software (*"good first issue"*). Run through complete contribution cycle (issue, discussion, PR, review, merge). Present what you did. Examples: feature, tutorial, documentation, support of new packaging tool, bugfix, ... (**Feb 10**)
 
 ---
 
-## Time table I
+## Time Table I
 
 <style>
 td {
@@ -144,8 +147,8 @@ td {
 | ---- | ---- | ------- |------ | -------- |
 | 21.10. |Lecture | 1-2 | course intro, intro to SSE, VC basics | Benjamin |
 | 21.10. |Lecture | 2 | Git: my workflow + quiz, software projects for challenge  | Benjamin |
-| 28.10. |Lecture + presentations| 2 | *my neat little Git trick*, merge vs rebase, working in teams| Benjamin |
-| 28.10. |Lab | 2 | *Git cheat sheet*  | Benjamin |
+| 28.10. |Lecture + presentations| 2 | *"my neat little Git trick"*, merge vs rebase, working in teams| Benjamin |
+| 28.10. |Lab | 2 | *"Git cheat sheet"*  | Benjamin |
 | 04.11. |Lecture | 3 | Virtualbox, Vagrant | Alex |
 | 04.11. |Lecture | 3 | Docker, Singularity | Alex |
 | 11.11. |Lab | 3 | tbd.  | Alex |
@@ -153,7 +156,7 @@ td {
 
 ---
 
-## Time table II
+## Time Table II
 
 <style>
 td {
@@ -176,7 +179,7 @@ td {
 
 ---
 
-## Time table III
+## Time Table III
 
 <style>
 td {
@@ -201,9 +204,16 @@ td {
 
 ## Examination
 
-- *Course accompanying examination*: no exam, but continuous examination (more like a lab course or a seminar)
+- *"Course accompanying examination"*: no exam, but continuous examination (more like a lab course or a seminar)
 - We look at:
   - Challenge (outcome and presentations)
-  - Exercises (not every detail, more *passed* or *failed*)
+  - Exercises (not every detail, but *"passed"* or *"failed"*)
   - Overall engagement (interactive lecture, discussions, small presentations, ...)
 - Let us know if you cannot come to a lecture / exercise (you don't have to give a reason)
+
+---
+
+## GitLab Account
+
+- Please write a mail till tonight to Alex
+- TODO

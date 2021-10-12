@@ -52,32 +52,32 @@ Rough workload / grading weights: 25%, 25%, 50%
 
 ---
 
-## Suggestions
+## Suggestions I
 
-TODO: add links and 4 words explaining the software
+* [deal.II](https://dealii.org/): FEM library in C++
+* [DuMuX](https://dumux.org/): CFD library based on DUNE in C++ (Stuttgart)
+* [DUNE](https://www.dune-project.org/`): Modular toolbox for PDEs
+* [Eigen](https://eigen.tuxfamily.org): LA library in C++
+* [ESPResSo](https://espressomd.org): MD Simulator with Python API (Stuttgart)
+* [FEniCS(-X)](https://fenicsproject.org/): FEM library in Python
+* [Firedrake](https://www.firedrakeproject.org/): FEM library in Python
+* [Gmsh](https://gmsh.info/): Mesh generator
+* [LAMMPS](https://www.lammps.org/): MD simulator
+* [NETGEN/NGSolve](https://ngsolve.org`): FEM library in Python
+* [Palabos](https://palabos.unige.ch/): Lattice Boltzmann
 
-BU
+---
 
-* FEniCS(-X): FEM library in Python
-* deal.II: FEM library in C++
-* preCICE: Coupling library (Stuttgart)
-* SG++: Sparse grids library for high-dimensional numerics (Stuttgart) 
-* MegaMol:
-* ESPResSo:
-* PETSc: LA library
-* pyMOR: MOR library in Python
+## Suggestions II
 
-
-AJ
-
-* pyiron: Workflow manager in Python
-* DuMuX: CFD library based on DUNE in C++
-* DUNE: Library for parallel mesh data structure in C++??
-* Eigen: LA library in C++
-* TRILINOS:
-* NETGEN/NGSolve: 
-* SU2: CFD code in C++
-* SUNDIALS
+* [PETSc](https://petsc.org/): LA library
+* [preCICE](https://precice.org/): Coupling library (Stuttgart)
+* [pyiron](https://pyiron.org/): Workflow manager in Python
+* [pyMOR](https://pymor.org/): MOR library in Python
+* [SU2](https://su2code.github.io/): CFD code in C++
+* [SUNDIALS](https://computing.llnl.gov/projects/sundials): Nonlinear solvers, ODEs
+* [TRILINOS](https://trilinos.github.io/): Collection of scientific software libraries, mainly solvers
+* more projects in [xSDK](https://xsdk.info/packages/): [Ginkgo](https://ginkgo-project.github.io/), ... 
 * **Or your suggestion**
 
 ---
@@ -114,14 +114,3 @@ AJ
 * Written in markdown
 * Submission via a merge request to (private) IPVS GitLab repo
 * Add links, instructions, ... should work like a compact summary for everybody in the end
-
---- 
-
-## TODOs for us
-
-Check software suggestions:
-
-* also criteria above!
-* (relatively) modern RSE infrastructure used, good role models
-* open for contributions, meaning there needs to be some statement or oral commitment
-* if we have personal contact, we could let them know that sth is coming and that they should treat students as normal academic contributions (maybe have time frame in mind)

@@ -11,7 +11,7 @@ slideOptions:
   .reveal strong {
 	font-weight: bold;
     color: orange;
-  }  
+  }
   .reveal p {
     text-align: left;
   }
@@ -24,7 +24,7 @@ slideOptions:
 </style>
 
 
-# Your Challenge: Contribute to Real Simulation Software 
+# Your Challenge: Contribute to Real Simulation Software
 
 ---
 
@@ -41,7 +41,7 @@ Rough workload / grading weights: 25%, 25%, 50%
 
 ## Which Software to Pick?
 
-* Something in the simulation universe (this includes equation solvers, meshing, scientific visualization, ...) 
+* Something in the simulation universe (this includes equation solvers, meshing, scientific visualization, ...)
 * Truly open source, all development in public
 * Uses Git
 * Written in Python or C++ (not a strict must)
@@ -77,7 +77,7 @@ Rough workload / grading weights: 25%, 25%, 50%
 * [SU2](https://su2code.github.io/): CFD code in C++
 * [SUNDIALS](https://computing.llnl.gov/projects/sundials): Nonlinear solvers, ODEs
 * [TRILINOS](https://trilinos.github.io/): Collection of scientific software libraries, mainly solvers
-* more projects in [xSDK](https://xsdk.info/packages/): [Ginkgo](https://ginkgo-project.github.io/), ... 
+* more projects in [xSDK](https://xsdk.info/packages/): [Ginkgo](https://ginkgo-project.github.io/), ...
 * **Or your suggestion**
 
 ---
@@ -92,8 +92,9 @@ Rough workload / grading weights: 25%, 25%, 50%
 
 ## Role of Advisor
 
-* Alex or Benjamin
+* Alexander or Benjamin
 * Use exercise blocks and time after lectures for discussions
+  * We both attend all lectures and labs
 * Discuss at least what you plan to contribute
 * Share links etc. to issues and PRs (or tag us)
 

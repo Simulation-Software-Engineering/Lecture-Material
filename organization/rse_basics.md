@@ -11,7 +11,7 @@ slideOptions:
   .reveal strong {
 	font-weight: bold;
     color: orange;
-  }  
+  }
   .reveal p {
     text-align: left;
   }
@@ -22,7 +22,6 @@ slideOptions:
     color: orange;
   }
 </style>
-
 
 # Research Software Engineering
 
@@ -49,7 +48,8 @@ slideOptions:
 * *"Movement"* started in the UK, [UK RSE society](https://society-rse.org/)
 * First UK RSE conference in 2016
 * First conferences in Germany and the Netherlands in 2019
-* [de-RSE position paper](https://f1000research.com/articles/9-295/v2) in 2020 
+* [de-RSE position paper](https://f1000research.com/articles/9-295/v2) in 2020
+* 14 October 2021 was [First International RSE day](https://researchsoftware.org/2021/07/29/International-RSE-day.html)
 
 ---
 
@@ -68,3 +68,8 @@ slideOptions:
 
 * Yes. Research also happens in industry.
 * All things we learn (Git, packaging, CI/CD, virtualization, documentation, ...) is also highly relevant for non-research software.
+* Companies use (more and more) the same workflows and tools.
+  * It is not just about coding. It is about collaborative work.
+* Open-source development excellent door opener for industry.
+* Some companies develop their software as open-source software.
+

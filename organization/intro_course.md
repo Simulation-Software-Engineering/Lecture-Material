@@ -29,7 +29,13 @@ slideOptions:
 
 ## Corona Rules
 
-TODO
+* We need to check everybody's **3G status** and **registration for contact tracing**
+  * Use hardware cactUS reader for both when entering the room (each session)
+  * We are below 35 students --> Teachers need to check --> Please wait entering the room till we are there (15 mins before session)
+  * Please act accordingly (e.g. fill out paper registration if needed or get tested if needed)
+  * Check out after lecture
+* Everybody in audience needs to wear an **FFP2 mask**
+* Keep distance, but please don't spread equally over the large room
 
 ---
 

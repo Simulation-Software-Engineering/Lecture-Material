@@ -94,17 +94,8 @@ Starting remark: There is not *the one solution* how to do things with git. I'll
 
 Duration: 30 mins
 Format: clicker quiz
+Material: `git_quiz.md`
 
-* https://learn.co/lessons/git-github-learn-quiz ... maybe a bit too simple
-* https://www.w3schools.com/quiztest/quiztest.asp?qtest=GIT ... also a bit simple, but a few ones are useful
-* https://gist.github.com/aspencer8111/17a80fb0a2be7b4718237fe8caa6e09c ... some useful ones
-* https://www.codequizzes.com/git ... more complex, but no clicker style
-* https://www.codercrunch.com/quiz/take/1650218502/git-branching ... complex and clicker style, some are too hard
-* book
-  * https://merely-useful.tech/py-rse/git-cmdline.html#git-cmdline-ex-commit a single good question from the book
-  * https://merely-useful.tech/py-rse/git-cmdline.html#git-cmdline-ex-history another good one
-  * "Recovering older versions of a file"
-* question with gitignore, ! example in there, templates from GitHub: https://github.com/github/gitignore
 
 
 ## My favorite neat little Git trick
@@ -118,6 +109,8 @@ Format: student presentations and discussion
   * GitHub CLI
   * [GitKraken](https://www.gitkraken.com/)
   * `git blame` on GitHub
+  * `git reflog`
+  * gitignore templates: https://github.com/github/gitignore
 
 Remarks:
 

@@ -23,7 +23,7 @@ slideOptions:
   }
 </style>
 
-# Course Intro
+# Simulation Software Engineering
 
 ---
 
@@ -100,7 +100,7 @@ Two parallel branches:
 ## Material
 
 * Great new open-source book to recap: Irving, Hertweck, Johnston, Ostblom, Wickham, and Wilson: [Research Software Engineering with Python](https://merely-useful.tech/py-rse)
-* All our material is on [GitHub](https://github.com/Simulation-Software-Engineering/lecture-materials)
+* All our material is on [https://github.com/Simulation-Software-Engineering](https://github.com/Simulation-Software-Engineering)
 * Mainly markdown ... use your favorite tool to render (simply GitHub viewer, [GWDG Hedgedoc](https://pad.gwdg.de/), [pandoc](https://pandoc.org/), ...)
 * We'll add more as the semester goes
 * We give many links to videos, docs, blog posts, podcasts, ...
@@ -218,6 +218,7 @@ td {
   * Exercises (not every detail, but *"passed"* or *"failed"*)
   * Overall engagement (interactive lecture, discussions, small presentations, ...)
 * Let us know if you cannot come to a lecture / exercise (you don't have to give a reason)
+* Point of no return: TODO
 
 ---
 
@@ -227,4 +228,5 @@ td {
   * [alexander.jaust@ipvs.uni-stuttgart.de](mailto:alexander.jaust@ipvs.uni-stuttgart.de)
 * Email subject: "GitLab account SSE course"
 * State your **name** and preferred **email-address**
-* If you already have an account, we only need your username
+* If you already have an IPVS account, we only need your username
+* We will then add you to the `Simulation Software Engineering` group

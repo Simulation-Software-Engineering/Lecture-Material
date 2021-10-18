@@ -59,11 +59,10 @@ Rough workload / grading weights: 25%, 25%, 50%
 * [DUNE](https://www.dune-project.org/`): Modular toolbox for PDEs
 * [Eigen](https://eigen.tuxfamily.org): LA library in C++
 * [ESPResSo](https://espressomd.org): MD Simulator with Python API (Stuttgart)
-* [FEniCS(-X)](https://fenicsproject.org/): FEM library in Python
+* [FEniCS(-X)](https://fenicsproject.org/): FEM library in C++ with Python interface
 * [Firedrake](https://www.firedrakeproject.org/): FEM library in Python
 * [Gmsh](https://gmsh.info/): Mesh generator
 * [LAMMPS](https://www.lammps.org/): MD simulator
-* [NETGEN/NGSolve](https://ngsolve.org`): FEM library in Python
 * [Palabos](https://palabos.unige.ch/): Lattice Boltzmann
 
 ---
@@ -84,7 +83,8 @@ Rough workload / grading weights: 25%, 25%, 50%
 
 ## How to Submit my Choice?
 
-* Mail to Benjamin till **28th of October** (next Thursday) evening
+* [https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge)
+* Comment in issue [#1](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge/-/issues/1) till **28th of October** (next Thursday) evening (no FCFS)
 * Priority list with at least three choices
 * If not on our suggestion list, write short paragraph what the software does and give links
 
@@ -113,5 +113,6 @@ Rough workload / grading weights: 25%, 25%, 50%
 * Please also submit a report for each presentation
 * 1-2 pages (2500-5000 chars)
 * Written in markdown
-* Submission via a merge request to (private) IPVS GitLab repo
+* Submission via a merge request to the [GitLab challenge repo](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge)
 * Add links, instructions, ... should work like a compact summary for everybody in the end
+* Will be visible to everybody in SSE group

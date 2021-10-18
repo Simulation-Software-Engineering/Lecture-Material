@@ -23,7 +23,7 @@ slideOptions:
   }
 </style>
 
-# Research Software Engineering
+# Introduction to Research Software Engineering
 
 ---
 

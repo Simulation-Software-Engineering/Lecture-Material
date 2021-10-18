@@ -9,7 +9,7 @@ slideOptions:
 
 <style>
   .reveal strong {
-	font-weight: bold;
+  font-weight: bold;
     color: orange;
   }
   .reveal p {

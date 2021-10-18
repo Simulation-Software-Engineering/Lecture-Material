@@ -76,6 +76,7 @@ Rough workload / grading weights: 25%, 25%, 50%
 * [SU2](https://su2code.github.io/): CFD code in C++
 * [SUNDIALS](https://computing.llnl.gov/projects/sundials): Nonlinear solvers, ODEs
 * [TRILINOS](https://trilinos.github.io/): Collection of scientific software libraries, mainly solvers
+* [VisIt](https://visit-dav.github.io/visit-website/index.html): Scientific visualization software
 * more projects in [xSDK](https://xsdk.info/packages/): [Ginkgo](https://ginkgo-project.github.io/), ...
 * **Or your suggestion**
 

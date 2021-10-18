@@ -31,7 +31,7 @@ slideOptions:
 
 * We need to check everybody's **3G status** and **registration for contact tracing**
   * Use hardware cactUS reader for both when entering the room (each session)
-  * The lecture has below 35 students --> Lecturers need to check --> Please don't enter the room before the lecturers are there (15 mins before session)
+  * The lecture has less than 35 students --> Lecturers need to check --> Please don't enter the room before the lecturers are there (15 mins before session)
   * Please act accordingly (e.g. fill out paper registration if needed or get tested if needed)
   * Check out after lecture
 * Everybody in audience needs to wear an **FFP2 mask**
@@ -153,9 +153,9 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 21.10. |Lecture | 1-2 | course intro, intro to SSE, VC basics | Benjamin |
+| 21.10. |Lecture | 1-2 | Course intro, intro to SSE, VC basics | Benjamin |
 | 21.10. |Lecture | 2 | Git: my workflow + quiz, software projects for challenge  | Benjamin |
-| 28.10. |Lecture + presentations| 2 | *"my neat little Git trick"*, merge vs rebase, working in teams| Benjamin |
+| 28.10. |Lecture + presentations| 2 | *"My neat little Git trick"*, merge vs rebase, working in teams| Benjamin |
 | 28.10. |Lab | 2 | *"Git cheat sheet"*  | Benjamin |
 | 04.11. |Lecture | 3 | Virtualbox, Vagrant | Alexander |
 | 04.11. |Lecture | 3 | Docker, Singularity | Alexander |
@@ -180,7 +180,7 @@ td {
 | 25.11. |Lab | 4 | CMake | |
 | 02.12. |Lecture | 4 | tbd. | |
 | 02.12. |Lab | 4 | tbd. | |
-| 09.12. |Lecture | 5 | documentation tools | Alexander |
+| 09.12. |Lecture | 5 | Documentation tools | Alexander |
 | 09.12. |Lab | 5 | tbd. | |
 | 16.12. |Lecture | 5 | Technical writing | Benjamin |
 | 16.12. |Presentations | C | **2nd student presentations** | students |
@@ -218,7 +218,7 @@ td {
   * Exercises (not every detail, but *"passed"* or *"failed"*)
   * Overall engagement (interactive lecture, discussions, small presentations, ...)
 * Let us know if you cannot come to a lecture / exercise (you don't have to give a reason)
-* You will need to register yourself to the *"exam"* on campus
+* You will need to register yourself to the *"exam"* on C@MPUS
 * Point of no return: once you gave the first presentation (Nov 11), you have to register (please let us still know when you drop just before the presentation)
 
 ---

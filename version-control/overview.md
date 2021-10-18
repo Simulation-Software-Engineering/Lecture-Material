@@ -34,61 +34,68 @@ Format: poll, picture, demo
 * Git, GitHub and GitLab: TODO
   * There is also SourceForge and Bitbucket
 
-## Show how I work with Git and preCICE's workflow
+## How I work with Git
 
-Duration: 20 mins
+Duration: 35 mins
 Format: demo
 
-Starting remark: There is not *the one solution* how to do things with git. I'll show you what I typically use.
+Starting remark: There is not *the one solution* how to do things with Git. I simply show what I typically use.
 
 * (1) Look at GitHub 
-  * organization, precice repository, forks, my fork
+  * [preCICE repository](https://github.com/precice/precice)
+  * default branch `develop` 
+  * fork -> my fork
   
-* (2) working directory: 
+* (2) Working directory: 
+  * ZSH shell shows git branches 
   * `git remote -v` (I have upstream, myfork, ...)
-  * Mention difference between ssh and https
+  * mention difference between ssh and https (also see GitHub)
   * get newest changes `git pull upstream develop`
-  * `git log` -> ~/.gitconfig, also check log on GitHub; explain short hash
+  * `git log` -> I use special format, see `~/.gitconfig`, 
+  * check log on GitHub; explain short hash
   * `git branch`
-  * `git branch test_changes`
-  * `git checkout test_changes`
-  * btw, fancy ZSH shell shows git branches 
+  * `git branch add-demo-feature`
+  * `git checkout add-demo-feature`
 
-* (3) first commit
+* (3) First commit
   * `git status` -> always tells you what you can do
   * `vi src/action/Action.hpp`  -> add `#include "MagicHeader.hpp"`
-  * `git diff`, `git diff src/com/Action.hpp` --color-words
-  * `git add`, `git status`
-  * `git commit` "Include MagicHeader in Action.hpp"
+  * `git diff`, `git diff src/com/Action.hpp`, `git diff --color-words` 
+  * `git status`, `git add`, `git status`
+  * `git commit` -> "Include MagicHeader in Action.hpp"
   * `git status`, `git log`, `git log -p`, `git show`
   
 * (4) Change or revert stuff
   * I forgot to add sth: `git reset --soft HEAD~1`, `git status`
-  * `git diff HEAD` because already staged
+  * `git diff`, `git diff HEAD` because already staged
   * `git log`
   * `git commit -a`
   * actually all that is nonsense: `git reset --hard HEAD~1`
-  * modify again, all nonsense before committing: `git checkout`
+  * modify again, all nonsense before committing: `git checkout src/action/Action.hpp`
   
-* (5) stash
-  * modify sth else, "some idea i have", but actually i need to change this other thing quickly
+* (5) Stash
+  * while working on unfinished feature, I need to change / test this other thing quickly, too lazy for commits / branches
   * `git stash`
   * `git stash pop`
   
-* (6) create PR
+* (6) Create PR
   * create commit again
-  * preview what will be in PR: `git diff develop..test_changes`
-  * `git push -u myfork/test_changes`
-  * explain target branch and "somebody else can edit"
+  * preview what will be in PR: `git diff develop..add-demo-feature`
+  * `git push -u myfork add-demo-feature` -> copy link
+  * explain PR template
+  * explain target branch 
+  * explain "Allow edits by maintainers"
+  * cancel
+  * my fork -> branches -> delete
   
 * (7) Check out someone else's work
   * have a look at an existing PR, look at all tabs, show suggestion feature
   * but sometimes we want to really build and try sth out ... 
-  * `git remote -v` (ideally remote not yet known, maybe delete in preparation)
-  * `git remote add alex git@github.com:ajaust/precice.git` (or somebody else)
+  * `git remote -v`
+  * `git remote add alex git@github.com:ajaust/precice.git` if I don't have remote already (or somebody else)
   * `git fetch alex`
   * `git checkout -t alex/[branch-name]`
-
+  * I could now also push to `ajaust`'s remote
 
 ## Clicker quiz about Git
 

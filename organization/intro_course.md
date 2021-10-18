@@ -104,7 +104,7 @@ Two parallel branches:
 * Mainly markdown ... use your favorite tool to render (simply GitHub viewer, [GWDG Hedgedoc](https://pad.gwdg.de/), [pandoc](https://pandoc.org/), ...)
 * We'll add more as the semester goes
 * We give many links to videos, docs, blog posts, podcasts, ...
-* We currently do not plan to record lectures (but are open to do if needed)
+* We plan to record the lecture, but this is only meant as a backup. Please always come when possible. What we do is interactive.
 
 ---
 
@@ -174,14 +174,14 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 18.11. |Lecture | 4 | CMake | |
-| 18.11. |Lab | 4 | CMake | |
-| 25.11. |Lecture | 4 | Packaging and package managers, pip, conda | Ishaan |
-| 25.11. |Lab | 4 | pip and PyPI exercise | Ishaan |
-| 02.12. |Lecture | 4 | tbd. |  |
+| 18.11. |Lecture | 4 | Packaging and package managers, pip, conda | Ishaan |
+| 18.11. |Lab | 4 | pip and PyPI exercise | Ishaan |
+| 25.11. |Lecture | 4 | CMake | |
+| 25.11. |Lab | 4 | CMake | |
+| 02.12. |Lecture | 4 | tbd. | |
 | 02.12. |Lab | 4 | tbd. | |
 | 09.12. |Lecture | 5 | documentation tools | Alexander |
-| 09.12. |Lab | 5 | tbd. |  |
+| 09.12. |Lab | 5 | tbd. | |
 | 16.12. |Lecture | 5 | Technical writing | Benjamin |
 | 16.12. |Presentations | C | **2nd student presentations** | students |
 
@@ -218,7 +218,8 @@ td {
   * Exercises (not every detail, but *"passed"* or *"failed"*)
   * Overall engagement (interactive lecture, discussions, small presentations, ...)
 * Let us know if you cannot come to a lecture / exercise (you don't have to give a reason)
-* Point of no return: TODO
+* You will need to register yourself to the *"exam"* on campus
+* Point of no return: once you gave the first presentation (Nov 11), you have to register (please let us still know when you drop just before the presentation)
 
 ---
 

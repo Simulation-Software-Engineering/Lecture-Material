@@ -1,4 +1,4 @@
-# lecture-materials
+# Simulation Software Engineering Lecture Material
 
 ![markdownlint](https://github.com/Simulation-Software-Engineering/lecture-materials/actions/workflows/markdownlint.yml/badge.svg)
 [![CC BY 4.0][cc-by-shield]][cc-by]

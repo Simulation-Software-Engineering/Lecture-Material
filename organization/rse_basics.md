@@ -36,7 +36,7 @@ slideOptions:
 * [UK survey in 2014](https://zenodo.org/record/1183562): 7 out of 10 researchers could not conduct research without software.
 * [DFG funding calls on research software sustainability](https://www.dfg.de/en/research_funding/programmes/infrastructure/lis/funding_opportunities/call_proposal_software/) in 2016 & 2019
 * Lack of careers for software developers in academia
-* Lack of reproducibility of research that uses software
+* Lack of reproducibility of research that uses software (*"works for me on my machine"* vs. *"works for everyone everywhere"*)
 
 ---
 

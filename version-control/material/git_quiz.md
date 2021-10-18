@@ -16,22 +16,24 @@ Which command(s) below would save changes to myfile.txt to a local Git repositor
 Assume you made the following changes. What is the output of the last command in the sequence below?
 
 ```bash
-$ touch motivation.txt
-$ echo "Sharing information about myself." > motivation.txt
-$ git add motivation.txt
-$ echo "Documenting major milestones." > motivation.txt
-$ git commit -m "Motivate project"
-$ git restore motivation.txt
-$ cat motivation.txt
+touch motivation.txt
+echo "Sharing information about myself." > motivation.txt
+git add motivation.txt
+echo "Documenting major milestones." > motivation.txt
+git commit -m "Motivate project"
+git restore motivation.txt
+cat motivation.txt
 ```
 
 * `Sharing information about myself.`
 * `Documenting major milestones.`
-* 
+* The following:
+
 ```
 Sharing information about myself.
 Documenting major milestones.
 ```
+
 * An error message because we have changed motivation.txt without committing first.
 
 ## Create Branch I
@@ -72,7 +74,7 @@ What is the command to delete the branch "add-feature-x"?
 
 ## Add Remote
 
-What is the command to add the remote repository "https://abc.xyz/d/e.git" as "origin"?
+What is the command to add the remote repository `https://abc.xyz/d/e.git` as "origin"?
 
 * `git remote add origin https://abc.xyz/d/e.git`
 * `git origin=https://abc.xyz/d/e.git`
@@ -126,7 +128,7 @@ What does `git clean` do?
 * Unstage everything
 * Delete all commits that are not pushed yet
 
-## Detached HEAD 
+## Detached HEAD
 
 What can cause you to enter a "detached HEAD" state?
 

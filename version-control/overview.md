@@ -114,7 +114,7 @@ Format: student presentations and discussion
   - [GitKraken](https://www.gitkraken.com/)
   - `git blame` on GitHub
   - `git reflog`
-  - gitignore templates: https://github.com/github/gitignore
+  - [gitignore templates](https://github.com/github/gitignore)
 
 Remarks:
 
@@ -154,7 +154,7 @@ Format: slides
   - protect `main` and (if wanted) `develop` from direct pushes
   - dedicated release branches (e.g., `v0.2`) created of `develop`, tested, fixed, merged to `main`, tagged, merged back to `develop`
   - hotfix branches directly from and to `main`
-  - visualization: https://nvie.com/img/git-model@2x.png, by Vincent Driessen
+  - [visualization](https://nvie.com/img/git-model@2x.png, by Vincent Driessen)
   - good for: software with users, larger teams; used more or less in preCICE
 - Forking workflow
   - gitflow + feature branches on other forks
@@ -217,7 +217,7 @@ TODO: look for suitable pictures and create slides
   - don't use rebase on a public/shared branch
   - squash before merging if reasonable
 
-- `git log --graph` is local view, https://github.com/precice/precice/network is global view
+- `git log --graph` is local view, [Github](https://github.com/precice/precice/network) is global view
 
 - [Bitbucket docs](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
 - [Hackernoon](https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333)

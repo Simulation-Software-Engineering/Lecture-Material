@@ -50,7 +50,7 @@ Version control ...
 
 ## How does version control work?
 
-- Master (or *main*) copy of code in repository, can't edit directly
+- *master* (or *main*) copy of code in repository, can't edit directly
 - Instead: check out a working copy of code, edit, commit changes back
 - Repository records complete revision history
   - You can go back in time

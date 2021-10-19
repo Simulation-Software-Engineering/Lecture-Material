@@ -141,7 +141,7 @@ Duration: 15 mins
 Format: slides
 Material: TODO
 
-## GitHub standards
+## GitHub/GitLab standards
 
 Duration: 10 mins
 Format: slides, demo

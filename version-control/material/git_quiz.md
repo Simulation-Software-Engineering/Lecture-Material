@@ -4,7 +4,7 @@ Questions are taken from [py-rse](https://merely-useful.tech/py-rse/index.html),
 
 ## Add & Commit I
 
-Which command(s) below would save changes to myfile.txt to a local Git repository? (multiple choice)
+Which command(s) below would save changes to myfile.txt to a local (already existing) Git repository? (multiple choice)
 
 - `git commit -m "Add recent changes"`
 - `git init myfile.txt` && `git commit -m "Add recent changes"`
@@ -74,12 +74,12 @@ What is the command to delete the branch "add-feature-x"?
 
 ## Add Remote
 
-What is the command to add the remote repository `https://abc.xyz/d/e.git` as "origin"?
+What is the command to add the remote repository `https://ab.c/d/e.git` as "origin"?
 
-- `git remote add origin https://abc.xyz/d/e.git`
-- `git origin=https://abc.xyz/d/e.git`
-- `git add origin https://abc.xyz/d/e.git`
-- `git remote https://abc.xyz/d/e.git`
+- `git remote add origin https://ab.c/d/e.git`
+- `git origin=https://ab.c/d/e.git`
+- `git add origin https://ab.c/d/e.git`
+- `git remote https://ab.c/d/e.git`
 
 ## Pull
 
@@ -101,7 +101,7 @@ To unstage a currently staged file called `octocat.txt` without losing the chang
 
 ## Undo II
 
-Amira made changes this morning to a shell script called `data_cruncher.sh` that she has been working on for weeks. Her changes broke the script, and she has now spent an hour trying to get it back in working order. Luckily, she has been keeping track of her project’s versions using Git. Which of the commands below can she use to recover the last committed version of her script? (multiple choice)
+You made changes to a shell script called `data_cruncher.sh`, which broke it. Which of the git commands recovers the last committed version of the script? (multiple choice)
 
 - `git checkout HEAD`
 - `git checkout HEAD data_cruncher.sh`

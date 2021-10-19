@@ -99,7 +99,7 @@ No longer a fragmented market, there is nearly only Git today:
 
 - [Stackoverflow developer survey 2021](https://insights.stackoverflow.com/survey/2021#technology-most-popular-technologies):
   > "Over 90% of respondents use Git, suggesting that it is a fundamental tool to being a developer."
-- TODO verify: All software project candidates for *contribution challenge* use Git
+- All software project candidates for *contribution challenge* use Git
 - Is this good or bad?
 
 ---

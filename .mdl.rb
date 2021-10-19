@@ -15,6 +15,8 @@ exclude_rule 'MD041'
 exclude_rule 'MD012'
 # Allow raw HTML to include videos, for example.
 exclude_rule 'MD033'
+# Bare URL used rule seems buggy (false positives), therefore excluded
+exclude_rule 'MD034'
 # Allow code blocks without a language specified
 exclude_rule 'MD040'
 

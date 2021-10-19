@@ -1,6 +1,6 @@
 # Git Quiz
 
-Questions are taken from [py-rse](https://merely-useful.tech/py-rse/index.html), [learn.co](https://learn.co/lessons/git-github-learn-quiz), [w3schools](https://www.w3schools.com/quiztest/quiztest.asp?qtest=GIT),[this gist from @aspencer8111](https://gist.github.com/aspencer8111/17a80fb0a2be7b4718237fe8caa6e09c), and [codercrunch](https://www.codercrunch.com/quiz/take/1650218502/git-branching).
+Questions are taken from [py-rse](https://merely-useful.tech/py-rse/index.html), [learn.co](https://learn.co/lessons/git-github-learn-quiz), [w3schools](https://www.w3schools.com/quiztest/quiztest.asp?qtest=GIT), [this gist from @aspencer8111](https://gist.github.com/aspencer8111/17a80fb0a2be7b4718237fe8caa6e09c), and [codercrunch](https://www.codercrunch.com/quiz/take/1650218502/git-branching).
 
 ## Add & Commit I
 

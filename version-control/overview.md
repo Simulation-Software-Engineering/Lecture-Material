@@ -9,14 +9,18 @@ Learning goals:
 
 ## Introduction to version control
 
-Duration: 15 mins
-Format: slides
-Material: `intro_slides.md`
+| Duration | Format | Material |
+| --- | --- | --- |
+| 15 minutes | slides | [`intro_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/intro_slides.md) |
 
 ## Recap of Git basics
 
 Duration: 15 mins
 Format: poll, picture, demo
+
+| Duration | Format |
+| --- | --- |
+| 15 minutes | poll, picture, demo |
 
 - Expert level poll on git: ask students to estimate their level.
   - Beginner: I have hardly ever used Git
@@ -42,8 +46,9 @@ Format: poll, picture, demo
 
 ## How I work with Git
 
-Duration: 40 mins
-Format: demo
+| Duration | Format |
+| --- | --- |
+| 40 minutes | demo |
 
 Starting remarks:
 
@@ -108,14 +113,15 @@ Starting remarks:
 
 ## Clicker quiz about Git
 
-Duration: 30 mins
-Format: clicker quiz
-Material: `git_quiz.md` ported to `sli.do`
+| Duration | Format | Material |
+| --- | --- | --- |
+| 30 minutes | quiz | [`git_quiz.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/git_quiz.md) |
 
 ## My favorite neat little Git trick
 
-Duration: 30-45 mins
-Format: student presentations and discussion
+| Duration | Format |
+| --- | --- |
+| 30-45 minutes | student presentations and discussion |
 
 - Students present in 3-5 mins their favorite *neat little Git trick* (a tool, a command, a configuration, a GitHub thing, ...).
 - Preparation should not take longer than 15 mins, should be a demo.
@@ -136,20 +142,21 @@ Remarks:
 
 ## Working in teams / git workflows
 
-Duration: 15 mins
-Format: slides
-Material: TODO
+| Duration | Format | Material |
+| --- | --- | --- |
+| 15 minutes | slides | TODO |
 
 ## Merge vs. rebase
 
-Duration: 15 mins
-Format: slides
-Material: TODO
+| Duration | Format | Material |
+| --- | --- | --- |
+| 15 minutes | slides | TODO |
 
 ## GitHub/GitLab standards
 
-Duration: 10 mins
-Format: slides, demo
+| Duration | Format |
+| --- | --- |
+| 10 minutes | slides, demo |
 
 TODO
 

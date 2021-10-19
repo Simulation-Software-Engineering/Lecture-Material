@@ -94,6 +94,7 @@ Two parallel branches:
 * Laptop with root access
   * You should be able to install and configure software.
 * OK if we use Slido?
+* Signed up on campus?
 
 ---
 

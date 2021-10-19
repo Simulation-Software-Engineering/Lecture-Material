@@ -37,6 +37,8 @@ Format: poll, picture, demo
   - [SourceForge](https://sourceforge.net/)
   - many more
   - often, more than just hosting, also DevOps
+  
+- Give outlook on remainder of Git chapter: *How I work with Git*, quiz, advanced topics (workflows, rebase, standards), *my neat little Git trick*
 
 ## How I work with Git
 

@@ -29,13 +29,13 @@ slideOptions:
 
 ## Corona Rules
 
-* We need to check everybody's **3G status** and **registration for contact tracing**
-  * Use hardware cactUS reader for both when entering the room (each session)
-  * The lecture has less than 35 students --> Lecturers need to check --> Please don't enter the room before the lecturers are there (15 mins before session)
-  * Please act accordingly (e.g. fill out paper registration if needed or get tested if needed)
-  * Check out after lecture
-* Everybody in audience needs to wear an **FFP2 mask**
-* Keep distance, but please don't spread equally over the large room
+- We need to check everybody's **3G status** and **registration for contact tracing**
+  - Use hardware cactUS reader for both when entering the room (each session)
+  - The lecture has less than 35 students --> Lecturers need to check --> Please don't enter the room before the lecturers are there (15 mins before session)
+  - Please act accordingly (e.g. fill out paper registration if needed or get tested if needed)
+  - Check out after lecture
+- Everybody in audience needs to wear an **FFP2 mask**
+- Keep distance, but please don't spread equally over the large room
 
 [University of Stuttgart Corona Newsticker](https://www.uni-stuttgart.de/universitaet/aktuelles/meldungen/corona/)
 
@@ -43,22 +43,22 @@ slideOptions:
 
 ## The Lecturers
 
-* Alexander (Jaust) [`@ajaust`](https://github.com/ajaust)
-* Benjamin (Uekermann) [`@uekerman`](https://github.com/uekerman)
-* Ishaan (Desai) [`@IshaanDesai`](https://github.com/IshaanDesai)
+- Alexander (Jaust) [`@ajaust`](https://github.com/ajaust)
+- Benjamin (Uekermann) [`@uekerman`](https://github.com/uekerman)
+- Ishaan (Desai) [`@IshaanDesai`](https://github.com/IshaanDesai)
 
 ---
 
 ## The Idea & Learning Goals
 
-* No (advanced) programming course
-* Learn about all the other things you need to develop research /
+- No (advanced) programming course
+- Learn about all the other things you need to develop research /
   simulation software (to become a *"Research Software Engineer"*):
   continuous integration, virtualization, building & packaging, documentation, ...
-* Focus on tools for C++ and Python
-* More than a *"3-days software carpentry workshop on Python and git"*
-* Learn how to contribute to large-scale open-source simulation software projects
-* Learn which important simulation software packages exist and how to use them
+- Focus on tools for C++ and Python
+- More than a *"3-days software carpentry workshop on Python and git"*
+- Learn how to contribute to large-scale open-source simulation software projects
+- Learn which important simulation software packages exist and how to use them
 
 ---
 
@@ -66,60 +66,60 @@ slideOptions:
 
 Two parallel branches:
 
-* **Weekly lectures** (90 mins) and **exercises** (90 mins) to learn and train concepts and tools
-  * Thursdays, 09:45–11:15 and 15:45–17:15
-  * This lecture hall: V38.04
-  * No strict distinction between lecture and exercise
-  * Interactive style (not a theory course)
-* **Individual challenge**: contribute to real simulation software :rocket:
-  * List of software candidates: this afternoon
-  * 3 presentations from you (more later)
-  * You get a direct advisor
-  * Use exercise blocks and time after lectures for discussions
+- **Weekly lectures** (90 mins) and **exercises** (90 mins) to learn and train concepts and tools
+  - Thursdays, 09:45–11:15 and 15:45–17:15
+  - This lecture hall: V38.04
+  - No strict distinction between lecture and exercise
+  - Interactive style (not a theory course)
+- **Individual challenge**: contribute to real simulation software :rocket:
+  - List of software candidates: this afternoon
+  - 3 presentations from you (more later)
+  - You get a direct advisor
+  - Use exercise blocks and time after lectures for discussions
 
 ---
 
 ## Prerequisites: Skills
 
-* Basic programming (Python, C++)
-* Basic software development skills (bash, git, md, ...)
-* Some simulation background
+- Basic programming (Python, C++)
+- Basic software development skills (bash, git, md, ...)
+- Some simulation background
 
 ---
 
 ## Prerequisites: Infrastructure
 
-* GitHub account
-* We'll create an IPVS GitLab account for everyone
-* Laptop with root access
-  * You should be able to install and configure software.
-* OK if we use Slido?
-* Signed up on campus?
+- GitHub account
+- We'll create an IPVS GitLab account for everyone
+- Laptop with root access
+  - You should be able to install and configure software.
+- OK if we use Slido?
+- Signed up on campus?
 
 ---
 
 ## Material
 
-* Great new open-source book to recap: Irving, Hertweck, Johnston, Ostblom, Wickham, and Wilson: [Research Software Engineering with Python](https://merely-useful.tech/py-rse)
-* All our material is on [https://github.com/Simulation-Software-Engineering](https://github.com/Simulation-Software-Engineering)
-* Mainly markdown ... use your favorite tool to render (simply GitHub viewer, [GWDG Hedgedoc](https://pad.gwdg.de/), [pandoc](https://pandoc.org/), ...)
-* We'll add more as the semester goes
-* We give many links to videos, docs, blog posts, podcasts, ...
-* We plan to record the lecture, but this is only meant as a backup. Please always come when possible. What we do is interactive.
+- Great new open-source book to recap: Irving, Hertweck, Johnston, Ostblom, Wickham, and Wilson: [Research Software Engineering with Python](https://merely-useful.tech/py-rse)
+- All our material is on [https://github.com/Simulation-Software-Engineering](https://github.com/Simulation-Software-Engineering)
+- Mainly markdown ... use your favorite tool to render (simply GitHub viewer, [GWDG Hedgedoc](https://pad.gwdg.de/), [pandoc](https://pandoc.org/), ...)
+- We'll add more as the semester goes
+- We give many links to videos, docs, blog posts, podcasts, ...
+- We plan to record the lecture, but this is only meant as a backup. Please always come when possible. What we do is interactive.
 
 ---
 
 ## Contribute to the Material
 
-* You, no joke :see_no_evil:
-* Typos, broken links, ...
-* Additional material
-* By definition, we study quickly evolving technology ... help us staying up to date
-* We do the course for the first time ... there will still be flaws
-* Contribute by opening PRs (we'll obviously acknowledge contributions)
-* Click `edit me` on website
-* For large parts (new tool, new chapter, ...), discuss in issue first
-* See also [`CONTRIBUTING.md`](https://github.com/Simulation-Software-Engineering/lecture-materials/blob/main/CONTRIBUTING.md)
+- You, no joke :see_no_evil:
+- Typos, broken links, ...
+- Additional material
+- By definition, we study quickly evolving technology ... help us staying up to date
+- We do the course for the first time ... there will still be flaws
+- Contribute by opening PRs (we'll obviously acknowledge contributions)
+- Click `edit me` on website
+- For large parts (new tool, new chapter, ...), discuss in issue first
+- See also [`CONTRIBUTING.md`](https://github.com/Simulation-Software-Engineering/lecture-materials/blob/main/CONTRIBUTING.md)
 
 ---
 
@@ -213,22 +213,22 @@ td {
 
 ## Examination
 
-* *"Course accompanying examination"*: no exam, but continuous examination (more like a lab course or a seminar)
-* We look at:
-  * Challenge (outcome and presentations)
-  * Exercises (not every detail, but *"passed"* or *"failed"*)
-  * Overall engagement (interactive lecture, discussions, small presentations, ...)
-* Let us know if you cannot come to a lecture / exercise (you don't have to give a reason)
-* You will need to register yourself to the *"exam"* on C@MPUS
-* Point of no return: once you gave the first presentation (Nov 11), you have to register (please let us still know when you drop just before the presentation)
+- *"Course accompanying examination"*: no exam, but continuous examination (more like a lab course or a seminar)
+- We look at:
+  - Challenge (outcome and presentations)
+  - Exercises (not every detail, but *"passed"* or *"failed"*)
+  - Overall engagement (interactive lecture, discussions, small presentations, ...)
+- Let us know if you cannot come to a lecture / exercise (you don't have to give a reason)
+- You will need to register yourself to the *"exam"* on C@MPUS
+- Point of no return: once you gave the first presentation (Nov 11), you have to register (please let us still know when you drop just before the presentation)
 
 ---
 
 ## GitLab Account
 
-* Please write a mail till tonight to Alexander
-  * [alexander.jaust@ipvs.uni-stuttgart.de](mailto:alexander.jaust@ipvs.uni-stuttgart.de)
-* Email subject: "GitLab account SSE course"
-* State your **name** and preferred **email-address**
-* If you already have an IPVS account, we only need your username
-* We will then add you to the `Simulation Software Engineering` group
+- Please write a mail till tonight to Alexander
+  - [alexander.jaust@ipvs.uni-stuttgart.de](mailto:alexander.jaust@ipvs.uni-stuttgart.de)
+- Email subject: "GitLab account SSE course"
+- State your **name** and preferred **email-address**
+- If you already have an IPVS account, we only need your username
+- We will then add you to the `Simulation Software Engineering` group

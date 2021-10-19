@@ -111,4 +111,3 @@ Git itself is open-source: GPL license
 - source on [GitHub](https://github.com/git/git), contributions are a bit more complicated than a simple PR
 - written mainly in C
 - started by Linus Torvalds, core maintainer since later 2005: Junio Hamano
-

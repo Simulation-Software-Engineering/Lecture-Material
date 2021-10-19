@@ -41,7 +41,7 @@ slideOptions:
 Version control ...
 
 - tracks changes to files and helps people share those changes with each other.
-  - Could also be done via email / Google Docs / ..., but not so accurate and efficient
+  - Could also be done via email / Google Docs / ..., but not as accurately and efficiently
 - was originally developed for software development, but today cornerstone of *reproducible research*
 
 > "If you can't git diff a file format, it's broken."
@@ -60,7 +60,7 @@ Version control ...
 
 ## The alternative: A story told in file names
 
-<img src="http://phdcomics.com/comics/archive/phd052810s.gif" width=40% style="margin-left:auto; margin-right:auto">
+<img src="http://phdcomics.com/comics/archive/phd052810s.gif" width=60% style="margin-left:auto; margin-right:auto">
 
 [http://phdcomics.com/comics/archive/phd052810s.gif](http://phdcomics.com/comics/archive/phd052810s.gif)
 

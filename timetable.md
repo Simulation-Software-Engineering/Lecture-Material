@@ -10,8 +10,8 @@
 
 ## 1.2 -- Thu, October 21, 2021
 
-- **35** How I work with Git
-- **35** Git quiz
+- **40** How I work with Git
+- **30** Git quiz
 - **20** Presentation of possible simulation software and tell students how to submit a priority list
 - Ask students to prepare *My favorite neat little Git trick*
 

@@ -42,10 +42,13 @@ Format: poll, picture, demo
 
 ## How I work with Git
 
-Duration: 35 mins
+Duration: 40 mins
 Format: demo
 
-Starting remark: There is not *the one solution- how to do things with Git. I simply show what I typically use.
+Starting remarks:
+
+- There is not *the one solution* how to do things with Git. I simply show what I typically use.
+- Don't use a client if you don't understand the command line `git`
 
 - (1) Look at GitHub
   - [preCICE repository](https://github.com/precice/precice)
@@ -71,11 +74,11 @@ Starting remark: There is not *the one solution- how to do things with Git. I si
   - `git commit` -> "Include MagicHeader in Action.hpp"
   - `git status`, `git log`, `git log -p`, `git show`
 
-- (4) Change or revert stuff
+- (4) Change or revert things
   - I forgot to add sth: `git reset --soft HEAD~1`, `git status`
   - `git diff`, `git diff HEAD` because already staged
   - `git log`
-  - `git commit -a`
+  - `git commit`
   - actually all that is nonsense: `git reset --hard HEAD~1`
   - modify again, all nonsense before committing: `git checkout src/action/Action.hpp`
 
@@ -105,7 +108,7 @@ Starting remark: There is not *the one solution- how to do things with Git. I si
 
 ## Clicker quiz about Git
 
-Duration: 35 mins
+Duration: 30 mins
 Format: clicker quiz
 Material: `git_quiz.md` ported to `sli.do`
 

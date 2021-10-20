@@ -52,7 +52,7 @@ slideOptions:
 - *"Movement"* started in the UK, first UK RSE conference in 2016
 - First conferences in Germany and the Netherlands in 2019
 - [de-RSE position paper](https://f1000research.com/articles/9-295/v2) in 2020
-- 14 October 2021 was [First International RSE day](https://researchsoftware.org/2021/07/29/International-RSE-day.html)
+- 14 October 2021 was [First International RSE Day](https://researchsoftware.org/2021/07/29/International-RSE-day.html)
 - [Why be an RSE?](https://researchit.blogs.bristol.ac.uk/2021/10/14/international-rse-day-why-be-an-rse/) Interesting and novel projects, technical freedom, RSEs come from varied backgrounds, development for social good
 
 ---

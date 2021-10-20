@@ -94,7 +94,7 @@ Two parallel branches:
 - Laptop with root access
   - You should be able to install and configure software.
 - OK if we use Slido?
-- Signed up on campus?
+- Signed up on C@AMPUS?
 
 ---
 
@@ -105,7 +105,7 @@ Two parallel branches:
 - Mainly markdown ... use your favorite tool to render (simply GitHub viewer, [GWDG Hedgedoc](https://pad.gwdg.de/), [pandoc](https://pandoc.org/), ...)
 - We'll add more as the semester goes
 - We give many links to videos, docs, blog posts, podcasts, ...
-- We plan to record the lecture, but this is only meant as a backup. Please always come when possible. What we do is interactive.
+- We plan to record the lecture (everybody OK?), but this is only meant as a backup. Please always come when possible. What we do is interactive.
 
 ---
 

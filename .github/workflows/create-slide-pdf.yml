@@ -28,6 +28,7 @@ jobs:
             -V aspectratio=169
             -V linkcolor:blue
             -V fontsize=12pt
+            --listings
             -s
             --output=slides/version-control-intro-slides.pdf
             version-control/material/intro_slides.md
@@ -39,6 +40,7 @@ jobs:
             -V aspectratio=169
             -V linkcolor:blue
             -V fontsize=12pt
+            --listings
             -s
             --output=slides/version-control-git-quiz.pdf
             version-control/material/git_quiz.md
@@ -50,6 +52,7 @@ jobs:
             -V aspectratio=169
             -V linkcolor:blue
             -V fontsize=12pt
+            --listings
             -s
             --output=slides/organization-rse-basics.pdf
             organization/material/rse_basics.md
@@ -61,6 +64,7 @@ jobs:
             -V aspectratio=169
             -V linkcolor:blue
             -V fontsize=12pt
+            --listings
             -s
             --output=slides/organization-intro-course.pdf
             organization/material/intro_course.md
@@ -72,6 +76,7 @@ jobs:
             -V aspectratio=169
             -V linkcolor:blue
             -V fontsize=12pt
+            --listings
             -s
             --output=slides/organization-challenge-intro.pdf
             organization/material/challenge_intro.md

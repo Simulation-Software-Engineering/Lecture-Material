@@ -1,0 +1,28 @@
+name: Create PDF of slides via pandoc
+
+on:
+  push:
+    branches: "*"
+  pull_request:
+    branches: "*"
+  workflow_dispatch:
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: create file list
+        id: files_list
+        run: |
+          echo "::set-output name=files::$(printf '"%s" ' *.md)"
+
+      - uses: docker://pandoc/latex:latest
+        with:
+          args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
+
+      - uses: actions/upload-artifact@master
+        with:
+          name: output
+          path: output

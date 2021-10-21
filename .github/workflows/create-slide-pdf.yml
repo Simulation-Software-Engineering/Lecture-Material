@@ -29,9 +29,9 @@ jobs:
             -V aspectratio=169
             -V linkcolor:blue
             -V fontsize=14pt
-            -s intro_slides.md
             -s
-            --output=output/version-control-intro-slides.pdf version-control/material/intro_slides.md
+            --output=output/version-control-intro-slides.pdf
+            version-control/material/intro_slides.md
 
       - uses: actions/upload-artifact@master
         with:

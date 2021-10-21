@@ -13,11 +13,9 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-20.04
     strategy:
-    matrix:
-
-      #slides-markdown: ['version-control/material/intro_slides.md', 'organization/material/rse_basics.md', 'organization/material/intro_course.md', 'organization/material/challenge_intro.md']
-      slides-markdown: [['version-control/material/intro_slides.md','version-control-intro-slides.pdf'], ['organization/material/rse_basics.md','organization-rse-basics.pdf'], ['organization/material/intro_course.md','organization-intro-course.pdf'], ['organization/material/challenge_intro.md','organization-challenge-intro.pdf']]
-      text-markdown: [ ['version-control/material/git_quiz.md','version-control-git-quiz.pdf'] ]
+      matrix:
+        slides-markdown: [['version-control/material/intro_slides.md','version-control-intro-slides.pdf'], ['organization/material/rse_basics.md','organization-rse-basics.pdf'], ['organization/material/intro_course.md','organization-intro-course.pdf'], ['organization/material/challenge_intro.md','organization-challenge-intro.pdf']]
+        text-markdown: [ ['version-control/material/git_quiz.md','version-control-git-quiz.pdf'] ]
     steps:
       - uses: actions/checkout@v2
 

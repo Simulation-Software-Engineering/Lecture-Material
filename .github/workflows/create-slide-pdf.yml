@@ -34,8 +34,8 @@ jobs:
             -V fontsize=12pt
             --listings
             -s
-            --output=slides/${{ matrix.slides-markdown.[1] }}
-            ${{ matrix.slides-markdown.[0] }}
+            --output=slides/${{ matrix.slides-markdown[1] }}
+            ${{ matrix.slides-markdown[0] }}
 
       - uses: docker://pandoc/latex:latest
         with:
@@ -48,8 +48,8 @@ jobs:
             -V linkcolor:blue
             -V fontsize=10pt
             --listings
-            --output=slides/${{ matrix.text-markdown.[1] }}
-            ${{ matrix.text-markdown.[0] }}
+            --output=slides/${{ matrix.text-markdown[1] }}
+            ${{ matrix.text-markdown[0] }}
 
       - uses: actions/upload-artifact@master
         with:

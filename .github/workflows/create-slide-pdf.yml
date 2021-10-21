@@ -23,7 +23,6 @@ jobs:
 
       - uses: docker://pandoc/latex:latest
         with:
-#          args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
           args: >-
             -t beamer
             -V aspectratio=169
@@ -32,6 +31,17 @@ jobs:
             -s
             --output=output/version-control-intro-slides.pdf
             version-control/material/intro_slides.md
+
+      - uses: docker://pandoc/latex:latest
+        with:
+          args: >-
+            -t beamer
+            -V aspectratio=169
+            -V linkcolor:blue
+            -V fontsize=14pt
+            -s
+            --output=output/version-control-git-quiz.pdf
+            version-control/material/git_quiz.md
 
       - uses: actions/upload-artifact@master
         with:

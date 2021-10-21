@@ -2,14 +2,16 @@ name: Create PDF of slides via pandoc
 
 on:
   push:
-    branches: "*"
+    branches:
+      - "*"
   pull_request:
-    branches: "*"
+    branches:
+      - "*"
   workflow_dispatch:
 
 jobs:
   convert_via_pandoc:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
 
@@ -17,11 +19,19 @@ jobs:
         id: files_list
         run: |
           mkdir output
-          echo "::set-output name=files::$(printf '"%s" ' *.md)"
+#          echo "::set-output name=files::$(printf '"%s" ' *.md)"
 
       - uses: docker://pandoc/latex:latest
         with:
-          args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
+#          args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
+          args: |
+            -t beamer
+            -V aspectratio=169
+            -V linkcolor:blue
+            -V fontsize=14pt
+            -s intro_slides.md
+            -s
+            --output=output/version-control-intro-slides.pdf version-control/material/intro_slides.md
 
       - uses: actions/upload-artifact@master
         with:

@@ -1,4 +1,4 @@
-name: Create PDF of slides via pandoc
+name: PDF creation
 
 on:
   push:

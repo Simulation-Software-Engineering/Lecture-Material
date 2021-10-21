@@ -12,6 +12,12 @@ on:
 jobs:
   convert_via_pandoc:
     runs-on: ubuntu-20.04
+    strategy:
+    matrix:
+
+      #slides-markdown: ['version-control/material/intro_slides.md', 'organization/material/rse_basics.md', 'organization/material/intro_course.md', 'organization/material/challenge_intro.md']
+      slides-markdown: [['version-control/material/intro_slides.md','version-control-intro-slides.pdf'], ['organization/material/rse_basics.md','organization-rse-basics.pdf'], ['organization/material/intro_course.md','organization-intro-course.pdf'], ['organization/material/challenge_intro.md','organization-challenge-intro.pdf']]
+      text-markdown: [ ['version-control/material/git_quiz.md','version-control-git-quiz.pdf'] ]
     steps:
       - uses: actions/checkout@v2
 
@@ -30,8 +36,8 @@ jobs:
             -V fontsize=12pt
             --listings
             -s
-            --output=slides/version-control-intro-slides.pdf
-            version-control/material/intro_slides.md
+            --output=slides/${{ slides-markdown.[1] }}
+            ${{ slides-markdown.[0] }}
 
       - uses: docker://pandoc/latex:latest
         with:
@@ -44,44 +50,8 @@ jobs:
             -V linkcolor:blue
             -V fontsize=10pt
             --listings
-            --output=slides/version-control-git-quiz.pdf
-            version-control/material/git_quiz.md
-
-      - uses: docker://pandoc/latex:latest
-        with:
-          args: >-
-            -t beamer
-            -V aspectratio=169
-            -V linkcolor:blue
-            -V fontsize=12pt
-            --listings
-            -s
-            --output=slides/organization-rse-basics.pdf
-            organization/material/rse_basics.md
-
-      - uses: docker://pandoc/latex:latest
-        with:
-          args: >-
-            -t beamer
-            -V aspectratio=169
-            -V linkcolor:blue
-            -V fontsize=12pt
-            --listings
-            -s
-            --output=slides/organization-intro-course.pdf
-            organization/material/intro_course.md
-
-      - uses: docker://pandoc/latex:latest
-        with:
-          args: >-
-            -t beamer
-            -V aspectratio=169
-            -V linkcolor:blue
-            -V fontsize=12pt
-            --listings
-            -s
-            --output=slides/organization-challenge-intro.pdf
-            organization/material/challenge_intro.md
+            --output=slides/${{ text-markdown.[1] }}
+            ${{ text-markdown.[0] }}
 
       - uses: actions/upload-artifact@master
         with:

@@ -18,7 +18,7 @@ jobs:
       - name: create file list
         id: files_list
         run: |
-          mkdir output
+          mkdir slides
 #          echo "::set-output name=files::$(printf '"%s" ' *.md)"
 
       - uses: docker://pandoc/latex:latest
@@ -29,7 +29,7 @@ jobs:
             -V linkcolor:blue
             -V fontsize=12pt
             -s
-            --output=output/version-control-intro-slides.pdf
+            --output=slides/version-control-intro-slides.pdf
             version-control/material/intro_slides.md
 
       - uses: docker://pandoc/latex:latest
@@ -40,7 +40,7 @@ jobs:
             -V linkcolor:blue
             -V fontsize=12pt
             -s
-            --output=output/version-control-git-quiz.pdf
+            --output=slides/version-control-git-quiz.pdf
             version-control/material/git_quiz.md
 
       - uses: docker://pandoc/latex:latest
@@ -51,7 +51,7 @@ jobs:
             -V linkcolor:blue
             -V fontsize=12pt
             -s
-            --output=output/organization-rse-basics.pdf
+            --output=slides/organization-rse-basics.pdf
             organization/material/rse_basics.md
 
       - uses: docker://pandoc/latex:latest
@@ -62,7 +62,7 @@ jobs:
             -V linkcolor:blue
             -V fontsize=12pt
             -s
-            --output=output/organization-intro-course.pdf
+            --output=slides/organization-intro-course.pdf
             organization/material/intro_course.md
 
       - uses: docker://pandoc/latex:latest
@@ -73,10 +73,10 @@ jobs:
             -V linkcolor:blue
             -V fontsize=12pt
             -s
-            --output=output/organization-challenge-intro.pdf
+            --output=slides/organization-challenge-intro.pdf
             organization/material/challenge_intro.md
 
       - uses: actions/upload-artifact@master
         with:
-          name: output
-          path: output
+          name: slides
+          path: slides

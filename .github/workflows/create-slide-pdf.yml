@@ -36,12 +36,14 @@ jobs:
       - uses: docker://pandoc/latex:latest
         with:
           args: >-
-            -t beamer
-            -V aspectratio=169
+            -V geometry:a4paper
+            -V geometry:left=2.5cm
+            -V geometry:right=2.5cm
+            -V geometry:bottom=2.5cm
+            -V geometry:top=2.5cm
             -V linkcolor:blue
-            -V fontsize=12pt
+            -V fontsize=10pt
             --listings
-            -s
             --output=slides/version-control-git-quiz.pdf
             version-control/material/git_quiz.md
 

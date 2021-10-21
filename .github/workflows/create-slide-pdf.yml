@@ -24,7 +24,7 @@ jobs:
       - uses: docker://pandoc/latex:latest
         with:
 #          args: --output=output/result.pdf ${{ steps.files_list.outputs.files }}
-          args: |
+          args: >-
             -t beamer
             -V aspectratio=169
             -V linkcolor:blue

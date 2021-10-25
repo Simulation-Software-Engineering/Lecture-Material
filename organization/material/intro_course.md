@@ -90,7 +90,7 @@ Two parallel branches:
 ## Prerequisites: Infrastructure
 
 - GitHub account
-- We'll create an IPVS GitLab account for everyone
+- We'll create an IPVS-SIM GitLab account for everyone
 - Laptop with root access
   - You should be able to install and configure software.
 - OK if we use Slido?
@@ -230,5 +230,5 @@ td {
   - [alexander.jaust@ipvs.uni-stuttgart.de](mailto:alexander.jaust@ipvs.uni-stuttgart.de)
 - Email subject: "GitLab account SSE course"
 - State your **name** and preferred **email-address**
-- If you already have an IPVS account, we only need your username
+- If you already have an IPVS-SIM GitLab account, we only need your username
 - We will then add you to the `Simulation Software Engineering` group

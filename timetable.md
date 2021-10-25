@@ -18,13 +18,13 @@
 ## 2.1 -- Thu, October 28, 2021
 
 - Last chance to ask questions about challenge software, deadline to pick software in the evening
+- All access to GitLab challenge repo?
 - **30-45** *My favorite neat little Git trick*
 - **15** Merge vs. rebase
 - **15** Working in teams / git workflows
-- **10** GitHub standards
+- **10** GitHub/GitLab standards
 
 ## 2.2 -- Thu, October 28, 2021
 
-- Tell students who got which software
 - **75** Exercise: SSE Git cheat sheet
 - **15** Discussion

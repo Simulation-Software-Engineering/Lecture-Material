@@ -131,6 +131,7 @@ Starting remarks:
   - `git reflog`
   - [gitignore templates](https://github.com/github/gitignore)
   - [GitExplorer](https://gitexplorer.com/)
+  - Shortcut `t` to search project files on GitHub
 - More examples:
   - GitHub CLI
   - [GitKraken](https://www.gitkraken.com/)
@@ -144,27 +145,19 @@ Remarks:
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 15 minutes | slides | [`workflow_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/workflow_slides.md) |
+| 15 minutes | slides | [`workflow_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/merge_rebase_slides.md) |
 
 ## Working in teams / git workflows
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 15 minutes | slides | TODO |
+| 15 minutes | slides | [`workflow_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/workflow_slides.md) |
 
 ## GitHub/GitLab standards
 
-| Duration | Format |
+| Duration | Format | Material |
 | --- | --- |
-| 10 minutes | slides, demo |
-
-TODO
-
-- README.md
-- license
-- CONTRIBUTING.md
-- issue or PR templates
-- closes #34
+| 10 minutes | slides, demo | [`workflow_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/standards_slides.md) |
 
 ## Exercise: SSE Git cheat sheet
 

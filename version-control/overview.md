@@ -140,13 +140,13 @@ Remarks:
 
 - Only use a GUI once you understand command-line Git.
 
-## Working in teams / git workflows
+## Merge vs. rebase
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 15 minutes | slides | TODO |
+| 15 minutes | slides | [`workflow_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/workflow_slides.md) |
 
-## Merge vs. rebase
+## Working in teams / git workflows
 
 | Duration | Format | Material |
 | --- | --- | --- |

@@ -2,16 +2,19 @@
 
 Learning goals:
 
-* Comprehending the necessity to package code
-* Using package managers to package code and upload to a remote managing platform
+* Understanding the necessity to package code
+* Determining the type of packaging required for your code
+* Modifying code and packaging it
+* Uploading code to a remote package managing platform
 * TODO
 
-## Kick-off discussion
+## Quiz
 
 Duration: 10 mins
-Format: verbal discussion
+Format: online poll
 
-* Ask students if they have installed packaged code before? Perhaps using `pip`? What was their experience?
+* Conduct an online poll with 3-4 questions to get an impression of how much the students already know about packaging
+* Discuss results and quantify the minimum knowledge level of the class
 
 ## Introduction to packaging
 

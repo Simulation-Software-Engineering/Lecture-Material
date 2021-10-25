@@ -5,7 +5,6 @@ slideOptions:
   width: 1400
   height: 900
   margin: 0.1
-  data-background-color: green
 ---
 
 <style>

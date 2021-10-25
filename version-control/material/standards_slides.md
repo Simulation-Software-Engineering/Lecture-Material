@@ -66,5 +66,5 @@ Certain files lead to special formatting (normally directly at root of repo):
 ## Issues and PRs
 
 - Templates for description in `.github` folder
-- `closes #34` in commit message or PR description will close issue 34 when merged
+- `closes #34` (or several other keywords: `fixes`, `resolves`) in commit message or PR description will close issue 34 when merged
 - `help wanted` label gets rendered on repo preview (e.g. *"3 issues need help"*)

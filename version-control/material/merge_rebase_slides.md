@@ -39,7 +39,7 @@ slideOptions:
 
 ## Linear History
 
-<img src="https://pad.gwdg.de/uploads/upload_e4c3a28048efdfda9d7ddbd76328bb94.png" width=60%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/figs/history1/fig.png" width=60%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 - Commits are snapshots, not diffs
   - But for linear history, this makes no difference
@@ -55,7 +55,7 @@ slideOptions:
 
 
 - `git checkout main && git merge feature`
-  <img src="https://pad.gwdg.de/uploads/upload_4b99866fa165e3b1f7afec5ca2a47239.png" width=70%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px" >
+  <img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/figs/history2/fig.png" width=70%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px" >
 - A merge commit (normally) has two parent commits `M^1` and `M^2` (don't confuse `^2` with `~2`)
   - Can't show unique diff
   - First parent relative to the branch you are on (`M^1` = `C`, `M^2` = `E`)
@@ -89,7 +89,7 @@ slideOptions:
 ## Rebase
 
 - `git checkout feature && git rebase main`
-  <img src="https://pad.gwdg.de/uploads/upload_9328758906dfd0eea43d9f8de559961f.png" width=90%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+  <img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/figs/history3/fig.png" width=90%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 - Then: `git checkout main && git merge feature` (fast-forward)
 - Downside: history is rewritten, the commits are not the same, they now have different parent commits
 - Thus, only use rebase if **only you** work on a branch (a local branch or a branch on your fork)

@@ -25,6 +25,6 @@
 
 ## 2.2 -- Thu, October 28, 2021
 
-- Tell student students who got which software
+- Tell students who got which software
 - **75** Exercise: SSE Git cheat sheet
 - **15** Discussion

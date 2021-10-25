@@ -161,10 +161,9 @@ Remarks:
 
 ## Exercise: SSE Git cheat sheet
 
-Duration: 75 mins
-Format: group work (~10-15 students, if more we might need to split)
-Prerequisites: everybody needs a GitHub account, everybody needs to have write access to the master branch
-Material: TODO
+| Duration | Format | Material |
+| --- | --- |
+| 75 minutes | group work | [`cheat_sheet_text.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/cheat_sheet_text.md) |
 
 ## Further reading
 

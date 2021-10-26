@@ -12,7 +12,7 @@ Let's create our own SSE Git cheat sheets written in markdown. Obviously, there 
 
 ## Tasks
 
-1. Fork your Git cheat sheet repository, [Octocat](TODO) or [Tux](TODO).
+1. Fork your Git cheat sheet repository, [Octocat](https://github.com/Simulation-Software-Engineering/Git-Cheat-Sheet-Octocat) or [Tux](https://github.com/Simulation-Software-Engineering/Git-Cheat-Sheet-Tux).
 2. Create issues (in the upstream repository) on what you think the group should work on. Examples: "Define categories" or "Add `git pull and push`". Look for and avoid duplicates. Assign yourself if you want to work on an issue. If necessary, use the issue to discuss details. Don't open too many issues right away. If necessary, discuss with your group, but the main conversations should happen on GitHub.
 3. If you think you have a good first extension of the cheat sheet, open a PR from a feature branch on your fork to the upstream `main` branch. Keep PRs concise, such that they are easy to review and quick to merge. Briefly describe the rationale of the PR. Assign yourself to the PR. You are responsible for the life cycle of the PR.
 4. Find at least one reviewer for your PR (by asking around offline). Assign them as reviewer or let them assign themselves.

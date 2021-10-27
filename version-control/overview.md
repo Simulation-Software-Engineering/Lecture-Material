@@ -156,13 +156,13 @@ Remarks:
 ## GitHub/GitLab standards
 
 | Duration | Format | Material |
-| --- | --- |
+| --- | --- | --- |
 | 10 minutes | slides, demo | [`workflow_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/standards_slides.md) |
 
 ## Exercise: SSE Git cheat sheet
 
 | Duration | Format | Material |
-| --- | --- |
+| --- | --- | --- |
 | 75 minutes | group work | [`cheat_sheet_text.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/cheat_sheet_text.md) |
 
 ## Further reading

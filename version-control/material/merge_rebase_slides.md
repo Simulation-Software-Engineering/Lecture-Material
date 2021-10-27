@@ -132,7 +132,7 @@ We use here:
 
 ## Summary
 
-- Try to keep a linear history with rebasing whereever reasonable
+- Try to keep a linear history with rebasing whenever reasonable
 - Don't use rebase on a public/shared branch
 - Squash before merging if reasonable
 - Delete `feature` branch after merging

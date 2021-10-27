@@ -67,7 +67,9 @@ slideOptions:
 
 ## Why is a Linear History Important?
 
-> Linear history == no merge commits
+We use here:
+
+> Linear history := no merge commits
 
 - Merge commits are hard to understand per se
 - A merge takes all commits from `feature` to `main` (on `git log`) --> hard to understand

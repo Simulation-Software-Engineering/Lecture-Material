@@ -36,11 +36,13 @@ slideOptions:
 
 ---
 
-## Why Standards?
+## What do we mean with Standards?
 
-- GitHub uses standards / conventions
+- GitHub uses standards or conventions
+- Certain files or names trigger certain behavior automatically
 - Many are supported by most forges
-- **This is good**
+  - **This is good**
+  - Everybody should know them
 
 ---
 

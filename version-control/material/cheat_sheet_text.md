@@ -8,7 +8,7 @@
 
 ## Introduction
 
-Let's create our own SSE Git cheat sheets written in markdown. Obviously, there are many great Git cheat sheets out there. There is also the official manual. Our goal is not make even better cheat sheets. Instead, our goal is to got through the process of how to get there: to learn how to work together as a team on GitHub and to maybe learn something new about Git on the way. Restrict the cheat sheet to the really important every-day Git commands. We want to have a usable cheat sheet in one hour. Make use of the [feature branch workflow](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/workflow_slides.md#Feature-Branch-Workflow) with forks.
+Let's create our own SSE Git cheat sheets written in markdown. Obviously, there are many great Git cheat sheets out there. There is also the official manual. Our goal is not to make even better cheat sheets. Instead, our goal is to got through the process of how to get there: to learn how to work together as a team on GitHub and to maybe learn something new about Git on the way. Restrict the cheat sheet to the really important everyday Git commands. We want to have a usable cheat sheet in one hour. Make use of the [feature branch workflow](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/workflow_slides.md#Feature-Branch-Workflow) with forks.
 
 ## Tasks
 

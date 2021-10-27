@@ -105,7 +105,7 @@ We use here:
   - Create a merge commit
   - Squash and merge
   - Rebase and merge
-- Look at a PR together, e.g. [this one](https://github.com/precice/precice/pull/986)
+- Look at a PR together, e.g. [this one](https://github.com/precice/precice/pull/986) (will be closed eventually)
 
 > What do the options do?
 

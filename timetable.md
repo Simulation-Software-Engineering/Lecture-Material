@@ -21,9 +21,9 @@
 - Does everyone have access to IPVS-SIM GitLab challenge repo?
 - We need GitHub accounts to prepare exercise this afternoon. Please read through exercise instructions already.
 - **30-45** *My favorite neat little Git trick*
-- **15** Merge vs. rebase
-- **15** Working in teams / git workflows
-- **10** GitHub/GitLab standards
+- **25** Merge vs. rebase
+- **20** Working in teams / git workflows
+- **10** GitHub/GitLab standards (could be moved to afternoon block if time is too short)
 
 ## 2.2 -- Thu, October 28, 2021
 

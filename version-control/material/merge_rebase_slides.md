@@ -40,12 +40,13 @@ slideOptions:
 
 <img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/figs/history_linear/fig.png" width=60%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
-- Commits are snapshots, not diffs
+- Commits are snapshots + pointer to parent, not diffs
   - But for linear history, this makes no difference
 - Each normal commit has one parent commit
   - `c05f017^` <-- `c05f017`
   - `A` = `B^` <-- `B`
   - (`^` is the same as `~1`)
+  - Pointer to parent commit goes into hash
 - `git show` gives diff of commit to parent
 
 ---
@@ -81,7 +82,7 @@ We use here:
 
 ## How to get a Linear History?
 
-- Real conflicts are very rare in real projects, most conflicts / merge commits are false positives and  should be avoided
+- Real conflicts are very rare in real projects, most merge commits are false positives (not conflicts) and should be avoided
 - If there are no changes on `main`, `git merge` does a *"fast-forward"* merge (no merge commit)
 - If there are changes on `main`, rebase `feature` branch
 
@@ -91,17 +92,16 @@ We use here:
 
 - `git checkout feature && git rebase main`
   <img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/figs/history_rebase/fig.png" width=90%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
-- Then: `git checkout main && git merge feature` (fast-forward)
-- Downside: history is rewritten, the commits are not the same, they now have different parent commits
-- Thus, only use rebase if **only you** work on a branch (a local branch or a branch on your fork)
-- If already on remote, it needs a force push `git push --force myfork feature` (since history is rewritten)
-- For local branches very helpful: `git pull --rebase` (fetch & rebase)
+- New parents --> new hashes --> history is rewritten
+- If `feature` is already on remote, it needs a force push `git push --force myfork feature`
+- Be careful: only use rebase if **only you** work on a branch (a local branch or a branch on your fork)
+- Remark: for local branches very helpful: `git pull --rebase` (fetch & rebase)
 
 ---
 
 ## GitHub PR Merge Variants
 
-- GitHub offers three ways how to merge a non-conflicting (no changes in same files) PR:
+- GitHub offers three ways to merge a non-conflicting (no changes in same files) PR:
   - Create a merge commit
   - Squash and merge
   - Rebase and merge
@@ -126,7 +126,7 @@ We use here:
 > But what if there is a conflict?
 
 - Resolve by rebasing `feature` branch (recommended)
-- Or merge `main` into `feature`
+- Or resolve by merging `main` into `feature`
 
 ---
 

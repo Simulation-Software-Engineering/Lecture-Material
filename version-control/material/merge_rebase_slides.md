@@ -38,7 +38,7 @@ slideOptions:
 
 ## Linear History
 
-<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/figs/history_linear/fig.png" width=60%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/version-control/material/figs/history_linear/fig.png" width=60%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 - Commits are snapshots + pointer to parent, not diffs
   - But for linear history, this makes no difference
@@ -55,7 +55,7 @@ slideOptions:
 
 
 - `git checkout main && git merge feature`
-  <img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/figs/history_merge/fig.png" width=70%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px" >
+  <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/version-control/material/figs/history_merge/fig.png" width=70%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px" >
 - A merge commit (normally) has two parent commits `M^1` and `M^2` (don't confuse `^2` with `~2`)
   - Can't show unique diff
   - First parent relative to the branch you are on (`M^1` = `C`, `M^2` = `E`)
@@ -91,7 +91,7 @@ We use here:
 ## Rebase
 
 - `git checkout feature && git rebase main`
-  <img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/material/figs/history_rebase/fig.png" width=90%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+  <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/version-control/material/figs/history_rebase/fig.png" width=90%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 - New parents --> new hashes --> history is rewritten
 - If `feature` is already on remote, it needs a force push `git push --force myfork feature`
 - Be careful: only use rebase if **only you** work on a branch (a local branch or a branch on your fork)

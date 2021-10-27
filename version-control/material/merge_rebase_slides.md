@@ -130,7 +130,7 @@ We use here:
 
 ---
 
-## Summary
+## Summary and Final Remarks
 
 - Try to keep a linear history with rebasing whenever reasonable
 - Don't use rebase on a public/shared branch

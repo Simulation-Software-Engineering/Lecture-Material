@@ -26,7 +26,7 @@ Let's create our own SSE Git cheat sheets written in markdown. Obviously, there 
 - Create a GitHub project to manage and oversee the overall progress.
 - Add a markdownlint configuration and a GitHub action to check whether your cheat sheet follows markdown standards. You could find some inspiration in [lecture material repo](https://github.com/Simulation-Software-Engineering/Lecture-Material).
 - Discuss and add categories to issues and PRs.
-- Extent the readme file and add a contributors list there.
+- Extend the readme file and add a contributors list there.
 - Add a `CONTIRBUTING.md`.
 - Push your fork also to a (private) GitLab repository.
 - Be creative.

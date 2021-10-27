@@ -73,7 +73,7 @@ We use here:
 
 - Merge commits are hard to understand per se
 - A merge takes all commits from `feature` to `main` (on `git log`) --> hard to understand
-- Developers often follow project by reading commits (reading the diffs) --> harder to read (where happened what)
+- Developers often follow projects by reading commits (reading the diffs) --> harder to read (where happened what)
 - Tracing bugs easier with linear history (see `git bisect`)
   - Example: we know a bug was introduced between `v1.3` and `v1.4`
 

@@ -65,13 +65,11 @@ slideOptions:
 - Push feature branch to remote, use descriptive name
   - e.g. issue number in name if each branch closes one issue
 - `main` should never contain broken code
+- Protect direct push to `main`
 - PR (or MR) with review to merge from feature branch to `main`
-  - Protect direct push to master
-  - CI runs in PR
-  - PRs can also be opened as draft to discuss things first
 - Rebase feature branch on `main` if necessary
 - Delete remote branch once merged and no longer needed (one click on GitHub after merge)
-- **Good for**: small teams, small projects, prototyping, websites (continuous integration), documentation
+- **Good for**: small teams, small projects, prototyping, websites (continuous deployment), documentation
 - Aka [trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development) or [GitHub flow](https://guides.github.com/introduction/flow/)
 
 ---
@@ -84,7 +82,7 @@ slideOptions:
   - `develop` contains latest features
 - Feature branches created of `develop`, PRs back to `develop`
 - Protect `main` and (possibly) `develop` from direct pushes
-- Dedicated release branches (e.g., `v0.2`) created of `develop`
+- Dedicated release branches (e.g., `v1.0`) created of `develop`
   - Tested, fixed, merged to `main`
   - Afterwards, tagged, merged back to `develop`
 - Hotfix branches directly of and to `main`
@@ -97,7 +95,7 @@ slideOptions:
 
 - Gitflow + feature branches on other forks
 - More control over access rights, distinguish between maintainers and external contributors
-- Also use feature branches on forks for maintainers?
+- Should maintainers also use branches on their forks?
   - Makes overview of branches easier
   - Distinguish between prototype branches (on fork, no PR), serious enhancements (on fork with PR), joint enhancements (on upstream)
 - **Good for**: open-source projects with external contributions (used more or less in preCICE)
@@ -108,7 +106,7 @@ slideOptions:
 
 - For all workflows, it is better to do small PRs
   - Easier to review
-  - Faster to merge --> less conflicts
+  - Faster to merge --> fewer conflicts
   - Easier to squash
 
 ---

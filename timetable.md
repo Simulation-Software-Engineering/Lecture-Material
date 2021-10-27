@@ -18,7 +18,7 @@
 ## 2.1 -- Thu, October 28, 2021
 
 - Last chance to ask questions about challenge software, deadline to pick software in the evening
-- All access to GitLab challenge repo?
+- Does everyone have access to IPVS-SIM GitLab challenge repo?
 - We need GitHub accounts to prepare exercise this afternoon. Please read through exercise instructions already.
 - **30-45** *My favorite neat little Git trick*
 - **15** Merge vs. rebase

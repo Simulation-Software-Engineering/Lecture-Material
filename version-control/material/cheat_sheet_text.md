@@ -49,4 +49,4 @@ At least 10 minutes in the end:
 
 ## Final remarks
 
-If you want, continue with the cheat sheet or do more of them in other chapters of the lecture (docker, cmake, ...). Let us know if we should create repositories under the `SSE` organization.
+If you want, continue with the cheat sheet or do more of them in other chapters of the lecture (Docker, CMake, ...). Let us know if we should create repositories under the `SSE` organization.

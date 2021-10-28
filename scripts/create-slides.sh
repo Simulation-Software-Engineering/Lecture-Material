@@ -1,6 +1,6 @@
 #! /usr/bin/env sh
 
-
+echo "In directory ${PWD}"
 for f in $(find . -iname "*_slides.md");
 do
     echo $f

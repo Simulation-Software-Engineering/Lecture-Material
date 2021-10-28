@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  create_slides:
+  create_pdfs:
     runs-on: ubuntu-20.04
     container: pandoc/latex:latest
     steps:
@@ -23,13 +23,6 @@ jobs:
         with:
           name: slides
           path: slides
-
-  create_texts:
-    runs-on: ubuntu-20.04
-    container: pandoc/latex:latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
       - name: Compile PDFs (texts)
         run: |
           ./scripts/create-texts.sh
@@ -37,3 +30,4 @@ jobs:
         with:
           name: texts
           path: texts
+

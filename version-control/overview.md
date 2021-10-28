@@ -139,6 +139,7 @@ Starting remarks:
   - `git effort` (from `git-extras`repository): Show effort statistics on file(s) in repository
   - `git commit -m "Title of commit" -d "Description of commit` to specify a commit message and description without going to vim
   - Use [aheadfork](https://github.com/mbomb007/aheadfork) to find GitHub forks that are ahead
+  - Use [permanent links](https://docs.github.com/en/github/writing-on-github/working-with-advanced-formatting/creating-a-permanent-link-to-a-code-snippet#linking-to-code) on GitHub to refer to and display code snippets in issues
   - Coding in the cloud with GitHub [Codespaces](https://github.com/features/codespaces) and VS Code: type `.` in a repository to jump into the editor
 
 Remarks:

@@ -23,6 +23,7 @@ jobs:
         with:
           name: slides
           path: slides
+          retention-days: 14
       - name: Compile PDFs (texts)
         run: |
           ./scripts/create-texts.sh
@@ -30,4 +31,5 @@ jobs:
         with:
           name: texts
           path: texts
+          retention-days: 14
 

@@ -16,7 +16,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Compile PDFs
+      - name: Compile PDFs (slides)
         run: |
           ./scripts/create-slides.sh
       - uses: actions/upload-artifact@master
@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Compile PDFs
+      - name: Compile PDFs (texts)
         run: |
           ./scripts/create-texts.sh
       - uses: actions/upload-artifact@master

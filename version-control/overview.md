@@ -132,6 +132,7 @@ Starting remarks:
   - [gitignore templates](https://github.com/github/gitignore)
   - [GitExplorer](https://gitexplorer.com/)
   - Shortcut `t` to search project files on GitHub
+  - `git commit -m "Title of commit" -d "Description of commit` to specify a commit message and description without going to vim
 - More examples:
   - GitHub CLI
   - [GitKraken](https://www.gitkraken.com/)

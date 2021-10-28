@@ -17,13 +17,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Compile PDFs
-        id: files_list
         run: |
           bash scripts/create-slides.sh
-    - uses: actions/upload-artifact@master
-      with:
-        name: slides
-        path: slides
+      - uses: actions/upload-artifact@master
+        with:
+          name: slides
+          path: slides
 
   create_texts:
     runs-on: ubuntu-20.04

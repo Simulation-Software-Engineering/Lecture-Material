@@ -1,6 +1,9 @@
 #! /usr/bin/env sh
 
 echo "In directory ${PWD}"
+echo $(ls -la)
+echo $(ls -la version-control)
+echo $(ls -la organization)
 for f in $(find . -iname "*_slides.md");
 do
     echo $f

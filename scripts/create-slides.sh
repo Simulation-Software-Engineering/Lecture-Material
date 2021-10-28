@@ -1,12 +1,8 @@
 #! /usr/bin/env sh
 
 echo "In directory ${PWD}"
-ls -la
-ls -la version-control
-ls -la version-control/material
-ls -la organization
-ls -la organization/material
-for f in $(find . -iname "*_slides.md");
+mkdir -p slides
+for f in $(find . -type f -iname "*_slides.md");
 do
     echo $f
     output_filename=$(echo $f | rev| cut -d "/" -f 1 | rev | sed "s/md/pdf/")

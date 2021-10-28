@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Compile PDFs
         run: |
-          mkdir slides && ./scripts/create-slides.sh
+          ./scripts/create-slides.sh
       - uses: actions/upload-artifact@master
         with:
           name: slides
@@ -26,31 +26,13 @@ jobs:
 
   create_texts:
     runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        text-markdown: [ ['version-control/material/git_quiz.md','version-control-git-quiz.pdf'], ['version-control/material/cheat_sheet_text.md', 'cheat_sheet_text.pdf'] ]
+    container: pandoc/latex:latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: create file list
-        id: files_list
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Compile PDFs
         run: |
-          mkdir texts
-
-      - uses: docker://pandoc/latex:latest
-        with:
-          args: >-
-            -V geometry:a4paper
-            -V geometry:left=2.5cm
-            -V geometry:right=2.5cm
-            -V geometry:bottom=2.5cm
-            -V geometry:top=2.5cm
-            -V linkcolor:blue
-            -V fontsize=10pt
-            --listings
-            --output=texts/${{ matrix.text-markdown[1] }}
-            ${{ matrix.text-markdown[0] }}
-
+          ./scripts/create-texts.sh
       - uses: actions/upload-artifact@master
         with:
           name: texts

@@ -3,7 +3,9 @@
 echo "In directory ${PWD}"
 ls -la
 ls -la version-control
+ls -la version-control/material
 ls -la organization
+ls -la organization/material
 for f in $(find . -iname "*_slides.md");
 do
     echo $f

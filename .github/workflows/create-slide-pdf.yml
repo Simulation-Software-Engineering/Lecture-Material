@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        slides-markdown: [['version-control/material/intro_slides.md','version-control-intro-slides.pdf'], ['organization/material/rse_basics.md','organization-rse-basics.pdf'], ['organization/material/intro_course.md','organization-intro-course.pdf'], ['organization/material/challenge_intro.md','organization-challenge-intro.pdf'], ['organization/material/merge_rebase_slides.md','merge_rebase.pdf'], ['organization/material/standards_slides.md','standards.pdf'], ['organization/material/workflows_slides.md','workflows.pdf']]
+        slides-markdown: [['version-control/material/intro_slides.md','version-control-intro-slides.pdf'], ['organization/material/rse_basics.md','organization-rse-basics.pdf'], ['organization/material/intro_course.md','organization-intro-course.pdf'], ['organization/material/challenge_intro.md','organization-challenge-intro.pdf'], ['version-control/material/merge_rebase_slides.md','merge_rebase.pdf'], ['version-control/material/standards_slides.md','standards.pdf'], ['version-control/material/workflows_slides.md','workflows.pdf']]
     steps:
       - uses: actions/checkout@v2
 

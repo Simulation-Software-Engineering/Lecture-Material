@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        slides-markdown: [['version-control/material/intro_slides.md','version-control-intro-slides.pdf'], ['organization/material/rse_basics.md','organization-rse-basics.pdf'], ['organization/material/intro_course.md','organization-intro-course.pdf'], ['organization/material/challenge_intro.md','organization-challenge-intro.pdf']]
+        slides-markdown: [['version-control/material/intro_slides.md','version-control-intro-slides.pdf'], ['organization/material/rse_basics.md','organization-rse-basics.pdf'], ['organization/material/intro_course.md','organization-intro-course.pdf'], ['organization/material/challenge_intro.md','organization-challenge-intro.pdf'], ['organization/material/merge_rebase_slides.md','merge_rebase.pdf'], ['organization/material/standards_slides.md','standards.pdf'], ['organization/material/workflows_slides.md','workflows.pdf']]
     steps:
       - uses: actions/checkout@v2
 
@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        text-markdown: [ ['version-control/material/git_quiz.md','version-control-git-quiz.pdf'] ]
+        text-markdown: [ ['version-control/material/git_quiz.md','version-control-git-quiz.pdf'], ['version-control/material/cheat_sheet_text.md', 'cheat_sheet_text.pdf'] ]
     steps:
       - uses: actions/checkout@v2
 

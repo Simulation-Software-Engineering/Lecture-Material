@@ -136,6 +136,7 @@ Starting remarks:
   - GitHub CLI
   - [GitKraken](https://www.gitkraken.com/)
 - Collect links via PRs
+  - `git effort` (from `git-extras`repository): Show effort statistics on file(s) in repository
 
 Remarks:
 

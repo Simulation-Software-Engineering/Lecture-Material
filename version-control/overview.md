@@ -136,6 +136,7 @@ Starting remarks:
 - More examples:
   - GitHub CLI
   - [GitKraken](https://www.gitkraken.com/)
+  - Use [aheadfork](https://github.com/mbomb007/aheadfork) to find GitHub forks that are ahead
 - Collect links via PRs
   - `git effort` (from `git-extras`repository): Show effort statistics on file(s) in repository
 

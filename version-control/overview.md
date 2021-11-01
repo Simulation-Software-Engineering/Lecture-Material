@@ -134,6 +134,7 @@ Collected examples:
 - GitHub uses [gitignore templates](https://github.com/github/gitignore) if you create a `.gitignore` file from GitHub
 - [GitExplorer](https://gitexplorer.com/): a nice way to generate important git command
 - Shortcut `t` to search project files on GitHub
+- Shortcut `ctrl` + `k` to never use mouse on GitHub again
 - `git effort` (from `git-extras`repository): Show effort statistics on file(s) in repository
 - `git commit -m "Title of commit" -d "Description of commit` to specify a commit message and description without going to vim
 - Use [aheadfork](https://github.com/mbomb007/aheadfork) to find GitHub forks that are ahead

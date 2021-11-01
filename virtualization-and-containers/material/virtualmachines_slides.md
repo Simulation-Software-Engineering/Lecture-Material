@@ -37,6 +37,17 @@ slideOptions:
 
 ---
 
+## General information
+
+- Big variety of solutions Kernel-based Virtual Machine (KVM)
+- You can have root rights inside your virtual machine.
+- VM will obtain exclusive access to some of your resources
+- What problems does it solve?
+    - You want to run a different operating system within your current one. Example: I am on Linux, but want to use Microsoft Office and other stuff (without using WINE/Proton).
+    - You want to run services in an encapsulated way. Want to run than one server on one physical machine. (Proxmox, KVM)
+
+---
+
 ## Common terms
 
 - Host operating system (host OS)
@@ -76,10 +87,12 @@ slideOptions:
 ### Type 1
 
 - Runs directly on bare-metal hardware
+- Examples: Microsoft Hyper-V, VMware ESXi, Proxmox Virtual Environment, Xen...
 
 ### Type 2
 
 - Requires a running OS
+- Examples: VirtualBox, VMWare Player, VMWare Workstation, Parallels (for Mac)...
 
 ---
 

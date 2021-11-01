@@ -39,14 +39,37 @@ slideOptions:
 
 ---
 
-##
+## What for?
 
 - Provision machins based on VirtualBox, Hyper-V, Docker, but also VMware, AWS...
 
 [https://www.vagrantup.com/](https://www.vagrantup.com/)
 
 ---
+
+## Setting up
+
+- Configuration via `Vagrantfile`
+
+**Note**: Download Vagrant from homepage, not via the package manager.
+
+
+---
+## Vagrant Cloud
+
+- Repository of premade boxes
+
+
+---
 ## TODO
+
+---
+
+## Demo
+
+---
+
+## Demo - preCICE Example
 
 ---
 

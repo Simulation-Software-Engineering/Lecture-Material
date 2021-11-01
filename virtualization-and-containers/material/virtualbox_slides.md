@@ -5,6 +5,7 @@ slideOptions:
   width: 1400
   height: 900
   margin: 0.1
+  slideNumber: true
 ---
 
 <style>
@@ -27,45 +28,32 @@ slideOptions:
 
 ---
 
-## What is a virtual machine?
+## VirtualBox
 
-- Big variety of solutions Kernel-based Virtual Machine (KVM)
-- Short background story
-    - Created by Innotek (Weinstadt, Germany! That is close to Stuttgart) and obtained by Sun Microsystems in 2008. Since 2010, owned by Oracle.
-- Initially closed source product with special license for personal use and evaluation (PUEL). Now: Open Source edition which is free, open-source virtual machine solution (GPL2).
-- Discuss some additional foundations of virtualization technologies.
-- Virtual machines are based on virtual disks (VDI) which are virtual hard drives. Might be static or dynamic in size. Makes it possible to move virtual machines easily around.
-- You can have root rights inside your virtual machine.
-- VM will obtain exclusive access to some of your
-- What problems does it solve?
-    - You want to run a different operating system within your current one. Example: I am on Linux, but want to use Microsoft Office and other stuff (without using WINE/Proton).
-    - You want to run services in an encapsulated way. Want to run than one server on one physical machine. (Proxmox, KVM)
-- Short question: What type of hypervisor is VirtualBox? Type 2
-
+- Created by Innotek (Weinstadt, Germany)
+- 2008 obtained by Sun Microsystems in 2008. Since 2010, owned by Oracle
+- Initially closed source product with special license for personal use and evaluation (PUEL)
+- Now: Open Source edition which is free, open-source virtual machine solution (GPL2)
 
 ---
 
 ## Setting up VirtualBox
 
 - Requires hardware virtualization support
-    - `VT-x`, ` VT-d`, `AMD-V`...
-    - Check virtualization settings in BIOS/UEFI if it does not work out of the box.
-- "Guest Additions": Software and drivers to improves guest's performance
-    - To be installed on guest
+    - `VT-x`, ` VT-d`, `AMD-V`, ...
+    - Check virtualization settings in BIOS/UEFI if it does not work out of the box
+- Sufficient space on hard drive
 
 ---
 
 ## Virtual Hard Drive Formats
 
-Supported formats:
-- **VDI**: "Virtual Disk Image", VirtualBox' native format
-- **VHD**: Format used by Microsoft
-- **VMDK**: VMWare's virtual disk format
-
-Further (partially) supported formats:
-- HDD: Parallels format (only version 2 supported)
-- QCOW
-- QED
+- Main formats
+  - **VDI**: "Virtual Disk Image", VirtualBox' native format
+  - **VHD**: Format used by Microsoft
+  - **VMDK**: VMWare's virtual disk format
+  - Support dynamic allocation
+- Further (partially) supported formats: HDD (Parallels format only version 2 supported), QCOW, QED
 
 **Note**: If you use btrfs as filesystem, you should disable CoW for the VM's images. (I/O load)
 
@@ -78,6 +66,24 @@ Source: [https://www.parallels.com/blogs/ras/vdi-vs-vhd-vs-vmdk/](https://www.pa
 - `NAMEOFVM.vdi`: The virtual hard drive containing the guest os
 - `NAMEOFVM.vbox`: XML containing metadata and configuration information (RAM, network devices...)
 - `Logs/`: Directory containing log files
+- `Snapshots/`: Snapshots of image
+
+---
+
+## Guest Additions
+
+- "Guest Additions": Software and drivers to improves guest's performance
+    - Drivers etc.
+- Might need additional packages
+  - On Ubuntu:
+  ```
+  perl dkms build-essential linux-headers-generic linux-headers-$(uname -r)
+  ```
+
+
+---
+
+## Demo
 
 ---
 
@@ -87,8 +93,10 @@ Source: [https://www.parallels.com/blogs/ras/vdi-vs-vhd-vs-vmdk/](https://www.pa
 - Simple to set up and run
 - Offer flexibility on OS choice
 - Manual setup. How to manage several VMs efficiently?
+- Consistency of the environment?
+- Sharing image with others?
 
-> If you can't git diff a file format, it's broken.
+> "If you can't git diff a file format, it's broken."
 
 ---
 

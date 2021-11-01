@@ -29,7 +29,7 @@ slideOptions:
 
 ## What is a virtual machine?
 
-![A sketch of virtual machines](virtualmachine-sketch.png)
+![A sketch of virtual machines](figs/virtualmachine-sketch.png)
 
 - Emulating a complete computer.
 - Has a (type 1/2) hypervisor. Type 1 runs on bare metal while type 2 runs within an operating system. Distinction not always clear.

@@ -29,7 +29,7 @@ slideOptions:
 
 ## What is a container
 
-![A sketch of containers](container-sketch.png)
+![A sketch of containers](figs/container-sketch.png)
 
 - Low(er) overhead than virtual machines.
 - Container operates in "fenced off" part of the operating system (`cgroups`).

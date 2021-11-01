@@ -79,6 +79,13 @@
     - In general: *Better integration* into host system
 - Create a shared drive to exchange data instead of copy and pasting file content.
 
+- Creating a new virtual machine
+    - Click on `new`
+    - I use `expert mode` to set disk location, size and memory. Note, that one can change that also later on.
+    - After clicking on `Create` a menu to create the `Virtual Hard Disk` opens.
+        - One can choose between fixed size and dynamically allocated (i.e. the drive grows). I personally recommend avoiding dynamically allocated as it grows a lot if one is not careful.
+
+
 ## Vagrant
 
 | Duration | Format |

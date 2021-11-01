@@ -31,20 +31,39 @@ slideOptions:
 
 ![A sketch of virtual machines](figs/virtualmachine-sketch.png)
 
-- Emulating a complete computer.
-- Has a (type 1/2) hypervisor. Type 1 runs on bare metal while type 2 runs within an operating system. Distinction not always clear.
-- Might need/benefit from virtualization technologies (VT-X)
-- Great flexibility. Can run (normally) any operating system that runs on the virtualized platform.
-- Strict separation from host operating system. (Popular for safety critical tasks: c't banking os, Desinfec't, Remote laptops)
+- Environment that allows you to run any (supported) operating
+- Virtual Machines are portable and flexible
+- Strict separation from host operating system. (Popular for safety critical tasks: Desinfec't, Remote laptops)
+
+---
+
+## Common terms
+
+- Host operating system (host OS)
+    - The OS the hypervisor is installed on
+- Guest operating system (guest OS)
+    - The OS running inside the virtual machine
+- Virtual machine (VM)
+    - Environment the guest is running in
 
 ---
 
 ## Why is Virtualization Useful?
 
+### For us
+
 - Running multiple operating systems simultaneously
-- Easier software installations
+    - Test/develop software for other OS, debug problems on other OS...
+- Easier software installations and testing
+    - Offer preconfigured VM for users. Useful for trainings and teaching.
 - Testing and disaster recovery
+    - Create snapshots beforetesting. Copy VMs etc.
+
+### Further benefits
+
 - Infrastructure consolidation
+    - Run many VMs on single host
+- Seperate service from each other (security?!)
 
 [VirtualBox Manual](https://www.virtualbox.org/manual/ch01.html)
 
@@ -60,14 +79,11 @@ slideOptions:
 
 ### Type 2
 
-- Requires a running OS to
+- Requires a running OS
 
 ---
 
-## Common terms
+## Summary
 
-- Host operating system (host OS)
-    - The OS the hypervisor is installed on
-- Guest operating system (guest OS)
-    - The OS running inside the virtual machine
-- Virtual machine (VM)
+- Allows to run additional OS on your machine
+- VM is encapsulated

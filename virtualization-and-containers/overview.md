@@ -14,6 +14,10 @@
 - Who is using containers or virtualization technologies?!
 - Which tools do you use/know?
 
+## General announcement
+
+- This week focus on virtualization and containers. Exercise for this will be next week.
+- VirtualBox (image) can also be used for exercises, especially for containers.
 ## Introduction to virtualization and containerization
 
 | Duration | Format |

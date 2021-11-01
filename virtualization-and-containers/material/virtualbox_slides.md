@@ -73,6 +73,25 @@ Source: [https://www.parallels.com/blogs/ras/vdi-vs-vhd-vs-vmdk/](https://www.pa
 
 ---
 
+## Content of a VirtualBox Image
+
+- `NAMEOFVM.vdi`: The virtual hard drive containing the guest os
+- `NAMEOFVM.vbox`: XML containing metadata and configuration information (RAM, network devices...)
+- `Logs/`: Directory containing log files
+
+---
+
+## Summary
+
+- Open-source system for virtual machines
+- Simple to set up and run
+- Offer flexibility on OS choice
+- Manual setup. How to manage several VMs efficiently?
+
+> If you can't git diff a file format, it's broken.
+
+---
+
 ## Further Reading
 
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)

@@ -32,10 +32,10 @@
 
 # 3.1 -- Thu, November 04, 2021
 
-- **10** Introduction to virtualization and containerization
-- **20** Virtualbox
+- **10** Introduction to virtualization
+- **15** Virtualbox
 - **15** Virtualbox practical example
-- **10** Vagrant
+- **15** Vagrant
 - **5** Vagrant practical example
 - **15** Time for practical exercises
 - **15** Background on containers

@@ -71,7 +71,7 @@
 
 | Duration | Format |
 | --- | --- |
-| 15 minutes | Demo |
+| 20 minutes | Demo |
 
 - Discuss configuration:
     - Virtual machine will reserve cores/threads of your CPU and main memory.
@@ -87,8 +87,24 @@
     - Click on `new`
     - I use `expert mode` to set disk location, size and memory. Note, that one can change that also later on.
     - After clicking on `Create` a menu to create the `Virtual Hard Disk` opens.
-        - One can choose between fixed size and dynamically allocated (i.e. the drive grows). I personally recommend avoiding dynamically allocated as it grows a lot if one is not careful.
-
+        - One can choose between fixed size and dynamically allocated (i.e. the drive grows). I personally recommend avoiding dynamically allocated without upper limit.
+    - Creates empty machine. Will not do much as we do not have any OS installed. VirtualBox will prompt to mount an image (iso).
+    - Show system settings of VM.
+    - Storage -> Controller (Mount drive here) and boot again. -> Installation will start up.
+        - Normally should unmount image after installation.
+    - Install "VirtualBox Guest Additions". Might have to download the image.
+        - Devices `Insert Guest Additions CD image"
+        ```
+        sudo mkdir -p /media/cdrom
+        sudo mount /dev/cdrom /media/cdrom
+        cd /media/cdrom
+        sudo apt-get install -y perl dkms build-essential linux-headers-generic linux-headers-$(uname -r)
+        sudo su
+        ./VBoxLinuxAdditions.run
+        ```
+        - Will enable clipboard sharing etc
+    - VM will capture mouse pointer. Use `Right-CTRL` to "free" pointer again.
+    - Create snapshots on image overview (Burger symbol on the right)
 
 ## Vagrant
 
@@ -111,7 +127,7 @@
 
 - Fire up and use VirtualBox VM.
     - Example could be the preCICE Vagrant VM.
-## Recap containers and overview
+## Introduction to containers
 
 | Duration | Format |
 | --- | --- |
@@ -203,6 +219,9 @@
 
 - Docker is popular for encapsulating environments for testing (CI/CD, DevOps) as we will see later.
 - Singularity is a bit more "niche", but important in the computing/simulation business.
+
+
+- For the exercise you should ideally have Docker, VirtualBox, Vagrant (maybe Singularity installed)
 
 ## Exercise
 

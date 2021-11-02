@@ -43,6 +43,8 @@ slideOptions:
     - `VT-x`, ` VT-d`, `AMD-V`, ...
     - Check virtualization settings in BIOS/UEFI if it does not work out of the box
 - Sufficient space on hard drive
+  - VM uses a virtual hard drive
+- Some video memory (recommend >=64MB)
 
 ---
 
@@ -65,6 +67,7 @@ Source: [https://www.parallels.com/blogs/ras/vdi-vs-vhd-vs-vmdk/](https://www.pa
 
 - `NAMEOFVM.vdi`: The virtual hard drive containing the guest os
 - `NAMEOFVM.vbox`: XML containing metadata and configuration information (RAM, network devices...)
+- `NAMEOFVM.vbox-prev`: Backup of previous settings
 - `Logs/`: Directory containing log files
 - `Snapshots/`: Snapshots of image
 
@@ -73,12 +76,18 @@ Source: [https://www.parallels.com/blogs/ras/vdi-vs-vhd-vs-vmdk/](https://www.pa
 ## Guest Additions
 
 - "Guest Additions": Software and drivers to improves guest's performance
-    - Drivers etc.
+    - Better video support, shared clipboard, mouse pointer intergration...
 - Might need additional packages
-  - On Ubuntu:
+  - On Ubuntu 20.04
+  ```
+  sudo apt install virtualbox-guest-dkms virtualbox-guest-x11 virtualbox-guest-utils
+  ```
+    - `virtualbox-guest-x11` can be dropped on h eadless system
+  - On Ubuntu for building packages manually
   ```
   perl dkms build-essential linux-headers-generic linux-headers-$(uname -r)
   ```
+- If the screen appears black after installation -> Increase video memory to >=64 MB
 
 
 ---
@@ -93,6 +102,7 @@ Source: [https://www.parallels.com/blogs/ras/vdi-vs-vhd-vs-vmdk/](https://www.pa
 - Simple to set up and run
 - Offer flexibility on OS choice
 - Manual setup. How to manage several VMs efficiently?
+  - CLI interface exists
 - Consistency of the environment?
 - Sharing image with others?
 
@@ -103,3 +113,4 @@ Source: [https://www.parallels.com/blogs/ras/vdi-vs-vhd-vs-vmdk/](https://www.pa
 ## Further Reading
 
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
+- [Ubuntu 18.04 virtual machine setup](https://codebots.com/docs/ubuntu-18-04-virtual-machine-setup)

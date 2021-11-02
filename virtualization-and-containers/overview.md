@@ -18,11 +18,11 @@
 
 - This week focus on virtualization and containers. Exercise for this will be next week.
 - VirtualBox (image) can also be used for exercises, especially for containers.
-## Introduction to virtualization and containerization
+## Introduction to virtualization
 
 | Duration | Format |
 | --- | --- |
-| 15 minutes | Slides |
+| 10 minutes | Slides |
 
 ![A sketch of virtual machines](virtualmachine-sketch.png)
 
@@ -30,22 +30,16 @@
 
 - What is virtualization and what is containerization?
     - What problems do they solve? Why do we need them?
-- What are the differences between VMs and containers?
-    - Virtual machines (VWs)
-        - Emulating a complete computer.
-        - Has a (type 1/2) hypervisor. Type 1 runs on bare metal while type 2 runs within an operating system. Distinction not always clear.
-        - Might need/benefit from virtualization technologies (VT-X)
-        - Great flexibility. Can run (normally) any operating system that runs on the virtualized platform.
-        - Strict separation from host operating system. (Popular for safety critical tasks: c't banking os, Desinfec't, Remote laptops)
-    - Containers
-        - Low(er) overhead than virtual machines.
-        - Container operates in "fenced off" part of the operating system (`cgroups`).
-        - Container runs kernel of the host OS.
-        - Operating system (OS) needs to be compatible with underlying OS. Cannot run different OS than host. (TODO: Verify this)
-            - **Note**: Windows 10 can run Linux containers! (Due to Windows Subsystem for Linux?!)
-- Focus will be on Linux and Linux-based containers and VMs.
+- Virtual machines (VWs)
+    - Emulating a complete computer.
+    - Virtual machine brings the full software stack (kernel, libraries etc.)
+    - Has a (type 1/2) hypervisor. Type 1 runs on bare metal while type 2 runs within an operating system. Distinction not always clear.
+    - Might need/benefit from virtualization technologies (VT-X)
+    - Great flexibility. Can run (normally) any operating system that runs on the virtualized platform.
+    - Strict separation from host operating system. (Popular for safety critical tasks: c't banking os, Desinfec't, Remote laptops)
+- Focus of lecture will be on Linux and Linux-based containers and VMs.
 - Various virtualization and container technologies and tools to manage them. Sometimes separation is a bit vague/complicated and changed over time (lxc/lxd, Docker).
-- We discuss tools that are (more) likely to be encountered in simulation software.
+- We discuss tools and use cases that are (more) likely to be encountered in simulation software.
 
 ## Introduction to VirtualBox
 
@@ -53,17 +47,17 @@
 | --- | --- |
 | 15 minutes | Slides |
 
-- Big variety of solutions Kernel-based Virtual Machine (KVM)
-- Short background story
-    - Created by Innotek (Weinstadt, Germany! That is close to Stuttgart) and obtained by Sun Microsystems in 2008. Since 2010, owned by Oracle.
-- Initially closed source product with special license for personal use and evaluation (PUEL). Now: Open Source edition which is free, open-source virtual machine solution (GPL2).
-- Discuss some additional foundations of virtualization technologies.
-- Virtual machines are based on virtual disks (VDI) which are virtual hard drives. Might be static or dynamic in size. Makes it possible to move virtual machines easily around.
 - You can have root rights inside your virtual machine.
-- VM will obtain exclusive access to some of your
 - What problems does it solve?
     - You want to run a different operating system within your current one. Example: I am on Linux, but want to use Microsoft Office and other stuff (without using WINE/Proton).
     - You want to run services in an encapsulated way. Want to run than one server on one physical machine. (Proxmox, KVM)
+- Content of a VirtualBox Image
+    - Show directory on drive:
+        - `NAMEOFVM.vdi`: The virtual hard drive containing the guest os
+        - `NAMEOFVM.vbox`: XML containing metadata and configuration information (RAM, network devices...)
+        - `NAMEOFVM.vbox-prev`: Backup of previous settings
+        - `Logs/`: Directory containing log files
+        - `Snapshots/`: Snapshots of image
 - Short question: What type of hypervisor is VirtualBox? Type 2
 
 
@@ -82,7 +76,8 @@
     - Shared clipboard
     - In general: *Better integration* into host system
 - Create a shared drive to exchange data instead of copy and pasting file content.
-
+    - In case one cannot access it `sudo usermod -aG vboxsf $(whoami)`
+    - You need to logout and in again afterwards for usergroups to be recognized
 - Creating a new virtual machine
     - Click on `new`
     - I use `expert mode` to set disk location, size and memory. Note, that one can change that also later on.
@@ -103,8 +98,22 @@
         ./VBoxLinuxAdditions.run
         ```
         - Will enable clipboard sharing etc
+        - Alternative on Ubuntu
+        ```
+        sudo apt install virtualbox-guest-dkms virtualbox-guest-x11 virtualbox-guest-utils
+        ```
+        - `virtualbox-guest-x11` can be dropped on headless system
     - VM will capture mouse pointer. Use `Right-CTRL` to "free" pointer again.
     - Create snapshots on image overview (Burger symbol on the right)
+        - Load snapshots for different configuration stages
+    - Configure network for ssh
+        - Install `openssh-server`
+        - Shutdown VM
+        - In VirtualBox window -> File -> Host Network Manager -> Verify that network device is configured `vboxnet0`
+        - In virtual machine's settings -> Network -> Adapter 2 -> Enable and set Host only adapter `vboxnet0`
+        - Boot VM
+        - Verify additional network device `enp0s8` and check for ip address. In my case `192.168.56.101`
+        - On host machine `ssh vmuser@192.168.56.101`
 
 ## Vagrant
 
@@ -112,10 +121,10 @@
 | --- | --- |
 | 15 minutes | Slides |
 
-- Short background
-    - Company: HashiCorp
-    - Founder (Hashimoto) has background in DevOps
-    - HashiCorp also develops other container/virtualization management tools like TerraForm
+- Initially deveoped by Mitchell Hashimoto as side project
+- Released in 2010
+- Now developed by Hashimoto's company HashiCorp
+ - HashiCorp develops a variety of open-source tools for DevOps and cloud computing. In general for large scale projects.
 - Configure VMs (I think also containers nowadays) conveniently via text files
 - Infrastructure as code (Git lecture: If you cannot use `diff`, it is the wrong format!)
 
@@ -125,13 +134,55 @@
 | --- | --- |
 | 15 minutes | Demo |
 
-- Fire up and use VirtualBox VM.
-    - Example could be the preCICE Vagrant VM.
+Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
+
+```
+vagrant init hashicorp/bionic64
+```
+- Initialize repository
+- Creates `Vagrantfile`. This file can be put in version control.
+```
+vagrant up
+```
+- Download and set up VM.
+- Will also start VM
+- Open VirtualBox to see a VM running. We can open the box there, but are prompted for login username and password.
+- Note: The actual "box" is put under your home directory
+```
+vagrant ssh
+```
+- Connect to running VM
+- See different username/hostname
+- Different Ubuntu (18.04)
+```
+vagrant destroy
+```
+- Exchanging files
+    - Check output `default: Mounting shared folders...`
+    - Default: Directory containing `Vagrantfile` is mounted as  `/vagrant`
+    - Can configure more drives
+    - Show example by creating file from Vagrant session
+
+- Vagrant examples
+    - Own stuff
+    - [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
+    - preCICE
+        - Comes with a GUI
+        - Preconfigured
+
 ## Introduction to containers
 
 | Duration | Format |
 | --- | --- |
 | 10 minutes | Slides |
+
+- What are the differences between VMs and containers?
+    - Containers
+        - Low(er) overhead than virtual machines.
+        - Container operates in "fenced off" part of the operating system (`cgroups`).
+        - Container runs kernel of the host OS.
+        - Operating system (OS) needs to be compatible with underlying OS. Cannot run different OS than host. (TODO: Verify this)
+            - **Note**: Windows 10 can run Linux containers! (Due to Windows Subsystem for Linux?!)
 
 - Shortly recap what we have learned about containers.
     - Fenced-off, relies on capabilities of OS etc.

@@ -26,6 +26,10 @@ slideOptions:
 
 # VirtualBox
 
+<img src="https://www.virtualbox.org/graphics/vbox_logo2_gradient.png" width=15%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
+[https://www.virtualbox.org/graphics/vbox_logo2_gradient.png](https://www.virtualbox.org/graphics/vbox_logo2_gradient.png)
+
 ---
 
 ## Introduction

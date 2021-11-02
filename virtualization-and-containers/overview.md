@@ -141,6 +141,7 @@ vagrant init hashicorp/bionic64
 ```
 - Initialize repository
 - Creates `Vagrantfile`. This file can be put in version control.
+
 ```
 vagrant up
 ```
@@ -148,15 +149,30 @@ vagrant up
 - Will also start VM
 - Open VirtualBox to see a VM running. We can open the box there, but are prompted for login username and password.
 - Note: The actual "box" is put under your home directory
+
 ```
 vagrant ssh
 ```
 - Connect to running VM
 - See different username/hostname
 - Different Ubuntu (18.04)
+
 ```
 vagrant destroy
 ```
+- Will destroy (delete) current VM
+
+Alternatives:
+```
+vagrant suspend
+```
+- Suspends VM
+
+```
+vagrant halt
+```
+- Shuts VM down, keeping changes in the VM
+
 - Exchanging files
     - Check output `default: Mounting shared folders...`
     - Default: Directory containing `Vagrantfile` is mounted as  `/vagrant`

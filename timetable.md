@@ -32,13 +32,11 @@
 
 # 3.1 -- Thu, November 04, 2021
 
+- **10** Orga
 - **10** Introduction to virtualization
-- **15** Virtualbox
-- **15** Virtualbox practical example
-- **15** Vagrant
-- **5** Vagrant practical example
-- **15** Time for practical exercises
-- **15** Background on containers
+- **30** Virtualbox with practical example
+- **30** Vagrant with practical example
+- **10** Background on containers
 - Tell students to get/install virtualbox in case they have a machine without Linux and or without root rights.
 
 # 3.2 -- Fri, November 04, 2021
@@ -48,6 +46,8 @@
 - **10** Singularity
 - **5** Singularity practical example
 - **15** Time for practical exercises
+
+- Students that for the exercise next week they should have VirtualBox, Vagrant and Docker installed. They can also install Docker inside a VM.
 
 # 4.1 -- Thu, November 11, 2021
 

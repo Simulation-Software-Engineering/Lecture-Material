@@ -23,29 +23,20 @@ slideOptions:
   }
 </style>
 
-# Virtual machines
+# Virtual Machines
 
 ---
 
-## What is a virtual machine?
+## What is a Virtual Machine?
 
-![A sketch of virtual machines](figs/virtualmachine-sketch.png)
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/virtualization-and-containers/material/figs/virtualmachine-sketch.png" width=60%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 - Environment that allows you to run any (supported) operating
 - Virtual Machines are portable and flexible
-- Strict separation from host operating system. (Popular for safety critical tasks: Desinfec't, Remote laptops)
 
 ---
 
-## General information
-
-- VM will obtain exclusive access to some of your resources
-- What problems does it solve?
-- Behaves (more or less) as native installation (root etc., system calls)
-
----
-
-## Common terms
+## Common Terms
 
 - Host operating system (host OS)
     - The OS the hypervisor is installed on
@@ -56,49 +47,67 @@ slideOptions:
 
 ---
 
-## Why is Virtualization Useful?
+## Types of Virtual Machines / Hypervisors
 
-- **For us**
-  - Running multiple operating systems simultaneously
-      - Test/develop software for other OS, debug problems on other OS, Windows on Linux...
-  - Easier software installations and testing
-      - Offer preconfigured VM for users. Useful for trainings and teaching.
-  - Testing and disaster recovery
-      - Create snapshots beforetesting. Copy VMs etc.
-- Further benefits
-  - Infrastructure consolidation
-      - Run many VMs on single host
-  - Seperate service from each other (security?!)
-
-[VirtualBox Manual](https://www.virtualbox.org/manual/ch01.html)
+- Sometimes distinction not clear, but in general:
+  - **Type 1**
+    - Runs directly on bare-metal hardware
+    - Examples: [Microsoft Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [VMware ESXi](https://www.vmware.com/products/esxi-and-esx.html), [Proxmox Virtual Environment](https://www.proxmox.com/en/proxmox-ve), [Xen](https://xenproject.org/)...
+  - **Type 2**
+    - Requires a running OS
+    - Examples: [VirtualBox](https://www.virtualbox.org/), [VMWare Workstation Player](https://www.vmware.com/products/workstation-player.html), [Parallels (for Mac)](https://www.parallels.com/eu/products/desktop/)...
 
 ---
 
-## Types of Virtual Machines/ Hypervisors
+## (Some) Features of Virtual Machines
 
-- Sometimes distinction not clear, but in general:
+- VM might obtain exclusive access to some of your resources
+- Behaves (more or less) as native installation (root etc., system calls)
+- (Strict) separation from host operating system
+- Popular for
+  - Safety critical tasks
+  - Development and testing
+  - Wherever one wants a portable solution
 
-- **Type 1**
-  - Runs directly on bare-metal hardware
-  - Examples: [Microsoft Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [VMware ESXi](https://www.vmware.com/products/esxi-and-esx.html), [Proxmox Virtual Environment](https://www.proxmox.com/en/proxmox-ve), [Xen](https://xenproject.org/)...
-- **Type 2**
-  - Requires a running OS
-  - Examples: [VirtualBox](https://www.virtualbox.org/), [VMWare Workstation Player](https://www.vmware.com/products/workstation-player.html), [Parallels (for Mac)](https://www.parallels.com/eu/products/desktop/)...
+---
+
+## Why is Virtualization Useful?
+
+- Running multiple operating systems simultaneously
+    - Test/develop software for other OS, debug problems on other OS, Windows on Linux, fill in forms of university (MS Office)
+- Easier software installations and testing
+    - Preconfigured VMs trainings and teaching
+- Testing and disaster recovery
+    - Create snapshots beforetesting, copy VMs etc.
+- Infrastructure consolidation
+    - Run many VMs on single host
+- Seperate services from each other (security?!)
 
 ---
 
 ## Short Note on Security
 
-- Think about what you do
+- Does **not** solve all problems
 - Separation from Host, but VM also tightly embedded in Host
+- Virtual machine / Hypervisor might increase attack surface
+- Additional layer of complexity
 - Read the manual
   - Examples: GPU acceleration, networking, USB passthrough...
+- Think about **what** you do and **before** you do it
 
-[VirtualBox Security Guide](https://www.virtualbox.org/manual/ch13.html)
 ---
 
 ## Summary
 
-- Allows to run additional OSes on your machine
-- Different types: 1 or 2
-- VM is encapsulated environment
+- Encapsulated environment that emulates a computer
+- Type 1 and 2 Hypervisors
+- Run additional OSes on your machine
+- Portable VMs
+- Keep security in mind
+
+---
+
+### Further Reading
+
+- [VirtualBox Manual: 1. First Steps](https://www.virtualbox.org/manual/ch01.html)
+- [VirtualBox Manual: 13. Security Guide](https://www.virtualbox.org/manual/ch13.html)

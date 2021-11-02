@@ -78,6 +78,7 @@ slideOptions:
 
 - File `Vagrantfile`
   - Contains configuration of VM
+  - Ruby script
 - Supplementary files, scripts etc. for configuring VM
   - Example: `bootstrap.sh`
 - Files are usually text files (Git friendly)
@@ -128,7 +129,7 @@ slideOptions:
   - Suspends machine (sleep)
 - `vagrant halt`
   - Shuts down machine keeping changes
-- `vagrant reload --provision`
+- `vagrant reload --provision` or `vagrant provision`
   - Rebuild (partially) build image
 
 ---

@@ -23,11 +23,11 @@ slideOptions:
   }
 </style>
 
-# Virtualization and containers
+# Virtualization and Containers
 
 ---
 
-## Learning goals
+## Learning Goals
 
 - What is the difference between virtualization and containers?
 - When and how to use virtual machines and/or containers.

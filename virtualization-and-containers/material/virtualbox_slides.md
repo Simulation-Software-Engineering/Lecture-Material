@@ -45,8 +45,8 @@ slideOptions:
 
 - Reasonably new operating system (Windows, Mac OS, Linux, Oracle Solaris)
 - Reasonably new hardware (SSE2 and virtualization support)
-    - VT-x, VT-d, AMD-V, ...
-    - Check virtualization settings in BIOS/UEFI if it does not work out of the box
+  - VT-x, VT-d, AMD-V, ...
+  - Check virtualization settings in BIOS/UEFI if it does not work out of the box
 - Sufficient space on hard drive
   - VM uses a virtual hard drive, i.e., a file on your drive
 - Some video memory (recommend >=64MB)
@@ -80,19 +80,23 @@ slideOptions:
 ## Guest Additions
 
 - Software and drivers to improves Guest's performance
-    - Better video support, shared clipboard, mouse pointer intergration...
+  - Better video support, shared clipboard, mouse pointer intergration...
 - Especially interesting for VM with GUI
 - Might need additional packages
   - On Ubuntu 20.04
+
   ```
   sudo apt install virtualbox-guest-dkms virtualbox-guest-x11 virtualbox-guest-utils
   ```
-    - `virtualbox-guest-x11` can be dropped on headless system
+
+  - `virtualbox-guest-x11` can be dropped on headless system
   - On Ubuntu for building packages manually
+
   ```
   perl dkms build-essential linux-headers-generic linux-headers-$(uname -r)
   ```
-    - Then run installation script of Guest Additions
+
+  - Then run installation script of Guest Additions
 - Screen black after/during installation -> Increase video memory to >=64 MB
 
 

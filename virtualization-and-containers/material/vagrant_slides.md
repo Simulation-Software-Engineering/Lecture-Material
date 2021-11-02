@@ -58,8 +58,8 @@ slideOptions:
 - Avoid usage of (VirtualBox) CLI
 - Store in Git-friendly format
 - For us:
-    - Management of VirtualBox VMs (testing, developing...)
-    - Sharing of VMs (debugging, workshops...)
+  - Management of VirtualBox VMs (testing, developing...)
+  - Sharing of VMs (debugging, workshops...)
 
 ---
 
@@ -87,20 +87,24 @@ slideOptions:
 
 ## Setting up a Virtual Machine
 
-1. Install VirtualBox
-2. Install Vagrant (ideallt from homepage)
-3. Create `Vagrantfile` and specify image
-   ```
-   Vagrant.configure("2") do |config|
-     config.vm.box = "ajaust/sse-first-steps"
-     config.vm.box_version = "0.1.0"
-   end
-   ```
-3. Alternative:
-   ```
-   vagrant init ajaust/sse-first-steps
-   ```
-4. Start VM with `vagrant up`
+- Install VirtualBox
+- Install Vagrant (ideallt from homepage)
+- Create `Vagrantfile` and specify image
+
+  ```ruby
+  Vagrant.configure("2") do |config|
+    config.vm.box = "ajaust/sse-first-steps"
+    config.vm.box_version = "0.1.0"
+  end
+  ```
+
+- Alternative:
+
+  ```
+  vagrant init ajaust/sse-first-steps
+  ```
+
+- Start VM with `vagrant up`
 
 ---
 
@@ -138,9 +142,11 @@ slideOptions:
 
 - Vagrant mounts shared folders
   - Check output when VM starts
-  ```
+
+  ```bash
   default: Mounting shared folders...
   ```
+
   - File can be changed from Guest or Host
 - Default:
   - Directory containing `Vagrantfile` mounted to `/vagrant` in the Guest
@@ -151,9 +157,11 @@ slideOptions:
 
 - Repository of premade boxes: [https://app.vagrantup.com/](https://app.vagrantup.com/)
 - Pack box:
+
   ```
   vagrant package --base "NAMEOFVM" --output BOXNAME.box
   ```
+
   - `NAMEOFVM` is name as shown in VirtualBox
   - `BOXNAME` name to store box to
 - [Publish own boxes](https://www.vagrantup.com/docs/providers/virtualbox/boxes) by uploading to [Vagrant Cloud](https://app.vagrantup.com/)

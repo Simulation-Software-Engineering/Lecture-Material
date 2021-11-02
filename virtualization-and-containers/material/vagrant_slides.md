@@ -175,7 +175,7 @@ slideOptions:
 - Git-friendly way of configuring VMs
 - Simple management of VMs
 - Creates consistent workflows
-- Flexible due tobig variety of provisioners and providers
+- Flexible due to big variety of provisioners and providers
 - Premade images can be used and shared
 
 ---

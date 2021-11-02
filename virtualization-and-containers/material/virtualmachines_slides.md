@@ -39,11 +39,11 @@ slideOptions:
 ## Common Terms
 
 - Host operating system (host OS)
-    - The OS the hypervisor is installed on
+  - The OS the hypervisor is installed on
 - Guest operating system (guest OS)
-    - The OS running inside the virtual machine
+  - The OS running inside the virtual machine
 - Virtual machine (VM)
-    - Environment the guest is running in
+  - Environment the guest is running in
 
 ---
 
@@ -74,13 +74,13 @@ slideOptions:
 ## Why is Virtualization Useful?
 
 - Running multiple operating systems simultaneously
-    - Test/develop software for other OS, debug problems on other OS, Windows on Linux, fill in forms of university (MS Office)
+  - Test/develop software for other OS, debug problems on other OS, Windows on Linux, fill in forms of university (MS Office)
 - Easier software installations and testing
-    - Preconfigured VMs trainings and teaching
+  - Preconfigured VMs trainings and teaching
 - Testing and disaster recovery
-    - Create snapshots beforetesting, copy VMs etc.
+  - Create snapshots beforetesting, copy VMs etc.
 - Infrastructure consolidation
-    - Run many VMs on single host
+  - Run many VMs on single host
 - Seperate services from each other (security?!)
 
 ---

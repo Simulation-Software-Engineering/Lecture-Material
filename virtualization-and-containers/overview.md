@@ -51,6 +51,7 @@
 - What problems does it solve?
     - You want to run a different operating system within your current one. Example: I am on Linux, but want to use Microsoft Office and other stuff (without using WINE/Proton).
     - You want to run services in an encapsulated way. Want to run than one server on one physical machine. (Proxmox, KVM)
+- Hypervisors create some overhead.
 - Content of a VirtualBox Image
     - Show directory on drive:
         - `NAMEOFVM.vdi`: The virtual hard drive containing the guest os
@@ -181,7 +182,8 @@ vagrant halt
 
 - Vagrant examples
     - Own stuff
-    - [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
+        - [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
+        - Create box with `vagrant init
     - preCICE
         - Comes with a GUI
         - Preconfigured
@@ -206,26 +208,32 @@ vagrant halt
 - Short and incomplete overview over container technologies: Docker, Singularity, lxc/lxd, podman...
 
 **Note**: Students not running Linux or without sufficient rights on their machine should be able to use a virtual machine to run Docker/Singularity on their machine if they could get that installed.
+
+
+
 ## Docker
 
 | Duration | Format |
 | --- | --- |
 | 15 minutes | Slides |
 
+- Quiz "What is Docker?"
+    - Answer depends on when in time and  you ask.
+        - Containerization framework, container management, company...
+
+### Components
+
+Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/get-started/overview/)
+
 - The most popular container framework one finds at the moment
 - Short backstory:
     - Started as wrapper around lxc/lxd (Linux' native container format)
 - Docker, Docker Engine, Docker Compose, Docker Hub? What is going on?
+- Server-client layout
 - Quite strong encapsulation from Host (**TODO**: Check for file exchange, networking etc.)
 - Common commands:
     - TODO
 - Explain text-based format (infrastructure as code)
-  ```Dockerfile
-  # Example taken from https://github.com/carlossg/docker-maven
-  FROM openjdk:7-jdk-alpine
-
-  RUN apk add --no-cache curl tar bash
-  ```
 - One can pre-build own images to reuse them later.
 - Has a layer based build process (which is nice).
 - Images can be shared via DockerHub
@@ -233,15 +241,75 @@ vagrant halt
 - Installation issue/security risks: Docker user group is basically root
     - Rootless installation of Docker
 
+- We focus on tools to create, run and interact with containers
+
 ## Docker practical example
 
 | Duration | Format |
 | --- | --- |
-| 15 minutes | Demo |
+| 25 minutes | Demo |
 
-- Write some Dockerfile, build container and run it. Should be a simple container.
-    - Cowsay example? That could be easily reused on the Singularity example.
-- Show an existing container. Could be FEniCS or DuMuX.
+```
+cd /media/jaustar/external-ssd/virtualmachines/vagrant/sse-docker-box/
+vagrant up
+```
+
+### Run existing container
+
+- Show containers on [DockerHub](https://hub.docker.com/)
+
+- From tutorial `docker run -i -t ubuntu /bin/bash`
+  - This pulls the latest `ubuntu` image `docker pull ubuntu`
+  - Creates container `docker container create`
+  - Creates read-write filesystem (last layer)
+  - Creates network interface
+  - Starts container and runs `/bin/bash`
+  - `-i` means interactive
+  - `-t` allocates pseudo-tty
+
+- Changes inside the container are not persistent
+    - `touch asdf`
+    - leave container
+    - enter container `docker run -i -t ubuntu /bin/bash`
+    - File is gone
+- When container is running, we see it when calling `docker ps`
+- After quitting againg show `docker ps -a`
+
+- Create detached container and bind mount
+`docker run -d -i -t --name test --mount type=bind,source="$(pwd)",target=/mnt/share ubuntu`
+    - Will run cotnainer in detached mode, names it `test` and mounts current directory on Host to `/mnt/share`. Is based on `ubuntu` image.
+    - Bind mount your source code for development for example
+- Leave a container without closing it via `CTRL+P` followed by `CTRL+Q`
+
+
+### Dockerfile example
+
+- `cd dockerfile-example`
+- Contains Dockerfile
+  ```Dockerfile
+  FROM ubuntu:18.04
+
+  RUN apt update -y && apt install -y neofetch
+  WORKDIR /app
+  COPY testfile .
+  CMD ["echo", "hello"]
+  ```
+- `docker build --tag testimage .`
+- `docker run -i -t testimage /bin/bash`
+- `docker run testimage` will run container and `CMD` will be executed
+- `docker run -d -i -t --name testimage testimage` will immediately terminate since the container `CMD` is executed.
+- `docker run -d -i -t --name testimage3 testimage /bin/bash` keeps container alive
+- Show more complicated Dockerfile example (`dumux-precice`)
+    - `~/container-recipes/docker/dumux-precice/ub2004/dumux-3.4-precice-2.2.1`
+    - TODO: Add Dockerfile to `dumux-precice` repository
+- When going into the container we are in the directory `/app` and the file `testfile` is present
+### FEniCS example
+
+`docker run -ti -p 127.0.0.1:8000:8000 -v $(pwd):/home/fenics/shared -w /home/fenics/shared quay.io/fenicsproject/stable:current`
+
+- `-v` creates a volume in the container and mounts the current directory on Host to path `/home/fenics/shared` inside the container
+- `-w` sets the working directory to /home/fenics/shared
+- Volume allows for persistent data
 
 ## Singularity
 

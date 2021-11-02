@@ -180,8 +180,9 @@ slideOptions:
 
 ---
 
-## References and Further Reading
+## Further Reading
 
 - [Vagrant Homepage](https://www.vagrantup.com/)
 - [Vagrant Introduction](https://www.vagrantup.com/intro)
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
+- ["Should I use Vagrant or Docker for creating an isolated environment?"](https://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-for-creating-an-isolated-environment)

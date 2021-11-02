@@ -5,16 +5,7 @@ slideOptions:
   theme: blood
   slideNumber: true
 ---
-# Virtualization and containers
 
-*Learning goals*
-
-- What is the difference between virtualization and containers?
-- When to use virtual machines and when containers.
-- How to work with virtual machines (VirtualBox) and how to manage these with Vagrant.
-- Building containers with Docker and Singularity.
-- Understand pros and cons of different container technologies.
-- Student can set up their own containers tailored to their requirements.
 
 ## Quiz (optional)
 
@@ -107,6 +98,7 @@ slideOptions:
 
 - Fire up and use VirtualBox VM.
   - Example could be the preCICE Vagrant VM.
+
 ## Recap containers and overview
 
 | Duration | Format |
@@ -119,6 +111,7 @@ slideOptions:
 - Short and incomplete overview over container technologies: Docker, Singularity, lxc/lxd, podman...
 
 **Note**: Students not running Linux or without sufficient rights on their machine should be able to use a virtual machine to run Docker/Singularity on their machine if they could get that installed.
+
 ## Docker
 
 | Duration | Format |
@@ -133,12 +126,14 @@ slideOptions:
 - Common commands:
   - TODO
 - Explain text-based format (infrastructure as code)
+
   ```Dockerfile
   # Example taken from https://github.com/carlossg/docker-maven
   FROM openjdk:7-jdk-alpine
 
   RUN apk add --no-cache curl tar bash
   ```
+
 - One can pre-build own images to reuse them later.
 - Has a layer based build process (which is nice).
 - Images can be shared via DockerHub
@@ -179,6 +174,7 @@ slideOptions:
 - Show text-based file format. Is similar to Docker
 - Common commands:
   - TODO
+
 ## Singularity practical example
 
 | Duration | Format |
@@ -200,22 +196,6 @@ slideOptions:
 - Docker is popular for encapsulating environments for testing (CI/CD, DevOps) as we will see later.
 - Singularity is a bit more "niche", but important in the computing/simulation business.
 
-## Exercise
-
-1. [ ] Build a VirtualBox VM managed by Vagrand
-2. [ ] Build a Docker image containing some tooling for C++ and Python
-   - Has to be able to run some non-common dependency?! Maybe install preCICE in there.
-     - If preCICE, one could install it once from source and once as binary.
-   - Automatically test this via some GitHub action.
-     - Check for correct base image.
-     - Build the image.
-     - Check that code runs.
-3. [ ] Install Singularity (optional?)
-   - Compile by hand
-     - Install Go
-     - Compile Singularity
-   - Install tooling as
-
 ## Further reading
 
 ### Other
@@ -231,6 +211,7 @@ slideOptions:
 
 - [VirtualBox](https://www.virtualbox.org/)
 - [Vagrant](https://www.vagrantup.com/)
+
 ### Containers
 
 - [Docker](https://www.docker.com/)

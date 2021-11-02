@@ -10,16 +10,16 @@ Learning goals:
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 40 minutes | slides | [`intro_course.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/organization/material/intro_course.md) |
+| 40 minutes | slides | [`intro_course.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/organization/material/intro_course_slides.md) |
 
 ## Introduction to Research Software Engineering
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 15 minutes | slides | [`rse_basics.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/organization/material/rse_basics.md) |
+| 15 minutes | slides | [`rse_basics.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/organization/material/rse_basics_slides.md) |
 
 ## Your Challenge: Contribute to Real Simulation Software
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 20 minutes | slides | [`challenge_intro.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/organization/material/challenge_intro.md) |
+| 20 minutes | slides | [`challenge_intro.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/organization/material/challenge_intro_slides.md) |

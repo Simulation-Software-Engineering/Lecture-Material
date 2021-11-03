@@ -38,7 +38,7 @@ slideOptions:
   - Cheap to start and stop a container
 - Available features depend on Host
   - Linux container on Windows or vice versa?
-- Container (can be) encapsulated
+- Container can be isolated
 
 ---
 
@@ -88,7 +88,7 @@ slideOptions:
   - Standardization effort
   - Choose right container for your use case
 
-**Note**: Do not (only) use containers for packaging of your software. Not everyone can run/use them.
+**Note**: Do not (only) use containers for shipping your software. Not everyone can run/use them.
 
 ---
 

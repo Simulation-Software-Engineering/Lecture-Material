@@ -160,16 +160,39 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 ### Demo: Own box
 
 - [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
+- `cd /media/jaustar/external-ssd/virtualmachines/vagrant`
+- Open `Vagrantfile` and refer to name of VM
+
+  ```ruby
+  config.vm.provider "virtualbox" do |vb|
+    vb.name = "sse-first-step"
+  end
+  ```
+
+- Open `bootstrap.sh` to show that it will do
+  - Installs software and sets `TEST_ENV_VAR`
+- `vagrant up`: Create VM
+- `vagrant ssh`
+  - Call `neofetch`
+  - `echo $TEST_ENV_VAR` to show that variable is actually set.
+- `vagrant package --base "sse-first-steps" --output sse-first-steps.box`: Export VM
+- `sse-first-steps.box` can be uploaded to [Vagrant Cloud](https://app.vagrantup.com)
+- Go to direcyory `use-own-box/`
+  - Show `Vagrantfile` that is has my image
+  - Skip building box `vagrant up` as it takes too long
+  - `vagrant box list` shoud show my box in overview.
 
 ### Demo: preCICE VM
 
-- Vagrant examples
-  - Own stuff
-- [https://github.com/precice/vm](https://github.com/precice/vm)
-- [Premade box](https://app.vagrantup.com/precice/boxes/precice-vm)
-  - Create box with `vagrant init`
+- Show repository:
+  - [https://github.com/precice/vm](https://github.com/precice/vm)
+- Run [Premade box](https://app.vagrantup.com/precice/boxes/precice-vm)
+  - `cd /media/jaustar/external-ssd/virtualmachines/vagrant/precice`
+  - Create box with `vagrant init` (Done before lecture as it takes to long)
+  - Start box `vagrant up`
   - Comes with a GUI
   - Preconfigured
+  - Destroy in the end `vagrant destroy` since it is large (?)
 
 ## Introduction to Containers
 

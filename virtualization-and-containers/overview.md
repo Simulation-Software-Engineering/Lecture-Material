@@ -122,6 +122,7 @@
   - You need to logout and in again afterwards for usergroups to be recognized.
   - I share `/media/jaustar/external-ssd/virtualmachines/shared-folder`
   - Add some file there and check that it appears Host and vice versa.
+
 ## Vagrant + demo
 
 | Duration | Format |
@@ -201,6 +202,7 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
   - Skip building box `vagrant up` as it takes too long, should be prebuilt
   - `vagrant box list` shoud show my box in overview.
   - **Note** My uploaded box is called `ajaust/sse-first-step`**s**
+  - **Note** The box seems to be broken all of a sudden.
 
 ### Demo: preCICE VM
 

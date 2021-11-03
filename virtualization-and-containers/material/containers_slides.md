@@ -88,7 +88,7 @@ slideOptions:
   - Standardization effort
   - Choose right container for your use case
 
-**Note**: Please do not use VMs for packaging of your software
+**Note**: Do not (only) use containers for packaging of your software. Not everyone can run/use them.
 
 ---
 

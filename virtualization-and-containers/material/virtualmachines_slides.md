@@ -82,6 +82,7 @@ slideOptions:
 - Infrastructure consolidation
   - Run many VMs on single host
 - Seperate services from each other (security?!)
+- Reproducibility
 
 ---
 
@@ -105,7 +106,7 @@ slideOptions:
 - Portable VMs
 - Keep security in mind
 
-**Note**: Please do not use VMs for packaging of your software
+**Note**: Do not (only) use VMs for packaging of your software. Not everyone can run/use them.
 
 ---
 

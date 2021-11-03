@@ -37,7 +37,7 @@ slideOptions:
 - Virtualization solution created by Innotek GmbH (Weinstadt, Germany)
 - 2008 obtained by Sun Microsystems in 2008. Since 2010, owned by Oracle
 - Initially closed source product with special license for personal use and evaluation (PUEL)
-- Now: Open Source edition which is free, open-source virtual machine solution (GPL2)
+- Now: Open Source edition (GPL2)
 
 ---
 

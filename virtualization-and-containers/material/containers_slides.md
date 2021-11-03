@@ -70,10 +70,11 @@ slideOptions:
 
 - Docker considers itself save
   > Applications are safer in containers and Docker provides the strongest default isolation capabilities in the industry
+  - But so do most others
 - Read the manual
 - Are third-part containers trust worthy?
-  - There have been cases
-- Containers sepratation from host depends on solution
+  - There have been cases [of malicious images](https://www.trendmicro.com/vinfo/fr/security/news/virtualization-and-cloud/malicious-docker-hub-container-images-cryptocurrency-mining)
+- Containers isolation from Host depends on container framework
 - Think about **what** you do, **before** you do it
 
 ---

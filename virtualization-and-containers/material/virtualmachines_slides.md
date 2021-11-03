@@ -63,7 +63,7 @@ slideOptions:
 
 - VM might obtain exclusive access to some of your resources
 - Behaves (more or less) as native installation (root etc., system calls)
-- (Strict) separation from host operating system
+- (Strict) isolation from host operating system
 - Popular for
   - Safety critical tasks
   - Development and testing
@@ -100,10 +100,10 @@ slideOptions:
 
 ## Summary
 
-- Encapsulated environment that emulates a computer
-- Type 1 and 2 Hypervisors
+- Isolated environment that emulates a computer
+- Differnt types of Hypervisors (bare-metal or running on OS)
 - Run additional OSes on your machine
-- Portable VMs
+- VMs are portable
 - Keep security in mind
 
 **Note**: Do not (only) use VMs for packaging of your software. Not everyone can run/use them.

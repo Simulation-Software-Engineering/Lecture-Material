@@ -32,20 +32,19 @@
 
 ## 3.1 -- Thu, November 04, 2021
 
-- **10** Orga
-- **10** Introduction to virtualization
-- **30** Virtualbox with practical example
-- **30** Vagrant with practical example
-- **10** Background on containers
+- **5** [Virtualization and containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/intro_slides.md)
+- **10** [Introduction to virtualization](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/virtualmachines_slides.md)
+- **40** [VirtualBox (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/virtualbox_slides.md)
+- **25** [Vagrant (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/vagrant_slides.md)
+- **10** [Introduction to Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/containers_slides.md)
+
 - Tell students to get/install virtualbox in case they have a machine without Linux and or without root rights.
 
 ## 3.2 -- Thu, November 04, 2021
 
-- **30** Docker
-- **15** Docker practical example
-- **10** Singularity
-- **5** Singularity practical example
-- **15** Time for practical exercises
+- **5** [Docker quiz: "What is Docker?"](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/docker_quiz.md)
+- **65** [Docker (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/docker_slides.md)
+- **20** [Singularity (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/singularity_slides.md)
 
 - Tell students that for the exercise next week they should have VirtualBox, Vagrant and Docker installed. They can also install Docker inside a VM.
 

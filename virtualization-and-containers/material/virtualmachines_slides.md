@@ -78,7 +78,7 @@ slideOptions:
 - Easier software installations and testing
   - Preconfigured VMs trainings and teaching
 - Testing and disaster recovery
-  - Create snapshots beforetesting, copy VMs etc.
+  - Create snapshots before testing, copy VMs etc.
 - Infrastructure consolidation
   - Run many VMs on single host
 - Seperate services from each other (security?!)

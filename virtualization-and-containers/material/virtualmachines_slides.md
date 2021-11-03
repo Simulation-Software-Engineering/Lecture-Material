@@ -82,7 +82,7 @@ slideOptions:
 - Infrastructure consolidation
   - Run many VMs on single host
 - Seperate services from each other (security?!)
-- Reproducibility
+- Reproducible software environment for running and developing software
 
 ---
 

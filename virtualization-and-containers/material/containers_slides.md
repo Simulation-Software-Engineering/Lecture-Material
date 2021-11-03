@@ -69,7 +69,9 @@ slideOptions:
 ## Security
 
 - Docker considers itself save
+
   > Applications are safer in containers and Docker provides the strongest default isolation capabilities in the industry
+
   - But so do most others
 - Read the manual
 - Are third-part containers trust worthy?

@@ -30,9 +30,13 @@ slideOptions:
 ## Introduction
 
 - Remember:
+
   > If you can't git diff a file format, it's broken.
+
 - Infrastructure as code
+
   > Vagrant is a tool for building and managing virtual machine environments in a single workflow.
+
   [https://www.vagrantup.com/intro](https://www.vagrantup.com/intro)
 - Initial release 2010 by Mitchell Hashimoto, now [HashiCorp](https://www.hashicorp.com/)
 - HashiCorp develops open-source DevOps/Cloud tools like [Vagrant](https://www.vagrantup.com/), [TerraForm](https://www.terraform.io/)...

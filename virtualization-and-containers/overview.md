@@ -164,23 +164,38 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 - Open `Vagrantfile` and refer to name of VM
 
   ```ruby
-  config.vm.provider "virtualbox" do |vb|
-    vb.name = "sse-first-step"
+  Vagrant.configure("2") do |config|
+    config.vm.box = "ubuntu/focal64"
+    config.vm.provision :shell, path: "bootstrap.sh"
+
+    config.vm.provider "virtualbox" do |vb|
+      vb.name = "sse-first-step"
+    end
   end
   ```
 
 - Open `bootstrap.sh` to show that it will do
+
+  ```bash
+  !/usr/bin/env bash
+
+  apt-get update
+  apt-get install -y neofetch vim
+  echo "export TEST_ENV_VAR=\"Hello SSE\"" >> .bashrc
+  ```
+
   - Installs software and sets `TEST_ENV_VAR`
 - `vagrant up`: Create VM
 - `vagrant ssh`
   - Call `neofetch`
   - `echo $TEST_ENV_VAR` to show that variable is actually set.
-- `vagrant package --base "sse-first-steps" --output sse-first-steps.box`: Export VM
+- `vagrant package --base "sse-first-step" --output sse-first-step.box`: Export VM
 - `sse-first-steps.box` can be uploaded to [Vagrant Cloud](https://app.vagrantup.com)
 - Go to direcyory `use-own-box/`
-  - Show `Vagrantfile` that is has my image
+  - Show `Vagrantfile` that is has my uploaded image
   - Skip building box `vagrant up` as it takes too long
   - `vagrant box list` shoud show my box in overview.
+  - **Note** My uploaded box is called `ajaust/sse-first-step`**s**
 
 ### Demo: preCICE VM
 
@@ -212,6 +227,7 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 - LXD/LXC and its container registry [Linux containers](https://linuxcontainers.org/)
 - Short and incomplete overview over container technologies: Docker, Singularity, lxc/lxd, podman...
 
+
 **Note**: Students not running Linux or without sufficient rights on their machine should be able to use a virtual machine to run Docker/Singularity on their machine if they could get that installed.
 
 
@@ -224,11 +240,7 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 - Quiz "What is Docker?"
   - Answer depends on when in time and  you ask.
     - Containerization framework, container management, company...
-
-### Components
-
-Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/get-started/overview/)
-
+- [`act`](https://github.com/nektos/act) is a tool to debug/run GitHub actions locally
 - The most popular container framework one finds at the moment
 - Short backstory:
   - Started as wrapper around lxc/lxd (Linux' native container format)
@@ -245,6 +257,8 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - Installation issue/security risks: Docker user group is basically root
   - Rootless installation of Docker
 - We focus on tools to create, run and interact with containers
+
+Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/get-started/overview/)
 
 ### Demo: Run existing container
 

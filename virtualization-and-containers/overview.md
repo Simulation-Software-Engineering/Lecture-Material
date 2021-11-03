@@ -71,14 +71,8 @@
 - Discuss configuration:
   - Virtual machine will reserve cores/threads of your CPU and main memory.
 - Maybe go through installation process to show that it is the same as installing an OS on your normal computer.
-- Boot up some virtual machine.
-- Show/install extensions to allow for
-  - Some 3D rendering
-  - Shared clipboard
-  - In general: *Better integration* into host system
-- Create a shared drive to exchange data instead of copy and pasting file content.
-  - In case one cannot access it `sudo usermod -aG vboxsf $(whoami)`
-  - You need to logout and in again afterwards for usergroups to be recognized
+- Create a new virtual machine and boot it up (nothing will happen).
+- Boot up some configured virtual machine (Ubuntu).
 - Creating a new virtual machine
   - Click on `new`
   - I use `expert mode` to set disk location, size and memory. Note, that one can change that also later on.
@@ -119,7 +113,15 @@
     - Boot VM
     - Verify additional network device `enp0s8` and check for ip address. In my case `192.168.56.101`
     - On host machine `ssh vmuser@192.168.56.101`
-
+- Show/install extensions to allow for
+  - Some 3D rendering
+  - Shared clipboard
+  - In general: *Better integration* into host system
+- Create a shared drive to exchange data instead of copy and pasting file content.
+  - In case one cannot access it `sudo usermod -aG vboxsf $(whoami)`
+  - You need to logout and in again afterwards for usergroups to be recognized.
+  - I share `/media/jaustar/external-ssd/virtualmachines/shared-folder`
+  - Add some file there and check that it appears Host and vice versa.
 ## Vagrant + demo
 
 | Duration | Format |
@@ -132,6 +134,7 @@
   - HashiCorp develops a variety of open-source tools for DevOps and cloud computing. In general for large scale projects.
 - Configure VMs (I think also containers nowadays) conveniently via text files
 - Infrastructure as code (Git lecture: If you cannot use `diff`, it is the wrong format!)
+- Standard user and all passwords are `vagrant`
 
 ### Demo: Premade Vagrant VM
 
@@ -210,6 +213,16 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
   - Comes with a GUI
   - Preconfigured
   - Destroy in the end `vagrant destroy` since it is large (?)
+- If time allows, show preCICE example
+  - [Tutorial](https://precice.org/installation-vm.html#how-to-use-this)
+  - [Quickstart](https://precice.org/quickstart.html)
+    - Open two terminals
+    - Go to `/home/vagrant/Desktop/tutorials/quickstart`
+    - In one terminal go to `cpp-solid` and build solver `cmake . && make`
+      - Afterwards start simulation with `./run.sh`
+    - In other terminal go to `fluid-openfoam`
+      - Afterwards start simulation with `./run.sh`
+    - Watch simulation running
 
 ## Introduction to Containers
 
@@ -270,7 +283,7 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
   - `docker cp`
     - Copy files in/out of container
   - `docker image history IMAGE`
-    - Show layers of image (including commands)
+    - Show layers of image (including commands)Vagrant
   - `docker system prune`
     - Remove all unused objects (images, containers...)
 - **Note**
@@ -412,11 +425,29 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 
 #### Demo: Build own containers
 
+- Recipe `singularity-example.def`
+
+  ```Singularity
+  BootStrap: library
+  From: ubuntu:16.04
+
+  %post
+      apt-get -y update
+      apt-get -y install fortune cowsay lolcat
+
+  %environment
+      export LC_ALL=C
+      export PATH=/usr/games:$PATH
+
+  %runscript
+      fortune | cowsay | lolcat
+  ```
+
 - Go to `/media/jaustar/external-ssd/singularity/singularity-examples/build-image`
 - Show file `singularity-example.def` content
 - `sudo singularity build testimage singularity-example.def`
   - Point out that sudo is needed
-- Creates image
+- Creates image which is identical to the prebuilt image
 
 ## Concluding remarks
 
@@ -442,6 +473,9 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 ### Virtualization tools
 
 - [VirtualBox](https://www.virtualbox.org/)
+- [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
+- [Overview of different disk formats](https://www.parallels.com/blogs/ras/vdi-vs-vhd-vs-vmdk/)
+- [Ubuntu 18.04 virtual machine setup](https://codebots.com/docs/ubuntu-18-04-virtual-machine-setup)
 - [Vagrant](https://www.vagrantup.com/)
 
 ### Containers
@@ -449,7 +483,15 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - [Docker](https://www.docker.com/)
 - [Docker Hub](https://hub.docker.com/)
 - [Singularity](https://sylabs.io/)
+- [Sarus](https://user.cscs.ch/tools/containers/sarus/)
 - [lxc/lxd](https://linuxcontainers.org/)
 - [podman](https://podman.io/)
 - [Linux containers](https://linuxcontainers.org/)
 - Singularity paper: [Singularity: Scientific containers for mobility of compute](https://doi.org/10.1371/journal.pone.0177459)
+
+### Other
+
+- ["Should I use Vagrant or Docker for creating an isolated environment?"](https://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-for-creating-an-isolated-environment)
+- [Malicious Docker Hub Container Images Used for Cryptocurrency Mining](https://www.trendmicro.com/vinfo/fr/security/news/virtualization-and-cloud/malicious-docker-hub-container-images-cryptocurrency-mining)
+- ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)
+- [Open Container Initiative (OCI)](https://opencontainers.org/)

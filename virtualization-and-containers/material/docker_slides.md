@@ -238,7 +238,7 @@ CMD ["echo", "hello"]
 - Run application in consistent environment
 - Share environments and applications with containers
 - Plenty of options and feature-rich CLI
-- Important building block for CI/CD pipelines (future lecture)
+- Important building block for CI/CD pipelines (future lectures)
 
 ---
 

@@ -54,6 +54,16 @@ slideOptions:
 
 ---
 
+## Typical Docker Applications
+
+- Applications as Microservices
+- Containers for consistent development environment
+- Containers for consistent testing environment
+- Portable format for sharing applications
+- Avoid tedious installation procedures by providing Docker container ([FEniCS](https://fenicsproject.org/download/), [GitLab](https://docs.gitlab.com/ee/install/docker.html)...)
+
+---
+
 ## Building Blocks 1/2
 
 - Docker daemon `dockerd`
@@ -69,10 +79,10 @@ slideOptions:
 ## Building Blocks 2/2
 
 - Docker objects
-  - Images
+  - **Images**
     - Read-only template for creating a container
     - An image can be based on another image
-  - Containers
+  - **Containers**
     - Runnable instance of an image
 
 ---
@@ -87,14 +97,30 @@ slideOptions:
 
 ## Connection to Host
 
-- Strong encapsulation
-- Container communicates via daemon `dockerd`
-- You cannot access Host filesystem by default
+- Container communicates via daemon `dockerd` (runs as   root)
+- Strong isolation (`namespaces` and `cgroups`)
+  - You cannot access Host filesystem by default
   - Several [mount options](https://docs.docker.com/storage) available
 
 ---
 
-## Useful commands 1/2
+## Requirements
+
+- Root rights for installation
+- `dockerd` runs as root -> Interaction needs root rights
+  - Prefix commands with `sudo`
+  - Be member of group `docker` (=makes you root), expected by some applications (e.g. `act`)
+  - [Attack surface?!](https://docs.docker.com/engine/security/#docker-daemon-attack-surface)
+    - [Isolate user namespace](https://docs.docker.com/engine/security/userns-remap/)
+    - Use trustworthy containers
+- Alternatives:
+  - [Rootless mode](https://docs.docker.com/engine/security/rootless/)
+  - Run Docker in a VM
+- Check [security notes](https://docs.docker.com/engine/security/)
+
+---
+
+## Useful Commands 1/2
 
 - `docker run OPTIONS`
   - Run a container
@@ -108,11 +134,9 @@ slideOptions:
   - List running containers
   - Add `-a` to see all containers
 
-**Note**: Commands take many extra options
-
 ---
 
-## Useful commands 2/2
+## Useful Commands 2/2
 
 - `docker container start/stop NAME`
   - Start/stop container
@@ -124,22 +148,40 @@ slideOptions:
   - Copy files in/out of container
 - `docker image history IMAGE`
   - Show layers of image (including commands)
+- `docker system prune`
+  - Remove all unused objects (images, containers...)
 - Many commands have similar/same outcome
-
-**Note**: Commands take many extra options
 
 ---
 
-## Defining and Building own Images
+## Demo: Running prebuilt images
+
+
+---
+
+## Defining and Building own Images 1/2
 
 - Define container in `Dockerfile`
-  - Git friendly text file
+  - Git-friendly text file
 - Start from base image
   - Find images on repository such as [DockerHub](https://hub.docker.com/)
 - Extend image by additional layers
   - Layers are added separately -> Keep number of layers low
   - Layers are cached
   - Changed layer requires downstream layers to be recreated
+
+---
+
+## Defining and Building own Images 2/2
+
+- `FROM`: Defines base image
+- `RUN`: Defines commands to execute
+- `WORKDIR`: Defines working directory for following commands
+- `COPY`: Copy for from source to destination
+- `ADD`: Add for from source to destination (powerful and confusing)
+- `CMD`: Command to run under `docker run`
+- `ENV`: Sets environment variable
+- `ARG`: Environment variable for **only** build process
 
 ---
 
@@ -156,16 +198,23 @@ CMD ["echo", "hello"]
 
 ---
 
-## Demo
+## Demo: Building own image
 
-- Run an existing container
-- Build own image and run it
-- Run FEniCS container
+---
+
+## Publish own Images
+
+- Publication on registry (e.g. [DockerHub](https://hub.docker.com/))
+
+---
+
+## Demo: Run FEniCS container
 
 ---
 
 ## Advanced Topics
 
+- User ID mapping
 - [Multistage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
   - Build image by combining layers created from different base images
 - [Different mount typs](https://docs.docker.com/storage)

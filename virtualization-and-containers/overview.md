@@ -469,6 +469,7 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - [Malicious Docker Hub Container Images Used for Cryptocurrency Mining](https://www.trendmicro.com/vinfo/fr/security/news/virtualization-and-cloud/malicious-docker-hub-container-images-cryptocurrency-mining)
 - ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)
 - [Open Container Initiative (OCI)](https://opencontainers.org/)
+
 ### References
 
 - [Docker documentation](https://docs.docker.com/)

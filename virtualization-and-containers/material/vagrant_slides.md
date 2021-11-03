@@ -25,6 +25,11 @@ slideOptions:
 
 # Vagrant
 
+
+<img src="https://www.vagrantup.com/img/logo-hashicorp.svg" width=30%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
+[https://www.vagrantup.com/img/logo-hashicorp.svg](https://www.vagrantup.com/img/logo-hashicorp.svg)
+
 ---
 
 ## Introduction

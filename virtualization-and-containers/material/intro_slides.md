@@ -33,6 +33,4 @@ slideOptions:
 - When and how to use virtual machines and/or containers.
 - How to work with virtual machines (VirtualBox) and how to manage these with Vagrant.
 - How to work with containers with Docker (and Singularity).
-- You know can set up own containers tailored to your requirements.
-
----
+- You know how to set up own containers tailored to your requirements.

@@ -115,10 +115,12 @@ Details available in [`overview.md`](https://github.com/Simulation-Software-Engi
 - Manual setup, but also CLI interface exists
 - Next steps
   - How to manage several VMs efficiently?
+
+  > "If you can't git diff a file format, it's broken."
+
   - Consistency of the environment?
   - Sharing image with others?
 
-    > "If you can't git diff a file format, it's broken."
 
 ---
 

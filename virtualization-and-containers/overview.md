@@ -255,6 +255,7 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 | 50 minutes | Slides + Demos|
 
 - Quiz "What is Docker?"
+  - Start slido quiz
   - Answer depends on when in time and  you ask.
     - Containerization framework, container management, company...
 - [`act`](https://github.com/nektos/act) is a tool to debug/run GitHub actions locally

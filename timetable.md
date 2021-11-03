@@ -43,8 +43,9 @@
 ## 3.2 -- Thu, November 04, 2021
 
 - **5** [Docker quiz: "What is Docker?"](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/docker_quiz.md)
-- **65** [Docker (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/docker_slides.md)
+- **60** [Docker (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/docker_slides.md)
 - **20** [Singularity (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/singularity_slides.md)
+- **5** Short discussion about [learning goals from introductionary slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/intro_slides.md)
 
 - Tell students that for the exercise next week they should have VirtualBox, Vagrant and Docker installed. They can also install Docker inside a VM.
 

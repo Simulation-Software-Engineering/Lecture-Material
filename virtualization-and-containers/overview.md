@@ -148,8 +148,8 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 - Different Ubuntu (18.04)
 - `vagrant destroy` Will destroy (delete) current VM
 - Alternatives:
-- `vagrant suspend`Suspends VM
-- `vagrant halt`Shuts VM down, keeping changes in the VM
+- `vagrant suspend` Suspends VM
+- `vagrant halt` Shuts VM down, keeping changes in the VM
 
 - Exchanging files
   - Check output `default: Mounting shared folders...`
@@ -160,7 +160,7 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 ### Demo: Own box
 
 - [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
-- `cd /media/jaustar/external-ssd/virtualmachines/vagrant`
+- Go to template `cd /media/jaustar/external-ssd/virtualmachines/vagrant/own-box-template`
 - Open `Vagrantfile` and refer to name of VM
 
   ```ruby
@@ -186,14 +186,16 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 
   - Installs software and sets `TEST_ENV_VAR`
 - `vagrant up`: Create VM
+  - Image should be prebuilt
 - `vagrant ssh`
   - Call `neofetch`
   - `echo $TEST_ENV_VAR` to show that variable is actually set.
 - `vagrant package --base "sse-first-step" --output sse-first-step.box`: Export VM
+  - File has ben upladed already
 - `sse-first-steps.box` can be uploaded to [Vagrant Cloud](https://app.vagrantup.com)
-- Go to direcyory `use-own-box/`
-  - Show `Vagrantfile` that is has my uploaded image
-  - Skip building box `vagrant up` as it takes too long
+- Go to directory `using-own-box/`
+  - Show `Vagrantfile` that is has my uploaded image as base image
+  - Skip building box `vagrant up` as it takes too long, should be prebuilt
   - `vagrant box list` shoud show my box in overview.
   - **Note** My uploaded box is called `ajaust/sse-first-step`**s**
 
@@ -271,13 +273,16 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
     - Show layers of image (including commands)
   - `docker system prune`
     - Remove all unused objects (images, containers...)
+- **Note**
 - Explain text-based format (infrastructure as code)
 - One can pre-build own images to reuse them later.
 - Has a layer based build process (which is nice). We do not have to rebuild from scratch, if build fails.
-- Images can be shared via DockerHub
+- Images can be shared via DockerHub or other registries
 - Building an image can be pain in the neck as it depends on a fast internet connection.
 - Installation issue/security risks: Docker user group is basically root
   - Rootless installation of Docker
+  - Namespces
+  - Docker considers itself quite safe
 - We focus on tools to create, run and interact with containers
 
 Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/get-started/overview/)
@@ -302,11 +307,18 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
   - `-i` means interactive
   - `-t` allocates pseudo-tty
 
-- Changes inside the container are not persistent when container is stopped
+- Show running containers `docker container ls`
+- Show all containers `docker container ls -a`
+- Show images `docker images`
+- Potentially remove some image/container `docker image rm NAME` or `docker container rm NAME/ID`
+- Start/stop a container
+
+- We can change files inside the container.
+  - `docker run -i -t ubuntu /bin/bash`
   - `touch asdf`
   - leave container
   - enter container `docker run -i -t ubuntu /bin/bash`
-  - File is gone
+  - File is not present because we implicitly created a new container based on the same image.
 - When container is running, we see it when calling `docker ps`
 - Start container (with name `tutoral`) `docker run -i -t --name tutorial ubuntu  /bin/bash`
 - Leave it `CTRL-P` + `CTRL-Q` (do not let go of `CTRL` while doing this)

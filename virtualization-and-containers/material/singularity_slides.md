@@ -31,6 +31,20 @@ slideOptions:
 
 ---
 
+## Notable Properties / Differences Compared to Docker
+
+- Only needs root when creating images
+- User rights for running container
+- Automatically mounts common directories
+  - `${HOME}`, `${PWD}`, network etc.
+- Allows to run "untrusted user to run untrusted containers"
+  - Important for shared facilities (computing centers etc.)
+- (Normally) Immutable containers
+  - Set up environment and immutable data in container
+- Support for typical HPC environments (schedulers, MPI, GPU...)
+
+---
+
 ## Introduction
 
 - Initiated at Lawrence Berkeley National Laboratory
@@ -72,20 +86,6 @@ slideOptions:
 
 ---
 
-## Notable Properties
-
-- Only needs root when creating images
-- User rights for running container
-- Automatically mounts common directories
-  - `${HOME}`, `${PWD}`, network etc.
-- Allows to run "untrusted user to run untrusted containers"
-  - Important for shared facilities (computing centers etc.)
-- (Normally) Immutable containers
-  - Set up environment and immutable data in container
-- Support for typical HPC environments (schedulers, MPI, GPU...)
-
----
-
 ## Useful Commands
 
 - `singularity exec`
@@ -103,6 +103,8 @@ slideOptions:
 ---
 
 ## Demo: Run prebuilt containers
+
+Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
 
 ---
 
@@ -148,6 +150,8 @@ From: ubuntu:18.04
 ---
 
 ## Demo: Build own containers
+
+Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
 
 ---
 

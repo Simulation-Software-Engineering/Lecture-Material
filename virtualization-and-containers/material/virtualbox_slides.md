@@ -104,6 +104,8 @@ slideOptions:
 
 ## Demo
 
+Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
+
 ---
 
 ## Summary

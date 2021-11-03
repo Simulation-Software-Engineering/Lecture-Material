@@ -36,8 +36,11 @@ slideOptions:
 - Docker, Inc.
   - Company promoting Docker
 - Docker Desktop
+
   > Developer productivity tools and a local Kubernetes environment.
+
 - Docker Engine
+
   > Docker Engine is an open source containerization technology for building and containerizing your applications.
 
 ---
@@ -45,11 +48,17 @@ slideOptions:
 ## What is Docker? 2/2
 
 - Docker Hub
+
   > Cloud-based application registry and development team collaboration services.
+
 - Docker Compose
+
   > Compose is a tool for defining and running multi-container Docker applications.
+
 - According to documentation
+
   > Docker is an open platform for developing, shipping, and running applications.
+
 - We use definition from documentation.
 
 ---
@@ -157,6 +166,7 @@ slideOptions:
 
 ## Demo: Running prebuilt images
 
+Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
 
 ---
 
@@ -202,6 +212,8 @@ CMD ["echo", "hello"]
 
 ## Demo: Building own image
 
+Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
+
 ---
 
 ## Publish own Images
@@ -216,6 +228,8 @@ CMD ["echo", "hello"]
 ---
 
 ## Demo: Run FEniCS container
+
+Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
 
 ---
 

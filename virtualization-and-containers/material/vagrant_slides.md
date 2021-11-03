@@ -63,7 +63,7 @@ slideOptions:
   - Disposable environments
   - Consistent workflows
 - More general
-  - Easy way to setup virtual machine
+  - Simple way to setup virtual machine
 - Reproducible environment
 
 ---

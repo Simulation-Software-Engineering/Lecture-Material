@@ -162,7 +162,7 @@ Details available in [`overview.md`](https://github.com/Simulation-Software-Engi
 
   - Files can be exchanged between Guest and Host (bidirectional)
 - Default:
-  - Directory containing `Vagrantfile` mounted to `/vagrant` in the Guest
+  - Directory containing `Vagrantfile` mounted to `/vagrant` in Guest
 
 ---
 

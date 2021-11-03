@@ -39,6 +39,17 @@ slideOptions:
 
 ---
 
+## Building Blocks
+
+- Provisioners
+  - Tool for configuring the boxes (install software on machine)
+  - Examples: shell scripts, Chef, Puppet..
+- Providers
+  - "Backend" the box is based on
+  - Examples: VirtualBox, Hyper-V, AWS, Docker...
+
+---
+
 ## What for?
 
 - Developing software
@@ -49,28 +60,20 @@ slideOptions:
   - Consistent workflows
 - More general
   - Easy way to setup virtual machine
+- Reproducible environment
 
 ---
 
 ## Advantages
 
 - Strong focus on workflow consistency
-- Avoid usage of (VirtualBox) CLI
+- (Re)use existing images
+- Automatize VM creation and configuration
+  - Easier than with VirtualBox CLI and shell scripts
 - Store in Git-friendly format
 - For us:
   - Management of VirtualBox VMs (testing, developing...)
   - Sharing of VMs (debugging, workshops...)
-
----
-
-## Building Blocks
-
-- Provisioners
-  - Tool for configuring the boxes (install software on machine)
-  - Examples: shell scripts, Chef, Puppet..
-- Providers
-  - "Backend" the box is based on
-  - Examples: VirtualBox, Hyper-V, AWS, Docker...
 
 ---
 
@@ -104,6 +107,10 @@ slideOptions:
 
 ---
 
+## Demo: Premade Vagrant VM
+
+---
+
 ## Structure of Vagrant Box
 
 - File `Vagrantfile`
@@ -130,7 +137,9 @@ slideOptions:
 
 - Alternative:
 
-  ```
+  ```---
+
+## Demo: Premade Vagrant VM
   vagrant init ajaust/sse-first-steps
   ```
 
@@ -150,10 +159,6 @@ slideOptions:
   - Files can be exchanged between Guest and Host
 - Default:
   - Directory containing `Vagrantfile` mounted to `/vagrant` in Guest
-
----
-
-## Demo: Premade Vagrant VM
 
 ---
 

@@ -106,7 +106,7 @@ slideOptions:
 - VMs are portable
 - Keep security in mind
 
-**Note**: Do not (only) use VMs for packaging of your software. Not everyone can run/use them.
+**Note**: Do not (only) use VMs for shipping your software. Not everyone can run/use them.
 
 ---
 

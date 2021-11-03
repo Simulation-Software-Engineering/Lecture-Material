@@ -133,7 +133,7 @@
 - Configure VMs (I think also containers nowadays) conveniently via text files
 - Infrastructure as code (Git lecture: If you cannot use `diff`, it is the wrong format!)
 
-### Vagrant practical example
+### Demo: Premade Vagrant VM
 
 Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 
@@ -157,15 +157,21 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
   - Can configure more drives
   - Show example by creating file from Vagrant session
 
+### Demo: Own box
+
+- [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
+
+### Demo: preCICE VM
+
 - Vagrant examples
   - Own stuff
-    - [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
-    - Create box with `vagrant init
-  - preCICE
-    - Comes with a GUI
-    - Preconfigured
+- [https://github.com/precice/vm](https://github.com/precice/vm)
+- [Premade box](https://app.vagrantup.com/precice/boxes/precice-vm)
+  - Create box with `vagrant init`
+  - Comes with a GUI
+  - Preconfigured
 
-## Introduction to containers
+## Introduction to Containers
 
 | Duration | Format |
 | --- | --- |

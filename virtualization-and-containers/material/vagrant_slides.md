@@ -147,7 +147,7 @@ slideOptions:
   default: Mounting shared folders...
   ```
 
-  - File can be changed from Guest or Host
+  - Files can be exchanged between Guest and Host
 - Default:
   - Directory containing `Vagrantfile` mounted to `/vagrant` in the Guest
 

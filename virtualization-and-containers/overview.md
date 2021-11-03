@@ -154,6 +154,7 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 - Alternatives:
 - `vagrant suspend` Suspends VM
 - `vagrant halt` Shuts VM down, keeping changes in the VM
+- `vagrant status` Shows status of currently running VMs
 
 - Exchanging files
   - Check output `default: Mounting shared folders...`
@@ -236,9 +237,10 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
   - Containers
     - Low(er) overhead than virtual machines.
     - Container operates in "fenced off" part of the operating system (`cgroups`).
-    - Container runs kernel of the host OS.
+    - Container runs kernel of the host OS -> Does **not** run its own OS in.
     - Operating system (OS) needs to be compatible with underlying OS. Cannot run different OS than host. (TODO: Verify this)
       - **Note**: Windows 10 can run Linux containers! (Due to Windows Subsystem for Linux?!)
+    - A process for which (and its childs) special rules apply.
 - Shortly recap what we have learned about containers.
   - Fenced-off, relies on capabilities of OS etc.
 - LXD/LXC and its container registry [Linux containers](https://linuxcontainers.org/)

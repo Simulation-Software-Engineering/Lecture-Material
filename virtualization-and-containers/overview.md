@@ -465,8 +465,10 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 
 ### Other
 
-- Stackoverflow discussion between creator of Docker and Vagrant on Stackoverflow: ["Should I use Vagrant or Docker for creating an isolated environment?"](https://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-for-creating-an-isolated-environment)
-
+- ["Should I use Vagrant or Docker for creating an isolated environment?"](https://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-for-creating-an-isolated-environment)
+- [Malicious Docker Hub Container Images Used for Cryptocurrency Mining](https://www.trendmicro.com/vinfo/fr/security/news/virtualization-and-cloud/malicious-docker-hub-container-images-cryptocurrency-mining)
+- ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)
+- [Open Container Initiative (OCI)](https://opencontainers.org/)
 ### References
 
 - [Docker documentation](https://docs.docker.com/)
@@ -490,10 +492,3 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - [podman](https://podman.io/)
 - [Linux containers](https://linuxcontainers.org/)
 - Singularity paper: [Singularity: Scientific containers for mobility of compute](https://doi.org/10.1371/journal.pone.0177459)
-
-### Other
-
-- ["Should I use Vagrant or Docker for creating an isolated environment?"](https://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-for-creating-an-isolated-environment)
-- [Malicious Docker Hub Container Images Used for Cryptocurrency Mining](https://www.trendmicro.com/vinfo/fr/security/news/virtualization-and-cloud/malicious-docker-hub-container-images-cryptocurrency-mining)
-- ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)
-- [Open Container Initiative (OCI)](https://opencontainers.org/)

@@ -343,7 +343,7 @@ vagrant up
 
 - Go to `/media/jaustar/external-ssd/singularity/singularity-examples/build-image`
 - Show file `singularity-example.def` content
--  `sudo singularity build testimage singularity-example.def`
+- `sudo singularity build testimage singularity-example.def`
   - Point out that sudo is needed
 - Creates image
 

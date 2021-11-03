@@ -247,11 +247,33 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 - Docker, Docker Engine, Docker Compose, Docker Hub? What is going on?
 - Server-client layout
 - Quite strong encapsulation from Host (**TODO**: Check for file exchange, networking etc.)
-- Common commands:
-  - TODO
+- **Generally useful commands** (see slides as well)
+  - `docker run OPTIONS`
+    - Run a container
+  - `docker image ls`
+    - List locally available images
+  - `docker pull NAME:TAG`
+    - Pulls an image from registry, `TAG` optional
+  - `docker container create IMAGE`
+    - Create container from image
+  - `docker container ls`
+    - List running containers
+    - Add `-a` to see all containers
+  - `docker container start/stop NAME`
+    - Start/stop container
+  - `docker container attach NAME`
+    - Attach to running container
+  - `docker build`
+    - Creates an image from a given Dockerfile
+  - `docker cp`
+    - Copy files in/out of container
+  - `docker image history IMAGE`
+    - Show layers of image (including commands)
+  - `docker system prune`
+    - Remove all unused objects (images, containers...)
 - Explain text-based format (infrastructure as code)
 - One can pre-build own images to reuse them later.
-- Has a layer based build process (which is nice).
+- Has a layer based build process (which is nice). We do not have to rebuild from scratch, if build fails.
 - Images can be shared via DockerHub
 - Building an image can be pain in the neck as it depends on a fast internet connection.
 - Installation issue/security risks: Docker user group is basically root
@@ -317,16 +339,17 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - `docker run -i -t testimage /bin/bash`
 - `docker run testimage` will run container and `CMD` will be executed
 - `docker run -d -i -t --name testimage testimage` will immediately terminate since the container `CMD` is executed.
-- `docker run -d -i -t --name testimage3 testimage /bin/bash` keeps container alive
-- Show more complicated Dockerfile example (`dumux-precice`)
-  - `~/container-recipes/docker/dumux-precice/ub2004/dumux-3.4-precice-2.2.1`
-  - TODO: Add Dockerfile to `dumux-precice` repository
-- When going into the container we are in the directory `/app` and the file `testfile` is present
-
-- Copy files with `docker cp`
+- `docker run -d -i -t --name testimage testimage /bin/bash` keeps container alive since the terminal session is running inside.
+- Create file `touch testfile`, if not present.
+- `docker run -i -t --name testimage -v $(pwd):/app -w /app testimage /bin/bash` starts container, creates volume `/app` and sets working directory to /app
+- When going into the container we are in the directory `/app` and the file `testfile` is present.
+- Copy files with `docker cp`. `touch file-to-copy`
 - `docker cp file-to-copy CONTAINERNAME:/app`
 - `docker cp CONTAINERNAME:/app file-to-copy`
 - This will fix preserve user and group id
+- Show more complicated Dockerfile example (`dumux-precice`)?
+  - `~/container-recipes/docker/dumux-precice/ub2004/dumux-3.4-precice-2.2.1`. Also in branch of [`dumux-precice` repository](https://git.iws.uni-stuttgart.de/dumux-appl/dumux-precice/-/blob/add-docker-images/docker/dumux-3.4-precice-2.2.1.dockerfile)+
+  - Uses most/all commands on slides
 
 ### Demo: FEniCS example
 

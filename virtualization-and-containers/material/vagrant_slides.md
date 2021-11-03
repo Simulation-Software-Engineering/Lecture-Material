@@ -113,6 +113,8 @@ slideOptions:
 
 ## Demo: Premade Vagrant VM
 
+Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
+
 ---
 
 ## Structure of Vagrant Box
@@ -183,12 +185,16 @@ slideOptions:
 
 - [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
 
+Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
+
 ---
 
 ## Demo: preCICE VM
 
 - [https://github.com/precice/vm](https://github.com/precice/vm)
 - [Premade box](https://app.vagrantup.com/precice/boxes/precice-vm)
+
+Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
 
 ---
 

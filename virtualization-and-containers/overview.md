@@ -1,5 +1,9 @@
 # Virtualization and containers
 
+| Duration | Format |
+| --- | --- |
+| 5 minutes | Slides |
+
 - **Learning goals**
   - What is the difference between virtualization and containers?
   - When to use virtual machines and when containers.
@@ -41,11 +45,11 @@
 - Various virtualization and container technologies and tools to manage them. Sometimes separation is a bit vague/complicated and changed over time (lxc/lxd, Docker).
 - We discuss tools and use cases that are (more) likely to be encountered in simulation software.
 
-## Introduction to VirtualBox
+## VirtualBox
 
 | Duration | Format |
 | --- | --- |
-| 15 minutes | Slides |
+| 35 minutes | Slides + Demo |
 
 - You can have root rights inside your virtual machine.
 - What problems does it solve?
@@ -62,11 +66,7 @@
 - Short question: What type of hypervisor is VirtualBox? Type 2
 
 
-## VirtualBox demo
-
-| Duration | Format |
-| --- | --- |
-| 20 minutes | Demo |
+### VirtualBox demo
 
 - Discuss configuration:
   - Virtual machine will reserve cores/threads of your CPU and main memory.
@@ -120,11 +120,11 @@
     - Verify additional network device `enp0s8` and check for ip address. In my case `192.168.56.101`
     - On host machine `ssh vmuser@192.168.56.101`
 
-## Vagrant
+## Vagrant + demo
 
 | Duration | Format |
 | --- | --- |
-| 15 minutes | Slides |
+| 25 minutes | Slides + Demo|
 
 - Initially deveoped by Mitchell Hashimoto as side project
 - Released in 2010
@@ -133,11 +133,7 @@
 - Configure VMs (I think also containers nowadays) conveniently via text files
 - Infrastructure as code (Git lecture: If you cannot use `diff`, it is the wrong format!)
 
-## Vagrant practical example
-
-| Duration | Format |
-| --- | --- |
-| 15 minutes | Demo |
+### Vagrant practical example
 
 Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 
@@ -182,7 +178,6 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
     - Container runs kernel of the host OS.
     - Operating system (OS) needs to be compatible with underlying OS. Cannot run different OS than host. (TODO: Verify this)
       - **Note**: Windows 10 can run Linux containers! (Due to Windows Subsystem for Linux?!)
-
 - Shortly recap what we have learned about containers.
   - Fenced-off, relies on capabilities of OS etc.
 - LXD/LXC and its container registry [Linux containers](https://linuxcontainers.org/)
@@ -191,12 +186,11 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 **Note**: Students not running Linux or without sufficient rights on their machine should be able to use a virtual machine to run Docker/Singularity on their machine if they could get that installed.
 
 
-
-## Docker
+## Docker + Demos
 
 | Duration | Format |
 | --- | --- |
-| 15 minutes | Slides |
+| 50 minutes | Slides + Demos|
 
 - Quiz "What is Docker?"
   - Answer depends on when in time and  you ask.
@@ -221,21 +215,16 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - Building an image can be pain in the neck as it depends on a fast internet connection.
 - Installation issue/security risks: Docker user group is basically root
   - Rootless installation of Docker
-
 - We focus on tools to create, run and interact with containers
 
-## Docker practical example
+### Demo: Run existing container
 
-| Duration | Format |
-| --- | --- |
-| 25 minutes | Demo |
+- Start VM with docker
 
-```
-cd /media/jaustar/external-ssd/virtualmachines/vagrant/sse-docker-box/
-vagrant up
-```
-
-### Run existing container
+  ```
+  cd /media/jaustar/external-ssd/virtualmachines/vagrant/sse-docker-box/
+  vagrant up
+  ```
 
 - Show containers on [DockerHub](https://hub.docker.com/)
 
@@ -292,7 +281,7 @@ vagrant up
 - `docker cp CONTAINERNAME:/app file-to-copy`
 - This will fix preserve user and group id
 
-### FEniCS example
+### Demo: FEniCS example
 
 `docker run -ti -p 127.0.0.1:8000:8000 -v $(pwd):/home/fenics/shared -w /home/fenics/shared quay.io/fenicsproject/stable:current`
 
@@ -300,11 +289,11 @@ vagrant up
 - `-w` sets the working directory to /home/fenics/shared
 - Volume allows for persistent data
 
-## Singularity
+## Singularity + Demos
 
 | Duration | Format |
 | --- | --- |
-| 20 minutes | Slides |
+| 20 minutes | Slides + Demos|
 
 - Back story
   - Created at Lawrence Berkeley National Laboratory but now developed by SyLabs
@@ -317,14 +306,14 @@ vagrant up
   - Runs in *user-space* (no root privilege escalation)
   - Direct network and (some) hardware access (GPUs, accelerators)
   - Mounts common/important directories
-  - Images can be based on Docker images (**TODO** check this). This is nice to prebuild parts of the image as Docker image since Singularity's format is not layer based. This means you have to rebuilt from scratch if it fails.
+  - Show text-based file format. Is similar to Docker
+    - Building is without layers (hit or miss)
+    - Images can be based on Docker images. This is nice to prebuild parts of the image as Docker image since Singularity's format is not layer based. This means you have to rebuilt from scratch if it fails.
   - Small runtime penalty.
 - Nowadays available on many HPC platforms
-- Show text-based file format. Is similar to Docker
-- Common commands:
-  - TODO
+- Common commands
 
-## Demo: Run prebuilt containers
+### Demo: Run prebuilt containers
 
 - `singularity pull library://lolcow`
   - Obtain existing container image and store it as `lolcow_latest.sif`
@@ -339,7 +328,7 @@ vagrant up
 - Show that we cannot run things as root.
 - Note that images are executable by default
 
-### Demo: Build own containers
+#### Demo: Build own containers
 
 - Go to `/media/jaustar/external-ssd/singularity/singularity-examples/build-image`
 - Show file `singularity-example.def` content

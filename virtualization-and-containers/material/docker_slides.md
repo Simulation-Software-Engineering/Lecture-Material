@@ -71,6 +71,7 @@ slideOptions:
   - Server process
 - Docker client
   - User interface/tools to interact with, create, manage containers etc. via daemon
+  - That means no direct interaction with containers, images etc.
 - Docker registries
   - Registries that manage Docker images to be used
 

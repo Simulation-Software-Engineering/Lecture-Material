@@ -45,7 +45,6 @@ slideOptions:
     - Image registry and remote builder
   - [Singularity Hub](https://singularityhub.github.io)
     - Open source registry
-- Community edition open source (BSD license)
 
 ---
 
@@ -57,7 +56,7 @@ slideOptions:
   - Access hardware (GPU, network...) and filesystems
 - Simple and effective security model
   - Same user inside and outside container
-- Mobility of Compute
+- "Mobility of Compute"
   - Single file container for easy transport and sharing
 
 ---

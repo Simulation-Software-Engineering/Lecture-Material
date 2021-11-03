@@ -263,7 +263,7 @@ vagrant up
 - Leave a container without closing it via `CTRL+P` followed by `CTRL+Q`
 
 
-### Dockerfile example
+### Demo: Building own example
 
 - `cd dockerfile-example`
 - Contains Dockerfile
@@ -287,6 +287,11 @@ vagrant up
   - TODO: Add Dockerfile to `dumux-precice` repository
 - When going into the container we are in the directory `/app` and the file `testfile` is present
 
+- Copy files with `docker cp`
+- `docker cp file-to-copy CONTAINERNAME:/app`
+- `docker cp CONTAINERNAME:/app file-to-copy`
+- This will fix preserve user and group id
+
 ### FEniCS example
 
 `docker run -ti -p 127.0.0.1:8000:8000 -v $(pwd):/home/fenics/shared -w /home/fenics/shared quay.io/fenicsproject/stable:current`
@@ -299,7 +304,7 @@ vagrant up
 
 | Duration | Format |
 | --- | --- |
-| 15 minutes | Slides |
+| 20 minutes | Slides |
 
 - Back story
   - Created at Lawrence Berkeley National Laboratory but now developed by SyLabs
@@ -319,17 +324,28 @@ vagrant up
 - Common commands:
   - TODO
 
-## Singularity practical example
+## Demo: Run prebuilt containers
 
-| Duration | Format |
-| --- | --- |
-| 15 minutes | Demo |
-
-- Write some Singularity recipe, build container and run it.
-  - Same example as for Docker?
+- `singularity pull library://lolcow`
+  - Obtain existing container image and store it as `lolcow_latest.sif`
+- `singularity pull lolcow_docker.sif docker://sylabsio/lolcow`
+  - Pulls docker image, converts it and stores it as lolcow_docker.sif
+- `singularity shell lolcow_latest.sif`
+  - Run shell in container
+  - `whoami` will show same user as I am on the computer
+- `singularity exec lolcow_latest.sif cowsay moo`
+  - Run command in container
 - Show the mounted filesystems and hardware access.
 - Show that we cannot run things as root.
-- (Optional if enoug time): Show Docker and Singulity container side by side
+- Note that images are executable by default
+
+### Demo: Build own containers
+
+- Go to `/media/jaustar/external-ssd/singularity/singularity-examples/build-image`
+- Show file `singularity-example.def` content
+-  `sudo singularity build testimage singularity-example.def`
+  - Point out that sudo is needed
+- Creates image
 
 ## Concluding remarks
 

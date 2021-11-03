@@ -108,15 +108,12 @@ Details available in [`overview.md`](https://github.com/Simulation-Software-Engi
 
 ---
 
-## Summary
+## Summary and Outlook
 
-- Open-source system for virtual machines
+- VirtualBox is open-source system for virtual machines
 - Simple to set up and run
-- Offer flexibility on OS choice
-- Manual setup. How to manage several VMs efficiently?
-  - CLI interface exists
-- Consistency of the environment?
-- Sharing image with others?
+- Offers flexibility on OS choice
+- Manual setup, but also CLI interface exists
 
 > "If you can't git diff a file format, it's broken."
 

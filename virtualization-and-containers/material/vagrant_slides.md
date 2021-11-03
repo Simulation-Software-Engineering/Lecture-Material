@@ -160,7 +160,7 @@ Details available in [`overview.md`](https://github.com/Simulation-Software-Engi
   default: Mounting shared folders...
   ```
 
-  - File can be changed from Guest or Host
+  - Files can be exchanged between Guest and Host (bidirectional)
 - Default:
   - Directory containing `Vagrantfile` mounted to `/vagrant` in the Guest
 

@@ -33,7 +33,7 @@ slideOptions:
 
 ## What is Docker? 1/2
 
-- Docker, Inc.
+- Docker Inc.
   - Company promoting Docker
 - Docker Desktop
 
@@ -60,6 +60,21 @@ slideOptions:
   > Docker is an open platform for developing, shipping, and running applications.
 
 - We use definition from documentation.
+
+---
+
+## Introduction
+
+- 2010: Docker Inc. founded
+- 2013: First Docker release
+  - Then based on [LXC](https://linuxcontainers.org/)
+  - Released as open source
+- 2014: Replaced LXC by own execution environment
+- 2017: [Moby project](https://mobyproject.org/) for open source
+
+  > Moby is an open framework created by Docker to assemble specialized container systems without reinventing the wheel.
+
+- Nowadays one of the most popular container frameworks/services
 
 ---
 

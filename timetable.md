@@ -39,7 +39,7 @@
 - **10** Background on containers
 - Tell students to get/install virtualbox in case they have a machine without Linux and or without root rights.
 
-## 3.2 -- Fri, November 04, 2021
+## 3.2 -- Thu, November 04, 2021
 
 - **30** Docker
 - **15** Docker practical example

@@ -137,9 +137,7 @@ slideOptions:
 
 - Alternative:
 
-  ```---
-
-## Demo: Premade Vagrant VM
+  ```
   vagrant init ajaust/sse-first-steps
   ```
 
@@ -156,9 +154,9 @@ slideOptions:
   default: Mounting shared folders...
   ```
 
-  - Files can be exchanged between Guest and Host
+  - File can be changed from Guest or Host
 - Default:
-  - Directory containing `Vagrantfile` mounted to `/vagrant` in Guest
+  - Directory containing `Vagrantfile` mounted to `/vagrant` in the Guest
 
 ---
 

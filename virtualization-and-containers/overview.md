@@ -266,12 +266,16 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
   - `-i` means interactive
   - `-t` allocates pseudo-tty
 
-- Changes inside the container are not persistent
+- Changes inside the container are not persistent when container is stopped
   - `touch asdf`
   - leave container
   - enter container `docker run -i -t ubuntu /bin/bash`
   - File is gone
 - When container is running, we see it when calling `docker ps`
+- Start container (with name `tutoral`) `docker run -i -t --name tutorial ubuntu  /bin/bash`
+- Leave it `CTRL-P` + `CTRL-Q` (do not let go of `CTRL` while doing this)
+- Show container running `docker ps`
+- Reattach to container `docker container attach tutorial`
 - After quitting againg show `docker ps -a`
 
 - `docker run -d -i -t --name test --mount type=bind,source="$(pwd)",target=/mnt/share ubuntu`

@@ -80,19 +80,18 @@ slideOptions:
 ## Guest Additions
 
 - Software and drivers to improves Guest's performance
-  - Better video support, shared clipboard, mouse pointer intergration...
-- Especially interesting for VM with GUI
+  - Better video support, shared clipboard, mouse pointer integration...
 - Might need additional packages
   - On Ubuntu 20.04
 
-  ```
+  ```bash
   sudo apt install virtualbox-guest-dkms virtualbox-guest-x11 virtualbox-guest-utils
   ```
 
   - `virtualbox-guest-x11` can be dropped on headless system
   - On Ubuntu for building packages manually
 
-  ```
+  ```bash
   perl dkms build-essential linux-headers-generic linux-headers-$(uname -r)
   ```
 
@@ -114,8 +113,12 @@ Details available in [`overview.md`](https://github.com/Simulation-Software-Engi
 - Simple to set up and run
 - Offers flexibility on OS choice
 - Manual setup, but also CLI interface exists
+- Next steps
+  - How to manage several VMs efficiently?
+  - Consistency of the environment?
+  - Sharing image with others?
 
-> "If you can't git diff a file format, it's broken."
+    > "If you can't git diff a file format, it's broken."
 
 ---
 

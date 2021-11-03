@@ -63,7 +63,7 @@ slideOptions:
 
 ---
 
-## Building Block
+## Building Blocks
 
 - Provisioners
   - Tool for configuring the boxes (install software on machine)
@@ -71,40 +71,6 @@ slideOptions:
 - Providers
   - "Backend" the box is based on
   - Examples: VirtualBox, Hyper-V, AWS, Docker...
-
----
-
-## Structure of Vagrant Box
-
-- File `Vagrantfile`
-  - Contains configuration of VM
-  - Ruby script
-- Supplementary files, scripts etc. for configuring VM
-  - Example: `bootstrap.sh`
-- Files are usually text files (Git friendly)
-
----
-
-## Setting up a Virtual Machine
-
-- Install VirtualBox
-- Install Vagrant (ideallt from homepage)
-- Create `Vagrantfile` and specify image
-
-  ```ruby
-  Vagrant.configure("2") do |config|
-    config.vm.box = "ajaust/sse-first-steps"
-    config.vm.box_version = "0.1.0"
-  end
-  ```
-
-- Alternative:
-
-  ```
-  vagrant init ajaust/sse-first-steps
-  ```
-
-- Start VM with `vagrant up`
 
 ---
 
@@ -138,6 +104,40 @@ slideOptions:
 
 ---
 
+## Structure of Vagrant Box
+
+- File `Vagrantfile`
+  - Contains configuration of VM
+  - Ruby script
+- Supplementary files, scripts etc. for configuring VM
+  - Example: `bootstrap.sh`
+- Files are usually text files (Git friendly)
+
+---
+
+## Setting up a Virtual Machine
+
+- Install VirtualBox
+- Install Vagrant (ideally from homepage so it is a recent release)
+- Create `Vagrantfile` and specify image
+
+  ```ruby
+  Vagrant.configure("2") do |config|
+    config.vm.box = "ajaust/sse-first-steps"
+    config.vm.box_version = "0.1.0"
+  end
+  ```
+
+- Alternative:
+
+  ```
+  vagrant init ajaust/sse-first-steps
+  ```
+
+- Start VM with `vagrant up`
+
+---
+
 ## Exchanging Files
 
 - Vagrant mounts shared folders
@@ -153,12 +153,16 @@ slideOptions:
 
 ---
 
+## Demo: Premade Vagrant VM
+
+---
+
 ## Vagrant Cloud
 
 - Repository of premade boxes: [https://app.vagrantup.com/](https://app.vagrantup.com/)
 - Pack box:
 
-  ```
+  ```bash
   vagrant package --base "NAMEOFVM" --output BOXNAME.box
   ```
 
@@ -168,13 +172,16 @@ slideOptions:
 
 ---
 
-## Demo
+## Demo: Own box
 
-- First steps
-  - [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
-- preCICE
-  - [https://github.com/precice/vm](https://github.com/precice/vm)
-  - [Premade box](https://app.vagrantup.com/precice/boxes/precice-vm)
+- [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
+
+---
+
+## Demo: preCICE VM
+
+- [https://github.com/precice/vm](https://github.com/precice/vm)
+- [Premade box](https://app.vagrantup.com/precice/boxes/precice-vm)
 
 ---
 

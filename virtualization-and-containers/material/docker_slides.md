@@ -169,6 +169,7 @@ slideOptions:
   - Layers are added separately -> Keep number of layers low
   - Layers are cached
   - Changed layer requires downstream layers to be recreated
+- Container (layers) have commit hashes
 
 ---
 
@@ -205,6 +206,11 @@ CMD ["echo", "hello"]
 ## Publish own Images
 
 - Publication on registry (e.g. [DockerHub](https://hub.docker.com/))
+- `docker build -t ACCOUNT/REPOSITORY[:TAG] .`
+  - Creates image
+- `docker push ACCOUNT/REPOSITORY[:TAG]`
+  - Push image to registry (default DockerHub)
+  - Needs account and must be logged in via `docker login`
 
 ---
 
@@ -240,6 +246,7 @@ CMD ["echo", "hello"]
 
 - [Docker](https://www.docker.com/)
 - [Docker documentation](https://docs.docker.com)
-- [Docker Hub](https://hub.docker.com/)
+- [DockerHub](https://hub.docker.com/)
+- [DockerHub documentation](https://docs.docker.com/docker-hub/)
 - [Open Container Initiative (OCI)](https://opencontainers.org/)
 - [Malicious Docker Hub Container Images Used for Cryptocurrency Mining](https://www.trendmicro.com/vinfo/fr/security/news/virtualization-and-cloud/malicious-docker-hub-container-images-cryptocurrency-mining)

@@ -149,7 +149,7 @@ slideOptions:
 
   - Files can be exchanged between Guest and Host
 - Default:
-  - Directory containing `Vagrantfile` mounted to `/vagrant` in the Guest
+  - Directory containing `Vagrantfile` mounted to `/vagrant` in Guest
 
 ---
 

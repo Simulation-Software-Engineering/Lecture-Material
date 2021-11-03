@@ -47,7 +47,7 @@
 - **5** Singularity practical example
 - **15** Time for practical exercises
 
-- Students that for the exercise next week they should have VirtualBox, Vagrant and Docker installed. They can also install Docker inside a VM.
+- Tell students that for the exercise next week they should have VirtualBox, Vagrant and Docker installed. They can also install Docker inside a VM.
 
 ## 4.1 -- Thu, November 11, 2021
 

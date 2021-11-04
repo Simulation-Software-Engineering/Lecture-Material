@@ -68,7 +68,7 @@ slideOptions:
 
 ## Security
 
-- Docker considers itself save
+- Docker considers itself safe
 
   > Applications are safer in containers and Docker provides the strongest default isolation capabilities in the industry
 

@@ -23,3 +23,9 @@ Learning goals:
 | Duration | Format | Material |
 | --- | --- | --- |
 | 20 minutes | slides | [`challenge_intro.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/organization/material/challenge_intro_slides.md) |
+
+## Organizational Remarks in Week 3
+
+| Duration | Format | Material |
+| --- | --- | --- |
+| 10 minutes | slides | [`organizational_remarks_week3_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/organization/material/organizational_remarks_week3_slides.md) |

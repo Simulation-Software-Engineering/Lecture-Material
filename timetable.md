@@ -32,8 +32,8 @@
 
 ## 3.1 -- Thu, November 04, 2021
 
-- **5** [Virtualization and containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/intro_slides.md)
-- **10** [Introduction to virtualization](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/virtualmachines_slides.md)
+- **5** [Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/intro_slides.md)
+- **10** [Introduction to Virtualization](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/virtualmachines_slides.md)
 - **40** [VirtualBox (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/virtualbox_slides.md)
 - **25** [Vagrant (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/vagrant_slides.md)
 - **10** [Introduction to Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/containers_slides.md)

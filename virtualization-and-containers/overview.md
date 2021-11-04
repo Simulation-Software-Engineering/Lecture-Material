@@ -1,4 +1,4 @@
-# Virtualization and containers
+# Virtualization and Containers
 
 | Duration | Format |
 | --- | --- |
@@ -22,7 +22,7 @@
 - This week focus on virtualization and containers. Exercise for this will be next week.
 - VirtualBox (image) can also be used for exercises, especially for containers.
 
-## Introduction to virtualization
+## Introduction to Virtualization
 
 | Duration | Format |
 | --- | --- |
@@ -45,11 +45,11 @@
 - Various virtualization and container technologies and tools to manage them. Sometimes separation is a bit vague/complicated and changed over time (lxc/lxd, Docker).
 - We discuss tools and use cases that are (more) likely to be encountered in simulation software.
 
-## VirtualBox
+## VirtualBox (including practical examples)
 
 | Duration | Format |
 | --- | --- |
-| 35 minutes | Slides + Demo |
+| 40 minutes | Slides + Demo |
 
 - You can have root rights inside your virtual machine.
 - What problems does it solve?
@@ -123,7 +123,7 @@
   - I share `/media/jaustar/external-ssd/virtualmachines/shared-folder`
   - Add some file there and check that it appears Host and vice versa.
 
-## Vagrant + demo
+## Vagrant (including practical examples)
 
 | Duration | Format |
 | --- | --- |
@@ -249,17 +249,23 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 
 **Note**: Students not running Linux or without sufficient rights on their machine should be able to use a virtual machine to run Docker/Singularity on their machine if they could get that installed.
 
-
-## Docker + Demos
+## Docker Quiz
 
 | Duration | Format |
 | --- | --- |
-| 50 minutes | Slides + Demos|
+| 5 minutes | Quiz |
 
 - Quiz "What is Docker?"
   - Start slido quiz
   - Answer depends on when in time and  you ask.
     - Containerization framework, container management, company...
+
+## Docker (including practical examples)
+
+| Duration | Format |
+| --- | --- |
+| 60 minutes | Slides + Demos|
+
 - [`act`](https://github.com/nektos/act) is a tool to debug/run GitHub actions locally
 - The most popular container framework one finds at the moment
 - Short backstory:
@@ -454,24 +460,22 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
   - Point out that sudo is needed
 - Creates image which is identical to the prebuilt image
 
-## Concluding remarks
+## Concluding Remarks and Discussion about Learning Goals
 
 | Duration | Format |
 | --- | --- |
 | 5 minutes | Slides |
 
-- Docker is popular for encapsulating environments for testing (CI/CD, DevOps) as we will see later.
-- Singularity is a bit more "niche", but important in the computing/simulation business.
-- For the exercise you should ideally have Docker, VirtualBox, Vagrant (maybe Singularity installed)
+- Virtual machines are a good abstraction layer that are very flexible. They can run different OS, can be moved etc. VirtualBox is a popular VM solution (hypervisor.)
+- There are tools like Vagrant to manage them more conveniently than with the GUI or CLI.
+- Containers are a light weight alternative to VMs. They are basically "special" processes that run more or less isolated. Therefore, they do not need to bring everything (kernel, libraries...) themselves, but rely on the functionalities of the Host. Example: Containers "run" on the same kernel as the Host. Cannot mix OSes (easily).
+- Docker is popular for container framework encapsulating environments and applications. We will use it also more for testing (CI/CD, DevOps). This will come in future lectures.
+- Singularity is a bit more "niche", but important in the computing/simulation business as it focuses on self-contained applications that can easily run on different platforms instead of isolation compared to Docker.
+- For the exercise you should ideally have Docker, VirtualBox, Vagrant (maybe Singularity installed).
+- Show slides from the intro with learning goals again.
+  - Can you answer the questions now?
 
-## Further reading
-
-### Other
-
-- ["Should I use Vagrant or Docker for creating an isolated environment?"](https://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-for-creating-an-isolated-environment)
-- [Malicious Docker Hub Container Images Used for Cryptocurrency Mining](https://www.trendmicro.com/vinfo/fr/security/news/virtualization-and-cloud/malicious-docker-hub-container-images-cryptocurrency-mining)
-- ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)
-- [Open Container Initiative (OCI)](https://opencontainers.org/)
+## Further Reading
 
 ### References
 
@@ -496,3 +500,10 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - [podman](https://podman.io/)
 - [Linux containers](https://linuxcontainers.org/)
 - Singularity paper: [Singularity: Scientific containers for mobility of compute](https://doi.org/10.1371/journal.pone.0177459)
+
+### Other
+
+- ["Should I use Vagrant or Docker for creating an isolated environment?"](https://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-for-creating-an-isolated-environment)
+- [Malicious Docker Hub Container Images Used for Cryptocurrency Mining](https://www.trendmicro.com/vinfo/fr/security/news/virtualization-and-cloud/malicious-docker-hub-container-images-cryptocurrency-mining)
+- ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)
+- [Open Container Initiative (OCI)](https://opencontainers.org/)

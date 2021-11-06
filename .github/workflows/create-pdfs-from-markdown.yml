@@ -14,11 +14,13 @@ jobs:
     runs-on: ubuntu-20.04
     container: pandoc/latex:latest
     steps:
+      - name: Install bash
+        run: apk add bash
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Compile PDFs (slides)
         run: |
-          ./scripts/create-slides.sh
+          ./scripts/create-pdf-from-markdown.sh slides
       - uses: actions/upload-artifact@master
         with:
           name: slides
@@ -26,7 +28,15 @@ jobs:
           retention-days: 14
       - name: Compile PDFs (texts)
         run: |
-          ./scripts/create-texts.sh
+          ./scripts/create-pdf-from-markdown.sh text
+      - uses: actions/upload-artifact@master
+        with:
+          name: texts
+          path: texts
+          retention-days: 14
+      - name: Compile PDFs (quizzes)
+        run: |
+          ./scripts/create-pdf-from-markdown.sh quiz
       - uses: actions/upload-artifact@master
         with:
           name: texts

@@ -1,7 +1,7 @@
 # Simulation Software Engineering Lecture Material
 
 ![markdownlint](https://github.com/Simulation-Software-Engineering/lecture-materials/actions/workflows/markdownlint.yml/badge.svg)
-[![PDFs](https://github.com/Simulation-Software-Engineering/lecture-materials/actions/workflows/create-slide-pdf.yml/badge.svg)](https://github.com/Simulation-Software-Engineering/Lecture-Material/actions/workflows/create-slide-pdf.yml)
+[![PDFs](https://github.com/Simulation-Software-Engineering/lecture-materials/actions/workflows/create-pdfs-from-markdown.yml/badge.svg)](https://github.com/Simulation-Software-Engineering/Lecture-Material/actions/workflows/create-pdfs-from-markdown.yml)
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
 ## Linting

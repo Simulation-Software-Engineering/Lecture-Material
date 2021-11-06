@@ -45,4 +45,12 @@ do
     echo "Output file name: ${output_filename}"
 
     pandoc ${output_options} --output=${target_dir}/${output_filename} ${f}
+
+    if test -f "${target_dir}/${output_filename}"; then
+        echo "${target_dir}/${output_filename} successfully created."
+    else
+        echo "Creation of ${target_dir}/${output_filename} failed."
+        echo "  Aborting..."
+        exit 1
+    fi
 done

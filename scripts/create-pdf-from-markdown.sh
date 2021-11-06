@@ -1,4 +1,4 @@
-#! /usr/bin/env bash
+#!/usr/bin/env bash
 
 PANDOC_SLIDE_OPTIONS=("-t beamer" "-V aspectratio=169" "-V linkcolor:blue" "-V fontsize=12pt" "--listings" "-s")
 PANDOC_TEXT_OPTIONS=("-V geometry:a4paper" "-V geometry:left=2.5cm" "-V geometry:right=2.5cm" "-V geometry:bottom=2.5cm" "-V geometry:top=2.5cm" "-V linkcolor:blue" "-V fontsize=10pt" "--listings" "-s")

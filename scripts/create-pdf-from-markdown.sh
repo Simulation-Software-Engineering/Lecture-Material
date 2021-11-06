@@ -16,7 +16,9 @@ if [[ "$TARGET_FILES" == "slides" ]] || [[ "$TARGET_FILES" == "quiz" ]] || [[ "$
 then
     file_list=$(find . -type f -iname "*_${TARGET_FILES}.md")
 else
-    echo "Error: Do not support target: $TARGET_FILES"
+    echo "Error: Argument not supported."
+    echo "  Supplied argument: ${TARGET_FILES}"
+    echo "  Valid arguments are: slides, quiz or text"
     exit 1
 fi
 

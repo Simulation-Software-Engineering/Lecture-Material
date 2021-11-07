@@ -1,5 +1,7 @@
 # Working with Virtualization and Containers
 
+**This exercise sheet is work in progress**
+
 In this exercise we will work the virtualization and container techniques that we have seen in the lecture. We will set up virtual machines manually first and then automatize the process. Afterwards we will build out own containers.
 
 ## Prerequisites
@@ -14,7 +16,7 @@ In part of the
 
 We will install "Ubuntu Server 20.04" a lightweight version of Ubuntu without graphical user interface. However, the ISO image has still 1.2 GB so you might want to start the [download of the image called "Ubuntu Server 20.04.3 LTS"](https://ubuntu.com/download/server) before continuing reading. If you see the name "Focal Fossa" some places, this is the codename of the 20.04 release of Ubuntu.
 
-### Tasks
+### Tasks (VirtualBox)
 
 - Download the ISO image from the [Ubuntu homepage](https://ubuntu.com/download/server. Please choose the "20.04.3 LTS" image which is called "ubuntu-20.04.3-live-server-amd64.iso"
 - While the image is being downloaded, you can start preparing the VM already. Create a new VM in VirtualBox called "Ubuntu Server" and assign 2048 MB of memory to it. If that is not possible on your machine, choose a larger or smaller amount of memory. Make sure the your virtual hard drive is large enough. 6 GB should be enough for this exercise. If you choose "dynamic allocation" the actual image size should not grow beyond 4 GB during this exercise. So it you are very limited on disk space you could also try a smaller disk size than 6 GB.
@@ -32,11 +34,11 @@ We will install "Ubuntu Server 20.04" a lightweight version of Ubuntu without gr
   - Ubuntu should complain that it cannot unmount the cdrom drive. Check in the settings of your VM that VirtualBox has unmounted the `ubuntu-20.04.3-live-server-amd64.iso` image and confirm the reboot by pressing enter. If the image is still mounted, please shutdown the VM (Machine -> ACPI Shutdown), unmount the image manually and boot the VM again.
 - After (re)booting you will be greeted by the Ubuntu login screen. If it looks like a mess press `CTRL-C` to clear the screen. You might have to wait for a moment and maybe switch in and out of the VM's window for it to be refreshed properly. Login using your username and password.
 - We want to install [`neofetch`](https://github.com/dylanaraps/neofetch) which prints the system's information to the terminal and take a screenshot of this.
-  - Install `neofetch` via `sudo apt update && sudo apt install neofetch`. This command will download and install `neofetch`.
+  - Install `neofetch` via `sudo apt update && sudo apt install -y neofetch`. This command will download and install `neofetch`.
   - Clear the terminal using `clear` and run neofetch via by typing`neofetch` into the terminal and pressing `Enter`.
   - Take a screenshot via VirtualBox. At the top of the VirtualBox window you find the menu item `View`. There you find the option `Take Screenshot (Host+E)`. Save the Screenshot as `neofetch-screenshot-USERNAME.png` (replace `USERNAME` by your username).
 - Now we want to open an issue on the GitLab  Repository TODO and upload the screenshot to document your success.
-  - Open a merge request in the GitHub Repository TODO.
+  - Open an issue in the GitHub Repository TODO.
     - As title choose "[`USERNAME`] Ubuntu Server Installation"
     - Attach the screenshot ('Attach a file`). By default, the screenshot is saved in the folder of your VM.
     - Add the `VirtualBox` Label to the issue and assign the issue to the lecturers `jaustar` and `uekermbn` and create the issue.
@@ -53,11 +55,11 @@ Congratulations. You have successfully set up a virtual machine, installed Ubunt
 - If you want to set up SSH forwarding to your VM, you can find instructions, for example, [on the codebot homepage](https://codebots.com/docs/ubuntu-18-04-virtual-machine-setup). The instructions are for Ubuntu 18.04, but it also works for Ubuntu 20.04. Note that most of the steps are preconfigured in current VirtualBox releases, but it does not hurt to check whether the settings are set properly.
 
 
-##  Virtual Machines Using Vagrant
+## Virtual Machines Using Vagrant
 
-In the previous section we have set up a VM manually. This was quite tedious. Therefore, we want to automatize this process now by using [Vagrant](https://www.vagrantup.com/) and setting up our own Vagrant box.
+In the previous section we have set up a VM manually. This was quite tedious. Therefore, we want to automatize this process now by using [Vagrant](https://www.vagrantup.com/) and setting up our own Vagrant box. We will provision a box based on VirtualBox by using shell scripts and the included provisioning tools of Vagrant.
 
-### Tasks
+### Tasks (Vagrant)
 
 - Fork the repository TODO from GitLab and create a branch to work on the fork. It will contain a `README.md` and a file called `bootstrap.sh`.
 - We want to start from scratch so initialize a new box using `vagrant init` in a suitable directory. Then adapt your `Vagrantfile` of the box.
@@ -65,16 +67,29 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
   - The name of your VM should be `USERNAME-ubuntu-server`. Replace `USERNAME` with your GitLab username, e.g., `jaustar-ubuntu-server`.
   - The [box version](https://www.vagrantup.com/docs/boxes/versioning) should be `0.1.0`.
   - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can leave the VM and stop it.
+  - The VM must request [384 MB of memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration)..
 - In the next step we want to provision your virtual machines. That means we want to install additional software and set some additional variables
   - We want to provision (`config.vm.provision`) the box in several steps.
-      - Create a file in the directory where the Vagrantfile resides with the name `testfile`. The file should contain your GitLab username as content. Add the file to your box using the [file provisioner](https://www.vagrantup.com/docs/provisioning/file). Add the file to the Git repository.
+    - Create a new file in the directory where the Vagrantfile resides with the name `testfile` and add it to the repository. The file should contain your GitLab username as text. Add the file to your box using the [file provisioner](https://www.vagrantup.com/docs/provisioning/file) and place it in the home directory of the `vagrant` user.
+    - We want an [additional shared folder](https://www.vagrantup.com/docs/synced-folders/basic_usage), besides `/vagrant`, in our virtual machine. The directory where the `Vagrantfile` resides, i.e. '.', should mounted as `/mnt/shared/` in your container.
     - Extend the file called `bootstrap.sh` for provisioning your box. In this script you should do the following:
       - Set the environment variable `ENV_TEST_USERNAME` to have the value of your GitLab username.
       - Install `neofetch`.
-- Open an merge request
+      - **Note:** In the `bootstrap.sh` you do not have to prefix commands with `sudo` since the script is executed with superuser rights when Vagrant provisions the box.
 
-### Further Information
+      This script should be run by the [shell provisioner](https://www.vagrantup.com/docs/provisioning/shell).
+- Open a merge request in the GitHub Repository TODO.
+  - As title choose "[`USERNAME`] Vagrant Box Provisioning"
+  - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`)
+    - Add the label `Vagrant` label to the issue and assign the issue to the lecturers `jaustar` and `uekermbn`.
+  - Double-check that all files are in the repository and up to date. Check everything carefully since a CI pipeline will try to build your Vagrant recipe.
+  - If everything looks good, create the issue..
+- Check whether the CI pipeline could verify your submission. This may take some time due to the number of concurrent submission being limited. If read the error message carefully and fix your submission by creating a new commit.
 
+
+### Further Information (Vagrant)
+
+- You might want to add the option `--provision` to the `vagrant up` command if you want to rebuild a box. In case the box is not being build/rebuild, please read the [documentation about provisioning](https://www.vagrantup.com/docs/provisioning) carefully.
 - By default, Vagrant will install all files in your home directory. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point the alternative directory. This could look like this:
 
   ```bash
@@ -88,34 +103,39 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
 
 ## Containers Using Docker
 
+Similar to the previous task we want to set up a Docker container for testing. I should basically contain the same functionality as the Vagrant box.
 
-## Optional extension
+### Tasks (Docker)
 
-
-## Resources
-
-- Vagrant docs
-- VirtualBox docs
-- [preCICE Vagrant box](https://github.com/precice/vm)
-
-1. [ ] Build a VirtualBox VM managed by Vagrand
-2. [ ] Build a Docker image containing some tooling for C++ and Python
-  - Has to be able to run some non-common dependency?! Maybe install preCICE in there.
-      - If preCICE, one could install it once from source and once as binary.
-  - Automatically test this via some GitHub action.
-     - Check for correct base image.
-     - Build the image.
-     - Check that code runs.
-3. [ ] Install Singularity (optional?)
-  - Compile by hand
-     - Install Go
-     - Compile Singularity
-  - Install tooling as
-
-- Use tags to run corrent runners?
+- Fork the repository TODO from GitLab and create a branch to work on the fork. It will contain a `README.md` and a file called `Dockerfile`.
+- We start from scratch. Thus the [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) is empty. Edit it to contain the following features
+  - Your virtual machine should be based on the [`ubuntu:20.04` image](https://hub.docker.com/_/ubuntu).
+  - Create a new file with the name `testfile` and add it to the repository. The file should contain your GitLab username as text. Add the file to your container and place it in directory `/testfiles`.
+  - Set the environment variable `ENV_TEST_USERNAME` to have the value of your GitLab username.
+  - Make sure that the default command to be executed when running the container is `/bin/bash`.
+  - Install `neofetch`.
+  - **Note:** In the `Dockerfile` you do not have to prefix commands with `sudo` since the script is executed with superuser rights.
+- Open a merge request in the GitHub Repository TODO.
+  - As title choose "[`USERNAME`] Docker Container Recipe"
+  - Make sure all files are up to date (`testfile`, `Dockerfile`)
+    - Add the label `Docker` label to the issue and assign the issue to the lecturers `jaustar` and `uekermbn`.
+  - Double-check that all files are in the repository and up to date. Check everything carefully since a CI pipeline will try to build your Docker recipe.
+  - If everything looks good, create the issue..
+- Check whether the CI pipeline could verify your submission. This may take some time due to the number of concurrent submission being limited. If read the error message carefully and fix your submission by creating a new commit.
 
 
-## Optional tasks
+### Further Information (Docker)
+
+- [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/)
+- [Docker](https://www.docker.com/)
+- [Docker documentation](https://docs.docker.com)
+- [DockerHub](https://hub.docker.com/)
+- [DockerHub documentation](https://docs.docker.com/docker-hub/)
+
+
+## Optional Tasks
+
+Here are some ides on how to extend your work.
 
 ### VirtualBox
 
@@ -126,8 +146,8 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
 
 - Use Vagrant to set up a box with Docker
 - Publish a Vagrant box to Vagrant cloud. Please link to it in the issue.
-    - Link the published repository in the issue
-    - Please add all files (`Vagrantfile` etc.) that you have used to set up this box.
+  - Link the published repository in the issue
+  - Please add all files (`Vagrantfile` etc.) that you have used to set up this box.
 
 ### Docker
 
@@ -135,6 +155,9 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
   - Link the published DockerHub repository in the issue.
   - Please add all files (`Dockerfile` etc.) that you have used to set up this container.
 
+### Singularity
+
+- Rebuild the Docker container as Singularity container. Create a new merge request for this in the GitLab repository TODO.
 
 ## Deadline
 

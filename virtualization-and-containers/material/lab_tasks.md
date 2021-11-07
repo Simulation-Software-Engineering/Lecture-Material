@@ -1,6 +1,6 @@
 # Working with Virtualization and Containers
 
-In this exercise we will work the virtualization and container techniques that we have seen in the lecture. We will set up virtual machines manually and automatized and experiment a bit with containers.
+In this exercise we will work the virtualization and container techniques that we have seen in the lecture. We will set up virtual machines manually first and then automatize the process. Afterwards we will build out own containers.
 
 ## Prerequisites
 
@@ -8,15 +8,16 @@ In this exercise we will work the virtualization and container techniques that w
 - GitLab account.
 - Some available space on your hard drive or a USB drive (about 8 GB to be safe).
 
-## VirtualBox
+## Virtual Machines Using VirtualBox
 
 In part of the
 
 We will install "Ubuntu Server 20.04" a lightweight version of Ubuntu without graphical user interface. However, the ISO image has still 1.2 GB so you might want to start the [download of the image called "Ubuntu Server 20.04.3 LTS"](https://ubuntu.com/download/server) before continuing reading. If you see the name "Focal Fossa" some places, this is the codename of the 20.04 release of Ubuntu.
 
+### Tasks
 
 - Download the ISO image from the [Ubuntu homepage](https://ubuntu.com/download/server. Please choose the "20.04.3 LTS" image which is called "ubuntu-20.04.3-live-server-amd64.iso"
-- While the image is being downloaded, you can start preparing the VM already. Create a new VM in VirtualBox called "Ubuntu Server" and assign 2048 MB of memory to it. If that is not possible on your machine, choose a larger or smaller amount of memory. Make sure the your virtual hard drive is large enough. 6 GB should be enough for this exercise. If you choose "dynamic allocation" the actual image size should not grow beyond 4 GB during this exercise.
+- While the image is being downloaded, you can start preparing the VM already. Create a new VM in VirtualBox called "Ubuntu Server" and assign 2048 MB of memory to it. If that is not possible on your machine, choose a larger or smaller amount of memory. Make sure the your virtual hard drive is large enough. 6 GB should be enough for this exercise. If you choose "dynamic allocation" the actual image size should not grow beyond 4 GB during this exercise. So it you are very limited on disk space you could also try a smaller disk size than 6 GB.
 - Mount the `ubuntu-20.04.3-live-server-amd64.iso` to your virtual machine's cdrom drive (Storage -> Controller: IDE), make sure the graphics card has at least 32 MB video memory and start the VM.
 - The VM will boot from the Ubuntu image and will welcome you with the a configuration program. Choose your preferred language and then choose "Start Ubuntu Server". This will boot Ubuntu and bring you to the installation routine. The boot process might take a short while since Ubuntu will generate some files and run some checks.
 - When the boot process has finished you will be presented with Ubuntu's installation program. Go through it carefully.
@@ -43,40 +44,53 @@ We will install "Ubuntu Server 20.04" a lightweight version of Ubuntu without gr
 
 Congratulations. You have successfully set up a virtual machine, installed Ubuntu and installed additional software. You are now done with this part of the exercise. If you do not want to play with the VM later nor do you want to do any of the optional assignments, you can poweroff and delete the VM.
 
-### Further notes
+### Further Information
 
 - If your mouse pointer gets caught, use the right `CTRL` button on your keyboard to relase it again.
 - You can find more information on the installation procedure in the [Ubuntu Server documentation](https://ubuntu.com/server/docs).
+- [Ubuntu Server download page](https://ubuntu.com/download/server)
+- [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
 - If you want to set up SSH forwarding to your VM, you can find instructions, for example, [on the codebot homepage](https://codebots.com/docs/ubuntu-18-04-virtual-machine-setup). The instructions are for Ubuntu 18.04, but it also works for Ubuntu 20.04. Note that most of the steps are preconfigured in current VirtualBox releases, but it does not hurt to check whether the settings are set properly.
 
 
-## Vagrant
+##  Virtual Machines Using Vagrant
 
-In the previous section we have set up a VM manually. This was quite tedious. Therefore, we want to automatize this process now by using [Vagrant](https://www.vagrantup.com/).
+In the previous section we have set up a VM manually. This was quite tedious. Therefore, we want to automatize this process now by using [Vagrant](https://www.vagrantup.com/) and setting up our own Vagrant box.
 
-- Setup your own Vagrant box
+### Tasks
 
+- Fork the repository TODO from GitLab and create a branch to work on the fork. It will contain a `README.md` and a file called `bootstrap.sh`.
+- We want to start from scratch so initialize a new box using `vagrant init` in a suitable directory. Then adapt your `Vagrantfile` of the box.
+  - Your virtual machine should be based on the [`ubuntu/focal64` image](https://www.vagrantup.com/docs/boxes#official-boxes).
+  - The name of your VM should be `USERNAME-ubuntu-server`. Replace `USERNAME` with your GitLab username, e.g., `jaustar-ubuntu-server`.
+  - The [box version](https://www.vagrantup.com/docs/boxes/versioning) should be `0.1.0`.
+  - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can leave the VM and stop it.
+- In the next step we want to provision your virtual machines. That means we want to install additional software and set some additional variables
+  - We want to provision (`config.vm.provision`) the box in several steps.
+      - Create a file in the directory where the Vagrantfile resides with the name `testfile`. The file should contain your GitLab username as content. Add the file to your box using the [file provisioner](https://www.vagrantup.com/docs/provisioning/file). Add the file to the Git repository.
+    - Extend the file called `bootstrap.sh` for provisioning your box. In this script you should do the following:
+      - Set the environment variable `ENV_TEST_USERNAME` to have the value of your GitLab username.
+      - Install `neofetch`.
+- Open an merge request
 
-### Further notes
+### Further Information
 
 - By default, Vagrant will install all files in your home directory. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point the alternative directory. This could look like this:
 
-  ```
+  ```bash
   export VAGRANT_HOME=/media/jaustar/external-ssd/virtualmachines/vagrant/.vagrant.d/
   ```
 
   You might want to add this line to your `.bashrc` to make this change persistent.
+- [Vagrant Homepage](https://www.vagrantup.com/)
+- [Vagrant Introduction](https://www.vagrantup.com/intro)
+- [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
 
-## Docker
+## Containers Using Docker
 
 
 ## Optional extension
 
-- Use Vagrant to set up a box with Docker
-- Publish a Vagrant box to Vagrant cloud. Please link to it in the issue.
-    - Link the published repository in the issue
-    - Please add all files (`Vagrantfile` etc.) that you have used to set up this box.
-- Create own [Docker base image ](https://docs.docker.com/develop/develop-images/baseimages/)
 
 ## Resources
 
@@ -103,9 +117,25 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
 
 ## Optional tasks
 
-- Set up the SSH server on your Ubuntu VM and connect to the Guest from the Host.
--
+### VirtualBox
+
+- Set up the SSH server on your Ubuntu VM and connect to the Guest from the Host. Take a screenshot when connected to your Guest system and add it to the issue.
+- Install the Guest Additions
+
+### Vagrant
+
+- Use Vagrant to set up a box with Docker
+- Publish a Vagrant box to Vagrant cloud. Please link to it in the issue.
+    - Link the published repository in the issue
+    - Please add all files (`Vagrantfile` etc.) that you have used to set up this box.
+
+### Docker
+
+- Publish a [Docker base image](https://docs.docker.com/develop/develop-images/baseimages/) to DockerHub.
+  - Link the published DockerHub repository in the issue.
+  - Please add all files (`Dockerfile` etc.) that you have used to set up this container.
+
 
 ## Deadline
 
-Please finish your work before 18 November 2021 at 9:00.
+Please finish the mandatory parts of the work before 18 November 2021 at 9:00.

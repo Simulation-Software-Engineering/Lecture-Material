@@ -297,7 +297,8 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
     - Show layers of image (including commands)Vagrant
   - `docker system prune`
     - Remove all unused objects (images, containers...)
-- **Note**
+  - `docker logs ID/NAME`
+    - Shows log files of container
 - Explain text-based format (infrastructure as code)
 - One can pre-build own images to reuse them later.
 - Has a layer based build process (which is nice). We do not have to rebuild from scratch, if build fails.
@@ -305,7 +306,7 @@ Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 - Building an image can be pain in the neck as it depends on a fast internet connection.
 - Installation issue/security risks: Docker user group is basically root
   - Rootless installation of Docker
-  - Namespces
+  - Namespaces
   - Docker considers itself quite safe
 - We focus on tools to create, run and interact with containers
 
@@ -339,9 +340,11 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
   - Starts container and runs `/bin/bash`
   - `-i` means interactive
   - `-t` allocates pseudo-tty
+- Note that the container will still be there `docker container list -a` vs. `docker container list -a`
+- We can make sure that the container is removed after exiting by the `--rm` options, i.e., `docker run --rm -i -t ubuntu /bin/bash`
 
 - When container is running, we see it when calling `docker ps`
-- Start container (with name `tutoral`) `docker run -i -t --name tutorial ubuntu  /bin/bash`
+- Start container (with name `tutoral`) `docker run --rm -i -t --name tutorial ubuntu  /bin/bash`
 - Leave it `CTRL-P` + `CTRL-Q` (do not let go of `CTRL` while doing this)
 - Show container running `docker ps`
 - Reattach to container `docker container attach tutorial`
@@ -362,6 +365,7 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
   - Create detached container and bind mount
   - Will run cotnainer in detached mode, names it `test` and mounts current directory on Host to `/mnt/share`. Is based on `ubuntu` image.
   - Bind mount your source code for development for example
+  - I do not need `/bin/bash` because that is the default command for the `ubuntu` image.
 
 #### Restarting a stopped container with arbitrary command
 
@@ -369,7 +373,7 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - See also GitHub issues
   - [docker exec into a stopped container](https://github.com/moby/moby/issues/18078). There is also a workaround mentioned in this issue
 
-    ```
+    ```basg
     docker commit $STOPPED_CONTAINER user/test_image
     docker run -ti --entrypoint=sh user/test_image
     ```
@@ -411,6 +415,9 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - `docker cp file-to-copy CONTAINERNAME:/app`
 - `docker cp CONTAINERNAME:/app file-to-copy`
 - This will fix preserve user and group id
+
+### Demo: DuMuX Dockerfile
+
 - Show more complicated Dockerfile example (`dumux-precice`)?
   - `~/container-recipes/docker/dumux-precice/ub2004/dumux-3.4-precice-2.2.1`. Also in branch of [`dumux-precice` repository](https://git.iws.uni-stuttgart.de/dumux-appl/dumux-precice/-/blob/add-docker-images/docker/dumux-3.4-precice-2.2.1.dockerfile)+
   - Uses most/all commands on slides

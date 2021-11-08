@@ -4,6 +4,10 @@
 
 In this exercise we will work the virtualization and container techniques that we have seen in the lecture. We will set up virtual machines manually first and then automatize the process. Afterwards we will build out own containers.
 
+## Deadline
+
+Please finish the mandatory parts of the work before **18 November 2021 at 9:00**.
+
 ## Prerequisites
 
 - Installed and working VirtualBox, Vagrant and Docker.
@@ -13,9 +17,9 @@ In this exercise we will work the virtualization and container techniques that w
 ## Before You Start
 
 - Whenever `USERNAME` is mentioned in a code block or similar, you have to replace this by your GitLab username. For example, if a task states that you shoud use "[`USERNAME`] Ubuntu Server Installation", then you have to actually use "[`jaustar`] Ubuntu Server Installation" in case `jaustar` is the username.
-## Virtual Machines Using VirtualBox
+- We try to check Vagrant and Docker submissions automatically using CI tools to give a better feeling for normal development workflows. This is an experimental feature and might not work perfectly. If you find some mistake, please add an issue in the corresponding repository and assign it to `jaustar`.
 
-In part of the
+## Virtual Machines Using VirtualBox
 
 We will install "Ubuntu Server 20.04" a lightweight version of Ubuntu without graphical user interface. However, the ISO image has still 1.2 GB so you might want to start the [download of the image called "Ubuntu Server 20.04.3 LTS"](https://ubuntu.com/download/server) before continuing reading. If you see the name "Focal Fossa" some places, this is the codename of the 20.04 release of Ubuntu.
 
@@ -26,11 +30,11 @@ We will install "Ubuntu Server 20.04" a lightweight version of Ubuntu without gr
 - Mount the `ubuntu-20.04.3-live-server-amd64.iso` to your virtual machine's cdrom drive (Storage -> Controller: IDE), make sure the graphics card has at least 32 MB video memory and start the VM.
 - The VM will boot from the Ubuntu image and will welcome you with the a configuration program. Choose your preferred language and then choose "Start Ubuntu Server". This will boot Ubuntu and bring you to the installation routine. The boot process might take a short while since Ubuntu will generate some files and run some checks.
 - When the boot process has finished you will be presented with Ubuntu's installation program. Go through it carefully.
-  - Choose your preferred language and keyboard layout. Note that you cannot use your mouse in the menus.
+  - Choose your preferred language and keyboard layout. Note that you cannot use your mouse in the menus instead you have to use your keyboard.
   - For most settings you can accept the default values Ubuntu suggests (mirror, empty proxy, using entire disk with LVM group, storage configuration etc.)
   - Confirm formatting of the virtual hard drive ("Confirm destructive action") if asked so.
 - When setting up your user, please use your GitLab username, e.g. `jaustar`, as username and choose the username + VM, e.g. `jaustarvm`, as the server's name. The password you can choose freely. Note that the password cannot be empty. If you do not feel creative, use `vm` as password.
-- When you are asked about the SSH Setup, please activate the `Install OpenSSH Server` option (using spacebar), do not import any SSH identiy and continue.
+- When you are asked about the SSH Setup, you can decide whether you want to activate the `Install OpenSSH Server` option (using spacebar) or not. If you want to test out the SSH connection to the VM (optional task), you can activate it now, but also install the OpenSSH server later.
 - In the next window you skip all succested "Featured Server Snaps" to keep the size of the image minimal. It suggests common software used on the Ubuntu Server edition, such as Docker, for example. However, we do not need it here. Confirming your choice will start the installation procedure.
 - The installation procedure might take a while since it will also install security updates. You can already start reading on the subsequent sections.
 - After the installation has finished confirm the reboot with `Reboot Now`.
@@ -41,7 +45,7 @@ We will install "Ubuntu Server 20.04" a lightweight version of Ubuntu without gr
   - Clear the terminal using `clear` and run neofetch via by typing`neofetch` into the terminal and pressing `Enter`.
   - Take a screenshot via VirtualBox. At the top of the VirtualBox window you find the menu item `View`. There you find the option `Take Screenshot (Host+E)`. Save the Screenshot as `neofetch-screenshot-USERNAME.png` (replace `USERNAME` by your username).
 - Now we want to open an issue on the GitLab  Repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines) and upload the screenshot to document your success.
-  - Open an issue in the GitHub Repository TODO.
+  - Open the issue.
     - As title choose "[`USERNAME`] Ubuntu Server Installation"
     - Attach the screenshot ('Attach a file`). By default, the screenshot is saved in the folder of your VM.
     - Add the `VirtualBox` Label to the issue and assign the issue to the lecturers `jaustar` and `uekermbn` and create the issue.
@@ -64,10 +68,10 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
 
 ### Tasks (Vagrant)
 
-- Fork the repository TODO from GitLab and create a branch to work on the fork. It will contain a `README.md` and a file called `bootstrap.sh`.
+- Fork the repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines) from GitLab and create a branch to work on the fork. It will contain a `README.md` and a file called `bootstrap.sh`.
 - We want to start from scratch so initialize a new box using `vagrant init` in a suitable directory. Then adapt your `Vagrantfile` of the box.
   - Your virtual machine should be based on the [`ubuntu/focal64` image](https://www.vagrantup.com/docs/boxes#official-boxes).
-  - The name of your VM should be `USERNAME-ubuntu-server`. Replace `USERNAME` with your GitLab username, e.g., `jaustar-ubuntu-server`.
+  - The name of your VM should be `USERNAME-ubuntu-server`.
   - The [box version](https://www.vagrantup.com/docs/boxes/versioning) should be `0.1.0`.
   - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can leave the VM and stop it.
   - The VM must request [384 MB of memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration)..
@@ -110,7 +114,7 @@ Similar to the previous task we want to set up a Docker container for testing. I
 
 ### Tasks (Docker)
 
-- Fork the repository TODO from GitLab and create a branch to work on the fork. It will contain a `README.md` and a file called `Dockerfile`.
+- Fork the [TODO: "Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-containers) repository and create a branch to work on the fork. It will contain a `README.md` and a file called `Dockerfile`.
 - We start from scratch. Thus the [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) is empty. Edit it to contain the following features
   - Your virtual machine should be based on the [`ubuntu:20.04` image](https://hub.docker.com/_/ubuntu).
   - Create a new file with the name `testfile` and add it to the repository. The file should contain your GitLab username as text. Add the file to your container and place it in directory `/testfiles`.
@@ -118,6 +122,8 @@ Similar to the previous task we want to set up a Docker container for testing. I
   - Make sure that the default command to be executed when running the container is `/bin/bash`.
   - Install `neofetch`.
   - **Note:** In the `Dockerfile` you do not have to prefix commands with `sudo` since the script is executed with superuser rights.
+  - **Note:** If you rebuild your container often, you might end up with dangling containers. You can remove them (and unused images, containers,or objects) with [`docker [image|container|system] prune`)](https://docs.docker.com/engine/reference/commandline/system_prune/) depending on what you want to remove.
+- Test your Docker container locally. Are all variables set and files available?
 - Open a merge request in the GitHub Repository [TODO: "Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-containers).
   - As title choose "[`USERNAME`] Docker Container Recipe"
   - Make sure all files are up to date (`testfile`, `Dockerfile`)
@@ -142,8 +148,8 @@ Here are some ideas on how to extend your work. If you have more ideas, please e
 
 ### VirtualBox
 
-- Set up the SSH server on your Ubuntu VM and connect to the Guest from the Host. Take a screenshot when connected to your Guest system and add it to the issue.
-- Install the Guest Additions
+- Set up the SSH server on your Ubuntu VM and connect to the Guest from the Host. Take a screenshot when connected to your Guest system and add it to the issue with a short explanation what we see.
+- Install the Guest Additions and created a shared folder. Please also add a Screenshot of that in the issue with a short explanation what we see.
 
 ### Vagrant
 
@@ -161,7 +167,3 @@ Here are some ideas on how to extend your work. If you have more ideas, please e
 ### Singularity
 
 - Rebuild the Docker container as Singularity container. Create a new merge request for this in the GitLab repository [TODO: "Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-containers). Please choose the `Singularity` label when creating the merge request.
-
-## Deadline
-
-Please finish the mandatory parts of the work before **18 November 2021 at 9:00**.

@@ -10,6 +10,9 @@ In this exercise we will work the virtualization and container techniques that w
 - GitLab account.
 - Some available space on your hard drive or a USB drive (about 8 GB to be safe).
 
+## Before You Start
+
+- Whenever `USERNAME` is mentioned in a code block or similar, you have to replace this by your GitLab username. For example, if a task states that you shoud use "[`USERNAME`] Ubuntu Server Installation", then you have to actually use "[`jaustar`] Ubuntu Server Installation" in case `jaustar` is the username.
 ## Virtual Machines Using VirtualBox
 
 In part of the
@@ -37,7 +40,7 @@ We will install "Ubuntu Server 20.04" a lightweight version of Ubuntu without gr
   - Install `neofetch` via `sudo apt update && sudo apt install -y neofetch`. This command will download and install `neofetch`.
   - Clear the terminal using `clear` and run neofetch via by typing`neofetch` into the terminal and pressing `Enter`.
   - Take a screenshot via VirtualBox. At the top of the VirtualBox window you find the menu item `View`. There you find the option `Take Screenshot (Host+E)`. Save the Screenshot as `neofetch-screenshot-USERNAME.png` (replace `USERNAME` by your username).
-- Now we want to open an issue on the GitLab  Repository TODO and upload the screenshot to document your success.
+- Now we want to open an issue on the GitLab  Repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines) and upload the screenshot to document your success.
   - Open an issue in the GitHub Repository TODO.
     - As title choose "[`USERNAME`] Ubuntu Server Installation"
     - Attach the screenshot ('Attach a file`). By default, the screenshot is saved in the folder of your VM.
@@ -78,7 +81,7 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
       - **Note:** In the `bootstrap.sh` you do not have to prefix commands with `sudo` since the script is executed with superuser rights when Vagrant provisions the box.
 
       This script should be run by the [shell provisioner](https://www.vagrantup.com/docs/provisioning/shell).
-- Open a merge request in the GitHub Repository TODO.
+- Open a merge request in the GitHub Repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines).
   - As title choose "[`USERNAME`] Vagrant Box Provisioning"
   - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`)
     - Add the label `Vagrant` label to the issue and assign the issue to the lecturers `jaustar` and `uekermbn`.
@@ -115,7 +118,7 @@ Similar to the previous task we want to set up a Docker container for testing. I
   - Make sure that the default command to be executed when running the container is `/bin/bash`.
   - Install `neofetch`.
   - **Note:** In the `Dockerfile` you do not have to prefix commands with `sudo` since the script is executed with superuser rights.
-- Open a merge request in the GitHub Repository TODO.
+- Open a merge request in the GitHub Repository [TODO: "Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-containers).
   - As title choose "[`USERNAME`] Docker Container Recipe"
   - Make sure all files are up to date (`testfile`, `Dockerfile`)
     - Add the label `Docker` label to the issue and assign the issue to the lecturers `jaustar` and `uekermbn`.
@@ -157,7 +160,7 @@ Here are some ideas on how to extend your work. If you have more ideas, please e
 
 ### Singularity
 
-- Rebuild the Docker container as Singularity container. Create a new merge request for this in the GitLab repository TODO.
+- Rebuild the Docker container as Singularity container. Create a new merge request for this in the GitLab repository [TODO: "Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-containers). Please choose the `Singularity` label when creating the merge request.
 
 ## Deadline
 

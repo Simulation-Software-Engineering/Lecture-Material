@@ -135,7 +135,7 @@ Similar to the previous task we want to set up a Docker container for testing. I
 
 ## Optional Tasks
 
-Here are some ides on how to extend your work.
+Here are some ideas on how to extend your work. If you have more ideas, please explain them in your issue/pull request.
 
 ### VirtualBox
 
@@ -161,4 +161,4 @@ Here are some ides on how to extend your work.
 
 ## Deadline
 
-Please finish the mandatory parts of the work before 18 November 2021 at 9:00.
+Please finish the mandatory parts of the work before **18 November 2021 at 9:00**.

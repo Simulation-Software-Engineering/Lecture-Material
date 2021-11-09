@@ -2,7 +2,7 @@
 
 **This exercise sheet is work in progress**
 
-In this exercise we will work the virtualization and container techniques that we have seen in the lecture. We will set up virtual machines manually first and then automatize the process. Afterwards we will build out own containers.
+In this exercise we work the virtualization and container techniques that we have seen in the lecture. We set up virtual machines manually first and then automatize the process. Afterwards we build our own containers.
 
 ## Deadline
 

@@ -10,8 +10,8 @@ Please finish the the work before **18 November 2021 at 9:00**.
 
 ## Prerequisites
 
-- Installed and working VirtualBox, Vagrant and Docker.
-- GitLab account.
+- [Working installation of VirtualBox, Vagrant and Docker](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/material/homework_slides.md).
+- SIM GitLab account.
 - Some available space on your hard drive or a USB drive (about 8 GB to be safe).
 
 ## Before You Start

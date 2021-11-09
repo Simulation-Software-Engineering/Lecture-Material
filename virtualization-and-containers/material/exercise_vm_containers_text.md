@@ -141,13 +141,13 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
 ### Further Information (Vagrant)
 
 - You might want to add the option `--provision` to the `vagrant up` command if you want to rebuild a box (without destroying it first). In case the box is not being build/rebuild, please read the [documentation about provisioning](https://www.vagrantup.com/docs/provisioning) carefully.
-- By default, Vagrant will install all files in your home directory. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point the alternative directory. This could look like this:
+- By default, Vagrant will store some larger files like the base images/boxes all files in `${HOME}/vagrant.d`. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point the alternative directory. This could look like this:
 
   ```bash
   export VAGRANT_HOME=/media/jaustar/external-ssd/virtualmachines/vagrant/.vagrant.d/
   ```
 
-  You might want to add this line to your `.bashrc` to make this change persistent.
+  You might want to add this line to your `.bashrc` to make this change persistent. Note, that Vagrant will still create a hidden `.vagrant` directory in the your working directory. However, the `.vagrant` directory normally does not need much space on your hard drive.
 - [Vagrant Homepage](https://www.vagrantup.com/)
 - [Vagrant Introduction](https://www.vagrantup.com/intro)
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)

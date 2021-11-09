@@ -111,11 +111,11 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
 
 ### Tasks (Vagrant)
 
-- Fork the repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines) from GitLab (set visibility to private) and create a branch to work on the fork. The repository should contain a `README.md` and a file called `bootstrap.sh`.
+- Fork the repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines) from GitLab (set visibility to private) and create a branch to work on the fork. The repository initially contains a `README.md` and a file called `bootstrap.sh`.
 - We want to start from scratch so initialize a new box using `vagrant init` in inside this repository and add the resulting `Vagrantfile` to Git. Then adapt your `Vagrantfile` to incorporate the following settings:
   - Your virtual machine must be based on the [`ubuntu/focal64` image](https://app.vagrantup.com/ubuntu/boxes/focal64). See [official boxes of Vagrant](https://www.vagrantup.com/docs/boxes#official-boxes).
-  - The name of your VM must be `USERNAME-ubuntu-server`.
-  - The [box version](https://www.vagrantup.com/docs/boxes/versioning) must be `0.1.0`.
+  - The name of your VM should be `USERNAME-ubuntu-server`.
+  - The [box version](https://www.vagrantup.com/docs/boxes/versioning) of your box should be set `0.1.0`.
   - The VM must request [384 MB of main memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration).
   - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can leave the VM and stop it.
 - In the next step we want to provision your virtual machines. That means we want to install additional software, add extra files, and set some additional variables. We want to provision (`config.vm.provision`) the box in several steps.

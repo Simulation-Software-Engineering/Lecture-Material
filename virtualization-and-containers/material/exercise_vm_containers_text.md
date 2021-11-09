@@ -6,7 +6,7 @@ In this exercise we work the virtualization and container techniques that we hav
 
 ## Deadline
 
-Please finish the mandatory parts of the work before **18 November 2021 at 9:00**.
+Please finish the the work before **18 November 2021 at 9:00**.
 
 ## Prerequisites
 

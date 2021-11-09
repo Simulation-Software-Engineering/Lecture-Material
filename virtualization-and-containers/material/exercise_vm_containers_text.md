@@ -50,7 +50,7 @@ We will install "Ubuntu Server 20.04" a lightweight version of Ubuntu without gr
 - Now we want to open an issue on the GitLab  Repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines) and upload the screenshot to document your success.
   - Open the issue.
     - As title choose "[`USERNAME`] Ubuntu Server Installation"
-    - Attach the screenshot ('Attach a file`). By default, the screenshot is saved in the folder of your VM.
+    - Attach the screenshot ("Attach a file"). By default, the screenshot is saved in the folder of your VM.
     - If you did **not** assign 2048 MB of memory to the VM, please mention how much memory you assigned to it instead.
     - Add the `VirtualBox` label to the issue and assign the issue to the lecturers `jaustar` and `uekermbn`. Finally, create the issue.
     - Double-check that your issue looks as expected. You will find an example issue in the GitLab Repository.

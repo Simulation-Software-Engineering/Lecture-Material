@@ -100,7 +100,7 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
 
 ### Further Information (Vagrant)
 
-- You might want to add the option `--provision` to the `vagrant up` command if you want to rebuild a box. In case the box is not being build/rebuild, please read the [documentation about provisioning](https://www.vagrantup.com/docs/provisioning) carefully.
+- You might want to add the option `--provision` to the `vagrant up` command if you want to rebuild a box (without destroying it first). In case the box is not being build/rebuild, please read the [documentation about provisioning](https://www.vagrantup.com/docs/provisioning) carefully.
 - By default, Vagrant will install all files in your home directory. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point the alternative directory. This could look like this:
 
   ```bash

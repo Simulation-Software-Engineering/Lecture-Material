@@ -89,7 +89,7 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
 
     This script must be run by the [shell provisioner](https://www.vagrantup.com/docs/provisioning/shell).
   - Rebuild your Vagrant box using the provisioning steps. Make sure that the software is installed, all files are present and the environment variable is set.
-- After checking your Vagrant box carefully, please open a merge request in the GitHub Repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines).
+- After checking your Vagrant box carefully, please open a merge request in the GitHub Repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines):
   - As title choose "[`USERNAME`] Vagrant Box Provisioning"
   - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`)
   - Add the label `Vagrant` label to the issue and assign the issue to `jaustar`.

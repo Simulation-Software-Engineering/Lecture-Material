@@ -23,7 +23,7 @@ Please finish the mandatory parts of the work before **18 November 2021 at 9:00*
 
 ## Virtual Machines Using VirtualBox
 
-We will install "Ubuntu Server 20.04" a lightweight version of Ubuntu without graphical user interface. However, the ISO image has still 1.2 GB so you might want to start the [download of the image called "Ubuntu Server 20.04.3 LTS"](https://ubuntu.com/download/server) before continuing reading. If you see the name "Focal Fossa" some places, this is the codename of the 20.04 release of Ubuntu.
+We will install "Ubuntu Server 20.04", a lightweight version of Ubuntu without graphical user interface. However, the ISO image has still 1.2 GB so you might want to start the [download of the image called "Ubuntu Server 20.04.3 LTS"](https://ubuntu.com/download/server) before continuing reading. If you see the name "Focal Fossa" some places, this is the codename of the 20.04 release of Ubuntu.
 
 ### Tasks (VirtualBox)
 

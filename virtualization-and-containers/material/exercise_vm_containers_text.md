@@ -72,7 +72,7 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
 
 ### Tasks (Vagrant)
 
-- Fork the repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines) from GitLab and create a branch to work on the fork. It will contain a `README.md` and a file called `bootstrap.sh`.
+- Fork the repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines) from GitLab (set visibility to private) and create a branch to work on the fork. The repository should contain a `README.md` and a file called `bootstrap.sh`.
 - We want to start from scratch so initialize a new box using `vagrant init` in inside this repository and add the resulting `Vagrantfile` to Git. Then adapt your `Vagrantfile` to incorporate the following settings:
   - Your virtual machine must be based on the [`ubuntu/focal64` image](https://www.vagrantup.com/docs/boxes#official-boxes).
   - The name of your VM must be `USERNAME-ubuntu-server`.

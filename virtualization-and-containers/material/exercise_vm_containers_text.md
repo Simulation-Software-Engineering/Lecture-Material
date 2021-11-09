@@ -94,7 +94,7 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
   - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`)
   - Add the label `Vagrant` label to the issue and assign the issue to the lecturers `jaustar` and `uekermbn`.
   - Double-check that all files are in the repository and up to date. Check everything carefully since a CI pipeline will try to build your Vagrant recipe.
-  - If everything looks good, create the issue.
+  - If everything looks good, create the merge request.
 - Check whether the CI pipeline could verify your submission. This may take some time due to the number of concurrent submission being limited. If read the error message carefully and fix your submission by creating a new commit.
 
 

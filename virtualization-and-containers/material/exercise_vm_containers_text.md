@@ -94,6 +94,7 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
   - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`). Do not add the hidden folder `.vagrant` to Git.
   - Add the label `Vagrant` label to the issue and assign the issue to `jaustar`.
   - Double-check that all files are in the repository and up to date. Check everything carefully since a CI pipeline will try to build your Vagrant recipe.
+  - Double-check that the source (the new branch on your fork) and the target branch (`main` of original repo) of the merge request is correct.
   - If everything looks good, create the merge request.
 - Check whether the CI pipeline could verify your submission. This may take some time due to the number of concurrent submission being limited. If read the error message carefully and fix your submission by creating a new commit.
 

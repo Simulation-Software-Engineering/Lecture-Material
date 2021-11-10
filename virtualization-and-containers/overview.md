@@ -28,9 +28,9 @@
 | --- | --- |
 | 10 minutes | Slides |
 
-![A sketch of virtual machines](virtualmachine-sketch.png)
+![A sketch of virtual machines](./material/figs/virtualmachine-sketch.png)
 
-![A sketch of containers](container-sketch.png)
+![A sketch of containers](./material/figs/container-sketch.png)
 
 - What is virtualization and what is containerization?
   - What problems do they solve? Why do we need them?

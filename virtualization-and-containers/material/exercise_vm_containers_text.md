@@ -16,7 +16,7 @@ Please finish the the work before **18 November 2021 at 9:00**.
 
 ## Before You Start
 
-- Whenever `USERNAME` is mentioned in a code block or similar, you have to replace this by your GitLab username. For example, if a task states that you shoud use "[`USERNAME`] Ubuntu Server Installation", then you have to actually use "[`jaustar`] Ubuntu Server Installation" in case `jaustar` is the username.
+- **Important**: Whenever `USERNAME` is mentioned in a code block or similar, you have to replace this by your GitLab username. For example, if a task states that you shoud use "[`USERNAME`] Ubuntu Server Installation", then you have to actually use "[`jaustar`] Ubuntu Server Installation" in case `jaustar` is the username.
 - If you are using a MacBook with ARM CPU and Parallels instead of VirtualBox, please mention this in the issues and pull requests that you create during this exercise. Ideally, use the `Parallels` label on GitLab for that.
 - If you run into problems, check out the "Further Information" sections at the bottom of the tasks. These sections contain information about common pitfalls and link to the documentation of the used tools.
 
@@ -28,56 +28,56 @@ We will install "Ubuntu Server 20.04", a lightweight version of Ubuntu without g
 
 This exercise consists of the following main steps:
 
-0. Download the "Ubuntu Server 20.04" installation image in a virtual machine.
-1. Create a new virtual machine in VirtualBox with
-  - 6 GB virtual disk
-  - 2048 MB of memory
-  - 32 MB video memory
-2. Install Ubuntu on the virtual machine with
-  - user called `USERNAME`. e.g., `jaustar`.
-  - (host)name of the machine `USERNAMEvm`, e.g., `jaustarvm`.
-3. Install the software package `neofetch`.
-4. Run `neofetch` on the terminal and take a screenshot
-5. Upload the screenshot in a new issue on the SIM GitLab.
+1. Download the "Ubuntu Server 20.04" installation image in a virtual machine.
+2. Create a new virtual machine in VirtualBox with
+    - 6 GB virtual disk
+    - 2048 MB of memory
+    - 32 MB video memory
+3. Install Ubuntu on the virtual machine with
+    - user called `USERNAME`. e.g., `jaustar`.
+    - (host)name of the machine `USERNAMEvm`, e.g., `jaustarvm`.
+4. Install the software package `neofetch`.
+5. Run `neofetch` on the terminal and take a screenshot
+6. Upload the screenshot in a new issue on the SIM GitLab.
 
 In the following subsections you will find additional instructions and explanations. This should help you, especially if you do not have much experience with software installation and Linux.
 
-#### 1. Creating the Virtual Machine
+#### 1. Download the "Ubuntu Server 20.04"
+
+See instruction in the introduction to this section.
+
+#### 2. Creating the Virtual Machine
 
 While the "Ubuntu Server 20.04" installation image is downloading you can already prepare the virtual machine.
 
 - Create a new VM in VirtualBox called "Ubuntu Server".
-
-  - Assign 2048 MB of memory to it. If that is not possible on your machine, choose a larger or smaller amount of memory. Make sure the your virtual hard drive is large enough.
-
-  - A maximum size 6 GB for the virtual hard drive should be enough for this exercise. If you choose "dynamic allocation" the actual image size should not grow beyond 4 GB during this exercise. So it you are very limited on disk space you can also try a smaller disk size than 6 GB.
-
+    - Assign 2048 MB of memory to it. If that is not possible on your machine, choose a larger or smaller amount of memory. Make sure the your virtual hard drive is large enough.
+    - A maximum size 6 GB for the virtual hard drive should be enough for this exercise. If you choose "dynamic allocation" the actual image size should not grow beyond 4 GB during this exercise. So it you are very limited on disk space you can also try a smaller disk size than 6 GB.
 - After the creation the virtual machine shows up in the "VirtualBox Manager" open the settings of the VM and
-  - Inspect the settings of the virtual machine and setthe  video memory to 32 MB.
-
-  - When the Ubuntu installation image finished downloading, mount the `ubuntu-20.04.3-live-server-amd64.iso` to your virtual machine's cdrom drive (Storage -> Controller: IDE -> "Add optical drive").
+    - Inspect the settings of the virtual machine and set the video memory to 32 MB.
+    - When the Ubuntu installation image finished downloading, mount the `ubuntu-20.04.3-live-server-amd64.iso` to your virtual machine's cdrom drive (Storage -> Controller: IDE -> "Add optical drive").
 
 #### 2. Ubuntu installation process
 
 - Start the virtual machine.
-- The VM will boot from the Ubuntu image and will welcome you with the a configuration program. Choose your preferred language and then choose "Start Ubuntu Server". This will boot Ubuntu and bring you to the installation routine. The boot process might take a short while since Ubuntu will generate some files and run some checks.
+- The VM will boot from the Ubuntu image and will welcome you with the a configuration program. Choose your preferred language and then choose "Start Ubuntu Server". It brings you to the installation routine. The starting process might take a short while.
 - When the boot process has finished you will be presented with Ubuntu's installation program. Go through it carefully.
-  - Choose your preferred language and keyboard layout. Note that you cannot use your mouse in the menus instead you have to use your keyboard.
-  - For most settings you can accept the default values Ubuntu suggests (mirror, empty proxy, using entire disk with LVM group, storage configuration etc.)
-  - Confirm formatting of the virtual hard drive ("Confirm destructive action") if asked so.
-- When setting up your user, please use your GitLab username, e.g. `jaustar`, as username and choose the username + VM, e.g. `jaustarvm`, as the server's name. The password you can choose freely. Note that the password cannot be empty. If you do not feel creative, use `vm` as password.
+    - Choose your preferred language and keyboard layout. Note that you cannot use your mouse in the menus, instead you have to use your keyboard.
+    - For most settings you can accept the default values Ubuntu suggests (mirror, empty proxy, using entire disk with LVM group, storage configuration etc.)
+    - After verifying that Ubuntu wants to use the virtual hard drive, confirm formatting of the virtual hard drive ("Confirm destructive action") when asked so.
+- When setting up your user, please use your GitLab username, e.g. `jaustar`, as username and choose the username + VM, e.g. `jaustarvm`, as the server's name. The password you can choose freely, but it cannot be empty. If you do not feel creative, use `vm` as password.
 - When you are asked about the SSH Setup, you can decide whether you want to activate the `Install OpenSSH Server` option (using spacebar) or not. If you want to test out the SSH connection to the VM (optional task), you can activate it now. If you do not activate it here, you can install the OpenSSH server later as well.
 - In the next window, skip all suggested "Featured Server Snaps" to keep the size of the image minimal. It suggests common software used on the Ubuntu Server edition, such as Docker, for example. However, we do not need it here. Confirming your choice will start the installation procedure.
 - The installation procedure might take a while since it will also install security updates. You can already start reading on the subsequent sections.
 - After the installation has finished confirm the reboot with `Reboot Now`.
-  - Ubuntu should complain that it cannot unmount the cdrom drive. Check in the settings of your VM that VirtualBox has unmounted the `ubuntu-20.04.3-live-server-amd64.iso` image and confirm the reboot by pressing enter. If the image is still mounted, please shutdown the VM (Machine -> ACPI Shutdown), unmount the image manually and boot the VM again.
+    - Ubuntu should complain that it cannot unmount the cdrom drive. Check in the settings of your VM that VirtualBox has unmounted the `ubuntu-20.04.3-live-server-amd64.iso` image and confirm the reboot by pressing enter. If the image is still mounted, please shutdown the VM (Machine -> ACPI Shutdown), unmount the image manually and boot the VM again.
 
 #### 3. Installation of neofetch
 
 - After (re)booting you will be greeted by the Ubuntu login screen. If it looks like a mess press `CTRL-C` to clear the screen. You might have to wait for a moment and maybe switch in and out of the VM's window for it to be refreshed properly.
 - Login using your username and password.
 - We want to install [`neofetch`](https://github.com/dylanaraps/neofetch) which prints the system's information to the terminal and take a screenshot of this.
-  - Install `neofetch` via `sudo apt update && sudo apt install -y neofetch`. This command will download and install `neofetch` using the package manager [`apt`](https://wiki.debian.org/Apt).
+    - Install `neofetch` via `sudo apt update && sudo apt install -y neofetch`. This command will download and install `neofetch` using the package manager [`apt`](https://wiki.debian.org/Apt).
 
 Congratulations. You have successfully set up a virtual machine, installed Ubuntu and installed additional software. You are now done with this part of the exercise. If you do not want to play with the VM later nor do you want to do any of the optional assignments, you can poweroff and delete the VM.
 
@@ -86,15 +86,15 @@ Congratulations. You have successfully set up a virtual machine, installed Ubunt
 - Clear the terminal using `clear` and run neofetch via by typing `neofetch` into the terminal and pressing `Enter`. It will show information about the Ubuntu version, available memory etc.
 - Take a screenshot via VirtualBox. At the top of the VirtualBox window you find the menu item `View`. There you find the option `Take Screenshot (Host+E)`. Save the screenshot as `neofetch-screenshot-USERNAME.png`.
 
-#### 5. Upload the Screenshot to SIM GitLab.
+#### 5. Upload the Screenshot to SIM GitLab
 
 - Go to the SIM GitLab Repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines). You will find an example issue. Your issue should look similar in terms of title, labels etc.
 - Open the issue.
-  - As title choose "[`USERNAME`] Ubuntu Server Installation"
-  - Attach the screenshot ("Attach a file"). By default, the screenshot is saved in the folder of your VM.
-  - If you did **not** assign 2048 MB of memory to the VM, please mention how much memory you assigned to it instead.
-  - Add the `VirtualBox` label to the issue and assign the issue to `jaustar`. Finally, create the issue.
-  - Double-check that your issue looks as expected. You will find an example issue in the GitLab Repository.
+    - As title choose "[`USERNAME`] Ubuntu Server Installation"
+    - Attach the screenshot ("Attach a file"). By default, the screenshot is saved in the folder of your VM.
+    - If you did **not** assign 2048 MB of memory to the VM, please mention how much memory you assigned to it instead.
+    - Add the `VirtualBox` label to the issue and assign the issue to `jaustar`. Finally, create the issue.
+    - Double-check that your issue looks as expected. You will find an example issue in the GitLab Repository.
 
 ### Further Information (VirtualBox)
 
@@ -111,43 +111,69 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
 
 ### Tasks (Vagrant)
 
-- Fork the repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines) from GitLab (set visibility to private) and create a branch to work on the fork. The repository initially contains a `README.md` and a file called `bootstrap.sh`.
+1. Create a fork of the GitLab repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines)
+2. Initialization of the VM
+    - The name of this virtual machine will be `USERNAME-ubuntu-server`.
+    - The box version of your virtual machine is set to `0.1.0`.
+    - The virtual machine requests 384 MB memory.
+    - Create a shared/synced directory `/mnt/shared` inside the VM.
+    - Test the new VM.
+3. Extending the VMs configuration
+    - Create a file called `testfile` that contains `USERNAME`. This file should be copied into the home directory of the `vagrant` user during the provisioning process.
+    - Edit the `Vagrantfile` such that the `bootstrap.sh` script is run during provisioning. The script should
+        - Add a new environment variable `ENV_TEST_VARIABLE` with the value `USERNAME`.
+        - Install `neofetch`.
+4. Create a merge request containing your changes
+
+In the following subsections you will find additional instructions and explanations.
+
+#### 1. Create a Fork (Vagrant)
+
+See the instructions in the task list above. The repository initially contains a `README.md` and an empty file called `bootstrap.sh`.
+
+#### 2. Initialization of the VM
+
 - We want to start from scratch so initialize a new box using `vagrant init` in inside this repository and add the resulting `Vagrantfile` to Git. Then adapt your `Vagrantfile` to incorporate the following settings:
-  - Your virtual machine must be based on the [`ubuntu/focal64` image](https://app.vagrantup.com/ubuntu/boxes/focal64). See [official boxes of Vagrant](https://www.vagrantup.com/docs/boxes#official-boxes).
-  - The name of your VM should be `USERNAME-ubuntu-server`.
-  - The [box version](https://www.vagrantup.com/docs/boxes/versioning) of your box should be set `0.1.0`.
-  - The VM must request [384 MB of main memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration).
-  - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can leave the VM and stop it.
-- In the next step we want to provision your virtual machines. That means we want to install additional software, add extra files, and set some additional variables. We want to provision (`config.vm.provision`) the box in several steps.
-  - Create a new file with the name `testfile` and add it to the repository. The file must contain your GitLab username as text. Add the file to your box using the [file provisioner](https://www.vagrantup.com/docs/provisioning/file) and place it in the home directory of the `vagrant` user.
-  - We want an [additional shared folder](https://www.vagrantup.com/docs/synced-folders/basic_usage), besides `/vagrant`, in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted as `/mnt/shared/` in your container.
-  - Extend the file `bootstrap.sh` for provisioning your box. It should contain commands that you would usually use on the command line like in the VirtualBox task. The script must do the follwing:
+    - Your virtual machine must be based on the [`ubuntu/focal64` image](https://app.vagrantup.com/ubuntu/boxes/focal64). See [official boxes of Vagrant](https://www.vagrantup.com/docs/boxes#official-boxes).
+    - The name of your VM should be `USERNAME-ubuntu-server`.
+    - The [box version](https://www.vagrantup.com/docs/boxes/versioning) of your box should be set `0.1.0`.
+    - The VM must request [384 MB of main memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration).
+    - We want a [new shared folder](https://www.vagrantup.com/docs/synced-folders/basic_usage) in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted as `/mnt/shared/` in your container.
+    - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can leave the VM and stop it.
+
+#### 3. Extending the VMs Configuration
+
+We want to provision (`config.vm.provision`) the box in several steps:
+
+- Create a new file with the name `testfile` and add it to the repository. The file must contain your GitLab username as text. Add the file to your box using the [file provisioner](https://www.vagrantup.com/docs/provisioning/file) and place it in the home directory of the `vagrant` user.
+- Extend the file `bootstrap.sh` for provisioning your box. It should contain commands that you would usually use on the command line like in the VirtualBox task. The script must do the follwing:
     - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your GitLab username. You can achieve this by adding `export ENV_TEST_VARIABLE=USERNAME` to the `.bashrc` file which resides in the home directory of `vagrant` user.
-    - Install `neofetch`.
+    - Install `neofetch` as you did in the VirtualBox task.
     - **Note:** In the `bootstrap.sh` you do not have to prefix commands with `sudo` since the script is executed with superuser rights when Vagrant provisions the box.
 
-    This script must be run by the [shell provisioner](https://www.vagrantup.com/docs/provisioning/shell).
-  - Rebuild your Vagrant box using the provisioning steps. Make sure that the software is installed, all files are present and the environment variable is set.
-- After checking your Vagrant box carefully, please open a merge request in the GitHub Repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines):
-  - As title, choose "[`USERNAME`] Vagrant Box Provisioning".
-  - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`). Do not add the hidden folder `.vagrant` to Git.
-  - Add the label `Vagrant` label to the issue and assign the issue to `jaustar`.
-  - Double-check that all files are in the repository and up to date. Check everything carefully since a CI pipeline will try to build your Vagrant recipe.
-  - Double-check that the source (the new branch on your fork) and the target branch (`main` of original repo) of the merge request is correct.
-  - If everything looks good, create the merge request.
-- Check whether the CI pipeline could verify your submission. This may take some time due to the number of concurrent submission being limited. If read the error message carefully and fix your submission by creating a new commit.
+        The `booststrap.sh` script must be run by the [shell provisioner](https://www.vagrantup.com/docs/provisioning/shell).
+- Rebuild your Vagrant box using the provisioning steps. Make sure that the software is installed, all files are present and the environment variable is set.
 
+#### 4. Creating a Merge Request (Vagrant)
+
+- After checking your Vagrant box carefully, please open a merge request in the GitHub Repository [TODO: "Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-virtual-machines):
+    - As title, choose "[`USERNAME`] Vagrant Box Provisioning".
+    - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`). Do not add the hidden folder `.vagrant` to Git.
+    - Add the label `Vagrant` label to the issue and assign the issue to `jaustar`.
+    - Double-check that all files are in the repository and up to date.
+    - Double-check that the source (the new branch on your fork) and the target branch (`main` of original repo) of the merge request is correct.
+    - If everything looks good, create the merge request.
 
 ### Further Information (Vagrant)
 
 - You might want to add the option `--provision` to the `vagrant up` command if you want to rebuild a box (without destroying it first). In case the box is not being build/rebuild, please read the [documentation about provisioning](https://www.vagrantup.com/docs/provisioning) carefully.
 - By default, Vagrant will store some larger files like the base images/boxes all files in `${HOME}/vagrant.d`. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point the alternative directory. This could look like this:
 
-  ```bash
-  export VAGRANT_HOME=/media/jaustar/external-ssd/virtualmachines/vagrant/.vagrant.d/
-  ```
+    ```bash
+    export VAGRANT_HOME=/media/jaustar/external-ssd/virtualmachines/vagrant/.vagrant.d/
+    ```
 
-  You might want to add this line to your `.bashrc` to make this change persistent. Note, that Vagrant will still create a hidden `.vagrant` directory in the your working directory. However, the `.vagrant` directory normally does not need much space on your hard drive.
+    You might want to add this line to your `.bashrc` to make this change persistent. Note, that Vagrant will still create a hidden `.vagrant` directory in the your working directory. However, the `.vagrant` directory normally does not need much space on your hard drive.
 - [Vagrant Homepage](https://www.vagrantup.com/)
 - [Vagrant Introduction](https://www.vagrantup.com/intro)
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
@@ -158,24 +184,38 @@ Similar to the previous task we want to set up a Docker container for testing. I
 
 ### Tasks (Docker)
 
-- Fork the [TODO: "Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-containers) repository and create a branch to work on the fork. It will contain a `README.md` and a file called `Dockerfile`.
-- Currently, the [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) is empty. Edit it so an image with the following properties is build:
-  - Your virtual machine should be based on the [`ubuntu:20.04` image](https://hub.docker.com/_/ubuntu).
-  - Create a new file with the name `testfile` and add it to the repository. The file should contain your GitLab username as text. Add the file to your container and place it in directory `/testfiles`.
-  - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your GitLab username.
-  - Make sure that the default command to be executed when running the container is `/bin/bash`.
-  - Install `neofetch`.
-  - **Note:** In the `Dockerfile` you do not have to prefix commands such as `apt` with `sudo` since the script is executed with superuser rights.
-- Test your Docker container locally. Are all variables set and files available?
-  - **Note:** If you rebuild your container often, you might end up with dangling containers. You can remove them (and unused images, containers,or objects) with [`docker [image|container|system] prune`)](https://docs.docker.com/engine/reference/commandline/system_prune/) depending on what you want to remove.
-- Open a merge request in the GitHub Repository [TODO: "Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-containers).
-  - As title choose "[`USERNAME`] Docker Container Recipe"
-  - Make sure all files are up to date (`testfile`, `Dockerfile`)
-  - Add the label `Docker` label to the issue and assign the issue to the lecturers `jaustar` and `uekermbn`.
-  - Double-check that all files are in the repository and up to date. Check everything carefully since a CI pipeline will try to build your Docker recipe.
-  - If everything looks good, create the issue.
-- Check whether the CI pipeline could verify your submission. This may take some time due to the number of concurrent submission being limited. If read the error message carefully and fix your submission by creating a new commit.
+1. Create a fork of the GitLab repository [TODO: "Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-containers)
+2. Setting up the `Dockerfile`
+    - The name of this virtual machine will be `USERNAME-ubuntu-server`.
+    - The box version of your virtual machine is set to `0.1.0`.
+    - The virtual machine requests 384 MB memory.
+    - Create a shared/synced directory `/mnt/shared` inside the VM.
+    - Test the new VM.
+3. Create a merge request containing your changes
 
+#### 1. Create a Fork (Docker)
+
+See the instructions in the task list above. The repository initially contains a `README.md` and an empty file called `Dockerfile`.
+
+#### 2. Setting up the `Dockerfile`
+
+- Currently, the [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) is empty. Edit it so an image with the following properties is build:
+    - Your virtual machine should be based on the [`ubuntu:20.04` image](https://hub.docker.com/_/ubuntu).
+    - Create a new file with the name `testfile` and add it to the repository. The file should contain your GitLab username as text. Add the file to your container and place it in directory `/testfiles`.
+    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your GitLab username.
+    - Make sure that the default command to be executed when running the container is `/bin/bash`.
+    - Install `neofetch`.
+    - **Note:** In the `Dockerfile` you do not have to prefix commands such as `apt` with `sudo` since the script is executed with superuser rights.
+- Test your Docker container locally. Are all variables set and files available?
+    - **Note:** If you rebuild your container often, you might end up with dangling containers. You can remove them (and unused images, containers,or objects) with [`docker [image|container|system] prune`)](https://docs.docker.com/engine/reference/commandline/system_prune/) depending on what you want to remove.
+#### 3. Creating a Merge Request (Docker)
+
+- Open a merge request in the GitHub Repository [TODO: "Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/exercise-containers).
+    - As title choose "[`USERNAME`] Docker Container Recipe"
+    - Make sure all files are up to date (`testfile`, `Dockerfile`)
+    - Add the label `Docker` label to the issue and assign the issue to the lecturers `jaustar` and `uekermbn`.
+    - Double-check that all files are in the repository and up to date.
+    - If everything looks good, create the issue.
 
 ### Further Information (Docker)
 
@@ -201,14 +241,14 @@ Extensions to the VirtualBox task should be added to the existing VirtualBox iss
 
 - Use Vagrant to set up a box with Docker.
 - Publish a Vagrant box to Vagrant cloud. Please link to it in the issue.
-  - Link the published repository in the issue
-  - Please add all files (`Vagrantfile` etc.) that you have used to set up this box.
+    - Link the published repository in the issue
+    - Please add all files (`Vagrantfile` etc.) that you have used to set up this box.
 
 ### Docker
 
 - Publish a [Docker base image](https://docs.docker.com/develop/develop-images/baseimages/) to DockerHub.
-  - Link the published DockerHub repository in the issue.
-  - Please add all files (`Dockerfile` etc.) that you have used to set up this container.
+    - Link the published DockerHub repository in the issue.
+    - Please add all files (`Dockerfile` etc.) that you have used to set up this container.
 
 ### Singularity
 

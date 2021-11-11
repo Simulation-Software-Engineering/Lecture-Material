@@ -4,6 +4,12 @@
 [![PDFs](https://github.com/Simulation-Software-Engineering/lecture-materials/actions/workflows/create-pdfs-from-markdown.yml/badge.svg)](https://github.com/Simulation-Software-Engineering/Lecture-Material/actions/workflows/create-pdfs-from-markdown.yml)
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
+Material of the Simulation Software Engineering lecture. There are different way how to get an overview:
+
+* Look at `timetable.md`,
+* Look at the `overview.md` files of each chapter / folder,
+* Browse the content through the [course website](https://simulation-software-engineering.github.io/homepage/).
+
 ## Linting
 
 The markdown files can be checked using [markdownlint](https://github.com/markdownlint/markdownlint/). Once the linter is installed one can run it locally from the root of this repository using

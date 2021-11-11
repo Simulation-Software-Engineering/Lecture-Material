@@ -35,7 +35,7 @@ This exercise consists of the following main steps:
     - user called `USERNAME`, e.g., `jaustar`.
     - (host)name of the machine `USERNAMEvm`, e.g., `jaustarvm`.
 4. Install the software package `neofetch`.
-5. Run `neofetch` on the terminal and take a screenshot
+5. Run `neofetch` in the terminal and take a screenshot
 6. Upload the screenshot in a new issue on the SIM GitLab.
 
 In the following subsections you will find additional instructions and explanations. This should help you, especially if you do not have much experience with software installation and Linux.
@@ -77,7 +77,7 @@ While the "Ubuntu Server 20.04" installation image is downloading you can alread
 - We want to install [`neofetch`](https://github.com/dylanaraps/neofetch) which prints the system's information to the terminal and take a screenshot of this.
     - Install `neofetch` via `sudo apt update && sudo apt install -y neofetch`. This command will download and install `neofetch` using the package manager [`apt`](https://wiki.debian.org/Apt).
 
-#### 4. Running neofetch and Taking a Screenshot
+#### 4. Running neofetch and Taking a Screenshot (VirtualBox)
 
 - Clear the terminal using `clear` and run neofetch via by typing `neofetch` into the terminal and pressing `Enter`. It will show information about the Ubuntu version, available memory etc.
 - Take a screenshot via VirtualBox. At the top of the VirtualBox window you find the menu item `View`. There you find the option `Take Screenshot (Host+E)`. Save the screenshot as `neofetch-screenshot-USERNAME.png`.
@@ -115,7 +115,7 @@ This exercise consists of the following main steps:
 2. Initialization of the VM
     - Name this virtual machine `USERNAME-ubuntu-server`.
     - Set the box version of your virtual machine `0.1.0`.
-    - Make sure that the virtual machine requests 2048 MB memory.
+    - Make sure that the virtual machine requests 1024 MB memory.
     - Create a shared/synced directory `/mnt/shared` inside the VM.
     - Test the new VM.
 3. Extending the VMs configuration
@@ -123,7 +123,8 @@ This exercise consists of the following main steps:
     - Edit the `Vagrantfile` such that the `bootstrap.sh` script is run during provisioning. The script should
         - Add a new environment variable `ENV_TEST_VARIABLE` with the value `USERNAME`.
         - Install `neofetch`.
-4. Create a merge request containing your changes
+4. Run `neofetch` in the terminal and take a screenshot
+5. Create a merge request containing your changes
 
 In the following subsections you will find additional instructions and explanations.
 
@@ -137,7 +138,7 @@ See the instructions in the task list above. The repository initially contains a
     - Your virtual machine must be based on the [`ubuntu/focal64` image](https://app.vagrantup.com/ubuntu/boxes/focal64). See [official boxes of Vagrant](https://www.vagrantup.com/docs/boxes#official-boxes).
     - The name of your VM should be `USERNAME-ubuntu-server`.
     - The [box version](https://www.vagrantup.com/docs/boxes/versioning) of your box should be set `0.1.0`.
-    - The VM must request [2048 MB of main memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration).
+    - The VM must request [1024 MB of main memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration).
     - We want a [new shared folder](https://www.vagrantup.com/docs/synced-folders/basic_usage) in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted as `/mnt/shared/` in your container.
     - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can leave the VM. You do **not** have to stop/destroy the VM for the next step.
 
@@ -154,11 +155,18 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
         The `booststrap.sh` script must be run by the [shell provisioner](https://www.vagrantup.com/docs/provisioning/shell).
 - Rebuild your Vagrant box using the provisioning steps. Make sure that the software is installed, all files are present and the environment variable is set.
 
-#### 4. Creating a Merge Request (Vagrant)
+#### 4. Running neofetch and Taking a Screenshot (Vagrant)
+
+- Got into your running VM.
+- Clear the terminal using `clear` and run neofetch via by typing `neofetch` into the terminal and pressing `Enter`. It will show information about the Ubuntu version, available memory etc.
+- Take a screenshot and save it as `neofetch-screenshot-vagrant-USERNAME.png`.
+
+#### 5. Creating a Merge Request (Vagrant)
 
 - After checking your Vagrant box carefully, please open a merge request in the GitHub Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-virtual-machines):
     - As title, choose "[`USERNAME`] Vagrant Box Provisioning".
     - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`). Do not add the hidden folder `.vagrant` to Git.
+    - Attach the screenshot ("Attach a file") that you made in the previous step.
     - Add the label `Vagrant` label to the issue and assign the issue to `jaustar`.
     - Double-check that all files are in the repository and up to date.
     - Double-check that the source (the new branch on your fork) and the target branch (`main` of original repo) of the merge request is correct.
@@ -194,7 +202,8 @@ This exercise consists of the following main steps:
     - Define a default run command for the container.
     - Install `neofetch` inside the container
     - Test the new container
-3. Create a merge request containing your changes.
+3. Run `neofetch` in the terminal and take a screenshot
+4. Create a merge request containing your changes.
 
 #### 1. Create a Fork (Docker)
 
@@ -212,11 +221,18 @@ See the instructions in the task list above. The repository initially contains a
 - Test your Docker container locally. Are all variables set and files available?
     - **Note:** If you rebuild your container often, you might end up with dangling containers. You can remove them (and unused images, containers, or objects) with [`docker [image|container|system] prune`)](https://docs.docker.com/engine/reference/commandline/system_prune/) depending on what you want to remove.
 
-#### 3. Creating a Merge Request (Docker)
+#### 3. Running neofetch and Taking a Screenshot (Docker)
+
+- Got into your running container.
+- Clear the terminal using `clear` and run neofetch via by typing `neofetch` into the terminal and pressing `Enter`. It will show information about the Ubuntu version, available memory etc.
+- Take a screenshot and save it as `neofetch-screenshot-docker-USERNAME.png`.
+
+#### 4. Creating a Merge Request (Docker)
 
 - Open a merge request in the GitHub Repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-containers).
-    - As title choose "[`USERNAME`] Docker Container Recipe"
-    - Make sure all files are up to date (`testfile`, `Dockerfile`)
+    - As title choose "[`USERNAME`] Docker Container Recipe".
+    - Make sure all files are up to date (`testfile`, `Dockerfile`).
+    - Attach the screenshot ("Attach a file") that you made in the previous step.
     - Add the label `Docker` label to the issue and assign the issue to `jaustar`.
     - Double-check that all files are in the repository and up to date.
     - If everything looks good, create the issue.

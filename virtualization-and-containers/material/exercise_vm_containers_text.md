@@ -217,7 +217,7 @@ See the instructions in the task list above. The repository initially contains a
 
 - Currently, the [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) is empty. Edit the file such that an container image with the following properties is build:
     - Your virtual machine should be based on the [`ubuntu:20.04` image](https://hub.docker.com/_/ubuntu).
-    - Create a new file with the name `testfile` and add it to the repository. The file should contain your GitLab username as text. Add the file to your container and place it in directory `/testfiles`.
+    - Create a new file with the name `testfile` and add it to the repository. The file should contain your GitLab `USERNAME` as text. Add the file to your container and place it in directory `/testfiles`.
     - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your GitLab username.
     - Make sure that the default command to be executed when running the container is `/bin/bash`.
     - Install `neofetch`.

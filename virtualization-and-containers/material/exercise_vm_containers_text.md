@@ -114,7 +114,6 @@ This exercise consists of the following main steps:
 1. Create a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-virtual-machines)
 2. Initialization of the VM
     - Name this virtual machine `USERNAME-ubuntu-server`.
-    - Set the box version of your virtual machine `0.1.0`.
     - Make sure that the virtual machine requests 1024 MB memory.
     - Create a shared/synced directory `/mnt/shared` inside the VM.
     - Test the new VM.

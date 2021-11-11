@@ -31,20 +31,6 @@ slideOptions:
 
 ---
 
-## Notable Properties / Differences Compared to Docker
-
-- Only needs root when creating images
-- User rights for running container
-- Automatically mounts common directories
-  - `${HOME}`, `${PWD}`, network etc.
-- Allows to run "untrusted user to run untrusted containers"
-  - Important for shared facilities (computing centers etc.)
-- (Normally) Immutable containers
-  - Set up environment and immutable data in container
-- Support for typical HPC environments (schedulers, MPI, GPU...)
-
----
-
 ## Introduction
 
 - Initiated at Lawrence Berkeley National Laboratory
@@ -72,6 +58,20 @@ slideOptions:
   - Same user inside and outside container
 - "Mobility of Compute"
   - Single file container for easy transport and sharing
+
+---
+
+## Notable Properties / Differences Compared to Docker
+
+- Only needs root when creating images
+- User rights for running container
+- Automatically mounts [common directories](https://sylabs.io/guides/latest/user-guide/bind_paths_and_mounts.html#system-defined-bind-paths)
+  - `${HOME}`, `${PWD}`, network etc.
+- Allows to run "untrusted user to run untrusted containers"
+  - Important for shared facilities (computing centers etc.)
+- (Normally) Immutable containers
+  - Set up environment and immutable data in container
+- Support for typical HPC environments (schedulers, MPI, GPU...)
 
 ---
 

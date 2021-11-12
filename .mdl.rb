@@ -26,7 +26,8 @@ exclude_rule 'MD040'
 
 # Enforce dashes as symvol in lists
 rule 'MD004', :style => :dash
-#
+# Enforce indent with four space characters. This helps with
+# mixing ordered and unordered lists
 rule 'MD007', :indent => 4
 # Extend line length for text.
 # This will complain for overly wide tables and code blocks.

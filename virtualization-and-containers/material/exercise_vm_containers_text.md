@@ -120,8 +120,8 @@ This exercise consists of the following main steps:
 3. Extending the VMs configuration
   - Create a file called `testfile` that contains `USERNAME`. This file should be copied into the home directory of the `vagrant` user during the provisioning process.
   - Edit the `Vagrantfile` such that the `bootstrap.sh` script is run during provisioning. The script should
-    + Add a new environment variable `ENV_TEST_VARIABLE` with the value `USERNAME`.
-    + Install `neofetch`.
+    - Add a new environment variable `ENV_TEST_VARIABLE` with the value `USERNAME`.
+    - Install `neofetch`.
 4. Run `neofetch` in the terminal and take a screenshot
 5. Create a merge request containing your changes
 

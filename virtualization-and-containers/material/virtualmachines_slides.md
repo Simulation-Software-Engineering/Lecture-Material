@@ -9,7 +9,7 @@ slideOptions:
 
 <style>
   .reveal strong {
-  font-weight: bold;
+    font-weight: bold;
     color: orange;
   }
   .reveal p {
@@ -39,23 +39,23 @@ slideOptions:
 ## Common Terms
 
 - Host operating system (host OS)
-  - The OS the hypervisor is installed on
+    - The OS the hypervisor is installed on
 - Guest operating system (guest OS)
-  - The OS running inside the virtual machine
+    - The OS running inside the virtual machine
 - Virtual machine (VM)
-  - Environment the guest is running in
+    - Environment the guest is running in
 
 ---
 
 ## Types of Virtual Machines / Hypervisors
 
 - Sometimes distinction not clear, but in general:
-  - **Type 1**
-    - Runs directly on bare-metal hardware
-    - Examples: [Microsoft Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [VMware ESXi](https://www.vmware.com/products/esxi-and-esx.html), [Proxmox Virtual Environment](https://www.proxmox.com/en/proxmox-ve), [Xen](https://xenproject.org/)...
-  - **Type 2**
-    - Requires a running OS
-    - Examples: [VirtualBox](https://www.virtualbox.org/), [VMWare Workstation Player](https://www.vmware.com/products/workstation-player.html), [Parallels (for Mac)](https://www.parallels.com/eu/products/desktop/)...
+    - **Type 1**
+        - Runs directly on bare-metal hardware
+        - Examples: [Microsoft Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [VMware ESXi](https://www.vmware.com/products/esxi-and-esx.html), [Proxmox Virtual Environment](https://www.proxmox.com/en/proxmox-ve), [Xen](https://xenproject.org/)...
+    - **Type 2**
+        - Requires a running OS
+        - Examples: [VirtualBox](https://www.virtualbox.org/), [VMWare Workstation Player](https://www.vmware.com/products/workstation-player.html), [Parallels (for Mac)](https://www.parallels.com/eu/products/desktop/)...
 
 ---
 
@@ -65,22 +65,22 @@ slideOptions:
 - Behaves (more or less) as native installation (root etc., system calls)
 - (Strict) isolation from host operating system
 - Popular for
-  - Safety critical tasks
-  - Development and testing
-  - Wherever one wants a portable solution
+    - Safety critical tasks
+    - Development and testing
+    - Wherever one wants a portable solution
 
 ---
 
 ## Why is Virtualization Useful?
 
 - Running multiple operating systems simultaneously
-  - Test/develop software for other OS, debug problems on other OS, Windows on Linux, fill in forms of university (MS Office)
+    - Test/develop software for other OS, debug problems on other OS, Windows on Linux, fill in forms of university (MS Office)
 - Easier software installations and testing
-  - Preconfigured VMs trainings and teaching
+    - Preconfigured VMs trainings and teaching
 - Testing and disaster recovery
-  - Create snapshots before testing, copy VMs etc.
+    - Create snapshots before testing, copy VMs etc.
 - Infrastructure consolidation
-  - Run many VMs on single host
+    - Run many VMs on single host
 - Seperate services from each other (security?!)
 - Reproducible software environment for running and developing software
 
@@ -93,7 +93,7 @@ slideOptions:
 - Virtual machine / Hypervisor might increase attack surface
 - Additional layer of complexity
 - Read the manual
-  - Examples: GPU acceleration, networking, USB passthrough...
+    - Examples: GPU acceleration, networking, USB passthrough...
 - Think about **what** you do and **before** you do it
 
 ---

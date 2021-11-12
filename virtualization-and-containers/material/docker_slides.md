@@ -10,16 +10,16 @@ slideOptions:
 <style>
   .reveal strong {
   font-weight: bold;
-    color: orange;
+      color: orange;
   }
   .reveal p {
-    text-align: left;
+      text-align: left;
   }
   .reveal section h1 {
-    color: orange;
+      color: orange;
   }
   .reveal section h2 {
-    color: orange;
+      color: orange;
   }
 </style>
 
@@ -34,14 +34,14 @@ slideOptions:
 ## What is Docker? 1/2
 
 - Docker Inc.
-  - Company promoting Docker
+    - Company promoting Docker
 - Docker Desktop
 
-  > Developer productivity tools and a local Kubernetes environment.
+    > Developer productivity tools and a local Kubernetes environment.
 
 - Docker Engine
 
-  > Docker Engine is an open source containerization technology for building and containerizing your applications.
+    > Docker Engine is an open source containerization technology for building and containerizing your applications.
 
 ---
 
@@ -49,15 +49,15 @@ slideOptions:
 
 - Docker Hub
 
-  > Cloud-based application registry and development team collaboration services.
+    > Cloud-based application registry and development team collaboration services.
 
 - Docker Compose
 
-  > Compose is a tool for defining and running multi-container Docker applications.
+    > Compose is a tool for defining and running multi-container Docker applications.
 
 - According to documentation
 
-  > Docker is an open platform for developing, shipping, and running applications.
+    > Docker is an open platform for developing, shipping, and running applications.
 
 - We use definition from documentation.
 
@@ -67,12 +67,12 @@ slideOptions:
 
 - 2010: Docker Inc. founded
 - 2013: First Docker release
-  - Then based on [LXC](https://linuxcontainers.org/)
-  - Released as open source
+    - Then based on [LXC](https://linuxcontainers.org/)
+    - Released as open source
 - 2014: Replaced LXC by own execution environment
 - 2017: [Moby project](https://mobyproject.org/) for open source
 
-  > Moby is an open framework created by Docker to assemble specialized container systems without reinventing the wheel.
+    > Moby is an open framework created by Docker to assemble specialized container systems without reinventing the wheel.
 
 - Nowadays one of the most popular container frameworks/services
 
@@ -91,24 +91,24 @@ slideOptions:
 ## Building Blocks 1/2
 
 - Docker daemon `dockerd`
-  - Controlling instance of containers and reacts to API requests
-  - Server process
+    - Controlling instance of containers and reacts to API requests
+    - Server process
 - Docker client
-  - User interface/tools to interact with, create, manage containers etc. via daemon
-  - That means no direct interaction with containers, images etc.
+    - User interface/tools to interact with, create, manage containers etc. via daemon
+    - That means no direct interaction with containers, images etc.
 - Docker registries
-  - Registries that manage Docker images to be used
+    - Registries that manage Docker images to be used
 
 ---
 
 ## Building Blocks 2/2
 
 - Docker objects
-  - **Images**
-    - Read-only template for creating a container
-    - An image can be based on another image
-  - **Containers**
-    - Runnable instance of an image
+    - **Images**
+        - Read-only template for creating a container
+        - An image can be based on another image
+    - **Containers**
+        - Runnable instance of an image
 
 ---
 
@@ -122,10 +122,10 @@ slideOptions:
 
 ## Connection to Host
 
-- Container communicates via daemon `dockerd` (runs as   root)
+- Container communicates via daemon `dockerd` (runs as     root)
 - Strong isolation (`namespaces` and `cgroups`)
-  - You cannot access Host filesystem by default
-  - Several [mount options](https://docs.docker.com/storage) available
+    - You cannot access Host filesystem by default
+    - Several [mount options](https://docs.docker.com/storage) available
 
 ---
 
@@ -133,14 +133,14 @@ slideOptions:
 
 - Root rights for installation
 - `dockerd` runs as root -> Interaction needs root rights
-  - Prefix commands with `sudo`
-  - Be member of group `docker` (=makes you root), expected by some applications (e.g. `act`)
-  - [Attack surface?!](https://docs.docker.com/engine/security/#docker-daemon-attack-surface)
-    - [Isolate user namespace](https://docs.docker.com/engine/security/userns-remap/)
-    - Use trustworthy containers
+    - Prefix commands with `sudo`
+    - Be member of group `docker` (=makes you root), expected by some applications (e.g. `act`)
+    - [Attack surface?!](https://docs.docker.com/engine/security/#docker-daemon-attack-surface)
+        - [Isolate user namespace](https://docs.docker.com/engine/security/userns-remap/)
+        - Use trustworthy containers
 - Alternatives:
-  - [Rootless mode](https://docs.docker.com/engine/security/rootless/)
-  - Run Docker in a VM
+    - [Rootless mode](https://docs.docker.com/engine/security/rootless/)
+    - Run Docker in a VM
 - Check [security notes](https://docs.docker.com/engine/security/)
 
 ---
@@ -148,33 +148,33 @@ slideOptions:
 ## Useful Commands 1/2
 
 - `docker run OPTIONS`
-  - Run a container
+    - Run a container
 - `docker image ls`
-  - List locally available images
+    - List locally available images
 - `docker pull NAME:TAG`
-  - Pulls an image from registry, `TAG` optional
+    - Pulls an image from registry, `TAG` optional
 - `docker container create IMAGE`
-  - Create container from image
+    - Create container from image
 - `docker container ls`
-  - List running containers
-  - Add `-a` to see all containers
+    - List running containers
+    - Add `-a` to see all containers
 
 ---
 
 ## Useful Commands 2/2
 
 - `docker container start/stop NAME`
-  - Start/stop container
+    - Start/stop container
 - `docker container attach NAME`
-  - Attach to running container
+    - Attach to running container
 - `docker build`
-  - Creates an image from a given Dockerfile
+    - Creates an image from a given Dockerfile
 - `docker cp`
-  - Copy files in/out of container
+    - Copy files in/out of container
 - `docker image history IMAGE`
-  - Show layers of image (including commands)
+    - Show layers of image (including commands)
 - `docker system prune`
-  - Remove all unused objects (images, containers...)
+    - Remove all unused objects (images, containers...)
 - Many commands have similar/same outcome
 
 ---
@@ -188,13 +188,13 @@ Details available in [`overview.md`](https://github.com/Simulation-Software-Engi
 ## Defining and Building own Images 1/2
 
 - Define container in `Dockerfile`
-  - Git-friendly text file
+    - Git-friendly text file
 - Start from base image
-  - Find images on repository such as [DockerHub](https://hub.docker.com/)
+    - Find images on repository such as [DockerHub](https://hub.docker.com/)
 - Extend image by additional layers
-  - Layers are added separately -> Keep number of layers low
-  - Layers are cached
-  - Changed layer requires downstream layers to be recreated
+    - Layers are added separately -> Keep number of layers low
+    - Layers are cached
+    - Changed layer requires downstream layers to be recreated
 - Container (layers) have commit hashes
 
 ---
@@ -235,10 +235,10 @@ Details available in [`overview.md`](https://github.com/Simulation-Software-Engi
 
 - Publication on registry (e.g. [DockerHub](https://hub.docker.com/))
 - `docker build -t ACCOUNT/REPOSITORY[:TAG] .`
-  - Creates image
+    - Creates image
 - `docker push ACCOUNT/REPOSITORY[:TAG]`
-  - Push image to registry (default DockerHub)
-  - Needs account and must be logged in via `docker login`
+    - Push image to registry (default DockerHub)
+    - Needs account and must be logged in via `docker login`
 
 ---
 
@@ -252,9 +252,9 @@ Details available in [`overview.md`](https://github.com/Simulation-Software-Engi
 
 - User ID mapping
 - [Multistage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
-  - Build image by combining layers created from different base images
+    - Build image by combining layers created from different base images
 - [Different mount typs](https://docs.docker.com/storage)
-  - Volumes, bind mount, tmpfs mount
+    - Volumes, bind mount, tmpfs mount
 - [Persisting data](https://docs.docker.com/get-started/05_persisting_data/)
 - [Multi-container apps](https://docs.docker.com/get-started/07_multi_container/)
 - And many more. Check out the [Docker documentation](https://docs.docker.com)

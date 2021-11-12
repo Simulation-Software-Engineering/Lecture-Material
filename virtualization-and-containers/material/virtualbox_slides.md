@@ -10,7 +10,7 @@ slideOptions:
 
 <style>
   .reveal strong {
-  font-weight: bold;
+    font-weight: bold;
     color: orange;
   }
   .reveal p {
@@ -45,10 +45,10 @@ slideOptions:
 
 - Reasonably new operating system (Windows, Mac OS, Linux, Oracle Solaris)
 - Reasonably new hardware (SSE2 and virtualization support)
-  - VT-x, VT-d, AMD-V, ...
-  - Check virtualization settings in BIOS/UEFI if it does not work out of the box
+    - VT-x, VT-d, AMD-V, ...
+    - Check virtualization settings in BIOS/UEFI if it does not work out of the box
 - Sufficient space on hard drive
-  - VM uses a virtual hard drive, i.e., a file on your drive
+    - VM uses a virtual hard drive, i.e., a file on your drive
 - Some video memory (recommend >=64MB)
 - Exact requirements depend on VM
 
@@ -57,10 +57,10 @@ slideOptions:
 ## Virtual Hard Drive Formats
 
 - Main formats
-  - **VDI**: "Virtual Disk Image", VirtualBox' native format
-  - **VHD**: Format used by Microsoft
-  - **VMDK**: VMWare's virtual disk format
-  - Support dynamic allocation
+    - **VDI**: "Virtual Disk Image", VirtualBox' native format
+    - **VHD**: Format used by Microsoft
+    - **VMDK**: VMWare's virtual disk format
+    - Support dynamic allocation
 - Further (partially) supported formats: HDD (Parallels format), QCOW, QED
 
 **Note**: If you use btrfs as filesystem, you should disable CoW for the VM's images. (I/O load)
@@ -80,22 +80,22 @@ slideOptions:
 ## Guest Additions
 
 - Software and drivers to improves Guest's performance
-  - Better video support, shared clipboard, mouse pointer integration...
+    - Better video support, shared clipboard, mouse pointer integration...
 - Might need additional packages
-  - On Ubuntu 20.04
+    - On Ubuntu 20.04
 
-  ```bash
-  sudo apt install virtualbox-guest-dkms virtualbox-guest-x11 virtualbox-guest-utils
-  ```
+    ```bash
+    sudo apt install virtualbox-guest-dkms virtualbox-guest-x11 virtualbox-guest-utils
+    ```
 
-  - `virtualbox-guest-x11` can be dropped on headless system
-  - On Ubuntu for building packages manually
+    - `virtualbox-guest-x11` can be dropped on headless system
+    - On Ubuntu for building packages manually
 
-  ```bash
-  perl dkms build-essential linux-headers-generic linux-headers-$(uname -r)
-  ```
+    ```bash
+    perl dkms build-essential linux-headers-generic linux-headers-$(uname -r)
+    ```
 
-  - Then run installation script of Guest Additions
+    - Then run installation script of Guest Additions
 - Screen black after/during installation -> Increase video memory to >=64 MB
 
 
@@ -114,12 +114,12 @@ Details available in [`overview.md`](https://github.com/Simulation-Software-Engi
 - Offers flexibility on OS choice
 - Manual setup, but also CLI interface exists
 - Next steps
-  - How to manage several VMs efficiently?
+    - How to manage several VMs efficiently?
 
-  > "If you can't git diff a file format, it's broken."
+    > "If you can't git diff a file format, it's broken."
 
-  - Consistency of the environment?
-  - Sharing image with others?
+    - Consistency of the environment?
+    - Sharing image with others?
 
 
 ---

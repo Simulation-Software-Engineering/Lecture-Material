@@ -9,7 +9,7 @@ slideOptions:
 
 <style>
   .reveal strong {
-  font-weight: bold;
+    font-weight: bold;
     color: orange;
   }
   .reveal p {
@@ -30,10 +30,10 @@ slideOptions:
 ## Corona Rules
 
 - We need to check everybody's **3G status** and **registration for contact tracing**
-  - Use hardware cactUS reader for both when entering the room (each session)
-  - The lecture has less than 35 students --> Lecturers need to check --> Please don't enter the room before the lecturers are there (15 mins before session)
-  - Please act accordingly (e.g. fill out paper registration if needed or get tested if needed)
-  - Check out after lecture
+    - Use hardware cactUS reader for both when entering the room (each session)
+    - The lecture has less than 35 students --> Lecturers need to check --> Please don't enter the room before the lecturers are there (15 mins before session)
+    - Please act accordingly (e.g. fill out paper registration if needed or get tested if needed)
+    - Check out after lecture
 - Everybody in audience needs to wear an **FFP2 mask**
 - Keep distance, but please don't spread equally over the large room
 
@@ -53,8 +53,8 @@ slideOptions:
 
 - No (advanced) programming course
 - Learn about all the other things you need to develop research /
-  simulation software (to become a *"Research Software Engineer"*):
-  continuous integration, virtualization, building & packaging, documentation, ...
+    simulation software (to become a *"Research Software Engineer"*):
+    continuous integration, virtualization, building & packaging, documentation, ...
 - Focus on tools for C++ and Python
 - More than a *"3-days software carpentry workshop on Python and git"*
 - Learn how to contribute to large-scale open-source simulation software projects
@@ -67,15 +67,15 @@ slideOptions:
 Two parallel branches:
 
 - **Weekly lectures** (90 mins) and **exercises** (90 mins) to learn and train concepts and tools
-  - Thursdays, 09:45–11:15 and 15:45–17:15
-  - This lecture hall: V38.04
-  - No strict distinction between lecture and exercise
-  - Interactive style (not a theory course)
+    - Thursdays, 09:45–11:15 and 15:45–17:15
+    - This lecture hall: V38.04
+    - No strict distinction between lecture and exercise
+    - Interactive style (not a theory course)
 - **Individual challenge**: contribute to real simulation software :rocket:
-  - List of software candidates: this afternoon
-  - 3 presentations from you (more later)
-  - You get a direct advisor
-  - Use exercise blocks and time after lectures for discussions
+    - List of software candidates: this afternoon
+    - 3 presentations from you (more later)
+    - You get a direct advisor
+    - Use exercise blocks and time after lectures for discussions
 
 ---
 
@@ -92,7 +92,7 @@ Two parallel branches:
 - GitHub account
 - We'll create an IPVS-SIM GitLab account for everyone
 - Laptop with root access
-  - You should be able to install and configure software.
+    - You should be able to install and configure software.
 - OK if we use Slido?
 - Signed up on C@MPUS?
 
@@ -148,19 +148,19 @@ Two parallel branches:
 
 <style>
 td {
-  font-size: 35px
+    font-size: 35px
 }
 </style>
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
 | 21.10. |Lecture | 1-2 | Course intro, intro to SSE, VC basics | Benjamin |
-| 21.10. |Lecture | 2 | Git: my workflow + quiz, software projects for challenge  | Benjamin |
+| 21.10. |Lecture | 2 | Git: my workflow + quiz, software projects for challenge    | Benjamin |
 | 28.10. |Lecture + presentations| 2 | *"My neat little Git trick"*, merge vs rebase, working in teams| Benjamin |
-| 28.10. |Lab | 2 | *"Git cheat sheet"*  | Benjamin |
+| 28.10. |Lab | 2 | *"Git cheat sheet"*    | Benjamin |
 | 04.11. |Lecture | 3 | Virtualbox, Vagrant | Alexander |
 | 04.11. |Lecture | 3 | Docker, Singularity | Alexander |
-| 11.11. |Lab | 3 | tbd.  | Alexander |
+| 11.11. |Lab | 3 | tbd.    | Alexander |
 | 11.11. |Presentations | C | **1st student presentations** | students|
 
 ---
@@ -169,7 +169,7 @@ td {
 
 <style>
 td {
-  font-size: 35px
+    font-size: 35px
 }
 </style>
 
@@ -192,7 +192,7 @@ td {
 
 <style>
 td {
-  font-size: 35px
+    font-size: 35px
 }
 </style>
 
@@ -215,9 +215,9 @@ td {
 
 - *"Course accompanying examination"*: no exam, but continuous examination (more like a lab course or a seminar)
 - We look at:
-  - Challenge (outcome and presentations)
-  - Exercises (not every detail, but *"passed"* or *"failed"*)
-  - Overall engagement (interactive lecture, discussions, small presentations, ...)
+    - Challenge (outcome and presentations)
+    - Exercises (not every detail, but *"passed"* or *"failed"*)
+    - Overall engagement (interactive lecture, discussions, small presentations, ...)
 - Let us know if you cannot come to a lecture / exercise (you don't have to give a reason)
 - You will need to register yourself to the *"exam"* on C@MPUS
 - Point of no return: once you gave the first presentation (Nov 11), you have to register (please let us still know when you drop just before the presentation)
@@ -227,7 +227,7 @@ td {
 ## GitLab Account
 
 - Please write a mail till tonight to Alexander
-  - [alexander.jaust@ipvs.uni-stuttgart.de](mailto:alexander.jaust@ipvs.uni-stuttgart.de)
+    - [alexander.jaust@ipvs.uni-stuttgart.de](mailto:alexander.jaust@ipvs.uni-stuttgart.de)
 - Email subject: "GitLab account SSE course"
 - State your **name** and preferred **email-address**
 - If you already have an IPVS-SIM GitLab account, we only need your username

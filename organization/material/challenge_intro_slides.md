@@ -9,7 +9,7 @@ slideOptions:
 
 <style>
   .reveal strong {
-  font-weight: bold;
+    font-weight: bold;
     color: orange;
   }
   .reveal p {
@@ -95,7 +95,7 @@ Rough workload / grading weights: 25%, 25%, 50%
 
 - Alexander or Benjamin
 - Use exercise blocks and time after lectures for discussions
-  - We both attend all lectures and labs
+    - We both attend all lectures and labs
 - Discuss at least what you plan to contribute
 - Share links etc. to issues and PRs (or tag us)
 

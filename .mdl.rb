@@ -26,6 +26,8 @@ exclude_rule 'MD040'
 
 # Enforce dashes as symvol in lists
 rule 'MD004', :style => :dash
+#
+rule 'MD007', :indent => 4
 # Extend line length for text.
 # This will complain for overly wide tables and code blocks.
 rule 'MD013', :line_length => 99999

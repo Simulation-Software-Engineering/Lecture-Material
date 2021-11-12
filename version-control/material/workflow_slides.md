@@ -9,7 +9,7 @@ slideOptions:
 
 <style>
   .reveal strong {
-  font-weight: bold;
+    font-weight: bold;
     color: orange;
   }
   .reveal p {
@@ -54,8 +54,8 @@ slideOptions:
 - Conflicts: fix locally (push not allowed anyway), use `git pull --rebase`
 - **Good for**: small teams, small projects, projects that are anyway reviewed over and over again
 - Example: LaTeX papers
-  - Put each section in separate file
-  - Put each sentence in separate line
+    - Put each section in separate file
+    - Put each sentence in separate line
 
 ---
 
@@ -63,7 +63,7 @@ slideOptions:
 
 - Each feature (or bugfix) in separate branch
 - Push feature branch to remote, use descriptive name
-  - e.g. issue number in name if each branch closes one issue
+    - e.g. issue number in name if each branch closes one issue
 - `main` should never contain broken code
 - Protect direct push to `main`
 - PR (or MR) with review to merge from feature branch to `main`
@@ -78,13 +78,13 @@ slideOptions:
 
 - [Visualization by Vincent Driessen](https://nvie.com/img/git-model@2x.png), from [original blog post in 2010](https://nvie.com/posts/a-successful-git-branching-model/)
 - `main` and `develop`
-  - `main` contains releases as tags
-  - `develop` contains latest features
+    - `main` contains releases as tags
+    - `develop` contains latest features
 - Feature branches created of `develop`, PRs back to `develop`
 - Protect `main` and (possibly) `develop` from direct pushes
 - Dedicated release branches (e.g., `v1.0`) created of `develop`
-  - Tested, fixed, merged to `main`
-  - Afterwards, tagged, merged back to `develop`
+    - Tested, fixed, merged to `main`
+    - Afterwards, tagged, merged back to `develop`
 - Hotfix branches directly of and to `main`
 - **Good for**: software with users, larger teams
 - There is a tool `git-flow`, a wrapper around `git`, e.g. `git flow init` ... but not really necessary IMHO
@@ -96,8 +96,8 @@ slideOptions:
 - Gitflow + feature branches on other forks
 - More control over access rights, distinguish between maintainers and external contributors
 - Should maintainers also use branches on their forks?
-  - Makes overview of branches easier
-  - Distinguish between prototype branches (on fork, no PR), serious enhancements (on fork with PR), joint enhancements (on upstream)
+    - Makes overview of branches easier
+    - Distinguish between prototype branches (on fork, no PR), serious enhancements (on fork with PR), joint enhancements (on upstream)
 - **Good for**: open-source projects with external contributions (used more or less in preCICE)
 
 ---
@@ -105,9 +105,9 @@ slideOptions:
 ## Do Small PRs
 
 - For all workflows, it is better to do small PRs
-  - Easier to review
-  - Faster to merge --> fewer conflicts
-  - Easier to squash
+    - Easier to review
+    - Faster to merge --> fewer conflicts
+    - Easier to squash
 
 ---
 

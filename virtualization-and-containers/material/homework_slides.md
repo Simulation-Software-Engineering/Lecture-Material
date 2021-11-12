@@ -9,7 +9,7 @@ slideOptions:
 
 <style>
   .reveal strong {
-  font-weight: bold;
+    font-weight: bold;
     color: orange;
   }
   .reveal p {
@@ -33,12 +33,12 @@ slideOptions:
 
 - **Deadline**: Before exercise on 11 November 2021
 - What to do?
-  - Install VirtualBox and Vagrant
-  - Install Docker on your machine or in a VM
+    - Install VirtualBox and Vagrant
+    - Install Docker on your machine or in a VM
 - Please follow the manuals on the homepage
-  - [VirtualBox](https://www.virtualbox.org/)
-  - [Vagrant](https://www.vagrantup.com/)
-  - [Docker Engine](https://docs.docker.com/engine/)
+    - [VirtualBox](https://www.virtualbox.org/)
+    - [Vagrant](https://www.vagrantup.com/)
+    - [Docker Engine](https://docs.docker.com/engine/)
 
 
 ---
@@ -46,19 +46,19 @@ slideOptions:
 ## VirtualBox and Vagrant
 
 - Install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/)
-  - Verify that the installation was successful by creating the Vagrant example from the lecture:
+    - Verify that the installation was successful by creating the Vagrant example from the lecture:
 
-    - Navigate to a directory of your choice
+        - Navigate to a directory of your choice
 
-    ```bash
-    vagrant init hashicorp/bionic64
-    vagrant up
-    ```
+        ```bash
+        vagrant init hashicorp/bionic64
+        vagrant up
+        ```
 
-    - Go into the VM `vagrant ssh` and verify the content of the `/vagrant` directory.
-    - Check in the VirtualBox manager that the VM is active.
-    - Leave the SSH session (type `exit` and press `Enter` or use the shortcut `CTRL+D`)
-    - Destroy the VM `vagrant destroy`
+        - Go into the VM `vagrant ssh` and verify the content of the `/vagrant` directory.
+        - Check in the VirtualBox manager that the VM is active.
+        - Leave the SSH session (type `exit` and press `Enter` or use the shortcut `CTRL+D`)
+        - Destroy the VM `vagrant destroy`
 
 **Note**: Please install Vagrant from the homepage so that it is not too old.
 
@@ -67,18 +67,18 @@ slideOptions:
 ## Install Docker
 
 - Install [Docker Engine](https://docs.docker.com/engine/)
-  - You can install it on your machine or in a VM
-  - Check that your installation successful by running
+    - You can install it on your machine or in a VM
+    - Check that your installation successful by running
 
-  ```bash
-  docker run hello-world
-  ```
+    ```bash
+    docker run hello-world
+    ```
 
-    You might have to prefix a `sudo` command. This depends on your Docker configuration.
+      You might have to prefix a `sudo` command. This depends on your Docker configuration.
 
-  - You should see a message that starts with
+    - You should see a message that starts with
 
-  ```bash
-  Hello from Docker!
-  This message shows that your installation appears to be working correctly
-  ```
+    ```bash
+    Hello from Docker!
+    This message shows that your installation appears to be working correctly
+    ```

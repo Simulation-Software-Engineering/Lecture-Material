@@ -9,7 +9,7 @@ slideOptions:
 
 <style>
   .reveal strong {
-  font-weight: bold;
+    font-weight: bold;
     color: orange;
   }
   .reveal p {
@@ -73,7 +73,7 @@ slideOptions:
 - Yes. Research also happens in industry.
 - All things we learn (Git, packaging, CI/CD, virtualization, documentation, ...) is also highly relevant for non-research software.
 - Companies use (more and more) the same workflows and tools.
-  - It is not just about coding. It is about collaborative work.
+    - It is not just about coding. It is about collaborative work.
 - Open-source development excellent door opener for industry.
 - Some companies develop their software as open-source software.
 

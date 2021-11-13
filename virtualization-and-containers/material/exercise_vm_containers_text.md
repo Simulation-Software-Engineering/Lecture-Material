@@ -195,13 +195,13 @@ This exercise consists of the following main steps:
 
 1. Create a fork of the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-containers)
 2. Setting up the `Dockerfile`
-    - The name of this virtual machine will be `USERNAME-ubuntu-server`.
+    - The name of this container will be `USERNAME-ubuntu`.
     - Create a file called `testfile` that contains `USERNAME`. This file should be copied to a directory called `/testfiles` inside the container.
     - Set the environment variable `ENV_TEST_VARIABLE` inside the container.
     - Define a default run command for the container.
     - Install `neofetch` inside the container
     - Test the new container
-3. Run `neofetch` in the terminal and take a screenshot
+3. Run `neofetch` in a terminal inside the container and take a screenshot
 4. Create a merge request containing your changes.
 
 #### 1. Create a Fork (Docker)
@@ -222,7 +222,7 @@ See the instructions in the task list above. The repository initially contains a
 
 #### 3. Running neofetch and Taking a Screenshot (Docker)
 
-- Got into your running container.
+- Go into your running container.
 - Clear the terminal using `clear` and run neofetch via by typing `neofetch` into the terminal and pressing `Enter`. It will show information about the Ubuntu version, available memory etc.
 - Take a screenshot and save it as `neofetch-screenshot-docker-USERNAME.png`.
 

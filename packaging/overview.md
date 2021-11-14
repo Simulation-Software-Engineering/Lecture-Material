@@ -2,18 +2,18 @@
 
 Learning goals:
 
-- Understanding the necessity to package code
-- Determining the type of packaging required for your code
-- Modifying code and packaging it
-- Uploading code to a remote package managing platform
+- Understanding the necessity to somehow package code written in a crude way
+- Being able to determine the type of packaging required for the code
+- Modifying code and packaging it according to a standardization
+- Uploading code to a remote package managing platform and testing the installation
 
-## Quiz
+## Survey
 
 | Duration | Format | Material |
 | --- | --- | --- |
 | 15 minutes | poll | x |
 
-- Conduct an online poll with 3-4 questions to get an impression of how much the students already know about packaging
+- Conduct an online poll with four questions to get an impression of how much the students already know about packaging
 - Discuss results and quantify the minimum knowledge level of the class
 - **Most important question**: How do students perceive the term *packaging*?
 
@@ -23,7 +23,7 @@ Learning goals:
 | --- | --- | --- |
 | 30 minutes | slides | x |
 
-- Why should we think about *packaging* our code?
+- Before thinking about why we should *packaging* our code we first need to ask ourselves: what is *packaging*?
   - Small and simple codes written for single applications perhaps do not need packaging. For example you are the only user and you yourself know how to compile the code and how to debug it
   - Codes with many files and a variety of functionalities are difficult to maintain in the long run. Such codes are also difficult to use for users who are not developers of the code. These codes may have multiple dependencies and also multiple users. Users may find it hard to understand and debug the code when errors are observed during the compilation process
   - The aforementioned reasons apply not only to 

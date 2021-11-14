@@ -156,7 +156,7 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 
 #### 4. Running neofetch and Taking a Screenshot (Vagrant)
 
-- Got into your running VM.
+- Go into your running VM by using the `vagrant ssh` command.
 - Clear the terminal using `clear` and run neofetch via by typing `neofetch` into the terminal and pressing `Enter`. It will show information about the Ubuntu version, available memory etc.
 - Take a screenshot and save it as `neofetch-screenshot-vagrant-USERNAME.png`.
 
@@ -173,7 +173,7 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 
 ### Further Information (Vagrant)
 
-- You might want to add the option `--provision` to the `vagrant up` or use `vagrant --provision` command if you want to rebuild a box (without destroying it first). In case the box is not being build/rebuild, please read the [documentation about provisioning](https://www.vagrantup.com/docs/provisioning) carefully.
+- You might want to add the option `--provision` to the `vagrant up` or use `vagrant provision` command if you want to reprovision a running box (without destroying it first). In case the box is not being build/rebuild, please read the [documentation about provisioning](https://www.vagrantup.com/docs/provisioning) carefully.
 - By default, Vagrant will store some larger files like the base images/boxes etc.\ in `${HOME}/vagrant.d`. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point the alternative directory. This could look like this:
 
     ```bash

@@ -11,7 +11,7 @@ Learning goals:
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 15 minutes | poll | x |
+| 15 minutes | poll | [packaging_survey.md](https://github.com/Simulation-Software-Engineering/Lecture-Material) |
 
 - Conduct an online poll with four questions to get an impression of how much the students already know about packaging
 - Discuss results and quantify the minimum knowledge level of the class
@@ -21,39 +21,9 @@ Learning goals:
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 30 minutes | slides | x |
+| 30 minutes | slides | [intro_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material) |
 
-- Before thinking about why we should *packaging* our code we first need to ask ourselves: what is *packaging*?
-  - Small and simple codes written for single applications perhaps do not need packaging. For example you are the only user and you yourself know how to compile the code and how to debug it
-  - Codes with many files and a variety of functionalities are difficult to maintain in the long run. Such codes are also difficult to use for users who are not developers of the code. These codes may have multiple dependencies and also multiple users. Users may find it hard to understand and debug the code when errors are observed during the compilation process
-  - The aforementioned reasons apply not only to 
-  - Writing extensive documentation is one solution, but it needs a lot of effort and it not sustainable
-  - Converting a raw code into a standardized and user friendly format is a need that is addressed by *packaging*
-  - Packaging is basically *standardization* of a raw code
-  - Main reasons for packaging:
-    - Increase usability
-    - Increase sustainability
-    - Ease of distribution
-    - Avoiding extensive documentation by following a standard
-    - Version control
-
-- Getting started with packaging
-  - First explore various ways of packaging codes and which package manager fits best for the code
-  - Package managers and installation managers:
-    - [CMake](https://cmake.org/)
-    - [Spack](https://spack.io/)
-    - [Conan](https://conan.io/)
-- We concentrate on Python code package managers in this lecture:
-  - Packaging Python codes:
-    - [PyPI](https://pypi.org/) and [pip](https://pypi.org/project/pip/)
-    - [Conda](https://docs.conda.io/en/latest/)
-
-- Why do we look at Python code packaging in detail?
-  - Python codes are widely used in scientific computing and simulation sciences and its packaging workflow with PyPI and pip is well established
-
-**Remark**: It is important to understand the abstract packaging concepts from the example of packaging Python code using PyPI and pip**
-
-## Basic steps in packaging a Python code
+## Basic steps of packaging a Python code
 
 - Restructing the files to a specific pre-defined file format. This file format depends on which package manager we use.
 - How are dependencies of the code being packaged handled?

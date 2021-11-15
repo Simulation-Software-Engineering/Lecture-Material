@@ -58,7 +58,7 @@ slideOptions:
 - PEP is an evolving deisgn document which provides information regarding new features of Python, new processes and new environments
 - PEPs typically involve concise technical information which also acts as standardizations
 - Packaging workflows are also standardized in through multiple PEPs. Examples are:
-  - [PEP 427](https://www.python.org/dev/peps/pep-0427/) introduces the built-package format "wheel"
+    - [PEP 427](https://www.python.org/dev/peps/pep-0427/) introduces the built-package format "wheel"
 - It is always a good idea to look for **PEP** conventions before trying out processes
 
 ---
@@ -105,8 +105,8 @@ package_name/
 
 - We will use [setuptools](https://pypi.org/project/setuptools/) to define the installation recipe for the package
 - `setuptools` can be configured using a config script called `setup.cfg` and the build recipe can be defined in a build script called `setup.py`
-  - `setup.cfg` consists of details like name of the package, version of package, files to include in the package.
-  - `setup.py` consists of configuration information as well as information on dependencies and details to pass on to PyPI after publishing
+    - `setup.cfg` consists of details like name of the package, version of package, files to include in the package.
+    - `setup.py` consists of configuration information as well as information on dependencies and details to pass on to PyPI after publishing
 
 ---
 
@@ -146,8 +146,8 @@ dist/
 
 - Once the distribution archives are created, we want to upload it to the Python Package Index
 - We will use [Twine](https://twine.readthedocs.io/en/latest/) to upload our package to PyPI
-  - Twine is widely used as it securely authenticates the user to PyPI over HTTPS using a verified connection
-  - Its predecessor `python setup.py upload` required careful configuration of the user system and Python version
+    - Twine is widely used as it securely authenticates the user to PyPI over HTTPS using a verified connection
+    - Its predecessor `python setup.py upload` required careful configuration of the user system and Python version
 - PyPI offers an alternative index for testing called TestPyPI on which a user can upload and experiment with their package
 - It is always a good idea to verify uploading over TestPyPI before uploading to the real PyPI
 

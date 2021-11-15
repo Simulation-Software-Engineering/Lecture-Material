@@ -6,9 +6,9 @@
 
 Material of the Simulation Software Engineering lecture. There are different way how to get an overview:
 
-* Look at `timetable.md`,
-* Look at the `overview.md` files of each chapter / folder,
-* Browse the content through the [course website](https://simulation-software-engineering.github.io/homepage/).
+- Look at `timetable.md`,
+- Look at the `overview.md` files of each chapter / folder,
+- Browse the content through the [course website](https://simulation-software-engineering.github.io/homepage/).
 
 ## Linting
 

@@ -9,7 +9,7 @@ slideOptions:
 
 <style>
   .reveal strong {
-  font-weight: bold;
+    font-weight: bold;
     color: orange;
   }
   .reveal p {
@@ -40,17 +40,17 @@ slideOptions:
 ## Virtualization and Containers for SSE
 
 - Developing, testing and debugging software
-  - Abstraction layer for different OS, configurations etc.
-  - Ensure software quality
+    - Abstraction layer for different OS, configurations etc.
+    - Ensure software quality
 - Moving/Sharing software
-  - Avoid compilation and/or setup complexity, OS dependency
-  - Work around target limitations (e.g. HPC)
+    - Avoid compilation and/or setup complexity, OS dependency
+    - Work around target limitations (e.g. HPC)
 - Manage complex workflows
-  - Ideally under version control
-  - (Potentially) Break down big software into smaller
+    - Ideally under version control
+    - (Potentially) Break down big software into smaller
 - Reproducible research
-  - Make sure others get the same results
-  - Make sure others are able to run your software (also in future)
+    - Make sure others get the same results
+    - Make sure others are able to run your software (also in future)
 - Focus on established, open-source software
 
 ---
@@ -58,8 +58,8 @@ slideOptions:
 ## Contents of this Chapter
 
 - Virtual Machines
-  - VirtualBox: Popular hypervisor for running VMs
-  - Vagrant: Popular management system for VMs (and more)
+    - VirtualBox: Popular hypervisor for running VMs
+    - Vagrant: Popular management system for VMs (and more)
 - Containers
-  - Docker: Popular container framework (and more)
-  - Singularity: Popular scientific container framework
+    - Docker: Popular container framework (and more)
+    - Singularity: Popular scientific container framework

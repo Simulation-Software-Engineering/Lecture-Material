@@ -8,19 +8,19 @@ slideOptions:
 ---
 
 <style>
-  .reveal strong {
-  font-weight: bold;
-    color: orange;
-  }
-  .reveal p {
-    text-align: left;
-  }
-  .reveal section h1 {
-    color: orange;
-  }
-  .reveal section h2 {
-    color: orange;
-  }
+    .reveal strong {
+      font-weight: bold;
+      color: orange;
+    }
+    .reveal p {
+      text-align: left;
+    }
+    .reveal section h1 {
+      color: orange;
+    }
+    .reveal section h2 {
+      color: orange;
+    }
 </style>
 
 # Introduction to version control
@@ -41,7 +41,7 @@ slideOptions:
 Version control ...
 
 - tracks changes to files and helps people share those changes with each other.
-  - Could also be done via email / Google Docs / ..., but not as accurately and efficiently
+    - Could also be done via email / Google Docs / ..., but not as accurately and efficiently
 - was originally developed for software development, but today cornerstone of *reproducible research*
 
 > "If you can't git diff a file format, it's broken."
@@ -53,8 +53,8 @@ Version control ...
 - *master* (or *main*) copy of code in repository, can't edit directly
 - Instead: check out a working copy of code, edit, commit changes back
 - Repository records complete revision history
-  - You can go back in time
-  - It's clear who did what when
+    - You can go back in time
+    - It's clear who did what when
 
 ---
 
@@ -84,10 +84,10 @@ Distributed version control:
 - Besides remote master version, also local copy of repository
 - More memory required, but much better performance
 - For a long time: highly fragmented market
-  - 2000: BitKeeper (originally proprietary software)
-  - 2005: Mercurial
-  - 2005: Git
-  - A few more
+    - 2000: BitKeeper (originally proprietary software)
+    - 2005: Mercurial
+    - 2005: Git
+    - A few more
 
 Learn more: [Podcast All Things Git: History of VC](https://www.allthingsgit.com/episodes/the_history_of_vc_with_eric_sink.html)
 
@@ -98,7 +98,7 @@ Learn more: [Podcast All Things Git: History of VC](https://www.allthingsgit.com
 No longer a fragmented market, there is nearly only Git today:
 
 - [Stackoverflow developer survey 2021](https://insights.stackoverflow.com/survey/2021#technology-most-popular-technologies):
-  > "Over 90% of respondents use Git, suggesting that it is a fundamental tool to being a developer."
+    > "Over 90% of respondents use Git, suggesting that it is a fundamental tool to being a developer."
 - All software project candidates for *contribution challenge* use Git
 - Is this good or bad?
 

@@ -75,13 +75,24 @@ slideOptions:
 
 - First step in packaging is to find a tool / package manager which fits best for the code
 - There are several options:
-  - <span>[CMake](https://cmake.org/)<!-- .element: class="fragment" data-fragment-index="1" --></span>: <span>mostly for C, C++ projects<!-- .element: class="fragment" data-fragment-index="2" --></span>
-  - [Spack](https://spack.io/)
-  - [Conan](https://conan.io/)
+  - [CMake](https://cmake.org/) <span>: mostly for C, C++ projects<!-- .element: class="fragment" data-fragment-index="1" --></span>
+  - [Spack](https://spack.io/) <span>: a package management tool mostly for supercomputing centers<!-- .element: class="fragment" data-fragment-index="1" --></span>
+  - [Conan](https://conan.io/) <span>: open-source package manager for C and C++ development<!-- .element: class="fragment" data-fragment-index="1" --></span>
+<span>
 - We concentrate on Python code package managers in this lecture:
   - Packaging Python codes:
     - [PyPI](https://pypi.org/) and [pip](https://pypi.org/project/pip/)
     - [Conda](https://docs.conda.io/en/latest/)
+    <!-- .element: class="fragment" data-fragment-index="2" --></span>
 
-- Why do we look at Python code packaging in detail?
-  - Python codes are widely used in scientific computing and simulation sciences and its packaging workflow with PyPI and pip is well established
+---
+
+## Why do we particularly look at packaging of Python codes?
+
+- Python is widely used in research software and particularly in simulation software
+- A finetuned packaging workflow with PyPI and `pip` is already well established in the community
+- Various examples of packaged codes already exist: [NumPy](https://pypi.org/project/numpy/), [PyMOR](https://pypi.org/project/pymor/), [fenicsprecice](https://pypi.org/project/fenicsprecice/) and more ...
+
+---
+
+## Questions?

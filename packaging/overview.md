@@ -29,12 +29,6 @@ Learning goals:
 | --- | --- | --- |
 | 40 minutes | slides | [packaging_python.md](https://github.com/Simulation-Software-Engineering/Lecture-Material) |
 
-## Using the package manager PyPI
-
-| Duration | Format | Material |
-| --- | --- | --- |
-| 20 minutes | slides | x |
-
 ## Exercise
 
 ### Part 1: Prepare a raw code for packaging
@@ -54,5 +48,3 @@ Learning goals:
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/shipping/packaging/)
 - [readthedocs guide](https://python-packaging.readthedocs.io/en/latest/)
 - [Python Packaging User Guide](https://packaging.python.org/)
-
-## Other

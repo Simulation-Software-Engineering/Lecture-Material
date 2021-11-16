@@ -71,11 +71,13 @@ slideOptions:
 
 - Most essential component of packaging is file structure. Basic file structure is as follows:
 
+```bash
 package_name/
 └── src/
     └── solver/
         ├── __init__.py
         └── solver.py
+```
 
 - The file `__init__.py` is required to import the `src/` as a package. This file is mostly empty
 - `solver.py` will contain the code developed by the user
@@ -86,6 +88,7 @@ package_name/
 
 - Once the file structuring is complete, the repository will look like:
 
+```bash
 package_name/
 ├── LICENSE
 ├── setup.py
@@ -96,6 +99,7 @@ package_name/
 │       ├── __init__.py
 │       └── solver.py
 └── tests/
+```
 
 - We will now look at individual components in greater detail
 
@@ -245,3 +249,7 @@ Uploading package_name_YOUR_USERNAME_HERE-0.0.1.tar.gz
 ---
 
 ## Summary of folder structure for packaging
+
+- Packaging involves creation of a standardized folder structure to convert a raw code into a project
+- We saw the folder structure for packaging Python codes which can be published to PyPI
+- Distribution packages are created and the archive files are finally uploaded to PyPI

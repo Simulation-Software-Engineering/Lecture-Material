@@ -60,7 +60,7 @@ While the "Ubuntu Server 20.04" installation image is downloading you can alread
 - Start the virtual machine.
 - The VM will boot from the Ubuntu image and will welcome you with a configuration program. Choose your preferred language and then choose "Start Ubuntu Server". It brings you to the installation routine. The starting process might take a short while.
 - When the boot process has finished, you will be presented with Ubuntu's installation program. Go through it carefully.
-   - Choose your preferred language and keyboard layout. Note that you cannot use your mouse in the menus, instead you have to use your keyboard.
+    - Choose your preferred language and keyboard layout. Note that you cannot use your mouse in the menus, instead you have to use your keyboard.
     - For most settings you can accept the default values Ubuntu suggests (mirror, empty proxy, using entire disk with LVM group, storage configuration etc.)
     - After verifying that Ubuntu wants to use the virtual hard drive, confirm formatting of the virtual hard drive ("Confirm destructive action") when asked so.
 - When setting up your user, please use your GitLab username, e.g. `jaustar`, as username and choose the username + VM, e.g. `jaustarvm`, as the server's name. The password you can choose freely, but it cannot be empty. If you do not feel creative, use `vm` as password.
@@ -216,14 +216,14 @@ See the instructions in the task list above. The repository initially contains a
 #### 2. Setting up the `Dockerfile`
 
 - Currently, the [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) is empty. Edit the file such that an container image with the following properties is build:
-  - Your virtual machine should be based on the [`ubuntu:20.04` image](https://hub.docker.com/_/ubuntu).
-  - Create a new file with the name `testfile` and add it to the repository. The file should contain your `USERNAME` as text. Add the file to your container and place it in directory `/testfiles`.
-  - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`.
-  - Make sure that the default command to be executed when running the container is `/bin/bash`.
-  - Install `neofetch`.
-  - **Note:** In the `Dockerfile` you do not have to prefix commands such as `apt` with `sudo` since the script is executed with superuser rights.
+    - Your virtual machine should be based on the [`ubuntu:20.04` image](https://hub.docker.com/_/ubuntu).
+    - Create a new file with the name `testfile` and add it to the repository. The file should contain your `USERNAME` as text. Add the file to your container and place it in directory `/testfiles`.
+    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`.
+    - Make sure that the default command to be executed when running the container is `/bin/bash`.
+    - Install `neofetch`.
+    - **Note:** In the `Dockerfile` you do not have to prefix commands such as `apt` with `sudo` since the script is executed with superuser rights.
 - Test your Docker container locally. Are all variables set and files available?
-  - **Note:** If you rebuild your container often, you might end up with dangling containers. You can remove them (and unused images, containers, or objects) with [`docker [image|container|system] prune`)](https://docs.docker.com/engine/reference/commandline/system_prune/) depending on what you want to remove.
+    - **Note:** If you rebuild your container often, you might end up with dangling containers. You can remove them (and unused images, containers, or objects) with [`docker [image|container|system] prune`)](https://docs.docker.com/engine/reference/commandline/system_prune/) depending on what you want to remove.
 
 #### 3. Running neofetch and Taking a Screenshot (Docker)
 
@@ -234,12 +234,12 @@ See the instructions in the task list above. The repository initially contains a
 #### 4. Creating a Merge Request (Docker)
 
 - Open a merge request in the GitHub Repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-containers).
-  - As title choose "[`USERNAME`] Docker Container Recipe".
-  - Make sure all files are up to date (`testfile`, `Dockerfile`).
-  - Attach the screenshot ("Attach a file") that you made in the previous step.
-  - Add the label `Docker` label to the merge request and assign the merge request to `jaustar`.
-  - Double-check that all files are in the repository and up to date.
-  - If everything looks good, create the merge request.
+    - As title choose "[`USERNAME`] Docker Container Recipe".
+    - Make sure all files are up to date (`testfile`, `Dockerfile`).
+    - Attach the screenshot ("Attach a file") that you made in the previous step.
+    - Add the label `Docker` label to the merge request and assign the merge request to `jaustar`.
+    - Double-check that all files are in the repository and up to date.
+    - If everything looks good, create the merge request.
 
 ### Further Information (Docker)
 
@@ -265,16 +265,16 @@ Extensions to the VirtualBox task should be added to the existing VirtualBox iss
 
 - Use Vagrant to set up a box with Docker.
 - Publish a Vagrant box to Vagrant cloud. Please link to it in the issue.
-  - Link the published repository in the issue
-  - Please add all files (`Vagrantfile` etc.) that you have used to set up this box and shortly describe which commands you have used to do so.
+    - Link the published repository in the issue
+    - Please add all files (`Vagrantfile` etc.) that you have used to set up this box and shortly describe which commands you have used to do so.
 
 ### Docker
 
 - Publish a [Docker base image](https://docs.docker.com/develop/develop-images/baseimages/) to DockerHub.
-  - Link the published DockerHub repository in the issue.
-  - Please add all files (`Dockerfile` etc.) that you have used to set up this container and shortly describe which commands you have used to do so.
+    - Link the published DockerHub repository in the issue.
+    - Please add all files (`Dockerfile` etc.) that you have used to set up this container and shortly describe which commands you have used to do so.
 
 ### Singularity
 
 - Rebuild the Docker container as [Singularity container](https://sylabs.io/guides/master/user-guide/). Create a new merge request for this in the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-containers). Please choose the `Singularity` label when creating the merge request.
-  - Please only add the Singularity recipe to the merge request, but not the container file.
+    - Please only add the Singularity recipe to the merge request, but not the container file.

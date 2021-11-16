@@ -120,8 +120,8 @@ This exercise consists of the following main steps:
 3. Extending the VMs configuration
   - Create a file called `testfile` that contains `USERNAME`. This file should be copied into the home directory of the `vagrant` user during the provisioning process.
   - Edit the `Vagrantfile` such that the `bootstrap.sh` script is run during provisioning. The script should
-    - Add a new environment variable `ENV_TEST_VARIABLE` with the value `USERNAME`.
-    - Install `neofetch`.
+    + Add a new environment variable `ENV_TEST_VARIABLE` with the value `USERNAME`.
+    + Install `neofetch`.
 4. Run `neofetch` in the terminal and take a screenshot
 5. Create a merge request containing your changes
 
@@ -185,10 +185,10 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 - [Vagrant Introduction](https://www.vagrantup.com/intro)
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
 - Issue with windows and vagrant: ```VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole```
-    - Solution described in this [stackoverflow thread](https://stackoverflow.com/questions/37955942/vagrant-up-vboxmanage-exe-error-vt-x-is-not-available-verr-vmx-no-vmx-code)
-    - Basically run (in powershell as admin): ```bcdedit /set hypervisorlaunchtype off```
-    - Restart computer
-    - And run (in powershell as admin): ```bcdedit /set hypervisorlaunchtype auto```
+  - Solution described in this [stackoverflow thread](https://stackoverflow.com/questions/37955942/vagrant-up-vboxmanage-exe-error-vt-x-is-not-available-verr-vmx-no-vmx-code)
+  - Basically run (in powershell as admin): ```bcdedit /set hypervisorlaunchtype off```
+  - Restart computer
+  - And run (in powershell as admin): ```bcdedit /set hypervisorlaunchtype auto```
 
 ## Containers Using Docker
 
@@ -216,12 +216,12 @@ See the instructions in the task list above. The repository initially contains a
 #### 2. Setting up the `Dockerfile`
 
 - Currently, the [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) is empty. Edit the file such that an container image with the following properties is build:
-    - Your virtual machine should be based on the [`ubuntu:20.04` image](https://hub.docker.com/_/ubuntu).
-    - Create a new file with the name `testfile` and add it to the repository. The file should contain your GitLab `USERNAME` as text. Add the file to your container and place it in directory `/testfiles`.
-    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your GitLab username.
-    - Make sure that the default command to be executed when running the container is `/bin/bash`.
-    - Install `neofetch`.
-    - **Note:** In the `Dockerfile` you do not have to prefix commands such as `apt` with `sudo` since the script is executed with superuser rights.
+  - Your virtual machine should be based on the [`ubuntu:20.04` image](https://hub.docker.com/_/ubuntu).
+  - Create a new file with the name `testfile` and add it to the repository. The file should contain your `USERNAME` as text. Add the file to your container and place it in directory `/testfiles`.
+  - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`.
+  - Make sure that the default command to be executed when running the container is `/bin/bash`.
+  - Install `neofetch`.
+  - **Note:** In the `Dockerfile` you do not have to prefix commands such as `apt` with `sudo` since the script is executed with superuser rights.
 - Test your Docker container locally. Are all variables set and files available?
   - **Note:** If you rebuild your container often, you might end up with dangling containers. You can remove them (and unused images, containers, or objects) with [`docker [image|container|system] prune`)](https://docs.docker.com/engine/reference/commandline/system_prune/) depending on what you want to remove.
 

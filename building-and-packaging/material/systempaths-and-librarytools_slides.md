@@ -30,14 +30,14 @@ MlideOptions:
 
 ---
 
-## Standard Locations of Executables, Libraries...
+## Some Standard Locations
 
 - `/`
 - `/usr/bin/`, `/bin`, `/sbin`, `/usr/local/bin`
 - `/usr/lib`, `/usr/lib64`, `/usr/lib32`, `/usr/local/lib`
 - `/etc/`
 - `/share/`
-- Structure mirrored under `/usr/local` 
+- Structure mirrored under `/usr/local`
 
 ---
 
@@ -62,5 +62,5 @@ MlideOptions:
 
 - `ldconfig`
 - `pkgconfig`
-  - `pkg-conf`
-  - `pkg-config`
+    - `pkg-conf`
+    - `pkg-config`

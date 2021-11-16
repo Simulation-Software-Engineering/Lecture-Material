@@ -2,7 +2,8 @@
 
 Starting remarks:
 
-- Each student forks the repository and every student from the group clones it
+- Create a branch of the exercise repository and complete all the tasks on the branch
+- To submit the assignment open a pull request from your branch to the main branch
 - Every student is expected to contribute in the exercise session
 - Figure out a way for all group members to work on the same fork, for example, by using branches
 

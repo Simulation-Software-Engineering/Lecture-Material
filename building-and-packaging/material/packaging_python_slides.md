@@ -33,7 +33,8 @@ slideOptions:
 - PyPI itself is developed on GitHub through another software called [Warehouse](https://github.com/pypa/warehouse)
 - PyPI has a informative [public dashboard](https://p.datadoghq.com/sb/7dc8b3250-85dcf667bd?from_ts=1636972832484&to_ts=1636976432484&live=true) to show its activity
 - Who maintains PyPI and pip? A big community! For example check out [Donald Stufft](https://twitter.com/dstufft/)
-- A major advantage is the active maintenance of PyPI, which is fueled by a big community. PyPI is also on [Twitter](https://twitter.com/PyPI)
+- A major advantage is the active maintenance of PyPI, which is fueled by a big community
+- Not to be confused with **PyPA** which is 
 
 ---
 
@@ -194,7 +195,7 @@ setuptools.setup(
 
 ---
 
-## Creating distribution archives 1/2
+## Creating distribution archives
 
 - We need to convert the folder sturcture that we have into an archive file system which the end user can download and install on their system
 - To do this we will use the package builder [build](https://pypa-build.readthedocs.io/en/stable/index.html) which was introduced in [PEP 517](https://www.python.org/dev/peps/pep-0517/)
@@ -212,18 +213,19 @@ dist/
 
 ## Uploading the distribution archives 1/2
 
-- Once the distribution archives are created, we want to upload it to the Python Package Index
-- We will use [Twine](https://twine.readthedocs.io/en/latest/) to upload our package to PyPI
-    - Twine is widely used as it securely authenticates the user to PyPI over HTTPS using a verified connection
-    - Its predecessor `python setup.py upload` required careful configuration of the user system and Python version
-- PyPI offers an alternative index for testing called TestPyPI on which a user can upload and experiment with their package
-- It is always a good idea to verify uploading over TestPyPI before uploading to the real PyPI
+- [Twine](https://twine.readthedocs.io/en/latest/) is a common tool to upload our package to PyPI
+- Why Twine?
+    - Secure authentication of the user to PyPI over HTTPS using a verified connection
+    - Its predecessor `python setup.py upload` required careful configuration
+    - Encourages users to create distribution files to promote testing before releasing
+- [TestPyPI](https://test.pypi.org/) is a testing instance of PyPI which does not affect the real index
+- Uploading the distribution to TestPyPI before PyPI is a standard pre-deployment step
 
 ---
 
 ## Uploading the distribution archives 2/2
 
-- Before using TestPyPI one needs an account and a PyPI API Token
+- Before using TestPyPI (or PyPI) one needs an account and a PyPI API Token
 - Account generation is straightforward through a [registration procedure](https://test.pypi.org/account/register/)
 - API Token generation is also [a similar procedure](https://test.pypi.org/account/login/?next=%2Fmanage%2Faccount%2F#api-tokens)
 - The token `__token__` is the username and the token value is the password required for uploading
@@ -249,8 +251,11 @@ Uploading package_name_YOUR_USERNAME_HERE-0.0.1.tar.gz
 
 ---
 
-## Summary of folder structure for packaging
+## Important takeaway
 
-- Packaging involves creation of a standardized folder structure to convert a raw code into a project
-- We saw the folder structure for packaging Python codes which can be published to PyPI
-- Distribution packages are created and the archive files are finally uploaded to PyPI
+Packaging involves two central work packages:
+
+- Creation of a standardized folder structure to convert a raw code into a project
+- Creating and uploading distribution archives to a packaging index
+
+We saw the process of packaging and uploading to PyPI

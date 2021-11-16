@@ -9,7 +9,7 @@ slideOptions:
 
 <style>
   .reveal strong {
-  font-weight: bold;
+    font-weight: bold;
     color: orange;
   }
   .reveal p {
@@ -101,12 +101,75 @@ package_name/
 
 ---
 
+## setup.cfg
+
+- We will use [setuptools](https://pypi.org/project/setuptools/) to define the installation recipe for the package
+- `setuptools` can be configured using a config script called `setup.cfg`
+- `setup.cfg` consists of details like name of the package, version of package, files to include in the package and more.
+- An example of `setup.cfg` is:
+
+```bash
+[metadata]
+name = example-pkg-YOUR-USERNAME-HERE
+version = 0.0.1
+author = <name>
+author_email = <email>
+description = <Add your description here>
+long_description = file: README.md
+long_description_content_type = text/markdown
+url = https://github.com/Simulation-Software-Engineering/test-exercise-packaging
+project_urls =
+    Bug Tracker = https://github.com/Simulation-Software-Engineering/test-exercise-packaging/issues
+classifiers =
+    Programming Language :: Python :: 3
+    License :: OSI Approved :: <Name of license>
+    Operating System :: OS Independent
+
+[options]
+package_dir =
+    = solver
+packages = find:
+python_requires = >=3.6
+
+[options.packages.find]
+where = solver
+```
+
 ## setup.py
 
 - We will use [setuptools](https://pypi.org/project/setuptools/) to define the installation recipe for the package
-- `setuptools` can be configured using a config script called `setup.cfg` and the build recipe can be defined in a build script called `setup.py`
-    - `setup.cfg` consists of details like name of the package, version of package, files to include in the package.
-    - `setup.py` consists of configuration information as well as information on dependencies and details to pass on to PyPI after publishing
+- The `setuptools` build recipe can be defined in a build script called `setup.py`
+- `setup.py` consists of configuration information as well as information on dependencies and details to pass on to PyPI after publishing
+- An example of `setup.py` is:
+
+```bash
+import setuptools
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="YOUR-USERNAME-SSE-package",
+    version="0.0.1",
+    author="Your Name",
+    author_email="Your Email",
+    description="A small description",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/Simulation-Software-Engineering/test-exercise-packaging",
+    project_urls={
+        "Bug Tracker": "https://github.com/Simulation-Software-Engineering/test-exercise-packaging/issues",
+    },
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
+    python_requires=">=3.6",
+)
+```
 
 ---
 

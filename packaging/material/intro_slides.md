@@ -9,7 +9,7 @@ slideOptions:
 
 <style>
   .reveal strong {
-  font-weight: bold;
+    font-weight: bold;
     color: orange;
   }
   .reveal p {
@@ -23,13 +23,13 @@ slideOptions:
   }
 </style>
 
-# Introduction to packaging
+# Introduction to Packaging
 
 ---
 
 ## Learning goals of chapter
 
-- Understanding the necessity to somehow package code written in a crude way
+- Understanding why a majority of code is packaged
 - Being able to determine the type of packaging required for the code
 - Modifying code and packaging it according to a standardization
 - Uploading code to a remote package managing platform and testing the installation
@@ -78,12 +78,9 @@ slideOptions:
     - [CMake](https://cmake.org/) <span>: mostly for C, C++ projects<!-- .element: class="fragment" data-fragment-index="1" --></span>
     - [Spack](https://spack.io/) <span>: a package management tool mostly for supercomputing centers<!-- .element: class="fragment" data-fragment-index="1" --></span>
     - [Conan](https://conan.io/) <span>: open-source package manager for C and C++ development<!-- .element: class="fragment" data-fragment-index="1" --></span>
-<span>
-- We concentrate on Python code package managers in this lecture:
-    - Packaging Python codes:
-    - [PyPI](https://pypi.org/) and [pip](https://pypi.org/project/pip/)
-    - [Conda](https://docs.conda.io/en/latest/)
-    <!-- .element: class="fragment" data-fragment-index="2" --></span>
+- <span>We concentrate on Python code package managers in this lecture:<!-- .element: class="fragment" data-fragment-index="2" --></span>
+    - <span> [PyPI](https://pypi.org/) and [pip](https://pypi.org/project/pip/)<!-- .element: class="fragment" data-fragment-index="2" --></span>
+    - <span> [Conda](https://docs.conda.io/en/latest/)<!-- .element: class="fragment" data-fragment-index="2" --></span>
 
 ---
 

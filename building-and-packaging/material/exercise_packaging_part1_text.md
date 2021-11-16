@@ -20,6 +20,8 @@ In this exercise you will convert a raw Python code into a packaged code which i
 - Ensure that you have access to the exercise repository
 - Clone the repository and create a branch with the name `YOUR-USERNAME-packaging`
 - Open the file `solver.py` and go through the file and try to understand the code components
+- Install `pip`
+- Install NumPy and Matplotlib with `pip`. The installation instructions can be found on the webpages
 - Run the code using `python3 solver.py` and observe the output
 - Take a few minutes to play around with some of the parameters in the solver file and observe how the output changes
 - If you are interested in the theoretical background of the code, please have a look [here](https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/)

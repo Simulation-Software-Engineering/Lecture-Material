@@ -139,9 +139,10 @@ python_requires = >=3.6
 where = solver
 ```
 
+---
+
 ## setup.py
 
-- We will use [setuptools](https://pypi.org/project/setuptools/) to define the installation recipe for the package
 - The `setuptools` build recipe can be defined in a build script called `setup.py`
 - `setup.py` consists of configuration information as well as information on dependencies and details to pass on to PyPI after publishing
 - An example of `setup.py` is:

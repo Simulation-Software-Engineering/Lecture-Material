@@ -49,33 +49,33 @@ See instruction in the introduction to this section.
 While the "Ubuntu Server 20.04" installation image is downloading you can already prepare the virtual machine.
 
 - Create a new VM in VirtualBox called "Ubuntu Server".
-  - Assign 2048 MB of memory to it. If that is not possible on your machine, choose a larger or smaller amount of memory. Make sure the your virtual hard drive is large enough.
-  - A maximum size 6 GB for the virtual hard drive should be enough for this exercise. If you choose "dynamic allocation" the actual image size should not grow beyond 4 GB during this exercise. If you are very limited on disk space you can also try a smaller disk size than 6 GB.
+    - Assign 2048 MB of memory to it. If that is not possible on your machine, choose a larger or smaller amount of memory. Make sure the your virtual hard drive is large enough.
+    - A maximum size 6 GB for the virtual hard drive should be enough for this exercise. If you choose "dynamic allocation" the actual image size should not grow beyond 4 GB during this exercise. If you are very limited on disk space you can also try a smaller disk size than 6 GB.
 - After the creation the virtual machine shows up in the "VirtualBox Manager" open the settings of the VM and
-  - Inspect the settings of the virtual machine and set the video memory to 32 MB.
-  - When the Ubuntu installation image finished downloading, mount the `ubuntu-20.04.3-live-server-amd64.iso` to your virtual machine's cdrom drive (Storage -> Controller: IDE -> "Add optical drive").
+    - Inspect the settings of the virtual machine and set the video memory to 32 MB.
+    - When the Ubuntu installation image finished downloading, mount the `ubuntu-20.04.3-live-server-amd64.iso` to your virtual machine's cdrom drive (Storage -> Controller: IDE -> "Add optical drive").
 
 #### 2. Ubuntu installation process
 
 - Start the virtual machine.
 - The VM will boot from the Ubuntu image and will welcome you with a configuration program. Choose your preferred language and then choose "Start Ubuntu Server". It brings you to the installation routine. The starting process might take a short while.
 - When the boot process has finished, you will be presented with Ubuntu's installation program. Go through it carefully.
-  - Choose your preferred language and keyboard layout. Note that you cannot use your mouse in the menus, instead you have to use your keyboard.
-  - For most settings you can accept the default values Ubuntu suggests (mirror, empty proxy, using entire disk with LVM group, storage configuration etc.)
-  - After verifying that Ubuntu wants to use the virtual hard drive, confirm formatting of the virtual hard drive ("Confirm destructive action") when asked so.
+   - Choose your preferred language and keyboard layout. Note that you cannot use your mouse in the menus, instead you have to use your keyboard.
+    - For most settings you can accept the default values Ubuntu suggests (mirror, empty proxy, using entire disk with LVM group, storage configuration etc.)
+    - After verifying that Ubuntu wants to use the virtual hard drive, confirm formatting of the virtual hard drive ("Confirm destructive action") when asked so.
 - When setting up your user, please use your GitLab username, e.g. `jaustar`, as username and choose the username + VM, e.g. `jaustarvm`, as the server's name. The password you can choose freely, but it cannot be empty. If you do not feel creative, use `vm` as password.
 - When you are asked about the SSH Setup, you can decide whether you want to activate the `Install OpenSSH Server` option (using spacebar) or not. If you want to test out the SSH connection to the VM (optional task), you can activate it now. If you do not activate it here, you can still install the OpenSSH server later.
 - In the next window, skip all suggested "Featured Server Snaps" to keep the size of the image minimal. It suggests common software used on the Ubuntu Server edition, such as Docker, for example. However, we do not need it here. Confirming your choice will start the installation procedure.
 - The installation procedure might take a while since it will also install security updates. You can already start reading on the subsequent sections.
 - After the installation has finished confirm the reboot with "Reboot Now".
-  - Ubuntu should complain that it cannot unmount the cdrom drive. Check in the settings of your VM that VirtualBox has unmounted the `ubuntu-20.04.3-live-server-amd64.iso` image and confirm the reboot by pressing enter. If the image is still mounted, please shutdown the VM (Machine -> ACPI Shutdown), unmount the image manually and boot the VM again.
+    - Ubuntu should complain that it cannot unmount the cdrom drive. Check in the settings of your VM that VirtualBox has unmounted the `ubuntu-20.04.3-live-server-amd64.iso` image and confirm the reboot by pressing enter. If the image is still mounted, please shutdown the VM (Machine -> ACPI Shutdown), unmount the image manually and boot the VM again.
 
 #### 3. Installation of neofetch
 
 - After (re)booting you will be greeted by the Ubuntu login screen. If it looks like a mess press `CTRL-C` to clear the screen. You might have to wait for a moment and maybe switch in and out of the VM's window for it to be refreshed properly.
 - Login using your username and password.
 - We want to install [`neofetch`](https://github.com/dylanaraps/neofetch) which prints the system's information to the terminal and take a screenshot of this.
-  - Install `neofetch` via `sudo apt update && sudo apt install -y neofetch`. This command will download and install `neofetch` using the package manager [`apt`](https://wiki.debian.org/Apt).
+    - Install `neofetch` via `sudo apt update && sudo apt install -y neofetch`. This command will download and install `neofetch` using the package manager [`apt`](https://wiki.debian.org/Apt).
 
 #### 4. Running neofetch and Taking a Screenshot (VirtualBox)
 
@@ -88,11 +88,11 @@ Congratulations. You have successfully set up a virtual machine, installed Ubunt
 
 - Go to the SIM GitLab Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-virtual-machines). You will find an example issue. Your issue should look similar in terms of title, labels etc.
 - Open the issue.
-  - As title choose "[`USERNAME`] Ubuntu Server Installation"
-  - Attach the screenshot ("Attach a file") that you made in the previous step. By default, the screenshot is saved in the folder of your VM.
-  - If you did **not** assign 2048 MB of memory to the VM, please mention how much memory you assigned  instead.
-  - Add the `VirtualBox` label to the issue and assign the issue to `jaustar`. Finally, create the issue.
-  - Double-check that your issue looks as expected. You can compare your issue to the example issue in the GitLab Repository.
+    - As title choose "[`USERNAME`] Ubuntu Server Installation"
+    - Attach the screenshot ("Attach a file") that you made in the previous step. By default, the screenshot is saved in the folder of your VM.
+    - If you did **not** assign 2048 MB of memory to the VM, please mention how much memory you assigned  instead.
+    - Add the `VirtualBox` label to the issue and assign the issue to `jaustar`. Finally, create the issue.
+    - Double-check that your issue looks as expected. You can compare your issue to the example issue in the GitLab Repository.
 
 ### Further Information (VirtualBox)
 
@@ -134,12 +134,12 @@ See the instructions in the task list above. The repository initially contains a
 #### 2. Initialization of the VM
 
 - We want to start from scratch so initialize a new box using `vagrant init` in inside this repository and add the resulting `Vagrantfile` to Git. Then adapt your `Vagrantfile` to incorporate the following settings:
-  - Your virtual machine must be based on the [`ubuntu/focal64` image](https://app.vagrantup.com/ubuntu/boxes/focal64). See [official boxes of Vagrant](https://www.vagrantup.com/docs/boxes#official-boxes).
-  - The name of your VM should be `USERNAME-ubuntu-server`.
-  - The [box version](https://www.vagrantup.com/docs/boxes/versioning) of your box should be set `0.1.0`.
-  - The VM must request [1024 MB of main memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration).
-  - We want a [new shared folder](https://www.vagrantup.com/docs/synced-folders/basic_usage) in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted as `/mnt/shared/` in your container.
-  - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can leave the VM. You do **not** have to stop/destroy the VM for the next step.
+    - Your virtual machine must be based on the [`ubuntu/focal64` image](https://app.vagrantup.com/ubuntu/boxes/focal64). See [official boxes of Vagrant](https://www.vagrantup.com/docs/boxes#official-boxes).
+    - The name of your VM should be `USERNAME-ubuntu-server`.
+    - The [box version](https://www.vagrantup.com/docs/boxes/versioning) of your box should be set `0.1.0`.
+    - The VM must request [1024 MB of main memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration).
+    - We want a [new shared folder](https://www.vagrantup.com/docs/synced-folders/basic_usage) in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted as `/mnt/shared/` in your container.
+    - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can leave the VM. You do **not** have to stop/destroy the VM for the next step.
 
 #### 3. Extending the VMs Configuration
 
@@ -147,9 +147,9 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 
 - Create a new file with the name `testfile` and add it to the repository. The file must contain your `USERNAME` as text. Add the file to your box using the [file provisioner](https://www.vagrantup.com/docs/provisioning/file) and place it in the home directory of the `vagrant` user (`${HOME}`).
 - Extend the file `bootstrap.sh` for provisioning your box. It should contain commands that you would usually use on the command line like in the VirtualBox task. The script must do the follwing:
-  - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`. You can achieve this by adding `export ENV_TEST_VARIABLE=USERNAME` to the `.bashrc` file which resides in the home directory of `vagrant` user.
-  - Install `neofetch` as you did in the VirtualBox task.
-  - **Note:** In the `bootstrap.sh` you do not have to prefix commands with `sudo` since the script is executed with superuser rights when Vagrant provisions the box.
+    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`. You can achieve this by adding `export ENV_TEST_VARIABLE=USERNAME` to the `.bashrc` file which resides in the home directory of `vagrant` user.
+    - Install `neofetch` as you did in the VirtualBox task.
+    - **Note:** In the `bootstrap.sh` you do not have to prefix commands with `sudo` since the script is executed with superuser rights when Vagrant provisions the box.
 
         The `booststrap.sh` script must be run by the [shell provisioner](https://www.vagrantup.com/docs/provisioning/shell).
 - Rebuild your Vagrant box using the provisioning steps. Make sure that the software is installed, all files are present and the environment variable is set.
@@ -163,13 +163,13 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 #### 5. Creating a Merge Request (Vagrant)
 
 - After checking your Vagrant box carefully, please open a merge request in the GitHub Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-virtual-machines):
-  - As title, choose "[`USERNAME`] Vagrant Box Provisioning".
-  - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`). Do not add the hidden folder `.vagrant` to Git.
-  - Attach the screenshot ("Attach a file") that you made in the previous step.
-  - Add the label `Vagrant` label to the issue and assign the issue to `jaustar`.
-  - Double-check that all files are in the repository and up to date.
-  - Double-check that the source (the new branch on your fork) and the target branch (`main` of original repo) of the merge request is correct.
-  - If everything looks good, create the merge request.
+    - As title, choose "[`USERNAME`] Vagrant Box Provisioning".
+    - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`). Do not add the hidden folder `.vagrant` to Git.
+    - Attach the screenshot ("Attach a file") that you made in the previous step.
+    - Add the label `Vagrant` label to the issue and assign the issue to `jaustar`.
+    - Double-check that all files are in the repository and up to date.
+    - Double-check that the source (the new branch on your fork) and the target branch (`main` of original repo) of the merge request is correct.
+    - If everything looks good, create the merge request.
 
 ### Further Information (Vagrant)
 
@@ -185,10 +185,10 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 - [Vagrant Introduction](https://www.vagrantup.com/intro)
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
 - Issue with windows and vagrant: ```VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole```
-  - Solution described in this [stackoverflow thread](https://stackoverflow.com/questions/37955942/vagrant-up-vboxmanage-exe-error-vt-x-is-not-available-verr-vmx-no-vmx-code)
-  - Basically run (in powershell as admin): ```bcdedit /set hypervisorlaunchtype off```
-  - Restart computer
-  - And run (in powershell as admin): ```bcdedit /set hypervisorlaunchtype auto```
+    - Solution described in this [stackoverflow thread](https://stackoverflow.com/questions/37955942/vagrant-up-vboxmanage-exe-error-vt-x-is-not-available-verr-vmx-no-vmx-code)
+    - Basically run (in powershell as admin): ```bcdedit /set hypervisorlaunchtype off```
+    - Restart computer
+    - And run (in powershell as admin): ```bcdedit /set hypervisorlaunchtype auto```
 
 ## Containers Using Docker
 

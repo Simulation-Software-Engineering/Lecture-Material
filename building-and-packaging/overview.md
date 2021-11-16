@@ -1,4 +1,4 @@
-# Code Packaging
+# Building and Packaging
 
 Learning goals:
 
@@ -11,11 +11,10 @@ Learning goals:
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 15 minutes | poll | [packaging_quiz.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/packaging_quiz.md) |
+| 10 minutes | poll | [packaging_quiz.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/packaging_quiz.md) |
 
 - Conduct an online poll with four questions to get an impression of how much the students already know about packaging
 - Discuss results and quantify the minimum knowledge level of the class
-- **Most important question**: How do students perceive the term *packaging*?
 
 ## Introduction to packaging
 
@@ -27,7 +26,7 @@ Learning goals:
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 40 minutes | slides | [packaging_python_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/packaging_python_slides) |
+| 60 minutes | slides | [packaging_python_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/packaging_python_slides) |
 
 ## Exercise
 
@@ -48,5 +47,5 @@ Learning goals:
 - [Packaging tutorial on python.org](https://packaging.python.org/tutorials/packaging-projects/)
 - [PyPI help](https://pypi.org/help/)
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/shipping/packaging/)
-- [readthedocs guide](https://python-packaging.readthedocs.io/en/latest/)
+- ["How To Package Your Python Code" by Scott Torborg](https://python-packaging.readthedocs.io/en/latest/)
 - [Python Packaging User Guide](https://packaging.python.org/)

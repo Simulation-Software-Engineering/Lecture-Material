@@ -7,7 +7,7 @@ Which of the softwares involve some sort of packaging workflow?
 - A gaming app developed for an Android mobile system
 - The library NumPy
 - Linux kernel
-- SSE Lecture Material repo
+- SSE lecture material GitHub repository
 
 ## Packaging in the context of SSE
 
@@ -23,10 +23,8 @@ Did you ever have to use raw code written by somebody else which was hard to com
 - I perhaps noticed this once or twice
 - Never had this feeling
 
-Have you learnt about packaging code before?
+Which packaging technologies or tools have you used before?
 
-- Yes
-- No
-- Just heard or read about it and know that such a thing exists
+- Wordcloud question
 
 ## Discussion on results of survey

@@ -162,7 +162,7 @@ setuptools.setup(
     },
     classifiers=[
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: <Name of License>",
         "Operating System :: OS Independent",
     ],
     package_dir={"": "src"},
@@ -241,3 +241,7 @@ Uploading package_name_YOUR_USERNAME_HERE-0.0.1.tar.gz
 
 - The last step in the packaging pipeline is a sanity check done by installing the package that has been uploaded
 - The installation can be done by: `python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps package-name-YOUR-USERNAME-HERE`
+
+---
+
+## Summary of folder structure for packaging

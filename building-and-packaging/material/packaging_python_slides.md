@@ -23,7 +23,7 @@ slideOptions:
   }
 </style>
 
-# How to Prepare a Python Code for Packaging
+# Packaging a Python Code
 
 ---
 
@@ -38,17 +38,19 @@ from setuptools import setup
 
 setup(
     name="package-name",
-    version="0.0.1",
+    version="<version-number>",
     author="Your Name",
     author_email="Your Email",
     description="A small description",
     url="package-website-url",
-    package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src"),
+    package_dir={"": "<directory-name>"},
+    packages=setuptools.find_packages(where="<directory-name>"),
     python_requires=">=3.6",
 )
 
 ```
+
+---
 
 ## Why is setup.py not the best way?
 
@@ -79,7 +81,8 @@ Yes! Use pip!
 - When `pip install package-name` is run, pip chooses a distribution file and installs it in the environment
 - Doing `python -m pip install package-name` is basically the same as `pip install package-name`
 - pip tracks metadata to allow for easy uninstallation and updating of packages
-- pip is bundled together with Python 3.x, making it even easier to use
+- pip is bundled together with Python 3.x, making it even more easier to use
+- pip can install a package from a source distribution (`.tar.gz`) or a wheel distribution (`.whl`)
 
 ---
 
@@ -114,14 +117,14 @@ Yes! Use pip!
 - Most essential component of packaging is file structure. Basic file structure is as follows:
 
 ```bash
-package_name/
+generic_folder_name/
 └── src/
     └── package_name/
         ├── __init__.py
         └── solver.py
 ```
 
-- The file `__init__.py` is required to import the `src/` as a package. This file is mostly empty
+- The file `__init__.py` is required to import the `package_name/` as a package. This file is mostly empty
 - `solver.py` will contain the code developed by the user
 
 ---
@@ -131,10 +134,9 @@ package_name/
 - Once the file structuring is complete, the repository will look like:
 
 ```bash
-package_name/
+generic_folder_name/
 ├── LICENSE
 ├── setup.py
-├── setup.cfg
 ├── README.md
 ├── src/
 │   └── package_name/
@@ -143,78 +145,49 @@ package_name/
 └── tests/
 ```
 
-- We will now look at individual components in greater detail
+<span>
+Lets have a detailed look at individual files in this folder structure
+<!-- .element: class="fragment" data-fragment-index="1" --></span>
 
 ---
 
-## setup.cfg
+## Additional options in setup.py 1/2
 
-- We will use [setuptools](https://pypi.org/project/setuptools/) to define the installation recipe for the package
-- `setuptools` can be configured using a config script called `setup.cfg`
-- `setup.cfg` consists of details like name of the package, version of package, files to include in the package and more.
-- An example of `setup.cfg` is:
+- [Classifiers](https://pypi.org/classifiers/): additional metadata for the version of the package
+- Defined as part of [PEP 303](https://www.python.org/dev/peps/pep-0301/#distutils-trove-classification)
+- Example:
 
 ```bash
-[metadata]
-name = example-pkg-YOUR-USERNAME-HERE
-version = 0.0.1
-author = <name>
-author_email = <email>
-description = <Add your description here>
-long_description = file: README.md
-long_description_content_type = text/markdown
-url = https://github.com/Simulation-Software-Engineering/test-exercise-packaging
-project_urls =
-    Bug Tracker = https://github.com/Simulation-Software-Engineering/test-exercise-packaging/issues
-classifiers =
-    Programming Language :: Python :: 3
-    License :: OSI Approved :: <Name of license>
-    Operating System :: OS Independent
+from setuptools import setup
 
-[options]
-package_dir =
-    = solver
-packages = find:
-python_requires = >=3.6
-
-[options.packages.find]
-where = solver
+setup(
+    ...
+    classifiers=[
+        "Programming Language :: Python :: <Python-version>",
+        "License :: OSI Approved :: <Name of License>",
+        "Operating System :: <OS's on which this package runs>",
+    ],
+    ...
+)
 ```
 
 ---
 
-## setup.py
+## Additional options in setup.py 2/2
 
-- The `setuptools` build recipe can be defined in a build script called `setup.py`
-- `setup.py` consists of configuration information as well as information on dependencies and details to pass on to PyPI after publishing
-- An example of `setup.py` is:
+- The file `README.md` can be passed as a long description in the following way:
 
 ```bash
-import setuptools
+from setuptools import setup
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-setuptools.setup(
-    name="YOUR-USERNAME-SSE-package",
-    version="0.0.1",
-    author="Your Name",
-    author_email="Your Email",
-    description="A small description",
+setup(
+    ...
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Simulation-Software-Engineering/test-exercise-packaging",
-    project_urls={
-        "Bug Tracker": "https://github.com/Simulation-Software-Engineering/test-exercise-packaging/issues",
-    },
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: <Name of License>",
-        "Operating System :: OS Independent",
-    ],
-    package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src"),
-    python_requires=">=3.6",
+    ...
 )
 ```
 
@@ -238,17 +211,13 @@ setuptools.setup(
 
 ## Creating distribution archives
 
-- We need to convert the folder sturcture that we have into an archive file system which the end user can download and install on their system
-- To do this we will use the package builder [build](https://pypa-build.readthedocs.io/en/stable/index.html) which was introduced in [PEP 517](https://www.python.org/dev/peps/pep-0517/)
-- These archive files are finally uploaded to PyPI and can be installed by pip
-- The disctribution archives are generated by running the command `python3 setup.py sdist` in the `package_name/` repository
-- The following directory and files will be generated in the repository:
-
-```bash
-dist/
-  package_name_YOUR_USERNAME_HERE-0.0.1-py3-none-any.whl
-  package_name_YOUR_USERNAME_HERE-0.0.1.tar.gz
-```
+- The project needs to be converted to distribution archives so that pip can install them
+- There are two ways to create these archives:
+    - Using the package builder [build](https://pypa-build.readthedocs.io/en/stable/index.html) which was introduced in [PEP 517](https://www.python.org/dev/peps/pep-0517/)
+    - Using the packaging standard [wheel](https://wheel.readthedocs.io/en/stable/) which was introduced in [PEP 427](https://www.python.org/dev/peps/pep-0427/)
+- A source distribution archive file (`package-name-<tags>.tar.gz`) can be generated by running the command `python3 setup.py sdist` in the `package_name/` repository
+- A wheel archive file (`package-name-<tags>.whl`) can be generated by running the command `python3 setup.py bdist_wheel` in the `package_name/` repository
+- In both cases the files will be generated in a folder `package_name/dist/`
 
 ---
 
@@ -266,20 +235,19 @@ dist/
 
 ## Uploading the distribution archives 2/2
 
-- Before using TestPyPI (or PyPI) one needs an account and a PyPI API Token
-- Account generation is straightforward through a [registration procedure](https://test.pypi.org/account/register/)
-- API Token generation is also [a similar procedure](https://test.pypi.org/account/login/?next=%2Fmanage%2Faccount%2F#api-tokens)
+- Before using TestPyPI (or PyPI) you need an account and a PyPI API Token
+- Account creation and API Token generation is straightforward through the [registration page](https://test.pypi.org/account/register/)
 - The token `__token__` is the username and the token value is the password required for uploading
 - Uploading to TestPyPI can be done using the command: `python3 -m twine upload --repository testpypi dist/*`
-- The upload looks something like:
+- The uploading process looks something like:
 
 ```bash
 Uploading distributions to https://test.pypi.org/legacy/
 Enter your username: [your username]
-Enter your password:
-Uploading package_name_YOUR_USERNAME_HERE-0.0.1-py3-none-any.whl
+Enter your password: [your password]
+Uploading package_name-0.0.1-py3-none-any.whl
 100%|█████████████████████| 4.65k/4.65k [00:01<00:00, 2.88kB/s]
-Uploading package_name_YOUR_USERNAME_HERE-0.0.1.tar.gz
+Uploading package_name-0.0.1.tar.gz
 100%|█████████████████████| 4.25k/4.25k [00:01<00:00, 3.05kB/s]
 ```
 
@@ -288,11 +256,21 @@ Uploading package_name_YOUR_USERNAME_HERE-0.0.1.tar.gz
 ## Installing the uploaded package
 
 - The last step in the packaging pipeline is a sanity check done by installing the package that has been uploaded
-- The installation can be done by: `python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps package-name-YOUR-USERNAME-HERE`
+- The installation can be done by:
+
+```bash
+python3 -m pip install --index-url https://test.pypi.org/simple/ <package-name>
+```
 
 ---
 
-## Important takeaway
+## Outlook: Conda
+
+- 
+
+---
+
+## Important takeaways
 
 Packaging involves two central work packages:
 

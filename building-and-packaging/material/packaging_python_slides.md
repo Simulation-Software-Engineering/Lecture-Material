@@ -109,10 +109,6 @@ Yes! Use pip!
 
 ---
 
-## Questions?
-
----
-
 ## File structure for code packaging 1/2
 
 - Most essential component of packaging is file structure. Basic file structure is as follows:
@@ -120,7 +116,7 @@ Yes! Use pip!
 ```bash
 package_name/
 └── src/
-    └── solver/
+    └── package_name/
         ├── __init__.py
         └── solver.py
 ```
@@ -141,7 +137,7 @@ package_name/
 ├── setup.cfg
 ├── README.md
 ├── src/
-│   └── solver/
+│   └── package_name/
 │       ├── __init__.py
 │       └── solver.py
 └── tests/

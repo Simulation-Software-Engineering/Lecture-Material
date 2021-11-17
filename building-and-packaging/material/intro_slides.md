@@ -43,13 +43,13 @@ slideOptions:
 
 ## What is packaging?
 
-- Standalone code is easy for the developer to understand but quite hard for everyone else to use
-- Packaging is a workflow to convert a code into a standardized distributable software
+- Standalone code is easy for the developer to understand but quite hard for everyone else to use.
+- Packaging is a workflow to convert a code into a standardized distributable software.
 - Broadly code can be made standard in various ways:
     - Packaging according to a standardized approach
     - Providing an installation recipe, for example, using CMake / make (`make install`)
     - Bundling code into an app or software with some UI
-- In this first lecture we will look at **packaging according to a standardized approach**
+- In this first lecture we will look at **packaging according to a standardized approach**.
 
 ---
 
@@ -64,7 +64,7 @@ slideOptions:
 
 ## Why should we package code? 2/2
 
-- Packaging is basically *standardization* of a raw code
+- Packaging is basically *standardization* of a raw code.
 - Main reasons for packaging:
     - Increase usability and sustainability
     - Ease of distribution and maintenance
@@ -75,7 +75,7 @@ slideOptions:
 
 ## Building and packaging tools
 
-- First step: figuring out what type of building or packaging standard fits best for your code
+- First step is finding the right type of building or packaging standard fits best for your code.
 - There are several (overlapping) options:
     - One of the many Linux package managers: apt, dpkg, yum, RPM Package Manager and many more ...
     - [CMake](https://cmake.org/) <span>: building / installation / packaging tool mostly for C, C++ projects<!-- .element: class="fragment" data-fragment-index="1" --></span>
@@ -98,15 +98,15 @@ There are many more tools out there!
 
 ## Why do we particularly look at packaging of Python codes?
 
-- Python is widely used in research software and particularly in simulation software
-- A finetuned packaging workflow with PyPI and `pip` is already well established in the community
+- Python is widely used in research software and particularly in simulation software.
+- A finetuned packaging workflow is already well established in the community.
 - Various examples of packaged codes already exist: [NumPy](https://pypi.org/project/numpy/), [PyMOR](https://pypi.org/project/pymor/), [fenicsprecice](https://pypi.org/project/fenicsprecice/) and more ...
 
 ---
 
 ## Key takeaways
 
-- Packaging or creating build recipe for your code is generally a good idea
-- There are several tools / methods to do this
-- Most of these tools / methods are customized for specific languages
-- We will concentrate on packaging of Python code
+- Packaging or creating build recipe for your code is generally a good idea.
+- There are several tools / methods to do this.
+- Most of these tools / methods are customized for specific languages.
+- We will concentrate on packaging of Python code.

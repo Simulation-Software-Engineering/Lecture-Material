@@ -93,5 +93,7 @@ slideOptions:
 
 ## Key takeaways
 
-- Packaging or having a defined build recipe is generally a good idea for your code
-- 
+- Packaging or creating build recipe for your code is generally a good idea
+- There are several tools / methods to do this
+- Most of these tools / methods are customized for specific languages
+- We will concentrate on packaging of Python code

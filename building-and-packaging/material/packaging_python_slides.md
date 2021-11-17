@@ -23,7 +23,63 @@ slideOptions:
   }
 </style>
 
-# How to prepare a Python code for packaging
+# How to Prepare a Python Code for Packaging
+
+---
+
+## Using setup.py to package Python code
+
+- `setup.py` allows you to install packages by running `python setup.py install`
+- `setup.py` is written using [setuptools](https://pypi.org/project/setuptools/)
+- Example:
+
+```bash
+from setuptools import setup
+
+setup(
+    name="package-name",
+    version="0.0.1",
+    author="Your Name",
+    author_email="Your Email",
+    description="A small description",
+    url="package-website-url",
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
+    python_requires=">=3.6",
+)
+
+```
+
+## Why is setup.py not the best way?
+
+- Before doing `python setup.py install` you have to manually search and install dependencies
+- A package installed by `setup.py` needs to be manually maintained and uninstalled if required
+- Requires manual downloading of files from the package website
+
+<span>
+Is there a better way?
+<!-- .element: class="fragment" data-fragment-index="1" --></span>
+
+<span>
+Yes! Use pip!
+<!-- .element: class="fragment" data-fragment-index="2" --></span>
+
+---
+
+## What is pip?
+
+- pip is a package installer to install packages from the [Python Package Index PyPI]((https://pypi.org/))
+- pip is itself a [package](https://pypi.org/project/pip/) which is available on PyPI
+- pip is open-source and is developed on [GitHub](https://github.com/pypa/pip)
+
+---
+
+## Using pip
+
+- When `pip install package-name` is run, pip chooses a distribution file and installs it in the environment
+- Doing `python -m pip install package-name` is basically the same as `pip install package-name`
+- pip tracks metadata to allow for easy uninstallation and updating of packages
+- pip is bundled together with Python 3.x, making it even easier to use
 
 ---
 
@@ -40,21 +96,6 @@ slideOptions:
 ## Example of PyPI package: fenicsprecice
 
 - Having a look at [fenicsprecice](https://pypi.org/project/fenicsprecice/)
-
----
-
-## What is pip?
-
-- pip is sometimes referred to as a *package installer* and sometimes as a *package management system*
-- For all practical purposes it is an installer for packages available on PyPI
-- pip is itself a [package](https://pypi.org/project/pip/) which is available on PyPI
-- pip is open-source and is developed on [GitHub](https://github.com/pypa/pip)
-
----
-
-## Using pip
-
-
 
 ---
 

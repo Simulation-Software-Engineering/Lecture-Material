@@ -36,6 +36,11 @@ slideOptions:
 
 ---
 
+## Lets start with a survey
+
+- https://app.sli.do/event/joel1av7
+- **ID: 665367**
+
 ## What is packaging?
 
 - Standalone code is easy for the developer to understand but quite hard for everyone else to use
@@ -79,8 +84,10 @@ slideOptions:
 
 <span>
 We concentrate on Python code package managers in this lecture:
-    - [PyPI](https://pypi.org/) and [pip](https://pypi.org/project/pip/)
-    - [Conda](https://docs.conda.io/en/latest/)
+
+- [PyPI](https://pypi.org/) and [pip](https://pypi.org/project/pip/)
+- [Conda](https://docs.conda.io/en/latest/)
+
 <!-- .element: class="fragment" data-fragment-index="2" --></span>
 
 <span>

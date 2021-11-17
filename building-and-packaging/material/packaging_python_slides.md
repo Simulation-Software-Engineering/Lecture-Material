@@ -32,8 +32,7 @@ slideOptions:
 - [PyPI](https://pypi.org/) = **The Python Package Index** is a repository of software developed in the Python community
 - PyPI itself is developed on GitHub through another software called [Warehouse](https://github.com/pypa/warehouse)
 - PyPI has a informative [public dashboard](https://p.datadoghq.com/sb/7dc8b3250-85dcf667bd?from_ts=1636972832484&to_ts=1636976432484&live=true) to show its activity
-- Who maintains PyPI and pip? A big community!
-- A major advantage is the active maintenance of PyPI, which is fueled by a big community
+- A major advantage is the active maintenance of PyPI and the packages indexed in it
 - Not to be confused with **PyPA** which is Python Packaging Authority, a working group which maintains projects in Python packaging
 
 ---
@@ -47,18 +46,23 @@ slideOptions:
 ## What is pip?
 
 - pip is sometimes referred to as a *package installer* and sometimes as a *package management system*
-- For all practical purposes it is an installer for packages available at PyPI
+- For all practical purposes it is an installer for packages available on PyPI
 - pip is itself a [package](https://pypi.org/project/pip/) which is available on PyPI
 - pip is open-source and is developed on [GitHub](https://github.com/pypa/pip)
-- pip has many more things which are worth exploring! [Look here!](https://pip.pypa.io/en/latest/development/)
+
+---
+
+## Using pip
+
+
 
 ---
 
 ## Python Enhancement Proposals (PEPs)
 
-- PEP is an evolving deisgn document which provides information regarding new features of Python, new processes and new environments
-- PEPs typically involve concise technical information which also acts as standardizations
-- Packaging workflows are also standardized in through multiple PEPs. Examples are:
+- PEP is an evolving design document which provides information regarding new features of Python, new processes and new environments
+- PEPs typically involve concise technical information, which also acts as standardizations
+- Packaging workflows are also standardized in through multiple PEPs. Example:
     - [PEP 427](https://www.python.org/dev/peps/pep-0427/) introduces the built-package format "wheel"
 - It is always a good idea to look for **PEP** conventions before trying out processes
 
@@ -189,7 +193,7 @@ setuptools.setup(
 
 ## README.md
 
-- A `README.md` file typically involves detailed description about the package and also the installation procedure#
+- A `README.md` file typically gives a description of the package, code structure, meta information, the installation procedure and more ...
 - The `setuptools` configuration loads the `README.md` file to get the `long_description`, hence it is mandatory to include this file
 - Newer versions of `setuptools` also include this file automatically
 

@@ -2,10 +2,10 @@
 
 Learning goals:
 
-- Understanding the necessity to somehow package code written in a crude way
-- Being able to determine the type of packaging required for the code
-- Modifying code and packaging it according to a standardization
-- Uploading code to a remote package managing platform and testing the installation
+- What is code packaging and which technologies are available to package code
+- How is Python code packaged for uploading to PyPI and installation with pip
+- How are software packages providedvia common packaging approaches (pip, apt, npm)
+- How are software packages provided for high-performance computing (Spack, EasyBuild)
 
 ## Survey
 

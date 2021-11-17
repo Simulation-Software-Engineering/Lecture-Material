@@ -29,10 +29,8 @@ slideOptions:
 
 ## Learning goals of chapter
 
-- Understanding why a majority of code is packaged
-- Being able to determine the type of packaging required for the code
-- Modifying code and packaging it according to a standardization
-- Uploading code to a remote package managing platform and testing the installation procedure
+- What is code packaging and which technologies are available to package code
+- How is Python code packaged for uploading to PyPI and installation with pip
 
 ---
 
@@ -81,18 +79,12 @@ slideOptions:
     - [CMake](https://cmake.org/) <span>: building / installation / packaging tool mostly for C, C++ projects<!-- .element: class="fragment" data-fragment-index="1" --></span>
     - [Spack](https://spack.io/) <span>: a package management tool mostly for supercomputing centers<!-- .element: class="fragment" data-fragment-index="1" --></span>
     - [Conan](https://conan.io/) <span>: open-source package manager for C and C++ development<!-- .element: class="fragment" data-fragment-index="1" --></span>
-
-<span>
-We concentrate on Python code package managers in this lecture:
-
-- [PyPI](https://pypi.org/) and [pip](https://pypi.org/project/pip/)
-- [Conda](https://docs.conda.io/en/latest/)
-
-<!-- .element: class="fragment" data-fragment-index="2" --></span>
+    - [PyPI](https://pypi.org/) and [pip](https://pypi.org/project/pip/)
+    - [Conda](https://docs.conda.io/en/latest/)
 
 <span>
 There are many more tools out there!
-<!-- .element: class="fragment" data-fragment-index="3" --></span>
+<!-- .element: class="fragment" data-fragment-index="2" --></span>
 
 ---
 
@@ -106,7 +98,7 @@ There are many more tools out there!
 
 ## Key takeaways
 
-- Packaging or creating build recipe for your code is generally a good idea.
-- There are several tools / methods to do this.
-- Most of these tools / methods are customized for specific languages.
+- Packaging or creating build recipe of a code is common and there exist tools to do this
+- Many options in packaging / building tools.
+- Most of these tools / methods are customized for use cases.
 - We will concentrate on packaging of Python code.

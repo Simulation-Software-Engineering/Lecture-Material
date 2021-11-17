@@ -35,6 +35,7 @@ slideOptions:
 
 ```bash
 from setuptools import setup
+import setuptools
 
 setup(
     name="package-name",
@@ -299,9 +300,9 @@ td {
 
 ## Important takeaways
 
-Packaging involves two central work packages:
+Packaging of Python code involves two central work packages:
 
-- Creation of a standardized folder structure to convert a raw code into a project.
+- Creation of a standardized folder structure to convert a raw Python code into a project.
 - Creating and uploading distribution archives to a packaging index.
 
 We saw the process of packaging and uploading to PyPI.

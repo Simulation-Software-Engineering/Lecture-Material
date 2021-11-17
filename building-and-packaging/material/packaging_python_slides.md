@@ -83,6 +83,7 @@ Yes! Use pip!
 - pip tracks metadata to allow for easy uninstallation and updating of packages
 - pip is bundled together with Python 3.x, making it even more easier to use
 - pip can install a package from a source distribution (`.tar.gz`) or a wheel distribution (`.whl`)
+- Do not use `sudo pip install`! Various security issues with doing so. Go for `pip install --user <package-name>`
 
 ---
 
@@ -90,7 +91,7 @@ Yes! Use pip!
 
 - [PyPI](https://pypi.org/) = **The Python Package Index** is a repository of software developed in the Python community
 - PyPI itself is developed on GitHub through another software called [Warehouse](https://github.com/pypa/warehouse)
-- PyPI has a informative [public dashboard](https://p.datadoghq.com/sb/7dc8b3250-85dcf667bd?from_ts=1636972832484&to_ts=1636976432484&live=true) to show its activity
+- PyPI has a informative [public dashboard](https://p.datadoghq.com/sb/7dc8b3250-85dcf667bd) to show its activity
 - A major advantage is the active maintenance of PyPI and the packages indexed in it
 - Not to be confused with **PyPA** which is Python Packaging Authority, a working group which maintains projects in Python packaging
 
@@ -106,7 +107,7 @@ Yes! Use pip!
 
 - PEP is an evolving design document which provides information regarding new features of Python, new processes and new environments
 - PEPs typically involve concise technical information, which also acts as standardizations
-- Packaging workflows are also standardized in through multiple PEPs. Example:
+- Packaging workflows are also standardized through PEPs. Example:
     - [PEP 427](https://www.python.org/dev/peps/pep-0427/) introduces the built-package format "wheel"
 - It is always a good idea to look for **PEP** conventions before trying out processes
 
@@ -204,8 +205,9 @@ setup(
 ## README.md
 
 - A `README.md` file typically gives a description of the package, code structure, meta information, the installation procedure and more ...
-- The `setuptools` configuration loads the `README.md` file to get the `long_description`, hence it is mandatory to include this file
+- It is common practice to parse the `README.md` to `setuptools` as a long description
 - Newer versions of `setuptools` also include this file automatically
+- This file can also be written using [reStructuredText](https://docutils.sourceforge.io/rst.html) which is part of [Docutils](https://docutils.sourceforge.io/index.html)
 
 ---
 
@@ -237,7 +239,6 @@ setup(
 
 - Before using TestPyPI (or PyPI) you need an account and a PyPI API Token
 - Account creation and API Token generation is straightforward through the [registration page](https://test.pypi.org/account/register/)
-- The token `__token__` is the username and the token value is the password required for uploading
 - Uploading to TestPyPI can be done using the command: `python3 -m twine upload --repository testpypi dist/*`
 - The uploading process looks something like:
 
@@ -259,14 +260,27 @@ Uploading package_name-0.0.1.tar.gz
 - The installation can be done by:
 
 ```bash
-python3 -m pip install --index-url https://test.pypi.org/simple/ <package-name>
+pip install --user --index-url https://test.pypi.org/simple/ <package-name>
 ```
 
 ---
 
-## Outlook: Conda
+## Conda
 
-- content
+- [Conda](https://docs.conda.io/en/latest/) is a package and environment management system which supports multiple languages
+- Conda provides a fast option to setup an isolated environment on your local system
+- Conda is configured to work with [Anaconda installers and packages](https://repo.anaconda.com/)
+- Conda is often the preferred way to run Python packages on Windows and MacOS. See example in [FEniCS on Anaconda section](https://fenicsproject.org/download/)
+
+---
+
+## Difference between Conda and pip
+
+| Feature | Conda | pip |
+| Multi-language dependency | Yes | No |
+| Package installation | Anaconda installer / download binaries | build / wheels |
+| Package availability | ~8000 | ~336,000 |
+| Virtual environment functionality | In-built environment management | No, but support for `virtualenv` |
 
 ---
 

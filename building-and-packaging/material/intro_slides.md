@@ -76,10 +76,16 @@ slideOptions:
     - [CMake](https://cmake.org/) <span>: building / installation / packaging tool mostly for C, C++ projects<!-- .element: class="fragment" data-fragment-index="1" --></span>
     - [Spack](https://spack.io/) <span>: a package management tool mostly for supercomputing centers<!-- .element: class="fragment" data-fragment-index="1" --></span>
     - [Conan](https://conan.io/) <span>: open-source package manager for C and C++ development<!-- .element: class="fragment" data-fragment-index="1" --></span>
-- <span>We concentrate on Python code package managers in this lecture:<!-- .element: class="fragment" data-fragment-index="2" --></span>
-    - <span> [PyPI](https://pypi.org/) and [pip](https://pypi.org/project/pip/)<!-- .element: class="fragment" data-fragment-index="2" --></span>
-    - <span> [Conda](https://docs.conda.io/en/latest/)<!-- .element: class="fragment" data-fragment-index="2" --></span>
-- There are many more tools out there!
+
+<span>
+We concentrate on Python code package managers in this lecture:
+    - [PyPI](https://pypi.org/) and [pip](https://pypi.org/project/pip/)
+    - [Conda](https://docs.conda.io/en/latest/)
+<!-- .element: class="fragment" data-fragment-index="2" --></span>
+
+<span>
+There are many more tools out there!
+<!-- .element: class="fragment" data-fragment-index="3" --></span>
 
 ---
 

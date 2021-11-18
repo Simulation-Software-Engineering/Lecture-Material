@@ -65,3 +65,7 @@
 - **10** [Building and Packaging Quiz](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/packaging_quiz.md)
 - **20** [Introduction to Packaging](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/intro_slides.md)
 - **60** [Packaging a Python Code](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/packaging_python_slides.md)
+
+## 5.2 -- Thu, November 18, 2021
+
+- **90** [Exercise on Packaging a Python Code](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/exercise_python_packaging_text.md)

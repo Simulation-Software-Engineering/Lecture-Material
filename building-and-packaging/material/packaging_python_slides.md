@@ -365,6 +365,7 @@ td {
 Packaging of Python code involves two central work packages:
 
 - Creation of a standardized folder structure to convert a raw Python code into a project.
-- Creating and uploading distribution archives to a packaging index.
+- Creating and uploading distribution archives.
+- Uploading distribution archives to a package index.
 
-We saw the process of packaging and uploading to PyPI.
+We saw the process of packaging and uploading to TestPyPI which is similar to uploading to the PyPI

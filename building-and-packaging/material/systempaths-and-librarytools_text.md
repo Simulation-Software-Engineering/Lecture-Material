@@ -29,7 +29,9 @@
 ### Demo
 
 - Boot up a VM (sse-docker-box)
-- Run the command `env` in a terminal. It will show all set environment variables and their value
+- Run the command `env` or `printenv` in a terminal. It will show all set environment variables and their value
+    - `printenv` can also print the value of a certain variable `printenv USER` (can be used instead of `echo $USER`)
+    - `env` has extra features for setting environment variables
 - Note that some values/environment variables are not standard since it sources my own `.bashrc`.
     - `EDITOR=vim`
     - `CODIPACKDIR=/opt/CoDiPack`
@@ -100,26 +102,42 @@ _=/usr/bin/env
     1. Show what happens if variable is empty
 
        ```bash
-       ./print_my_environment_variable.sh
+       $ ./print_my_environment_variable.sh
+       The environment variable MY_ENV_VARIABLE is empty (zero length)
        ```
 
-    2. Set the variables value just for the one command
+    2. Set the variables value just for the one command. This is probably a feature tied to using **bash**.
 
        ```bash
-       MY_ENV_VARIABLE="Hi students" ./print_my_environment_variable.sh
+       $ MY_ENV_VARIABLE="Hi students" ./print_my_environment_variable.sh
+       The environment variable MY_ENV_VARIABLE is set to
+         Hi students
        ```
 
     3. Show that the variable is indeed empty again
 
        ```bash
-       ./print_my_environment_variable.sh
+       $ ./print_my_environment_variable.sh
+       The environment variable MY_ENV_VARIABLE is empty (zero length)
        ```
 
-    4. Permanently set the value for the terminal
+    4. We can set the variable in the terminal, but without export it is not shared with child processes
 
        ```bash
-       export MY_ENV_VARIABLE="Hi students"
-       ./print_my_environment_variable.sh
+       $ MY_ENV_VARIABLE="Hi students"
+       $ echo $MY_ENV_VARIABLE
+       test
+       $ ./print_my_environment_variable.sh
+       The environment variable MY_ENV_VARIABLE is empty (zero length)
+       ```
+
+    5. Permanently set the value for the terminal
+
+       ```bash
+       $ export MY_ENV_VARIABLE="Hi students"
+       $ ./print_my_environment_variable.sh
+       The environment variable MY_ENV_VARIABLE is set to
+         Hi students
        ```
 
 ## Further reading
@@ -129,7 +147,8 @@ _=/usr/bin/env
 
 - [Official homepage of the Filesystem Hierarchy Standard](https://refspecs.linuxfoundation.org/fhs.shtml)
 - [Wikipedia entry of the Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
-
+- [How to on working with environment and shell variables](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/)
+- [Ubuntu help on environment variables](https://help.ubuntu.com/community/EnvironmentVariables)
 
 ### Talks
 

@@ -22,11 +22,27 @@ MlideOptions:
   }
 </style>
 
-# Environment Variables, Paths and How to Find Them
+
+# System paths and libraries
+
+## Environment Variables, Paths, Libraries and How to Find Them
 
 ---
 
 ## Introduction
+
+- Common functionality should not be redone the whole time
+    - Examples: C++ standard library, Python NumPy
+- Software needs to be findable
+- We had this for Python already
+
+---
+
+## Shared libraries
+
+- Code/functionality shared between executables
+    - Often needed functionality shared by many applications stored at one place
+    - Examples: `libc.so`
 
 ---
 
@@ -42,15 +58,7 @@ MlideOptions:
     - Third level hierachy level containing local data specific to host
 - There are many additional directories
 - Similar structure mirrored under `usr` and `/usr/local`
-- [Official homepage](https://refspecs.linuxfoundation.org/fhs.shtml)
-
----
-
-## Shared libraries
-
-- Code/functionality shared between executables
-    - Often needed functionality shared by many applications stored at one place
-    - Examples: `libc.so`
+- [Official homepage of FHS](https://refspecs.linuxfoundation.org/fhs.shtml)
 
 ---
 
@@ -68,12 +76,14 @@ MlideOptions:
 
   ```bash
   echo $VARIABLENAME
+  printenv VARIABLENAME
   ```
 
   e.g.
 
   ```bash
   echo $PATH
+  printenv PATH
   ```
 
 ---
@@ -84,6 +94,16 @@ MlideOptions:
 
   ```bash
   ENVVARIABLE=VALUE ./COMMAND
+  ```
+
+- Adding additional values by colon (`:`) separated list
+
+  ```bash
+  PATH=ADDITONALPATH:${PATH}
+  ```
+
+  ```
+  PATH=/home/jaustar/bin:${PATH}
   ```
 
 ---
@@ -108,3 +128,18 @@ MlideOptions:
 - `pkgconfig`
     - `pkg-conf`
     - `pkg-config`
+
+---
+
+## ldconfig
+
+- Generate links and cache to libraries
+- Can be used to inform system about new libraries at non-standard location
+    - Useful for your own codes/environments
+    - Usually automatically run by system's package manager (`apt`, `yum` etc.)
+
+---
+
+## pkgconfig
+
+---

@@ -47,14 +47,12 @@ setup(
     author="Your Name",
     description="A small description",
     url="package-website-url",
-    package_dir={"": "<directory-name>"},
-    packages=setuptools.find_packages(where="<directory-name>"),
+    package_dir={"": "src"},
+    packages=setuptools.find_packages(where="src"),
     python_requires=">=3.6",
     install_requires=["<installation dependencies>"]
 )
 ```
-
-Note: `<directory-name>` should have a folder with `<package-name>`
 
 ---
 

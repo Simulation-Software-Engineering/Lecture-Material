@@ -145,9 +145,9 @@ See the instructions in the task list above. The repository initially contains a
 
 We want to provision (`config.vm.provision`) the box in several steps. You can run the provisioning on the running VM with [`vagrant provision`](https://www.vagrantup.com/docs/cli/provision) or [`vagrant up --provision`](https://www.vagrantup.com/docs/cli/up#no-provision) to check every change you apply to the VM by the provisioning process.
 
-- Create a new file with the name `testfile` and add it to the repository. The file must contain your GitLab username as text. Add the file to your box using the [file provisioner](https://www.vagrantup.com/docs/provisioning/file) and place it in the home directory of the `vagrant` user (`${HOME}`).
+- Create a new file with the name `testfile` and add it to the repository. The file must contain your `USERNAME` as text. Add the file to your box using the [file provisioner](https://www.vagrantup.com/docs/provisioning/file) and place it in the home directory of the `vagrant` user (`${HOME}`).
 - Extend the file `bootstrap.sh` for provisioning your box. It should contain commands that you would usually use on the command line like in the VirtualBox task. The script must do the follwing:
-    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your GitLab username. You can achieve this by adding `export ENV_TEST_VARIABLE=USERNAME` to the `.bashrc` file which resides in the home directory of `vagrant` user.
+    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`. You can achieve this by adding `export ENV_TEST_VARIABLE=USERNAME` to the `.bashrc` file which resides in the home directory of `vagrant` user.
     - Install `neofetch` as you did in the VirtualBox task.
     - **Note:** In the `bootstrap.sh` you do not have to prefix commands with `sudo` since the script is executed with superuser rights when Vagrant provisions the box.
 
@@ -217,8 +217,8 @@ See the instructions in the task list above. The repository initially contains a
 
 - Currently, the [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) is empty. Edit the file such that an container image with the following properties is build:
     - Your virtual machine should be based on the [`ubuntu:20.04` image](https://hub.docker.com/_/ubuntu).
-    - Create a new file with the name `testfile` and add it to the repository. The file should contain your GitLab username as text. Add the file to your container and place it in directory `/testfiles`.
-    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your GitLab username.
+    - Create a new file with the name `testfile` and add it to the repository. The file should contain your `USERNAME` as text. Add the file to your container and place it in directory `/testfiles`.
+    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`.
     - Make sure that the default command to be executed when running the container is `/bin/bash`.
     - Install `neofetch`.
     - **Note:** In the `Dockerfile` you do not have to prefix commands such as `apt` with `sudo` since the script is executed with superuser rights.

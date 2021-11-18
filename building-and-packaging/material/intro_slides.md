@@ -39,11 +39,13 @@ slideOptions:
 - https://app.sli.do/event/joel1av7
 - **ID: 665367**
 
+---
+
 ## What is packaging?
 
 - Standalone code is easy for the developer to understand but quite hard for everyone else to use.
 - Packaging is a workflow to convert a code into a standardized distributable software.
-- Broadly code can be made standard in various ways:
+- Broadly code can be standardized in various ways. Some examples:
     - Packaging according to a standardized approach
     - Providing an installation recipe, for example, using CMake / make (`make install`)
     - Bundling code into an app or software with some UI
@@ -101,4 +103,4 @@ There are many more tools out there!
 - Packaging or creating build recipe of a code is common and there exist tools to do this
 - Many options in packaging / building tools.
 - Most of these tools / methods are customized for use cases.
-- We will concentrate on packaging of Python code.
+- In this lecture we will concentrate on packaging of Python code.

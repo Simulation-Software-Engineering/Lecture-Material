@@ -16,31 +16,23 @@ Learning goals:
 - Conduct an online poll with four questions to get an impression of how much the students already know about packaging
 - Discuss results and quantify the minimum knowledge level of the class
 
-## Introduction to packaging
+## Introduction to Packaging
 
 | Duration | Format | Material |
 | --- | --- | --- |
 | 20 minutes | slides | [intro_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/intro_slides.md) |
 
-## How to prepare a Python code for packaging
+## Packaging a Python Code
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 60 minutes | slides | [packaging_python_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/packaging_python_slides) |
+| 60 minutes | slides | [packaging_python_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/packaging_python_slides.md) |
 
 ## Exercise
 
-### Part 1: Prepare a raw code for packaging
-
 | Duration | Format | Material |
 | --- | --- | --- |
-| 50 minutes | in-class exercise | [exercise_packaging_part1_text.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/exercise_packaging_part1_text.md) |
-
-### Part 2: Upload code to TestPyPI and install it using pip
-
-| Duration | Format | Material |
-| --- | --- | --- |
-| 40 minutes | in-class exercise | [exercise_packaging_part2_text.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/exercise_packaging_part2_text.md) |
+| 90 minutes | in-class exercise | [exercise_packaging_part2_text.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/exercise_packaging_part2_text.md)
 
 ## Further reading
 

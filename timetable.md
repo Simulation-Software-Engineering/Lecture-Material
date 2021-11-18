@@ -55,3 +55,13 @@
 - Students that have a machine without Linux and or without root rights should have a virtual box session with Linux installed.
 - **75** Virtual machine and container exercise (VirtualBox, Vagrant, Docker, Singularity)
 - **15** Discussion
+
+## 4.2 -- Thu, November 11, 2021
+
+- Student presentations
+
+## 5.1 -- Thu, November 18, 2021
+
+- **10** [Building and Packaging Quiz](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/packaging_quiz.md)
+- **20** [Introduction to Packaging](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/intro_slides.md)
+- **60** [Packaging a Python Code](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/packaging_python_slides.md)

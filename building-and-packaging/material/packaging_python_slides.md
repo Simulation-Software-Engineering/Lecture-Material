@@ -53,6 +53,8 @@ setup(
 )
 ```
 
+Note: `<directory-name>` should have a folder with `<package-name>`
+
 ---
 
 ## Why is setup.py not the best way?
@@ -123,7 +125,7 @@ pip install --user <package-name>
 
 ## What is PyPI?
 
-- [PyPI](https://pypi.org/) = **The Python Package Index** is a repository of software developed in the Python community.
+- [PyPI](https://pypi.org/) = **Python Package Index** is a repository of software developed in the Python community.
 - PyPI itself is developed on GitHub through another software called [Warehouse](https://github.com/pypa/warehouse).
 - PyPI has a informative [public dashboard](https://p.datadoghq.com/sb/7dc8b3250-85dcf667bd) to show its activity.
 - A major advantage is the active maintenance of PyPI and the packages indexed in it.
@@ -156,7 +158,7 @@ generic_folder_name/
 └── src/
     └── package_name/
         ├── __init__.py
-        └── solver.py
+        └── package-code.py
 ```
 
 - The file `__init__.py` is required to import the `package_name/` as a package. This file is mostly empty
@@ -176,7 +178,7 @@ generic_folder_name/
 ├── src/
 │   └── package_name/
 │       ├── __init__.py
-│       └── solver.py
+│       └── package-code.py
 └── tests/
 ```
 
@@ -252,7 +254,7 @@ There are two ways to create these archives:
 - Using the package builder [build](https://pypa-build.readthedocs.io/en/stable/index.html) which was introduced in [PEP 517](https://www.python.org/dev/peps/pep-0517/).
 - Using the packaging standard [wheel](https://wheel.readthedocs.io/en/stable/) which was introduced in [PEP 427](https://www.python.org/dev/peps/pep-0427/).
 
-In both cases the files will be generated in a folder `package_name/dist/`.
+In both cases the files will be generated in a folder `repository/dist/`.
 
 ---
 

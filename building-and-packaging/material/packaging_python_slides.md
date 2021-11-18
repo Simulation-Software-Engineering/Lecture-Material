@@ -50,6 +50,7 @@ setup(
     package_dir={"": "<directory-name>"},
     packages=setuptools.find_packages(where="<directory-name>"),
     python_requires=">=3.6",
+    install_requires=["<installation dependencies>"]
 )
 ```
 

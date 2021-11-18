@@ -11,7 +11,7 @@ Learning goals:
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 10 minutes | poll | [packaging_quiz.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/packaging_quiz.md) |
+| 10 minutes | poll | [packaging_quiz.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_quiz.md) |
 
 - Conduct an online poll with four questions to get an impression of how much the students already know about packaging
 - Discuss results and quantify the minimum knowledge level of the class
@@ -20,19 +20,19 @@ Learning goals:
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 20 minutes | slides | [intro_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/intro_slides.md) |
+| 20 minutes | slides | [intro_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/intro_slides.md) |
 
 ## Packaging a Python Code
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 60 minutes | slides | [packaging_python_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/packaging_python_slides.md) |
+| 60 minutes | slides | [packaging_python_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_python_slides.md) |
 
 ## Exercise
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 90 minutes | in-class exercise | [exercise_packaging_part2_text.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/exercise_packaging_part2_text.md)
+| 90 minutes | in-class exercise | [exercise_python_packaging_text.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/exercise_python_packaging_text.md)
 
 ## Further reading
 

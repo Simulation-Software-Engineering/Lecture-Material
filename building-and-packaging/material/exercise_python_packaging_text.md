@@ -1,4 +1,4 @@
-# Exercise Part 1: Packaging Python Code
+# Exercise: Packaging Python Code
 
 ## Starting remarks
 

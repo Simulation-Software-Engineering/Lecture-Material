@@ -2,7 +2,6 @@
 
 ## Starting remarks
 
-- Create a branch of the [exercise repository](https://github.com/Simulation-Software-Engineering/test-exercise-packaging/tree/main) named `<your-GitLab-username>-package` and complete all the tasks on the branch.
 - Deadline for submitting this exercise is **Thursday 25th November 09:00**.
 - The code in this exercise produces plots and in order to view them you need to use a GUI-based operating system or environment.
 
@@ -25,15 +24,15 @@ In this exercise you will convert a raw Python code into a packaged code which i
 ## Step 1 - Acquiring the raw code and getting familiar with it
 
 - Ensure that you have access to the [exercise repository](https://github.com/Simulation-Software-Engineering/test-exercise-packaging/tree/main).
-- Clone the repository and create a branch with the name `<your-GitLab-username>-packaging`, for example **desaiin-package**.
+- Clone the repository and create a branch with the name `packaged-code-by-<your-GitLab-username>`, for example **packaged-code-by-desaiin**.
 - Open the file `solver.py` and go through the file and try to understand the code components.
 - Install `python >= 3.6`.
 - Install pip, build, and Twine.
 - Install NumPy and Matplotlib with `pip`. The installation instructions can be found on the webpages (link in the Prerequisities section of this document).
-- Run the code using `python3 solver.py` and observe the output.
-- You should see four plots combined into one figure. Save this figure on your system.
-- Take a few minutes to play around with some of the parameters in the solver file and observe how the output changes. For example you can change the value `D = 4.` in line 15 and try to observe changes in the output plots.
-- If you are interested in the theoretical background of the code, please have a look [in Section 7 of the "Learning Scientific Programming with Python" book](https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/).
+- Run the code using `python3 solver.py` and observe the output. You should see four plots combined into one figure. Save this figure on your system.
+- **Information about solver.py**: This code solves the diffusion equation in 2D over a square domain which is at a certain temperature and a circular disc at the center which is at a higher temperature. This code solves the diffusion equation using the Finite Difference Method. The thermal diffusivity and initial conditions of the system can be changed by the user. The code produces four plots at various timepoints of the simulation. The diffusion process can be clearly observed in these plots.
+- Take a few minutes to play around with parameters `dx`, `dy` and `D` in the solver file and observe how the value of `dt` and the output changes. Do you notice if the code takes more or less time to finish the computation? *This tuning is only for you to understand the underlying physical phenomenon and not part of the evaluation.*
+- If you are interested in the theoretical background of the code, please have a look [in Chapter 7 of the "Learning Scientific Programming with Python" book](https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/).
 
 ## Step 2 - Refactoring the code
 
@@ -51,20 +50,19 @@ solver.solve()
 ```
 
 - Once you have refactored the code, try calling the `solve()` function again through a Python script as shown above or a Python shell. Compare the plots with the plots in the figure you saved earlier. Both outputs should be identical.
-
-- The function `solve()` should take in physical parameters which the user can vary. It is always a good idea to pass important physical parameters as input arguments to a function of a simulation software because you do not want to rebuild a package every time you change a parameter.
-- Try to think which parameters would be worth changing? These are typically related to the initial condition of the system being simulated.
+- The function `solve()` should take in physical parameters which the user can vary. In this case change the parameters `dx`, `dy` and `D` such that they are passed to the `solve()` function by the user. Provide default values for all three of these parameters.
 
 ## Step 3 - Creating folder structure for packaging
 
 - Now that you have a refactored code, replicate the folder structure we learnt in the lecture to prepare the code for packaging
-- With the help of the lecture notes create additional files and arrange the files in a folder structure which is similar to what is shown in the notes.
-- There is ambiguity in how `setup.cfg` and `setup.py` are written and it is up to you to determine how much information is relevant for the code in this exercise. Also think if you really need both `setup.cfg` and `setup.py` for this exercise? Could you manage to publish the package with just one of them?
-- The `README.md` file consists of a longer description about the code and what it does. Please try to provide as much information as possible regarding the code.
+- With the help of the [lecture notes](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_python_slides.md) create additional files `setup.py`, `__init__.py`, `README.md` and the `src/` directory.
+- The `README.md` file consists of a longer description about the code and what it does. Take the information about the code from Step 1 of this exercise and add it to the README. In addition to this fill out the emtpy sections of the README with relevant information.
+- In `setup.py` name your package `<your-GitLab-username>diffusion2D`. We will use semantic versioning, so the version you are developing will be `0.0.1`. The package url is the url of the GitHub repository of this exercise code.
+- Try to put `classifiers` in your `setup()`.
 
 ## Step 4 - Create distribution packages
 
-- With reference to the lecture notes, create distribution packages for this project.
+- With reference to the lecture notes, create distribution packages for this project. Use `build` to create the distribution archives.
 - After creating the distribution packages, check the `dist/` folder to ensure that the archive files have been created.
 
 ## Step 5 - Create an account and a API Token on TestPyPI
@@ -72,13 +70,15 @@ solver.solve()
 - Create an account on [TestPyPI](https://packaging.python.org/guides/using-testpypi/).
 - Create an API Token on TestPyPI.
 - **Note down the name and token value because this is the username and password for publishing**.
+- Copy the API Token and Password and configure it on your system in the file `$HOME/.pypirc`
 
 ## Step 6 - Uploading the package
 
 - You should already have Twine installed on your system.
 - Upload the distribution archives using the commands shown in the lecture notes.
 - Go to TestPyPI and view the package which has been uploaded.
-- Take a screenshot of the TestPyPI webpage which displays your package. This screenshot will be used for submission.
+- Take a screenshot of the TestPyPI webpage which displays your package.
+- **Important**: Add the TestPyPI screenshot in the description of the pull request opened for submission.
 
 ## Step 7 - Testing the deployed package
 
@@ -86,5 +86,4 @@ solver.solve()
 
 ## Step 8 - Submitting the exercise
 
-- Open a pull request from your branch to the `main` branch of the exercise repository.
-- Add the TestPyPI screenshot in the description of the pull request.
+- Open a pull request with the name `Packaged code for PyPI by <your-GitLab-username>` from your branch to the `main` branch of the exercise repository.

@@ -38,9 +38,17 @@ In this exercise you will convert a raw Python code into a packaged code which i
 
 - It is usually a good idea to put different functionality in different files for better organization and code sustanability. We will do the same here.
 - Create a file `output.py` on the same level as `solver.py`.
-- Create two functions in the file `output.py` called `create_figure()` and `output_figures()`.
+- Create two functions in the file `output.py` called `create_plot()` and `output_plots()`.
+    - The function `create_plot()` creates one plot for a particular time stamp. In the earlier figure output this would be one of the four plots. You will find this functionality inside the time loop in `solver.py`
+    - The function `output_plots()` outputs all the four plots as one figure. You will find this functionality outside of the time loop and at the end of `solver.py`
 - Port the appropriate parts of the code pertaining to figure creation and figure output from `solver.py` into these two functions.
 - Take care to pass the appropriate arguments to both these functions. Code refactoring should not affect the functionality, that is, the refactored code should work exactly as the original `solver.py`.
+- Once the functionality is ported, you need to import it into the `solver.py`. This is done in the following way:
+
+```python
+from .output import create_plot, output_plots
+```
+
 - Once the output functionality has been separated from the solver, we need to bundle the solver itself into a function called `solve` in `solver.py`. We need to do this because later on we will call this function after importing the package:
 
 ```python

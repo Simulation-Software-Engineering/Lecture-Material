@@ -52,9 +52,9 @@ from .output import create_plot, output_plots
 - Once the output functionality has been separated from the solver, we need to bundle the solver itself into a function called `solve` in `diffusion2d.py`. We need to do this because later on we will call this function after importing the package:
 
 ```python
-from package_name import solver
+from package_name import diffusion2d
 
-solver.solve()
+diffusion2d.solve()
 ```
 
 - Once you have refactored the code, try calling the `solve()` function again through a Python script as shown above or a Python shell. Compare the plots with the plots in the figure you saved earlier. Both outputs should be identical.

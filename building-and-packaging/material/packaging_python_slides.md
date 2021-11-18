@@ -21,6 +21,10 @@ slideOptions:
   .reveal section h2 {
     color: orange;
   }
+  .reveal code {
+    font-family: 'Ubuntu Mono';
+    color: orange;
+  }
 </style>
 
 # Packaging a Python Code
@@ -58,7 +62,7 @@ Note: `<directory-name>` should have a folder with `<package-name>`
 
 ---
 
-## Why is setup.py not the best way?
+## Why is setup.py not the best way to directly install software?
 
 - Before doing installing with `setup.py` you have to manually search and install dependencies.
 - A package installed by `setup.py` needs to be manually maintained and uninstalled if required.
@@ -184,7 +188,7 @@ generic_folder_name/
 ```
 
 <span>
-Lets have a detailed look at individual files in this folder structure.
+Let's have a detailed look at individual files in this folder structure.
 <!-- .element: class="fragment" data-fragment-index="1" --></span>
 
 ---

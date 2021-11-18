@@ -24,7 +24,7 @@ In this exercise you will convert a raw Python code into a packaged code which i
 ## Step 1 - Acquiring the raw code and getting familiar with it
 
 - Ensure that you have access to the [exercise repository](https://github.com/Simulation-Software-Engineering/test-exercise-packaging/tree/main).
-- Clone the repository and create a branch with the name `packaged-code-by-<your-GitLab-username>`, for example **packaged-code-by-desaiin**.
+- Fork this repository.
 - Open the file `solver.py` and go through the file and try to understand the code components.
 - Install `python >= 3.6`.
 - Install pip, build, and Twine.
@@ -41,7 +41,7 @@ In this exercise you will convert a raw Python code into a packaged code which i
 - Create two functions in the file `output.py` called `create_figure()` and `output_figures()`.
 - Port the appropriate parts of the code pertaining to figure creation and figure output from `solver.py` into these two functions.
 - Take care to pass the appropriate arguments to both these functions. Code refactoring should not affect the functionality, that is, the refactored code should work exactly as the original `solver.py`.
-- Once the output functionality has been separated from the solver, we need to bundle the solver itself into a function called `solve`. We need to do this because later on we will call this function after importing the package:
+- Once the output functionality has been separated from the solver, we need to bundle the solver itself into a function called `solve` in `solver.py`. We need to do this because later on we will call this function after importing the package:
 
 ```python
 from package_name import solver
@@ -60,10 +60,11 @@ solver.solve()
 - In `setup.py` name your package `<your-GitLab-username>diffusion2D`. We will use semantic versioning, so the version you are developing will be `0.0.1`. The package url is the url of the GitHub repository of this exercise code.
 - Try to put `classifiers` in your `setup()`.
 
-## Step 4 - Create distribution packages
+## Step 4 - Create distribution archives
 
-- With reference to the lecture notes, create distribution packages for this project. Use `build` to create the distribution archives.
+- With reference to the lecture notes, create distribution archives for this project. Use `build` to create the distribution archives.
 - After creating the distribution packages, check the `dist/` folder to ensure that the archive files have been created.
+- **Important**: If for some reason the package does not work and you wish to upload a changed state of the package, then you have to remove all contents of `dist/*` before creating new distribution archives
 
 ## Step 5 - Create an account and a API Token on TestPyPI
 
@@ -86,4 +87,4 @@ solver.solve()
 
 ## Step 8 - Submitting the exercise
 
-- Open a pull request with the name `Packaged code for PyPI by <your-GitLab-username>` from your branch to the `main` branch of the exercise repository.
+- Open a pull request with the name `Packaged code for PyPI by <your-GitLab-username>` from your fork to the `main` branch of the exercise repository.

@@ -237,7 +237,7 @@ See the instructions in the task list above. The repository initially contains a
     - As title choose "[`USERNAME`] Docker Container Recipe".
     - Make sure all files are up to date (`testfile`, `Dockerfile`).
     - Attach the screenshot ("Attach a file") that you made in the previous step.
-    - Add the label `Docker` label to the merg request and assign the merge request to `jaustar`.
+    - Add the label `Docker` label to the merge request and assign the merge request to `jaustar`.
     - Double-check that all files are in the repository and up to date.
     - If everything looks good, create the merge request.
 

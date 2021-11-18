@@ -29,7 +29,7 @@ slideOptions:
 
 ## Using setup.py to package Python code
 
-`setup.py`  is written by [setuptools](https://pypi.org/project/setuptools/) allows you to install packages by running 
+`setup.py`  is written by [setuptools](https://pypi.org/project/setuptools/) allows you to install packages by running
 
 ```bash
 python setup.py install
@@ -248,8 +248,9 @@ setup(
 ## Creating distribution archives 1/2
 
 There are two ways to create these archives:
-    - Using the package builder [build](https://pypa-build.readthedocs.io/en/stable/index.html) which was introduced in [PEP 517](https://www.python.org/dev/peps/pep-0517/).
-    - Using the packaging standard [wheel](https://wheel.readthedocs.io/en/stable/) which was introduced in [PEP 427](https://www.python.org/dev/peps/pep-0427/).
+
+- Using the package builder [build](https://pypa-build.readthedocs.io/en/stable/index.html) which was introduced in [PEP 517](https://www.python.org/dev/peps/pep-0517/).
+- Using the packaging standard [wheel](https://wheel.readthedocs.io/en/stable/) which was introduced in [PEP 427](https://www.python.org/dev/peps/pep-0427/).
 
 In both cases the files will be generated in a folder `package_name/dist/`.
 

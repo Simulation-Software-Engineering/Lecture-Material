@@ -1,0 +1,68 @@
+% build with: pdflatex --shell-escape fig.tex
+\documentclass[tikz, convert={density=800}]{standalone}
+
+\usepackage{tikz}
+\definecolor{myOrange}{HTML}{ffa500}
+\definecolor{myBlue}{HTML}{42affa}
+
+\begin{document}
+\begin{tikzpicture}[>=latex, thick, shorten >=2pt, shorten <=2pt, ->, myBlue]
+
+%  \tikzstyle{C}=[circle,fill=myBlue,text=white,minimum size=30pt,inner sep=2pt, font=\LARGE]
+  \tikzstyle{C}=[rectangle,fill=myBlue,text=white,minimum size=30pt,inner sep=2pt, font=\LARGE]
+  \tikzstyle{M}=[circle,fill=myOrange,text=white,minimum size=30pt,inner sep=2pt, font=\LARGE]
+  \tikzstyle{B}=[text=myBlue, font=\LARGE]
+
+  \node[C] at (0,3) (bin) {\texttt{/bin}};
+  \node[C] at (2,3) (sbin) {\texttt{/sbin}};
+  \node[C] at (4,3) (usr) {\texttt{/usr}};
+  \node[C] at (6,3) (lib) {\texttt{/lib}};
+  \node[C] at (8,3) (dots) {\texttt{\ldots}};
+%  \node[C] at (6,3) (var) {\texttt{/var}};
+%  \node[C] at (3,3) (B) {\texttt{B}};
+%  \node[C] at (6,3) (C) {\texttt{C}};
+%  
+  \node[C] at (0,1) (usrbin) {\texttt{/bin}};
+  \node[C] at (2,1) (usrlocal) {\texttt{/local}};
+  \node[C] at (4,1) (usrlib) {\texttt{/lib}};
+  \node[C] at (6.5,1) (usrinclude) {\texttt{/include}};
+  \node[C] at (9,1) (usrdots) {\texttt{\ldots}};
+  
+  \node[C] at (0,-1) (usrlocalbin) {\texttt{/bin}};
+  \node[C] at (2,-1) (usrlocallib) {\texttt{/lib}};
+  \node[C] at (4.5,-1) (usrlocalinclude) {\texttt{/include}};
+  \node[C] at (7,-1) (usrlocaldots) {\texttt{\ldots}};
+  
+  
+%  \node[C] at (6,1) (E) {\texttt{E}};
+%  
+%  \node[M] at (9,3) (M) {\texttt{M}};
+
+%  \draw [<-] (usr) to (usrbin);
+%  \draw [<-] (usr) to (usrlocal);
+%  \draw [<-] (usr) to (usrinclude);
+%  \draw [<-] (usr) to (usrlib);
+%  \draw [<-] (usr) to (usrdots);
+%  
+%  
+%  \draw [<-] (usrlocal) to (usrlocalbin);
+%  \draw [<-] (usrlocal) to (usrlocallib);
+%  \draw [<-] (usrlocal) to (usrlocalinclude);
+%  \draw [<-] (usrlocal) to (usrlocaldots);
+  
+%  \draw [<-] (A) to (B);
+%  \draw [<-] (B) to (C);
+%  \draw [<-] (A) to (D);
+%  \draw [<-] (D) to (E);
+%  \draw [<-, myOrange] (C) to (M);
+%  \draw [<-, myOrange] (E) to (M);
+  
+  \node[B] at (-3,3) (rootlevel) {\texttt{/}};
+  \node[B] at (-3,1) (usrlevel) {\texttt{/usr}};
+  \node[B] at (-3,-1) (usrlocallevel) {\texttt{/usr/local}};
+  
+  \draw [] (usr.south) to (usrlevel.north);
+  \draw [] (usrlocal) to (usrlocallevel);
+  
+\end{tikzpicture}
+\end{document}

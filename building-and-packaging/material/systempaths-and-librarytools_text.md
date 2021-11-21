@@ -12,18 +12,27 @@
 - Defines filesystem layout
 - `/home` contains user's home directories
 - `/etc` contains system-wide configuration
-- `/bin` directories refer to executables
-- `/boot` contains bootloader files
-- `/usr/bin/`
+    - "et cetera" (Bell lab manual), "editable text confiuration"
+- `/bin` directories refer to executables important for the system/OS
+- `/sbin` directories refer to executables important for the system/OS to be executed by the super user
+- `/boot`: Contains files to boot the system such as bootloader files or the kernel
+- `/opt`: Optional software
+- `/tmp`: Temporary files. Wiped at reboot
+- `/dev`: Device files, interact with devices as if they were files
+- `/var`: Variable files that change during the OS running
+- `/proc`: Virtual filesystem keeping track of processes.
+- `/usr/`
+    - `/usr/bin/`, `/usr/sbin/`: Non-essential binaries to be used by user
     - `/usr/lib/`
     - `/usr/include/`
-- **Impoortant** for us/our software normally
+    - `/usr/local`
+        - More or less same structure again
+        - FIles
+- ...and more directories. Details and meaning can be found in the reference (see below).
+- **Important** for us/our software normally
     - `/usr/bin/`
     - `/usr/lib/`
     - `/usr/include/`
-
-
-
 ## Standard Paths and Environment Variables (general)
 
 ### Demo
@@ -36,7 +45,6 @@
     - `EDITOR=vim`
     - `CODIPACKDIR=/opt/CoDiPack`
     - `_JAVA_OPTIONS=-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true`
-
 
 Example output:
 
@@ -91,6 +99,21 @@ _=/usr/bin/env
     - Create simple C++ code that links against the standard library? "Hello world?"
     - Maybe use an example from BU.
 
+
+### Example
+
+```
+$ ls -lah
+total 2.4M
+drwxrwxr-x 2 jaustar jaustar 4.0K Nov 19 19:00 .
+drwxrwxr-x 4 jaustar jaustar 4.0K Nov 19 18:43 ..
+-rw-rw-r-- 1 jaustar jaustar  162 Nov 19 15:34 CMakeLists.txt
+-rw-rw-r-- 1 jaustar jaustar  151 Nov 19 18:52 Makefile
+-rwxrwxr-x 1 jaustar jaustar  17K Nov 19 18:52 main-shared
+-rwxrwxr-x 1 jaustar jaustar 2.3M Nov 19 18:52 main-static
+-rw-rw-r-- 1 jaustar jaustar   95 Nov 19 18:50 main.cpp
+```
+
 ## Environment variables
 
 
@@ -140,6 +163,42 @@ _=/usr/bin/env
          Hi students
        ```
 
+
+## Interlude
+
+- It is important/helpful to know where libraries and binaries live.
+    - This is especially true for languages that compilation.
+    - Helps with debugging problems (library not found, wrong executable called...)
+- Finding all libraries and approriate options to link against them is tedious -> Helper tools:
+    - `ldconfig`
+    - `pkg-config`
+
+
+## ldconfig
+
+## pkg-config
+
+At least two implementations
+- `pkgconfig`
+- `pkgconf`
+
+
+
+### Example: Own pkg-config application
+
+
+### Example: PETSc (?)
+
+- This might be too confusing
+- My machine has PETSc installed from the Ubuntu package repository (via `apt`)
+
+  ```bash
+  > pkg-config --libs PETSc
+  -L/usr/lib/petscdir/petsc3.12/x86_64-linux-gnu-real/lib -lpetsc_real
+  > pkg-config --modversion PETSc
+  3.12.4
+  ```
+
 ## Further reading
 
 
@@ -149,8 +208,12 @@ _=/usr/bin/env
 - [Wikipedia entry of the Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
 - [How to on working with environment and shell variables](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/)
 - [Ubuntu help on environment variables](https://help.ubuntu.com/community/EnvironmentVariables)
+- [Wikipedia on pkg-config](https://en.wikipedia.org/wiki/Pkg-config)
+- [pkg-config project homepage](https://www.freedesktop.org/wiki/Software/pkg-config/)
+- [Guide to pkg-config](https://people.freedesktop.org/~dbn/pkg-config-guide.html)
 
-### Talks
+### Talks and videos
 
 - [Matt Godbolt “What Has My Compiler Done for Me Lately? Unbolting the Compiler's Lid”](https://www.youtube.com/watch?v=bSkpMdDe4g4`)
 - [Matt Godbolt “The Bits Between the Bits: How We Get to main()” ](https://www.youtube.com/watch?v=dOfucXtyEsU)
+- [ Linux Directories Explained in 100 Seconds ](https://www.youtube.com/watch?v=42iQKuQodW4)

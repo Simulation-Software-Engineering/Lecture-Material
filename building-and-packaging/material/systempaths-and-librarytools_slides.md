@@ -118,7 +118,14 @@ MlideOptions:
 
 ## Standard Paths and Environment Variables (Python)
 
+- `${HOME}/.local`:
 - `PYTHONPATH`
+
+---
+
+## Working with Shared Libraries
+
+-
 
 ---
 
@@ -141,5 +148,15 @@ MlideOptions:
 ---
 
 ## pkgconfig
+
+- `PKG_CONFIG_PATH`
+- Common options
+    - `--libs`
+    - `--cflags`
+
+## pkgconfig Files
+
+```pkgconfig
+```
 
 ---

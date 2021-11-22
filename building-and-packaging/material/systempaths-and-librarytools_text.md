@@ -7,9 +7,39 @@
 | --- | --- | --- |
 | 20 minutes | Lecture | [`systempaths-and-librarytools_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths-and-librarytools_slides.md) |
 
+## Static vs/ Shared Libraries/Executables
+
+- Whether shared or static is preferable depends on use case.
+    - Shared approach makes modes more lightweight and allows for sharing of library in memory. Additionaly, it allows updating shared libraries to patch bugs, for example.
+    - Static makes code self-contained. It is easier to move to other computers at the cost of larger files.
+- Some programming languages, e.g., Go prefers static binaries by default.
+
+### Demo
+
+- Show example from `examples/shared-and-static-c++/`
+    - Simple hello world program
+- Run `ldd` on `main-static` and `main-shared`
+- Run `ls -lah` to show different executable sizes
+- `main-static` could be copied over to
+
+```
+$ ls -lah
+total 2.4M
+drwxrwxr-x 2 jaustar jaustar 4.0K Nov 19 19:00 .
+drwxrwxr-x 4 jaustar jaustar 4.0K Nov 19 18:43 ..
+-rw-rw-r-- 1 jaustar jaustar  162 Nov 19 15:34 CMakeLists.txt
+-rw-rw-r-- 1 jaustar jaustar  151 Nov 19 18:52 Makefile
+-rwxrwxr-x 1 jaustar jaustar  17K Nov 19 18:52 main-shared
+-rwxrwxr-x 1 jaustar jaustar 2.3M Nov 19 18:52 main-static
+-rw-rw-r-- 1 jaustar jaustar   95 Nov 19 18:50 main.cpp
+```
+
 ## Filesystem Hierarchy Standard (FHS)
 
+- Where are files stored by default?
+    - **Linux**: This is defined in the Filesystem Hierarchy Standard.
 - Defines filesystem layout
+- `/`: Primary root
 - `/home` contains user's home directories
 - `/etc` contains system-wide configuration
     - "et cetera" (Bell lab manual), "editable text confiuration"
@@ -21,19 +51,27 @@
 - `/dev`: Device files, interact with devices as if they were files
 - `/var`: Variable files that change during the OS running
 - `/proc`: Virtual filesystem keeping track of processes.
-- `/usr/`
+- `/usr/`: Second hierarchy level containing shareable user data (read-only)
     - `/usr/bin/`, `/usr/sbin/`: Non-essential binaries to be used by user
     - `/usr/lib/`
     - `/usr/include/`
-    - `/usr/local`
-        - More or less same structure again
-        - FIles
+    - `/usr/local`: Third level hierachy level containing local data specific to host
 - ...and more directories. Details and meaning can be found in the reference (see below).
 - **Important** for us/our software normally
     - `/usr/bin/`
     - `/usr/lib/`
     - `/usr/include/`
+- **Note*: Some parts of the structure should be reproduced/respected by own software/libraries. In the installation prefix one should create structure like `prefix/bin`, `prefix/lib`, `prefix/include`... Exact structure depends on own software. Does it have binaries, does it have includes etc.
+
+### Demo
+
+- If time permits, show file structre in a terminal.
+
 ## Standard Paths and Environment Variables (general)
+
+- (Environment) Variable can be used in scripts
+    - See examples earler where we used `${HOME}`.
+- Environment variable also exist on Windows. They hide somewhere in the advanced system setting.
 
 ### Demo
 
@@ -92,29 +130,28 @@ LC_NUMERIC=en_US.UTF-8
 _=/usr/bin/env
 ```
 
-## Shared libraries
-
-- Show example
-- Run `ldd` on some code that uses shared libraries.
-    - Create simple C++ code that links against the standard library? "Hello world?"
-    - Maybe use an example from BU.
-
-
-### Example
-
-```
-$ ls -lah
-total 2.4M
-drwxrwxr-x 2 jaustar jaustar 4.0K Nov 19 19:00 .
-drwxrwxr-x 4 jaustar jaustar 4.0K Nov 19 18:43 ..
--rw-rw-r-- 1 jaustar jaustar  162 Nov 19 15:34 CMakeLists.txt
--rw-rw-r-- 1 jaustar jaustar  151 Nov 19 18:52 Makefile
--rwxrwxr-x 1 jaustar jaustar  17K Nov 19 18:52 main-shared
--rwxrwxr-x 1 jaustar jaustar 2.3M Nov 19 18:52 main-static
--rw-rw-r-- 1 jaustar jaustar   95 Nov 19 18:50 main.cpp
-```
-
 ## Environment variables
+
+- Variables of local scope (to one process)
+- Environment variables (set with `export` or `setenv`) have (more) global scope as they are inherited by child processes.
+- System's environment variables often set from `/etc/profile` and `/etc/bashrc` or `/etc/bash.bashrc` as they are typically sourced by the user's shell.
+    - Processes started via GUI etc. are also connected to some process attached to a shell and thus inherit environment variables.
+- Extra paths of user often set in `${HOME}/.bashrc`, `${HOME}/.bash_exports`, `${HOME}/.bash_profile`...
+    - Some file that needs to be sourced when a shell is opened.
+- Some important variables for **C++** on Linux
+    - Mainly about finding includes, libraries and setting compilation flags
+    - `CC`, `CXX`, `CPP` etc. compilers
+    - `CFLAGS`, `CXXFLAGS`, `CPPFLAGS` etc. compiler flags
+    - `LD_<NAME>` are (library) loader variables. Commonly used `LD_LIBRARY_PATH` which points to shared libraries.
+    - `CPATH`, `C_INCLUDE_PATH`, `CPLUS_INCLUDE_PATH` include file paths
+    - There are more variables. Their name and meaning also depend on the toolchains used (GCC, LLVM etc.)
+- Some important variables for **Python** on Linux
+    - System-wide scripts in `/usr`
+    - Filesystem is mirrored in `${HOME}/.local/` for local (user-space) installations. That applies to Python code installed with `setup.py` or via `pip`, for example.
+    - Python does some versioning of modules/packages by the directory structure as for libraries they use `prefix/lib/pythonX.Y` where `X` is the major and `Y` the minor version of Python.
+    - `PYTHONPATH` can be set for packages that are not installed in non-standard locations. This allows to `import` packages.
+    - `PATH` as for all executables.
+- **Note**: Lower case names = local variables or non-constant values
 
 
 ### Demo (Environment Variables)
@@ -163,7 +200,7 @@ drwxrwxr-x 4 jaustar jaustar 4.0K Nov 19 18:43 ..
          Hi students
        ```
 
-
+- Variables may have more than one value. In this case different values are seperated by a colon `:`
 ## Interlude
 
 - It is important/helpful to know where libraries and binaries live.
@@ -176,20 +213,49 @@ drwxrwxr-x 4 jaustar jaustar 4.0K Nov 19 18:43 ..
 
 ## ldconfig
 
+- Manages list of installed shared libraries.
+- Can and should be used instead of `LD_LIBRARY_PATH`.
+- However:
+    - Needs root rights `sudo`
+    - Not straight forward if one has same library in many versions (different version number, different compiler options) etc. Thus, this environment variable (and others) are commonly used in scientific computing.
+
 ## pkg-config
 
-At least two implementations
-- `pkgconfig`
-- `pkgconf`
+- At least two implementations
+    - `pkgconfig`
+    - `pkgconf`
+  but should work the same.
+- Can be used to obtain compilation and linking flags for a library.
+- System-wide files stored system-dependent: `/usr/lib/pkgconfig/`, `/usr/lib/x86_64-linux-gnu/pkgconfig/`,...
 
+### pkg-config file
 
+Fields:
+
+- Name: Name. Can deviate from `pc` file name.
+- Description: Description
+- URL: URL of project
+- Version: Version of package. Use semantic versioning MAJOR.MINOR.PATCH. Everything but numbers can create unexpected results
+- Requires: List of dependencies. Versions can be specified using >, <, =,  <= or >=.
+- Requires.private: Private list of dependencies.
+- Conflicts: Conflicting packages. Packages can be specified with version number and also several times to create version ranges
+- Cflags: Compiler flags for the software package or its dependencies that do not support pkg-config.
+- Libs: Link flags for this package and dependencies that do not support pkg-config.
+- Libs.private: Link flags for private dependencies that do not support pkg-config.
+- Dependencies that support pkg-config should be added to Requires and Requires.private
+
+One can define local variable to be used in the file. In the example on the slides, `prefix`, `exec_prefix`, `includedir`, and `libdir` are local variables that can be used be dereferencing them `${variablename}`.
 
 ### Example: Own pkg-config application
 
 
 ### Example: PETSc (?)
 
-- This might be too confusing
+- Code in `examples/pkg-config/`
+    - Creates executable printing the PETSc version and also initialized and destroys PETSc.
+    - `petsc-systempath`: Compiles using hand set options. Need to set include manually. `-lpetsc` is found as it is installed in a system's path that is known to `ldconfig`.
+    - `petsc-pkg-config`: Compiles by obtaining compile options from  `pkg-config`
+- This might be too confusing?!
 - My machine has PETSc installed from the Ubuntu package repository (via `apt`)
 
   ```bash
@@ -199,8 +265,38 @@ At least two implementations
   3.12.4
   ```
 
-## Further reading
+- Compile code twice.
+    1. Compile usind preinstalled PETSc library
 
+       ```
+       > module purge
+       > make all
+       > ./petsc-systempath
+       Using PETSc version: 3.12.4
+       > ./petsc-pkg-config
+       Using PETSc version: 3.12.4
+       > make clean
+       > module load PETSc/3.16.1-opt-sse-lecture
+       > make
+       > ./petsc-systempath
+       Using PETSc version: 3.12.4
+       > ./petsc-pkg-config
+       Using PETSc version: 3.16.1
+       ```
+
+       If there is time, check output of
+
+       ```bash
+       ldd petsc-systempath | grep petsc
+       ldd petsc-pkg-config | grep petsc
+       ```
+
+       to see that the executable are indeed linked to different libraries.
+
+- Can also load `module load PETSc/3.16.1-opt-sse-lecture` which sets rather minimal environment variables, but still allows compilation using pkg-config. Does not set `LIBRARY_PATH` so new PETSc is not found during compile time.
+    - Compilation of `petsc-systempath` still use old PETSc version because it does not find the newer version.
+
+## Further reading
 
 ### References
 
@@ -211,6 +307,8 @@ At least two implementations
 - [Wikipedia on pkg-config](https://en.wikipedia.org/wiki/Pkg-config)
 - [pkg-config project homepage](https://www.freedesktop.org/wiki/Software/pkg-config/)
 - [Guide to pkg-config](https://people.freedesktop.org/~dbn/pkg-config-guide.html)
+- [CPP environment variables (GCC)](https://gcc.gnu.org/onlinedocs/cpp/Environment-Variables.html)
+- ["using ldconfig and ld.so.conf versus LD_LIBRARY_PATH" on Stack Overflow](https://unix.stackexchange.com/questions/425251/using-ldconfig-and-ld-so-conf-versus-ld-library-path)
 
 ### Talks and videos
 

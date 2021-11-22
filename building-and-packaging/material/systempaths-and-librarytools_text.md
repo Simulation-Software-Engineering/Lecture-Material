@@ -63,7 +63,7 @@ drwxrwxr-x 4 jaustar jaustar 4.0K Nov 19 18:43 ..
     - `/usr/include/`
 - **Note*: Some parts of the structure should be reproduced/respected by own software/libraries. In the installation prefix one should create structure like `prefix/bin`, `prefix/lib`, `prefix/include`... Exact structure depends on own software. Does it have binaries, does it have includes etc.
 
-### Demo
+### Demo (Filesystem Hierarchy Standard)
 
 - If time permits, show file structre in a terminal.
 
@@ -73,7 +73,7 @@ drwxrwxr-x 4 jaustar jaustar 4.0K Nov 19 18:43 ..
     - See examples earler where we used `${HOME}`.
 - Environment variable also exist on Windows. They hide somewhere in the advanced system setting.
 
-### Demo
+### Demo (Environment variables)
 
 - Boot up a VM (sse-docker-box)
 - Run the command `env` or `printenv` in a terminal. It will show all set environment variables and their value
@@ -201,6 +201,7 @@ _=/usr/bin/env
        ```
 
 - Variables may have more than one value. In this case different values are seperated by a colon `:`
+
 ## Interlude
 
 - It is important/helpful to know where libraries and binaries live.
@@ -312,6 +313,6 @@ One can define local variable to be used in the file. In the example on the slid
 
 ### Talks and videos
 
-- [Matt Godbolt “What Has My Compiler Done for Me Lately? Unbolting the Compiler's Lid”](https://www.youtube.com/watch?v=bSkpMdDe4g4`)
-- [Matt Godbolt “The Bits Between the Bits: How We Get to main()” ](https://www.youtube.com/watch?v=dOfucXtyEsU)
-- [ Linux Directories Explained in 100 Seconds ](https://www.youtube.com/watch?v=42iQKuQodW4)
+- [Matt Godbolt “What Has My Compiler Done for Me Lately? Unbolting the Compiler's Lid”](https://www.youtube.com/watch?v=bSkpMdDe4g4)
+- [Matt Godbolt “The Bits Between the Bits: How We Get to main()”](https://www.youtube.com/watch?v=dOfucXtyEsU)
+- [Linux Directories Explained in 100 Seconds](https://www.youtube.com/watch?v=42iQKuQodW4)

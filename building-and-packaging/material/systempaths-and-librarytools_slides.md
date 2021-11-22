@@ -58,7 +58,9 @@ SlideOptions:
 ## Filesystem Hierarchy Standard
 
 - Defines filesystem layout and location of common files on Linux
+
 <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/add-overview-systempaths-librarytools/building-and-packaging/material/figs/filesystem_hierarchy_structure/fig.png" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
 - [Official homepage of FHS](https://refspecs.linuxfoundation.org/fhs.shtml)
 - Certain structure should
 
@@ -66,14 +68,13 @@ SlideOptions:
 
 ---
 
-## Environment Variables 1/2
+## Some Environment Variables
 
 - `HOME` or `~`: User's home directory
 - `PWD`: Current working directory
 - `PATH`: Location of executable
 - `LC_<NAME>`: Locale's
 - `LANG`: Systems' language
-- ...
 - System variables often set from `/etc/profile` and `/etc/bashrc` or `/etc/bash.bashrc`
 
 ---
@@ -109,9 +110,10 @@ SlideOptions:
   PATH=ADDITONALPATH:${PATH}
   ```
 
-  ```
+  ```bash
   PATH=/home/jaustar/bin:${PATH}
   ```
+
 - Extra paths of user often set in `${HOME}/.bashrc`, `${HOME}/.bash_exports`, `${HOME}/.bash_profile`,...
 
 ---

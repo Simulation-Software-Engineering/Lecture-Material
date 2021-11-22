@@ -247,10 +247,11 @@ Fields:
 
 One can define local variable to be used in the file. In the example on the slides, `prefix`, `exec_prefix`, `includedir`, and `libdir` are local variables that can be used be dereferencing them `${variablename}`.
 
-### Example: Own pkg-config application
+### Demo: Ubuntu
 
+- Show pkg-config files in `/usr/lib/x86_64-linux-gnu/pkgconfig/`, for example.
 
-### Example: PETSc (?)
+### Demo: PETSc
 
 - Code in `examples/pkg-config/`
     - Creates executable printing the PETSc version and also initialized and destroys PETSc.

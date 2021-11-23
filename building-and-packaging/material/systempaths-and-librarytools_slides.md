@@ -72,7 +72,7 @@ SlideOptions:
 - `HOME` or `~`: User's home directory
 - `PWD`: Current working directory
 - `PATH`: Locations of executables on system
-- `LC_<NAME>`: Locale's
+- `LC_<NAME>`: [Locales](https://wiki.archlinux.org/title/locale)
 - `LANG`: Systems' language
 - System variables often set from `/etc/profile` and `/etc/bashrc` or `/etc/bash.bashrc`
 
@@ -164,7 +164,7 @@ SlideOptions:
 
 ## ldconfig
 
-- Generate links and cache to libraries
+- Generates links and cache of libraries and their locations
 - Can be used to inform system about new libraries at non-standard location
     - Useful for your own codes/environments
     - Usually automatically run by system's package manager (`apt`, `yum` etc.)
@@ -251,7 +251,7 @@ Libs.private: -L/usr/lib/x86_64-linux-gnu/openmpi/lib -L/usr/lib/gcc/x86_64-linu
 ## pc File Location
 
 - Common options
-    - `--modversion`: Module/pacakge version
+    - `--modversion`: Module/package version
     - `--libs`: Link flags
     - `--cflags`: compilation flags
 - Often stored in `prefix/lib`, but no guarantee

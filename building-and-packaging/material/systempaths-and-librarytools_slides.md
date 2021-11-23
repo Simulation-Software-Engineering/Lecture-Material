@@ -45,11 +45,11 @@ SlideOptions:
 ## Static and shared libraries
 
 - Static
-    - Libraries: `NAME.a`
+    - Libraries: `libName.a`
     - Self-contained code/libraries
     - Larger library/executable
 - Shared
-    - Libraries: `NAME.so`
+    - Libraries: `libName.so`
     - Shared code must be installed and accessible
     - Executables can share library in memory
 
@@ -62,7 +62,6 @@ SlideOptions:
 <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/add-overview-systempaths-librarytools/building-and-packaging/material/figs/filesystem_hierarchy_structure/fig.png" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 - [Official homepage of FHS](https://refspecs.linuxfoundation.org/fhs.shtml)
-- Certain structure should
 
 **TODO** Set this link to the GitHub main branch before merging.
 
@@ -72,7 +71,7 @@ SlideOptions:
 
 - `HOME` or `~`: User's home directory
 - `PWD`: Current working directory
-- `PATH`: Location of executable
+- `PATH`: Locations of executables on system
 - `LC_<NAME>`: Locale's
 - `LANG`: Systems' language
 - System variables often set from `/etc/profile` and `/etc/bashrc` or `/etc/bash.bashrc`
@@ -120,7 +119,7 @@ SlideOptions:
 
 ## Some Environment Variables (C++)
 
-- `LD_<NAME>`: Loader related variable
+- `LD_<NAME>`: Library loader related variable
     - `LD_LIBRARY_PATH`: Library paths for runtime
 - `LIBRARY_PATH`: Library path for compilation (linker)
 - `CPATH`, `C_INCLUDE_PATH`, `CPLUS_INCLUDE_PATH`: Include file path
@@ -169,13 +168,13 @@ SlideOptions:
 - Can be used to inform system about new libraries at non-standard location
     - Useful for your own codes/environments
     - Usually automatically run by system's package manager (`apt`, `yum` etc.)
-- `LD_LIBRARY_PATH` commonly used, but only recommended for debugging
+- `LD_LIBRARY_PATH` commonly used, but use with care
 
 ---
 
 ## ldconfig - Usage
 
-- Configuration tool for loader
+- Configuration tool for library loader
 - Tell `ldconfig` about library in non-standard location
 
   ```bash
@@ -255,7 +254,7 @@ Libs.private: -L/usr/lib/x86_64-linux-gnu/openmpi/lib -L/usr/lib/gcc/x86_64-linu
     - `--modversion`: Module/pacakge version
     - `--libs`: Link flags
     - `--cflags`: compilation flags
-- Commonly store in `prefix/lib` for own libraries
+- Often stored in `prefix/lib`, but no guarantee
 - System-wide files stored system-dependent
 - `PKG_CONFIG_PATH`: (Extended) Search path for pkg-config files
     - Must point to directory containting `pc` file

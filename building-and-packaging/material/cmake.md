@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
 
 ### What is Make?
 
-- A build manager
-- The / a go-to solution for small projects (e.g., latex document, processing data, ...)
+- A build system
+- The / a go-to solution for small (research) projects (e.g., latex document, processing data, ...), though also used in big projects ([Linux kernel](https://github.com/torvalds/linux))
 - A buidling block for cmake
 - Nice non-expert introduction in [py-RSE book, chapter 9](https://merely-useful.tech/py-rse/automate.html)
 - [GNU Make](https://www.gnu.org/software/make/): standard implementation of Make for Linux and macOS
@@ -51,7 +51,7 @@ HelloWorld : main.cpp
     - `HelloWorld` newer than `main.cpp`: do nothing
 
 - Run make twice
-- `ll` to show timestamp
+- `ls -la` to show timestamp
 
 - Requires actual tabs, spaces not allowed. Show error message.
 
@@ -99,10 +99,10 @@ int main()
 
 ```makefile
 sse.o : sse/sse.hpp sse/sse.cpp
-	g++ -c sse/sse.cpp
+	$(CXX) -c sse/sse.cpp
 
-HelloWorld : main.cpp sse/sse.hpp
-	g++ -o HelloWorld sse.o main.cpp sse.o
+HelloWorld : main.cpp sse.o
+	$(CXX) -o HelloWorld sse.o main.cpp
 ```
 
 - Run `make`, only builds `sse.o`
@@ -129,14 +129,16 @@ HelloWorld : main.cpp sse/sse.hpp
 + .PHONY : all clean
 ```
 
+- Standard targets. All makefiles should have them.
+
 ### Advanced Make
 
 - There is more:
     - Variables
     - Rules
     - Wildcards
-- ... but becomes quickly very hard to read
-- Not covered because cmake does this for us.
+- ... but becomes quickly [very hard to read](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html)
+- Not covered because CMake does this for us.
 - But nicely documented in [py-RSE chapter 9](https://merely-useful.tech/py-rse/automate.html).
 
 
@@ -147,31 +149,39 @@ HelloWorld : main.cpp sse/sse.hpp
 ### Introduction
 
 
-What is cmake?
+What is CMake?
 
 > A build system generator, for e.g. makefiles
 
 Why not directly use makefiles?
 
-> CMake can do many more things, is more flexible, avoids complex patterns, and is, thus, more readable
+> CMake can do many more things, is more flexible, avoids complex patterns, and is, thus, more readable 
+> ... but Make is also powerful and there are people loving it ... in the end, you need a certain understanding of both
 
 Are there alternatives?
 
-> Yes, `scons`, `autotools`, ...
+> Yes, `autotools`, `scons`, ... 
 
 Will you explain and discuss the differences in detail?
 
-> No, but I claim that CMake is the most standard tool and sticking to standards has a value in itself. [Watch a video why](https://youtu.be/sBP17HQAQjk)
+> No, but I claim that CMake is a standard tool for simulation software and sticking to standards has a value in itself. [Watch a video why](https://youtu.be/sBP17HQAQjk)
 
 Can you give some reasons why CMake is great?
 
 > Of course:
 
-- CMake can generate many build systems: make, ninja, VSCode project, Eclipse project, ...
+- CMake can generate files for many build systems: make, ninja, VSCode project, Eclipse project, ...
 - Many GUIs and TUIs: ccmake, cmake-gui, integration in probably nearly all IDEs, ...
 - CMake is *"cross-platform"*: you can ideally use same cmake file in all OS's (easy to distinguish platform-specific things)
-- Build directory becomes independent of source directory (build multiple versions with different dependencies etc.)
+- Build directory becomes independent of source directory (build multiple versions with different dependencies, different build type,  etc.)
 - CMake respects choices in user environment (e.g. user defines cpp compiler through CXX)
+- Wide language support
+
+... does not all make it better than other solutions per-se.
+
+Who develops CMake?
+
+> KitWare (Scientific visualization, VTK, ParaView, ...), started around 2000 in need of a cross-platform build environment
 
 ### CMake "Hello World"
 
@@ -188,10 +198,11 @@ project("HelloWorld")
 add_executable("${PROJECT_NAME}" main.cpp)
 ```
 
-- CMake variable values: `${}`, use quotations to avoid problems with spaces
+- CMake variable values: `${}`, use quotations marks `"` to avoid problems with spaces
 - `mkdir build && cd build && cmake ..` ... explain files (TODO), look at makefile
     - `CMakeCache.txt`
 - `make` and `./HelloWorld`
+- `make clean`
 
 ### Multiple files
 
@@ -219,6 +230,7 @@ add_executable("${PROJECT_NAME}" main.cpp)
 - `GLOB_RECURSE`: filenames with wildcard characters, recurse -> also subdirectories
 - Actually discouraged since wildcard populated while generating. You need to run `cmake` again when you add a file. See [cmake docs](https://cmake.org/cmake/help/latest/command/file.html#filesystem).
 - `CONFIGURE_DEPENDS` partial remedy, but costly and no guarantee that all build systems support this
+- Alternatively, generate list outside of cmake (will come back to this later)
 
 ### CTest
 
@@ -236,20 +248,22 @@ add_executable("${PROJECT_NAME}" main.cpp)
 `CMakeLists.txt`:
 
 ```diff
++ enable_testing()
 + include(CTest)
 +
 + add_test("test1" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}")
 + add_test("test2" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}" "someparam")
 ```
 
-- `include` includes a module, some module are builtin in CMake
+- `include` includes a module, [some modules](https://cmake.org/cmake/help/latest/manual/cmake-modules.7.html) are builtin in CMake
+- `enable_testing` optional?
 - Creates target `test`
 - `make test`, explain output
 - We will learn later (after Christmas) how to work with proper packages for testing (e.g. boost)
 
 ### CPack
 
-- We can also package code with cmake (or better: steer from cmake)
+- We can also package code with CMake (or better: steer from CMake)
 
 `CMakeLists.txt`:
 
@@ -265,13 +279,9 @@ install(TARGETS "${PROJECT_NAME}" DESTINATION bin)
 - Set version number
 
 ```diff
-+ SET(CPACK_PACKAGE_VERSION_MAJOR "1")
-+ SET(CPACK_PACKAGE_VERSION_MINOR "2")
-+ SET(CPACK_PACKAGE_VERSION_PATCH "3")
-include(CPack)
++ project("HelloWorld" VERSION 2.3.0)
 ```
 
-- Variables must be set before `include(CPack)`
 - `make package` again
 
 ### Building libraries
@@ -323,7 +333,7 @@ target_link_libraries("${PROJECT_NAME}" PRIVATE precice::precice)
 ```
 
 - `find_package` works if dependency is "cmake-ready"
-- Alternative option if lib is in a discoverable location (standard system path or adjusted `LD_LIBRARY_PATH`)
+- Alternative option if lib is in a discoverable location (standard system path or adjusted `LIBRARY_PATH`)
 
 ```cmake
 find_library(precice REQUIRED CONFIG)
@@ -343,6 +353,8 @@ target_link_libraries("${PROJECT_NAME}" PRIVATE precice)
 `CMakeLists.txt`:
 
 ```cmake
+option(ENABLE_PRECICE "Enable use of preCICE." ON)
+
 if (ENABLE_PRECICE)
   message(STATUS "preCICE enabled")
   find_library(precice REQUIRED CONFIG)
@@ -364,15 +376,27 @@ endif()
 - Build without preCICE `cmake -DENABLE_PRECICE=OFF ..`
 - Create different folder and build there with preCICE
 
+
+
+
+
+
 TODO: variables, which ones are import? how to pass? change compiler etc
 
 `CXX ?= g++`
+
+- Explain how to pass parameters and that one always has to prefix them with -D?
+- Do you explain default CMake variables and their values such as CMAKE_BUILD_TYPE and their consequences on the build?
 
 TODO: More reading on this:
 
 - https://cmake.org/cmake/help/latest/module/FindPkgConfig.html#command:pkg_check_modules
 - https://cmake.org/cmake/help/latest/manual/cmake-variables.7.html
 - https://cmake.org/cmake/help/latest/manual/cmake-properties.7.html
+- Official docs https://cmake.org/cmake/help/latest/index.html
+- More advances but best tutorial out there https://www.youtube.com/watch?v=bsXLMQ6WgIk
+- Good up2date book https://crascit.com/professional-cmake/
+
 
 
 ### ccmake
@@ -405,10 +429,12 @@ TODO
 - Add dependencies step by step. (in code, in `CMakeLists.txt`, in docker recipe (we provide package names)
 - Make dependencies all optional
 - Use CTest (we already provide test stubs)
-- Open PR with docker recipe, `CMakeLists.txt, and modified code
+- Open PR with docker recipe, `CMakeLists.txt`, and modified code
 
 ## Further material
 
+- [GNU Make manual](https://www.gnu.org/software/make/manual/html_node/index.html)
+- [Offical CMake tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
 - [Cmake Tutorial Video](https://www.youtube.com/watch?v=mKZ-i-UfGgQ)
 - https://cliutils.gitlab.io/modern-cmake/
 - https://github.com/dev-cafe/cmake-cookbook

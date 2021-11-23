@@ -8,6 +8,9 @@ all
 # Allow first header to not be a top level header
 # since top-level is set by metadata
 exclude_rule 'MD002'
+# Allow hard tabs such that they can be used in code blocks
+# as needed for Makefiles
+exclude_rule 'MD010'
 # First line in file does not have to be a top level header
 # since top-level is set by metadata
 exclude_rule 'MD041'
@@ -29,9 +32,6 @@ rule 'MD004', :style => :dash
 # Enforce indent with four space characters. This helps with
 # mixing ordered and unordered lists
 rule 'MD007', :indent => 4
-# Allow hard tabs in code blocks. This needed, for example,
-# in Makefiles
-rule 'MD010', :code_blocks => false
 # Extend line length for text.
 # This will complain for overly wide tables and code blocks.
 rule 'MD013', :line_length => 99999

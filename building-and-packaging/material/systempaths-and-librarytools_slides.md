@@ -286,4 +286,4 @@ Libs.private: -L/usr/lib/x86_64-linux-gnu/openmpi/lib -L/usr/lib/gcc/x86_64-linu
 - Common tools to work with libraries
     - ldconfig
     - pkg-config
-- Use build system (generators) to ([autotools](https://airs.com/ian/configure/), [CMake](https://cmake.org/)) to set variables and create pc files
+- Use build system (generators) ([autotools](https://airs.com/ian/configure/), [CMake](https://cmake.org/), ...) to set variables and create pc files

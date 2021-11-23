@@ -191,7 +191,7 @@ SlideOptions:
 ## pkg-config
 
 - Collects metadata of installed software
-- Different implentations
+- Different implementations
     - `pkgconf`, `pkg-config`...
 - Provides information about packages
     - Package location

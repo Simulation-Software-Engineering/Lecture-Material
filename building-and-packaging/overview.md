@@ -34,6 +34,12 @@ Learning goals:
 | --- | --- | --- |
 | 90 minutes | in-class exercise | [exercise_python_packaging_text.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/exercise_python_packaging_text.md)
 
+## System Paths, Libraries, and How to Use Them
+
+| Duration | Format | Material |
+| --- | --- | --- |
+| 20-30 minutes | slides and demo | [systempaths-and-librarytools_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths-and-librarytools_slides.md) |
+
 ## Further reading
 
 - [Packaging tutorial on python.org](https://packaging.python.org/tutorials/packaging-projects/)

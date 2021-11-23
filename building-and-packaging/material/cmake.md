@@ -155,12 +155,12 @@ What is CMake?
 
 Why not directly use makefiles?
 
-> CMake can do many more things, is more flexible, avoids complex patterns, and is, thus, more readable 
-> ... but Make is also powerful and there are people loving it ... in the end, you need a certain understanding of both
+> CMake can do many more things, is more flexible, avoids complex patterns, and is, thus, more readable.
+> But Make is also powerful and there are people loving it ... in the end, you need a certain understanding of both.
 
 Are there alternatives?
 
-> Yes, `autotools`, `scons`, ... 
+> Yes, `autotools`, `scons`, ...
 
 Will you explain and discuss the differences in detail?
 

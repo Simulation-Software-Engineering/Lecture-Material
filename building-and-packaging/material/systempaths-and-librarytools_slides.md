@@ -81,7 +81,7 @@ SlideOptions:
 
 ## Manipulating Environment Variables 1/2
 
-- Show content of paths via
+- Show content of variables via
 
   ```bash
   echo $VARIABLENAME

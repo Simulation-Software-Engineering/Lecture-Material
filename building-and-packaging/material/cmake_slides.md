@@ -33,11 +33,9 @@ slideOptions:
 
 ## Learning Goals of this Unit
 
-TODO
-
-- Students understand the basic functionality of makefiles (timestamps, dependencies, update rules).
-- Students can read simple makefiles and know where to look for additional material for complex makefiles.
-- Students can write simple makefiles for small projects.
+- Students understand the motivation of learning CMake.
+- Students know how to work with CMake as a user of a project following good practices (using variables, specifying locations of dependencies).
+- Students can develop simple CMake projects (executable vs. library, dependencies, CTest) and know how to learn more.
 
 ---
 
@@ -90,26 +88,36 @@ TODO
 
 ## Demo
 
-
+- "Hello World"
+- Multiple files
+- CTest
+- CPack
+- Building libraries
+- External dependencies
+- Options and variables
+- ccmake
+- `CMakeLists.txt` of preCICE
 
 ---
 
 ## Summary
 
-TODO
+- CMake generates build systems, e.g. a makefile with standard targets (`all`, `clean`)
+- Define project, targets, dependencies in `CMakeLists.txt`
+- Good practice: `mkdir build && cd build && cmake ..`
+- As a user, do not edit `CMakeLists.txt`, but work with variables, e.g. `cmake -DBUILD_SHARED_LIBS=ON ..`
+- Globs (e.g. `*.cpp`) can, but should not be handled directly in `CMakeLists.txt`, since populated during generation
+- Use CTest to add `test` target
+- Find dependencies with `find_package` (if cmake-ready) or `find_library` (if not)
 
 ---
 
 ## Further Reading
 
-TODO: have a look at all first
-
 - [Official CMake docs](https://cmake.org/cmake/help/latest/index.html)
 - [Offical CMake tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
-- [Cmake Tutorial Video](https://www.youtube.com/watch?v=mKZ-i-UfGgQ)
+- [Basic (unofficial) Cmake Tutorial for Linux Video](https://www.youtube.com/watch?v=mKZ-i-UfGgQ)
 - [Advanced, but very good video tutorial](https://www.youtube.com/watch?v=bsXLMQ6WgIk)
-- https://cliutils.gitlab.io/modern-cmake/
-- [Up-to-date (non-public) book](https://crascit.com/professional-cmake/)
-- https://github.com/dev-cafe/cmake-cookbook
-
-
+- [An Introduction to Modern CMake](https://cliutils.gitlab.io/modern-cmake/)
+- [Professional CMake](https://crascit.com/professional-cmake/), an up-to-date (non-public) book
+- [CMake Cookbook](https://github.com/dev-cafe/cmake-cookbook)

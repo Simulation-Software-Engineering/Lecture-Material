@@ -219,6 +219,12 @@ endif()
 ## Explain preCICE `CMakeLists.txt`
 
 - On GitHub [here](https://github.com/precice/precice/blob/develop/CMakeLists.txt)
-    - `sources.cmake` to include sources
-    - TODO what else to show?
+    - `CMakeLists.txt` lengthy and own source tree. 
+        - If software should be usable (for everybody everywhere), packaging is a project by itself
+    - in `modules` some `FindX.cmake`, partially third-party, partially developed by preCICE devs
+    - Variables and feature summaries
+    - `sources.cmake` included in line 335, no glob, but generated (some python script)
+    - Run it, tells you many things
+    - build in parallel
+    - `make install` standard target, did not yet talk about it, copies to correct paths, needs sudo
 - Another real-world example: [deal.II](https://github.com/dealii/dealii/blob/master/CMakeLists.txt)

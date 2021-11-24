@@ -86,3 +86,4 @@ helloworld : main.cpp sse.o
 ```
 
 - `all` and `clean` are standard targets. All makefiles should have them.
+- Last remark: `make -j` builds in parallel.

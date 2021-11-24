@@ -40,6 +40,18 @@ Learning goals:
 | --- | --- | --- |
 | 25 minutes | slides and demo | [systempaths-and-librarytools_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths-and-librarytools_slides.md) |
 
+## Introduction to Make
+
+| Duration | Format | Material |
+| --- | --- | --- |
+| 15 minutes | slides and demo | [make_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_slides.md), [make_demo_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_demo_notes.md)
+
+## Introduction to CMake
+
+| Duration | Format | Material |
+| --- | --- | --- |
+| 45 minutes | slides and demo | [cmake_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_slides.md), [cmake_demo_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_demo_notes.md)
+
 ## Further reading
 
 - [Packaging tutorial on python.org](https://packaging.python.org/tutorials/packaging-projects/)

@@ -12,7 +12,7 @@ else
     exit 1
 fi
 
-if [[ "$TARGET_FILES" == "slides" ]] || [[ "$TARGET_FILES" == "quiz" ]] || [[ "$TARGET_FILES" == "text" || [[ "$TARGET_FILES" == "notes" || [[ "$TARGET_FILES" == "exercise" ]];
+if [[ "$TARGET_FILES" == "slides" ]] || [[ "$TARGET_FILES" == "quiz" ]] || [[ "$TARGET_FILES" == "text" ]] || [[ "$TARGET_FILES" == "notes" ]] || [[ "$TARGET_FILES" == "exercise" ]];
 then
     file_list=$(find . -type f -iname "*_${TARGET_FILES}.md")
 else

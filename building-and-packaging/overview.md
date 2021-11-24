@@ -4,7 +4,9 @@ Learning goals:
 
 - What is code packaging and which technologies are available to package code
 - How is Python code packaged for uploading to PyPI and installation with pip
-- How are software packages providedvia common packaging approaches (pip, apt, npm)
+- What are libraries, how can they be used
+- How can codes be build and dependencies handled with Make and CMake
+- How are software packages provided via common packaging approaches (pip, apt, npm)
 - How are software packages provided for high-performance computing (Spack, EasyBuild)
 
 ## Survey
@@ -28,7 +30,15 @@ Learning goals:
 | --- | --- | --- |
 | 60 minutes | slides | [packaging_python_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_python_slides.md) |
 
-## Exercise
+### Further Reading on Packing for Python
+
+- [Packaging tutorial on python.org](https://packaging.python.org/tutorials/packaging-projects/)
+- [PyPI help](https://pypi.org/help/)
+- [The Hitchhiker's Guide to Python](https://docs.python-guide.org/shipping/packaging/)
+- ["How To Package Your Python Code" by Scott Torborg](https://python-packaging.readthedocs.io/en/latest/)
+- [Python Packaging User Guide](https://packaging.python.org/)
+
+## Pip / PyPI Exercise
 
 | Duration | Format | Material |
 | --- | --- | --- |
@@ -51,11 +61,3 @@ Learning goals:
 | Duration | Format | Material |
 | --- | --- | --- |
 | 45 minutes | slides and demo | [cmake_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_slides.md), [cmake_demo_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_demo_notes.md)
-
-## Further reading
-
-- [Packaging tutorial on python.org](https://packaging.python.org/tutorials/packaging-projects/)
-- [PyPI help](https://pypi.org/help/)
-- [The Hitchhiker's Guide to Python](https://docs.python-guide.org/shipping/packaging/)
-- ["How To Package Your Python Code" by Scott Torborg](https://python-packaging.readthedocs.io/en/latest/)
-- [Python Packaging User Guide](https://packaging.python.org/)

@@ -64,15 +64,13 @@ slideOptions:
 
 ---
 
-## Can you give some reasons why CMake is great?
+## At least some reasons why CMake is great?
 
-> Of course:
-
-- CMake can generate files for many build systems: make, ninja, VSCode project, Eclipse project, ...
-- Many GUIs and TUIs: ccmake, cmake-gui, integration in probably nearly all IDEs, ...
-- CMake is *"cross-platform"*: you can ideally use same cmake file in all OS's (easy to distinguish platform-specific things)
+- CMake can generate files for many build systems: Make, ninja, VSCode project, Eclipse project, ...
+- Many **GUIs** and **TUIs**: `ccmake`, `cmake-gui`, integration in probably nearly all IDEs, ...
+- CMake is **cross-platform**: you can ideally use same cmake file in all OS's (easy to distinguish platform-specific things)
 - Build directory becomes independent of source directory (build multiple versions with different dependencies, different build type,  etc.)
-- CMake respects choices in user environment (e.g. user defines cpp compiler through CXX)
+- CMake respects choices in user environment (e.g. user defines cpp compiler through `CXX`)
 - Wide language support
 
 ... does not all make it better than other solutions per-se.
@@ -84,7 +82,6 @@ slideOptions:
 > KitWare (Scientific visualization, VTK, ParaView, ...), started around 2000 in need of a cross-platform build environment
 
 ---
-
 
 ## Demo
 

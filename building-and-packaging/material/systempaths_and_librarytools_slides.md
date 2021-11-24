@@ -63,11 +63,9 @@ SlideOptions:
 
 - Defines filesystem layout and location of common files on Linux
 
-<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/add-overview-systempaths-librarytools/building-and-packaging/material/figs/filesystem_hierarchy_structure/fig.png" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/figs/filesystem_hierarchy_structure/fig.png" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 - [Official homepage of FHS](https://refspecs.linuxfoundation.org/fhs.shtml)
-
-**TODO** Set image link to the GitHub main branch before merging.
 
 ---
 
@@ -138,12 +136,10 @@ SlideOptions:
 
 - System-wide and user-specific
 
-<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/add-overview-systempaths-librarytools/building-and-packaging/material/figs/filesystem_paths_python/fig.png" width=75%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/figs/filesystem_paths_python/fig.png" width=75%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 - `PYTHONPATH`: Environment variable for non-standard installation of modules/packages
     - Points to `prefix/lib/pythonX.Y/site-packages`
-
-**TODO** Set image link to the GitHub main branch before merging.
 
 ---
 

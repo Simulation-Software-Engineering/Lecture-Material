@@ -129,7 +129,9 @@ SlideOptions:
 ## Paths and Environment Variables (Python)
 
 - System-wide and user-specific
-<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/add-overview-systempaths-librarytools/building-and-packaging/material/figs/filesystem_paths_python/fig.png" width=80%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/add-overview-systempaths-librarytools/building-and-packaging/material/figs/filesystem_paths_python/fig.png" width=75%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
 - `PYTHONPATH`: Environment variable for non-standard installation of modules/packages
     - Points to `prefix/lib/pythonX.Y/site-packages`
 

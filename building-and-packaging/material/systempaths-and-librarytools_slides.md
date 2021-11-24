@@ -63,7 +63,7 @@ SlideOptions:
 
 - [Official homepage of FHS](https://refspecs.linuxfoundation.org/fhs.shtml)
 
-**TODO** Set this link to the GitHub main branch before merging.
+**TODO** Set image link to the GitHub main branch before merging.
 
 ---
 
@@ -105,15 +105,13 @@ SlideOptions:
 
 - Adding additional values by colon (`:`) separated list
 
-  ```bash
-  PATH=ADDITONALPATH:${PATH}
-  ```
+  Example:
 
   ```bash
   PATH=/home/jaustar/bin:${PATH}
   ```
 
-- Extra paths of user often set in `${HOME}/.bashrc`, `${HOME}/.bash_exports`, `${HOME}/.bash_profile`,...
+- Extra paths of user often set in `${HOME}/.bashrc`, `${HOME}/.bash_exports`,...
 
 ---
 
@@ -123,21 +121,25 @@ SlideOptions:
     - `LD_LIBRARY_PATH`: Library paths for runtime
 - `LIBRARY_PATH`: Library path for compilation (linker)
 - `CPATH`, `C_INCLUDE_PATH`, `CPLUS_INCLUDE_PATH`: Include file path
-- Names can vary beween OS, software.
-- Variables should be manipulated carefully.
+- Names can vary beween OS, software
+- Variables should be manipulated carefully
 
 ---
 
 ## Paths and Environment Variables (Python)
 
-- `/usr/`: System-wide installation
-    - `/usr/bin`: Executable scripts
-    - `/usr/lib/pythonX.Y`: Modules/packages
-- `${HOME}/.local`: As above
-    - `${HOME}/.local/bin` and `${HOME}/.local/lib/pythonX.Y`
+- `/usr/`: System-wide
+
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/add-overview-systempaths-librarytools/building-and-packaging/material/figs/filesystem_paths_python/fig.png" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
+- `${HOME}/.local`: User-specific
+
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/add-overview-systempaths-librarytools/building-and-packaging/material/figs/filesystem_paths_python/fig-user-level.png" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
 - `PYTHONPATH`: Environment variable for non-standard installation of modules/packages
     - Points to `prefix/lib/pythonX.Y/site-packages`
 
+**TODO** Set image link to the GitHub main branch before merging.
 ---
 
 ## Working with Libraries

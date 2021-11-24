@@ -1,2 +1,2 @@
 helloworld : main.cpp
-	g++ -o helloworld main.cpp
+	$(CXX) -o helloworld main.cpp

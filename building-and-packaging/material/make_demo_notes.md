@@ -18,6 +18,7 @@ int main()
 
 ## Single rule example
 
+- Remove `helloworld`.
 - Show `Makefile`.
 - Explain that `helloworld` depends on `main.cpp` and rule to update.
 - Three cases:
@@ -63,7 +64,7 @@ helloworld : main.cpp sse.o
 - Run `make`, only builds `sse.o`.
 - By default, first target is built.
 - `make helloworld` to build specific target
-- phony target (doesn't correspond to file, no update rule)
+- phony target (a helper target, doesn't correspond to a file)
 
 ```diff
 + all : helloworld sse.o
@@ -75,7 +76,7 @@ helloworld : main.cpp sse.o
 
 ```diff
 + clean :
-+ 	rm helloworld sse.o
++ 	rm -f helloworld sse.o
 ```
 
 - Run `make clean`

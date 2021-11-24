@@ -184,23 +184,22 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 - [Vagrant Homepage](https://www.vagrantup.com/)
 - [Vagrant Introduction](https://www.vagrantup.com/intro)
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
-- If you are using Vagrant on Windows you might run into the following issue/error message: 
+- If you are using Vagrant on Windows you might run into the following issue/error message:
 
   ```powershell
   VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole
     - The short version of the solution is given below. The detailed solution is described in this [Stack Overflow thread](https://stackoverflow.com/questions/37955942/vagrant-up-vboxmanage-exe-error-vt-x-is-not-available-verr-vmx-no-vmx-code).
           1. As admin, run the following command in a PowerShell:
-    
+
             ```powershell
             bcdedit /set hypervisorlaunchtype off
             ```
         2. Restart your computer
         3. After the restart, run the following command as admin a PowerShell:
-        
-           ```powershell 
+
+           ```powershell
            bcdedit /set hypervisorlaunchtype auto
            ```
-
 
 ## Containers Using Docker
 

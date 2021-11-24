@@ -39,7 +39,7 @@ slideOptions:
 
 ---
 
-## Demo
+## Demo Part 1
 
 Introduce `Hello-World` example
 
@@ -66,7 +66,7 @@ Introduce `Hello-World` example
 
 ---
 
-## Demo
+## Demo Part 2
 
 - Single rule makefile
 - Multiple rules

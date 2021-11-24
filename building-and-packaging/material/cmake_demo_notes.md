@@ -5,10 +5,10 @@ Example code is in [`building-and-packaging/material/examples/cmake`](https://gi
 ## CMake "Hello World"
 
 - Look at and explain `CMakeLists.txt`.
-- `mkdir build && cd build && cmake ..` 
+- `mkdir build && cd build && cmake ..`
 - Standard to create `build` directory, don't call cmake in root directory.
-  - In case of doubt, you can always just delete complete folder.
-- Explain and look at files: 
+    - In case of doubt, you can always just delete complete folder.
+- Explain and look at files:
     - `Makefile`: lengthier than you think, many targets
     - `CMakeCache.txt`: stores values of variables, used by GUIs for example
     - `cmake_install.cmake`: a file used by CPack internally, ignore it
@@ -17,7 +17,7 @@ Example code is in [`building-and-packaging/material/examples/cmake`](https://gi
 
 ## Multiple files
 
-- Again `sse.cpp` and `sse.hpp` in subfolder `sse`, same files 
+- Again `sse.cpp` and `sse.hpp` in subfolder `sse`, same files
 - Again adapt `main.cpp`:
 
 ```diff
@@ -160,7 +160,7 @@ target_link_libraries("${PROJECT_NAME}" PRIVATE precice::precice)
         - Is there a `Findprecice.cmake` module elsewhere? We could ship one with our helloworld program. But these modules often out-of-date.
     - "config" mode (here the case, the newer/better way of doing things)
         - Is there a `preciceCongfig.cmake`? A file installed by preCICE. Scales and up-to-date.
-        - If not installed, one can extend `CMAKE_PREFIX_PATH`. 
+        - If not installed, one can extend `CMAKE_PREFIX_PATH`.
         - If a specific preCICE should be used, specify `preCICE_DIR` variable.
 - `precice::precice` since in namespace
 - If not "cmake-ready", but lib is in a discoverable location (standard system path or adjusted `LIBRARY_PATH`)

@@ -188,7 +188,7 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 
   ```powershell
   VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole
-    - Solution described in this [stackoverflow thread](https://stackoverflow.com/questions/37955942/vagrant-up-vboxmanage-exe-error-vt-x-is-not-available-verr-vmx-no-vmx-code)
+    - The short version of the solution is given below. The detailed solution is described in this [Stack Overflow thread](https://stackoverflow.com/questions/37955942/vagrant-up-vboxmanage-exe-error-vt-x-is-not-available-verr-vmx-no-vmx-code).
     - Basically run (in powershell as admin): ```bcdedit /set hypervisorlaunchtype off```
     - Restart computer
     - And run (in powershell as admin): ```bcdedit /set hypervisorlaunchtype auto```

@@ -42,7 +42,7 @@ SlideOptions:
 
 ---
 
-## Static and shared libraries
+## Static and Shared Libraries
 
 - Static
     - Libraries: `libName.a`
@@ -52,6 +52,10 @@ SlideOptions:
     - Libraries: `libName.so`
     - Shared code must be installed and accessible
     - Executables can share library in memory
+
+---
+
+## Demo Libraries
 
 ---
 
@@ -115,6 +119,10 @@ SlideOptions:
 
 ---
 
+## Demo Environment Variables
+
+---
+
 ## Some Environment Variables (C++)
 
 - `LD_<NAME>`: Library loader related variable
@@ -157,7 +165,6 @@ SlideOptions:
         - Version
         - Metadata
         - Compile and link flags
-
 
 ---
 
@@ -285,3 +292,25 @@ Libs.private: -L/usr/lib/x86_64-linux-gnu/openmpi/lib -L/usr/lib/gcc/x86_64-linu
     - ldconfig
     - pkg-config
 - Use build system (generators) ([autotools](https://airs.com/ian/configure/), [CMake](https://cmake.org/), ...) to set variables and create pc files
+
+---
+
+## Further Reading 1/2
+
+- [Official homepage of the Filesystem Hierarchy Standard](https://refspecs.linuxfoundation.org/fhs.shtml)
+- [Wikipedia entry of the Filesystem Hierarchy Standard](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard)
+- [How to on working with environment and shell variables](https://linuxize.com/post/how-to-set-and-list-environment-variables-in-linux/)
+- [Ubuntu help on environment variables](https://help.ubuntu.com/community/EnvironmentVariables)
+- [Wikipedia on pkg-config](https://en.wikipedia.org/wiki/Pkg-config)
+- [pkg-config project homepage](https://www.freedesktop.org/wiki/Software/pkg-config/)
+
+---
+
+## Further Reading 2/2
+
+- [Guide to pkg-config](https://people.freedesktop.org/~dbn/pkg-config-guide.html)
+- [CPP environment variables (GCC)](https://gcc.gnu.org/onlinedocs/cpp/Environment-Variables.html)
+- ["using ldconfig and ld.so.conf versus LD_LIBRARY_PATH" on Stack Overflow](https://unix.stackexchange.com/questions/425251/using-ldconfig-and-ld-so-conf-versus-ld-library-path)
+- [Matt Godbolt “What Has My Compiler Done for Me Lately? Unbolting the Compiler's Lid”](https://www.youtube.com/watch?v=bSkpMdDe4g4)
+- [Matt Godbolt “The Bits Between the Bits: How We Get to main()”](https://www.youtube.com/watch?v=dOfucXtyEsU)
+- [Linux Directories Explained in 100 Seconds](https://www.youtube.com/watch?v=42iQKuQodW4)

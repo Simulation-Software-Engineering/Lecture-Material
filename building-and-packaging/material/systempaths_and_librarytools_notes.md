@@ -35,19 +35,51 @@
 
 - This example is based on the C++ library to emphasize the difference between static and shared libraries.
 - Show example from `examples/shared-and-static-c++/`
-    - Simple hello world program
-- Run `ldd` on `main-static` and `main-shared`
+    - Show `main.cpp` which contains
+    - Show commands in Makefile
+
+      ```Makefile
+      all: shared static
+
+      shared:
+          $(CXX) main.cpp -o main-shared
+
+      static:
+          $(CXX) -static main.cpp -o main-static
+
+      clean:
+          rm -rf main-shared main-static
+      ```
+
+- Compile code
+
+  ```bash
+  make clean
+  make
+  ```
+
+  and run codes to show that they produce the same output.
+
+  ```bash
+  ./main-static
+  ```
+
+  and
+
+  ```
+  ./main-shared
+  ```
+
+- Run `ldd` on `main-static` and `main-shared`.
+    - There will several libraries linked to `main-shared`
+    - When using `ldd` on `main-static` we get the message `not a dynamic executable`
 - Run `ls -lah` to show different executable sizes
 
   ```bash
   $ ls -lah
   total 2.4M
-  drwxrwxr-x 2 jaustar jaustar 4.0K Nov 19 19:00 .
-  drwxrwxr-x 4 jaustar jaustar 4.0K Nov 19 18:43 ..
-  -rw-rw-r-- 1 jaustar jaustar  151 Nov 19 18:52 Makefile
-  -rwxrwxr-x 1 jaustar jaustar  17K Nov 19 18:52 main-shared
-  -rwxrwxr-x 1 jaustar jaustar 2.3M Nov 19 18:52 main-static
-  -rw-rw-r-- 1 jaustar jaustar   95 Nov 19 18:50 main.cpp
+  17K main-shared
+  2.3M main-static
   ```
 
 - `main-static` could be copied over to other systems, containers etc. where the standard library is not preinstalled.
@@ -185,7 +217,7 @@ _=/usr/bin/env
        The environment variable MY_ENV_VARIABLE is empty (zero length)
        ```
 
-    2. Set the variables value just for the one command. This is probably a feature tied to using **bash**.
+    2. Set the variables value just for i wothe one command. This is probably a feature tied to using **bash**.
 
        ```bash
        $ MY_ENV_VARIABLE="Hi students" ./print_my_environment_variable.sh
@@ -229,7 +261,7 @@ _=/usr/bin/env
 - Finding all libraries and approriate options to link against them is tedious -> Helper tools:
     - `ldconfig`
     - `pkg-config`
-
+- **Note**: We might stop here and continue with the remainder in a different lecture.
 
 ## ldconfig
 

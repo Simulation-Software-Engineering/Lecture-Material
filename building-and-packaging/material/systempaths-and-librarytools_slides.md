@@ -128,11 +128,11 @@ SlideOptions:
 
 ## Paths and Environment Variables (Python)
 
-- `/usr/`: System-wide
+- System-wide:
 
 <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/add-overview-systempaths-librarytools/building-and-packaging/material/figs/filesystem_paths_python/fig.png" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
-- `${HOME}/.local`: User-specific
+- User-specific
 
 <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/add-overview-systempaths-librarytools/building-and-packaging/material/figs/filesystem_paths_python/fig-user-level.png" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 

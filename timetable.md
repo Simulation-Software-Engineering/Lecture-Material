@@ -58,7 +58,7 @@
 
 ## 4.2 -- Thu, November 11, 2021
 
-- Student presentations
+- The Challenge, step one, presentations
 
 ## 5.1 -- Thu, November 18, 2021
 
@@ -69,3 +69,13 @@
 ## 5.2 -- Thu, November 18, 2021
 
 - **90** [Exercise on Packaging a Python Code](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/exercise_python_packaging_text.md)
+
+## 6.1 -- Thu, November 25, 2021
+
+- **25** System Paths, Libraries, and How to Use Them: [systempaths-and-librarytools_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths-and-librarytools_slides.md), [systempaths-and-librarytools_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths-and-librarytools_notes.md)
+- **15** Introduction to Make: [make_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_slides.md), [make_demo_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_demo_notes.md)
+- **45** Introduction to CMake: [cmake_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_slides.md), [cmake_demo_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_demo_notes.md)
+
+## 6.2 -- Thu, November 25, 2021
+
+- CMake exercise

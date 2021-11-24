@@ -219,7 +219,7 @@ endif()
 ## Explain preCICE `CMakeLists.txt`
 
 - On GitHub [here](https://github.com/precice/precice/blob/develop/CMakeLists.txt)
-    - `CMakeLists.txt` lengthy and own source tree. 
+    - `CMakeLists.txt` lengthy and own source tree.
         - If software should be usable (for everybody everywhere), packaging is a project by itself
     - in `modules` some `FindX.cmake`, partially third-party, partially developed by preCICE devs
     - Variables and feature summaries

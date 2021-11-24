@@ -25,7 +25,7 @@ jobs:
         with:
           name: slides
           path: slides
-          retention-days: 14
+          retention-days: 7
       - name: Compile PDFs (texts)
         run: |
           ./scripts/create-pdf-from-markdown.sh text
@@ -33,7 +33,7 @@ jobs:
         with:
           name: texts
           path: texts
-          retention-days: 14
+          retention-days: 7
       - name: Compile PDFs (quizzes)
         run: |
           ./scripts/create-pdf-from-markdown.sh quiz
@@ -41,5 +41,20 @@ jobs:
         with:
           name: texts
           path: texts
-          retention-days: 14
-
+          retention-days: 7
+      - name: Compile PDFs (exercises)
+        run: |
+          ./scripts/create-pdf-from-markdown.sh exercise
+      - uses: actions/upload-artifact@master
+        with:
+          name: texts
+          path: texts
+          retention-days: 7
+      - name: Compile PDFs (notes)
+        run: |
+          ./scripts/create-pdf-from-markdown.sh notes
+      - uses: actions/upload-artifact@master
+        with:
+          name: texts
+          path: texts
+          retention-days: 7

@@ -140,6 +140,7 @@ SlideOptions:
     - Points to `prefix/lib/pythonX.Y/site-packages`
 
 **TODO** Set image link to the GitHub main branch before merging.
+
 ---
 
 ## Working with Libraries

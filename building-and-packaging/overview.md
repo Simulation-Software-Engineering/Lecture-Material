@@ -48,7 +48,7 @@ Learning goals:
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 25 minutes | slides and demo | [systempaths-and-librarytools_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths-and-librarytools_slides.md), [systempaths-and-librarytools_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths-and-librarytools_notes.md) |
+| 25 minutes | slides and demo | [systempaths_and_librarytools_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths_and_librarytools_slides.md), [systempaths_and_librarytools_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths_and_librarytools_notes.md) |
 
 ## Introduction to Make
 

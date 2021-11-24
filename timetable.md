@@ -72,9 +72,9 @@
 
 ## 6.1 -- Thu, November 25, 2021
 
-- **25** System Paths, Libraries, and How to Use Them: [systempaths-and-librarytools_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths-and-librarytools_slides.md), [systempaths-and-librarytools_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths-and-librarytools_notes.md)
-- **15** Introduction to Make: [make_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_slides.md), [make_demo_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_demo_notes.md)
-- **45** Introduction to CMake: [cmake_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_slides.md), [cmake_demo_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_demo_notes.md)
+- **25** System Paths, Libraries, and How to Use Them: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths_and_librarytools_slides.md), [notes](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/systempaths_and_librarytools_notes.md)
+- **15** Introduction to Make: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_slides.md), [notes](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/make_demo_notes.md)
+- **45** Introduction to CMake: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/cmake_slides.md), [notes](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/cmake_demo_notes.md)
 
 ## 6.2 -- Thu, November 25, 2021
 

@@ -32,8 +32,8 @@ Further resources:
 
 ## CMake
 
-Please choose a meaningful project name. As target name, use `main`. We recommend to follow best practice and create a `build` directory at the root level from which `cmake ..` is called. 
-    
+Please choose a meaningful project name. As target name, use `main`. We recommend to follow best practice and create a `build` directory at the root level from which `cmake ..` is called.
+
 ## Docker Setup
 
 The code and all dependencies should run in a Docker container based on the `ubuntu:20.04` image. As by now, you already know how to set up a basic Docker container, we do no longer provide detailed instructions. We recommend to build the Dockerfile incrementally. Start with a rather empty one and install dependencies manually in the interactive mode. Take notes of the commands you use, so you an integrate them into the Dockerfile afterwards and rebuild your image.
@@ -56,7 +56,7 @@ Some standard packages available on Aptitude might come handy:
 
 ## Dependencies
 
-Add dependencies one by one: Comment in the parts of `main.cpp` that are connected to a specfific dependency. Then, install the dependency and extend the `CMakeLists.txt`. Verify that you can build and run the executable. If everything works, go on and include the next dependency. 
+Add dependencies one by one: Comment in the parts of `main.cpp` that are connected to a specfific dependency. Then, install the dependency and extend the `CMakeLists.txt`. Verify that you can build and run the executable. If everything works, go on and include the next dependency.
 
 - Maybe start with the boost dependencies. Boost Container is a header-only dependency, Boost Filesystem needs to be linked. Both are available in `libboost-all-dev`. There is a CMake module to [find boost libraries](https://cmake.org/cmake/help/latest/module/FindBoost.html).
 - deal.II is available in `libdeal.ii-dev`. deal.II uses some fancy [CMake macros](https://www.dealii.org/current/users/cmake_user.html).

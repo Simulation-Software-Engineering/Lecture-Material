@@ -1,10 +1,10 @@
 
 all: shared static
 
-shared:
+shared: main.cpp
 	$(CXX) main.cpp -o main-shared
 
-static:
+static: main.cpp
 	$(CXX) -static main.cpp -o main-static
 
 clean:

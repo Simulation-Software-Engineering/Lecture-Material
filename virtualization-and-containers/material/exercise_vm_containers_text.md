@@ -145,9 +145,9 @@ See the instructions in the task list above. The repository initially contains a
 
 We want to provision (`config.vm.provision`) the box in several steps. You can run the provisioning on the running VM with [`vagrant provision`](https://www.vagrantup.com/docs/cli/provision) or [`vagrant up --provision`](https://www.vagrantup.com/docs/cli/up#no-provision) to check every change you apply to the VM by the provisioning process.
 
-- Create a new file with the name `testfile` and add it to the repository. The file must contain your GitLab username as text. Add the file to your box using the [file provisioner](https://www.vagrantup.com/docs/provisioning/file) and place it in the home directory of the `vagrant` user (`${HOME}`).
+- Create a new file with the name `testfile` and add it to the repository. The file must contain your `USERNAME` as text. Add the file to your box using the [file provisioner](https://www.vagrantup.com/docs/provisioning/file) and place it in the home directory of the `vagrant` user (`${HOME}`).
 - Extend the file `bootstrap.sh` for provisioning your box. It should contain commands that you would usually use on the command line like in the VirtualBox task. The script must do the follwing:
-    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your GitLab username. You can achieve this by adding `export ENV_TEST_VARIABLE=USERNAME` to the `.bashrc` file which resides in the home directory of `vagrant` user.
+    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`. You can achieve this by adding `export ENV_TEST_VARIABLE=USERNAME` to the `.bashrc` file which resides in the home directory of `vagrant` user.
     - Install `neofetch` as you did in the VirtualBox task.
     - **Note:** In the `bootstrap.sh` you do not have to prefix commands with `sudo` since the script is executed with superuser rights when Vagrant provisions the box.
 
@@ -176,14 +176,33 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 - You might want to add the option `--provision` to the `vagrant up` or use `vagrant provision` command if you want to reprovision a running box (without destroying it first). In case the box is not being build/rebuild, please read the [documentation about provisioning](https://www.vagrantup.com/docs/provisioning) carefully.
 - By default, Vagrant will store some larger files like the base images/boxes etc.\ in `${HOME}/vagrant.d`. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point the alternative directory. This could look like this:
 
-    ```bash
-    export VAGRANT_HOME=/media/jaustar/external-ssd/virtualmachines/vagrant/.vagrant.d/
-    ```
+  ```bash
+  export VAGRANT_HOME=/media/jaustar/external-ssd/virtualmachines/vagrant/.vagrant.d/
+  ```
 
     You might want to add this line to your `.bashrc` to make this change persistent. Note, that Vagrant will still create a hidden `.vagrant` directory in the your working directory. However, the `.vagrant` directory normally does not need much space on your hard drive.
 - [Vagrant Homepage](https://www.vagrantup.com/)
 - [Vagrant Introduction](https://www.vagrantup.com/intro)
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
+- If you are using Vagrant on Windows you might run into the following issue/error message:
+
+  ```powershell
+  VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole
+  ```
+
+    - The short version of the solution is given below. The detailed solution is described in this [Stack Overflow thread](https://stackoverflow.com/questions/37955942/vagrant-up-vboxmanage-exe-error-vt-x-is-not-available-verr-vmx-no-vmx-code).
+        - As admin, run the following command in a PowerShell:
+
+        ```powershell
+        bcdedit /set hypervisorlaunchtype off
+        ```
+
+        - Restart your computer
+        - After the restart, run the following command as admin a PowerShell:
+
+        ```powershell
+        bcdedit /set hypervisorlaunchtype auto
+        ```
 
 ## Containers Using Docker
 
@@ -212,8 +231,8 @@ See the instructions in the task list above. The repository initially contains a
 
 - Currently, the [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) is empty. Edit the file such that an container image with the following properties is build:
     - Your virtual machine should be based on the [`ubuntu:20.04` image](https://hub.docker.com/_/ubuntu).
-    - Create a new file with the name `testfile` and add it to the repository. The file should contain your GitLab username as text. Add the file to your container and place it in directory `/testfiles`.
-    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your GitLab username.
+    - Create a new file with the name `testfile` and add it to the repository. The file should contain your `USERNAME` as text. Add the file to your container and place it in directory `/testfiles`.
+    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`.
     - Make sure that the default command to be executed when running the container is `/bin/bash`.
     - Install `neofetch`.
     - **Note:** In the `Dockerfile` you do not have to prefix commands such as `apt` with `sudo` since the script is executed with superuser rights.
@@ -232,9 +251,9 @@ See the instructions in the task list above. The repository initially contains a
     - As title choose "[`USERNAME`] Docker Container Recipe".
     - Make sure all files are up to date (`testfile`, `Dockerfile`).
     - Attach the screenshot ("Attach a file") that you made in the previous step.
-    - Add the label `Docker` label to the issue and assign the issue to `jaustar`.
+    - Add the label `Docker` label to the merge request and assign the merge request to `jaustar`.
     - Double-check that all files are in the repository and up to date.
-    - If everything looks good, create the issue.
+    - If everything looks good, create the merge request.
 
 ### Further Information (Docker)
 

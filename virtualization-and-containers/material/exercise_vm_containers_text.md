@@ -176,9 +176,9 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 - You might want to add the option `--provision` to the `vagrant up` or use `vagrant provision` command if you want to reprovision a running box (without destroying it first). In case the box is not being build/rebuild, please read the [documentation about provisioning](https://www.vagrantup.com/docs/provisioning) carefully.
 - By default, Vagrant will store some larger files like the base images/boxes etc.\ in `${HOME}/vagrant.d`. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point the alternative directory. This could look like this:
 
-    ```bash
-    export VAGRANT_HOME=/media/jaustar/external-ssd/virtualmachines/vagrant/.vagrant.d/
-    ```
+  ```bash
+  export VAGRANT_HOME=/media/jaustar/external-ssd/virtualmachines/vagrant/.vagrant.d/
+  ```
 
     You might want to add this line to your `.bashrc` to make this change persistent. Note, that Vagrant will still create a hidden `.vagrant` directory in the your working directory. However, the `.vagrant` directory normally does not need much space on your hard drive.
 - [Vagrant Homepage](https://www.vagrantup.com/)
@@ -189,19 +189,20 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
   ```powershell
   VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole
   ```
-  
-    - The short version of the solution is given below. The detailed solution is described in this [Stack Overflow thread](https://stackoverflow.com/questions/37955942/vagrant-up-vboxmanage-exe-error-vt-x-is-not-available-verr-vmx-no-vmx-code).
-          1. As admin, run the following command in a PowerShell:
 
-            ```powershell
-            bcdedit /set hypervisorlaunchtype off
-            ```
+    - The short version of the solution is given below. The detailed solution is described in this [Stack Overflow thread](https://stackoverflow.com/questions/37955942/vagrant-up-vboxmanage-exe-error-vt-x-is-not-available-verr-vmx-no-vmx-code).
+        1. As admin, run the following command in a PowerShell:
+
+        ```powershell
+        bcdedit /set hypervisorlaunchtype off
+        ```
+
         2. Restart your computer
         3. After the restart, run the following command as admin a PowerShell:
 
-           ```powershell
-           bcdedit /set hypervisorlaunchtype auto
-           ```
+        ```powershell
+        bcdedit /set hypervisorlaunchtype auto
+        ```
 
 ## Containers Using Docker
 

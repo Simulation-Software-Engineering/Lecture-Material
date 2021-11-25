@@ -191,14 +191,14 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
   ```
 
     - The short version of the solution is given below. The detailed solution is described in this [Stack Overflow thread](https://stackoverflow.com/questions/37955942/vagrant-up-vboxmanage-exe-error-vt-x-is-not-available-verr-vmx-no-vmx-code).
-        1. As admin, run the following command in a PowerShell:
+        - As admin, run the following command in a PowerShell:
 
         ```powershell
         bcdedit /set hypervisorlaunchtype off
         ```
 
-        1. Restart your computer
-        1. After the restart, run the following command as admin a PowerShell:
+        - Restart your computer
+        - After the restart, run the following command as admin a PowerShell:
 
         ```powershell
         bcdedit /set hypervisorlaunchtype auto

@@ -9,9 +9,10 @@ Example code is in [`building-and-packaging/material/examples/cmake`](https://gi
 - Standard to create `build` directory, don't call cmake in root directory.
     - In case of doubt, you can always just delete complete folder.
 - Explain and look at files:
-    - `Makefile`: lengthier than you think, many targets
+    - `Makefile`: lengthier than you think, many targets, search for `helloworld`
     - `CMakeCache.txt`: stores values of variables, used by GUIs for example
     - `cmake_install.cmake`: a file used by CPack internally, ignore it
+    - `CMakeFiles`: even much more things that are not so important right now
 - `make` and `./helloworld`
 - `make clean`
 
@@ -42,6 +43,7 @@ int main()
 - Generate and build again, this time with verbose output, `make VERBOSE=1`.
     - `cmake` does stuff again, checks build system.
     - How compiled, how linked, ...
+- `make` and run.
 - What if there are multiple source files in `sse` folder?
 
 ```diff
@@ -80,7 +82,7 @@ int main()
 
 - `include` includes a module, [some modules](https://cmake.org/cmake/help/latest/manual/cmake-modules.7.html) are builtin in CMake.
 - Creates target `test`.
-- `make test`, explain output.
+- `make`, `make test`, explain output.
 - We will learn later (after Christmas) how to work with proper packages for testing (e.g. boost).
 
 ## CPack (maybe moved to next week if time short)
@@ -90,10 +92,9 @@ int main()
 ```diff
 include(CPack)
 
-install(TARGETS helloworld DESTINATION bin)
+install(TARGETS helloworld)
 ```
 
-- Goes to `$CMAKE_INSTALL_PREFIX/bin`
 - Run cmake and `make package`, creates `HelloWorld-0.1.1-Linux.tar.gz`
 - We will see later (next week) how to package a `.deb`
 - Set version number
@@ -106,15 +107,17 @@ install(TARGETS helloworld DESTINATION bin)
 
 ## Building libraries
 
+- `make clean`
 - Let's turn the `sse` function into a library
 
 ```diff
 + file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS sse/*.cpp)
 - file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS main.cpp sse/*.cpp)
 + add_library(sse "${SRC_FILES}")
-- add_executable(main "${SRC_FILES}")
+- add_executable(helloworld "${SRC_FILES}")
 ```
 
+- Remove `CTest` and `CPack` things for simplicity.
 - Build static lib `libHelloWorld.a`, that's the default
 - Build shared lib by `cmake -DBUILD_SHARED_LIBS=ON ..`, don't change in `CMakeLists.txt`, but stick to standards
 - Define cmake variables with `-D`, we will come back to this later
@@ -132,6 +135,7 @@ install(TARGETS helloworld DESTINATION bin)
 
 - `PRIVATE` means that the symbols of sse are not visible from the outside (imagine helloworld would be a library again)
 - If `PUBLIC` and `helloworld` was library and used by `X`, we would also need to link `sse` in `X`.
+- `cmake -DBUILD_SHARED_LIBS=ON ..` and `make` and `./helloworld`
 
 ## External dependencies
 
@@ -146,13 +150,16 @@ sse();
 + std::cout << precice::getVersionInformation() << std::endl;
 ```
 
+- `make` ... does not find preCICE.
+
 `CMakeLists.txt`:
 
 ```diff
 find_package(precice REQUIRED CONFIG)
-target_link_libraries("${PROJECT_NAME}" PRIVATE precice::precice)
+target_link_libraries(helloworld PRIVATE precice::precice)
 ```
 
+- `cmake ..` and `make` and `./helloworld`
 - `find_package` works if dependency is "cmake-ready"
     - There is a ["module" and a "config" mode](https://cmake.org/cmake/help/latest/command/find_package.html)
     - "module" mode
@@ -166,7 +173,7 @@ target_link_libraries("${PROJECT_NAME}" PRIVATE precice::precice)
 - If not "cmake-ready", but lib is in a discoverable location (standard system path or adjusted `LIBRARY_PATH`)
 
 ```cmake
-find_library(precice REQUIRED CONFIG)
+find_library(precice REQUIRED)
 target_link_libraries("${PROJECT_NAME}" PRIVATE precice)
 ```
 
@@ -181,19 +188,6 @@ target_link_libraries("${PROJECT_NAME}" PRIVATE precice)
 
 `CMakeLists.txt`:
 
-```cmake
-option(ENABLE_PRECICE "Enable use of preCICE." ON)
-
-if (ENABLE_PRECICE)
-  message(STATUS "preCICE enabled")
-  find_library(precice REQUIRED CONFIG)
-  target_link_libraries("${PROJECT_NAME}" PRIVATE precice)
-else()
-  message(STATUS "preCICE disabled")
-  target_compile_definitions("HelloWorld" PRIVATE NO_PRECICE)
-endif()
-```
-
 `main.cpp`:
 
 ```c++
@@ -202,9 +196,22 @@ endif()
 #endif
 ```
 
-- Build without preCICE `cmake -DENABLE_PRECICE=OFF ..`
+```cmake
+option(ENABLE_PRECICE "Enable use of preCICE." ON)
+
+if(ENABLE_PRECICE)
+  message(STATUS "preCICE enabled")
+  find_package(precice REQUIRED CONFIG)
+  target_link_libraries(helloworld PRIVATE precice::precice)
+else()
+  message(STATUS "preCICE disabled")
+  target_compile_definitions(helloworld PRIVATE NO_PRECICE)
+endif()
+```
+
+- Build without preCICE `cmake -DENABLE_PRECICE=OFF ..` and `make` and `./helloworld`.
 - Create different folder and build there with preCICE.
-- Build in release mode `-DCMAKE_BUILD_TYPE=Release`
+- Build in release mode `-DCMAKE_BUILD_TYPE=Release` and `make VERBOSE=1`.
 - This is a [standard CMake variable](https://cmake.org/cmake/help/latest/manual/cmake-variables.7.html).
 
 ## ccmake
@@ -225,6 +232,7 @@ endif()
     - Variables and feature summaries
     - `sources.cmake` included in line 335, no glob, but generated (some python script)
     - Run it, tells you many things
-    - build in parallel
+    - build in parallel (but takes some time)
+    - `make test`
     - `make install` standard target, did not yet talk about it, copies to correct paths, needs sudo
 - Another real-world example: [deal.II](https://github.com/dealii/dealii/blob/master/CMakeLists.txt)

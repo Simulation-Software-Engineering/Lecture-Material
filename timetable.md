@@ -78,4 +78,4 @@
 
 ## 6.2 -- Thu, November 25, 2021
 
-- CMake exercise
+- **90** [Let's fight with CMake, Docker, and some dependencies](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/exercise_cmake_text.md)

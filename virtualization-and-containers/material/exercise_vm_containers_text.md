@@ -197,8 +197,8 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
         bcdedit /set hypervisorlaunchtype off
         ```
 
-        2. Restart your computer
-        3. After the restart, run the following command as admin a PowerShell:
+        1. Restart your computer
+        1. After the restart, run the following command as admin a PowerShell:
 
         ```powershell
         bcdedit /set hypervisorlaunchtype auto

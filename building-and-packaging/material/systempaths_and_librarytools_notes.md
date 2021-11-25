@@ -16,7 +16,7 @@
     - Standard libraries as in C++ or Python, but also scientific software such as PETSc, FEniCS, NumPy...
 
 
-## Static vs/ Shared Libraries/Executables
+## Static vs. Shared Linking
 
 - This is a bit of a further motivation and library examples.
 - Whether shared or static is preferable depends on use case.

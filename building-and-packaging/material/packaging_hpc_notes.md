@@ -1,4 +1,4 @@
-# Debian packages and packaging for HPC
+# Packaging for HPC
 
 *Learning goals*
 
@@ -12,23 +12,6 @@
 
 - Did you ever create your own Debian package?
 - How do you install software on a server/cluster?
-
-## General package creation / Debian packages
-
-| Duration | Format |
-| --- | --- |
-| 20 minutes | Slides |
-
-- `deb` packages are common in the Linux world
-    - Used by Debian its derivatives (such as Ubuntu)
-- **TODO** Figure out how to build Debian packages
-- Can be used to package packages of all kind
-
-## General package creation / Debian packages - Example
-
-| Duration | Format |
-| --- | --- |
-| 5 minutes | Demo |
 
 
 ## Package managers for HPC (but also for you)

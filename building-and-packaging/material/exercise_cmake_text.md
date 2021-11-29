@@ -42,6 +42,7 @@ To prevent the image from asking the timezone in some dialog, use ...
 
 ```docker
 COPY inittimezone /usr/local/bin/inittimezone
+RUN inittimezone
 ```
 
 ... **before** you install new packages. Otherwise the Docker image creation will be stuck at a point that requires user interaction while it is not possible to interact with the process. You might need make `inittimezone` executable first: `chmod +x inittimezone`.

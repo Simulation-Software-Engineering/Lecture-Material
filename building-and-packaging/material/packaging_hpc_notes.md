@@ -1,76 +1,182 @@
-# Packaging for HPC
+# Packaging for High-Performance Computing (Notes)
 
-*Learning goals*
+## Spack Package Creation
 
-- How to automatize compilation of codes.
-- How to easily add your code to package managers for
-    - reproducibility
-    - easier user compilation
-- Reproducible builds/environments?
+- Finish Spack setup
 
-## Quiz (optional)
+  ```
+  spack compiler find
+  spack external find
+  ```
 
-- Did you ever create your own Debian package?
-- How do you install software on a server/cluster?
+  This will find preinstalled compilers and further software. This way we do not have to recompile everything from scratch.
 
+  **Note** `spack external find` is an experimental feature and might fail. System packages [can be defined manually](https://spack.readthedocs.io/en/latest/getting_started.html#system-packages).
 
-## Package managers for HPC (but also for you)
+- Install a simple example package
 
-| Duration | Format |
-| --- | --- |
-| 30 minutes | Slides |
+  ```bash
+  spack spec zlib
+  ```
 
-- Challenge:
-    1. Software should be easy to install
-    2. I want high performance on a super computer -> Compile software with platform dependent optimization (`-march=native`). Might have vendor-specific libraries (MPI, BLAS etc.) that are crucial for performance.
-    3. Users do not have root rights.
-- This is a current topic of great interest: [European Environment for Scientific Software Installations (EESSI)](https://github.com/EESSI/)
-- Common in HPC environments:
-    - EasyBuild
-    - Spack
-- Both tools heavily rely on Python and are using `archspec`.
-- Idea: Describe installation procedure in a package in order to automatize it.
-- Tool (try to) will do dependency resolution, compilation and installation.
-- EasyBuild
-    - Originated from Ghent University, Belgium
-    - Will create special environment variables that are prefixed with `EB`
-- Spack
-    - Originated from LLNL in the US
-    - Can also be used to roll-out precompiled binaries
-- European Environment for Scientific Software Installations (EESSI) tries to simplify the installation routine by providing precompiled packages with optimizations enabled.
+  This will trigger the bootstrap process of Spack. It installs `clingo` the dependency resolver.
 
-## Spack demo
+  ```bash
+  spack install --reuse zlib
+  ```
 
-| Duration | Format |
-| --- | --- |
-| XX minutes | Demo |
+  Will now install the package `zlib` by downloading and compiling it. `--reuse` tells it to reuse package that exist already if possible
 
-- TBD
+  ```bash
+  spack find
+  ```
 
-## xSDK
+  will show `zlib` being available now and only `zlib` as the preinstalled software has not been used/added to the root environment of Spack yet.
 
-| Duration | Format |
-| --- | --- |
-| 10 minutes | Slides |
+- Create base package (boilerplate)
 
-- Standardization effort for scientific
+  ```bash
+  spack create https://github.com/Simulation-Software-Engineering/HelloWorld/archive/refs/tags/v0.3.0.tar.gz
+  ```
 
-## Exercise
+  Spack will fetch the archive and try to deduce some basic settings. It will also check for other releases and asks whether to add checksums. We wann all checksums.
 
-| Duration | Format |
-| --- | --- |
-| XX minutes | Exercise |
+- Afterwards Spack drops us in the boilerplate package.
 
-- Install Spack
-- Set up spack environment using preinstalled packages `spack external find`
-- Install some package via Spack
-- Build a spack package for a C++ Code (CMake) and one for Python
-    - **TODO** Can we base that on some result from an earlier lecture?
+  ```Python
+  class Helloworld(CMakePackage):
+      """FIXME: Put a proper description of your package here."""
 
+      # FIXME: Add a proper url for your package's homepage here.
+      homepage = "https://www.example.com"
+      url      = "https://github.com/Simulation-Software-Engineering/HelloWorld/archive/refs/tags/v0.3.0.tar.gz"
+
+      # FIXME: Add a list of GitHub accounts to
+      # notify when the package is updated.
+      # maintainers = ['github_user1', 'github_user2']
+
+      version('0.3.0', sha256='5e95bf1904ebfbd5c28b064bff098a3bb654bf7c407f2031295e3588d6d9e8fa')
+      version('0.2.0', sha256='a77499bbfd0b8f4d7070b06c491e062fa608fdd7e939d6c37796bdafdbbaa35a')
+      version('0.1.0', sha256='2e99e2ff2b955b9d17645367a0a7eeb485162d9336cdbf0034b9d95d464f3157')
+
+      # FIXME: Add dependencies if required.
+      # depends_on('foo')
+
+      def cmake_args(self):
+          # FIXME: Add arguments other than
+          # FIXME: CMAKE_INSTALL_PREFIX and CMAKE_BUILD_TYPE
+          # FIXME: If not needed delete this function
+          args = []
+          return args
+  ```
+
+  At least the `FIXME` statements should be fixed before relasing the package. The Spack package recipe is written in Python so we can also do common Python magic here.
+
+- Spack has deduced a good number of information already.
+    - We work with CMake
+    - There are 3 releases of the software
+    - The URL to download packages
+    - The name of the Package we work with `class Helloworld`. This is also the name of the software now within Spack.
+- We want to fix/extend the package with some standard information
+    - Package description
+    - Set URL to SSE homepage
+    - Add our GitHub username as maintainer
+    - Remove the `cmake_args` part as we only have a standard CMake arguments. Here could give extra/special arguments specific to the software package.
+- Concretize our package
+
+  ```bash
+  $ spack spec helloworld
+  Input spec
+  --------------------------------
+  helloworld
+
+  Concretized
+  --------------------------------
+  helloworld@0.3.0%gcc@9.3.0~ipo build_type=RelWithDebInfo arch=linux-ubuntu20.04-skylake
+    ^cmake@3.16.3%gcc@9.3.0~doc+ncurses+openssl+ownlibs~qt build_type=Release patches=1c540040c7e203dd8e27aa20345ecb07fe06570d56410a24a266ae570b1c4c39,bf695e3febb222da2ed94b3beea600650e4318975da90e4a71d6f31a6d5d8c3d arch=linux-ubuntu20.04-skylake
+  ```
+
+  We see that `cmake` is an implicit dependency as we need it for building our package.
+
+- Install package
+
+  ```bash
+  spack install helloworld
+  ```
+
+- Load installed package, run code and unload
+
+  ```bash
+  spack load helloworld
+  helloworld
+  spack unload helloworld
+  ```
+
+- Install different version of code
+
+  ```bash
+  spack install helloworld@0.2.0
+  ```
+
+  This will concretize (internally, i.e. no output on terminal) and then build the software.
+
+- Add `main` branch and thus GitHub repository
+
+  ```diff
+  + git      = "https://github.com/Simulation-Software-Engineering/HelloWorld.git"
+  +
+  + version('main', branch='main')
+  ```
+
+- If one wants to edit the package later, there are two options
+
+  ```bash
+  spack edit helloworld
+  ```
+
+  or open `package.py` file in `${HOME}/var/spack/repos/builtin/packages/helloworld/`
+
+- Add artifical dependencies
+
+  ```diff
+  + depends_on('python@3:', when='@0.3.0:')
+  + depends_on('zlib@:1.2')
+  ```
+
+  Means that tha package depends on Python `3.0.0` or newer and newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
+
+    - Show new dependencies
+
+      ```bash
+      spack spec helloworld
+      spack spec helloworld@0.2.0
+      ```
+
+      The Python dependency will only show up for the newest version of our software package.
+
+- Add an artificial variant
+
+  ```diff
+  + variant('python', default=True, description='Enable Python support')
+  - depends_on('python@3:', when='@0.3.0:')
+  + depends_on('python@3:', when='+python')
+  ```
+
+  and check its existence
+
+  ```bash
+  spack info helloworld
+  ```
+
+  where Python now shows up as variant with its description. We can deactivate Python by specifying
+
+  ```bash
+  spack info helloworld -python
+  ```
+
+  `~` can be (often) used instaed of `-`. There are [examples in the documentation](https://spack.readthedocs.io/en/latest/basic_usage.html#variants).
 
 ## Further reading
-
-### Other
 
 ### References
 

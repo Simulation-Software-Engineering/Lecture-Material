@@ -50,6 +50,7 @@ slideOptions:
     2. Make project packagable
     3. Create Debian package
     4. Inspect Debian package
+- Code is on [GitHub](https://github.com/Simulation-Software-Engineering/HelloWorld)
 
 ---
 

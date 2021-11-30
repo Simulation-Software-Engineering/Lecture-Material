@@ -21,6 +21,8 @@
 
 ## 1. Preparing Project
 
+- We will extend the code from the previous lecture.
+    - [GitHub repository](https://github.com/Simulation-Software-Engineering/HelloWorld)
 - Make sure two files are created (a library and en executable). This should be the case when starting with the code from last week's lecture.
 - We add the following changes
     - Adding a version number to the project. This is not needed yet, but I am afraid of forgetting it later.

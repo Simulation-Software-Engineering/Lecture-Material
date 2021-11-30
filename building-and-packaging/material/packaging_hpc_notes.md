@@ -76,7 +76,7 @@
 
 - [EasyBuild](https://github.com/easybuilders/easybuild)
 - [EasyConfigs](https://github.com/easybuilders/easybuild-easyconfigs)
-- [Spack](spack.io)
+- [Spack](https://spack.io/)
 - [Spack docs](https://spack.readthedocs.io/en/latest/)
 - [Spack 101 tutorials](https://spack-tutorial.readthedocs.io/en/latest/)
 - [archspec project](https://github.com/archspec/)
@@ -84,7 +84,7 @@
 ### Talks
 
 - Talks at FOSDEM
-    - 2020: [Spack's new Concretizer](https://archive.fosdem.org/2020/schedule/event/dependency_solving_not_just_sat/)https://github.com/archspec/
+    - 2020: [Spack's new Concretizer](https://archive.fosdem.org/2020/schedule/event/dependency_solving_not_just_sat/)
     - 2020: [Build for your microarchitecture: experiences with Spack and archspec](https://archive.fosdem.org/2020/schedule/event/archspec/)
     - 2018: [Binary packaging for HPC with Spack](https://archive.fosdem.org/2018/schedule/event/llnl_spack/)
     - 2018: ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)

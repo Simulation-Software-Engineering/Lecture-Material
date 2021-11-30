@@ -33,41 +33,76 @@ slideOptions:
 
 ## Introduction
 
-- Debian package format common
-    - Debian, Ubuntu... (lot os derivatives)
-- Goal: Debian Package for Ubuntu
-    - Create installation routing
-    - Make project packagable
-    - Create Debian package
-    - Inspect Debian package
+- [Debian](https://www.debian.org/) package format common
+    - Debian, [Ubuntu](https://ubuntu.com/)... (lot os derivatives)
+    - Native packaging format of popular Linux distributions
+    - Support by native package manager (`dpkg`/aptitude `apt`)
+- Easy to share (`deb` file)
+- Can be hosted and integrated in official or third-party repositories
+
+---
+
+## Step by Step Plan
+
+- **Goal**: Debian Package for Ubuntu
+- Steps:
+    1. Create installation routine
+    2. Make project packagable
+    3. Create Debian package
+    4. Inspect Debian package
 
 ---
 
 ## Adding Installation Target
 
-- Add target `install` for `make`
-- Should install files in `prefix/<bin/include/lib...>`
--
+- Software must be installable
+- Add `install` target for `make`
+- Should install files in appropriate location
+
+  ```bash
+  prefix/
+    bin/
+    lib/
+    include/
+    ...
+  ```
+
+---
 
 ## CPack
 
-- CLI tool and CMake module
+- CLI tool and [CMake module](https://cmake.org/cmake/help/latest/module/CPack.html)
 - Deals with package creation
 - Depends strongly on `install()` routine of project
     - The install routine was missing in the previous example
+- Several [generators](https://cmake.org/cmake/help/latest/manual/cpack-generators.7.html) for archive, DEB, RPM... type of packages
 
 ---
 
 ## CPack configuration
 
-- Create separate CMake file (in `cmake/`)
-    - Not necessary, but helps with managements
+- Extend `CMakeLists.txt`  or create own module (`.cmake` file)
+- Set [common CPack variables](https://cmake.org/cmake/help/latest/module/CPack.html#variables-common-to-all-cpack-generators) via `CPACK_PACKAGE_<OPTION>`
 
----
+  ```cmake
+  set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+  set(CPACK_PACKAGE_VENDOR "SSE Lecturers / Employer")
+  ```
 
-## Options
+- Set target package variables, e.g., for [DEB generator](https://cmake.org/cmake/help/latest/cpack_gen/deb.html#cpack_gen:CPack%20DEB%20Generator) via `CPACK_DEBIAN_<OPTION`>
 
-- `CPACK_PACKAGE_<OPTION>`
+  ```cmake
+  set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
+  set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
+  ...
+  ```
+
+- Generate package
+
+  ```bash
+  cmake -DCMAKE_OPTIONS ..
+  cpack -G TGZ,DEB
+  ```
 
 ---
 
@@ -76,18 +111,20 @@ slideOptions:
 - Installation target
 - Packaging configuration (CPack, common settings)
 
-
 ---
 
 ## Debian Package Format
 
-- "Package" is special **archive**
+- [Debian Package](https://www.debian.org/doc/manuals/debian-faq/pkg-basics.en.html) is special **archive**
+    - Focus here on binary packages
 - File ending `.deb`
-- Contents:
-    - `control` dictionary
-    -
-    -
-    -
+- Used on Ubuntu (and other derivatives)
+- Contents (some optional):
+    - `control` file: Name, dependencies etc.
+    - `md5sum` or similar: Checksums of bundled files
+    - `conffile`: configuration file
+    - Debian installation and removal scripts (`preinst`, `postinst`, `prerm`, a `postrm`)
+    - Files of actual package (binaries, libraries, includes...)
 
 ---
 
@@ -95,42 +132,26 @@ slideOptions:
 
 > NAME_VERSION-REVISION_ARCHITECTURE.deb
 
-- `NAME`:
+- `NAME`: Package name
 - `VERSION`: Software Version Number (e.g. "PETSc 3.16.1" -> `3.16.1`)
 - `REVISION`: Package Version Number
 - `ARCHITECTURE`: Target architectre (amd64, arm...)
 
 ---
 
-## Debian-specific Options
-
-- `CPACK_DEBIAN_FILE_NAME`: Follow Debian nomenclature (`deb`-file)
-
----
-
-## Package creation (Debian)
-
-- Stuff
-
-  ```bash
-  cmake -DCMAKE_BUILD_TYPE=Release -DSOME_OPTION_VALUE ..
-  make / cmake build --target
-  cpack -G DEB
-  ```
-
----
-
 ## Testing the package
 
-- `lintian`
-- Shows shortcomings of the Debian package
+- Ensure quality standards of package
+    - Requirements higher for packages in official repositories
+- Static analysis tool for Debian packages: [lintian](https://lintian.debian.org/)
+    - Shows shortcomings of the Debian package
 
 ---
 
 ## Demo: Debian Package
 
-- Extend CPack configuration
-- Test Debian package
+- Extend CPack configuration for Debian packaging
+- Analyze Debian package
 
 ---
 
@@ -144,11 +165,21 @@ slideOptions:
 
 ---
 
-## Further Reading
+## Further Reading 1/2
 
 - [Debian Package Basics](https://www.debian.org/doc/manuals/debian-faq/pkg-basics.en.html)
 - [Debian Packaging Guide](https://wiki.debian.org/Packaging)
 - [Ubuntu Packaging Guide](https://packaging.ubuntu.com/html/)
-- [Making a deb package with CMake/CPack and hosting it in a private APT repository](https://decovar.dev/blog/2021/09/23/cmake-cpack-package-deb-apt/)
 - [Launchpad](https://launchpad.net/)
+- [lintian reports](https://lintian.debian.org/)
+- [lintian man page](https://lintian.debian.org/)https://lintian.debian.org/
+
+
+---
+
+## Further Reading 2/2
+
 - [CPack documentation](https://cmake.org/cmake/help/latest/module/CPack.html)
+- [List of CPack generators](https://cmake.org/cmake/help/latest/manual/cpack-generators.7.html)
+- [Debian CPack generator]([generators](https://cmake.org/cmake/help/latest/cpack_gen/deb.html#cpack_gen:CPack%20DEB%20Generator))
+- [Making a deb package with CMake/CPack and hosting it in a private APT repository](https://decovar.dev/blog/2021/09/23/cmake-cpack-package-deb-apt/)

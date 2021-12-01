@@ -45,6 +45,7 @@ slideOptions:
     - We are aware of the problem and are thinking about solutions.
     - Reason 1: you should learn GitLab + GitHub
     - Reason 2: private information (GitLab) vs. public information (GitHub)
+        - We need privacy for some things. We want public domain for other things.
     - In general: lecture on GitHub, challenge on GitLab
 - **Exercises too much workload**
     - You are not expected to finish within the exercise session (50% done is good).

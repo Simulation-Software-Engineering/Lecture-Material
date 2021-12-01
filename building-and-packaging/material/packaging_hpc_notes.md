@@ -25,7 +25,7 @@
   spack install --reuse zlib
   ```
 
-  Will now install the package `zlib` by downloading and compiling it. `--reuse` tells it to reuse package that exist already if possible
+  Will now install the package `zlib` by downloading and compiling it. `--reuse` tells spack to reuse already existing packages if possible
 
   ```bash
   spack find

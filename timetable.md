@@ -79,3 +79,7 @@
 ## 6.2 -- Thu, November 25, 2021
 
 - **90** [Let's fight with CMake, Docker, and some dependencies](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/exercise_cmake_text.md)
+
+## 7.1 -- Thu, December 2, 2021
+
+- **5** [Some organizational things](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/organization/material/organizational_remarks_week7_slides.md)

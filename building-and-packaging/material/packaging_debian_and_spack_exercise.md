@@ -10,7 +10,7 @@ Deadline: **Thursday, December 7th, 2021, 9:00**
 
 **Attention/TODO**: Use [test repository](https://github.com/Simulation-Software-Engineering/cpack-exercise-test) for testing the exercise.
 
-The ultimate goals is to have a CMake/CPack configuration that allows us to generate packages for different targets. In this exercise we want to create a `tar.gz` package and a Debian `deb` package. We want to package this [HelloWorld example from GitHub](https://github.com/Simulation-Software-Engineering/cpack-exercise).
+The ultimate goals is to have a CMake/CPack configuration that allows us to generate packages for different targets. In this exercise we want to create a `tar.gz` package and a Debian `deb` package. We want to package this [HelloWorld example from GitHub](https://github.com/Simulation-Software-Engineering/cpack-exercise). The example has relaxed requirements to `yaml-cpp` which means you can use `libyaml-cpp-dev` from Ubuntu's package repository instead of compiling `yaml-cpp` yourself. In this exercise you should focus
 
 When setting up the package make sure that the executable `cpackexample` and also the library `cpackexamplelib` are build and installed in appropriate locations. You should also ensure that the header files for the library are installed properly. Please package `cpackexamplelib` as **shared** library. The package should contain enough information (at least maintainer, contact address, project description, vendor, version number, homepage). If you do not want to use your actual name/email address, please use your GitHub username and make up an email address).
 

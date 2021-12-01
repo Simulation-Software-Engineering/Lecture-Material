@@ -25,13 +25,13 @@
   spack install --reuse zlib
   ```
 
-  Will now install the package `zlib` by downloading and compiling it. `--reuse` tells spack to reuse already existing packages if possible
+  This installs the package `zlib` by downloading and compiling it. `--reuse` tells spack to reuse already existing packages if possible
 
   ```bash
   spack find
   ```
 
-  will show `zlib` being available now and only `zlib` as the preinstalled software has not been used/added to the root environment of Spack yet.
+  Checks the root environment and should show `zlib` being available now. Only `zlib` should be shown even if preinstalled software  was found by `spack external find`. These external packages have not been added to the root environment of Spack **explicity** yet and thus do not show up..
 
 - Create base package (boilerplate)
 

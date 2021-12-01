@@ -126,6 +126,15 @@ slideOptions:
     - Add this command to `.bashrc` to make permanent
     - `SPACK_ROOT` points to local Spack directory
 
+- Find basic compilers and packages
+
+  ```bash
+  spack compiler find
+  spack external find
+  ```
+
+  `spack external find` might fail (experimental feature)
+
 ---
 
 ## Spack Configuration and Caches
@@ -306,10 +315,10 @@ slideOptions:
   ```
 
 - `@3:`, `@:3`, `@2:3`:
-  - Minimum, maximum version and version range
-  - Version numbers are **inclusive**
-  - `@2:3`: Any version starting with `2` or `3`
-  - May use semantic versioning, e.g., `@2.3.1:2.4`
+    - Minimum, maximum version and version range
+    - Version numbers are **inclusive**
+    - `@2:3`: Any version starting with `2` or `3`
+    - May use semantic versioning, e.g., `@2.3.1:2.4`
 
 ---
 

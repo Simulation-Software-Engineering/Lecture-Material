@@ -50,7 +50,7 @@ Changes:
 +  )
 ```
 
-- Fire up a prepared containerf or testing. Container is beneficial as it allows us to mess around with the container's paths without messing up our own system. From the example repository I run
+- Fire up a prepared container for testing. Container is beneficial as it allows us to mess around with the container's paths without messing up our own system. From the example repository I run
 
   ```bash
   sudo docker run --rm -it --name ubuntu-packaging --mount type=bind,source="$(pwd)",target=/mnt/cpack-example jaustar/debian-package-building-base

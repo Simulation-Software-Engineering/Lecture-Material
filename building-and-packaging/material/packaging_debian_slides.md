@@ -134,7 +134,7 @@ slideOptions:
 - Set [common CPack variables](https://cmake.org/cmake/help/latest/module/CPack.html#variables-common-to-all-cpack-generators) via `CPACK_PACKAGE_<OPTION>`
 
   ```cmake
-  set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
+  set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
   set(CPACK_PACKAGE_VENDOR "SSE Lecturers / Employer")
   ```
 

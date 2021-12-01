@@ -104,6 +104,12 @@
   spack install helloworld
   ```
 
+  and show package being available now via
+
+  ```bash
+  spack find
+  ```
+
 - Load installed package, run code and unload
 
   ```bash

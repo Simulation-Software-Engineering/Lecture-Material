@@ -19,7 +19,7 @@
   spack spec zlib
   ```
 
-  This will trigger the bootstrap process of Spack. It installs `clingo` the dependency resolver.
+  This will trigger the bootstrap process of Spack. It installs `clingo`, the dependency resolver.
 
   ```bash
   spack install --reuse zlib

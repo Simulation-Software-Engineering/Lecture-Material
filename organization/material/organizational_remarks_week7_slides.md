@@ -53,7 +53,7 @@ slideOptions:
 ## Poll on First 5 Weeks (2/2)
 
 - **Exercises too much workload**
-    - How much time do you still need at home to finish? 
+    - How much time do you still need at home to finish?
     - You are not expected to finish within the exercise session (50% done is good).
     - Ask for help! Also through draft PRs.
 - **Git exercise and VM/containers lecture need improvement** -> YES

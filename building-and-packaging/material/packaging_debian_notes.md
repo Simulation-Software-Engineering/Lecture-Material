@@ -15,7 +15,8 @@
     - **Warning** We handle example as an seperate executable + library **for demonstration** only. There is normally no need handle internal dependencies that complicated.
 - We add the following changes
     - Adding a version number to the project. This is not needed yet, but I am afraid of forgetting it later.
-    - We mark the include files needed to use the `libsse` library, i.e., `sse/sse.hpp` publicly visible.
+    - We mark the include files needed to use the `libsse` library, i.e., `sse/sse.hpp` as publicly visible. This is needed such that CMake knows which headers should be public and should be installed. By default CMake assumes headers are for interal use (within the current project) only.
+        - The [documentation](https://cmake.org/cmake/help/latest/prop_tgt/PUBLIC_HEADER.html) is a bit confusing as it hints that this should/could only be used with Apple framework projects.
     - We define the target's include directory, i.e., where do we have to look for the dependency depending on the type of build (internally, top-level cmake project, external dependency)
     - We want to make sure that we have an `install` target for make that, at the same time, considers typical installation directories. That means `make install` should binaries in a `<prefix>/bin`, libraries in `<prefix>/lib` or `<prefix>/lib/helloworld`, include files in `<prefix>/include` etc. We include the predefined CMake macro `GNUInstallDirs` to get predefined variables such as installation directories. The directories names and their purpose are defined in the [GNU coding standard](https://www.gnu.org/prep/standards/html_node/Directory-Variables.html).
 

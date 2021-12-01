@@ -143,7 +143,7 @@
   + depends_on('zlib@:1.2')
   ```
 
-  Means that tha package depends on Python `3.0.0` or newer and newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
+  Means that the package depends on Python `3.0.0` or newer and newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
 
     - Show new dependencies
 

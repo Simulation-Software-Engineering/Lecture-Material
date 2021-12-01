@@ -54,7 +54,7 @@ slideOptions:
     - Admins will not/cannot install software for you
 
 ---
-.
+
 ## Introduction 2/2
 
 - Software should have best possible performance

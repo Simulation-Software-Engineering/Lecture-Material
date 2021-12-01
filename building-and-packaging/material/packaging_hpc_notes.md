@@ -39,7 +39,7 @@
   spack create https://github.com/Simulation-Software-Engineering/HelloWorld/archive/refs/tags/v0.3.0.tar.gz
   ```
 
-  Spack will fetch the archive and try to deduce some basic settings. It will also check for other releases and asks whether to add checksums. We wann all checksums.
+  Spack will fetch the archive and try to deduce some basic settings. It will also check for other releases and asks whether to add checksums. We want all checksums.
 
 - Afterwards Spack drops us in the boilerplate package.
 

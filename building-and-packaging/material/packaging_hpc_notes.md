@@ -138,13 +138,15 @@
 
   This will concretize (internally, i.e. no output on terminal) and then build the software.
 
-- Add `main` branch and thus GitHub repository
+- **Skip this for now** One could add `main` branch and thus GitHub repository
 
   ```diff
   + git      = "https://github.com/Simulation-Software-Engineering/HelloWorld.git"
   +
   + version('main', branch='main')
   ```
+
+  This can also be used for `develop` branches etc. It is useful if one needs really the newest version of a package or if one develops software using Spack.
 
 - If one wants to edit the package later, there are two options
 

@@ -236,24 +236,86 @@ slideOptions:
 
 - By default packages reside in `${SPACK_ROOT}/var/spack/repos/builtin/packages/PACKAGENAME/`
 - `package.py` inside `PACKAGENAME/` describes installation routine
-- `spack edit PKG`:
-    - Open given Spack package in editor
+- Installation recipes are Python code
+    - You can write own logic/helper functions in your recipe
 - `spack create URL`
     - Creates boilerplate package from template
     - `URL` points to some archive on can download
+- `spack edit PKG`:
+    - Open given Spack package in editor
+    - Set `EDITOR` environment variable to control what editor is used
 
 ---
 
-## Common Spack Package Properties
+## Common Spack Package Properties 1/2
 
-- `url`: Download URL of package
-- `version(NUMBER, HASH)`: Version number and SHA256 hash
+
+- Package class definition
+
+  ```python
+  class Packagename(CMakePackage)
+  ```
+
+- Download URL of package
+
+  ```python
+  """Description"""
+  ```
+
+- Download URL of package
+
+  ```python
+  url = "https://...archive/refs/tags/v0.3.0.tar.gz"
+  ```
+
+- Version number and hash of archive
+
+  ```python
+  version('0.2.0', 'sha256=a77499bbfd0b8f4d7070b06c491e062fa608fdd7e939d6c37796bdafdbbaa35a')
+  ```
+
+- Variants user may choose
+
+  ```python
+  variant('name', default=BOOL, decription="STRING")
+  ```
+
+  Example:
+
+  ```python
+  variant('python', default=True, description='Enable Python support')
+  ```
+
+---
+
+## Common Spack Package Properties 2/2
+
+- Dependency specification
+
+  ```python
+  depends_on('PACKAGE@VERSION', when='CONDITION')
+  ```
+
+  Example:
+
+  ```python
+  variant('python', default=True, description='Enable Python support')
+
+  depends_on('python@3:', when='+python')
+  depends_on('zlib@:1.2', when='@0.2:')
+  ```
+
+- `@3:`, `@:3`, `@2:3`:
+  - Minimum, maximum version and version range
+  - Version numbers are **inclusive**
+  - `@2:3`: Any version starting with `2` or `3`
+  - May use semantic versioning, e.g., `@2.3.1:2.4`
 
 ---
 
 ## Spack Demo 2
 
-- Create package for our [CPack example](https://github.com/Simulation-Software-Engineering/HelloWorld)
+- Create package for our [HelloWorld example](https://github.com/Simulation-Software-Engineering/HelloWorld)
     1. Create boilerplate package
     2. Add package details
     3. Verify package
@@ -266,21 +328,27 @@ slideOptions:
 - Popular package managers for HPC
     - [Spack](https://spack.io/)
         - Originates from LLNL in US
+        - Build around concretizer
     - [EasyBuild](https://github.com/easybuilders/easybuild)
         - Originates from Ghent University in Belgium
-
+- Both suitable for users, admins, researchers
+- Alternatives?
+    - Manual installation and module system like [`Lmod`](https://lmod.readthedocs.io/en/latest/) or [`Modules`](http://modules.sourceforge.net/)
 
 ---
 
 
 ## Package Managers for HPC 2/2
 
-- Package manager are a topic of great interest:
-
-    - [European Environment for Scientific Software Installations (EESSI)](https://eessi.github.io/docs/)
-        - European project
-        - Focus on avoiding recompilation
-    - [xSDK](https://xsdk.info/)
+- [European Environment for Scientific Software Installations (EESSI)](https://eessi.github.io/docs/)
+    - Initiated in Europe
+    - Focus on avoiding recompilation
+    - Targets workstations/PCs, supercomputers and cloud computing
+- [Extreme-scale Scientific Software Development Kit (xSDK)](https://xsdk.info/)
+    - Initiated in US
+    - Currently strong focus on mathematical software
+    - Focuses on defining requirements scientific should adhere to (build system, testing, documentation...)
+- Both focus on specifying basic software stack for HPC
 
 ---
 

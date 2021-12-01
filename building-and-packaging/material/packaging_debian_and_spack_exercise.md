@@ -10,13 +10,13 @@ Deadline: **Thursday, December 7th, 2021, 9:00**
 
 **Attention/TODO**: Use [test repository](https://github.com/Simulation-Software-Engineering/cpack-exercise-test) for testing the exercise.
 
-The ultimate goals is to have a CMake/CPack configuration that allows us to generate packages for different targets. In this exercise we want to create a `tar.gz` package and a Debian `deb` package. We want to package this [HelloWorld example from GitHub](https://github.com/Simulation-Software-Engineering/cpack-exercise). The example has relaxed requirements to `yaml-cpp` which means you can use `libyaml-cpp-dev` from Ubuntu's package repository instead of compiling `yaml-cpp` yourself. In this exercise you should focus
+The ultimate goal is to have a CMake/CPack configuration that allows us to generate packages for different package formats. In this exercise we want to be able to create a `tar.gz` package and a Debian `deb` package. We want to package this [HelloWorld example from GitHub](https://github.com/Simulation-Software-Engineering/cpack-exercise). The example is based on the code from the previous week, but has relaxed requirements to `yaml-cpp`. This means you can use `libyaml-cpp-dev` from Ubuntu's package repository instead of compiling `yaml-cpp` yourself. In this exercise you should focus on the packaging aspect. Normally, there should be no need to adapt the compilation.
 
-When setting up the package make sure that the executable `cpackexample` and also the library `cpackexamplelib` are build and installed in appropriate locations. You should also ensure that the header files for the library are installed properly. Please package `cpackexamplelib` as **shared** library. The package should contain enough information (at least maintainer, contact address, project description, vendor, version number, homepage). If you do not want to use your actual name/email address, please use your GitHub username and make up an email address).
+When setting up the package make sure that the executable `cpackexample` and also the library `cpackexamplelib` are build and installed in appropriate locations. You should also ensure that the header files for the library are installed properly. The package should contain enough information (at least maintainer, contact address, project description, vendor, version number, homepage). If you do not want to use your actual name/email address, please use your GitHub username and make up an email address).
 
 For the Debian package, make sure that
 
-- the executable is stripped.
+- the executable is stripped, i.e., debug symbols should removed from the executable.
 - the list of dependencies if generated for the Debian package.
 - the Debian package is generated with default file naming scheme.
 
@@ -79,7 +79,7 @@ docker run --rm -it --name cpack-packaging --mount type=bind,source="$(pwd)",tar
 
 Please state the actual command to use in your pull request.
 
-Running the container like this should trigger the preparation of the two packages. After the container is finished running, the files `PACKAGENAME.deb` and `PACKAGENAME.tar.gz` should be present on the host system but no `build` directory or similar, i.e., make sure the package is not created in the mounted drive.
+Running the container like this should trigger the preparation of the two packages. After the container is finished running, the files `PACKAGENAME.deb` and `PACKAGENAME.tar.gz` should be present on the host system but no `build` directory or similar, i.e., make sure the package is not created in the mounted drive. Please package `cpackexamplelib` as **shared** library when creating the packages.
 
 ### Spack
 

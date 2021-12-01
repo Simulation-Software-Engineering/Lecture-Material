@@ -1,5 +1,17 @@
 # Packaging for High-Performance Computing (Notes)
 
+## Spack Setup
+
+- Initializing Spack with
+
+  ```bash
+  . <spack_prefix>/share/spack/setup-env.sh
+  ```
+
+  will set `SPACK_ROOT` and also add `spack` to `PATH`.
+
+  Note that the  `.` operator will run the commands in the supplied script as if we would type the commands supplied by the script in the shell ourselves. In bash the `.` operator is equivalent to `source`. However, `source` is not specified in POSIX and thus using `.` is likely to work on more platforms.
+
 ## Spack Package Creation
 
 - Finish Spack setup

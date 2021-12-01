@@ -54,7 +54,7 @@ slideOptions:
     - Admins will not/cannot install software for you
 
 ---
-
+.
 ## Introduction 2/2
 
 - Software should have best possible performance
@@ -117,7 +117,7 @@ slideOptions:
     - `v0.17` is currently the latest release
     - Update to newer versions using `git pull`/`git checkout -b`
 
-- Add Spack to `PATH`
+- Set up Spack
 
   ```bash
   . <spack_prefix>/share/spack/setup-env.sh

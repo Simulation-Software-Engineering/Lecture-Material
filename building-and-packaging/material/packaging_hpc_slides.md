@@ -117,7 +117,7 @@ slideOptions:
 ## Spack Configuration and Caches
 
 - Spack heavily relies on `yaml` files
-    - Take care of space if you edit these files
+    - Take care of spaces when editing
 - User configuration in `${HOME}/.spack`
 - Several [other configuration scopes](https://spack.readthedocs.io/en/latest/configuration.html)
 

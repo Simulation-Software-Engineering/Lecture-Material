@@ -12,6 +12,7 @@
 - We will extend the code from the previous lecture.
     - [GitHub repository](https://github.com/Simulation-Software-Engineering/HelloWorld)
 - Make sure two files are created (a library and an executable). This should be the case when starting with the code from last week's lecture.
+    - **Warning** We handle example as an seperate executable + library **for demonstration** only. There is normally no need handle internal dependencies that complicated.
 - We add the following changes
     - Adding a version number to the project. This is not needed yet, but I am afraid of forgetting it later.
     - We mark the include files needed to use the `libsse` library, i.e., `sse/sse.hpp` publicly visible.

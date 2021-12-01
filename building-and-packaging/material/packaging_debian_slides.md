@@ -52,7 +52,7 @@ slideOptions:
 
 ## Step by Step Plan
 
-- **Goal**: Create Debian package for Hello-World code to be used on Ubuntu
+- **Goal**: Create Debian package for HelloWorld code to be used on Ubuntu
 - Steps:
     1. Extend CMake configuration from previous lecture to have `install` target
     2. Extend CMake configuration to contain a CPack section
@@ -118,6 +118,8 @@ slideOptions:
 1. Installation target
 2. Packaging configuration (CPack, common settings)
 
+**Warning:** We handle example as an seperate executable + library **for demonstration** only.
+
 ---
 
 ## Debian Package Format
@@ -151,6 +153,17 @@ slideOptions:
 
 ---
 
+## Some CPack Options for Debian Packages
+
+- Many settings are set from general settings
+- `CPACK_DEBIAN_PACKAGE_NAME`: Package name, defaults to `CPACK_PACKAGE_NAME`
+- `CPACK_DEBIAN_PACKAGE_VERSION`:
+- `CPACK_DEBIAN_FILE_NAME`: Create package according to Debian package naming scheme. Recommended to set to `DEB-DEFAULT`
+- `CPACK_DEBIAN_PACKAGE_SHLIBDEPS`: Extract shared library dependencies via `dpkg-shlibdeps`
+- More options in [documentation](https://cmake.org/cmake/help/latest/cpack_gen/deb.html#cpack_gen:CPack%20DEB%20Generator)
+
+---
+
 ## Testing the package
 
 - Ensure quality standards of package
@@ -164,6 +177,8 @@ slideOptions:
 
 - Extend CPack configuration for Debian packaging
 - Analyze Debian package
+
+**Warning:** We handle example as an seperate executable + library **for demonstration** only.
 
 ---
 

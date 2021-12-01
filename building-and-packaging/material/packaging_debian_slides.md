@@ -77,6 +77,48 @@ slideOptions:
 
 ---
 
+## Setting up Header
+
+- Mark public header files
+
+  ```cmake
+  set_target_properties(target PROPERTIES PUBLIC_HEADER "header1.hpp;header2.hpp;...")
+  ```
+
+- Tell CMake where to find headers
+
+  ```cmake
+  target_include_directories(sse
+      PRIVATE
+          # where the library itself will look for its internal headers
+          ${CMAKE_CURRENT_SOURCE_DIR}/includedir
+      PUBLIC
+          # where top-level project will look for the library's public headers
+          $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/includedir>
+          # where external projects will look for the library's public headers
+          $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/includedir>
+  )
+  ```
+
+---
+
+## Setting Installation Destinations
+
+- Easiest way via CMake module `GNUInstallDirs`
+
+  ```cmake
+  include(GNUInstallDirs)
+  install(TARGETS target1 target2 ...
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/includedir
+    INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/  PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/includedir
+    )
+  ```
+
+---
+
 ## CPack
 
 - CLI tool and [CMake module](https://cmake.org/cmake/help/latest/module/CPack.html)
@@ -96,7 +138,7 @@ slideOptions:
   set(CPACK_PACKAGE_VENDOR "SSE Lecturers / Employer")
   ```
 
-- Set target package variables, e.g., for [DEB generator](https://cmake.org/cmake/help/latest/cpack_gen/deb.html#cpack_gen:CPack%20DEB%20Generator) via `CPACK_DEBIAN_<OPTION`>
+- Set package-specific variables, e.g., for [DEB generator](https://cmake.org/cmake/help/latest/cpack_gen/deb.html#cpack_gen:CPack%20DEB%20Generator) via `CPACK_DEBIAN_<OPTION`>
 
   ```cmake
   set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
@@ -108,7 +150,78 @@ slideOptions:
 
   ```bash
   cmake -DCMAKE_OPTIONS ..
-  cpack -G TGZ,DEB
+  cpack -G TGZ;DEB
+  ```
+
+  or
+
+  ```bash
+  make package
+  ```
+
+---
+
+## Common CPack Options 1/2
+
+- Set package name
+
+  ```cmake
+  set(CPACK_PACKAGE_NAME NAME)
+  ```
+
+- Provide package description
+
+  ```cmake
+  set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "SSE CPack example"
+  CACHE STRING "Extended summary.")
+  ```
+
+- Package vendor
+
+  ```cmake
+  set(CPACK_PACKAGE_VENDOR "SSE lecturers")
+  ```
+
+- Contact information
+
+  ```cmake
+  set(CPACK_PACKAGE_CONTACT "Alexander Jaust <alexander.jaust@ipvs.uni-stuttgart.de>")
+  ```
+
+---
+
+## Common CPack Options 2/2
+
+- Maintainer information
+
+  ```cmake
+  set(CPACK_PACKAGE_MAINTAINER "Alexander Jaust")
+  ```
+
+- Homepage of software in package
+
+  ```cmake
+  set(CPACK_PACKAGE_HOMEPAGE_URL "https://simulation-software-engineering.github.io/homepage/")
+  ```
+
+- Set version number
+
+  ```cmake
+  set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
+  set(CPACK_PACKAGE_VERSION_MINOR ${PROJECT_VERSION_MINOR})
+  set(CPACK_PACKAGE_VERSION_PATCH ${PROJECT_VERSION_PATCH})
+  ```
+
+- Remove debugging symbols from executable
+
+  ```cmake
+  set(CPACK_STRIP_FILES TRUE)
+  ```
+
+- Default packages to build with `make package`
+
+  ```cmake
+  set(CPACK_GENERATOR "TGZ;DEB")
   ```
 
 ---
@@ -155,11 +268,33 @@ slideOptions:
 
 ## Some CPack Options for Debian Packages
 
-- Many settings are set from general settings
-- `CPACK_DEBIAN_PACKAGE_NAME`: Package name, defaults to `CPACK_PACKAGE_NAME`
-- `CPACK_DEBIAN_PACKAGE_VERSION`:
-- `CPACK_DEBIAN_FILE_NAME`: Create package according to Debian package naming scheme. Recommended to set to `DEB-DEFAULT`
-- `CPACK_DEBIAN_PACKAGE_SHLIBDEPS`: Extract shared library dependencies via `dpkg-shlibdeps`
+- Many settings are set from general package settings `CPACK_PACKAGE_<OPTION>`
+- Package name, defaults to `CPACK_PACKAGE_NAME`
+
+  ```cmake
+  set(CPACK_DEBIAN_PACKAGE_NAME "Special Debian Name")
+  ```
+
+- Debian package version
+
+  ```cmake
+  set(CPACK_DEBIAN_PACKAGE_VERSION "${SPECIAL_DEBIAN_VERSION}")
+  ```
+
+  but is normally derived from project or `CPACK_PACKAGE_VERSION`.
+
+- Create package according to Debian package naming scheme
+
+  ```cmake
+  set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
+  ```
+
+- Extract shared library dependencies via `dpkg-shlibdeps`
+
+  ```cmake
+  set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
+  ```
+
 - More options in [documentation](https://cmake.org/cmake/help/latest/cpack_gen/deb.html#cpack_gen:CPack%20DEB%20Generator)
 
 ---

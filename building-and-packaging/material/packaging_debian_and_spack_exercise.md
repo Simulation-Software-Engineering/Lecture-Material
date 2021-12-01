@@ -92,7 +92,7 @@ Running the container like this should trigger the preparation of the two packag
 - If you need to specify a homepage, you can use the course homepage `https://simulation-software-engineering.github.io/homepage/`.
 - All parts of the exercise should be ideally done on Docker container based on Ubuntu 20.04.
 - If you are in a container and your libraries in `/usr/local/lib` are not found, you can extend the `LD_LIBRARY_PATH` accordingly.
-- If you need an inspiration on how to write more complicated Spack recipes, you can check packages that are already shipped included with spack (`spack edit PACKAGENAME` or browse).
+- If you need an inspiration on how to write more complicated Spack recipes, you can check packages that are already shipped with spack (`spack edit PACKAGENAME` or browse).
 - If you have `Boost` or `deal.ii` installed in the Docker container via `apt`, finding pre-installed packages using `spack external find` might fail. In this case you have to define the dependencies manually or run `spack external find` before installing the critical packages.
 - Consider using the Docker image `ajaust/spack-package-building-base` as base for the Spack exercise.
 - If you compile `Boost` via Spack this can take a short while. On our machines it took about 5 minutes. Normally, you should only have to compile it once.

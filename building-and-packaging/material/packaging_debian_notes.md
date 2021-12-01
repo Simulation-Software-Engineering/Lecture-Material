@@ -2,33 +2,21 @@
 
 ## Learning goals
 
-- How to make a CMake project installable.
+- How to add an install target to a CMake project.
 - How to package a CMake project via `CPack`.
 - How to create a Debian (`deb`) package of your program/library using CPack.
 - How to check the resulting Debian package.
 
-## Introduction
-
-- Now:
-    - Debian packages for C++ via `CMake`
-    - HPC suitable packages for Python and C++
-        - This requires a well-defined installation routine.
-- Rough plan
-    1. Extend CMake configuration from previous lecture to have an `install` target as well as proper prefix and installation layout (`/bin`, `/include`, `/lib`...)
-    2. Extend CMake configuration to contain a CPack section (rather minimal) such that we can create a package (`tar.gz` file)
-    3. Extend the CMake configuration to create a Debian package
-    4. Check the Debian package with `lintian` and potentially improve the package
-
-## 1. Preparing Project
+## 1. Preparing Project (Demo 1)
 
 - We will extend the code from the previous lecture.
     - [GitHub repository](https://github.com/Simulation-Software-Engineering/HelloWorld)
-- Make sure two files are created (a library and en executable). This should be the case when starting with the code from last week's lecture.
+- Make sure two files are created (a library and an executable). This should be the case when starting with the code from last week's lecture.
 - We add the following changes
     - Adding a version number to the project. This is not needed yet, but I am afraid of forgetting it later.
     - We mark the include files needed to use the `libsse` library, i.e., `sse/sse.hpp` publicly visible.
     - We define the target's include directory, i.e., where do we have to look for the dependency depending on the type of build (internally, top-level cmake project, external dependency)
-    - We want to make sure that we have an `install` target for make that, at the same time, considers typical installation directories. That means `make install` should binaries in a `<prefix>/bin`, libraries in `<prefix>/lib` or `<prefix>/lib/helloworld`, include files in `<prefix>/include` etc. We include the predefined CMake macro `GNUInstallDirs` to get predefined variables like the installation directories.
+    - We want to make sure that we have an `install` target for make that, at the same time, considers typical installation directories. That means `make install` should binaries in a `<prefix>/bin`, libraries in `<prefix>/lib` or `<prefix>/lib/helloworld`, include files in `<prefix>/include` etc. We include the predefined CMake macro `GNUInstallDirs` to get predefined variables such as installation directories.
 
 Changes:
 
@@ -71,28 +59,28 @@ Changes:
 
   ```bash
   mkdir build && cd build
-  cmake -DBUILD_SHARED_LIBS=ON ..
+  cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ..
   make -j
   sudo make install
   ```
 
-- Installs in `prefix=/usr/local`, i.e., it sets `CMAKE_INSTALL_PREFIX`.
+- Installs in `/usr/local` which is the defaul value of `CMAKE_INSTALL_PREFIX` when using CMake.
 
   ```bash
-  -- Install configuration: ""
+  -- Install configuration: "Release"
   -- Installing: /usr/local/bin/helloworld
   -- Installing: /usr/local/lib/libsse.so
   -- Installing: /usr/local/include/helloworld/sse.hpp
   ```
 
-  **Note** that we have an empty configuration here. It would make sense to build the project with a proper configuration (`Debug`, `Release`...) by setting `CMAKE_BUILD_TYPE`.
+  **Note** that we have an empty configuration here if we do not specify a `CMAKE_BUILD_TYPE`. Especially when distributing a package one should set a `CMAKE_BUILD_TYPE`.
 - Now we can run `helloworld` from anywhere on the system.
     - We might need to set `PATH="/usr/local/bin":"${PATH}"`. In my container it was not set.
 - Tear down container
 
 **Note**: At this point we have a package with reasonable installation routine. This is something we would need for (different) packaging solutions such as Debian packages and
 
-## 2. Extend CMake configuration
+## 2. Extend CMake configuration (Demo 1)
 
 In this step we add a CPack configuration such that we can actually create a package.
 
@@ -137,7 +125,7 @@ In this step we add a CPack configuration such that we can actually create a pac
 
   ```bash
   mkdir build && cd build
-  cmake -DBUILD_SHARED_LIBS=ON ..
+  cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ..
   ```
 
 - This will create new files `CPackConfig.cmake` and `CPackSourceConfig.cmake`
@@ -174,7 +162,7 @@ In this step we add a CPack configuration such that we can actually create a pac
 
   The dependencies are missing for example.
 
-## 3. Extend CPack configuration for Debian Package
+## 3. Extend CPack configuration for Debian Package (Demo 2)
 
 - Setting up Debian package generator by adding lines to `cmake/Packaging.cmake`:
 
@@ -209,7 +197,7 @@ In this step we add a CPack configuration such that we can actually create a pac
 
   Files are installed in `/usr` now instead of `/usr/local`. That is the default target for Debian packages using the generator!
 
-## 4. Check Debian package
+## 4. Check Debian package (Demo 2)
 
 - The package already is usable. However, one might want to make sure that quality is good. If one wants to submit something to the actual repository of Ubuntu/Debian, then one has to follow the provided standards.
 - If time permits we can checkout the contens of the package.

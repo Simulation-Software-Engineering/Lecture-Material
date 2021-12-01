@@ -31,12 +31,20 @@ slideOptions:
 
 ---
 
+## Learning goals
+
+- How to add an install target to a CMake project.
+- How to package a CMake project via `CPack`.
+- How to create a Debian (`deb`) package of your program/library using CPack.
+- How to check the resulting Debian package.
+
+---
+
 ## Introduction
 
-- [Debian](https://www.debian.org/) package format common
-    - Debian, [Ubuntu](https://ubuntu.com/)... (lot os derivatives)
-    - Native packaging format of popular Linux distributions
-    - Support by native package manager (`dpkg`/aptitude `apt`)
+- Why [Debian](https://www.debian.org/) package format?
+    - It is common Debian, [Ubuntu](https://ubuntu.com/)...
+    - Is the "natural" way to insall software on Debian, Ubuntu etc. (via `dpkg`/aptitude `apt`)
 - Easy to share (`deb` file)
 - Can be hosted and integrated in official or third-party repositories
 
@@ -44,19 +52,18 @@ slideOptions:
 
 ## Step by Step Plan
 
-- **Goal**: Debian Package for Ubuntu
+- **Goal**: Create Debian package for Hello-World code to be used on Ubuntu
 - Steps:
-    1. Create installation routine
-    2. Make project packagable
-    3. Create Debian package
-    4. Inspect Debian package
+    1. Extend CMake configuration from previous lecture to have `install` target
+    2. Extend CMake configuration to contain a CPack section
+    3. Extend the CMake configuration to create a Debian package
+    4. Check the Debian package with `lintian` and potentially improve the package
 - Code is on [GitHub](https://github.com/Simulation-Software-Engineering/HelloWorld)
 
 ---
 
 ## Adding Installation Target
 
-- Software must be installable
 - Add `install` target for `make`
 - Should install files in appropriate location
 
@@ -73,9 +80,8 @@ slideOptions:
 ## CPack
 
 - CLI tool and [CMake module](https://cmake.org/cmake/help/latest/module/CPack.html)
-- Deals with package creation
-- Depends strongly on `install()` routine of project
-    - The install routine was missing in the previous example
+- Go-to solution for packaging of C/C++ code
+- Requires an `install()` routine in CMake project
 - Several [generators](https://cmake.org/cmake/help/latest/manual/cpack-generators.7.html) for archive, DEB, RPM... type of packages
 
 ---
@@ -107,10 +113,10 @@ slideOptions:
 
 ---
 
-## Demo: Project Extension
+## Demo 1: Preparing Project
 
-- Installation target
-- Packaging configuration (CPack, common settings)
+1. Installation target
+2. Packaging configuration (CPack, common settings)
 
 ---
 
@@ -137,6 +143,11 @@ slideOptions:
 - `VERSION`: Software Version Number (e.g. "PETSc 3.16.1" -> `3.16.1`)
 - `REVISION`: Package Version Number
 - `ARCHITECTURE`: Target architectre (amd64, arm...)
+- Example ([PETSc package on Launchpad](https://launchpad.net/ubuntu/+source/petsc))
+
+  ```text
+  libpetsc-real3.12-dev_3.12.4+dfsg1-1_amd64.deb
+  ```
 
 ---
 
@@ -145,11 +156,11 @@ slideOptions:
 - Ensure quality standards of package
     - Requirements higher for packages in official repositories
 - Static analysis tool for Debian packages: [lintian](https://lintian.debian.org/)
-    - Shows shortcomings of the Debian package
+    - `lintian` helps finding problems of package
 
 ---
 
-## Demo: Debian Package
+## Demo 2: Debian Package
 
 - Extend CPack configuration for Debian packaging
 - Analyze Debian package
@@ -159,10 +170,9 @@ slideOptions:
 ## Advanced Topics
 
 - Publishing Packages on [Launchpad](https://launchpad.net/)
-- Debian package creation via [CPack](https://cmake.org/cmake/help/latest/cpack_gen/deb.html#cpack_gen:CPack%20DEB%20Generator)
 - Usage of our library in other projects
-    - Creation of `pkg-config` file from CMake
-    - Creation of `CMake` configuration generatio
+    - Creation of `pc` file (`pkg-config`) from CMake
+    - [Export targets](https://cmake.org/cmake/help/git-stage/guide/importing-exporting/index.html) to be included in other CMake projects
 
 ---
 
@@ -174,7 +184,6 @@ slideOptions:
 - [Launchpad](https://launchpad.net/)
 - [lintian reports](https://lintian.debian.org/)
 - [lintian man page](https://lintian.debian.org/)https://lintian.debian.org/
-
 
 ---
 

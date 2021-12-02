@@ -4,7 +4,7 @@ This exercise is about packaging code with CPack. We work with a simplified vers
 
 At the end of the exercise you find a section with hints and remarks. Make sure to check this section.
 
-Deadline: **Thursday, December 7th, 2021, 9:00**
+Deadline: **Thursday, December 9th, 2021, 9:00**
 
 ## CPack and Packaging for Debien
 

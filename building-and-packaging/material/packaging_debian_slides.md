@@ -36,6 +36,7 @@ slideOptions:
 - How to add an install target to a CMake project.
 - How to package a CMake project via `CPack`.
 - How to create a Debian (`deb`) package of your program/library using CPack.
+    - We create packages for Ubuntu.
 - How to check the resulting Debian package.
 
 ---
@@ -46,7 +47,7 @@ slideOptions:
     - It is common Debian, [Ubuntu](https://ubuntu.com/)...
     - Is the "natural" way to insall software on Debian, Ubuntu etc. (via `dpkg`/aptitude `apt`)
 - Easy to share (`deb` file)
-- Can be hosted and integrated in official or third-party repositories
+- Can be hosted and integrated in [official](https://launchpad.net/ubuntu) or third-party repositories
 
 ---
 
@@ -82,13 +83,15 @@ slideOptions:
 - Mark public header files
 
   ```cmake
-  set_target_properties(target PROPERTIES PUBLIC_HEADER "header1.hpp;header2.hpp;...")
+  set_target_properties(target
+    PROPERTIES PUBLIC_HEADER "header1.hpp;header2.hpp;..."
+    )
   ```
 
 - Tell CMake where to find headers
 
   ```cmake
-  target_include_directories(sse
+  target_include_directories(target
       PRIVATE
           # where the library itself will look for its internal headers
           ${CMAKE_CURRENT_SOURCE_DIR}/includedir
@@ -117,6 +120,10 @@ slideOptions:
     )
   ```
 
+  Tells CMake which type of file has to go where.
+
+- Predefines standard destinations and variables (`CMAKE_INSTALL_BINDIR`, `CMAKE_INSTALL_LIBDIR`...)
+
 ---
 
 ## CPack
@@ -138,19 +145,18 @@ slideOptions:
   set(CPACK_PACKAGE_VENDOR "SSE Lecturers / Employer")
   ```
 
-- Set package-specific variables, e.g., for [DEB generator](https://cmake.org/cmake/help/latest/cpack_gen/deb.html#cpack_gen:CPack%20DEB%20Generator) via `CPACK_DEBIAN_<OPTION`>
+- Include CPack after variables/options are set
 
   ```cmake
-  set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
-  set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
   ...
+  include(CPack)
   ```
 
 - Generate package
 
   ```bash
   cmake -DCMAKE_OPTIONS ..
-  cpack -G TGZ;DEB
+  cpack -G "TGZ;DEB"
   ```
 
   or
@@ -254,15 +260,16 @@ slideOptions:
 
 > NAME_VERSION-REVISION_ARCHITECTURE.deb
 
-- `NAME`: Package name
-- `VERSION`: Software Version Number (e.g. "PETSc 3.16.1" -> `3.16.1`)
-- `REVISION`: Package Version Number
-- `ARCHITECTURE`: Target architectre (amd64, arm...)
 - Example ([PETSc package on Launchpad](https://launchpad.net/ubuntu/+source/petsc))
 
   ```text
   libpetsc-real3.12-dev_3.12.4+dfsg1-1_amd64.deb
   ```
+
+- `NAME`: Package name (`libpetsc-real3.12-dev`)
+- `VERSION`: Software Version Number (e.g. "PETSc 3.12.4" -> `3.12.4+dfsg1`)
+- `REVISION`: Package Version Number (`1`)
+- `ARCHITECTURE`: Target architectre (`amd64`)
 
 ---
 

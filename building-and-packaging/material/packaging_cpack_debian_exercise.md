@@ -36,6 +36,23 @@ The code has (almost) the same dependencies as last week, Therefore, you can reu
 
 The code in the repository should compile immediately. It is *not* part of the task to fix the compilation process. If you have problems compiling the code before changing, get in touch with us during the exercise or open a (draft) pull request and ask for help there. If you open a pull request, make sure to add the Dockerfile you have used so we can reproduce the problem.
 
+**Note** If you observe linking errors referring to `yaml-cpp`, you can try to add the following to the `CMakeLists.txt`:
+
+```cmake
+include_directories("${YAMLCPP_INCLUDE_DIRS}")
+```
+
+This should be added after the
+
+```cmake
+find_package(yaml-cpp
+  0.6.0
+  REQUIRED
+  )
+```
+
+directive. It might also help to install `libyaml-cpp-dev` via `apt` again inside the container.
+
 ### Packaging Steps
 
 - Create a fork of the GitHub repository [CPack exercise](https://github.com/Simulation-Software-Engineering/cpack-exercise).

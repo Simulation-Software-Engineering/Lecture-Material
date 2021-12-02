@@ -66,7 +66,7 @@ Learning goals:
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 35 minutes | slides and demo | [packaging_debian_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_debian_slides.md), [packaging_debian_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_debian_notes.md)
+| 50 minutes | slides and demo | [packaging_debian_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_debian_slides.md), [packaging_debian_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_debian_notes.md)
 
 ## Packaging for High-Performance Computing and for you
 

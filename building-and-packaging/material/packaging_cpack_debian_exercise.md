@@ -6,7 +6,7 @@ At the end of the exercise you find a section with hints and remarks. Make sure 
 
 Deadline: **Thursday, December 9th, 2021, 9:00**
 
-## CPack and Packaging for Debien
+## CPack and Packaging for Debian
 
 The ultimate goal is to have a CMake/CPack configuration that allows us to generate packages for different package formats. In this exercise we want to be able to create a `tar.gz` package and a Debian `deb` package.
 

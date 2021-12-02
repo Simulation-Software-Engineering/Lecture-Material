@@ -51,7 +51,7 @@ slideOptions:
     - Special hardware (accelerators, network...)
     - Greatly varying architectures (AMD, Intel, ARM...)
     - Missing dependencies (too new, too old...)
-    - Admins will not/cannot install software for you
+    - Admins will not/cannot install software for you, you do not have superuser rights
 
 ---
 
@@ -61,24 +61,17 @@ slideOptions:
     - Software needs to be **compiled** to get best performance (special libraries, compilers...)
     - Optimized compilation settings (best settings not always obvious)
     - Optimal settings depend on platform (supercomputers might be heterogenous, different generation of CPUs e.g.)
-
----
-
-## Step by Step Plan
-
-- **Goal**: Create a Spack package for HelloWorld code
-- Steps:
-    1. Install and configure Spack
-    2. Learn how to use Spack for package management and installation
-    3. Create a Spack package for our HelloWorld code
-    4. Install HelloWorld code using our new package
-- Code is on [GitHub](https://github.com/Simulation-Software-Engineering/HelloWorld)
+- **HPC-friendly package managers** can help with
+    - organizing software installations
+    - compilation of software
 
 ---
 
 ## Spack
 
 <img src="https://camo.githubusercontent.com/a01512f4480c4615a82f2b929789547a60d78e1f68d26be1a56e33d9258735d4/68747470733a2f2f63646e2e7261776769742e636f6d2f737061636b2f737061636b2f646576656c6f702f73686172652f737061636b2f6c6f676f2f737061636b2d6c6f676f2e737667" width=25%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
+[Project homepage (https://spack.io/)](https://spack.io/)
 
 ---
 
@@ -87,7 +80,7 @@ slideOptions:
 - HPC-friendly package manager
     - Common scientific software included
     - No superuser rights needed
-    - [Dependencies](https://spack.readthedocs.io/en/latest/getting_started.html#system-prerequisites) commonly available on Supercomputers
+    - Spack's [dependencies](https://spack.readthedocs.io/en/latest/getting_started.html#system-prerequisites) commonly available on Supercomputers
         - Python, git, curl...
 - Deals with dependency resolution, compilation flags and **compilation**
 - [Open-source project on GitHub](https://github.com/spack/spack)
@@ -103,6 +96,18 @@ slideOptions:
 ## Dependency Graph of FEniCS
 
 <img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/figs/spack/fenics-dependencies.png?raw=true" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
+---
+
+## Step by Step Plan
+
+- **Goal**: Create a Spack package for HelloWorld code
+- Steps:
+    1. Install and configure Spack
+    2. Learn how to use Spack for package management and installation
+    3. Create a Spack package for our HelloWorld code
+    4. Install HelloWorld code using our new package
+- Code is on [GitHub](https://github.com/Simulation-Software-Engineering/HelloWorld)
 
 ---
 
@@ -243,13 +248,18 @@ slideOptions:
 
 ## Spack Packaging
 
-- By default packages reside in `${SPACK_ROOT}/var/spack/repos/builtin/packages/PACKAGENAME/`
+- By default packages reside in
+
+  ```bash
+  ${SPACK_ROOT}/var/spack/repos/builtin/packages/PACKAGENAME/
+  ````
+
 - `package.py` inside `PACKAGENAME/` describes installation routine
 - Installation recipes are Python code
     - You can write own logic/helper functions in your recipe
 - `spack create URL`
     - Creates boilerplate package from template
-    - `URL` points to some archive on can download
+    - `URL` points to some archive one can download
 - `spack edit PKG`:
     - Open given Spack package in editor
     - Set `EDITOR` environment variable to control what editor is used
@@ -341,7 +351,7 @@ slideOptions:
     - [EasyBuild](https://github.com/easybuilders/easybuild)
         - Originates from Ghent University in Belgium
 - Both suitable for users, admins, researchers
-- Alternatives?
+- Package manager introduce additional complexity -> Alternatives?
     - Manual installation and module system like [`Lmod`](https://lmod.readthedocs.io/en/latest/) or [`Modules`](http://modules.sourceforge.net/)
 
 ---

@@ -88,3 +88,8 @@
 
 - **30** Recap and discussion of CMake exercise from previous week
 - **60** [Exercise: Packaging with CPack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_cpack_debian_exercise.md)
+
+## 8.1 -- Thu, December 9, 2021
+
+- **45** Packaging for High-Performance Computing and for you: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_spack_slides.md), [notes](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_spack_demo.md)
+- **45** [Exercise: Packages with Spack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_spack_exercise.md)

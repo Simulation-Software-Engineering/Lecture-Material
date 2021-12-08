@@ -72,4 +72,4 @@ Learning goals:
 
 | Duration | Format | Material |
 | --- | --- | --- |
-| 50 minutes | slides and demo | [packaging_hpc_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_hpc_slides.md), [packaging_hpc_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_hpc_notes.md)
+| 45 minutes | slides and demo | [packaging_spack_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_spack_slides.md), [packaging_spack_notes.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_spack_demo.md)

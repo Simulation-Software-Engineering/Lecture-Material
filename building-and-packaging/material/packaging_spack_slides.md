@@ -60,7 +60,7 @@ slideOptions:
 - Software should have best possible performance
     - Software needs to be **compiled** to get best performance (special libraries, compilers...)
     - Optimized compilation settings (best settings not always obvious)
-    - Optimal settings depend on platform (supercomputers might be heterogenous, different generation of CPUs e.g.)
+    - Optimal settings depend on platform (supercomputers might be heterogeneous, different generation of CPUs e.g.)
 - **HPC-friendly package managers** can help with
     - organizing software installations
     - compilation of software

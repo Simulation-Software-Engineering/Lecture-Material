@@ -64,12 +64,11 @@ slideOptions:
 
 See [Wikipedia](https://en.wikipedia.org/wiki/Lightweight_markup_language)
 
-
 ---
 
 ## Markdown
 
-<img src="https://github.com/dcurtis/markdown-mark/blob/master/png/1664x1024.png?raw=true" width=25%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px; background: #eeeeee">
+<img src="https://github.com/dcurtis/markdown-mark/blob/master/png/1664x1024.png?raw=true" width=50%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px; background: #eeeeee">
 
 Image Source: [markdown-mark on GitHub](https://github.com/dcurtis/markdown-mark)
 
@@ -125,6 +124,10 @@ Image Source: [https://docutils.sourceforge.io/rst.png](https://docutils.sourcef
 ---
 
 ## YAML Ain't Markup Language™
+
+<img src="https://github.com/yaml/yaml-spec/blob/main/spec/1.2/docbook/logo.png?raw=true" width=50%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px; background: #eeeeee">
+
+Image Source: [https://github.com/yaml/yaml-spec/blob/main/spec/1.2/docbook/logo.png](https://github.com/yaml/yaml-spec/blob/main/spec/1.2/docbook/logo.png)
 
 ---
 

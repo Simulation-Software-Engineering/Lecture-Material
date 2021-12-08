@@ -60,10 +60,16 @@ slideOptions:
 - Software should have best possible performance
     - Software needs to be **compiled** to get best performance (special libraries, compilers...)
     - Optimized compilation settings (best settings not always obvious)
-    - Optimal settings depend on platform (supercomputers might be heterogenous, different generation of CPUs e.g.)
+    - Optimal settings depend on platform (supercomputers might be heterogeneous, different generation of CPUs e.g.)
 - **HPC-friendly package managers** can help with
     - organizing software installations
     - compilation of software
+
+---
+
+## Dependency Graph of FEniCS
+
+<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/figs/spack/fenics-dependencies.png?raw=true" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 ---
 
@@ -80,8 +86,7 @@ slideOptions:
 - HPC-friendly package manager
     - Common scientific software included
     - No superuser rights needed
-    - Spack's [dependencies](https://spack.readthedocs.io/en/latest/getting_started.html#system-prerequisites) commonly available on Supercomputers
-        - Python, git, curl...
+    - Spack's [dependencies](https://spack.readthedocs.io/en/latest/getting_started.html#system-prerequisites) commonly available on supercomputers
 - Deals with dependency resolution, compilation flags and **compilation**
 - [Open-source project on GitHub](https://github.com/spack/spack)
 - Valuable resources:
@@ -93,12 +98,6 @@ slideOptions:
 
 ---
 
-## Dependency Graph of FEniCS
-
-<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/figs/spack/fenics-dependencies.png?raw=true" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
-
----
-
 ## Step by Step Plan
 
 - **Goal**: Create a Spack package for HelloWorld code
@@ -106,14 +105,16 @@ slideOptions:
     1. Install and configure Spack
     2. Learn how to use Spack for package management and installation
     3. Create a Spack package for our HelloWorld code
-    4. Install HelloWorld code using our new package
 - Code is on [GitHub](https://github.com/Simulation-Software-Engineering/HelloWorld)
 
 ---
 
 ## Spack Installation
 
-- Git repository of Python scripts
+- Dependencies: Python, Git, C/C++ compiler, patch, make, tar...
+    - Basically `build-essentials`, `git`, and `python` on Ubuntu
+    - May be old, install newer versions with Spack if needed
+- Installation in user-writable location
 
   ```bash
   git clone -b releases/v0.17 https://github.com/spack/spack.git
@@ -122,30 +123,24 @@ slideOptions:
     - `v0.17` is currently the latest release
     - Update to newer versions using `git pull`/`git checkout -b`
 
-- Set up Spack
+---
+
+## Demo 1: Spack Installation
+
+---
+
+## Spack Configuration and Caches
+
+- Permanently set up spack
 
   ```bash
   . <spack_prefix>/share/spack/setup-env.sh
   ```
 
     - Add this command to `.bashrc` to make permanent
-    - `SPACK_ROOT` points to local Spack directory
-
-- Find basic compilers and packages
-
-  ```bash
-  spack compiler find
-  spack external find
-  ```
-
-  `spack external find` might fail (experimental feature)
-
----
-
-## Spack Configuration and Caches
-
+    - Defines `SPACK_ROOT` pointing to local Spack directory
 - Spack heavily relies on `yaml` files
-    - Take care of spaces when editing
+    - Take care of spaces when editing (2 space indent)
 - User configuration in `${HOME}/.spack`
 - Several [other configuration scopes](https://spack.readthedocs.io/en/latest/configuration.html)
 - If cache is out of date check `${HOME}/.spack/cache/`
@@ -162,6 +157,9 @@ slideOptions:
 
   A spec may be more precise than just a package name.
 
+    - `+` selects some option
+    - `~`/`-` deselects some option
+
 - Loading and unloading of specs
 
   ```bash
@@ -174,6 +172,10 @@ slideOptions:
   ```bash
   spack COMMAND OPTION
   ```
+
+---
+
+## Demo 2: Package Installation and Management
 
 ---
 
@@ -238,14 +240,6 @@ slideOptions:
 
 ---
 
-## Spack Demo 1
-
-- Set up Spack
-- Inspect environments
-- Install a simple spec
-
----
-
 ## Spack Packaging
 
 - By default packages reside in
@@ -257,16 +251,24 @@ slideOptions:
 - `package.py` inside `PACKAGENAME/` describes installation routine
 - Installation recipes are Python code
     - You can write own logic/helper functions in your recipe
+    - Reasonable code highlighting
+
+---
+
+## Helpful Spack Packaging Commands
+
 - `spack create URL`
     - Creates boilerplate package from template
     - `URL` points to some archive one can download
 - `spack edit PKG`:
     - Open given Spack package in editor
     - Set `EDITOR` environment variable to control what editor is used
+- `spack info PKG`:
+    - Shows information about given package
 
 ---
 
-## Common Spack Package Properties 1/2
+## Common Spack Package Properties 1/3
 
 
 - Package class definition
@@ -275,10 +277,10 @@ slideOptions:
   class Packagename(CMakePackage)
   ```
 
-- Download URL of package
+- Homepage URL
 
   ```python
-  """Description"""
+  homepage = "https://..."
   ```
 
 - Download URL of package
@@ -286,6 +288,18 @@ slideOptions:
   ```python
   url = "https://...archive/refs/tags/v0.3.0.tar.gz"
   ```
+
+  Points to archive (`tar.gz`, `zip`...)
+
+- Optional: Git repository
+
+  ```python
+  git = 'https://somewhere/projectname.git'
+  ```
+
+---
+
+## Common Spack Package Properties 2/3
 
 - Version number and hash of archive
 
@@ -296,7 +310,7 @@ slideOptions:
 - Variants user may choose
 
   ```python
-  variant('name', default=BOOL, decription="STRING")
+  variant('name', default=BOOL, description="STRING")
   ```
 
   Example:
@@ -307,7 +321,7 @@ slideOptions:
 
 ---
 
-## Common Spack Package Properties 2/2
+## Common Spack Package Properties 3/3
 
 - Dependency specification
 
@@ -321,7 +335,6 @@ slideOptions:
   variant('python', default=True, description='Enable Python support')
 
   depends_on('python@3:', when='+python')
-  depends_on('zlib@:1.2', when='@0.2:')
   ```
 
 - `@3:`, `@:3`, `@2:3`:
@@ -332,42 +345,13 @@ slideOptions:
 
 ---
 
-## Spack Demo 2
+## Demo 3: Package Creation
 
 - Create package for our [HelloWorld example](https://github.com/Simulation-Software-Engineering/HelloWorld)
     1. Create boilerplate package
     2. Add package details
     3. Verify package
     4. Model dependencies and add variants
-
----
-
-## Package Managers for HPC 1/2
-
-- Popular package managers for HPC
-    - [Spack](https://spack.io/)
-        - Originates from LLNL in US
-        - Build around concretizer
-    - [EasyBuild](https://github.com/easybuilders/easybuild)
-        - Originates from Ghent University in Belgium
-- Both suitable for users, admins, researchers
-- Package manager introduce additional complexity -> Alternatives?
-    - Manual installation and module system like [`Lmod`](https://lmod.readthedocs.io/en/latest/) or [`Modules`](http://modules.sourceforge.net/)
-
----
-
-
-## Package Managers for HPC 2/2
-
-- [European Environment for Scientific Software Installations (EESSI)](https://eessi.github.io/docs/)
-    - Initiated in Europe
-    - Focus on avoiding recompilation
-    - Targets workstations/PCs, supercomputers and cloud computing
-- [Extreme-scale Scientific Software Development Kit (xSDK)](https://xsdk.info/)
-    - Initiated in US
-    - Currently strong focus on mathematical software
-    - Focuses on defining requirements scientific should adhere to (build system, testing, documentation...)
-- Both focus on specifying basic software stack for HPC
 
 ---
 
@@ -380,6 +364,40 @@ slideOptions:
 - [Stacks (build matrices)](https://spack-tutorial.readthedocs.io/en/latest/tutorial_stacks.html)
 - [Software management (modules)](https://spack.readthedocs.io/en/latest/module_file_support.html)
 - ...
+
+---
+
+## Additional Remarks
+
+---
+
+## Package Managers for HPC 1/2
+
+- Popular package managers for HPC
+    - [Spack](https://spack.io/)
+        - Originates from LLNL in US
+        - Build around concretizer
+    - [EasyBuild](https://github.com/easybuilders/easybuild)
+        - Originates from Ghent University in Belgium
+- Both suitable for users, admins, researchers...
+- Package manager introduce additional complexity -> Alternatives?
+    - Manual installation and module system like [`Lmod`](https://lmod.readthedocs.io/en/latest/) or [`Modules`](http://modules.sourceforge.net/)
+- General Problem: Compilation times/options
+    - Solution: Build caches/precompiled codes?
+
+---
+
+## Package Managers for HPC 2/2
+
+- [European Environment for Scientific Software Installations (EESSI)](https://eessi.github.io/docs/)
+    - Initiated in Europe
+    - Focus on avoiding recompilation
+    - Targets workstations/PCs, supercomputers and cloud computing
+- [Extreme-scale Scientific Software Development Kit (xSDK)](https://xsdk.info/)
+    - Initiated in US
+    - Currently strong focus on mathematical software
+    - Focuses on defining requirements scientific should adhere to (build system, testing, documentation...)
+- Both focus on specifying basic software stack for HPC
 
 ---
 

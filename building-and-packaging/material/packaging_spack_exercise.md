@@ -8,9 +8,9 @@ Deadline: **Thursday, December 16th, 2021, 9:00**
 
 ## Creation of a Spack Package
 
-We want to package the [Spack example code on GitHub](https://github.com/Simulation-Software-Engineering/spack-exercise). It is an adapted version of the previous week's exercise again. The `deal.ii` dependency has been removed as compiling `deal.ii` from scratch takes a very long time. Additionally, several releases with different dependencies have been added. The code in the repository creates an executable that is called `spackexample`. It also creates a library  `libspackexamplelib` (what a name) which is needed to run `spackexample`.
+We want to package the [Spack example code on GitHub](https://github.com/Simulation-Software-Engineering/spack-exercise). It is an adapted version of the previous week's exercise again. The `deal.ii` dependency has been removed as compiling `deal.ii` from scratch takes too long. Additionally, several releases with different dependencies have been added. The code in the repository creates an executable that is called `spackexample`. It also creates a library  `libspackexamplelib` (what a name) which is needed to run `spackexample`.
 
-The default name of your Spack package should be `spack-exercise`. The Spack package should create the executable `spackexample` and the corresponding library `libspackexamplelib` mentioned above. Under normal circumstances you do not need to edit the CMake configuration for this exercise.
+The default name of your Spack package is `spack-exercise`. The Spack package should create the executable `spackexample` and the corresponding library `libspackexamplelib` mentioned above. Under normal circumstances you do not need to edit the CMake configuration for this exercise.
 
 The [code repository](https://github.com/Simulation-Software-Engineering/spack-exercise) is slightly different from the previous repositories. It contains three releases of the code with increasing number of dependencies:
 
@@ -24,7 +24,7 @@ Create a Spack package for all releases of the given code and make sure that the
 
 ### Development/Packaging Environment
 
-Please do all the development inside a Docker container using the image `ajaust/spack-package-building-base`. This should help to avoid problems with setting up Spack and minimized the number of external packages that Spack needs to build.
+Please do all the development inside a Docker container using the image [`ajaust/spack-package-exercise`](https://hub.docker.com/repository/docker/ajaust/spack-package-exercise). This should help to avoid problems with setting up Spack and minimized the number of external packages that Spack needs to build.
 
 You can find the recipe of the image inside the `docker/` directory of [the example code on GitHub](https://github.com/Simulation-Software-Engineering/spack-exercise). The image itself is based on Ubuntu 20.04 and has the Boost dependency preinstalled. Additionally, Spack has been set up such that you
 
@@ -34,7 +34,7 @@ You can find the recipe of the image inside the `docker/` directory of [the exam
 
 - Create a fork of the [GitHub repository](https://github.com/Simulation-Software-Engineering/spack-exercise).
 
-- Start a container based on the `ajaust/spack-package-exercise` image, e.g., via
+- Start a container based on the [`ajaust/spack-package-exercise`](https://hub.docker.com/repository/docker/ajaust/spack-package-exercise) image, e.g., via
 
   ```bash
   docker run -it --name spack-packaging --mount type=bind,source="$(pwd)",target=/mnt/spack-packaging ajaust/spack-package-exercise
@@ -113,7 +113,7 @@ You can find the recipe of the image inside the `docker/` directory of [the exam
     - **Note**: Do not delete the container before you have copied the `package.py`. Otherwise, the file will be lost and you have to start from the beginning.
 - Submit your code via a pull request. You can also open a (draft) pull request before you are incorporated all changes. In this case, do not forget to mark the pull request as ready to review when you are finished.
     - The pull request should be named `[USERNAME] Spack exercise`, e.g., `[jaustar] Spack exercise`. Please use the GitLab username here.
-    - If you have used your own container for the exercise or extended the `ajaust/spack-package-exercise`, please also add a Dockerfile that describes your container such that we can reproduce your submission.
+    - If you have used your own container for the exercise or extended the [`ajaust/spack-package-exercise`](https://hub.docker.com/repository/docker/ajaust/spack-package-exercise), please also add a Dockerfile that describes your container such that we can reproduce your submission.
 
 ## Optional Tasks
 

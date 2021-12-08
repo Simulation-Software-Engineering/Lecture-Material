@@ -1,7 +1,17 @@
 # Packaging for High-Performance Computing (Notes)
 
-## Spack Setup
+**Note**: Maybe run everything in a fresh Docker container. I built the container `jaustar/spack-package-tutorial-base` locally for myself. It contains installed/downloaded Spack, that was not set up yet, i.e., one needs to run `spack compiler find` and `spack external find`. `clingo` needs to be downloaded first as well.
 
+## 1. Spack Setup/Installation
+
+- Git repository of Python scripts
+
+  ```bash
+  git clone -b releases/v0.17 https://github.com/spack/spack.git
+  ```
+
+    - `v0.17` is currently the latest release
+    - Update to newer versions using `git pull`/`git checkout -b`
 - Initializing Spack with
 
   ```bash
@@ -11,19 +21,50 @@
   will set `SPACK_ROOT` and also add `spack` to `PATH`.
 
   Note that the  `.` operator will run the commands in the supplied script as if we would type the commands supplied by the script in the shell ourselves. In bash the `.` operator is equivalent to `source`. However, `source` is not specified in POSIX and thus using `.` is likely to work on more platforms.
-
-## Spack Package Creation
-
 - Finish Spack setup
 
-  ```
+  ```bash
   spack compiler find
+  ```
+
+  This will find preinstalled compilers which is important. Without any compiler Spack is most likey useless as most packages need to be compiled.
+
+  The command
+
+  ```bash
+  spack compilers
+  ```
+
+  prints the
+
+- Find external packages (optional)
+
+  ```bash
   spack external find
   ```
 
-  This will find preinstalled compilers and further software. This way we do not have to recompile everything from scratch.
+  This command tries to find preinstalled software packages which are also in Spack's package database. This way we do not have to recompile everything from scratch.
 
   **Note** `spack external find` is an experimental feature and might fail. System packages [can be defined manually](https://spack.readthedocs.io/en/latest/getting_started.html#system-packages).
+
+    - Found packages (including version, configuration etc.) are stored in `~/.spack/packages.yaml`. There one can add further packages manually.
+        - **Note** Maybe show content of this file.
+
+- Concretize a spec to trigger bootstrap process (optional)
+
+  ```bash
+  spack spec zlib
+  ```
+
+  This will try to concretize the package and its dependencies. `clingo`, Spack's concretizer, is needed for this. If one calls this command the very first time, a bootstrapping process is triggered that install `clingo`.
+
+## 2. Package Installation/Management with Spack
+
+- Inspect package properties
+
+  ```bash
+  spack info zlib
+  ```
 
 - Install a simple example package
 
@@ -31,7 +72,9 @@
   spack spec zlib
   ```
 
-  This will trigger the bootstrap process of Spack. It installs `clingo`, the dependency resolver.
+  This will trigger the bootstrap process of Spack. It installs `clingo`, the dependency resolver, if not done before.
+
+- Install `zlib`
 
   ```bash
   spack install --reuse zlib
@@ -39,11 +82,15 @@
 
   This installs the package `zlib` by downloading and compiling it. `--reuse` tells spack to reuse already existing packages if possible
 
+- List installed packages
+
   ```bash
   spack find
   ```
 
   Checks the root environment and should show `zlib` being available now. Only `zlib` should be shown even if preinstalled software  was found by `spack external find`. These external packages have not been added to the root environment of Spack **explicity** yet and thus do not show up..
+
+## 3. Spack Package Creation
 
 - Create base package (boilerplate)
 
@@ -179,7 +226,7 @@
   ```diff
   + variant('python', default=True, description='Enable Python support')
   - depends_on('python@3:', when='@0.3.0:')
-  + depends_on('python@3:', when='+python')
+  + depends_on('python@3:', when='@0.3.0:+python')
   ```
 
   and check its existence

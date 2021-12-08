@@ -76,9 +76,9 @@ Much content of this lecture is taken from [Write the Docs](https://www.writethe
 
 ## Technical Writing in Research Software
 
-- Like in a startup, **no dedicated technical writer in team** (even for large projects). Everybody does everything. 
+- Like in a startup, **no dedicated technical writer in team** (even for large projects). Everybody does everything.
     - -> You need writing skills.
-- In research, we anyway write a lot (papers, proposals, lecture material, ...). 
+- In research, we anyway write a lot (papers, proposals, lecture material, ...).
     - -> Writing skills are very important anyway.
 
 ---
@@ -93,15 +93,21 @@ Much content of this lecture is taken from [Write the Docs](https://www.writethe
 
 ---
 
-## If Someone Starts Using Your Code
+If someone starts using your code ...
 
-> I made something of value!
+## *I made something of value!*
 
-> What if it breaks?!
+---
 
-> I am a real open source developer!
+## *What if it breaks?!*
 
-> Oh god, someone else is using my code...
+---
+
+## *I am a real open source developer!*
+
+---
+
+## *Oh god, someone else is using my code...*
 
 So, better write good documentation.
 
@@ -147,7 +153,7 @@ From [py-RSE](https://merely-useful.tech/py-rse/documentation.html):
 
 [py-RSE](https://merely-useful.tech/py-rse/documentation.html) distinguishes novices, competent practitioners, and experts (following [Wilson 2019, Teaching Tech Together](https://doi.org/10.1201/9780429330704))
 
-- A **novice** doesn’t yet have a mental model of the domain. -> Needs **tutorials** that introduce key ideas one by one. 
+- A **novice** doesn’t yet have a mental model of the domain. -> Needs **tutorials** that introduce key ideas one by one.
     - Good example: [deal.ii tutorials](https://dealii.org/developer/doxygen/deal.II/Tutorial.html)).
 - A **competent practitioner** knows enough to accomplish routine tasks with routine effort. -> Needs **reference guides, cookbooks, and Q&A sites**.
     - Good example: [preCICE config reference](https://precice.org/configuration-xml-reference.html)).
@@ -248,7 +254,7 @@ Minimal variant should contain at least (following [Write the Docs](https://www.
 Following [Keep a Changelog](https://keepachangelog.com):
 
 - **What is a changelog?**
-    - *A changelog is a file which contains a curated, chronologically ordered list of notable changes for each version of a project. Focus on the "what", not the "how" and "why".* 
+    - *A changelog is a file which contains a curated, chronologically ordered list of notable changes for each version of a project. Focus on the "what", not the "how" and "why".*
 - **Why keep a changelog?**
     - *To make it easier for users and contributors to see precisely what notable changes have been made between each release (or version) of the project.*
 - **Who needs a changelog?**
@@ -299,11 +305,11 @@ What is wrong with these?
 
 Examples from preCICE after Spring 2020 (error messages sprint):
 
-- **Give context**: 
+- **Give context**:
     - *Participant "Fluid" uses mesh "FluidMesh" with safety-factor="-0.5". Please use a positive or zero safety-factor instead.*
-- **Give advice**: 
+- **Give advice**:
     - *Data with name "Forces" is not defined on mesh "FluidMesh". Please add `<use-data name="Forces"/>` under `<mesh name="FluidMesh/>`.*
-- **Improve tone**: 
+- **Improve tone**:
     - *In the preCICE configuration, only one participant is defined. One participant makes no coupled simulation. Please add at least another one.*
 
 ---
@@ -357,7 +363,7 @@ Same story again:
 
 ## Commit Messages (3/3)
 
-Tags can also be useful (e.g. `[Bugfix]`), but consistency is key. Our [lecture material](https://github.com/Simulation-Software-Engineering/Lecture-Material/commits/main) is a bad example. :grin: 
+Tags can also be useful (e.g. `[Bugfix]`), but consistency is key. Our [lecture material](https://github.com/Simulation-Software-Engineering/Lecture-Material/commits/main) is a bad example. :grin:
 
 ---
 

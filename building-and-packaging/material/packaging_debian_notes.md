@@ -112,7 +112,6 @@ In this step we add a CPack configuration such that we can actually create a pac
   + set(CPACK_PACKAGE_VENDOR "SSE Lecturers / Employer")
   +
   + set(CPACK_PACKAGE_CONTACT "firstname.lastname@example.com")
-  + set(CPACK_PACKAGE_MAINTAINERS "SSE lecturers ${CPACK_PACKAGE_CONTACT}")
   +
   + set(CPACK_PACKAGE_HOMEPAGE_URL "https://simulation-software-engineering.github.io/homepage/")
   +
@@ -259,14 +258,14 @@ In this step we add a CPack configuration such that we can actually create a pac
   W: helloworld: shlib-without-versioned-soname usr/lib/libsse.so libsse.so
   ```
 
-- Some things can be fixed easily by addin parameters to the CMake file
+- Some things can be fixed easily by adding parameters to the CMake file
 
   ```diff
-  + set(CPACK_PACKAGE_MAINTAINER "SSE lecturers")
+  + set(CPACK_PACKAGE_CONTACT "SSE lecturers <firstname.lastname@example.com>")
   + set(CPACK_STRIP_FILES TRUE)
   ```
 
-  `CPACK_PACKAGE_MAINTAINER` sets package maintainer and `CPACK_STRIP_FILES` make sure build files are stripped.
+  `CPACK_PACKAGE_CONTACT` was missing the name of the maintainer. `CPACK_STRIP_FILES` makes sure build files are stripped. For Debian packages the package maintainer can be set/overwritten with `CPACK_DEBIAN_PACKAGE_MAINTAINER`.
 
   Besides that one can add a changelog and a copyright file.
   `extended-description-is-empty` is requesting description of each component, i.e., the executable and the library. We do not provide information for each component at the moment.

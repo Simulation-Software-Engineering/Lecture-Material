@@ -198,12 +198,6 @@ slideOptions:
 
 ## Common CPack Options 2/2
 
-- Maintainer information
-
-  ```cmake
-  set(CPACK_PACKAGE_MAINTAINER "Alexander Jaust")
-  ```
-
 - Homepage of software in package
 
   ```cmake

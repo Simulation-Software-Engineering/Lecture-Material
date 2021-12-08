@@ -24,7 +24,7 @@ Create a Spack package for all releases of the given code and make sure that the
 
 ### Development/Packaging Environment
 
-Please do all the development inside a Docker container using the image [`ajaust/spack-package-exercise`](https://hub.docker.com/repository/docker/ajaust/spack-package-exercise). This should help to avoid problems with setting up Spack and minimized the number of external packages that Spack needs to build.
+Please do all the development inside a Docker container using the image [`ajaust/spack-package-exercise`](https://hub.docker.com/r/ajaust/spack-package-exercise). This should help to avoid problems with setting up Spack and minimized the number of external packages that Spack needs to build.
 
 You can find the recipe of the image inside the `docker/` directory of [the example code on GitHub](https://github.com/Simulation-Software-Engineering/spack-exercise). The image itself is based on Ubuntu 20.04 and has the Boost dependency preinstalled. Additionally, Spack has been set up such that you
 
@@ -34,7 +34,7 @@ You can find the recipe of the image inside the `docker/` directory of [the exam
 
 - Create a fork of the [GitHub repository](https://github.com/Simulation-Software-Engineering/spack-exercise).
 
-- Start a container based on the [`ajaust/spack-package-exercise`](https://hub.docker.com/repository/docker/ajaust/spack-package-exercise) image, e.g., via
+- Start a container based on the [`ajaust/spack-package-exercise`](https://hub.docker.com/r/ajaust/spack-package-exercise) image, e.g., via
 
   ```bash
   docker run -it --name spack-packaging --mount type=bind,source="$(pwd)",target=/mnt/spack-packaging ajaust/spack-package-exercise
@@ -113,7 +113,7 @@ You can find the recipe of the image inside the `docker/` directory of [the exam
     - **Note**: Do not delete the container before you have copied the `package.py`. Otherwise, the file will be lost and you have to start from the beginning.
 - Submit your code via a pull request. You can also open a (draft) pull request before you are incorporated all changes. In this case, do not forget to mark the pull request as ready to review when you are finished.
     - The pull request should be named `[USERNAME] Spack exercise`, e.g., `[jaustar] Spack exercise`. Please use the GitLab username here.
-    - If you have used your own container for the exercise or extended the [`ajaust/spack-package-exercise`](https://hub.docker.com/repository/docker/ajaust/spack-package-exercise), please also add a Dockerfile that describes your container such that we can reproduce your submission.
+    - If you have used your own container for the exercise or extended the [`ajaust/spack-package-exercise`](https://hub.docker.com/r/ajaust/spack-package-exercise), please also add a Dockerfile that describes your container such that we can reproduce your submission.
 
 ## Optional Tasks
 

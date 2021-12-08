@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/desaiin/Documents/US3/WiSe-2021-22/SSE/lecture-materials/building-and-packaging/material/examples/cmake/main.cpp
+iostream
+-
+

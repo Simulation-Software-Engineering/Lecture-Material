@@ -36,6 +36,26 @@ slideOptions:
 
 ---
 
+## Documentation Survey (1/3)
+
+- Who has been annoyed by bad (or lack of) documentation before?
+- Examples?
+
+---
+
+## Documentation Survey (2/3)
+
+- Who has been happy/surprised by very good documentation before?
+- Examples?
+
+---
+
+## Documentation Survey (3/3)
+
+- Who documents their code well?
+
+---
+
 ## A Poem
 
 > If people don’t know why your project exists,
@@ -335,7 +355,7 @@ Who did something wrong? The software or the user?
 
 - The user -> error
 - The software -> assertion
-- Make this transparent for user
+- Make this transparent to the user
 
 ---
 
@@ -378,7 +398,7 @@ Tags can also be useful (e.g. `[Bugfix]`), but consistency is key. Our [lecture 
 
 ---
 
-## Class Documentation
+## Class Documentation (1/2)
 
 Description of a class or method is split into a **short** and a **long description**.
 
@@ -393,11 +413,15 @@ Android's ActionBar class:
 
 > A primary toolbar within the activity that may display the activity title, application-level navigation affordances, and other interactive items.
 
+---
+
+## Class Documentation (2/2)
+
 **Long description**: how to use, key features, best practices, ...
 
 ---
 
-## Method Documentation (1/2)
+## Method Documentation (1/3)
 
 **Short description**:
 
@@ -414,11 +438,15 @@ Android's ActionBar class:
 - **No return value**:
     - *Sets the ..., Updates the ..., Deletes the ..., Registers ..., Creates a ...*
 
+---
+
+## Method Documentation (2/3)
+
 **Long description**: why and how to use the method, prerequisites, related methods, ...
 
 ---
 
-## Method Documentation (2/2)
+## Method Documentation (3/3)
 
 **Parameters**:
 

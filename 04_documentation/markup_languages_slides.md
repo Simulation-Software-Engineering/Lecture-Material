@@ -49,20 +49,50 @@ slideOptions:
 
 ---
 
-## Introduction 1/2
+## Introduction
 
 - Why "lightweight"/"simple"/"humane"?
     - Readable without special rendering -> readable in text editor
-    - Originates
+    - Originates from earlier times when texts on screens would not support special formatting
 - Different languages with different goals
     - Presentation: `Markdown`, `reStructuredText`, `AsciiDoc`...
     - Data serialization/storage: `YAML`, `JSON`...
+
+See [Wikipedia](https://en.wikipedia.org/wiki/Lightweight_markup_language)
+
+---
+
+## Common Properties
+
+- **Whitespaces** very important
 - Suitable for **conversion** into other formats
-- Plain text files
+- Plain text files -> Good for us
 
   > "If you can't git diff a file format, it's broken."
 
-See [Wikipedia](https://en.wikipedia.org/wiki/Lightweight_markup_language)
+    - Suitable for [Docs as code](https://www.writethedocs.org/guide/docs-as-code/) and [DocOps](https://www.writethedocs.org/guide/doc-ops/)
+
+---
+
+## Docs as Code
+
+> Documentation as Code (Docs as Code) refers to a philosophy that you should be writing documentation with the same tools as code
+>
+> - Issue Trackers
+> - Version Control (Git)
+> - Plain Text Markup (Markdown, reStructuredText, Asciidoc)
+> - Code Reviews
+> - Automated Tests
+>
+> [Write the Docs](https://www.writethedocs.org/guide/docs-as-code/)
+
+---
+
+## DocOps
+
+> a set of practices that works to automate and integrate the process of developing documentation across engineering, product, support, and, of course, technical writing teams.
+>
+> [Write the Docs](https://www.writethedocs.org/guide/doc-ops/)
 
 ---
 
@@ -123,7 +153,7 @@ Image Source: [https://docutils.sourceforge.io/rst.png](https://docutils.sourcef
 
 ---
 
-## YAML Ain't Markup Language™
+## YAML: YAML Ain't Markup Language™
 
 <img src="https://github.com/yaml/yaml-spec/blob/main/spec/1.2/docbook/logo.png?raw=true" width=50%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px; background: #eeeeee">
 

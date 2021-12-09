@@ -79,7 +79,7 @@ Much content of this lecture is taken from [Write the Docs](https://www.writethe
 - Like in a startup, **no dedicated technical writer in team** (even for large projects). Everybody does everything.
     - -> You need writing skills.
 - In research, we anyway write a lot (papers, proposals, lecture material, ...).
-    - -> Writing skills are very important anyway.
+    - -> Writing/communication skills are very important anyway.
 
 ---
 
@@ -138,8 +138,8 @@ So, better write good documentation.
 
 - Distinction important for larger projects, not so important for smaller projects
 - Sometimes also third category *"maintainer"*
-- User docs: How does the software work?
-- Dev docs: Why, not only how
+- User docs: How to use the software?
+- Dev docs: Why does the software work a certain way? Not only how
 
 ---
 
@@ -189,6 +189,7 @@ Example: brief excerpt of [Google developer documentation style guide](https://d
 - **Timeless documentation**: Avoid words such as *"currently"*, *"in the future"*, *"soon"*
 - Use present tense, avoid *"will"*
     - Bad: *Send a query to the service. The server will send an acknowledgment.*
+    - Good: *Send a query to the service. The server sends an acknowledgment.*
 
 - **Exclamation points**: Don't use them. Rather use notices such as Note or Caution.
 
@@ -215,7 +216,7 @@ Example: brief excerpt of [Google developer documentation style guide](https://d
 > Example preCICE:
 > - Three things to define character? Smart, approachable, responsible.
 > - What kind of smartphone does preCICE use? No iPhone.
-> - Does preCICE have a sense of humor? Yes. When does it use it? Only rarely.
+> - Does preCICE have a sense of humor? Yes. When do they use it? Only rarely.
 > - ...
 
 ---
@@ -225,7 +226,7 @@ Example: brief excerpt of [Google developer documentation style guide](https://d
 - Define how to talk to users.
 
 > Example preCICE:
-> - Treat users as peers. preCICE is a CS PhD student, user is a Mechanical Engineering PhD student.
+> - Treat users as peers. preCICE is a Computer Science PhD student, user is a Mechanical Engineering PhD student.
 
 ---
 
@@ -241,6 +242,7 @@ Minimal variant should contain at least (following [Write the Docs](https://www.
 
 - What problem the project solves
 - A small code example (for libraries) or how to run (for programs)
+- A screenshot for code using a GUI or a visual part
 - How to get support and a link to issue tracker
 - Information for people who want to contribute back (also `CONTRIBUTING.md`)
 - Installation instructions
@@ -367,11 +369,11 @@ Tags can also be useful (e.g. `[Bugfix]`), but consistency is key. Our [lecture 
 
 ---
 
-## API Documentation
+## Application Programming Interface (API) Documentation
 
 - All basics apply (be consistent, descriptive, and concise; explain the why, ...)
 - Consistency is also great for automatization: rendering, interlinking, suggestions by IDE, ... (next week)
-- Different syntax (e.g. [Google style for Python](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings), [numpydoc style](https://numpydoc.readthedocs.io/en/latest/), [doxygen for C++](https://www.doxygen.nl), [Javadoc](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html))
+- Different syntax (e.g. [Google style for Python](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings), [numpydoc style](https://numpydoc.readthedocs.io/en/latest/), [doxygen for C++ and more](https://www.doxygen.nl), [Javadoc](https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html))
 - The [API reference](https://developers.google.com/style/api-reference-comments) of the Google developer documentation style guide is a very good source, **language independent**, and used on the following slides.
 
 ---
@@ -447,6 +449,6 @@ Example: [preCICE API](https://precice.org/doxygen/master/classprecice_1_1Solver
 
 - [py-rse appendix on documentation](https://merely-useful.tech/py-rse/documentation.html)
 - [py-rse on docstrings](https://merely-useful.tech/py-rse/scripting.html#scripting-docstrings)
-- [Write the docs](https://www.writethedocs.org/)
+- [Write the Docs](https://www.writethedocs.org/)
 - [I'd Rather Be Writing blog](https://idratherbewriting.com/)
 - [Google developer documentation style guide](https://developers.google.com/style)

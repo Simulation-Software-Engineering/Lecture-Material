@@ -1,14 +1,13 @@
 # Virtualization and Containers
 
-| 5 minutes | Slides |
+Learning goals:
 
-- **Learning goals**
-    - What is the difference between virtualization and containers?
-    - When to use virtual machines and when containers.
-    - How to work with virtual machines (VirtualBox) and how to manage these with Vagrant.
-    - Building containers with Docker and Singularity.
-    - Understand pros and cons of different container technologies.
-    - Student can set up their own containers tailored to their requirements.
+- What is the difference between virtualization and containers?
+- When to use virtual machines and when containers.
+- How to work with virtual machines (VirtualBox) and how to manage these with Vagrant.
+- Building containers with Docker and Singularity.
+- Understand pros and cons of different container technologies.
+- Student can set up their own containers tailored to their requirements.
 
 | Duration | Content |
 | --- | --- |

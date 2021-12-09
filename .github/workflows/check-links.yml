@@ -1,7 +1,5 @@
 name: Check links
-on:
-  schedule:
-    - cron: '0 0 * * SUN'
+on: [pull_request, push]
 jobs:
   check_links:
     runs-on: ubuntu-latest

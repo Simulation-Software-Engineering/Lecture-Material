@@ -7,8 +7,14 @@
 Material of the Simulation Software Engineering lecture. There are different way how to get an overview:
 
 - Look at `timetable.md`,
-- Look at the `overview.md` files of each chapter / folder,
+- Look at the `README.md` files of each chapter / folder,
 - Browse the content through the [course website](https://simulation-software-engineering.github.io/homepage/).
+
+## List of chapters
+
+1. [Version Control](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control)
+2. [Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers)
+3. [Building and Packaging](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging)
 
 ## Linting
 

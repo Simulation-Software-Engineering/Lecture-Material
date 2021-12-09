@@ -55,7 +55,7 @@ slideOptions:
     - Readable without special rendering -> readable in text editor
     - Originates from earlier times when texts on screens would not support special formatting
 - Different languages with different goals
-    - Presentation: `Markdown`, `reStructuredText`, `AsciiDoc`...
+    - Presentation: `Markdown`, `reStructuredText`, `AsciiDoc`, [WhatsApp](https://faq.whatsapp.com/general/chats/how-to-format-your-messages/?lang=en)...
     - Data serialization/storage: `YAML`, `JSON`...
 
 See [Wikipedia](https://en.wikipedia.org/wiki/Lightweight_markup_language)
@@ -65,7 +65,7 @@ See [Wikipedia](https://en.wikipedia.org/wiki/Lightweight_markup_language)
 ## Common Properties
 
 - **Whitespaces** very important
-- Suitable for **conversion** into other formats
+- Suitable for **conversion** into other formats, especially HTML
 - Plain text files -> Good for us
 
   > "If you can't git diff a file format, it's broken."
@@ -96,6 +96,14 @@ See [Wikipedia](https://en.wikipedia.org/wiki/Lightweight_markup_language)
 
 ---
 
+## DocOps Lifecycle
+
+<img src="https://www.writethedocs.org/_images/docops-lifecycle.png" width=78%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px;">
+
+Source: [Write the Docs](https://www.writethedocs.org/guide/doc-ops/)
+
+---
+
 ## Markdown
 
 <img src="https://github.com/dcurtis/markdown-mark/blob/master/png/1664x1024.png?raw=true" width=50%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px; background: #eeeeee">
@@ -112,10 +120,16 @@ Image Source: [markdown-mark on GitHub](https://github.com/dcurtis/markdown-mark
 - Created by John Gruber and Aaron Swartz in 2004
 - Very popular (`README.md`, `CONTRIBUTING.md`...)
 - Many tools with integrated rendering (GitHub, GitLab, Atom, Visual Studio Code...)
-- Many different flavors
-    - [GitHub Flavored Markdown](https://github.github.com/gfm/), [pandoc Markdown]()
-- Effort of standardization: [CommonMark](https://commonmark.org/)
+- Common indentation with 2 or 4 spaces
 - File extension `md` or `markdown`
+
+---
+
+## Markdown Flavors
+
+- Many different flavors
+    - [GitHub](https://github.github.com/gfm/)/[GitLab]((https://docs.gitlab.com/ee/user/markdown.html#differences-between-gitlab-flavored-markdown-and-standard-markdown))  flavored Markdown, [RMarkdown](https://rmarkdown.rstudio.com/)...
+- Effort of standardization: [CommonMark](https://commonmark.org/)
 
 ---
 
@@ -123,6 +137,7 @@ Image Source: [markdown-mark on GitHub](https://github.com/dcurtis/markdown-mark
 
 - [CommonMark's "Learn Markdown in 60 seconds"](https://commonmark.org/help/)
 - [Mastering Markdown (GitHub Guide)](https://guides.github.com/features/mastering-markdown/)
+- [CommonMark's Markdown tutorial](https://commonmark.org/help/tutorial/)
 
 ---
 
@@ -132,14 +147,20 @@ Image Source: [https://docutils.sourceforge.io/rst.png](https://docutils.sourcef
 
 ---
 
-## reStructuredText Overview
+## reStructuredText
 
 > reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax and parser system. It is useful for in-line program documentation (such as Python docstrings), for quickly creating simple web pages, and for standalone documents.
 > [reStructuredText - Markup Syntax and Parser Component of Docutils](https://docutils.sourceforge.io/rst.html)
 
+---
+
+## Overview
+
 - Part of [Docutils](https://docutils.sourceforge.io/index.html) project
     - Very common in Python ecosystem
-- Has a [specification](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html)
+- Has a [specification](https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html), good base format for conversion
+- Indentation depends on context (2, 3, 4 spaces)
+- Special blocks introduced by `..` or `::`followed by a space
 - Common abbreviations `rst`, `reST` or `ReST`
 - File extension `rst`
 

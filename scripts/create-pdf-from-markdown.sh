@@ -8,7 +8,7 @@ then
     TARGET_FILES="$1"
 else
     echo "Error: Expect one parameter passed to script!"
-    echo "  Valid arguments are: slides, quiz, text, notes, or exercise"
+    echo "  Valid arguments are: slides, quiz, demo, or exercise"
     exit 1
 fi
 

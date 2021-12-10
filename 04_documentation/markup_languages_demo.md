@@ -84,8 +84,8 @@
   1. Item 1
   2. Item 2
 
-      1. Item 2a
-      2. Item 2b
+     1. Item 2a
+     2. Item 2b
 
   As one can see we can also have sublists. In contrast to markdown there has to be a line break before the sublist starts.
 

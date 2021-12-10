@@ -21,4 +21,4 @@ jobs:
       #FIXME Need to allow duplicates (same links on the same page)
       run: |
         gem install awesome_bot
-        awesome_bot AWESOME_BOT_OPTIONS $(find . -iname "*.md" -type f)
+        awesome_bot --white-list https://gitlab-sim.informatik.uni-stuttgart.de/  --allow-ssl --allow-redirect --allow-dupe $(find . -iname "*.md" -type f)

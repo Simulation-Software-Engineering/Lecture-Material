@@ -21,4 +21,4 @@ jobs:
       #FIXME Need to allow duplicates (same links on the same page)
       run: |
         gem install awesome_bot
-        awesome_bot docs/*.md README.md --allow-dupe
+        awesome_bot AWESOME_BOT_OPTIONS $(find . -iname "*.md" -type f)

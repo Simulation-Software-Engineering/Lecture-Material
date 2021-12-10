@@ -104,7 +104,7 @@ slideOptions:
 
 ## Demo: Run prebuilt containers
 
-Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
+Details available in [`containers_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/containers_demo.md)
 
 ---
 

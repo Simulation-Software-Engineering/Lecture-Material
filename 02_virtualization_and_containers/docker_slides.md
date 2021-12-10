@@ -181,7 +181,7 @@ slideOptions:
 
 ## Demo: Running prebuilt images
 
-Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
+Details available in [`docker_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
 
 ---
 

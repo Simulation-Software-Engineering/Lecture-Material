@@ -103,7 +103,7 @@ slideOptions:
 
 ## Demo
 
-Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
+Details available in [`virtualbox_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualbox_demo.md)
 
 ---
 

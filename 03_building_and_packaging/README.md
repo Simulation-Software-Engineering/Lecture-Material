@@ -13,8 +13,8 @@ Learning goals:
 | --- | --- |
 | 45 minutes | [cmake_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/cmake_slides.md), [cmake_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/cmake_demo.md) |
 | 90 minutes | [cmake_exercise.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/cmake_exercise.md) |
-| 60 minutes | [cpack_debian_exercise.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/cpack_debian_exercise.md) |
-| 50 minutes | [debian_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/debian_slides.md), [debian_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/debian_demo.md) |
+| 60 minutes | [cpack_exercise.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/cpack_exercise.md) |
+| 50 minutes | [cpack_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/cpack_slides.md), [cpack_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/cpack_demo.md) |
 | 20 minutes | [intro_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/intro_slides.md) |
 | 15 minutes | [make_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/make_slides.md), [make_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/make_demo.md) |
 | 90 minutes | [pypi_exercise.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building-and-packaging/pypi_exercise.md) |

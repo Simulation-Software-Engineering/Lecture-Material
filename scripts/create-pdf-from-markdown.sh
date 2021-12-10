@@ -8,17 +8,17 @@ then
     TARGET_FILES="$1"
 else
     echo "Error: Expect one parameter passed to script!"
-    echo "  Valid arguments are: slides, quiz, text, notes, or exercise"
+    echo "  Valid arguments are: slides, quiz, demo, or exercise"
     exit 1
 fi
 
-if [[ "$TARGET_FILES" == "slides" ]] || [[ "$TARGET_FILES" == "quiz" ]] || [[ "$TARGET_FILES" == "text" ]] || [[ "$TARGET_FILES" == "notes" ]] || [[ "$TARGET_FILES" == "exercise" ]];
+if [[ "$TARGET_FILES" == "slides" ]] || [[ "$TARGET_FILES" == "quiz" ]] || [[ "$TARGET_FILES" == "demo" ]] || [[ "$TARGET_FILES" == "exercise" ]];
 then
     file_list=$(find . -type f -iname "*_${TARGET_FILES}.md")
 else
     echo "Error: Argument not supported."
     echo "  Supplied argument: ${TARGET_FILES}"
-    echo "  Valid arguments are: slides, quiz, text, notes, or exercise"
+    echo "  Valid arguments are: slides, quiz, demo, or exercise"
     exit 1
 fi
 

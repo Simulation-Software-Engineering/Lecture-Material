@@ -12,4 +12,4 @@ Learning goals:
 | 40 minutes | [`course_intro_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/course_intro_slides.md) |
 | 10 minutes | [`organizational_remarks_week3_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/organizational_remarks_week3_slides.md) |
 | 5 minutes | [`organizational_remarks_week7_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/organizational_remarks_week7_slides.md) |
-| 15 minutes | [`rse_basics.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/organization/material/rse_basics_slides.md) |
+| 15 minutes | [`rse_basics.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/rse_basics_slides.md) |

@@ -63,7 +63,7 @@ diffusion2d.solve()
 ## Step 3 - Creating folder structure for packaging
 
 - Now that you have a refactored code, replicate the folder structure we learnt in the lecture to prepare the code for packaging
-- With the help of the [lecture notes](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/packaging_python_slides.md) create additional files `setup.py`, `__init__.py`, `README.md` and the `src/` directory.
+- With the help of the [lecture notes](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/pypi_slides.md) create additional files `setup.py`, `__init__.py`, `README.md` and the `src/` director
 - The `README.md` file consists of a longer description about the code and what it does. Take the information about the code from Step 1 of this exercise and add it to the README. In addition to this fill out the emtpy sections of the README with relevant information.
 - In `setup.py` name your package `<your-GitLab-username>diffusion2D`. We will use semantic versioning, so the version you are developing will be `0.0.1`. The package url is the url of the GitHub repository of this exercise code.
 - Try to put `classifiers` in your `setup()`.

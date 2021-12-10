@@ -1,6 +1,6 @@
 # Notes for CMake demo
 
-Example code is in [`building-and-packaging/material/examples/cmake`](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/building-and-packaging/material/examples/cmake). Example adapted from [Yanson Tech](https://www.youtube.com/watch?v=wl2Srog-j7I)
+Example code is in [`building-and-packaging/material/examples/cmake`](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/building-and-packaging/examples/cmake). Example adapted from [Yanson Tech](https://www.youtube.com/watch?v=wl2Srog-j7I)
 
 ## CMake "Hello World"
 

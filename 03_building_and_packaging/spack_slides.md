@@ -69,7 +69,7 @@ slideOptions:
 
 ## Dependency Graph of FEniCS
 
-<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/material/figs/spack/fenics-dependencies.png?raw=true" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/building-and-packaging/figs/spack/fenics-dependencies.png?raw=true" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 ---
 

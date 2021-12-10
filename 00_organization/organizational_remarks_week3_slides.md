@@ -39,7 +39,7 @@ slideOptions:
 
 ## Misc
 
-- Please add presentations from last week to [*"My neat little Git trick"*](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/version-control/overview.md#my-favorite-neat-little-Git-trick)
+- Please add presentations from last week to [*"My neat little Git trick"*](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/my_favorite_neat_little_git_trick_demo.md)
 - [GitHub Universe](https://www.githubuniverse.com/2021) was last week.
     - Amazing new feature: `ctrl` + `k` and never use mouse again
 

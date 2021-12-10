@@ -1,6 +1,6 @@
 # Notes for Make demo
 
-Example code is in [`building-and-packaging/material/examples/make`](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/building-and-packaging/material/examples/make).
+Example code is in [`building-and-packaging/material/examples/make`](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/building-and-packaging/examples/make).
 
 ## "Hello World" starting point
 

@@ -365,7 +365,7 @@ Same story again:
 
 - Consistent
 - Descriptive and concise (such that complete history becomes skimmable)
-- Explain the "why" (the "what" is covered in the diff)
+- Explain the "why" (the "how" is covered in the diff)
 
 ---
 

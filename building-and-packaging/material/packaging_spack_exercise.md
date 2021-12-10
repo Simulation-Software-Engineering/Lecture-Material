@@ -95,7 +95,7 @@ You can find the recipe of the image inside the `docker/` directory of [the exam
       Let's fight with CMake, Docker, and some dependencies!
       ```
 
-      If this looks find, you unload the package.
+      If this looks fine, you unload the package.
 
       ```bash
       spack unload spack-exercise@0.1.0

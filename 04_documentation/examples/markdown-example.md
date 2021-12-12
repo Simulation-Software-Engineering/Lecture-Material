@@ -24,20 +24,18 @@ As one can see we can also have sublists.
 
 Code uses backticks. This can be code/variable names in text that `appear` in a monospace font. Code blocks start and end with triple backticks and often take a specifier of the presented language.
 
-    ```c++
-    int main()
-    {
-        return 0;
-    }
-    ```
+```c++
+int main()
+{
+    return 0;
+}
+```
+
+One could also define code blocks with by indentation (usually 4 spaces), but it is better to not mix styles.
 
 > Quotations can be done by angle brackets
 
 We can also have hyperlinks to other websites. We could link to the [course website](https://simulation-software-engineering.github.io/homepage/), but separate the link in the text from the target definition.
-
-There is a code block based on indentation by 4 spaces.
-
-    [course website]: https://simulation-software-engineering.github.io/homepage
 
 ## This is a subheader
 

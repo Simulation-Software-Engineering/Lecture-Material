@@ -51,6 +51,84 @@ slideOptions:
 
 ---
 
+## Tools Overview
+
+- Code documentation website generators
+    - Doxygen, Sphinx (with autodoc extension),...
+- General documentation website generators
+    - MkDocs, Sphinx,...
+- Publishing tools
+    - Read the Docs, GitHub Pages
+
+---
+
+## Step by Step Plan
+
+1. Document a Python code
+2. Create a documentation website via Sphinx
+3. Add code documenation to this websites
+4. Publish the homepage via Read the Docs
+
+The code is on GitHub
+
+**TODO** Add GitHub link
+
+---
+
+## Docstrings
+
+```python
+"""Docstring explaining the script"""
+
+class ClassName:
+    """Docstring explaining the class"""
+
+    def awesome_function(self, parameter ):
+        """An awesome function
+
+        """
+        return parameter
+
+```
+
+---
+
+## Demo: Docstrings
+
+Add docstrings to sample code
+
+---
+
+## Sphinx
+
+> Sphinx is a tool that makes it easy to create intelligent and beautiful documentation, written by Georg Brandl and licensed under the BSD license.
+>
+> From [project homepage](https://www.sphinx-doc.org/en/master/)
+
+- Strongly connected to Python project
+- Written in Python
+
+  ```bash
+  pip install sphinx
+  ```
+
+---
+
+## Demo: Sphinx Setup
+
+---
+
+## Code Documentation
+
+- Sphinx + autodoc extension
+- Format docstring in prescribed way
+
+---
+
+## Sphinx Docstring formatting
+
+---
+
 ## Doxygen
 
 > Doxygen is the de facto standard tool for generating documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL and to some extent D.
@@ -95,22 +173,6 @@ Source: [Getting started](https://www.doxygen.nl/manual/starting.html)
 ---
 
 ## Doxygen Demo
-
----
-
-## Docstrings
-
--
-
-```python
-class ClassName:
-
-    def funtion():
-        return 0
-
-    def awesome_function( input_parameter )
-
-```
 
 ---
 

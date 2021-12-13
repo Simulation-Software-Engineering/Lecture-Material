@@ -84,18 +84,26 @@ class ClassName:
     """Docstring explaining the class"""
 
     def awesome_function(self, parameter ):
-        """An awesome function
-
-        """
+        """A docstring explaining the function"""
         return parameter
 
 ```
+
+- [PEP 257 - Docstring Conventions](https://www.python.org/dev/peps/pep-0257/)
+- `__doc__` property is derived from docstring
+- May span multiple lines
+- Docstrings are **not** comments
+
+  ```python
+  # This is a Python style comment
+  ```
 
 ---
 
 ## Demo: Docstrings
 
-Add docstrings to sample code
+- Inspect the code
+- Add docstrings to do document sample code
 
 ---
 
@@ -116,6 +124,9 @@ Add docstrings to sample code
 
 ## Demo: Sphinx Setup
 
+- Move to reStructuredText as markup language
+- Create a new Sphinx configuration
+
 ---
 
 ## Code Documentation
@@ -126,6 +137,33 @@ Add docstrings to sample code
 ---
 
 ## Sphinx Docstring formatting
+
+```python
+"""[Summary]
+
+:param [ParamName]: [ParamDescription], defaults to [DefaultParamVal]
+:type [ParamName]: [ParamType](, optional)
+...
+:raises [ErrorType]: [ErrorDescription]
+...
+:return: [ReturnDescription]
+:rtype: [ReturnType]
+"""
+```
+
+From: [Read the Docs Sphinx Docstrings](https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html)
+
+---
+
+## Read the Docs
+
+> Read the Docs simplifies software documentation by automating building, versioning, and hosting of your docs for you.
+
+[Homepage](https://readthedocs.org/)
+
+---
+
+## Read the Docs configuration file
 
 ---
 

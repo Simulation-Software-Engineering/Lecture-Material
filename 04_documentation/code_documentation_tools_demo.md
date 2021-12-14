@@ -1,5 +1,10 @@
 # Code Documentation Tools Demo
 
+## TODO
+
+- Tag the important commits in [python-code-documentation repository](https://github.com/Simulation-Software-Engineering/python-code-documentation) and replace the tag **TODO**s.
+    - This will be removed later when it is clear that the repository does not change anymore.
+
 ## 1. Docstrings
 
 Goal: Add docstrings to the Python Code
@@ -8,10 +13,9 @@ Goal: Add docstrings to the Python Code
 
 Initial state is in tag **TODO**
 
-1. Explain Python code shortly. Emphasize that we have a class now so we show how to document a class.
-2. Add docstrings to class, and solve function.
-    - TODO: Document functions is separate Python file and/or move them back into the main file.
-3. Show `__doc__` attribute. Inside the directory containing the `diffusionsolver.py` we start python and print the content of the docstrings.
+1. Explain Python code shortly. Emphasize that we have a class now so we show how to document a class. We also moved all code in one python file to avoid problems with module imports.
+2. Add docstrings to class, solve, and auxiliary functions. Ideally add docstring only to one and then do fast-forward to tag **TODO** of repository.
+3. Show `__doc__` attribute and `help` function of Python. Inside the directory containing the `diffusionsolver.py` we start python and print the content of the docstrings.
 
   ```bash
   python
@@ -25,10 +29,9 @@ Initial state is in tag **TODO**
 
   Example acquired from https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/
 
-  >>> print(diffusionsolver.DiffusionSolver.__doc__)
+  >>> help(diffusionsolver)
 
-      A class describing a finite-difference method for solving
-      the heat equation if 2 space dimentions.
+      Some longer description is being generated
 
   >>>
   ```
@@ -42,11 +45,11 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
 
     1. Rename the file
 
-      ```bash
-      git mv README.md README.rst
-      ```
+       ```bash
+       git mv README.md README.rst
+       ```
 
-      We do this also for consistency with the new files that will be created.
+       We do this also for consistency with the new files that will be created.
     2. Redo headlines by underlining them
     3. Redo inline code samples with double backticks
     4. Reformat code block using `code-block` directive
@@ -60,7 +63,7 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
     2. Create documentation directory
 
        ```bash
-       mkdir doc
+       mkdir docs && cd docs
        ```
 
     3. Create basic configuration
@@ -113,14 +116,8 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
        This creates the certain file layout
 
        ```bash
-       .
-       ├── Makefile
-       ├── _build
-       ├── _static
-       ├── _templates
-       ├── conf.py
-       ├── index.rst
-       └── make.bat
+       $ ls
+       Makefile  _build  _static  _templates  conf.py  index.rst  make.bat
        ```
 
        The `conf.py` file is important to configure the documentation and contains most of the information.
@@ -132,7 +129,7 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
     4. Inspect website locally. Build the website
 
        ```bash
-       make -b html
+       make html
        ```
 
        and afterwards open `<prefix>/docs/build/html/index.html`. We can now also edit `index.rst` and rebuild to see the changes.
@@ -145,50 +142,51 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
 
     5. Add another subpage, e.g., "Tutorials".
 
-      - Add directory `tutorials/` with files `overview.rst` and `tutorial_case1.rst` (maybe `tutorial_case2.rst`).
-      - Add content to files:
+       Add directory `tutorials/` with files `overview.rst` and `tutorial_case1.rst` (maybe `tutorial_case2.rst`).
 
-        `tutorial_case1.rst`: Add headline, some text and two lower level headers.
+       Add content to files:
 
-        ```rst
-        Tutorial 1
-        ==========
+       `tutorial_case1.rst`: Add headline, some text and two lower level headers.
 
-        Tutorial description goes here.
+       ```rst
+       Tutorial 1
+       ==========
 
-        Step 1
-        ------
+       Tutorial description goes here.
 
-        Description of step 1.
+       Step 1
+       ------
 
-        Step 2
-        ------
+       Description of step 1.
 
-        Description of step 2.
-        ```
+       Step 2
+       ------
 
-        `overview.rst`: Add headline and a table of contents (TOC). It will be parsed from the `index.rst` such that the main header of the tutorial files will be present on the main page.
+       Description of step 2.
+       ```
 
-        ```rst
-        Tutorial overview
-        =================
+       `overview.rst`: Add headline and a table of contents (TOC). It will be parsed from the `index.rst` such that the main header of the tutorial files will be present on the main page.
 
-        .. toctree::
-           :maxdepth: 2
-           :caption: tutorials:
+       ```rst
+       Tutorial overview
+       =================
 
-           tutorial_case1.rst
-           tutorial_case2.rst
-        ```
+       .. toctree::
+          :maxdepth: 2
+          :caption: tutorials:
 
-        **Note** One must be careful with the indentation!
+          tutorial_case1.rst
+          tutorial_case2.rst
+       ```
+
+       **Note** One must be careful with the indentation!
     6. We can include the `REAMDE.rst` into the `index.rst`
 
        ```diff
        +.. include:: ../README.rst
        ```
 
-       **Note**: In the git repository this addition currenlty happens in the next step.
+       **Note**: In the git repository this addition currently happens in the next step.
 
 ## 3. Sphinx: Code Documentation
 
@@ -203,14 +201,14 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
   +sys.path.insert(0, os.path.abspath('.'))
   ```
 
-  and enable the autodocs extenstion
+  and enable the autodoc extenstion
 
   ```diff
   -extensions = [
   +extensions = ['sphinx.ext.autodoc'
   ```
 
-- Create autodoc
+- Create autodoc template files
 
   ```bash
   sphinx-apidoc -o source ../src/
@@ -219,10 +217,10 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
   Creating file source/modules.rst.
   ```
 
-  We can inspect the generated files.
-- Recreate website with `make -b html`. If there is an error message about "consistency" build the website again and/or comment out `from output` from the `diffusionsolver.py` file. Afterwards the error disappeared for me.
+  We can inspect the generated files. The files do not contain the actual documentation, but rather a template. The actual documentation is generated once `sphinx` is invoked.
+- Recreate website with `make html`. If there is an error message about "consistency" build the website again and/or comment out `from output` from the `diffusionsolver.py` file. Afterwards the error disappeared for me.
     - We now can check out "Index" or "Module Index" and will find some documentation.
-- Add additional documentation to `diffusionsolver.py`. Example for `class DiffusionSolver`
+- Add additional documentation to `diffusionsolver.py`. Example for `class DiffusionSolver` (should be added to constructire `__init__`)
 
   ```python
   """A class describing a finite-difference method for solving
@@ -261,7 +259,7 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
 ## 4. Publish the Website
 
 - Add missing files in `docs/source` to git.
-- Add Read the Docs configuration file by copying [the template from the RTD homeage](https://docs.readthedocs.io/en/stable/config-file/v2.html) and then editing it.
+- Add Read the Docs configuration file by copying [the template from the RTD homepage](https://docs.readthedocs.io/en/stable/config-file/v2.html) and then editing it.
 
   ```yaml
   # .readthedocs.yaml
@@ -286,7 +284,7 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
   - pdf
   ```
 
-- Follow instructions to [connect the repository from RTD](https://readthedocs.org/accounts/signup/)
+- Follow instructions to [connect the accout from GitHub/sign up](https://readthedocs.org/accounts/signup/)
     - I am already connected.
 - Import project -> Import Manually (since project is not in my GitHub namespace)
     - Fill in information from [repository page](https://github.com/Simulation-Software-Engineering/python-code-documentation)
@@ -299,6 +297,6 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
 - This should automatically create the website. One can inspect it on Read the Docs. In our case on `https://python-code-documentation.readthedocs.io/en/latest/`
 - Checkout the homepage:
     - Bottom right: Change between versions and types (PDF download)
-    - Jump to github and edit it there
+    - Jump to GitHub and edit it there
     - Normally  with advertisements in docs.
 - Delete the website after the lecture to not waste resources of Read the Docs

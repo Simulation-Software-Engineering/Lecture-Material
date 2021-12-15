@@ -186,7 +186,7 @@ Image Source: [https://github.com/yaml/yaml-spec/blob/main/spec/1.2/docbook/logo
 
 > YAML is a human-friendly data serialization language for all programming languages.
 
-- Popular as for configurations
+- Popular for configurations
 - Indentation with **two** spaces is important.
     - Tabs **not** allowed for indentation
 - Can differentiate between datatypes

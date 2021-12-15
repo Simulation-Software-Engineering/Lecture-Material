@@ -286,7 +286,7 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
 
 - Follow instructions to [connect the accout from GitHub/sign up](https://readthedocs.org/accounts/signup/)
     - I am already connected.
-- Import project -> Import Manually (since project is not in my GitHub namespace)
+- Import project -> Import manually (since project is not in my GitHub namespace)
     - Fill in information from [repository page](https://github.com/Simulation-Software-Engineering/python-code-documentation)
     - Name: "Python code documentation"
     - Repository URL: `https://github.com/Simulation-Software-Engineering/python-code-documentation`

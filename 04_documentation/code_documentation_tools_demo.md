@@ -142,7 +142,7 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
 
     5. Add another subpage, e.g., "Tutorials".
 
-       Add directory `tutorials/` with files `overview.rst` and `tutorial_case1.rst` (maybe `tutorial_case2.rst`).
+       Add sub-directory `docs/tutorials/` with files `overview.rst` and `tutorial_case1.rst` (maybe `tutorial_case2.rst`).
 
        Add content to files:
 

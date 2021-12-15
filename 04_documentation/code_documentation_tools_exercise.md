@@ -56,7 +56,7 @@ Deadline: **Thursday, December 23rd, 2021, 9:00**
 - [Deploy your website](https://www.mkdocs.org/user-guide/deploying-your-docs/) to [GitHub Pages](https://pages.github.com/). This consists of following steps:
     - Run `mkdocs gh-deploy` to build and deploy the website:
 
-      Deployment of the website will create a branch `gh-pages` inside the repository if it does not already exist. This branch contains all files needed to deliver the website. You should not edit any of the files in the branch manually since `mkdocs gh-deploy` will overwrite all changes. Instead, fix problems in your main branch and deploy the website afterwards again.
+      Deployment of the website creates a branch `gh-pages` inside the repository if it does not already exist and pushes it to the default remote. The branch contains all files needed to deliver the website. You should not edit any of the files in the branch manually since `mkdocs gh-deploy` overwrites all changes. Instead, always fix problems in the main branch and deploy the website afterwards again.
 
     - Verify that the "Pages" feature of your repository has been activated. When you are on your repository on GitHub go to "Settings" (at top of window) -> "Pages". It should show an information box " Your site is ready to be published at URL" with the URL to the website of your documentation.
 

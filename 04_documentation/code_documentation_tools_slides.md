@@ -66,7 +66,7 @@ slideOptions:
 
 ---
 
-## Short Tool Overview
+## Short Tools Overview
 
 - General documentation website generators
     - [MkDocs](https://www.mkdocs.org) (md), [Sphinx](https://www.sphinx-doc.org/en/master/) (rst),...

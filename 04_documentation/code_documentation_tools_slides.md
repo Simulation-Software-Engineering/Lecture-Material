@@ -303,7 +303,6 @@ From [project homepage](https://www.doxygen.nl):
 
 Source: [Getting started](https://www.doxygen.nl/manual/starting.html)
 
-
 ---
 
 ## Important Doxygen Commands

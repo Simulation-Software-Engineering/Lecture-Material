@@ -220,7 +220,7 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
   We can inspect the generated files. The files do not contain the actual documentation, but rather a template. The actual documentation is generated once `sphinx` is invoked.
 - Recreate website with `make html`. If there is an error message about "consistency" build the website again and/or comment out `from output` from the `diffusionsolver.py` file. Afterwards the error disappeared for me.
     - We now can check out "Index" or "Module Index" and will find some documentation.
-- Add additional documentation to `diffusionsolver.py`. Example for `class DiffusionSolver` (should be added to constructire `__init__`)
+- Add additional documentation to `diffusionsolver.py`. Example for `class DiffusionSolver` (should be added to constructor `__init__`)
 
   ```python
   """A class describing a finite-difference method for solving

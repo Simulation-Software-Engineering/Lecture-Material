@@ -38,10 +38,10 @@ slideOptions:
 
 ## Learning Goals
 
-- You know about common ways to generate code documentation.
-- You know tools for Python and C++.
-- You know common website generators for documentation.
-- You know how to publish your homepage.
+- You know about common ways to generate code documentation from markup languages.
+- You know tools for Python (Sphinx) and C++ (Doxygen).
+- You know common website generators for documentation (MkDocs and Sphinx).
+- You know how to publish your homepage (Read the Docs and GitHub Pages).
 
 ---
 

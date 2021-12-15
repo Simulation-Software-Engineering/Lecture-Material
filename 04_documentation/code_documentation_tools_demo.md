@@ -60,7 +60,7 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
        pip install -U sphinx
        ```
 
-    2. Create documentation directory
+    2. Create documentation directory named `docs/`. This common/standard name for the directory containing documentation.
 
        ```bash
        mkdir docs && cd docs

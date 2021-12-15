@@ -16,7 +16,6 @@ Hello there.
 
 **This text is heavily emphasized (bold)**
 
-``This is monofont text``
 
 We can also have nice lists
 

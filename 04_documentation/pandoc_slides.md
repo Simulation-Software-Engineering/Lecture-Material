@@ -52,7 +52,7 @@ According to the project [homepage](https://pandoc.org/)
 - Converts **>=38** file formats into **>=60** file formats
     - Includes dialects
     - Results vary on language
-- Write documentation/text well-supported language, then convert to any format
+- Write documentation/text in well-supported language, then convert to any format
 
 ---
 

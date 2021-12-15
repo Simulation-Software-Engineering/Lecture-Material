@@ -36,7 +36,7 @@ Initial state is in tag **TODO**
   >>>
   ```
 
-## 2. Sphinx
+## 2. Sphinx: Create website
 
 We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quickstart.html) and the [tutorial](https://www.sphinx-doc.org/en/master/tutorial/index.html) of Sphinx here.
 

@@ -16,7 +16,6 @@ Hello there.
 
 **This text is heavily emphasized (bold)**
 
-
 We can also have nice lists
 
 * Item 1
@@ -32,16 +31,17 @@ which can be numbered as well
 
 As one can see we can also have sublists. In contrast to markdown there has to be a line break before the sublist starts.
 
-Code uses backticks. This can be code/variable names in text that ``appear`` in a monospace font. Code blocks start and end with triple backticks and often take a specifier of the presented language.
+Code uses backticks. This can be code/variable names in text that ``appear`` in a monospace font. Code blocks with the ``.. code-block::`` directive and may take a language specified. Note that the code is indented with three (3) spaces.
 
 .. code-block:: c++
 
-    int main()
-    {
-        return 0;
-    }
+   int main()
+   {
+       return 0;
+   }
 
-.. Quotations can be done by two dots
+..
+    Quotations can be by indenting them more than surronding. We use an empty comment ``..`` in order to separate the code block from this quote.
 
 We can also have hyperlinks to other websites. We could link to the `course website`_, but separate the link and target definition.
 

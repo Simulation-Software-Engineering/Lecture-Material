@@ -38,7 +38,7 @@ slideOptions:
 
 ## Learning Goals
 
-- You know common markup languages.
+- You know common markup languages (Markdown, reStructuredText, YAML).
 - You know important parts of the syntax of these languages.
 - You know what benefits these languages have.
 - You know how to convert files written in these languages.
@@ -76,13 +76,7 @@ See [Wikipedia](https://en.wikipedia.org/wiki/Lightweight_markup_language)
 
 ## Docs as Code
 
-> Documentation as Code (Docs as Code) refers to a philosophy that you should be writing documentation with the same tools as code
->
-> - Issue Trackers
-> - Version Control (Git)
-> - Plain Text Markup (Markdown, reStructuredText, Asciidoc)
-> - Code Reviews
-> - Automated Tests
+> Documentation as Code (Docs as Code) refers to a philosophy that you should be writing documentation with the same tools as code [...] following the same workflows as development teams [...]
 >
 > [Write the Docs](https://www.writethedocs.org/guide/docs-as-code/)
 

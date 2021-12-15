@@ -35,7 +35,7 @@ One could also define code blocks with by indentation (usually 4 spaces), but it
 
 > Quotations can be done by angle brackets
 
-We can also have hyperlinks to other websites. We could link to the [course website](https://simulation-software-engineering.github.io/homepage/), but separate the link in the text from the target definition.
+We can also have hyperlinks to other websites. We could link to the [course website](https://simulation-software-engineering.github.io/homepage/) within the text, but separate [the link][course-website] in the text from the target definition. You find the target definition at the bottom of the Markdown file.
 
 ## This is a subheader
 
@@ -44,3 +44,5 @@ We can have nice tables
 | Column A | Column B |
 | -------- | -------- |
 | Value A  | Value  B |
+
+[course-website]: https://simulation-software-engineering.github.io/homepage/

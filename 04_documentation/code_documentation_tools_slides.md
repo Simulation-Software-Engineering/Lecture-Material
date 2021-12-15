@@ -133,7 +133,7 @@ class ClassName:
 ## Sphinx Introduction
 
 - Strongly connected to Python project
-- Written in Python also configured in Python (`conf.py`)
+- Written in Python, also configured in Python (`conf.py`)
 - Generates documentation from reStructuredText files
 - Many [extensions](https://www.sphinx-doc.org/en/master/usage/extensions/index.html) available ([code documentation](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html), [Markdown support](https://www.sphinx-doc.org/en/master/usage/markdown.html)...)
 - Read the Docs integration

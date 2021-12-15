@@ -117,7 +117,7 @@ class ClassName:
 ## Demo: Docstrings
 
 - Inspect the code
-- Add docstrings to do document sample code
+- Add docstrings to document sample code
 - Checkout the help directive
 
 ---

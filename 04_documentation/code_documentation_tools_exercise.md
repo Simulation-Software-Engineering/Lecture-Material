@@ -48,7 +48,7 @@ Deadline: **Thursday, December 23rd, 2021, 9:00**
             - Add the `compilation-and-installation.md` with label `Installation`.
             - Add the `how-to.md` with label `Getting Started`
           You should only have two buttons "Home" and "User Guide" in the generated website.
-    - Add the [repository URL](https://www.mkdocs.org/user-guide/configuration/#repo_url). This adds a "Edit on GitHub" button at the top right of the website. Try if this works. If it does not work, this is because older versions of MkDocs set a link to the `master` branch by default, but GitHub calls this branch `main` nowadays. In order to point to the correct branch, set the `edit_uri` setting to `edit/main/docs/`.
+    - Add the [repository URL](https://www.mkdocs.org/user-guide/configuration/#repo_url). This adds a "Edit on GitHub" button at the top right of the website. Try if the button works. If it does not work, this is because older versions of MkDocs set a link to the `master` branch by default, but GitHub calls this branch `main` nowadays. In order to point to the correct branch, set the `edit_uri` setting to `edit/main/docs/`.
 
         **Note** The "Edit on GitHub" also fails if you have not pushed the corresponding Markdown file to your repository yet.
 

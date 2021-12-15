@@ -12,7 +12,7 @@ Deadline: **Thursday, December 23rd, 2021, 9:00**
 
 - Create a copy of the [`code-documentation` repository](https://github.com/Simulation-Software-Engineering/documentation-tools-exercise). Then, create a new repository on GitHub in your own namespace (account), call it "sse-mkdocs-exercise" and add the files from the [`code-documentation` repository](https://github.com/Simulation-Software-Engineering/documentation-tools-exercise) to your own repository.
 
-  **Attention** In this exercise you **cannot work with forks** because you cannot use GitHub Pages with forks.
+  **Note**: In this exercise you **cannot work with forks** because you cannot use GitHub Pages with forks.
 - Follow the instructions from the [MkDocs homepage](https://www.mkdocs.org/getting-started/) to install MkDocs.
 - [Create a MkDocs project](https://www.mkdocs.org/getting-started/#creating-a-new-project) from the root of the repository via
 

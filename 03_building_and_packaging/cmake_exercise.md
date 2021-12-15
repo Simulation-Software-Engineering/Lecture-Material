@@ -8,7 +8,7 @@ Deadline: **Thursday, December 2nd, 2021, 9:00**
 
 ## Overview
 
-- The goal of the exercise is to open a pull request from a fork of [this repository](https://github.com/Simulation-Software-Engineering/cmake-exercise/). Please name your pull request `Add building and container recipes` and assign yourself.
+- The goal of the exercise is to open a pull request from a fork of [this repository](https://github.com/Simulation-Software-Engineering/cmake-exercise). Please name your pull request `Add building and container recipes` and assign yourself.
 - Your should add a `Dockerfile` and a `CMakeLists.txt`, besides some minor changes in `main.cpp` like commenting in some code parts. It should be possible to create an executable container from your pull request. Inside the container, one should be able to directly build the C++ code (`main.cpp`) using CMake. Use as many of the currently commented-out additional files, which induce additional dependencies.
 
 ## First steps

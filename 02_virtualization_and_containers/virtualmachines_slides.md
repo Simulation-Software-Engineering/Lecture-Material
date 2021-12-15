@@ -29,7 +29,7 @@ slideOptions:
 
 ## What is a Virtual Machine?
 
-<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/main/02_virtualization_and_containers/figs/virtualmachine-sketch.png" width=40%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/figs/virtualmachine-sketch.png" width=40%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 - Environment that allows you to run any (supported) operating system (OS)
 - Virtual Machines are portable and flexible

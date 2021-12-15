@@ -74,7 +74,7 @@ Deadline: **Thursday, December 23rd, 2021, 9:00**
 
     - Add the URL of the documentation to your GitHub project. Go to your repository on GitHub and edit the "About" section at the top-right corner. For editing, click on the small gear symbol. Add the URL in the box "Website".
 - Verify that your website looks as expected and that the "Edit on GitHub" feature works for all pages.
-- Submit your documentation website via an issue. You cannot submit a pull request since you cannot use a fork in the exercise. You can also add the issue before you are finished in order to ask question. In that case please mention us in the issue such that we get notified. Please write a short note in the issue when you are done and the issue is ready to review. **TODO** Skip this for testing the exercise.
+- Submit your documentation website via an issue. You cannot submit a pull request since you cannot use a fork in the exercise. You can also add the issue before you are done in order to ask questions. In that case please mention us in the issue such that we get notified. Please write a short note in the issue when you are done and the issue is ready to review. **TODO** Skip this for testing the exercise.
     - Create an issue in the [`code-documentation` repository](https://github.com/Simulation-Software-Engineering/documentation-tools-exercise).
     - The issue request should be named `[USERNAME] MkDocs exercise`, e.g., `[jaustar] MkDocs exercise`. Please use the GitLab username here.
     - Please add a link to your GitHub repository and also a link to your website in the issue.

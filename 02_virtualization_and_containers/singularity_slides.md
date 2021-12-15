@@ -151,7 +151,7 @@ From: ubuntu:18.04
 
 ## Demo: Build own containers
 
-Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
+Details available in [`README.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/README.md)
 
 ---
 

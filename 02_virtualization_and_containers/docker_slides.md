@@ -227,7 +227,7 @@ CMD ["echo", "hello"]
 
 ## Demo: Building own image
 
-Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
+Details available in [`README.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/README.md)
 
 ---
 
@@ -244,7 +244,7 @@ Details available in [`overview.md`](https://github.com/Simulation-Software-Engi
 
 ## Demo: Run FEniCS container
 
-Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
+Details available in [`README.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/README.md)
 
 ---
 

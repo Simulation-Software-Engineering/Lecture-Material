@@ -190,7 +190,7 @@ Details available in [`virtualmachines_demo.md`](https://github.com/Simulation-S
 
 - [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
 
-Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
+Details available in [`README.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/README.md)
 
 ---
 
@@ -199,7 +199,7 @@ Details available in [`overview.md`](https://github.com/Simulation-Software-Engi
 - [https://github.com/precice/vm](https://github.com/precice/vm)
 - [Premade box](https://app.vagrantup.com/precice/boxes/precice-vm)
 
-Details available in [`overview.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/virtualization-and-containers/overview.md)
+Details available in [`README.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/README.md)
 
 ---
 

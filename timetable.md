@@ -2,7 +2,7 @@
 
 ## 1.1 – Thu, October 21, 2021
 
-- **40** [Course planning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/intro_course_slides.md) + questions
+- **40** [Course planning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/course_intro_slides.md) + questions
 - **15** [Introduction to RSE](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/rse_basics_slides.md)
 - **15** [Introduction to version control](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/intro_slides.md)
 - **15** [Recap of Git basics](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_basics_demo.md#recap-of-git-basics)
@@ -53,7 +53,7 @@
 ## 4.1 -- Thu, November 11, 2021
 
 - Students that have a machine without Linux and or without root rights should have a virtual box session with Linux installed.
-- **90** [Exercise: Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/exercise_vm_containers_text.md)
+- **90** [Exercise: Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualmachines_containers_exercise.md)
 
 ## 4.2 -- Thu, November 11, 2021
 
@@ -81,13 +81,13 @@
 
 ## 7.1 -- Thu, December 2, 2021
 
-- **50** Creating Debian Packages from CMake: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/debian_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/debian_demo.md)
+- **50** Creating Debian Packages from CMake: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_demo.md)
 - **5** [Some organizational things](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/organizational_remarks_week7_slides.md)
 
 ## 7.2 -- Thu, December 2, 2021
 
 - **30** Recap and discussion of CMake exercise from previous week
-- **60** [Exercise: Packaging with CPack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_debian_exercise.md)
+- **60** [Exercise: Packaging with CPack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_exercise.md)
 
 ## 8.1 -- Thu, December 9, 2021
 

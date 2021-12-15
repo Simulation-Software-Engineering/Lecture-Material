@@ -50,7 +50,7 @@ Deadline: **Thursday, December 23rd, 2021, 9:00**
           You should only have two buttons "Home" and "User Guide" in the generated website.
     - Add the [repository URL](https://www.mkdocs.org/user-guide/configuration/#repo_url). This adds a "Edit on GitHub" button at the top right of the website. Try if the button works. If it does not work, this is because older versions of MkDocs set a link to the `master` branch by default, but GitHub calls this branch `main` nowadays. In order to point to the correct branch, set the `edit_uri` setting to `edit/main/docs/`.
 
-        **Note** The "Edit on GitHub" also fails if you have not pushed the corresponding Markdown file to your repository yet.
+        **Note**: The "Edit on GitHub" also fails if you have not pushed the corresponding Markdown file to your repository yet.
 
     - Make yourself the [website's author](https://www.mkdocs.org/user-guide/configuration/#site_author). You can use your real name or your GitHub username. This setting will not change the appearance of your website, but adds the name to the HTML metadata.
 - [Deploy your website](https://www.mkdocs.org/user-guide/deploying-your-docs/) to [GitHub Pages](https://pages.github.com/). This consists of following steps:

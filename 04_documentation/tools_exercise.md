@@ -41,6 +41,8 @@ Deadline: **Thursday, January 13th, 2022, 9:00**
 
   **Note**: If you are using MkDocs inside a container, you have to [forward/publish the ports to your Host](https://docs.docker.com/config/containers/container-networking/).
 - Adapt the project documentation such that it the starting/index page contains information about the project. Open the `index.md` file inside the `docs` directory and replace its content with the content of the `README.md`. In contrast to Sphinx, we cannot include the `README.md` from the repository in the documentation.
+
+  **Note**: Simply copying the content of the `REAME.md` is not a good practice. We do this in the exercise only to get meaningful content into the `index.md` quickly. One can use the `README.md` also as [index page](https://www.mkdocs.org/user-guide/writing-your-docs/#index-pages).
 - [Configure the website](https://www.mkdocs.org/user-guide/configuration/) by editing the `mkdocs.yml` file. Changes made to this file might not been picked up by the interactive rebuilding of `mkdocs serve`. In this case, you have to stop `mkdocs serve` command (CTRL+C) and start it again afterwards.
     - Change the name of the website (`site_name`) from "My Docs" to "SSE Documentation Example"
     - [Add a navigation section](https://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation) `nav` and add the three pages manually:

@@ -94,6 +94,10 @@
 - **45** Packaging for High-Performance Computing and for you: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_demo.md)
 - **45** [Exercise: Packages with Spack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_exercise.md)
 
+## 8.2 -- Thu, December 9, 2021
+
+- **90** [Technical Writing](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/technical_writing_slides.md)
+
 ## 9.1 -- Thu, December 16, 2021
 
 - **20** Lightweight Markup Languages: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/markup_languages_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/markup_languages_demo.md)

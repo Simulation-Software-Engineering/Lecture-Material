@@ -64,7 +64,7 @@ According to the project [homepage](https://pandoc.org/)
 
 ## Conversion Overview
 
-<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/raw/main/04_documentation/figs/pandoc/fig.png?raw=true" width=95%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px;>
+<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/raw/main/04_documentation/figs/pandoc/fig.png?raw=true" width=65%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px;">
 
 - [Full diagram](https://pandoc.org/diagram.jpg) on homepage
 
@@ -117,7 +117,7 @@ According to the project [homepage](https://pandoc.org/)
 
 ## Pandoc + LaTeX = Awesome PDFs
 
-<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/raw/main/04_documentation/figs/pandoc-latex-workflow/fig.png?raw=true" width=95%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px;>
+<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/raw/main/04_documentation/figs/pandoc-latex-workflow/fig.png?raw=true" width=95%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px;">
 
 ---
 

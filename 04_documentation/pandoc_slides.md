@@ -36,6 +36,12 @@ slideOptions:
 
 ---
 
+## Learning Goals
+
+- You know how to convert markup files (Markdown, reStructuredText...) written into other formats (Markdown, reStructuredText...)
+
+---
+
 ## "Pandoc a Universal Document Converter"
 
 According to the project [homepage](https://pandoc.org/)

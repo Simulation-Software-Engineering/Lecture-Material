@@ -41,7 +41,6 @@ slideOptions:
 - You know common markup languages (Markdown, reStructuredText, YAML).
 - You know important parts of the syntax of these languages.
 - You know what benefits these languages have.
-- You know how to convert files written in these languages.
 
 ---
 

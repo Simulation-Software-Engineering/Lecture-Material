@@ -1,10 +1,5 @@
 # Code Documentation Tools Demo
 
-## TODO
-
-- Tag the important commits in [python-code-documentation repository](https://github.com/Simulation-Software-Engineering/python-code-documentation) and replace the tag **TODO**s.
-    - This will be removed later when it is clear that the repository does not change anymore.
-
 ## 1. Docstrings
 
 Goal: Add docstrings to the Python Code

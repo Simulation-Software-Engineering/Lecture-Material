@@ -11,7 +11,7 @@ Goal: Add docstrings to the Python Code
 
 ### Steps
 
-Initial state is in tag **TODO**
+Initial state is in tag `starting-point`
 
 1. Explain Python code shortly. Emphasize that we have a class now so we show how to document a class. We also moved all code in one python file to avoid problems with module imports.
 2. Add docstrings to class, solve, and auxiliary functions. Ideally add docstring only to one and then do fast-forward to tag **TODO** of repository.
@@ -40,7 +40,8 @@ Initial state is in tag **TODO**
 
 We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quickstart.html) and the [tutorial](https://www.sphinx-doc.org/en/master/tutorial/index.html) of Sphinx here.
 
-- Change back to the root of the repository
+- State is in tag `simple-docstrings-added`.
+- Change back to the root of the repository.
 - Reformat the `README.md` into `README.rst`
 
     1. Rename the file
@@ -190,6 +191,7 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
 
 ## 3. Sphinx: Code Documentation
 
+- State is in tag `initial-sphinx-documentation`.
 - Include our source files to `conf.py`. To do so we uncomment the lines
 
   ```diff
@@ -258,6 +260,7 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
 
 ## 4. Publish the Website
 
+- State is in tag `added-api-documentation`.
 - Add missing files in `docs/source` to git.
 - Add Read the Docs configuration file by copying [the template from the RTD homepage](https://docs.readthedocs.io/en/stable/config-file/v2.html) and then editing it.
 
@@ -299,4 +302,6 @@ We follow the [quickstart guide](https://www.sphinx-doc.org/en/master/usage/quic
     - Bottom right: Change between versions and types (PDF download)
     - Jump to GitHub and edit it there
     - Normally  with advertisements in docs.
+- Final state is in tag `added-rtd-configuration`.
 - Delete the website after the lecture to not waste resources of Read the Docs
+

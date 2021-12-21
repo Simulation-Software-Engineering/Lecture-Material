@@ -98,3 +98,4 @@ Deadline: **Thursday, January 13th, 2022, 9:00**
   > It can take up to 20 minutes for changes to your site to publish after you push the changes to GitHub.
 
   If you do not observe any change after 60 minutes, please check whether you have actually deployed the new version of your website.
+- If your `master`branch is renamed to `main`, you need to add `edit_uri: edit/main/docs/` to the `mkdocs.yml`

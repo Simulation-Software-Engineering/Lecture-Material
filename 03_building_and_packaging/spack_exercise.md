@@ -102,7 +102,7 @@ You can find the recipe of the image inside the `docker/` directory of [the exam
       ```
 
 - Add the dependencies for the `0.2.0` and `0.3.0` release of our code to the package (`depends_on`).
-    - Make sure to only `0.3.0` depends on `yaml-cpp`.
+    - Make sure that only `0.3.0` depends on `yaml-cpp`.
     - Verify that you can install and use `spack-exercise@0.2.0` and `spack-exercise@0.3.0`. There is a `config.yml` file inside the `yamlParser` directory that you should be able to parse with `spack-exercise@0.3.0` with a command like
 
       ```bash

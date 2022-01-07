@@ -1,4 +1,4 @@
-# System Paths, Libraries, and How to Use Them (Nots)
+# System Paths, Libraries, and How to Use Them (Notes)
 
 ## Goals
 

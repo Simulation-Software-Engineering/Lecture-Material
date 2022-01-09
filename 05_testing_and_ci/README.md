@@ -8,6 +8,6 @@ Learning goals:
 
 | Duration | Content |
 | --- | --- |
-| 20 minutes | [intro_slides.md]() |
-| 70 minutes | [python_testing_slides.md](), [python_testing_demo.md]() |
+| 30 minutes | [intro_slides.md]() |
+| 60 minutes | [python_testing_slides.md](), [python_testing_demo.md]() |
 | 90 minutes | [python_testing_exercise.md]() |

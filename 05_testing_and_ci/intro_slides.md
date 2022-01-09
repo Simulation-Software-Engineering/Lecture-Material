@@ -60,7 +60,7 @@ slideOptions:
 
 ## Nomenclature in software testing
 
-- **Fixture**: the thing being tested
+- **Fixture**: preparatory set for testing
 - **Actual result**: what the code produces when given the fixture
 - **Expected result**: what the actual result is compared to
 - **Test coverage**: How much of the code does a test touch

@@ -125,3 +125,4 @@ slideOptions:
 - Comparing visualizations is often very sensitive, it is better to compare the underlying data instead
 - Test-driven development (TDD) vs. Checking-driven development (CDD)
 - Validation vs. Verification from the perspective of testing scientific software
+- Always make sure that a test breaks when it is supposed to

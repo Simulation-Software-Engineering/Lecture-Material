@@ -4,7 +4,7 @@ Example code is in [05_testing_and_ci/examples](https://github.com/Simulation-So
 
 ## pytest
 
-- **Note**: `main()` function in `operations.py` has assertion statements to check if the correct data type is passed to specific functions.
+- `main()` function in `operations.py` has assertion statements to check if the correct data type is passed to specific functions.
 - Assertion statements are the most basic way of testing code and are also used in unit and integration testing.
 - Tests are written in the file `test_operations.py`. The `test_*` prefix in the name is required so that pytest detects the file as a testing file. Suffix form `*_test.py` also works.
 - In all there are two unit tests, one integration test and one regression test.
@@ -36,4 +36,16 @@ my_software/
 - The same tests are implemented using `unittest` in the file `test_operations_unittests.py` as functions of a class `TestOperations`.
 - unittest.TestCase offers functions like `assertEqual`, `assertAlmostEqual`, `assertTrue`, etc. for use instead of the usual assertion statements. These statements help the test runner to accumulate all test results and generate a test report.
 - `unittest.main()` provides an option to run the tests from a command-line interface.
-- 
+- `setUp` function in run before all the tests. Similar a clean up function `tearDown` exists.
+- The intention is to group together sets of similar tests in an instant of `unittest.TestCase` and have multiple such instances.
+- Decorators such as `@unittest.skip`, `@unittest.skipIf`, `@unittest.expectedFailure` can be used to gain flexibility over working of tests.
+- `unittest.TestCase.subTest` can be used to distinguish parameters inside the body of a test.
+
+## coverage
+
+- Installing coverage using pip: `pip install coverage`.
+- Testing frameworks can be run via coverage. Lets take our first example and run pytest via coverage: `coverage run -m pytest`.
+- coverage does not generate any output immediately as it would interfere with the test output.
+- Code coverage information is stored in a file `.coverage` in the working directory. This information can be viewed using `coverage report -m`
+- A more fancier report can be viewed by generating html output using `coverage html`.
+- The file `htmlcov/index.html` can be opened in a browser to view the test coverage report.

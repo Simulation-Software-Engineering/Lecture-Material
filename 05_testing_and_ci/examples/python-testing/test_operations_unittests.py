@@ -10,18 +10,19 @@ class TestOperations(TestCase):
     """
     Test suite for mathematical operations functions.
     """
+    def setUp(self):
+        self.data = [43, 32, 167, 18, 1, 209]
+
     # Unit test
     def test_find_max(self):
-        data = [43, 32, 167, 18, 1, 209]
         expected_result = 209
-        actual_result = find_max(data)
+        actual_result = find_max(self.data)
         self.assertEqual(actual_result, expected_result)
 
     # Unit test
     def test_find_average(self):
-        data = [43, 32, 167, 18, 1, 209]
         expected_result = 78.33
-        actual_result = find_average(data)
+        actual_result = find_average(self.data)
         self.assertAlmostEqual(actual_result, expected_result, 2)
 
     # Integration test
@@ -29,9 +30,8 @@ class TestOperations(TestCase):
         """
         Test to check that the average of a data set is always lesser than the maximum
         """
-        data = [43, 32, 167, 18, 1, 209]
-        maximum = find_max(data)
-        average = find_average(data)
+        maximum = find_max(self.data)
+        average = find_average(self.data)
         self.assertTrue(average < maximum)
 
     # Regression test
@@ -39,6 +39,7 @@ class TestOperations(TestCase):
         f = open("average_data.csv")
         rows = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
         i = 0
+        data, old_average = None, None
         for row in rows:
             if i == 0:
                 data = row

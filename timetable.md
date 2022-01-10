@@ -103,3 +103,12 @@
 - **20** Lightweight Markup Languages: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/markup_languages_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/markup_languages_demo.md)
 - **70** Code Documentation Tools: : [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/tools_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/tools_demo.md)
 - [Homework/exercise: Writing and Publishing Documentation](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/tools_exercise.md)
+
+## 9.2 -- Thu, December 16, 2021
+
+- The Challenge, step two, presentations
+
+## 10.1 -- Thu, January 13, 2022
+
+- **30** Introduction to Testing: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/intro_slides.md)
+- **60** Testing a Python Code: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_demo.md)

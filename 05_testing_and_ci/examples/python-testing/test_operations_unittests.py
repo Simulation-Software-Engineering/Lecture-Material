@@ -22,7 +22,7 @@ class TestOperations(TestCase):
         data = [43, 32, 167, 18, 1, 209]
         expected_result = 78.33
         actual_result = find_average(data)
-        self.assertAlmostEqual(actual_result, expected_result)
+        self.assertAlmostEqual(actual_result, expected_result, 2)
 
     # Integration test
     def test_max_avg_compare(self):
@@ -37,10 +37,14 @@ class TestOperations(TestCase):
     # Regression test
     def test_average_reg(self):
         f = open("average_data.csv")
-        rows = csv.reader(f)
-        data = float(rows[0])
-        old_average = float(rows[1])
+        rows = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
+        i = 0
+        for row in rows:
+            if i == 0:
+                data = row
+            if i == 1:
+                old_average = row
+            i += 1
 
-        actual_average = find_avergae(data)
-        expected_result = pytest.approx(old_average, abs=0.01)
-        self.assertEqual(actual_average, expected_result)
+        actual_average = find_average(data)
+        self.assertAlmostEqual(actual_average, old_average[0], 2)

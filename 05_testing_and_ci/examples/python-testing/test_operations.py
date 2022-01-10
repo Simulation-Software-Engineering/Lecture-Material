@@ -38,10 +38,15 @@ def test_max_avg_compare():
 # Regression test
 def test_average_reg():
     f = open("average_data.csv")
-    rows = csv.reader(f)
-    data = float(rows[0])
-    old_average = float(rows[1])
+    rows = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
+    i = 0
+    for row in rows:
+        if i == 0:
+            data = row
+        if i == 1:
+            old_average = row
+        i += 1
 
-    actual_average = find_avergae(data)
+    actual_average = find_average(data)
     expected_result = pytest.approx(old_average, abs=0.01)
     assert actual_average == expected_result

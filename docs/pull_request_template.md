@@ -12,5 +12,5 @@
 <!-- If the pull request adds new content, please check the points beloew. Otherwise remove the following lines. -->
 
 - [ ] I added the new content to the `README.md` inside the topics subdirectory, e.g., `01_version_control/README.md`.
-- [ ] I added the new content to the `timetabe.md` in the root of this repository.
+- [ ] I added the new content to the `timetable.md` in the root of this repository.
 - [ ] I make sure to update the content/links on the [homepage](https://github.com/Simulation-Software-Engineering/homepage).

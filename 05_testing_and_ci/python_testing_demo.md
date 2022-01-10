@@ -2,13 +2,20 @@
 
 Example code is in [05_testing_and_ci/examples](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/examples)
 
-## pytest
+## Software code used
 
+- The file `operations.py` consists of two functions `find_max` and `find_average` which calculate the maximum and average of elements of a list. The `main()` routine in the file applies the functions to a list and prints the output.
 - `main()` function in `operations.py` has assertion statements to check if the correct data type is passed to specific functions.
-- Assertion statements are the most basic way of testing code and are also used in unit and integration testing.
+- Assertion statements are the most basic way of testing code and are also used in unit and integration testing as demonstrated here.
 - Tests are written in the file `test_operations.py`. The `test_*` prefix in the name is required so that pytest detects the file as a testing file. Suffix form `*_test.py` also works.
 - In all there are two unit tests, one integration test and one regression test.
 - The unit tests test the individual functions `find_max` and `find_average`.
+- The integration test triggers both the functions `find_max` and `find_average` and checks that the average is less than the maximum, something that should always be true for a set of numbers.
+- The regression test first reads an old data set and an average value from a CSV file. Then the function `find_average` is run with the old data set and the new average value is compared to the old one.
+
+## pytest
+
+- pytest is installed by: `pip install pytest`.
 - All tests can be run using the command-line tool called `pytest`.
 - **Comparing floating point variables** needs to be handled in functions like `find_average` and is done using `pytest.approx(value, abs)`.
 - Even if one test fails, pytest runs all the tests and gives a report on the failing test. The assertion failure report generated my pytest is also more detailed than the usual Python assertion report.

@@ -45,22 +45,29 @@ def test_find_mean():
 
 
 # Integration test
-def test_max_mean_compare():
+def test_max_mean():
     """
     Test if mean of a data set is always lesser than the maximum
     """
     # Fixture
-    data = [43, 32, 167, 18, 1, 209]
-    
-    maximum = find_max(data)
-    mean = find_mean(data)
+    data1 = [43, 32, 167, 18, 1, 209]
+    data2 = [3, 13, 33, 23, 498]
+
+    # Expected result
+    expected_mean = 353.5
+
+    maximum1 = find_max(data1)
+    maximum2 = find_max(data2)
+
+    # Actual result
+    actual_mean = find_mean([maximum1, maximum2])
     
     # Test
-    assert mean < maximum
+    assert actual_mean == expected_mean
 
 
 # Regression test
-def test_mean_reg():
+def test_regression_mean():
     """
     Test operations.find_mean on a previously generated dataset
     """
@@ -68,10 +75,10 @@ def test_mean_reg():
         rows = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
         # Fixture
         data = next(rows)
-            
+
         # Expected result
         reference_mean = next(rows)
-    
+
     # Actual result
     actual_mean = find_mean(data)
     

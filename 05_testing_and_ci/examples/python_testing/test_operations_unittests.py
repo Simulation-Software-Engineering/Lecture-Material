@@ -13,6 +13,7 @@ class TestOperations(TestCase):
     def setUp(self):
         # Fixture
         self.data = [43, 32, 167, 18, 1, 209]
+        self.data2 = [3, 13, 33, 23, 498]
 
     # Unit test
     def test_find_max(self):
@@ -43,18 +44,24 @@ class TestOperations(TestCase):
         self.assertAlmostEqual(actual_mean, expected_mean, 2)
 
     # Integration test
-    def test_max_mean_compare(self):
+    def test_max_mean(self):
         """
         Test if mean of a data set is always lesser than the maximum
         """
-        maximum = find_max(self.data)
-        mean = find_mean(self.data)
+        # Expected result
+        expected_mean = 353.5
 
+        maximum1 = find_max(self.data)
+        maximum2 = find_max(self.data2)
+
+        # Actual result
+        actual_mean = find_mean([maximum1, maximum2])
+        
         # Test
-        self.assertTrue(mean < maximum)
+        self.assertEqual(actual_mean, expected_mean)
 
     # Regression test
-    def test_average_reg(self):
+    def test_regression_mean(self):
         """
         Test operations.find_mean on a previously generated dataset
         """

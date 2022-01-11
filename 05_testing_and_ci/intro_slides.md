@@ -85,7 +85,8 @@ slideOptions:
     - Postcondition
     - Invariant
 - A basic but powerful tool to test a software on-the-go.
-- Typical syntax: 
+- Assertion statement syntax:
+
 ```python
 assert condition, "message"
 ```
@@ -130,3 +131,11 @@ assert condition, "message"
 - Test-driven development (TDD) vs. Checking-driven development (CDD)
 - Validation vs. Verification from the perspective of testing scientific software
 - Always make sure that a test breaks when it is supposed to
+
+---
+
+## Further reading
+
+- [Research Software Engineering with Python - Chapter 11: Testing Software](https://merely-useful.tech/py-rse/testing.html)
+- [pytest documentation](https://docs.pytest.org/en/6.2.x/)
+- [unittest documentation](https://docs.python.org/3/library/unittest.html)

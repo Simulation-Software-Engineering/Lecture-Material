@@ -65,17 +65,14 @@ test_operations.py:44: AssertionError
 - pytest is able to detect tests in several forms of folder structures, and the folder structures have advantages and disadvantages. More information on this is in the [documentation](https://docs.pytest.org/en/6.2.x/goodpractices.html#choosing-a-test-layout-import-rules). In this demo we use the simplest folder structure where the source file and the test files are at the same directory level. Very often this is not the case. A more organized folder structure can be generated:
 
 ```bash
-setup.py
-operations/
-    __init__.py
-    operations.py
-
+operations.py
 tests/
-    __init__.py
     test_operations.py
     test_operations_unittests.py
         ...
 ```
+
+- Putting the tests in a folder `tests/` does not affect the behavior of pytest. When pytest is run from the original directory, the tests are found and run.
 
 ## unittest
 

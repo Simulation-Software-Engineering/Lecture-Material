@@ -32,7 +32,35 @@ pip install -U pytest
 ```
 
 - **Comparing floating point variables** needs to be handled in functions like `find_average` and is done using `pytest.approx(value, abs)`. The `abs` value is the tolerance up to which the floating-point value will be checked, that is `78.33 +/- 0.01`.
-- Even if one test fails, pytest runs all the tests and gives a report on the failing test. The assertion failure report generated my pytest is also more detailed than the usual Python assertion report.
+- Even if one test fails, pytest runs all the tests and gives a report on the failing test. The assertion failure report generated my pytest is also more detailed than the usual Python assertion report. When the test fails, the following is observed:
+
+```bash
+============================================================================================ FAILURES ======================================================================================
+__________________________________________________________________________________________ test_find_mean __________________________________________________________________________________
+
+    def test_find_mean():
+        """
+        Test operations.find_mean
+        """
+        # Fixture
+        data = [43, 32, 167, 18, 1, 209]
+    
+        # Expected result
+        expected_mean = 78.33
+        # expected_result = pytest.approx(78.33, abs=0.01)
+    
+        # Actual result
+        actual_mean = find_mean(data)
+    
+        # Test
+>       assert actual_mean == expected_mean
+E       assert 78.33333333333333 == 78.33
+
+test_operations.py:44: AssertionError
+
+```
+
+- pytest not only points to the assertion but also prints out the test which has failed.
 - It is worth noting that pytest is also able to detect tests from other files and run them even if they are not in the conventional test formats.
 - pytest is able to detect tests in several forms of folder structures, and the folder structures have advantages and disadvantages. More information on this is in the [documentation](https://docs.pytest.org/en/6.2.x/goodpractices.html#choosing-a-test-layout-import-rules). In this demo we use the simplest folder structure where the source file and the test files are at the same directory level. Very often this is not the case. A more organized folder structure can be generated:
 
@@ -53,7 +81,7 @@ tests/
 
 - Base class `unittest.TestCase` is used to create a test suite consisting of all the tests of a software.
 - Each test is now a function of a class which is derived from the class `unittest.TestCase`.
-- The same tests are implemented using `unittest` in the file `test_operations_unittests.py` as functions of a class `TestOperations`.
+- The same tests as for `pytest` are implemented using `unittest` in the file `test_operations_unittests.py`. The tests are functions of a class named `TestOperations` which tests our mathematical operations. The class `TestOperations` is derived from `unittest.TestCase`.
 - unittest can be run by:
 
 ```bash

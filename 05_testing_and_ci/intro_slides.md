@@ -45,16 +45,17 @@ slideOptions:
 ## What is testing?
 
 - Smelling old milk before using it!
-- A way to determine if a software is not producing reliable results and if so, what is the reason
-- Manual testing vs. Automated testing
+- A way to determine if a software is not producing reliable results and if so, what is the reason.
+- Manual testing vs. Automated testing.
 
 ---
 
 ## Why should you test your software?
 
-- Improve software reliability and reproducibility
-- Almost all software is better off being tested regularly
-- Ensure that a distributed version of a software actually works
+- Improve software reliability and reproducibility.
+- Make sure that unrelated changes (bugfixes, new features) do not affect other parts of software.
+- Generally all software is better off being tested regularly. Possible exceptions are very small codes with single users.
+- Ensure that a distributed version of a software actually works.
 
 ---
 
@@ -78,7 +79,7 @@ slideOptions:
 
 ## Assertions
 
-- Principle of *defensive programming*
+- Principle of *defensive programming*.
 - Python does nothing when an assertion is true; returns error when false.
 - Types of assertion statements:
     - Precondition
@@ -115,22 +116,22 @@ assert condition, "message"
 
 ## Regression testing
 
-- Generating an expected result is not possible in some situations
-- Compare the current actual result with a previous actual result
-- No guarantee that the current actual result is correct
-- Risk of a bug being carried over indefinitely
-- Main purpose is to identify changes in the current state of the code
+- Generating an expected result is not possible in some situations.
+- Compare the current actual result with a previous actual result.
+- No guarantee that the current actual result is correct.
+- Risk of a bug being carried over indefinitely.
+- Main purpose is to identify changes in the current state of the code.
 
 ---
 
 ## Some important points
 
-- Aim for high test coverage
-- Comparison of floating point variables needs to be done to a certain tolerance
-- Comparing visualizations is often very sensitive, it is better to compare the underlying data instead
-- Test-driven development (TDD) vs. Checking-driven development (CDD)
-- Validation vs. Verification from the perspective of testing scientific software
-- Always make sure that a test breaks when it is supposed to
+- Aim for high test coverage.
+- Comparison of floating point variables needs to be done to a certain tolerance.
+- Comparing visualizations is often very sensitive, it is better to compare the underlying data instead.
+- Test-driven development (TDD) vs. Checking-driven development (CDD).
+- Validation vs. Verification from the perspective of testing scientific software.
+- Always make sure that a test breaks when it is supposed to.
 
 ---
 

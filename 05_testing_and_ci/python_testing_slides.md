@@ -29,12 +29,12 @@ slideOptions:
 
 ## pytest
 
-- Library to write and manage tests
-- Command-line tool also called `pytest`
-- Install using pip: `pip install -U pytest`
-- All tests need to be in files named `test_*.py`
-- Each test function needs to be named as `test_*`
-- pytest gives a detailed description of assertion checks
+- Library to write and manage tests.
+- Command-line tool also called `pytest`.
+- Install using pip: `pip install -U pytest`.
+- All tests need to be in files named `test_*.py`.
+- Each test function needs to be named as `test_*`.
+- pytest gives a detailed description of assertion checks.
 
 ---
 
@@ -46,8 +46,8 @@ slideOptions:
 
 - Python framework specifically designed to run, monitor and automate unit tests.
 - Many features like test automation, sharing of setup and shutdown of tests, etc.
-- Using the base class `unittest.TestCase` to create a test suite
-- Command-line interface: `python -m unittest test_module1 test_module2 ...`
+- Using the base class `unittest.TestCase` to create a test suite.
+- Command-line interface: `python -m unittest test_module1 test_module2 ...`.
 
 ---
 
@@ -57,9 +57,9 @@ slideOptions:
 
 ## coverage
 
-- Python library to check code coverage. Installation: `pip install coverage`
+- Python library to check code coverage. Installation: `pip install coverage`.
 - Testing frameworks can be run via coverage to generate code coverage data while tests run.
-- Code coverage information can be viewed on the terminal using: `coverage report -m`
+- Code coverage information can be viewed on the terminal using: `coverage report -m`.
 
 ---
 

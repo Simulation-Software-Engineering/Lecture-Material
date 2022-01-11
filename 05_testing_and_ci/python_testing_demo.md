@@ -57,7 +57,6 @@ ________________________________________________________________________________
 E       assert 78.33333333333333 == 78.33
 
 test_operations.py:44: AssertionError
-
 ```
 
 - pytest not only points to the assertion but also prints out the test which has failed.

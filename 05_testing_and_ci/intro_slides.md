@@ -124,7 +124,7 @@ assert condition, "message"
 
 ---
 
-## Some important points
+## Further remarks
 
 - Aim for high test coverage.
 - Comparison of floating point variables needs to be done to a certain tolerance.
@@ -138,5 +138,3 @@ assert condition, "message"
 ## Further reading
 
 - [Research Software Engineering with Python - Chapter 11: Testing Software](https://merely-useful.tech/py-rse/testing.html)
-- [pytest documentation](https://docs.pytest.org/en/6.2.x/)
-- [unittest documentation](https://docs.python.org/3/library/unittest.html)

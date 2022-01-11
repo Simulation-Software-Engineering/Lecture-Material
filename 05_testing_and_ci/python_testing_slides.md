@@ -72,3 +72,10 @@ slideOptions:
 - [nose](https://pypi.org/project/nose2/) is an extension to `unittest` with added plugins.
 - [testify](https://pypi.org/project/testify/) based on unittest and nose with additional features.
 - [robotframework](https://pypi.org/project/robotframework/) is a generic automation framework.
+
+---
+
+## Further reading
+
+- [pytest documentation](https://docs.pytest.org/en/6.2.x/)
+- [unittest documentation](https://docs.python.org/3/library/unittest.html)

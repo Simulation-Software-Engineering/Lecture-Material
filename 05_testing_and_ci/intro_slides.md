@@ -29,7 +29,7 @@ slideOptions:
 
 ## Learning goals of the chapter
 
-- Motivation and importance of writing tests for a software
+- Understanding why and how to write tests
 - Understanding the different types of tests and their relevance in testing scientific software
 - Becoming familiar with Python testing frameworks `pytest` and `unittest`
 
@@ -45,7 +45,7 @@ slideOptions:
 ## What is testing?
 
 - Smelling old milk before using it!
-- A way to determine if a software is producing reliable results
+- A way to determine if a software is not producing reliable results and if so, what is the reason
 - Manual testing vs. Automated testing
 
 ---
@@ -63,11 +63,11 @@ slideOptions:
 - **Fixture**: preparatory set for testing
 - **Actual result**: what the code produces when given the fixture
 - **Expected result**: what the actual result is compared to
-- **Test coverage**: How much of the code does a test touch
+- **Test coverage**: how much of the code does a test touch
 
 ---
 
-## Ways to test software
+## Some ways to test software
 
 - Assertions
 - Unit testing
@@ -85,6 +85,10 @@ slideOptions:
     - Postcondition
     - Invariant
 - A basic but powerful tool to test a software on-the-go.
+- Typical syntax: 
+```python
+assert condition, "message"
+```
 
 ---
 

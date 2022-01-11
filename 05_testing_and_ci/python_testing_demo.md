@@ -54,5 +54,5 @@ my_software/
 - Testing frameworks can be run via coverage. Lets take our first example and run pytest via coverage: `coverage run -m pytest`.
 - coverage does not generate any output immediately as it would interfere with the test output.
 - Code coverage information is stored in a file `.coverage` in the working directory. This information can be viewed using `coverage report -m`
-- A more fancier report can be viewed by generating html output using `coverage html`.
+- A more fancier report can be viewed by generating HTML output using `coverage html`.
 - The file `htmlcov/index.html` can be opened in a browser to view the test coverage report.

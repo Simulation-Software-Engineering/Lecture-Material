@@ -2,9 +2,9 @@
 
 Learning goals:
 
-- a
-- a
-- a
+- Understanding why and how to write tests
+- Understanding the different types of tests and their relevance in testing scientific software
+- Becoming familiar with Python testing frameworks `pytest` and `unittest`
 
 | Duration | Content |
 | --- | --- |

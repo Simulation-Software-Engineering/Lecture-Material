@@ -1,6 +1,6 @@
 ## Description
 
-<!--- Please describe shortly what this pull request ist doing. If there is an related issue, please mention it here. -->
+<!--- Please describe shortly what this pull request is doing. If there is an related issue, please mention it here. -->
 
 ## Checklist
 

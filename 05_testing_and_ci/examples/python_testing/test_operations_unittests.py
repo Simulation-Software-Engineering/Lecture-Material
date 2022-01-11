@@ -58,17 +58,13 @@ class TestOperations(TestCase):
         """
         Test operations.find_mean on a previously generated dataset
         """
-        # Expected result
-        f = open("average_data.csv")
-        rows = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
-        i = 0
-        data, reference_mean = None, None
-        for row in rows:
-            if i == 0:
-                data = row
-            if i == 1:
-                reference_mean = row
-            i += 1
+        with open("mean_data.csv") as f:
+            rows = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
+            # Fixture
+            data = next(rows)
+            
+            # Expected result
+            reference_mean = next(rows)
 
         # Actual result
         actual_mean = find_mean(data)

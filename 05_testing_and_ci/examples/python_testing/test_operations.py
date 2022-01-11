@@ -35,7 +35,7 @@ def test_find_mean():
     
     # Expected result
     expected_mean = 78.33
-    # expected_result = pytest.approx(78.3, abs=0.01)
+    # expected_result = pytest.approx(78.33, abs=0.01)
     
     # Actual result
     actual_mean = find_mean(data)
@@ -64,22 +64,17 @@ def test_mean_reg():
     """
     Test operations.find_mean on a previously generated dataset
     """
-    # Fixture
-
-    f = open("average_data.csv")
-    rows = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
-    i = 0
-    for row in rows:
-        if i == 0:
-            data = row
-        if i == 1:
-            reference_mean = row
-        i += 1
-
+    with open("mean_data.csv") as f:
+        rows = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
+        # Fixture
+        data = next(rows)
+            
+        # Expected result
+        reference_mean = next(rows)
+    
     # Actual result
     actual_mean = find_mean(data)
     
-    # Expected result
     expected_mean = pytest.approx(reference_mean, abs=0.01)
     
     # Test

@@ -4,26 +4,40 @@ Example code is in [05_testing_and_ci/examples](https://github.com/Simulation-So
 
 ## Software code used
 
-- The file `operations.py` consists of two functions `find_max` and `find_average` which calculate the maximum and average of elements of a list. The `main()` routine in the file applies the functions to a list and prints the output.
+- The file `operations.py` consists of two functions `find_max` and `find_mean` which calculate the maximum and mean of all elements of a list. The `main()` routine in the file applies the functions to a list and prints the output.
 - `main()` function in `operations.py` has assertion statements to check if the correct data type is passed to specific functions.
 - Assertion statements are the most basic way of testing code and are also used in unit and integration testing as demonstrated here.
 - Tests are written in the file `test_operations.py`. The `test_*` prefix in the name is required so that pytest detects the file as a testing file. Suffix form `*_test.py` also works.
 - In all there are two unit tests, one integration test and one regression test.
-- The unit tests test the individual functions `find_max` and `find_average`.
-- The integration test triggers both the functions `find_max` and `find_average` and checks that the average is less than the maximum, something that should always be true for a set of numbers.
-- The regression test first reads an old data set and an average value from a CSV file. Then the function `find_average` is run with the old data set and the new average value is compared to the old one.
+- The unit tests test the individual functions `find_max` and `find_mean`.
+- The integration test triggers both the functions `find_max` and `find_mean` and checks that the mean is less than the maximum, something that should always be true for a set of numbers.
+- The regression test first reads an old data set and an average value from a CSV file. Then the function `find_mean` is run with the old data set and the new mean value is compared to the old one.
 
 ## pytest
 
-- pytest is installed by: `pip install pytest`.
-- All tests can be run using the command-line tool called `pytest`.
-- **Comparing floating point variables** needs to be handled in functions like `find_average` and is done using `pytest.approx(value, abs)`.
+- pytest is installed by:
+
+```python
+pip install -U pytest
+```
+
+- All tests can be run using the command-line tool called `pytest`. Just type `pytest` in the working directory and hit ENTER.
+- One test is expected to fail. Reading the error message we understand that the failure occurs because floating-point variable comparison is not handled correctly.
+- We need to tell pytest that while comparing two floating-point variables the value needs to be correct only up to a certain tolerance limit. To do this the expected mean value needs to be changed by uncommenting the line in the following part of the code:
+
+```python
+# Expected result
+    expected_mean = 78.33
+    # expected_result = pytest.approx(78.3, abs=0.01)
+```
+
+- **Comparing floating point variables** needs to be handled in functions like `find_average` and is done using `pytest.approx(value, abs)`. The `abs` value is the tolerance up to which the floating-point value will be checked, that is `78.33 +/- 0.01`.
 - Even if one test fails, pytest runs all the tests and gives a report on the failing test. The assertion failure report generated my pytest is also more detailed than the usual Python assertion report.
 - pytest can run unittest suites directly using `pytest tests`.
 - pytest is able to detect tests in several forms of folder structures, and the folder structures have advantages and disadvantages. More information on this is in the [documentation](https://docs.pytest.org/en/6.2.x/goodpractices.html#choosing-a-test-layout-import-rules).
 - Example:
 
-```
+```bash
 setup.py
 my_software/
     __init__.py
@@ -41,6 +55,7 @@ my_software/
 - Base class `unittest.TestCase` is used to create a test suite consisting of all the tests of a software.
 - Each test is now a function of a class which is derived from the class `unittest.TestCase`.
 - The same tests are implemented using `unittest` in the file `test_operations_unittests.py` as functions of a class `TestOperations`.
+
 - unittest.TestCase offers functions like `assertEqual`, `assertAlmostEqual`, `assertTrue`, etc. for use instead of the usual assertion statements. These statements help the test runner to accumulate all test results and generate a test report.
 - `unittest.main()` provides an option to run the tests from a command-line interface.
 - `setUp` function in run before all the tests. Similar a clean up function `tearDown` exists.
@@ -50,9 +65,29 @@ my_software/
 
 ## coverage
 
-- Installing coverage using pip: `pip install coverage`.
-- Testing frameworks can be run via coverage. Lets take our first example and run pytest via coverage: `coverage run -m pytest`.
+- Installing coverage using pip:
+
+```python
+pip install -U coverage
+```
+
+- Testing frameworks can be run via coverage. Lets take our first example and run pytest via coverage:
+
+```python
+coverage run -m pytest
+```
+
 - coverage does not generate any output immediately as it would interfere with the test output.
-- Code coverage information is stored in a file `.coverage` in the working directory. This information can be viewed using `coverage report -m`
-- A more fancier report can be viewed by generating HTML output using `coverage html`.
+- Code coverage information is stored in a file `.coverage` in the working directory. This information can be viewed using:
+
+```python
+coverage report -m
+```
+
+- A more fancier report can be viewed by generating HTML output using 
+
+```python
+coverage html
+```
+
 - The file `htmlcov/index.html` can be opened in a browser to view the test coverage report.

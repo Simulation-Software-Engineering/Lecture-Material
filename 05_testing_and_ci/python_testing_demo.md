@@ -44,14 +44,14 @@ ________________________________________________________________________________
         """
         # Fixture
         data = [43, 32, 167, 18, 1, 209]
-    
+
         # Expected result
         expected_mean = 78.33
         # expected_result = pytest.approx(78.33, abs=0.01)
-    
+
         # Actual result
         actual_mean = find_mean(data)
-    
+
         # Test
 >       assert actual_mean == expected_mean
 E       assert 78.33333333333333 == 78.33

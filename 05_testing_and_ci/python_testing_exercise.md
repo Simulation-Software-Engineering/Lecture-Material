@@ -52,10 +52,10 @@ python3 diffusion2d.py
     - This check is done using an assertion statement, something that you have already seen in the demo during the lecture.
 - Using a similar workflow, complete the other two unit tests.
 - If everything is done correctly then after running `pytest`, all the tests should pass.
-- How can we make sure that we have written correct tests? By breaking them purposely! 
+- How can we make sure that we have written correct tests? By breaking them purposely!
 
-# Step 4 - Writing unit tests using unittest
+## Step 4 - Writing unit tests using unittest
 
-# Step 5 - Writing integration tests
+## Step 5 - Writing integration tests
 
-# BONUS Step 6 - Checking test coverage 
+## BONUS Step 6 - Checking test coverage

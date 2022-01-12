@@ -35,8 +35,8 @@ pip install -U pytest
 - Even if one test fails, pytest runs all the tests and gives a report on the failing test. The assertion failure report generated my pytest is also more detailed than the usual Python assertion report. When the test fails, the following is observed:
 
 ```bash
-============================================================================================ FAILURES ======================================================================================
-__________________________________________________________________________________________ test_find_mean __________________________________________________________________________________
+=============================================== FAILURES ====================================================
+____________________________________________ test_find_mean _________________________________________________
 
     def test_find_mean():
         """

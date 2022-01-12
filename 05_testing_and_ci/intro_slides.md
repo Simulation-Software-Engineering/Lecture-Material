@@ -37,8 +37,8 @@ slideOptions:
 
 ## Lets start with a survey
 
-- survey link
-- slido ID
+- https://app.sli.do/event/9xfogBPKmJxnScNrM4nUUZ
+- **ID: 407683**
 
 ---
 
@@ -98,6 +98,7 @@ assert condition, "message"
 
 - Catching errors with assertions is good but preventing them is better!
 - A *unit* is a single function in one situation.
+  - A situation is one variant of input parameters.
 - User creates the expected result manually.
 - A fixture is a set of inputs used to generate an actual result.
 - Actual result is compared to the expected result, for e.g. using an assertion statement.
@@ -124,14 +125,52 @@ assert condition, "message"
 
 ---
 
-## Further remarks
+## Test Coverage
 
+- Coverage is the amount of code a test runs through.
 - Aim for high test coverage.
+- There is a trade-off: extremely high test coverage vs. effort in test development
+
+---
+
+## Comparing floating-point variables
+
+- Very often quantities in simulation software are `float` / `double`.
+- Such quantities cannot be compared to exact values, an approximation is necessary.
 - Comparison of floating point variables needs to be done to a certain tolerance.
-- Comparing visualizations is often very sensitive, it is better to compare the underlying data instead.
-- Test-driven development (TDD) vs. Checking-driven development (CDD).
-- Validation vs. Verification from the perspective of testing scientific software.
-- Always make sure that a test breaks when it is supposed to.
+- In `pytest` there is `pytest.approx(value, abs=tol)`.
+- In `unittest` there is `assertAlmostEqual()`.
+
+---
+
+## Test-driven development (TDD)
+
+- Principle is to write a test and then write a code to fulfill the test.
+- Advantages:
+  - In the end user ends up with a test alongside the code.
+  - Eliminates confirmation bias of the user.
+  - Writing tests gives clarity on what the code is supposed to do.
+- Disadvantage: known to not improve productivity.
+
+---
+
+## Checking-driven development (CDD)
+
+- Developer performs spot checks; sanity checks at intermediate stages
+- Simulation software often has heuristics which are easy to determine.
+- Keep performing same checks at different stages of development to ensure the code works.
+
+---
+
+## Verifying a test
+
+- Test written as part of a bug-fix:
+  - Reproduce the bug in the test by ensuring that the test fails.
+  - Fix the bug.
+  - Rerun the test to ensure that it passes.
+- Test written to increase code coverage:
+  - Make sure that the first iteration of the test passes.
+  - Try introducing a small fixable bug in the code to verify if the test fails.
 
 ---
 

@@ -46,7 +46,7 @@ class TestOperations(TestCase):
     # Integration test
     def test_max_mean(self):
         """
-        Test if mean of a data set is always lesser than the maximum
+        Test operations.find_max and operations.find_mean
         """
         # Expected result
         expected_mean = 353.5

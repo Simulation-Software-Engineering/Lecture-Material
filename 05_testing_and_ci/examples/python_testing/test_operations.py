@@ -47,7 +47,7 @@ def test_find_mean():
 # Integration test
 def test_max_mean():
     """
-    Test if mean of a data set is always lesser than the maximum
+    Test operations.find_max and operations.find_mean
     """
     # Fixture
     data1 = [43, 32, 167, 18, 1, 209]

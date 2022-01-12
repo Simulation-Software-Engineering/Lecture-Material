@@ -3,25 +3,51 @@ A set of mathematical operations.
 """
 
 
-def find_max(array):
+def find_max(data):
+    """
+    Find maximum of all elements of a given list
+
+    Parameters
+    ----------
+    data : list
+        List of data. Elements are numbers
+
+    Returns
+    -------
+    find_max : float
+        Maximum of list
+    """
     # Check that the input list has numbers
-    for n in array:
+    for n in data:
         assert type(n) == int or type(n) == float
 
-    max_num = array[0]  # Assume the first number is the maximum
-    for n in array:
+    max_num = data[0]  # Assume the first number is the maximum
+    for n in data:
         if n > max_num:
             max_num = n
 
     return max_num
 
 
-def find_mean(array):
+def find_mean(data):
+    """
+    Find mean of all elements of a given list
+
+    Parameters
+    ----------
+    data : list
+        List of data. Elements are numbers
+
+    Returns
+    -------
+    float : float
+        Mean of list
+    """
     # Check that the input list has numbers
-    for n in array:
+    for n in data:
         assert type(n) == int or type(n) == float
 
-    return sum(array) / len(array)
+    return sum(data) / len(data)
 
 
 def main():

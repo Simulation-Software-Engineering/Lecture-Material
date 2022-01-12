@@ -64,7 +64,7 @@ slideOptions:
 - **Fixture**: preparatory set for testing
 - **Actual result**: what the code produces when given the fixture
 - **Expected result**: what the actual result is compared to
-- **Test coverage**: how much of the code does a test touch
+- **Test coverage**: how much of the code does do tests touch
 
 ---
 
@@ -80,7 +80,7 @@ slideOptions:
 ## Assertions
 
 - Principle of *defensive programming*.
-- Python does nothing when an assertion is true; returns error when false.
+- Nothing happens when an assertion is true; throws error when false.
 - Types of assertion statements:
     - Precondition
     - Postcondition
@@ -99,8 +99,8 @@ assert condition, "message"
 - Catching errors with assertions is good but preventing them is better!
 - A *unit* is a single function in one situation.
 - User creates the expected result manually.
-- A fixture is used to generate an actual result.
-- Assertion statement is used to compare expected result and actual result.
+- A fixture is a set of inputs used to generate an actual result.
+- Actual result is compared to the expected result, for e.g. using an assertion statement.
 
 ---
 
@@ -110,7 +110,7 @@ assert condition, "message"
 - *Integrate* units and test them together in an *integration* test.
 - Often more complicated than a unit test and has more test coverage.
 - A fixture is used to generate an actual result.
-- Assertion statement is used to compare expected result and actual result.
+- Actual result is compared to the expected result, for e.g. using an assertion statement.
 
 ---
 

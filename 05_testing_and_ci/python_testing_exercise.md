@@ -23,7 +23,7 @@
 
 - Fork the [repository](https://github.com/Simulation-Software-Engineering/test-diffusion2d-testing).
 - The code in `diffusion2d.py` is in principle the code used for the Python packaging exercise. The main difference is that now the code has a class `SolveDiffusion2D` which has several member functions.
-- Each function name states what the function does, for example the function `initialize_domain()` takes in input arguments width, height, dx and dy and sets the values to member variables of the class and also calculates the number of points in X and Y directions.
+- Each function name states what the function does, for example the function `initialize_domain()` takes in input arguments `w` (width), `h` (height), `dx` and `dy` and sets the values to member variables of the class and also calculates the number of points in x and y directions.
 - The functions `initialize_domain` and `initialize_physical_parameters` have default values for all input parameters, hence they can be called without any parameters.
 - The file also has a `main()` function which shows a step-by-step procedure to solve the diffusion problem using an object of the class `SolveDiffusion2D`.
 - Make sure that `NumPy` and `Matplotlib` are installed on the system that you are working on.
@@ -56,13 +56,31 @@ python3 diffusion2d.py
     - Note that you have the object of the class `SolveDiffusion2D` and hence you can access member variables, for example `solver.nx` and `solver.ny`. This is useful to check the actual values.
     - This check is done using an assertion statement, something that you have already seen in the demo during the lecture.
 - Using a similar workflow, complete the other two unit tests.
+- Run the tests by running:
+
+```bash
+pytest
+```
+
+or
+
+```bash
+python -m pytest
+```
+
+at the base repository level.
+
+- It is observed that in some instances `pytest` is not able to find the tests. If such errors occur, then try to explicitly point pytest to the relevant test file. For example:
+
+```bash
+pytest tests/unit/test_diffusion2d_functions.py
+```
+
 - If everything is done correctly then after running `pytest`, all the tests should pass.
 - How can we make sure that we have written correct tests? By breaking them purposely!
     - Introduce a bug in a function on purpose and then re-run the test to see if the test fails.
     - Lets try this in the function `initialize_domain`. In line 42 of `diffusion2d.py`, change the calculation from `self.nx = int(w / dx)` to `self.nx = int(h / dx)`. This is clearly a mistake and our test should catch it.
-    - Now re-run pytest. Did the test catch the bug? If yes, then you have written the test correctly.
-    - If the test did not catch the bug then try to think why did it not? Is your choice of values for the parameters `w`, `h`, `dx` and `dy` responsible for it?
-    - If the test is run with `w = h` then this bug will not be caught. What do we learn from this? We learn that the fixture should be as general as possible and we should ensure that we are not testing special scenarios. A domain with `w = h` is a square domain which is a special case of a rectangular domain with arbitrary values for `w` and `h`.
+    - Now re-run pytest. Did the test catch the bug? If yes, then you have written the test correctly.If the test did not catch the bug then try to think why did it not? Is your choice of values for the parameters `w`, `h`, `dx` and `dy` responsible for it? If the test is run with `w = h` then this bug will not be caught. What do we learn from this? We learn that the fixture should be as general as possible and we should ensure that we are not testing special scenarios. A domain with `w = h` is a square domain which is a special case of a rectangular domain with arbitrary values for `w` and `h`.
 - **Important step**: A failing test in pytest will produce an output log in the terminal. Copy this output log in a code block in the `README.md` file under the section *pytest log*. This log output will be part of the submission and hence is important.
 - Purposely break all the unit tests and copy the failing tests logs into the aforementioned section in the README file.
 - Before moving on from the unit tests, make sure that you have reverted all the intentionally introduced bugs in the original code.

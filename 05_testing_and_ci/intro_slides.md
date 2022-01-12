@@ -98,7 +98,7 @@ assert condition, "message"
 
 - Catching errors with assertions is good but preventing them is better!
 - A *unit* is a single function in one situation.
-  - A situation is one variant of input parameters.
+    - A situation is one variant of input parameters.
 - User creates the expected result manually.
 - A fixture is a set of inputs used to generate an actual result.
 - Actual result is compared to the expected result, for e.g. using an assertion statement.
@@ -147,9 +147,9 @@ assert condition, "message"
 
 - Principle is to write a test and then write a code to fulfill the test.
 - Advantages:
-  - In the end user ends up with a test alongside the code.
-  - Eliminates confirmation bias of the user.
-  - Writing tests gives clarity on what the code is supposed to do.
+    - In the end user ends up with a test alongside the code.
+    - Eliminates confirmation bias of the user.
+    - Writing tests gives clarity on what the code is supposed to do.
 - Disadvantage: known to not improve productivity.
 
 ---
@@ -165,12 +165,12 @@ assert condition, "message"
 ## Verifying a test
 
 - Test written as part of a bug-fix:
-  - Reproduce the bug in the test by ensuring that the test fails.
-  - Fix the bug.
-  - Rerun the test to ensure that it passes.
+    - Reproduce the bug in the test by ensuring that the test fails.
+    - Fix the bug.
+    - Rerun the test to ensure that it passes.
 - Test written to increase code coverage:
-  - Make sure that the first iteration of the test passes.
-  - Try introducing a small fixable bug in the code to verify if the test fails.
+    - Make sure that the first iteration of the test passes.
+    - Try introducing a small fixable bug in the code to verify if the test fails.
 
 ---
 

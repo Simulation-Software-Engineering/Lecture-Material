@@ -29,8 +29,8 @@ slideOptions:
 
 ## Learning goals of the chapter
 
-- Understanding the relevance of testing simulation software
-- Understanding the concepts of unit testing, integration testing and regression testing
+- What is the relevance of testing simulation software
+- What are the concepts of unit testing, integration testing and regression testing and how to write such tests for a simulation software
 - How to use the Python testing frameworks `pytest` and `unittest` to generate a automated testing workflow
 
 ---

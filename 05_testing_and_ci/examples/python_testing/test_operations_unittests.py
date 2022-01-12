@@ -12,7 +12,7 @@ class TestOperations(TestCase):
     """
     def setUp(self):
         # Fixture
-        self.data = [43, 32, 167, 18, 1, 209]
+        self.data1 = [43, 32, 167, 18, 1, 209]
         self.data2 = [3, 13, 33, 23, 498]
 
     # Unit test
@@ -24,7 +24,7 @@ class TestOperations(TestCase):
         expected_max = 209
 
         # Actual result
-        actual_max = find_max(self.data)
+        actual_max = find_max(self.data1)
 
         # Test
         self.assertEqual(actual_max, expected_max)
@@ -38,7 +38,7 @@ class TestOperations(TestCase):
         expected_mean = 78.33
 
         # Actual result
-        actual_mean = find_mean(self.data)
+        actual_mean = find_mean(self.data1)
 
         # Test
         self.assertAlmostEqual(actual_mean, expected_mean, 2)
@@ -51,7 +51,7 @@ class TestOperations(TestCase):
         # Expected result
         expected_mean = 353.5
 
-        maximum1 = find_max(self.data)
+        maximum1 = find_max(self.data1)
         maximum2 = find_max(self.data2)
 
         # Actual result

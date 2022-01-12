@@ -29,9 +29,9 @@ slideOptions:
 
 ## Learning goals of the chapter
 
-- Understanding why and how to write tests
-- Understanding the different types of tests and their relevance in testing scientific software
-- Becoming familiar with Python testing frameworks `pytest` and `unittest`
+- Understanding the relevance of testing simulation software
+- Understanding the concepts of unit testing, integration testing and regression testing
+- How to use the Python testing frameworks `pytest` and `unittest` to generate a automated testing workflow
 
 ---
 

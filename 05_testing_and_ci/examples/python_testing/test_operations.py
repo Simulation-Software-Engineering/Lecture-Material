@@ -35,7 +35,7 @@ def test_find_mean():
     
     # Expected result
     expected_mean = 78.33
-    # expected_result = pytest.approx(78.33, abs=0.01)
+    # expected_mean = pytest.approx(78.33, abs=0.01)
     
     # Actual result
     actual_mean = find_mean(data)
@@ -82,7 +82,7 @@ def test_regression_mean():
     # Actual result
     actual_mean = find_mean(data)
     
-    expected_mean = pytest.approx(reference_mean, abs=0.01)
+    expected_mean = pytest.approx(reference_mean[0], abs=0.01)
     
     # Test
     assert actual_mean == expected_mean

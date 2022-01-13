@@ -32,7 +32,7 @@ slideOptions:
   }
 </style>
 
-# Workflow automation
+# Workflow automation (CI/CD)
 
 ---
 
@@ -47,4 +47,25 @@ slideOptions:
 
 ---
 
+## What are CI and CD?
+
+- Continuous Integration
+- Continuous Delivery
+- Continuous Deployment
+
+---
+
+## Autumation services/software
+
+Examples:
+- [GitHub Actions](https://docs.github.com/en/actions)
+- GitLab CI/CD
+- [Circle CI](https://circleci.com/)
+- [Travis CI](https://www.travis-ci.com/)
+- [Jenkins](https://www.jenkins.io/)
+
+---
+
 ## Further reading
+
+- [GitHub Actions documentation](https://docs.github.com/en/actions)

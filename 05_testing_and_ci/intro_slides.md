@@ -64,7 +64,7 @@ slideOptions:
 - **Fixture**: preparatory set for testing
 - **Actual result**: what the code produces when given the fixture
 - **Expected result**: what the actual result is compared to
-- **Test coverage**: how much of the code does do tests touch
+- **Test coverage**: how much of the code do tests touch
 
 ---
 

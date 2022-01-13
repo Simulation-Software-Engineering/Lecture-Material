@@ -22,6 +22,7 @@ pip install -U pytest
 ```
 
 - All tests can be run using the command-line tool called `pytest`. Just type `pytest` in the working directory and hit ENTER.
+- If pytest is installed in some other way, you might need to run it like `python -m pytest`.
 - One test is expected to fail. Reading the error message we understand that the failure occurs because floating-point variable comparison is not handled correctly.
 - We need to tell pytest that while comparing two floating-point variables the value needs to be correct only up to a certain tolerance limit. To do this the expected mean value needs to be changed by uncommenting the line in the following part of the code:
 

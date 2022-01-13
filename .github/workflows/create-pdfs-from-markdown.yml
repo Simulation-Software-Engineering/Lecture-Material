@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Install bash
         run: apk add bash
+      - name: Quick fix (pandoc), install Latex package caption
+        run: tlmgr install caption
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Compile PDFs (slides)

@@ -45,7 +45,7 @@ def test_find_mean():
 
 
 # Integration test
-def test_max_mean():
+def test_mean_of_max():
     """
     Test operations.find_max and operations.find_mean
     """
@@ -54,16 +54,16 @@ def test_max_mean():
     data2 = [3, 13, 33, 23, 498]
 
     # Expected result
-    expected_mean = 353.5
+    expected_mean_of_max = 353.5
 
     maximum1 = find_max(data1)
     maximum2 = find_max(data2)
 
     # Actual result
-    actual_mean = find_mean([maximum1, maximum2])
+    actual_mean_of_max = find_mean([maximum1, maximum2])
     
     # Test
-    assert actual_mean == expected_mean
+    assert actual_mean_of_max == expected_mean_of_max
 
 
 # Regression test

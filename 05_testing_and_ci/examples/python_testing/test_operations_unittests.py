@@ -44,21 +44,21 @@ class TestOperations(TestCase):
         self.assertAlmostEqual(actual_mean, expected_mean, 2)
 
     # Integration test
-    def test_max_mean(self):
+    def test_mean_of_max(self):
         """
         Test operations.find_max and operations.find_mean
         """
         # Expected result
-        expected_mean = 353.5
+        expected_mean_of_max = 353.5
 
         maximum1 = find_max(self.data1)
         maximum2 = find_max(self.data2)
 
         # Actual result
-        actual_mean = find_mean([maximum1, maximum2])
+        actual_mean_of_max = find_mean([maximum1, maximum2])
         
         # Test
-        self.assertEqual(actual_mean, expected_mean)
+        self.assertEqual(actual_mean_of_max, expected_mean_of_max)
 
     # Regression test
     def test_regression_mean(self):

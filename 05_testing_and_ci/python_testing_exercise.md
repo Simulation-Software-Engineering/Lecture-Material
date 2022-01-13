@@ -48,7 +48,7 @@ python3 diffusion2d.py
 - In the repository there is a folder `tests/`. In this folder there are two folders `unit/` and `integration/`. The first tests written will be unit tests.
 - In the file `tests/unit/test_diffusion2d_functions.py` there is already a skeleton code for three unit tests which are to be implemented. The name of each test is of the format `test_<name_of_function_being_tested>`.
 - As these are unit tests, in each test only the call to the respective function needs to be made. No other function from `diffusion2d.py` must be called. If another function call is required to define some member variables then it can be evaded by directly defining the member variables in the test. All the member variables can be accessed directly using the class object.
-- As an example, let us look at how we can write a unit test for the function `initialize_domain`
+- As an example, let us look at how we can write a unit test for the function `initialize_domain`.
     - When the function `initialize_domain` is being tested, you need to first identify which variables are being calculated in this function.
     - In this case they are the variables `nx` and `ny`. Now choose some values for the variables `w`, `h`, `dx`, and `dy` which are different from the default values. For these values manually calculate the `nx` and `ny`. These manually calculated values are the expected values in this test.
     - Now call the function `initialize_domain` which the chosen values of `w`, `h`, `dx`, and `dy` and using check if the `nx` and `ny` in the class member variables is equal to your expected values.
@@ -86,10 +86,10 @@ pytest tests/unit/test_diffusion2d_functions.py
 
 ## Step 4 - Writing unit tests using unittest
 
-- The unit tests written in the previous step can be modified to be run with unittest.
-- Start by creating a class `TestDiffusion2D` which is derived from the class `unittest.TestCase`.
-- Migrate all the tests inside the class and change them to be member functions of the class.
+- You will now modify the unit tests written in the previous section to be run with unittest. This will be done in the same file `tests/unit/test_diffusion2d_functions.py`.
+- Start by creating a class `TestDiffusion2D` which is derived from the class `unittest.TestCase`. Migrate all the tests inside the class and change them to be member functions of the class. Note that the parameter `self` needs to be used in the input parameters of all member functions and also while defining and using member variables.
 - The tests themselves will not change, the same functions will be tested in the same way, just with the `unittest` framework.
+- Identify the common parts of all the tests and transfer the functionality to the function `setUp`. One example of this is the definition of the object of class `SolveDiffusion2D`.
 - The main change is in the assertion statements. Change the assertion statements to the format as required by `unittest`. Refer to the lecture demo for an example on how to do this.
 - Using the same logic as in the previous step, intentionally break the tests to make sure that the tests are constructed correctly.
 - **Important step**: A failing test in unittest will produce an output log in the terminal. Copy this output log in a code block in the README file under the section *unittest log*. This log output will be part of the submission and hence is important.

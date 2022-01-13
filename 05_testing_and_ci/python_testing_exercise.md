@@ -2,7 +2,7 @@
 
 ## Starting remarks
 
-- [Exercise repository link](https://github.com/Simulation-Software-Engineering/test-diffusion2d-testing)
+- [Exercise repository link](https://github.com/Simulation-Software-Engineering/testing-python-exercise)
 - Deadline for submitting this exercise is **Thursday 20th January 2022 09:00**.
 - Try to structure all the tests in a format similar to what is shown in the [demo code](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/examples/python_testing).
 
@@ -21,7 +21,7 @@
 
 ## Step 1 - Getting familiar with the code
 
-- Fork the [repository](https://github.com/Simulation-Software-Engineering/test-diffusion2d-testing).
+- Fork the [repository](https://github.com/Simulation-Software-Engineering/testing-python-exercise).
 - The code in `diffusion2d.py` is in principle the code used for the Python packaging exercise. The main difference is that now the code has a class `SolveDiffusion2D` which has several member functions.
 - Each function name states what the function does, for example the function `initialize_domain()` takes in input arguments `w` (width), `h` (height), `dx` and `dy` and sets the values to member variables of the class and also calculates the number of points in x and y directions.
 - The functions `initialize_domain` and `initialize_physical_parameters` have default values for all input parameters, hence they can be called without any parameters.
@@ -99,15 +99,16 @@ pytest tests/unit/test_diffusion2d_functions.py
 
 ## Step 5 - Writing integration tests
 
-- You will now write integration tests for this code. The integration tests will be written in the file `tests/integration/test_diffusion2d.py`.
-- Integration tests will be written for the functions `initialize_physical_parameters` and `set_initial_conditions`. As these are integration tests, each test should check how different functions from `SolveDiffusion2D` perform together.
+- You will now write integration tests for this code **using pytest**. The integration tests will be written in the file `tests/integration/test_diffusion2d.py`.
+- Integration tests will be written for the functions `initialize_physical_parameters` and `set_initial_conditions`. As these are integration tests, each test should check how different functions from `SolveDiffusion2D` work together.
 - For example lets look at how the test for `initialize_physical_parameters` will look like.
     - First step is to select some values for the input parameters to the function `initialize_physical_parameters` and also the function `initialize_domain`.
     - Looking at the functionality in `initialize_physical_parameters` we understand that the most relevant variable being calculated is `dt`.
     - Based on the choice of all input parameters, manually compute the value of `dt` for the test. This is the expected result.
     - Call the function `initialize_domain` and then the function `initialize_physical_parameters`.
     - Compare the value of the member variable `dt` with the manually computed `dt` using an assertion statement.
-- Using the same logic as in the previous step, intentionally break the tests to make sure that the tests are constructed correctly.
+- Now also write a similar integration test for `set_initial_conditions`. Note that this will be the most extensive test from the whole set. The field variable `u` is computed in `set_initial_conditions`, which is a 2D array. The test should have a computation which computes a similar `u` array for a user-defined set of initial parameters. This computed `u` is the expected result.
+- Using the same logic as in the previous steps, intentionally break the tests to make sure that the tests are constructed correctly.
 - **Important step**: A failing test in unittest will produce an output log in the terminal. Copy this output log in a code block in the `README.md` file under the section *Integration test log*. This log output will be part of the submission and hence is important.
 - Purposely break all the unit tests and copy the failing tests logs into the aforementioned section in the README file.
 - Before moving on from the unit tests, make sure that you have reverted all the intentionally introduced bugs in the original code.

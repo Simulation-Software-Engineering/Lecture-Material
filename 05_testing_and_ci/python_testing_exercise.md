@@ -44,7 +44,7 @@ python3 diffusion2d.py
 
 ## Step 3 - Writing unit tests
 
-- **Note**: In this step you will write all the tests in a way that they can be run using `pytest` and not using the `unittest` format.
+- **Note**: In this step you will write all the tests in a way that they can be run using `pytest`.
 - In the repository there is a folder `tests/`. In this folder there are two folders `unit/` and `integration/`. The first tests written will be unit tests.
 - In the file `tests/unit/test_diffusion2d_functions.py` there is already a skeleton code for three unit tests which are to be implemented. The name of each test is of the format `test_<name_of_function_being_tested>`.
 - As these are unit tests, in each test only the call to the respective function needs to be made. No other function from `diffusion2d.py` must be called. If another function call is required to define some member variables then it can be evaded by directly defining the member variables in the test. All the member variables can be accessed directly using the class object.
@@ -86,6 +86,7 @@ pytest tests/unit/test_diffusion2d_functions.py
 
 ## Step 4 - Writing unit tests using unittest
 
+- **Note**: In this step you will write all the tests in a way that they can be run using `unittest`.
 - You will now modify the unit tests written in the previous section to be run with unittest. This will be done in the same file `tests/unit/test_diffusion2d_functions.py`.
 - Start by creating a class `TestDiffusion2D` which is derived from the class `unittest.TestCase`. Migrate all the tests inside the class and change them to be member functions of the class. Note that the parameter `self` needs to be used in the input parameters of all member functions and also while defining and using member variables.
 - The tests themselves will not change, the same functions will be tested in the same way, just with the `unittest` framework.
@@ -115,8 +116,8 @@ pytest tests/unit/test_diffusion2d_functions.py
 
 - Using the coverage tool generate a HTML report of the code coverage of all the tests.
 - Open the report file in a browser and print the report to a file called `coverage-report.pdf`. Add this file to the repository.
-- **Note**: coverage can be used with both `pytest` and `unittest`. In this case generating the report of the unit tests is sufficient.
+- **Note**: coverage can be used with both `pytest` and `unittest`. In this case generating the report of the unit tests using unittest is sufficient.
 
 ## Submission
 
-- Open a pull request from your fork to the main repository.
+- Open a pull request titled `Adding unit and integration tests by <GitLab username>` from your fork to the main repository.

@@ -44,17 +44,16 @@ python3 diffusion2d.py
 
 ## Step 3 - Writing unit tests
 
+- **Note**: In this step you will write all the tests in a way that they can be run using `pytest` and not using the `unittest` format.
 - In the repository there is a folder `tests/`. In this folder there are two folders `unit/` and `integration/`. The first tests written will be unit tests.
-- In the file `tests/unit/test_diffusion2d_functions.py` there is already a skeleton code for three unit tests which are to be implemented.
-- The name of each test is of the format `test_<name_of_function_being_tested>`.
-- As these are unit tests, in each test only the call to the respective function needs to be made. No other function from `diffusion2d.py` must be called.
-- In this step you will write all the tests in a way that they can be run using `pytest` and not using the `unittest` format.
+- In the file `tests/unit/test_diffusion2d_functions.py` there is already a skeleton code for three unit tests which are to be implemented. The name of each test is of the format `test_<name_of_function_being_tested>`.
+- As these are unit tests, in each test only the call to the respective function needs to be made. No other function from `diffusion2d.py` must be called. If another function call is required to define some member variables then it can be evaded by directly defining the member variables in the test. All the member variables can be accessed directly using the class object.
 - As an example, let us look at how we can write a unit test for the function `initialize_domain`
     - When the function `initialize_domain` is being tested, you need to first identify which variables are being calculated in this function.
     - In this case they are the variables `nx` and `ny`. Now choose some values for the variables `w`, `h`, `dx`, and `dy` which are different from the default values. For these values manually calculate the `nx` and `ny`. These manually calculated values are the expected values in this test.
     - Now call the function `initialize_domain` which the chosen values of `w`, `h`, `dx`, and `dy` and using check if the `nx` and `ny` in the class member variables is equal to your expected values.
     - Note that you have the object of the class `SolveDiffusion2D` and hence you can access member variables, for example `solver.nx` and `solver.ny`. This is useful to check the actual values.
-    - This check is done using an assertion statement, something that you have already seen in the demo during the lecture.
+    - Compare the expected result and the actual result using an assertion statement.
 - Using a similar workflow, complete the other two unit tests.
 - Run the tests by running:
 
@@ -70,7 +69,7 @@ python -m pytest
 
 at the base repository level.
 
-- It is observed that in some instances `pytest` is not able to find the tests. If such errors occur, then try to explicitly point pytest to the relevant test file. For example:
+- It is observed that in some instances `pytest` is not able to find the tests. One reason is the way pytest is installed, either using `pip` or `apt`. Refer to the [corresponding section](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_demo.md#pytest) in the demo for more details. If such errors occur, then try to explicitly point pytest to the relevant test file. For example:
 
 ```bash
 pytest tests/unit/test_diffusion2d_functions.py

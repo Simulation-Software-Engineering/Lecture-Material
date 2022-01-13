@@ -32,11 +32,7 @@ slideOptions:
   }
 </style>
 
-# Workflow automation (CI/CD)
-
----
-
-## Introduction
+# Workflow automation
 
 ---
 
@@ -47,19 +43,50 @@ slideOptions:
 
 ---
 
-## What are CI and CD?
+## Introduction
 
-- Continuous Integration
-- Continuous Delivery
-- Continuous Deployment
+- Automatize tasks
+    - Run tests frequently, give feedback early etc.
+    - Build update documentation, homepage etc.
+- Cannot forget automatized tasks
+- Running predefined workflows/pipelines is simple
+- Process often integrated in Git workflow
+    - Support by hooks or Git forges
 
 ---
 
-## Autumation services/software
+## What are CI and CD?
+
+- Continuous Integration (CI)
+    - Continuously integrate changes into "main" branch.
+    - Relies on testing and checking code continuously
+- Continuous Delivery (CD)
+    - Software is in a state that allows new release at any time
+    - Software package is built
+    - Actual release triggered manually
+- Continuous Deployment (CD)
+    - Software is in a state that allows new release at any time
+    - Software package is built
+    - Actual release triggered automatically (continuously)
+
+---
+
+## Automatize work
+
+- Run tests, checks, deployments etc. automatically:
+    - Compile code for different platforms
+    - Run tests periodically
+    - Check code in pull request
+    - Deploy homepage after changes to source
+    - Generate coverage reports
+
+---
+
+## Automation services/software
 
 Examples:
-- [GitHub Actions](https://docs.github.com/en/actions)
-- GitLab CI/CD
+- [GitHub Actions](https://github.com/features/actions)
+- [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
 - [Circle CI](https://circleci.com/)
 - [Travis CI](https://www.travis-ci.com/)
 - [Jenkins](https://www.jenkins.io/)
@@ -68,4 +95,5 @@ Examples:
 
 ## Further reading
 
+- [GitHub Actions documentation](https://docs.github.com/en/actions)
 - [GitHub Actions documentation](https://docs.github.com/en/actions)

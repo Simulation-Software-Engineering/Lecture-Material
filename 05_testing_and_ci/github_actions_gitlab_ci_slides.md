@@ -105,7 +105,15 @@ From [GitHub Actions Tutorial](https://docs.github.com/en/actions)
 
 ---
 
+## Advanced topics
+
+- [Parent-child pipelines](https://docs.gitlab.com/ee/ci/pipelines/parent_child_pipelines.html)
+
+---
+
 ## GitLab Runner
+
+- Installation is rather easy with Docker
 
 ---
 

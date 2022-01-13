@@ -16,7 +16,6 @@
     - [NumPy](https://numpy.org/)
     - [Matplotlib](https://matplotlib.org/)
     - [pytest](https://docs.pytest.org/en/6.2.x/getting-started.html#install-pytest)
-    - [unittest](https://docs.python.org/3/library/unittest.html#module-unittest)
     - [coverage](https://coverage.readthedocs.io/en/6.2/#quick-start)
 
 ## Step 1 - Getting familiar with the code

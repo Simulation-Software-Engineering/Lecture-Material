@@ -47,49 +47,56 @@ slideOptions:
 
 - Automatize tasks
     - Run tests frequently, give feedback early etc.
-    - Build update documentation, homepage etc.
-- Cannot forget automatized tasks
-- Running predefined workflows/pipelines is simple
-- Process often integrated in Git workflow
-    - Support by hooks or Git forges
+    - Cannot forget automatized tasks
+    - Less burden to developer
+    - Running predefined workflows/pipelines is simple
+- Process often integrated in development workflow
+    - Example: Support by hooks or Git forges
 
 ---
 
-## What are CI and CD?
+## Typical tasks
 
-- Continuous Integration (CI)
+- Compile code for different platforms
+- Run tests periodically
+- Check code in pull request
+- Build documentation
+- Deploy homepage after changes to source
+- Generate coverage reports
+
+---
+
+## Common practices (1/2)
+
+- **Continuous Integration** (CI)
     - Continuously integrate changes into "main" branch.
+    - Avoids "merge hell"
     - Relies on testing and checking code continuously
-- Continuous Delivery (CD)
+        - Should be automatized
+
+---
+
+## Common practices (2/2)
+
+- **Continuous Delivery** (CD)
     - Software is in a state that allows new release at any time
     - Software package is built
     - Actual release triggered manually
-- Continuous Deployment (CD)
+- **Continuous Deployment** (CD)
     - Software is in a state that allows new release at any time
     - Software package is built
     - Actual release triggered automatically (continuously)
 
 ---
 
-## Automatize work
-
-- Run tests, checks, deployments etc. automatically:
-    - Compile code for different platforms
-    - Run tests periodically
-    - Check code in pull request
-    - Deploy homepage after changes to source
-    - Generate coverage reports
-
----
-
 ## Automation services/software
 
-Examples:
 - [GitHub Actions](https://github.com/features/actions)
 - [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
 - [Circle CI](https://circleci.com/)
 - [Travis CI](https://www.travis-ci.com/)
 - [Jenkins](https://www.jenkins.io/)
+- ...
 
 ---
 

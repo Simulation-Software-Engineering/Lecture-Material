@@ -62,6 +62,23 @@ slideOptions:
 
 ---
 
+## Goal in this lecture
+
+- Set up simple CI pipeline
+- Pipeline has three steps
+
+  1. Check formatting
+  2. Build application
+  3. Test application
+
+---
+
+## Demo: Preliminary step
+
+Set up Docker image
+
+---
+
 ## GitHub Actions
 
 > Automate, customize, and execute your software development workflows right in your repository with GitHub Actions.
@@ -91,13 +108,23 @@ From [GitHub Actions Tutorial](https://docs.github.com/en/actions)
 
 ## Test actions locally
 
-- [act](https://github.com/nektos/act)
+-  [act](https://github.com/nektos/act)
+- Relies extensively on Docker
+    - User should be in `docker` group
+- Run `act` from root of the repository
+
+  ```text
+  act (runs all workflows)
+  act --job WORKFLOWNAME
+  ```
+
+- Workflows may fail locally, but work on GitHub
 
 ---
 
-## Self-hosted runners
+## Advanced topics
 
--
+- Self-hosted runners
 
 ---
 
@@ -114,6 +141,13 @@ From [GitHub Actions Tutorial](https://docs.github.com/en/actions)
 ## GitLab Runner
 
 - Installation is rather easy with Docker
+
+---
+
+## Demo: GitLab Runner
+
+- Installation
+- Registration of a runner
 
 ---
 

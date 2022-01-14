@@ -16,6 +16,7 @@ Material of the Simulation Software Engineering lecture. There are different way
 2. [Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/02_virtualization_and_containers)
 3. [Building and Packaging](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/03_building_and_packaging)
 4. [Documentation](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/04_documentation)
+5. [Testing and CI](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/05_testing_and_ci)
 
 ## Linting
 

@@ -118,7 +118,8 @@ From [GitHub Actions Tutorial](https://docs.github.com/en/actions)
   act --job WORKFLOWNAME
   ```
 
-- Workflows may fail locally, but work on GitHub
+- Environment is not 100% identical to GitHub's
+    - Workflows may fail locally, but work on GitHub
 
 ---
 

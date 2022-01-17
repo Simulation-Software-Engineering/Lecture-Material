@@ -23,10 +23,8 @@
     - `python`, this should include `unittest`
     - `pip` to install packages:
         - `black`
-        - `coverage`
-    - Some shell such that we can do some `echo "This is the build phase"` in the build step.
-
-- Checkout `Dockerfile` in examples/automation` directory
+    - **Note**: We will use the `coverage` package later, but we will *not* install it here. The package will be our example to show that we can install extra software within the CI.
+- Checkout `Dockerfile` in `examples/automation` directory
     - Image is build on top of [alpine Linux](https://www.alpinelinux.org). Alpine is optimized to produce tiny build to be used in containers.
     - We fix the version of the base image to make sure to not run into compatibility problems.
     - We need to install Python etc. ourselves:

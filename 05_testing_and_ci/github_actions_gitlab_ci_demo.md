@@ -1,35 +1,32 @@
 # Demo: Automation with GitHub Actions and GitLab CI
 
-## To remove: Contents to cover
+## Automation
 
-### Automation
+- Nothing to show
 
-- General terms
-    - What is CI? What is CD? Where is it used?
-    - Common terms: Runner, event, workflow etc.
-    - Configuration examples
+## Preliminary step --- Building a tiny Docker container
 
+Goal: Configure a Docker container useful for our tests. This should show
 
-## What to automatize?
+- why we did introduce Docker before.
+- a common use case of Docker.
+- Show how to make even tinier containers as before. We use Alpine Linux here.
 
-- Checking of code (use `black` style checker)
-- Building (Just print some statement)
-- Testing (running pytest)
-- Coverage report (Run coverage after the test have been run)
+Steps:
 
-## Preliminary step
-
-- Set up a Docker container that contains
+- Skip this if more time is needed
+- Plan: Set up a Docker container that contains
     - `python`, this should include `unittest`
     - `pip` to install packages:
-        - `black`
-    - **Note**: We will use the `coverage` package later, but we will *not* install it here. The package will be our example to show that we can install extra software within the CI.
+        - [`black`](https://github.com/psf/black)
+    - **Note**: The `pytest` package is needed later, but we will *not* install it here. The package will be our example to show that we can install extra software within the CI.
 - Checkout `Dockerfile` in `examples/automation` directory
-    - Image is build on top of [alpine Linux](https://www.alpinelinux.org). Alpine is optimized to produce tiny build to be used in containers.
+    - Image is build on top of [Alpine Linux](https://www.alpinelinux.org). Alpine is optimized to produce tiny build to be used in containers.
     - We fix the version of the base image to make sure to not run into compatibility problems.
     - We need to install Python etc. ourselves:
-        - `python3`, `pip` and Python libraries/packages (`black`, `coverage`)
+        - `python3`, `pip` and Python libraries/packages (`black`)
         - `pip` should be installed and used from a non-root user. Therefore, we create a user called `testuser` and change to this user
+    - Password-less sudo is enabled for the user in case it would be needed to install other packages.
 
 - Build the image locally and tag it according to my DockerHub account name (`ajaust`)
 
@@ -37,17 +34,24 @@
   sudo docker build -t ajaust/automation-lecture .
   ```
 
-- Checkout the image list `sudo docker image list` to point out that the container is reasonably small. During the preparation it was about 72 MB large.
+- Checkout the image list `sudo docker image list` to point out that the container is reasonably small. During the preparation it was about 72 MB large/small. This about the size of the size of the pure Ubuntu base container:
+
+  ```text
+  ubuntu                          20.04        ba6acccedd29   3 months ago   72.8MB
+  ajaust/automation-lecture       latest       a0dec678c941   5 hours ago    71.2MB
+  ```
+
 - Push image to Docker Hub such that we can use it in CI pipelines
 
   ```bash
   sudo docker push ajaust/automation-lecture
   ```
 
+- Now the image can be used as `ajaust/automation-lecture` or `ajaust/automation-lecture:latest`. I did not version the uploaded container.
+
 ## GitHub Actions
 
-
-### First step
+### 1. Setting up a test job
 
 - Go to [repository](https://github.com/Simulation-Software-Engineering/automation-lecture) an check out tag `initial-state`.
 - Create a new branch `lecture-branch`
@@ -60,6 +64,15 @@
   ```
 
 - Run `black` shortly locally and explain what it does.
+
+  ```bash
+  black --check .
+  ```
+
+    - It is a style checker that checks whether the Python files are formatted according to a certain standard.
+    - `black --check .` will check files without modifying them.
+    - `black` uses a lot of smileys
+
 - Edit `testing.yml` to have following content
 
   ```yaml
@@ -87,7 +100,7 @@
     - Hooray. We have set up our first action.
 - Edit `test_operations.py`, break a test, commit it and push it to the repository. Check the failing test.
 
-### Extend Action to have several dependent jobs
+### 2. Extend Action to have several dependent jobs
 
 - Go to tag `github-action-added` or go to `main` branch of the repository. The workflow should have the following content:
 
@@ -131,7 +144,7 @@
   ```
 
 - We need to run `actions/checkout@v2` in each job
-    - We could share the repository between jobs via artifacts
+    - We could share the repository between jobs via artifacts, but that is uncommon.
 - We need to run `actions/setup-python@v2` since jobs do not share the environment
 - We specify dependencies `need` such that the steps run after each other
 - We do not have a real build step since it is Python. However, this might be interesting for compiled code.
@@ -221,9 +234,9 @@ References:
 
 ## GitLab CI
 
-### GitLab Runner
+### 1. GitLab Runner
 
-#### Installation
+#### 1. GitLab Runner Installation
 
 - "Easy" via Docker
 
@@ -243,7 +256,7 @@ References:
 - See also [installation instructions](https://docs.gitlab.com/runner/install/)
 - And more specific [Run GitLab Runner in a container](https://docs.gitlab.com/runner/install/docker.html)
 
-#### Registration
+#### 2. Runner registration
 
 Information needed:
 
@@ -320,7 +333,7 @@ Information needed:
 - More information can be found in the GitLab documentation in section [Registering runners](https://docs.gitlab.com/runner/register/index.html#docker).
 
 
-### Setting up GitLab CI/CD
+### 2. Setting up GitLab CI/CD
 
 - Create/show templates
     - Go to "Repository" -> "+ sign" to add a new file -> New file -> "Select a template type" -> `.gitlab-ci.yml` -> Choose some template
@@ -354,12 +367,13 @@ Information needed:
       - python -m unittest
   ```
 
-- Trigger the pipeline via commit or re-trigger it in GitLab's overview
-- Show different stages and their output
-- Show file in CI/CD editor
+- Trigger the pipeline via commit or re-trigger it in GitLab's overview.
+- Show different stages and their output.
+- Show file in CI/CD editor.
     - GitLab repository -> CI/CD -> Editor
+- The students probably know the emails one gets for broken and fixed pipelines.
 
-### CI with explicit dependencies
+### 3. CI with explicit dependencies
 
 - On can also explicitly declare dependencies between jobs using the `needs` keyword:
 
@@ -393,4 +407,4 @@ Information needed:
       - python -m unittest
   ```
 
-- Having dependencies declared
+- Having dependencies declared allows GitLab to build a graph (DAG) which could allow for more efficient job scheduling.

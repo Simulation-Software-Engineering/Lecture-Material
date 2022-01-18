@@ -260,7 +260,8 @@ References:
 
 Information needed:
 
-- GitLab instance URL
+- Create a new repository on GitLab and push the automation repository there. Ideally this is prepared **before** the lecture.
+- GitLab instance URL. In our case <https://gitlab-sim.informatik.uni-stuttgart.de>
 - There exist different executors
     - We use `docker` executor. This makes it obligatory to specify a default image which can be overwritten in the configuration file of the pipeline.
 - Find **registration token of repository**
@@ -269,7 +270,7 @@ Information needed:
   GitLab repository -> Settings -> CI/CD -> Runners ->  Specific runners
   ```
 
-    - Registration process in detail
+    - Registration process in detail (terminal output)
 
         ```text
         docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register
@@ -336,8 +337,9 @@ Information needed:
 ### 2. Setting up GitLab CI/CD
 
 - Create/show templates
-    - Go to "Repository" -> "+ sign" to add a new file -> New file -> "Select a template type" -> `.gitlab-ci.yml` -> Choose some template
-- Show our `gitlab-ci.yml`
+    - Go to "Repository" -> "+ sign" to add a new file -> New file -> "Select a template type" -> `.gitlab-ci.yml` -> Choose some template. Abort then because we do not want to use any of these templates.
+- Checkout tag `gitlab-ci-added` or `main` branch of [repository](https://github.com/Simulation-Software-Engineering/automation-lecture)
+- Show our `.gitlab-ci.yml`
 
   ```yaml
   stages:

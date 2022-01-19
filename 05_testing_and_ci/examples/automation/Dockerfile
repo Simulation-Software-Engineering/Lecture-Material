@@ -1,3 +1,6 @@
+# Use Alpine Linux to get images of minimal size. Alpine is
+# optimized for containerized applications and normally creates
+# container much smaller than other base images/Linux distributions.
 FROM alpine:3.15.0
 
 # Install Python and make sure that we can call it
@@ -22,6 +25,6 @@ ENV PATH=/home/$USER_NAME/.local/bin:${PATH}
 RUN python -m ensurepip --upgrade \
     && ln -sf /home/$USER_NAME/.local/bin/pip3 /home/$USER_NAME/.local/bin/pip \
     && pip install --upgrade pip
-RUN pip install black
+RUN pip install --user black
 
 CMD ["/bin/sh"]

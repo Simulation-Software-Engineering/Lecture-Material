@@ -49,7 +49,7 @@ slideOptions:
 
 ---
 
-## What "GitHub Actions" is
+## What is "GitHub Actions"?
 
 > Automate, customize, and execute your software development workflows right in your repository with GitHub Actions.
 

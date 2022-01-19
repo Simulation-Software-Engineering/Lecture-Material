@@ -32,251 +32,32 @@ slideOptions:
   }
 </style>
 
-# GitHub Actions and GitLab CI/CD
+# GitLab CI/CD
 
 ---
 
-## Learning Goals
+## Outline of this Demo/Lecture
 
-- Know about two common CI/CD solutions
-- Know how to set up typical automation workflows
-- Know about the differences similarities between GitHub Actions and GitLab CI/CD
-
----
-
-## Goal in this lecture
-
-- Set up simple CI pipeline using GitHub and GitLab
+- Set up simple CI pipeline using GitLab CI/CD
 - Pipeline has three steps
 
     1. Check formatting
     2. Build application
     3. Test application
 
----
-
-## GitHub Actions
-
-> Automate, customize, and execute your software development workflows right in your repository with GitHub Actions.
-> [From: https://docs.github.com/en/actions](https://docs.github.com/en/actions)
+- Reuse code of Python testing lecture
 
 ---
 
-## General information (GitHub Actions)
-
-- Usage is [limited](https://docs.github.com/en/actions/learn-github-actions/usage-limits-billing-and-administration#usage-limits) for GitHub's runners
-- Available for public repositories or accounts with subscription
-- By default Actions run on GitHub's runners
-    - Linux, Windows or MacOS
-
----
-
-## Components (1/2)
-
-- [Workflow](https://docs.github.com/en/actions/using-workflows): Runs one or more jobs
-- [Event](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows): Triggers a workflow
-- [Jobs](https://docs.github.com/en/actions/using-jobs): Set of steps of a workflow (same runner).
-    - Steps executed consecutively and share data
-    - Jobs by default executed in parallel
-- [Action](https://docs.github.com/en/actions/creating-actions): Application performing common, complex task
-- [Runner](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#runners): Server that runs jobs
-- [Artifacts](https://docs.github.com/en/actions/learn-github-actions/essential-features-of-github-actions#sharing-data-between-jobs): Files to be shared between jobs or to be kept after workflow finishes
-
----
-
-## Components (2/2)
-
-<img src="https://docs.github.com/assets/cb-25628/images/help/images/overview-actions-simple.png" width=95%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px; background: #eeeeee">
-
-
-From [GitHub Actions tutorial](https://docs.github.com/en/actions)
-
----
-
-## Setting up a workflow (GitHub Actions)
-
-- Workflow file files stored `${REPO_ROOT}/.github/workflows`
-- Configured via YAML file
-- Keep an eye on changes by contributors
-
-```yaml
-name: learn-github-actions
-on: [push]
-jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
-```
-
----
-
-## Actions
-
-```yaml
-- uses: actions/checkout@v2
-- uses: actions/setup-node@v2
-  with:
-    node-version: '14'
-```
-
-- Integrated via `uses` directive
-- Additional configuration via `with` (options depend on Action)
-- Find action in [marketplace](https://github.com/marketplace?type=actions)
-- Write [own action](https://docs.github.com/en/actions/creating-actions)
-
----
-
-## (Environment) Variables (GitHub Actions)
-
-```yaml
-jobs:
-  weekday_job:
-    runs-on: ubuntu-latest
-    env:
-      DAY_OF_WEEK: Mon
-    steps:
-      - name: "Hello world when it's Monday"
-        if: ${{ env.DAY_OF_WEEK == 'Mon' }}
-        run: echo "Hello $FIRST_NAME $middle_name $Last_Name, today is Monday!"
-        env:
-          FIRST_NAME: Mona
-          middle_name: The
-          Last_Name: Octocat
-```
-
----
-
-## User-specified commands (GitHub Actions)
-
-```yaml
-- name: Single line command
-  run: echo "Single line command"
-- name: Multi line command
-  run: |
-    echo "First line"
-    echo "Second line. Directory ${PWD}"
-  workdir: tmp/
-  shell: bash
-```
-
----
-
-## Workflow triggers (GitHub Actions)
-
-- Single or multiple events
-
-  ```yaml
-  on: [push, fork]
-  ```
-
-- Activities
-
-  ```yaml
-  on:
-    issue:
-      types:
-        - opened
-        - labeled
-  ```
-
-- Filters
-
-  ```yaml
-  on:
-    push:
-      branches:
-        - main
-        - 'releases/**'
-  ```
-
----
-
-## Expressions (GitHub Actions)
-
-```yaml
-steps:
-  - uses: actions/hello-world-javascript-action@v1.1
-    if: ${{ <expression> }}
-    env:
-      MY_ENV_VAR: ${{ <another_expression> }}
-```
-
----
-
-## Artifacts (GitHub Actions)
-
-- Data sharing between jobs and data upload
-- Uploading artifact
-
-  ```yaml
-  - name: 'Upload Artifact'
-    uses: actions/upload-artifact@v2
-    with:
-      name: my-artifact
-      path: my_file.txt
-      retention-days: 5
-  ```
-
-- Downloading artifact
-
-  ```yaml
-  - name: Download a single artifact
-    uses: actions/download-artifact@v2
-    with:
-      name: my-artifact
-  ```
-
-  **Note**: Drop name to download all artifacts.
-
----
-
-## Test actions locally
-
-- [act](https://github.com/nektos/act)
-- Relies extensively on Docker
-    - User should be in `docker` group
-- Run `act` from root of the repository
-
-  ```text
-  act (runs all workflows)
-  act --job WORKFLOWNAME
-  ```
-
-- Environment is not 100% identical to GitHub's
-    - Workflows may fail locally, but work on GitHub
-
----
-
-## Demo: GitHub Actions
-
----
-
-## Advanced topics (GitHub Actions)
-
-- [Self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners)
-- [Secrets and tokes](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
-- [Continuous deployment](https://docs.github.com/en/actions/deployment/about-deployments/about-continuous-deployment)
-- [Custom Actions](https://docs.github.com/en/actions/creating-actions/about-custom-actions)
-- [Build matrices](https://docs.github.com/en/actions/using-workflows/advanced-workflow-features#using-a-build-matrix)
-- Using own Docker containers
-
----
-
-## GitLab CI/CD
+## What is "GitLab CI/CD"?
 
 > GitLab CI/CD is a tool for software development using the continuous methodologies:
->
-> From [homepage](https://docs.gitlab.com/ee/ci/)
+
+From: [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)
 
 ---
 
-## General information (GitLab CI/CD)
+## General Information
 
 - GitLab's integration automation tool
 - Powerful runners
@@ -293,7 +74,7 @@ steps:
     - SSH, Shell, Docker...
 - Installation is simple
     - Can also run as Docker service
-- Allows reuse existing hardware
+- Allows reusing existing hardware
 - On [GitLab.com](https://about.gitlab.com/) preconfigured runners available
 
 ---
@@ -305,9 +86,9 @@ steps:
 
 ---
 
-## Components (GitLab CI/CD, 1/2)
+## Components (1/2)
 
-- [Pipelines](https://docs.gitlab.com/ee/ci/pipelines/index.html): Collection one or more jobs
+- [Pipelines](https://docs.gitlab.com/ee/ci/pipelines/index.html): Collection of one or more jobs
 - [Jobs](https://docs.gitlab.com/ee/ci/jobs/): Set of steps of a pipeline (same runner).
     - Jobs in one stage my be executed in parallel
 - Stages: Group jobs and determine running order
@@ -317,7 +98,7 @@ steps:
 
 ---
 
-## Components (GitLab CI/CD, 2/2)
+## Components (2/2)
 
 <img src="https://docs.gitlab.com/ee/ci/pipelines/img/manual_pipeline_v14_2.png" width=95%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px; background: #eeeeee">
 
@@ -325,11 +106,10 @@ From [GitLab CI/CD tutorial](https://docs.gitlab.com/ee/ci/pipelines/index.html)
 
 ---
 
-## Setting up a workflow (GitLab CI/CD)
+## Setting up a Workflow/Pipeline
 
-- Workflow file files stored `${REPO_ROOT}/.gitlab-ci.yml`
+- Workflow file stored in `${REPO_ROOT}/.gitlab-ci.yml`
 - Configured via YAML file
-- Keep an eye on changes by contributors
 - Example for a [basic pipeline](https://docs.gitlab.com/ee/ci/pipelines/pipeline_architectures.html#basic-pipelines):
 
 ```yaml
@@ -348,17 +128,17 @@ build job:
 test job:
   stage: test
   script:
-    - echo "This job tests something. It will only run when all jobs in the"
+    - echo "This job tests something. It will only run when all jobs in the build stage are complete."
 
 deploy job:
   stage: deploy
   script:
-    - echo "This job deploys something. It will only run when all jobs in the"
+    - echo "This job deploys something. It will only run when all jobs in the test stage complete."
 ```
 
 ---
 
-## (Environment) Variables (GitLab CI/CD)
+## (Environment) Variables
 
 - Can be set in [different scopes](https://docs.gitlab.com/ee/ci/variables/)
 
@@ -377,7 +157,7 @@ deploy job:
 
 ---
 
-## User-specified commands (GitLab CI/CD)
+## User-specified Commands
 
 - Commands are given as a list
 
@@ -393,7 +173,7 @@ deploy job:
 
 ---
 
-## Expressions (GitLab CI/CD)
+## Expressions
 
 - Expression evaluation similar to shell
 
@@ -409,7 +189,7 @@ deploy job:
 
 ---
 
-## Artifacts (GitLab CI/CD)
+## Artifacts
 
 - Data sharing between jobs and data upload
 - Uploading artifact
@@ -437,7 +217,7 @@ deploy job:
 
 ---
 
-## Workflow "triggers" (GitLab CI/CD)
+## Workflow "Triggers"
 
 - By default pipelines are created for every commit
 - Filtering by type of events
@@ -471,8 +251,7 @@ deploy job:
 
 ---
 
-
-## Advanced topics (GitLab CI/CD)
+## Advanced Topics
 
 - Complex pipelines, e.g.,
     - [Directed Acyclic Graph](https://docs.gitlab.com/ee/ci/directed_acyclic_graph/)
@@ -496,8 +275,6 @@ deploy job:
 
 ## Further reading
 
-- [GitHub Actions documentation](https://docs.github.com/en/actions)
-- [GitHub Actions quickstart](https://docs.github.com/en/actions/quickstart)
 - [GitLab CI/CD documentation](https://docs.gitlab.com/ee/ci/)
 - [GitLab Runner documentation](https://docs.gitlab.com/runner/)
 - [GitLab `gitlab-ci.yml` reference](https://docs.gitlab.com/ee/ci/yaml/)

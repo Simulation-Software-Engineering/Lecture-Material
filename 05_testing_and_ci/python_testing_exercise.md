@@ -109,9 +109,9 @@ pytest tests/unit/test_diffusion2d_functions.py
     - Compare the value of the member variable `dt` with the manually computed `dt` using an assertion statement.
 - Now also write a similar integration test for `set_initial_conditions`. Note that this will be the most extensive test from the whole set. The field variable `u` is computed in `set_initial_conditions`, which is a 2D array. The test should have a computation which computes a similar `u` array for a user-defined set of initial parameters. This computed `u` is the expected result.
 - Using the same logic as in the previous steps, intentionally break the tests to make sure that the tests are constructed correctly.
-- **Important step**: A failing test in unittest will produce an output log in the terminal. Copy this output log in a code block in the `README.md` file under the section *Integration test log*. This log output will be part of the submission and hence is important.
-- Purposely break all the unit tests and copy the failing tests logs into the aforementioned section in the README file.
-- Before moving on from the unit tests, make sure that you have reverted all the intentionally introduced bugs in the original code.
+- **Important step**: A failing test in integration test will produce an output log in the terminal. Copy this output log in a code block in the `README.md` file under the section *Integration test log*. This log output will be part of the submission and hence is important.
+- Purposely break all the integration tests and copy the failing tests logs into the aforementioned section in the README file.
+- Before moving on from the integration tests, make sure that you have reverted all the intentionally introduced bugs in the original code.
 
 ## BONUS Step 6 - Checking test coverage
 

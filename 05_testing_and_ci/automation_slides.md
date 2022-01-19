@@ -36,10 +36,14 @@ slideOptions:
 
 ---
 
-## Learning goals
+## Learning Goals
 
-- How to automate common workflows.
-- How to use built-in automation of GitHub and GitLab.
+- What continuous methodologies are.
+- Why to automate common workflows.
+- What are common workflows to automate.
+- How to automate common workflows with
+    - GitHub Actions
+    - GitLab CI/CD
 
 ---
 
@@ -50,23 +54,24 @@ slideOptions:
     - Cannot forget automatized tasks
     - Less burden to developer
     - Running predefined workflows/pipelines is simple
+    - Ensure reproducible test environments
 - Process often integrated in development workflow
     - Example: Support by hooks or Git forges
 
 ---
 
-## Typical tasks
+## Typical Tasks
 
-- Compile code for different platforms
-- Run tests periodically
-- Check code in pull request
-- Build documentation
-- Deploy homepage after changes to source
-- Generate coverage reports
+- Check code formatting and quality
+- Compile and test code for different platforms
+- Periodically run tasks
+    - Big tests, nightly builds...
+- Build documentation and deploy it
+- Generate coverage reports and visualization
 
 ---
 
-## Common practices (1/2)
+## Common Practices (1/2)
 
 - **Continuous Integration** (CI)
     - Continuously integrate changes into "main" branch.
@@ -76,7 +81,7 @@ slideOptions:
 
 ---
 
-## Common practices (2/2)
+## Common Practices (2/2)
 
 - **Continuous Delivery** (CD)
     - Software is in a state that allows new release at any time
@@ -89,7 +94,7 @@ slideOptions:
 
 ---
 
-## Automation services/software
+## Automation Services/Software
 
 - [GitHub Actions](https://github.com/features/actions)
 - [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
@@ -100,7 +105,7 @@ slideOptions:
 
 ---
 
-## Further reading
+## Further Reading
 
 - [GitHub Actions documentation](https://docs.github.com/en/actions)
 - [GitLab CI/CD documentation](https://docs.gitlab.com/ee/ci/)

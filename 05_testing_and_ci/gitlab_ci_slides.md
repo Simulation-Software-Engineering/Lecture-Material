@@ -62,9 +62,9 @@ From: [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)
 - GitLab's integration automation tool
 - Powerful runners
 - Checks out Git repository by default
-- Slightly different meaning of "trigger"
+- Slightly different use of "trigger"
     - GitHub: What triggers an action/workflow
-    - GitLab: What should a pipeline trigger
+    - GitLab: What should a pipeline trigger and what triggers a pipeline
 
 ---
 
@@ -75,7 +75,7 @@ From: [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)
 - Installation is simple
     - Can also run as Docker service
 - Allows reusing existing hardware
-- On [GitLab.com](https://about.gitlab.com/) preconfigured runners available
+- Preconfigured runners available on [gitlab.com](https://about.gitlab.com/)
 
 ---
 
@@ -89,7 +89,7 @@ From: [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)
 ## Components (1/2)
 
 - [Pipelines](https://docs.gitlab.com/ee/ci/pipelines/index.html): Collection of one or more jobs
-- [Jobs](https://docs.gitlab.com/ee/ci/jobs/): Set of steps of a pipeline (same runner).
+- [Jobs](https://docs.gitlab.com/ee/ci/jobs/): Set of steps of a pipeline (same runner)
     - Jobs in one stage my be executed in parallel
 - Stages: Group jobs and determine running order
 - [Runner](https://docs.gitlab.com/runner/): Server that runs jobs

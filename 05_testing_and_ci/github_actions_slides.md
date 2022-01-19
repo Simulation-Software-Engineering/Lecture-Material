@@ -63,7 +63,7 @@ From: [https://docs.github.com/en/actions](https://docs.github.com/en/actions)
 - Available for public repositories or accounts with subscription
 - By default Actions run on GitHub's runners
     - Linux, Windows or MacOS
-- Quickly evolving and significant improvements the recent years
+- Quickly evolving and significant improvements in recent years
 
 ---
 
@@ -71,7 +71,7 @@ From: [https://docs.github.com/en/actions](https://docs.github.com/en/actions)
 
 - [Workflow](https://docs.github.com/en/actions/using-workflows): Runs one or more jobs
 - [Event](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows): Triggers a workflow
-- [Jobs](https://docs.github.com/en/actions/using-jobs): Set of steps of a workflow (same runner).
+- [Jobs](https://docs.github.com/en/actions/using-jobs): Set of steps of a workflow (same runner)
     - Steps executed consecutively and share data
     - Jobs by default executed in parallel
 - [Action](https://docs.github.com/en/actions/creating-actions): Application performing common, complex task (step) often used in workflows
@@ -227,7 +227,7 @@ steps:
       name: my-artifact
   ```
 
-  **Note**: Drop name to download all artifacts.
+  **Note**: Drop name to download all artifacts
 
 ---
 

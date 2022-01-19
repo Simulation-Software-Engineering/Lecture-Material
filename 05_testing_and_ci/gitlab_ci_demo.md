@@ -1,4 +1,4 @@
-# Demo: GitLab CI
+# Demo: GitLab Runner and GitLab CI/CD
 
 ## 1. GitLab Runner
 
@@ -26,7 +26,8 @@
 
 Information needed:
 
-- Create a new repository on GitLab and push the automation repository there. Ideally this is prepared **before** the lecture.
+- Go to fresh [automation lecture repository](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/automation-lecture) on our GitLab instance.
+- Show that there are currently pipelines with the label "stuck". I have added the repository which contains a valid GitLab CI/CD configuration while there are/were no runners assigned.
 - GitLab instance URL. In our case <https://gitlab-sim.informatik.uni-stuttgart.de>
 - There exist different executors
     - We use `docker` executor. This makes it obligatory to specify a default image which can be overwritten in the configuration file of the pipeline.
@@ -98,7 +99,6 @@ Information needed:
 
 - Information on [executors and their abilities](https://docs.gitlab.com/runner/executors/)
 - More information can be found in the GitLab documentation in section [Registering runners](https://docs.gitlab.com/runner/register/index.html#docker).
-
 
 ## 2. Setting up GitLab CI/CD
 

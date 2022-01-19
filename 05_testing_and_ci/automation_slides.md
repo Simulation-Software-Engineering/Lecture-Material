@@ -38,9 +38,9 @@ slideOptions:
 
 ## Learning Goals
 
-- What continuous methodologies are.
-- Why to automate common workflows.
-- What are common workflows to automate.
+- What are continuous methodologies
+- Why to automate common workflows
+- What are common workflows to automate
 - How to automate common workflows with
     - GitHub Actions
     - GitLab CI/CD
@@ -52,11 +52,11 @@ slideOptions:
 - Automatize tasks
     - Run tests frequently, give feedback early etc.
     - Cannot forget automatized tasks
-    - Less burden to developer
+    - Less burden to developer (and their workstation)
     - Running predefined workflows/pipelines is simple
     - Ensure reproducible test environments
 - Process often integrated in development workflow
-    - Example: Support by hooks or Git forges
+    - Example: Support by Git hooks or Git forges
 
 ---
 

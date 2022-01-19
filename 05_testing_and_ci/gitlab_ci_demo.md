@@ -116,22 +116,21 @@ Information needed:
   image: ajaust/automation-lecture
 
   check_code:
-  stage: check
-  script:
+    stage: check
+    script:
       - echo "This job builds something quickly."
       - black --check .
 
   build_code:
-  stage: build
-  variables:
+    stage: build
+    variables:
       PROJECT_NAME: "Automation Lecture"
-  script:
+    script:
       - echo "Building project $PROJECT_NAME"
 
   test_code:
-  stage: test
-  script:
-      - pip install --user  pytest
+    stage: test
+    script:
       - python -m unittest
   ```
 
@@ -147,31 +146,30 @@ Information needed:
 
   ```yaml
   stages:
-  - check
-  - build
-  - test
+    - check
+    - build
+    - test
 
   image: ajaust/automation-lecture
 
   check_code:
-  stage: check
-  script:
+    stage: check
+    script:
       - echo "This job builds something quickly."
       - black --check .
 
   build_code:
-  stage: build
-  needs: [check_code]
-  variables:
+    stage: build
+    needs: [check_code]
+    variables:
       PROJECT_NAME: "Automation Lecture"
-  script:
+    script:
       - echo "Building project $PROJECT_NAME"
 
   test_code:
-  stage: test
-  needs: [build_code]
-  script:
-      - pip install --user  pytest
+    stage: test
+    needs: [build_code]
+    script:
       - python -m unittest
   ```
 

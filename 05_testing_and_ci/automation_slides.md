@@ -43,7 +43,7 @@ slideOptions:
 
 ---
 
-## Introduction
+## Why Automation?
 
 - Automatize tasks
     - Run tests frequently, give feedback early etc.

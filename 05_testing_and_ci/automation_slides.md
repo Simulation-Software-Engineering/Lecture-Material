@@ -38,8 +38,8 @@ slideOptions:
 
 ## Learning goals
 
-- Know how to automate common workflows.
-- Know how to use built-in automation of GitHub and GitLab.
+- How to automate common workflows.
+- How to use built-in automation of GitHub and GitLab.
 
 ---
 

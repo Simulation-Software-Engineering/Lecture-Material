@@ -44,7 +44,7 @@ In this subtask you should implement the workflow as GitHub Action.
 In this subtask you should implement the workflow using GitLab and add a GitLab Runner to your repository.
 
 - Create a **fork** of the GitLab repository [automation exercise repository (TODO: Update link)](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/automation-exercise).
-- Install GitLab Runner on your machine and register a runner for your repository/fork. Ideally, it should be a runner that can work with the `docker` executor and is able to run Linux images. You can find the [detailed installation instructions](https://docs.gitlab.com/runner/install/). It is usually easiest to run install GitLab Runner as [Docker container](https://docs.gitlab.com/runner/install/docker.html).
+- Install GitLab Runner on your machine and register a runner for your repository/fork. Ideally, it should be a runner that can work with the `docker` executor and is able to run Linux images. You can find the [detailed installation instructions](https://docs.gitlab.com/runner/install/). It is usually easiest to run install GitLab Runner as [Docker service](https://docs.gitlab.com/runner/install/docker.html).
 
   If you cannot add such a runner on your machine, please sent an email with the registration token and your GitLab username to [alexander.jaust@ipvs.uni-stuttgart.de](mailto:alexander.jaust@ipvs.uni-stuttgart.de). We will add a runner to your repository/fork.
 

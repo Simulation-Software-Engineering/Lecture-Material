@@ -29,7 +29,7 @@ apt-get install -y docker-ce docker-ce-cli containerd.io
 # vagrant up
 #
 # after the setup finished. The `docker` commands below
-# work since we have super user # right during the
+# work since we have super user rights during the
 # bootstrapping.
 usermod -aG docker vagrant
 

@@ -21,8 +21,6 @@ echo \
 apt-get update
 apt-get install -y docker-ce docker-ce-cli containerd.io
 
-
-
 # Add user to docker group for sudoless Docker
 # Note: The change in usergroup is only picked up after
 # the VM has been stopped and restarted, i.e., run

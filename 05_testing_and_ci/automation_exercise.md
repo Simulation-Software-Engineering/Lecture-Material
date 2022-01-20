@@ -47,7 +47,7 @@ In this subtask you should implement the workflow using GitLab CI and add a GitL
 - Create a **fork** of the GitLab repository [automation exercise repository (TODO: Update link)](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/automation-exercise).
 - Install GitLab Runner on your machine and register a runner for your repository/fork. The runner should support the `docker` executor and should be able to run Linux images since you should use a Linux Docker image in this exercise. Have a look at the [detailed installation instructions](https://docs.gitlab.com/runner/install/). It is usually easiest to install GitLab Runner as [Docker service](https://docs.gitlab.com/runner/install/docker.html) as shown in the exercise.
 
-  If you cannot add such a runner on your machine, please sent an email with the registration token and your GitLab username to [alexander.jaust@ipvs.uni-stuttgart.de](mailto:alexander.jaust@ipvs.uni-stuttgart.de). We will add a runner to your repository/fork.
+  If you cannot add such a runner on your machine, please sent an email with the registration token and your GitLab username to [alexander.jaust@ipvs.uni-stuttgart.de](mailto:alexander.jaust@ipvs.uni-stuttgart.de). We will then add a runner to your repository/fork.
 
 - Set up the GitLab pipeline to run the checks, tests, and to create the coverage report.
     - The pipeline should have three jobs (`style_check`, `test`, `coverage_report`). Each of these jobs should carry out the corresponding step described in [Task descriptions](## Task descriptions).

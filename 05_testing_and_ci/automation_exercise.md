@@ -59,7 +59,7 @@ In this subtask you should implement the workflow using GitLab CI and add a GitL
 - Add a [GitLab pipeline status badge](https://docs.gitlab.com/ee/user/project/badges.html) to the project that is based on your pipeline and the main branch. You do not have to add the badge to the `README.md` as it is added automatically to the repository.
     - Label this badge with "SSE CI/CD".
     - Follow the suggestions for "Link" and "Badge image URL", but replace `https://gitlab.com` by `https://gitlab-sim.informatik.uni-stuttgart.de`.
-- Submit your solution via a merge request. If you are opening the merge request before you are finished, please mark it as draft.
+- Submit your solution via a merge request. If you open the merge request before you finished the exercise, please mark it as draft.
     - Create an issue in the [automation exercise repository (TODO: Update link)](https://gitlab-sim.informatik.uni-stuttgart.de/sse-test-group/automation-exercise).
     - The issue should be named `[USERNAME] GitLab CI/CD exercise`, e.g., `[jaustar] GitLab CI/CD exercise`. Please use the GitLab username here.
 

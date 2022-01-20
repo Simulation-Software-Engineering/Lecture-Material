@@ -21,7 +21,7 @@ In this subtask you should implement the workflow as GitHub Action.
 
 - Create a new repository named "sse-github-actions-exercise" in your own account/namespace on GitHub (with an empty README file) and clone the repository afterwards. Similar to the documentation exercise you have to work on the repository in your own GitHub namespace.
 
-  **Note**: In this exercise you **should not work with forks** because GitHub Actions may not work in pull requests without explicit approval of the owner of the target repository. It is also easier to add badges (see below) to the `README.md` if the repository is under your control.
+  **Note**: In this part of the exercise you **should not work with forks** because GitHub Actions may not work in pull requests without explicit approval of the owner of the target repository. It is also easier to add badges (see below) to the `README.md` if the repository is under your control.
 - Add the contents of the [automation exercise repository (TODO: Update link)](https://github.com/Simulation-Software-Engineering/automation-exercise-preparation) to your own repository. You can do this by copying the files into your own repository, adding and committing them to Git. Afterwards push the changes to GitHub and verify that your repository contains the same files as the `automation-exercise` repository.
 
   **Note**: If you use another way of adding the data to your repository, e.g., by defining a new remote, make sure that the `origin` remote points to your own repository.

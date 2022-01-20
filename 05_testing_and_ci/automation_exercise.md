@@ -69,7 +69,7 @@ If you have worked on any of the optional tasks, please mention this in the corr
 
 ### GitHub
 
-- Extend your submission of [documentation tools exercise](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/tools_exercise.md). There are several ways one can extend the submission:
+- Extend your submission of the [documentation tools exercise](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/tools_exercise.md). There are several ways one can extend the submission:
     - Add a [GitHub action](https://github.com/marketplace/actions/deploy-mkdocs) to automatically deploy your documentation every time a change is pushed to the `main` branch.
     - Add an action that checks the style of the markdown files.
     - Add an action that checks that all links of your homepage/markdown files are valid.

@@ -1,6 +1,6 @@
 # Automating workflows with GitHub Actions and GitLab CI
 
-In this exercise sheet you create automated workflows and pipelines based on GitHub Actions and GitLab CI. At the end of the exercise you find a section with hints and remarks. Make sure to check this section.
+In this exercise sheet you create automated workflows and pipelines based on GitHub Actions and GitLab CI. At the end of the exercise you find a section with hints and remarks.
 
 Deadline: **Thursday, January 27th, 2022, 9:00**
 

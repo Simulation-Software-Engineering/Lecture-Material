@@ -4,7 +4,7 @@
 
 ### 1. GitLab Runner Installation
 
-- "Easy" via Docker
+- Installing GitLab Runner via Docker is simple. It can be done via the following command
 
   ```bash
   docker run -d --name gitlab-runner --restart always \
@@ -12,6 +12,13 @@
            -v /var/run/docker.sock:/var/run/docker.sock \
            gitlab/gitlab-runner:latest
   ```
+
+  **Note**: The paths are correct for Linux and might be different for MacOS or Windows. Please checkout the Docker documentation ith is case.
+
+    - `docker run -d --name gitlab-runner --restart always` runs the container in the background (`-d` means detached) names it `gitlab-runner` and makes sure that it always runs. The container is automatically restarted once it stops/crashes. If you want to stop the container, you have to stop it manually (`docker container stop`).
+    - `-v /srv/gitlab-runner/config:/etc/gitlab-runner` mounts the directory `/srv/gitlab-runner/config` into the container. Check the directory `/srv/gitlab-runner/config` on the Host to find a GitLab Runner configuration file (`config.toml`).
+    - `-v /var/run/docker.sock:/var/run/docker.sock` mounts important Docker files into the container such that the container can start other containers (for pipelines).
+    - `gitlab/gitlab-runner:latest` is the GitLab Runner image used from Docker Hub.
 
 - Stores configuration on you local machine
 
@@ -26,11 +33,11 @@
 
 Information needed:
 
-- Go to fresh [automation lecture repository](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/automation-lecture) on our GitLab instance.
-- Show that there are currently pipelines with the label "stuck". I have added the repository which contains a valid GitLab CI/CD configuration while there are/were no runners assigned.
+- Go to [automation lecture repository](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/automation-lecture) on our GitLab instance.
+- Show that there are currently pipelines with the label "stuck". I have added the repository which contains a valid GitLab CI/CD configuration while there are/were no runners assigned. If the pipelines failed, they are not labeled as "stuck". In this case one can restart the pipeline manually (without any active runner) to get he pipeline back into the "stuck" status.
 - GitLab instance URL. In our case <https://gitlab-sim.informatik.uni-stuttgart.de>
 - There exist different executors
-    - We use `docker` executor. This makes it obligatory to specify a default image which can be overwritten in the configuration file of the pipeline.
+    - We use `docker` executor. This makes it obligatory to specify a default Docker to use. This image will be used for pipelines that do not specify any Docker image themselves. The image can be overwritten in the configuration file of the pipeline.
 - Find **registration token of repository**
 
   ```text

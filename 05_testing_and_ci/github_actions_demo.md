@@ -12,16 +12,6 @@
   touch testing.yml
   ```
 
-- Run `black` shortly locally and explain what it does.
-
-  ```bash
-  black --check .
-  ```
-
-    - It is a style checker that checks whether the Python files are formatted according to a certain standard.
-    - `black --check .` will chececify dependencik files without modifying them.
-    - `black` uses a lot of smileys
-
 - Edit `testing.yml` to have following content
 
   ```yaml
@@ -41,8 +31,8 @@
           run: python -m unittest
   ```
 
-- `runs-on` does **not** refer to a Docker container, but to runner tag.
-- After the push inspect "Action" panel on GitHub repository
+- `runs-on` does **not** refer to a Docker container, but to a runner tag.
+- After the push, inspect "Action" panel on GitHub repository
     - GitHub will schedule a run (yellow dot)
     - Hooray. We have set up our first action.
 - Failing test example:
@@ -53,7 +43,7 @@
             - `style`, `build`, `test`
         - Click on "Create" at bottom of page.
     - Create a new branch `break-code`.
-    - Edit `operations.py`, break a code, commit it and push it to the repository. Check the failing test.
+    - Edit `operations.py`, break the code, commit it and push it to the branch. Afterwards open a new PR and inspect the failing test. We are also not able to merge the changes as the "Merge" button should be inactive.
 
 ## 2. Extend Action to Have Several Dependent Jobs
 

@@ -83,7 +83,7 @@ If you have worked on any of the optional tasks, please mention this in the corr
 
 ## Hints and remarks
 
-- If you get unexpected error like
+- If you get unexpected errors like
 
   ```text
   jobs style job config should implement a script: or a trigger: keyword

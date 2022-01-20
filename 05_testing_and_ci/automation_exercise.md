@@ -35,7 +35,7 @@ In this subtask you should implement the workflow as GitHub Action.
 - Add a [GitHub workflow status badge](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge) to the README that is based on your workflow and the main branch.
     - Label this badge with "SSE CI/CD".
 
-- Submit your solution via an issue. You cannot submit a pull request since you cannot use a fork in the exercise. You can also add the issue before you are done in order to ask questions. If you are opening an issue before you are finished, please add comment in the issue mentioning that it is "work in progress". When you are finished, please add another comment that the issue (or rather your repository) is "ready for review".
+- Submit your solution via an issue. You cannot submit a pull request since you cannot use a fork in the exercise. You can also add the issue before you are done in order to ask questions. If you are opening an issue before you are finished, please add a comment in the issue mentioning that it is "work in progress". When you are finished, please add another comment that the issue (or rather your repository) is "ready for review".
     - Create an issue in the [automation exercise repository (TODO: Update link)](https://github.com/Simulation-Software-Engineering/automation-exercise-preparation).
     - The issue should be named `[USERNAME] GitHub Actions exercise`, e.g., `[jaustar] GitHub Actions exercise`. Please use the GitLab username here.
     - Please add a link to your GitHub repository.

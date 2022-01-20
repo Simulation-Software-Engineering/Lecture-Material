@@ -6,7 +6,7 @@ Deadline: **Thursday, January 27th, 2022, 9:00**
 
 ## Task descriptions
 
-The CI workflow consists of the three steps
+The CI workflow consists of the three steps:
 
 1. Check code style using `black` on the Python files in the repository.
 2. Run tests while also collecting coverage information via `pytest` and the `coverage` package. The coverage information (stored in the file `.coverage`) has to be stored and handed over to the next step.

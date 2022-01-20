@@ -29,7 +29,7 @@ In this subtask you should implement the workflow as GitHub Action.
 - Set up the GitHub Action to run the checks, tests, and to create the coverage report.
     - The action should have three jobs (`style_check`, `test`, `coverage_report`). Each of these jobs should carry out the corresponding step described in [Task descriptions](## Task descriptions).
     - The action should be triggered by `push` events.
-    - The intermediate coverage information (`.coverage`) should be kept for one day. This is the minimum amount of time the artifact must be stored.
+    - The intermediate coverage information (`.coverage`) should be kept for one day. This is the minimum amount of time an artifact must be stored.
     - Make sure that in each job all of the needed Python dependencies are installed (for testing and for running the code) within the action. If you forgot, what the dependencies were, check out the [Python testing exercise sheet](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_exercise.md).
 
 - Add a [GitHub workflow status badge](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge) to the README that is based on your workflow and the main branch.

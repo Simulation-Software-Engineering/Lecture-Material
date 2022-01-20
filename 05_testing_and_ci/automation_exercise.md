@@ -65,7 +65,7 @@ In this subtask you should implement the workflow using GitLab CI and add a GitL
 
 ## Optional tasks
 
-If you have worked on any of the optional tasks, please mention this in the corresponding issue and merge request.
+If you have worked on any of the optional tasks, please mention this in the corresponding issue or merge request.
 
 ### GitHub
 

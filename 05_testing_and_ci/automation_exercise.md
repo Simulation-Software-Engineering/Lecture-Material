@@ -10,7 +10,7 @@ The CI workflow consists of the three steps:
 
 1. Check code style using `black` on the Python files in the repository.
 2. Run tests while also collecting coverage information via `pytest` and the `coverage` package. The coverage information (stored in the file `.coverage`) has to be stored and handed over to the next step.
-3. Create a coverage report (`coverage report`) in the terminal and convert the coverage information into the XML format (`coverage xml`). For this you have to reuse the coverage information (i.e. `.coverage`) from the previous step. The resulting file `coverage.xml` should be kept for 14 days.
+3. Create a coverage report (`coverage report`) in the terminal and afterwards also convert the coverage information into XML format (`coverage xml`). For this you have to reuse the coverage information (i.e. `.coverage`) from the previous step. The resulting file `coverage.xml` should be kept for 14 days.
     - Running `coverage report` allows us to inspect the coverage directly in the workflow's output. Saving the XML file allows us to analyze the coverage in more detail with other tools if needed.
 
 Once the workflow runs successfully, add a badge for your pipeline/workflow to the `README.md`/repository.

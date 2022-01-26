@@ -1,6 +1,4 @@
-# Boost.Test and CTest for Testing C++ Codes
-
-## Hello World
+# Introduction to Boost.Test – Hello World Demo
 
 ```cpp
 #define BOOST_TEST_MODULE Hello World Test
@@ -14,10 +12,10 @@ BOOST_AUTO_TEST_CASE(SomeTest)
 ```
 
 - explain code
-  - uses UTF in header-only mode (can also be used as library, more later)
-  - UTF defines `main` function for us (could also be done manually)
-  - give name to `BOOST_TEST_MODULE`
-  - single test case, which is added automatically with `AUTO` (could also be done manually)
+    - uses UTF in header-only mode (can also be used as library, more later)
+    - UTF defines `main` function for us (could also be done manually)
+    - give name to `BOOST_TEST_MODULE`
+    - single test case, which is added automatically with `AUTO` (could also be done manually)
 - build: `g++ -o test helloWorldTest.cpp`
 - run: `./test`
 - inspect: `./test --help` and `./test --list_content` (`*` means that a testcase is active)

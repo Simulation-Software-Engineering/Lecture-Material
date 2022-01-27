@@ -8,7 +8,7 @@ Deadline: **Thursday, February 3rd, 2022, 09:00**
 
 - Similar to last week, we again need a *copy* of the exercise repository as we cannot easily add automation on forks. Go to GitHub and click on the "+" in the right corner. Choose "import repository". As *old* repository use `https://github.com/Simulation-Software-Engineering/testing-boost-exercise`, use `testing-boost-exercise` as new name, and make the repository public.
 - Create a new branch `extend-tests` from `main` and work in this branch.
-- To submit, open a PR from `extend-tests` to `main` and paste a link to the PR in a new issue in the original repo. Use `[GITLAB-USERNAME] Boost test exercise` as title of the issue.
+- To submit, open a PR from `extend-tests` to `main` in your own repository. Then paste a link to this PR in a new issue in the original repository. Use `[GITLAB-USERNAME] Boost test exercise` as title of the issue.
 
 ## Task Descriptions
 

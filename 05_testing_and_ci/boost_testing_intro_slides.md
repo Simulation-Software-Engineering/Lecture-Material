@@ -50,7 +50,7 @@ slideOptions:
 
 - Part of Boost (we have already seen other Boost libraries: `filesystem`, `container`)
 - Powerful unit test framework
-- Sometimes called (the) **Unit Test Framework** or **Boost.Test**
+- Sometimes called (the) **Unit Test Framework** (UTF) or **Boost.Test**
     - Valid on all slides: `namespace utf = boost::unit_test;`
 - [List of contributors and maintainers](https://www.boost.org/doc/libs/1_78_0/libs/test/doc/html/boost_test/acknowledgements.html)
 

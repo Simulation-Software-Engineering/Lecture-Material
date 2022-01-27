@@ -38,6 +38,7 @@ slideOptions:
 
 ## Learning Goals
 
+- You know how to reuse your markup files for different purposes.
 - You know how to convert markup files (Markdown, reStructuredText...) written into other formats (Markdown, reStructuredText...)
 
 ---
@@ -79,7 +80,7 @@ According to the project [homepage](https://pandoc.org/)
   ```
 
     - Without `OPTIONS` default values are used
-    - Deduces conversion type from `OUTPUTFILE` file extension
+    - Deduces conversion type from `OUTPUTFILE` file extension (by default)
 - Extensive number of [options](https://pandoc.org/MANUAL.html#options)
 
 ---
@@ -89,7 +90,7 @@ According to the project [homepage](https://pandoc.org/)
 - From file format to file format
 
   ```bash
-  -f FORMAT -to FORMAT
+  --from/-f FORMAT --to/-t FORMAT
   ```
 
 - Create [standalone](https://pandoc.org/MANUAL.html#option--standalone) file
@@ -162,9 +163,13 @@ According to the project [homepage](https://pandoc.org/)
   title: "My awesome title"
   author: Alexander Jaust
   ...
+  ---
   ```
 
   May also be specified in separate `yaml` file.
+
+- Available parameters depend on template
+- Parameter missing? -> Build own template
 
 ---
 

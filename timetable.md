@@ -126,3 +126,8 @@
 ## 11.2 -- Thu, January 20, 2022
 
 - [Exercise: Workflow Automation](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/automation_exercise.md)
+
+## 12.1 -- Thu, January 27, 2022
+
+- **25** Introduction to `Boost.Test`: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_intro_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_intro_demo.md)
+- **65** Boost.Test and CTest in Action: [SideMade Demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_sidemade_demo.md)

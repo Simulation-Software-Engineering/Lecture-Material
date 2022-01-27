@@ -143,7 +143,7 @@ BOOST_AUTO_TEST_SUITE_END()
 ## Fixtures (1/2)
 
 - To set up and tear down test data
-- To fulfill preconditions
+- To fullfil preconditions
 - To do clean-up work
     - Example from preCICE: static geometry ID seed
 

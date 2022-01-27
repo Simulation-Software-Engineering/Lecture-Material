@@ -64,7 +64,7 @@ If you know one, the next one is easy to learn.
 - [Catch2](https://github.com/catchorg/Catch2)
 - [CppUnit](http://sourceforge.net/apps/mediawiki/cppunit/index.php?title=Main_Page)
 - [Cute](http://www.cute-test.com/)
-- [Google Test](http://code.google.com/p/googletest/)
+- [GoogleTest](http://code.google.com/p/googletest/)
 - [More](https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#C.2B.2B)
 
 ---

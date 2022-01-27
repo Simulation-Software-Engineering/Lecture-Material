@@ -129,7 +129,7 @@
 
 ## 12.1 -- Thu, January 27, 2022
 
-- **45** Document conversion with Pandoc : [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/pandoc_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/pandoc_demo.md)
+- **25** Document conversion with Pandoc : [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/pandoc_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/pandoc_demo.md)
 
 ## 12.2 -- Thu, January 27. 2022
 

@@ -49,7 +49,7 @@ target_link_libraries(testsidemade PRIVATE Boost::unit_test_framework)
 add_test(NAME "MatrixSolverTests" COMMAND ${CMAKE_CURRENT_BINARY_DIR}/testsidemade)
 ```
 
-- reconfigure cmake, build, run via
+- reconfigure CMake, build, run via
     - `./testsidemade`
     - `./testsidemade --list_content`
     - `make test`

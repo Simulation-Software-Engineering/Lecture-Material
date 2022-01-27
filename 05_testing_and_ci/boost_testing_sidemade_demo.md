@@ -25,7 +25,7 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     - needs to be in one of our test files, we will write multiple ones
 - `#define BOOST_TEST_DYN_LINK`
     - needed if UTF uses as dynamic library
-    - in header-only mode, you cannot split tests over mutliple files
+    - in header-only mode, you cannot split tests over multiple files
     - needed in every file
 - `#include <boost/test/unit_test.hpp>`
     - different header/path than for header-only usage

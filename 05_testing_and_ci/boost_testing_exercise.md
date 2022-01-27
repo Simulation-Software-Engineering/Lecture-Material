@@ -19,15 +19,17 @@ Deadline: **Thursday, February 3rd, 2022, 09:00**
 ### (2) Automation
 
 - Similar to last week, add a GitHub Action workflow with three jobs:
-    - Style: Check whether all `cpp` and `hpp` files are formatted correctly using `clang-format` (see `README.md`).
+    - Style: Check whether all `cpp` and `hpp` files (in `src` and `tests` are formatted correctly using `clang-format` (see `README.md`).
     - Build: Check whether the code builds successfully.
     - Test: Check whether all tests run successfully.
 - Add a corresponding [GitHub workflow status badge](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge) to the `README.md`.
 
-### (3) Regression Testing
-
-- Add a workflow for a larger regression test. To this end, generate test data for a 250x250 matrix. The function `matrixIO::saveData` might come handy.
-
 ## Optional Task
 
 - Extend the automation with a [build matrix](https://docs.github.com/en/actions/using-jobs/using-a-build-matrix-for-your-jobs). Test whether your code builds in Debug and in Release mode, and with the gcc and the clang compiler. Make use of CMake variables to modify these parameters.
+
+## Hints and Remarks
+
+- When importing a project on GitHub, it could be that by default actions are disabled. You can enable them via `Settings -> Actions -> General -> Allow all actions`.
+- Be careful: the style job should not format the code, but rather report whether the code was formatted correctly or not. There are different ways how to do this. You could use the option `--dry-run`, but then you still need to interpret warnings as errors with `-Werror`. Or you could format inplace (`-i`) and use `git diff`.
+- Try to use the build from the build job for the tests in the test job by uploading and downloading the build as an artifact. Problem is that this way file permissions are not preserved. You can work around this problem, by archiving. See [the official workaround](https://github.com/actions/upload-artifact#maintaining-file-permissions-and-case-sensitive-files). Hint: There is also an action `download-artifact`.

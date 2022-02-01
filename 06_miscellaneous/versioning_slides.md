@@ -65,6 +65,7 @@ slideOptions:
 ## Versioning standards
 
 - [Semantic Versioning](https://semver.org/)
+- [Calendar Versioning](https://calver.org/)
 - [PEP 440](https://www.python.org/dev/peps/pep-0440/)
 
 ---

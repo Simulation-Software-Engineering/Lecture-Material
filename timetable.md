@@ -136,3 +136,13 @@
 - **25** Introduction to `Boost.Test`: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_intro_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_intro_demo.md)
 - **65** Boost.Test and CTest in Action: [SideMade Demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_sidemade_demo.md)
 - [Exercise/Homework: Boost.Test and CTest in Action: SideMade Exercise](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_exercise.md)
+
+## 13.1 -- Thu, February 03. 2022
+
+- **30** Licenses and copyright: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/floss_licenses_slides.md)
+- **10** Versioning: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/versioning_slides.md)
+- **10** Repository layout: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/repository_layout_slides.md)
+- **15** Evaluation (EvaSys)
+- **10** Call for master's theses and course participation: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/master_thesis_suggestions_slides.md)
+
+## 13.2 -- Thu, February 03. 2022

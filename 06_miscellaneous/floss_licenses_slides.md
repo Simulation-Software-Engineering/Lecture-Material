@@ -65,7 +65,7 @@ slideOptions:
 - Code is creative work and, thus, under **exclusive copyright by default**.
 - Copyright owner is typically the creator (or their employer).
 - Nobody else can copy / distribute / modify
-- If code has more than one contributor, all contributors might become this _"nobody"_.
+- If code has more than one contributor, all contributors might become this *"nobody"*.
 - **GitHub terms of service**:
     - Others can view and fork your repository.
     - Does not imply that they can use / modify / share your code.

@@ -102,6 +102,7 @@ tests/test_advanced.py
 ## Remarks/Tips
 
 - Define a structure and stick to it
+- Don't reinvent the wheel (if no really good reason)
 - Use short, but meaningful names
 - As few files in root of respository as possible
 - Projects might define own structure

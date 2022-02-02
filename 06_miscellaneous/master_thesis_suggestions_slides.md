@@ -40,7 +40,7 @@ slideOptions:
 
 - There are rarely explicit topic suggestions online
 - Thus, ask and discuss
-- Applies to all _"IPVS sim groups"_: SGS (Schulte, Jaust), SC (Pflüger), and US3 (Uekermann)
+- Applies to all *"IPVS sim groups"*: SGS (Schulte, Jaust), SC (Pflüger), and US3 (Uekermann)
 
 ---
 

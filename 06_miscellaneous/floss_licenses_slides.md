@@ -38,7 +38,7 @@ slideOptions:
 
 ## Disclaimer
 
-- IANAL: _I am not a lawyer._
+- IANAL: *I am not a lawyer.*
 - Provided information "as-is", no warranty
 - Things are simplified sometimes.
 

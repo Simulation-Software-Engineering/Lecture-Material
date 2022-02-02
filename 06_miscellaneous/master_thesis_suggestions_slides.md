@@ -55,7 +55,7 @@ Various different types of topics are possible:
 - Focus on **HPC**
     - e.g. load balancing for macro-micro-coupled problems
 
-All such topics require _"SSE skills"_, but also some simulation background (SimTech or lectures from SGS/SC/US3).
+All such topics require *"SSE skills"*, but also some simulation background (SimTech or lectures from SGS/SC/US3).
 
 ---
 

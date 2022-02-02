@@ -58,6 +58,7 @@ slideOptions:
 - You use software of others and want to know what you are allowed to do.
 - You contribute to an existing software and want to understand what this legally means.
 - You want others to be able to use your software.
+
 ---
 
 ## Code Without a License

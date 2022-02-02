@@ -143,7 +143,7 @@ THE SOFTWARE IS PROVIDED "AS IS", ...
 
 ## Creative Commons Licenses
 
-- Not everything is code, cc licenses is specifically for creative work that is not code.
+- Not everything is code, CC licenses is specifically for creative work that is not code.
 
 - The basis, plain **CC** or **CC0**: copyright waived, do what you want
 - Restrictions are _"substracted"_:

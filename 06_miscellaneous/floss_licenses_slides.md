@@ -172,3 +172,4 @@ THE SOFTWARE IS PROVIDED "AS IS", ...
 - [Software Licenses in Plain English](https://tldrlegal.com)
 - [Choose a License](https://choosealicense.com/)
 - [Creative Comments](https://creativecommons.org/licenses/)
+- [Compatibility Checker](https://joinup.ec.europa.eu/collection/eupl/solution/joinup-licensing-assistant/jla-compatibility-checker)

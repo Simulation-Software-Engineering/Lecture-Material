@@ -156,7 +156,7 @@ Configure connections in `.ssh/config`
 ## Documentation
 
 - Markdown or reStructuredText.
-  - Whatever fits better.
+    - Whatever fits better.
 - mkdocs
 - pandoc
 - LaTeX

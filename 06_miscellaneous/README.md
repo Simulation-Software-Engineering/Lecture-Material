@@ -10,4 +10,4 @@ Learning goals:
 | 30 minutes | [floss_licenses_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/floss_licenses_slides.md) |
 | 10 minutes | [versioning_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/versioning_slides.md) |
 | 10 minutes | [repository_layout_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/repository_layout_slides.md) |
-| XX minutes | [XX_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/XX_slides.md), [XX_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/XX_demo.md) |
+| 15 minutes | [tools_alex_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/tools_alex_slides.md), [tools_alex_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/tools_alex_demo.md) |

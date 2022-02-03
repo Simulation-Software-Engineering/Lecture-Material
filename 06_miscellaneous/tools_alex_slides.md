@@ -38,6 +38,7 @@ slideOptions:
 
 ## Introduction
 
+- Some overview over tools I use commonly
 - My opinion/experience
 
 ---
@@ -46,14 +47,17 @@ slideOptions:
 
 - Current choices
     - [VS Code](https://code.visualstudio.com/)
-        - Plenty of addons, powerful feature
+        - Plenty of addons, powerful feature,
+        - Based on Electron (bad?)
     - [VIM](https://www.vim.org/)
-        - Plenty of addons, small footprint, special input
-    - Sublime Text
+        - Plenty of addons, small footprint, special input method
+    - [Sublime Text](https://www.sublimetext.com/)
+        - Plenty of addons
 
 - Earlier choices: Gedit, NEdit, Emacs, QtCreator...
-- Switching editors may impact productivity.
-- Knowing basics of one CLI editor useful
+- Switching editors may impact productivity
+- Knowing basics of one CLI-capable editor useful
+    - nano, ed, vi, vim, emacs...
 
 ---
 
@@ -64,19 +68,8 @@ slideOptions:
 - Easy to deploy via Git
 - Should be portable
 - Configuration files not applicable to a system are usually ignored
-- Checkout other people's dotfiles
 - **Warning**: Do not share secrets by accident
-
----
-
-## Terminal
-
-- [fzf](https://github.com/junegunn/fzf): A command line fuzzy finder
-- Bash prompt (`PS1`)
-    - Show directory
-    - Show branch if in a Git repository
-- Terminal emulator with UTF-8 support
-- Tiling window manager (i3wm, swaywm)
+- Checkout other people's dotfiles
 
 ---
 
@@ -92,6 +85,18 @@ slideOptions:
 
 ---
 
+## Terminal
+
+- [fzf](https://github.com/junegunn/fzf): A command line fuzzy finder
+    - [Fuzzy completion](https://github.com/junegunn/fzf#fuzzy-completion-for-bash-and-zsh)
+- Bash prompt (`PS1`)
+    - Show directory
+    - Show branch if in a Git repository
+- Terminal emulator with UTF-8 support
+- Tiling window manager (i3wm, swaywm)
+
+---
+
 ## Working remote
 
 - SSH
@@ -100,10 +105,38 @@ slideOptions:
     - Open several terminals (splitting)
     - Reconnect to terminals
     - Reconfigured bindings immediately
-- scp: Copy data
+- scp: Copy data over network
 - rsync: Copy data, but more powerful
 
 ---
+
+## SSH
+
+Configure connections in `.ssh/config`
+
+- Configure target with name
+
+  ```text
+  Host WorkPC
+      HostName 123.123.123.123
+      User USERNAME
+      IdentityFile ~/.ssh/some-private-key
+  ```
+
+- Connect via login server
+
+  ```text
+  Host WorkPC
+      ProxyCommand ssh -q LoginServerName nc -q0 %h 22
+      User USERNAME
+      IdentityFile ~/.ssh/some-private-key
+      IdentityFile ~/.ssh/another-private-key
+  ```
+
+  Connection to `WorkPC` will go via `LoginServerName`
+
+---
+
 
 ## C++
 
@@ -120,34 +153,21 @@ slideOptions:
 
 ---
 
-## Data
-
-- [git-annex]() (sometimes)
-
-Backups/Data
-
-- [borgbackup](https://borgbackup.readthedocs.io/en/stable/)
-- [rsnapshot](https://rsnapshot.org/)
-
----
-
 ## Documentation
 
-Self:
-
-- Markdown and mkdocs
-
-Projects:
-
-- Markdown or reStructuredText. What fits better.
+- Markdown or reStructuredText.
+  - Whatever fits better.
+- mkdocs
+- pandoc
+- LaTeX
 - Doxygen (C++) or docstrings (Python)
 
 ---
 
-## Remarks
+## Remarks/Tips
 
 - Customization vs. portability
-- Get acquainted to your tools
+- Get acquainted with your tools
 
 ---
 

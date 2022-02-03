@@ -69,7 +69,7 @@ slideOptions:
 - Should be portable
 - Configuration files not applicable to a system are usually ignored
 - **Warning**: Do not share secrets by accident
-- Checkout other people's dotfiles
+- Check out other people's dotfiles
 
 ---
 

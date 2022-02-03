@@ -144,6 +144,7 @@ Configure connections in `.ssh/config`
 - [valgrind](https://valgrind.org/): Dynamic analysis
     - Memory leak check, memory consumption...
 - CMake
+- gdb
 
 ---
 

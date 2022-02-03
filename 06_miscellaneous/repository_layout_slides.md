@@ -79,7 +79,7 @@ libs/
 
 ---
 
-## The Hitchiker's Guide to Python
+## The Hitchhiker's Guide to Python
 
 - Based on [K. Reitz's recommendation](https://kennethreitz.org/essays/2013/01/27/repository-structure-and-python)
 
@@ -114,4 +114,4 @@ tests/test_advanced.py
 
 - [Pitchfork GitHub repository](https://github.com/vector-of-bool/pitchfork)
 - [Pitchfork project layout conventions](https://api.csswg.org/bikeshed/?force=1&url=https://raw.githubusercontent.com/vector-of-bool/pitchfork/develop/data/spec.bs)
-- [The Hitchiker's Guide to Python](https://docs.python-guide.org/writing/structure/)
+- [The Hitchhiker's Guide to Python](https://docs.python-guide.org/writing/structure/)

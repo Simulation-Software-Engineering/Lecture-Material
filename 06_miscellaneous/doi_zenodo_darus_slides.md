@@ -147,3 +147,4 @@ University of Stuttgart's [Dataverse](https://dataverse.org/) instance
 - [Zenodo](https://zenodo.org/)
 - [The Dataverse Project](https://dataverse.org/)
 - [DaRUS](https://darus.uni-stuttgart.de/)
+- [Competence Center for Research Data Management](https://www.izus.uni-stuttgart.de/en/fokus/)

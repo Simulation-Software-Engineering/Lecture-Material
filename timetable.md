@@ -142,7 +142,10 @@
 - **30** Licenses and copyright: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/floss_licenses_slides.md)
 - **10** Versioning: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/versioning_slides.md)
 - **10** Repository layout: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/repository_layout_slides.md)
-- **15** Evaluation (EvaSys)
-- **10** Call for master's theses and course participation: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/master_thesis_suggestions_slides.md)
+- **15** DOI, Zenodo, and DaRUS: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/doi_zenodo_darus_slides.md)
 
 ## 13.2 -- Thu, February 03. 2022
+
+- **15** Software development tools (Alex) [tools_alex_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/tools_alex_slides.md), [tools_alex_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/tools_alex_demo.md) |
+- **15** Evaluation (EvaSys)
+- **10** Call for master's theses and course participation: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/master_thesis_suggestions_slides.md)

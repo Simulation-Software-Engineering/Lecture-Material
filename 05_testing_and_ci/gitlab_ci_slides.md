@@ -62,7 +62,7 @@ From: [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)
 - GitLab's integration automation tool
 - Powerful runners
 - Checks out Git repository by default
-- Slightly different use of "trigger"
+- Slightly different meaning of word "trigger"
     - GitHub: What triggers an action/workflow
     - GitLab: What should a pipeline trigger and what triggers a pipeline
 
@@ -153,7 +153,7 @@ deploy job:
       - echo "$TEST_VAR" and "$TEST_VAR_JOB"
   ```
 
-- There are lots of [predefined variable](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html)
+- There are lots of [predefined variables](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html)
 
 ---
 

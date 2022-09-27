@@ -30,7 +30,8 @@ slideOptions:
 ## Learning goals of chapter
 
 - What is code packaging and which technologies are available to package code
-- How is Python code packaged for uploading to PyPI and installation with pip
+- What are the various ways in which a Python code can be packaged
+- How is the Python Package Index (PyPI) used to distribute Python packages
 
 ---
 
@@ -43,33 +44,31 @@ slideOptions:
 
 ## What is packaging?
 
-- Standalone code is easy for the developer to understand but quite hard for everyone else to use.
+- Bare code is often hard to understand for everyone except the developer.
 - Packaging is a workflow to convert a code into a standardized distributable software.
-- Broadly code can be standardized in various ways. Some examples:
-    - Packaging according to a standardized approach
-    - Providing an installation recipe, for example, using CMake / make (`make install`)
-    - Bundling code into an app or software with some UI
-- In this first lecture we will look at **packaging according to a standardized approach**.
+- Broadly code can be standardized in various ways. Some examples are
+    - creating a package according to some standardization.
+    - providing an installation recipe, for example, using CMake / make (`make install`).
+    - bundling code into an app or software with some UI.
+- In this first lecture you will learn about **creating a package according to some standardization**.
 
 ---
 
 ## Why should we package code? 1/2
 
-- Codes with many files and a variety of functionalities have several difficulties:
-    - Difficult to understand and use for users who are not developers of the code
-    - Having multiple dependencies and requirements of specific versions of dependencies
-    - Intricate building / installation steps
+- A bare code with many files typically has difficulties like
+    - multiple dependencies and requirements of specific versions of dependencies.
+    - intricate compilation / installation steps which are hard to get right.
+    - missing or limited starting information / documentation which means a high entry barrier.
 
 ---
 
 ## Why should we package code? 2/2
 
-- Packaging is basically *standardization* of a raw code.
-- Main reasons for packaging:
-    - Increase usability and sustainability
-    - Ease of distribution and maintenance
-    - Avoiding lengthy documentation effort by following a standard
-    - Versioning
+- Create a package of bare code to
+    - benefit from a package index or package manager which is familiar for a broad audience.
+    - benefit from automated handling of dependencies of package managers.
+    - have ease of distribution and maintenance due to standardization.
 
 ---
 

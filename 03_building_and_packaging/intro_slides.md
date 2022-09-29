@@ -72,9 +72,9 @@ slideOptions:
 
 ---
 
-## Building and packaging tools
+## How to package code?
 
-- First step is finding the right type of building or packaging standard fits best for your code.
+- First step is finding the right type of packaging standard that fits best for your code.
 - There are several (overlapping) options:
     - One of the many Linux package managers: apt, dpkg, yum, RPM Package Manager and many more ...
     - [CMake](https://cmake.org/) <span>: building / installation / packaging tool mostly for C, C++ projects<!-- .element: class="fragment" data-fragment-index="1" --></span>
@@ -83,23 +83,19 @@ slideOptions:
     - [PyPI](https://pypi.org/) and [pip](https://pypi.org/project/pip/)
     - [Conda](https://docs.conda.io/en/latest/)
 
-<span>
-There are many more tools out there!
-<!-- .element: class="fragment" data-fragment-index="2" --></span>
-
 ---
 
-## Why do we particularly look at packaging of Python codes?
+## Why do we particularly look at packaging a Python code?
 
-- Python is widely used in research software and particularly in simulation software.
-- A finetuned packaging workflow is already well established in the community.
+- Python is easy to understand and widely used in research software.
+- A finetuned packaging workflow is already well established in the Python community.
 - Various examples of packaged codes already exist: [NumPy](https://pypi.org/project/numpy/), [PyMOR](https://pypi.org/project/pymor/), [fenicsprecice](https://pypi.org/project/fenicsprecice/) and more ...
-
+  
 ---
 
 ## Key takeaways
 
-- Packaging or creating build recipe of a code is common and there exist tools to do this
+- Packaging or creating build recipe of a code is a standardized process.
 - Many options in packaging / building tools.
 - Most of these tools / methods are customized for use cases.
 - In this lecture we will concentrate on packaging of Python code.

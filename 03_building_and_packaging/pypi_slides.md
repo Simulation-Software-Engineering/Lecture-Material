@@ -31,7 +31,55 @@ slideOptions:
 
 ---
 
-## Using setup.py to package Python code
+## Python packaging is itself evolving
+
+Files which are commonly seen:
+
+- `setup.py`
+- `setup.cfg`
+- `pyproject.toml`
+
+All are files which packaging-related tools consume. Which files does one use for packaging?
+
+---
+
+## Python Enhancement Proposals (PEPs)
+
+- PEP is an evolving design document which provides information regarding new features of Python, new processes and new environments.
+- PEPs typically involve concise technical information, which also acts as standardizations.
+- Packaging workflows are also standardized through PEPs. Examples are
+    - [PEP 427](https://www.python.org/dev/peps/pep-0427/) which introduces the built-package format "wheel".
+    - [PEP 518](https://peps.python.org/pep-0518/) which introduces a configuration file for packaging.
+- Tip: read the *Rationale* section of the **PEP** convention of a particular feature.
+
+---
+
+## Python libraries used to install packages
+
+- `disutils`: old and deprecated, to be phased out in Python 3.12.
+- `setuptools`: actively maintained packaging tool which is shipped with Python (built on top of `disutils`).
+
+---
+
+## setup.py - setup.cfg - pyproject.toml
+
+- Names of all these files are standardized.
+- `setup.py` is the interface to the command line interface for packaging. Needs to be at the root of the repository.
+- `setup.cfg` is a having metadata of all the options that are specified in `setup.py`.
+- `pyproject.toml` is similar to `setup.cfg` but has additionally the `build-system` table.
+
+---
+
+## Comparison of various approaches
+
+- `setup.py` has been widely popular but main limitation is that it cannot be executed without knowing its dependencies. *Chicken and egg* problem regarding dependencies.
+- Does `setup.cfg` solve the dependencies problem? No, because no packaging tool can directly read dependencies from it.
+- Solution is to use an additional `pyproject.toml` with the `[build-system]` table specified.
+- [PyPA sample project](https://github.com/pypa/sampleproject) shows an example using all three files.
+
+---
+
+## Using only setup.py
 
 `setup.py`  is written by [setuptools](https://pypi.org/project/setuptools/) allows you to install packages by running
 
@@ -142,16 +190,6 @@ pip install --user <package-name>
 ## Example of PyPI package: fenicsprecice
 
 - Having a look at [fenicsprecice](https://pypi.org/project/fenicsprecice/)
-
----
-
-## Python Enhancement Proposals (PEPs)
-
-- PEP is an evolving design document which provides information regarding new features of Python, new processes and new environments.
-- PEPs typically involve concise technical information, which also acts as standardizations.
-- Packaging workflows are also standardized through PEPs. Example:
-    - [PEP 427](https://www.python.org/dev/peps/pep-0427/) introduces the built-package format "wheel".
-- It is always a good idea to look for **PEP** conventions before trying out processes.
 
 ---
 

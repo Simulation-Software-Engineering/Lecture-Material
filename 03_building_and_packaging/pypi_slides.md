@@ -81,15 +81,9 @@ All are files which packaging-related tools consume. Which files does one use fo
 
 ## Using only setup.py
 
-`setup.py`  is written by [setuptools](https://pypi.org/project/setuptools/) allows you to install packages by running
+`setup.py`  is written using [setuptools](https://pypi.org/project/setuptools/):
 
-```bash
-python setup.py install
-```
-
-Example:
-
-```bash
+```python
 from setuptools import setup
 import setuptools
 
@@ -102,18 +96,49 @@ setup(
     package_dir={"": "<directory-name>"},
     packages=setuptools.find_packages(where="<directory-name>"),
     python_requires=">=3.6",
-    install_requires=["<installation dependencies>"]
+    install_requires=["<dependencies>"]
 )
 ```
 
-Note: `<directory-name>` should have a folder with `<package-name>`
+---
+
+## Using setup.cfg and setup.py
+
+Entries moved to `setup.cfg` would look like:
+
+```python
+[metadata]
+name="package-name"
+version="<version-number>"
+author="Your Name"
+url="package-website-url"
+
+[options]
+install_requires =
+  "<dependencies>"
+```
+
+Additionally `setup.cfg` can have flags for packages, for example `[bdist_wheel]`.
 
 ---
 
-## Why is setup.py not the best way to directly install software?
+## Using pyproject.toml
 
-- Before doing installing with `setup.py` you have to manually search and install dependencies.
-- A package installed by `setup.py` needs to be manually maintained and uninstalled if required.
+- According to PEP 621, using `pyproject.toml` is the default recommended way of creating packages with `setuptools`.
+- Most important table is `[build-system]` which specifies minimum requirements of the package (PEP 518).
+- `pyproject.toml` is readable by packaging tools like pip.
+
+---
+
+## Packaging tool build
+
+```bash
+python -m build
+```
+
+`build` uses `setup.py` for building the package, without any dependency management.
+Drawbacks are
+
 - Requires manual downloading of files from the package website.
 - Packages cannot be easily shared between projects, so you would have to manually define a path which can be used by different projects to access the package.
 

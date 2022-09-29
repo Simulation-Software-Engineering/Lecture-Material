@@ -90,7 +90,7 @@ slideOptions:
 - Python is easy to understand and widely used in research software.
 - A finetuned packaging workflow is already well established in the Python community.
 - Various examples of packaged codes already exist: [NumPy](https://pypi.org/project/numpy/), [PyMOR](https://pypi.org/project/pymor/), [fenicsprecice](https://pypi.org/project/fenicsprecice/) and more ...
-  
+
 ---
 
 ## Key takeaways

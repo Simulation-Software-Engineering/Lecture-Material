@@ -35,11 +35,9 @@ slideOptions:
 
 Files which are commonly seen:
 
-- `setup.py`
-- `setup.cfg`
-- `pyproject.toml`
+`setup.py`, `setup.cfg`, `pyproject.toml`, `requirements.txt`.
 
-All are files which packaging-related tools consume. Which files does one use for packaging?
+All are files which packaging-related tools consume. What do each of these files do?
 
 ---
 
@@ -128,6 +126,13 @@ Additionally `setup.cfg` can have flags for packages, for example `[bdist_wheel]
 - Most important table is `[build-system]` which specifies minimum requirements of the package (PEP 518).
 - `pyproject.toml` is readable by packaging tools like pip.
 
+Example `pyproject.toml` can look like
+
+```python
+[build-system]
+requires = ["setuptools", "wheel"]
+```
+
 ---
 
 ## Packaging tool build
@@ -137,18 +142,15 @@ python -m build
 ```
 
 `build` uses `setup.py` for building the package, without any dependency management.
+
 Drawbacks are
 
 - Requires manual downloading of files from the package website.
 - Packages cannot be easily shared between projects, so you would have to manually define a path which can be used by different projects to access the package.
 
 <span>
-Is there a better way?
+Is there a better way? Yes! Use pip!
 <!-- .element: class="fragment" data-fragment-index="1" --></span>
-
-<span>
-Yes! Use pip!
-<!-- .element: class="fragment" data-fragment-index="2" --></span>
 
 ---
 
@@ -191,14 +193,25 @@ pip install package-name
 **Important**: Do not use
 
 ```bash
-sudo pip install <package-name>
+sudo pip install <package>
 ```
 
 Various security issues with doing so! Go for
 
 ```bash
-pip install --user <package-name>
+pip install --user <package>
 ```
+
+---
+
+## Installing a package in editable mode
+
+```bash
+pip install -e <package>
+```
+
+- Creates a direct link between local package files and installation, which is useful for development.
+- Make sure to *undo* post development.
 
 ---
 
@@ -220,18 +233,26 @@ pip install --user <package-name>
 
 ## File structure for code packaging 1/2
 
-- Most essential component of packaging is file structure. Basic file structure is as follows:
+Three naming points:
+
+  - Name of the repository (on GitHub or GitLab).
+  - Name of the folder which has the source code.
+  - Name of the package as seen my PyPI.
+  - Name of the package to be used in the `import` statement.
+
+**All three names are independent of each other.**
+
+Example folder structure:
 
 ```bash
 generic_folder_name/
 └── src/
-    └── package_name/
-        ├── __init__.py
-        └── package-code.py
+     ├── __init__.py
+     └── source-code.py
 ```
 
 - The file `__init__.py` is required to import the `package_name/` package as a package. This file is mostly empty
-- `package-code.py` will contain the code developed by the user.
+- `source-code.py` will contain the code. It can be multiple files.
 
 ---
 
@@ -245,25 +266,20 @@ generic_folder_name/
 ├── setup.py
 ├── README.md
 ├── src/
-│   └── package_name/
-│       ├── __init__.py
-│       └── package-code.py
+│    ├── __init__.py
+│    └── source-code.py
 └── tests/
 ```
 
-<span>
-Let's have a detailed look at individual files in this folder structure.
-<!-- .element: class="fragment" data-fragment-index="1" --></span>
-
 ---
 
-## Additional options in setup.py 1/2
+## Additional options in setup.py 1/3
 
 - [Classifiers](https://pypi.org/classifiers/): additional metadata for the version of the package
 - Defined as part of [PEP 303](https://www.python.org/dev/peps/pep-0301/#distutils-trove-classification).
 - Example:
 
-```bash
+```python
 from setuptools import setup
 
 setup(
@@ -279,11 +295,11 @@ setup(
 
 ---
 
-## Additional options in setup.py 2/2
+## Additional options in setup.py 2/3
 
 - The file `README.md` can be passed as a long description in the following way:
 
-```bash
+```python
 from setuptools import setup
 
 with open("README.md", "r", encoding="utf-8") as fh:
@@ -299,11 +315,24 @@ setup(
 
 ---
 
-## LICENSE
+## Additional options in setup.py 3/3
 
-- This file provides details under which license is the package distributed.
-- Choosing the correct license is often a critical step in open-source software development.
-- More on licenses in a future chapter of this course.
+The option `entry_points` provide metadata which are exposed after installation. For example: executable functions from a terminal.
+
+```python
+from setuptools import setup
+
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
+setup(
+    ...
+    entry_points={
+      'console_scripts': ['package-import-name = <path-to-main-function-with-dots>']
+    }
+    ...
+)
+```
 
 ---
 
@@ -433,10 +462,10 @@ td {
 
 ## Important takeaways
 
-Packaging of Python code involves two central work packages:
+Packaging of Python code is
 
-- Creation of a standardized folder structure to convert raw Python code into a project.
-- Creating and uploading distribution archives.
+- creation of a standardized folder structure to convert raw Python code into a project.
+- creating and uploading distribution archives.
 - Uploading distribution archives to a package index.
 
-We saw the process of packaging and uploading to TestPyPI which is similar to uploading to the PyPI
+We saw the process of packaging and uploading to TestPyPI which is similar to uploading to the PyPI.

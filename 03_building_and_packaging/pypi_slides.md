@@ -235,10 +235,10 @@ pip install -e <package>
 
 Three naming points:
 
-  - Name of the repository (on GitHub or GitLab).
-  - Name of the folder which has the source code.
-  - Name of the package as seen my PyPI.
-  - Name of the package to be used in the `import` statement.
+- Name of the repository (on GitHub or GitLab).
+- Name of the folder which has the source code.
+- Name of the package as seen my PyPI.
+- Name of the package to be used in the `import` statement.
 
 **All three names are independent of each other.**
 

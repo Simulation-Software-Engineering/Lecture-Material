@@ -63,7 +63,7 @@ All are files which packaging-related tools consume. What do these files do?
 
 - Names of all these files are standardized.
 - `setup.py` is the interface to the command line. Needs to be at the root of the repository.
-- `setup.cfg` is a having metadata of all the options that are specified in `setup.py`.
+- `setup.cfg` has metadata of all the options that can also be specified in `setup.py`.
 - `pyproject.toml` is similar to `setup.cfg` but has additionally the `build-system` table.
 
 ---
@@ -135,7 +135,7 @@ requires = ["setuptools", "wheel"]
 
 ---
 
-## Packaging tool build
+## Packaging tool `build`
 
 ```bash
 python -m build

@@ -37,7 +37,7 @@ Files which are commonly seen:
 
 `setup.py`, `setup.cfg`, `pyproject.toml`, `requirements.txt`.
 
-All are files which packaging-related tools consume. What do each of these files do?
+All are files which packaging-related tools consume. What do these files do?
 
 ---
 
@@ -62,7 +62,7 @@ All are files which packaging-related tools consume. What do each of these files
 ## setup.py - setup.cfg - pyproject.toml
 
 - Names of all these files are standardized.
-- `setup.py` is the interface to the command line interface for packaging. Needs to be at the root of the repository.
+- `setup.py` is the interface to the command line. Needs to be at the root of the repository.
 - `setup.cfg` is a having metadata of all the options that are specified in `setup.py`.
 - `pyproject.toml` is similar to `setup.cfg` but has additionally the `build-system` table.
 
@@ -215,6 +215,22 @@ pip install -e <package>
 
 ---
 
+## Using pip
+
+Uninstall a package
+
+```bash
+pip uninstall <package>
+```
+
+Update a package
+
+```bash
+pip install --upgrade <package>
+```
+
+---
+
 ## What is PyPI?
 
 - [PyPI](https://pypi.org/) = **Python Package Index** is a repository of software developed in the Python community.
@@ -233,7 +249,7 @@ pip install -e <package>
 
 ## File structure for code packaging 1/2
 
-Three naming points:
+Four places where naming is relevant:
 
 - Name of the repository (on GitHub or GitLab).
 - Name of the folder which has the source code.
@@ -252,7 +268,7 @@ generic_folder_name/
 ```
 
 - The file `__init__.py` is required to import the `package_name/` package as a package. This file is mostly empty
-- `source-code.py` will contain the code. It can be multiple files.
+- `source-code.py` contains the code. It can be multiple files.
 
 ---
 

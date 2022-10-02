@@ -95,6 +95,9 @@ setup(
     packages=setuptools.find_packages(where="<directory-name>"),
     python_requires=">=3.6",
     install_requires=["<dependencies>"]
+    entry_points={
+      'console_scripts': ['package-import-name = <path-to-main-function-with-dots>']
+    }
 )
 ```
 
@@ -112,11 +115,23 @@ author="Your Name"
 url="package-website-url"
 
 [options]
+packages = find:
 install_requires =
   "<dependencies>"
+
+[options.entry_points]
+console_scripts = 
+  executable-name = <path-to-main-function-with-dots>
 ```
 
-Additionally `setup.cfg` can have flags for packages, for example `[bdist_wheel]`.
+A nominal `setup.py` is still required
+
+```python
+from setuptools import setup
+
+if __name__ == "__main__":
+  setup()
+```
 
 ---
 

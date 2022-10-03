@@ -29,7 +29,7 @@ slideOptions:
 
 ## Learning goals of the chapter
 
-- What is the relevance of testing simulation software
+- What is it important to test simulation software
 - What are the concepts of unit testing, integration testing and regression testing and how to write such tests for a simulation software
 - How to use the Python testing frameworks `pytest` and `unittest` to generate a automated testing workflow
 
@@ -53,7 +53,7 @@ slideOptions:
 ## Why should you test your software?
 
 - Improve software reliability and reproducibility.
-- Make sure that unrelated changes (bugfixes, new features) do not affect other parts of software.
+- Make sure that changes (bugfixes, new features) do not affect other parts of software.
 - Generally all software is better off being tested regularly. Possible exceptions are very small codes with single users.
 - Ensure that a distributed version of a software actually works.
 
@@ -61,10 +61,10 @@ slideOptions:
 
 ## Nomenclature in software testing
 
-- **Fixture**: preparatory set for testing
-- **Actual result**: what the code produces when given the fixture
-- **Expected result**: what the actual result is compared to
-- **Test coverage**: how much of the code do tests touch
+- **Fixture**: preparatory set for testing.
+- **Actual result**: what the code produces when given the fixture.
+- **Expected result**: what the actual result is compared to.
+- **Test coverage**: how much of the code do tests touch in one run.
 
 ---
 
@@ -86,7 +86,7 @@ slideOptions:
     - Postcondition
     - Invariant
 - A basic but powerful tool to test a software on-the-go.
-- Assertion statement syntax:
+- Assertion statement syntax in Python
 
 ```python
 assert condition, "message"
@@ -98,7 +98,7 @@ assert condition, "message"
 
 - Catching errors with assertions is good but preventing them is better!
 - A *unit* is a single function in one situation.
-    - A situation is one variant of input parameters.
+    - A situation is one amongst many possible variations of input parameters.
 - User creates the expected result manually.
 - A fixture is a set of inputs used to generate an actual result.
 - Actual result is compared to the expected result, for e.g. using an assertion statement.
@@ -121,7 +121,7 @@ assert condition, "message"
 - Compare the current actual result with a previous actual result.
 - No guarantee that the current actual result is correct.
 - Risk of a bug being carried over indefinitely.
-- Main purpose is to identify changes in the current state of the code.
+- Main purpose is to identify changes in the current state of the code with respect to a past state.
 
 ---
 

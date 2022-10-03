@@ -95,6 +95,9 @@ setup(
     packages=setuptools.find_packages(where="<directory-name>"),
     python_requires=">=3.6",
     install_requires=["<dependencies>"]
+    entry_points={
+      'console_scripts': ['package-import-name = <path-to-main-function-with-dots>']
+    }
 )
 ```
 
@@ -110,13 +113,27 @@ name="package-name"
 version="<version-number>"
 author="Your Name"
 url="package-website-url"
+description="A small description"
 
 [options]
+packages = find:
 install_requires =
   "<dependencies>"
+  python_version>"3.6"
+
+[options.entry_points]
+console_scripts =
+  executable-name = <path-to-main-function-with-dots>
 ```
 
-Additionally `setup.cfg` can have flags for packages, for example `[bdist_wheel]`.
+A nominal `setup.py` is still required
+
+```python
+from setuptools import setup
+
+if __name__ == "__main__":
+  setup()
+```
 
 ---
 
@@ -131,7 +148,25 @@ Example `pyproject.toml` can look like
 ```python
 [build-system]
 requires = ["setuptools", "wheel"]
+
+[project]
+name = "package-name"
+description = "A small description"
+readme = "README.md"
+requires-python = ">=3.6"
+keywords = ["keyword1", "keyword2"]
+license = {text = "BSD License"}
+classifiers = [
+    "Programming Language :: Python :: 3"
+]
+dependencies = [
+    "requests",
+    'importlib-metadata; python_version<"3.8"',
+]
+dynamic = ["<version-number>"]
 ```
+
+A nominal `setup.py` is still required.
 
 ---
 

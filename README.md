@@ -6,17 +6,21 @@
 
 Material of the Simulation Software Engineering lecture. There are different way how to get an overview:
 
-- Look at `timetable.md`,
+- Look at `timetable.md` of the [current course](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/timetable.md) or [previous courses](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/00_organization/wt2122/timetable.md),
 - Look at the `README.md` files of each chapter / folder,
 - Browse the content through the [course website](https://simulation-software-engineering.github.io/homepage/).
 
+Please note that we update the material over the course of each semester.
+
 ## List of chapters
 
+0. [Organization](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/00_organization)
 1. [Version Control](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/01_version_control)
 2. [Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/02_virtualization_and_containers)
 3. [Building and Packaging](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/03_building_and_packaging)
 4. [Documentation](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/04_documentation)
 5. [Testing and CI](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/05_testing_and_ci)
+6. [Miscellaneous](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/06_miscellaneous)
 
 ## Linting
 

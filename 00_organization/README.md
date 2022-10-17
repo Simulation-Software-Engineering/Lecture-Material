@@ -10,6 +10,6 @@ Learning goals:
 | --- | --- |
 | 20 minutes | [`challenge_intro_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/challenge_intro_slides.md) |
 | 40 minutes | [`course_intro_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/course_intro_slides.md) |
-| 10 minutes | [`organizational_remarks_week3_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/organizational_remarks_week3_slides.md) |
-| 5 minutes | [`organizational_remarks_week7_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/organizational_remarks_week7_slides.md) |
 | 15 minutes | [`rse_basics.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/rse_basics_slides.md) |
+
+The folder `wt2122` contains organizational content specific to the lecture in winter term 2021/22.

@@ -14,7 +14,6 @@ Please note that we update the material over the course of each semester.
 
 ## List of chapters
 
-0. [Organization](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/00_organization)
 1. [Version Control](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/01_version_control)
 2. [Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/02_virtualization_and_containers)
 3. [Building and Packaging](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/03_building_and_packaging)

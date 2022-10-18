@@ -21,6 +21,15 @@ slideOptions:
   .reveal section h2 {
     color: orange;
   }
+  .reveal code {
+    font-family: 'Ubuntu Mono';
+    color: orange;
+  }
+  .reveal section img {
+    background:none;
+    border:none;
+    box-shadow:none;
+  }
 </style>
 
 
@@ -30,10 +39,10 @@ slideOptions:
 
 ## Schedule
 
-1. Pick a large-scale open-source simulation software (till **Oct 28**, evening)
-2. Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 11**)
-3. Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 16**)
-4. Contribute something small (but not trivial) to the software (*"good first issue"*). Run through complete contribution cycle (issue, discussion, PR, review, merge). Present what you did. Examples: feature, tutorial, documentation, support of new packaging tool, bugfix, ... (**Feb 10**)
+1. Pick a large-scale open-source simulation software (till **Oct 27**, evening)
+2. Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 10**)
+3. Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 15**)
+4. Contribute something small (but not trivial) to the software (*"good first issue"*). Run through complete contribution cycle (issue, discussion, PR, review, merge). Present what you did. Examples: feature, tutorial, documentation, support of new packaging tool, bugfix, ... (**Feb 9**)
 
 Rough workload / grading weights: 25%, 25%, 50%
 
@@ -85,7 +94,7 @@ Rough workload / grading weights: 25%, 25%, 50%
 ## How to Submit my Choice?
 
 - [https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge)
-- Comment in issue [#1](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge/-/issues/1) till **28th of October** (next Thursday) evening (no FCFS)
+- Comment in [issue #1](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge/-/issues/1) till **27th of October** (next Thursday) evening (no FCFS)
 - Priority list with at least three choices
 - If not on our suggestion list, write short paragraph what the software does and give links
 
@@ -93,9 +102,8 @@ Rough workload / grading weights: 25%, 25%, 50%
 
 ## Role of Advisor
 
-- Alexander or Benjamin
+- Benjamin or Ishaan
 - Use exercise blocks and time after lectures for discussions
-    - We both attend all lectures and labs
 - Discuss at least what you plan to contribute
 - Share links etc. to issues and PRs (or tag us)
 
@@ -117,3 +125,4 @@ Rough workload / grading weights: 25%, 25%, 50%
 - Submission via a merge request to the [GitLab challenge repo](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge)
 - Add links, instructions, ... should work like a compact summary for everybody in the end
 - Will be visible to everybody in SSE group
+- We will prepare templates

@@ -21,31 +21,30 @@ slideOptions:
   .reveal section h2 {
     color: orange;
   }
+  .reveal code {
+    font-family: 'Ubuntu Mono';
+    color: orange;
+  }
+  .reveal section img {
+    background:none;
+    border:none;
+    box-shadow:none;
+  }
 </style>
+
 
 # Simulation Software Engineering
 
 ---
 
-## Corona Rules
-
-- We need to check everybody's **3G status** and **registration for contact tracing**
-    - Use hardware cactUS reader for both when entering the room (each session)
-    - The lecture has less than 35 students --> Lecturers need to check --> Please don't enter the room before the lecturers are there (15 mins before session)
-    - Please act accordingly (e.g. fill out paper registration if needed or get tested if needed)
-    - Check out after lecture
-- Everybody in audience needs to wear an **FFP2 mask**
-- Keep distance, but please don't spread equally over the large room
-
-[University of Stuttgart Corona Newsticker](https://www.uni-stuttgart.de/universitaet/aktuelles/meldungen/corona/)
-
----
-
 ## The Lecturers
 
-- Alexander (Jaust) [`@ajaust`](https://github.com/ajaust)
 - Benjamin (Uekermann) [`@uekerman`](https://github.com/uekerman)
 - Ishaan (Desai) [`@IshaanDesai`](https://github.com/IshaanDesai)
+
+SSE Hall of Fame:
+
+- Alexander (Jaust) [`@ajaust`](https://github.com/ajaust)
 
 ---
 
@@ -56,7 +55,7 @@ slideOptions:
     simulation software (to become a *"Research Software Engineer"*):
     continuous integration, virtualization, building & packaging, documentation, ...
 - Focus on tools for C++ and Python
-- More than a *"3-days software carpentry workshop on Python and git"*
+- More than a *"3-days software carpentry workshop on Python and Git"*
 - Learn how to contribute to large-scale open-source simulation software projects
 - Learn which important simulation software packages exist and how to use them
 
@@ -68,7 +67,7 @@ Two parallel branches:
 
 - **Weekly lectures** (90 mins) and **exercises** (90 mins) to learn and train concepts and tools
     - Thursdays, 09:45–11:15 and 15:45–17:15
-    - This lecture hall: V38.04
+    - This room: 38-0.124
     - No strict distinction between lecture and exercise
     - Interactive style (not a theory course)
 - **Individual challenge**: contribute to real simulation software :rocket:
@@ -82,7 +81,7 @@ Two parallel branches:
 ## Prerequisites: Skills
 
 - Basic programming (Python, C++)
-- Basic software development skills (bash, git, md, ...)
+- Basic software development skills (bash, Git, md, ...)
 - Some simulation background
 
 ---
@@ -102,21 +101,21 @@ Two parallel branches:
 
 - Great new open-source book to recap: Irving, Hertweck, Johnston, Ostblom, Wickham, and Wilson: [Research Software Engineering with Python](https://merely-useful.tech/py-rse)
 - All our material is on [https://github.com/Simulation-Software-Engineering](https://github.com/Simulation-Software-Engineering)
-- Mainly markdown ... use your favorite tool to render (simply GitHub viewer, [GWDG Hedgedoc](https://pad.gwdg.de/), [pandoc](https://pandoc.org/), ...)
-- We'll add more as the semester goes
+- Mainly markdown ... use your favorite tool to render (simply GitHub viewer, [GWDG Hedgedoc](https://pad.gwdg.de/), [pandoc](https://pandoc.org/), [PDFs generated in CI](https://github.com/Simulation-Software-Engineering/Lecture-Material/actions/workflows/create-pdfs-from-markdown.yml), ...)
+- We rework the material as the semester goes
 - We give many links to videos, docs, blog posts, podcasts, ...
-- We plan to record the lecture (everybody OK?), but this is only meant as a backup. Please always come when possible. What we do is interactive.
+- Recordings of the lecture from last year as a backup. Please always come when possible. What we do is interactive.
 
 ---
 
 ## Contribute to the Material
 
-- You, no joke :see_no_evil:
+- You, no joke :see_no_evil: ([many students contributed last year](https://github.com/Simulation-Software-Engineering/Lecture-Material/graphs/contributors))
 - Typos, broken links, ...
 - Additional material
 - By definition, we study quickly evolving technology ... help us staying up to date
-- We do the course for the first time ... there will still be flaws
-- Contribute by opening PRs (we'll obviously acknowledge contributions)
+- There are surely still flaws in the material ... help us fix them
+- Contribute by opening PRs
 - Click `edit me` on website
 - For large parts (new tool, new chapter, ...), discuss in issue first
 - See also [`CONTRIBUTING.md`](https://github.com/Simulation-Software-Engineering/lecture-materials/blob/main/CONTRIBUTING.md)
@@ -125,22 +124,21 @@ Two parallel branches:
 
 ## Chapters
 
-1. Organization and Introduction to RSE
-2. Version Control
-3. Virtualization and Containerization
-4. Building and Packaging
-5. Documentation
-6. Testing and Continuous Integration
-7. Legal, Archiving, Community, and More
+1. Version Control
+2. Virtualization and Containers
+3. Building and Packaging
+4. Documentation
+5. Testing and Continuous Integration
+6. Miscellaneous
 
 ---
 
 ## The Challenge
 
-1. Pick a large-scale open-source simulation software (FEniCS, PETSc, SU2, TRILINOS, ...) (till **Oct 28**, evening)
-2. Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 11**)
-3. Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 16**)
-4. Contribute something small (but not trivial) to the software (*"good first issue"*). Run through complete contribution cycle (issue, discussion, PR, review, merge). Present what you did. Examples: feature, tutorial, documentation, support of new packaging tool, bugfix, ... (**Feb 10**)
+1. Pick a large-scale open-source simulation software (FEniCS, PETSc, SU2, TRILINOS, ...) (till **Oct 27**, evening)
+2. Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 10**)
+3. Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 15**)
+4. Contribute something small (but not trivial) to the software (*"good first issue"*). Run through complete contribution cycle (issue, discussion, PR, review, merge). Present what you did. Examples: feature, tutorial, documentation, support of new packaging tool, bugfix, ... (**Feb 9**)
 
 ---
 
@@ -154,14 +152,14 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 21.10. |Lecture | 1-2 | Course intro, intro to SSE, VC basics | Benjamin |
-| 21.10. |Lecture | 2 | Git: my workflow + quiz, software projects for challenge    | Benjamin |
-| 28.10. |Lecture + presentations| 2 | *"My neat little Git trick"*, merge vs rebase, working in teams| Benjamin |
-| 28.10. |Lab | 2 | *"Git cheat sheet"*    | Benjamin |
-| 04.11. |Lecture | 3 | Virtualbox, Vagrant | Alexander |
-| 04.11. |Lecture | 3 | Docker, Singularity | Alexander |
-| 11.11. |Lab | 3 | tbd.    | Alexander |
-| 11.11. |Presentations | C | **1st student presentations** | students|
+| 20.10. |Lecture | 0-1 | Course intro, intro to SSE, VC basics | Benjamin |
+| 20.10. |Lecture | 1 | Git: my workflow + quiz, software projects for challenge | Benjamin |
+| 27.10. |Lecture + presentations| 1 | *"My neat little Git trick"*, merge vs rebase, working in teams| Ishaan |
+| 27.10. |Lab | 1 | *"Git cheat sheet"* | Ishaan |
+| 03.11. |Lecture | 2 | Docker tbd. | Ishaan |
+| 03.11. |Lecture | 2 | Docker tbd. | Ishaan |
+| 10.11. |Lab | 2 | Spack tbd. | Ishaan |
+| 10.11. |Presentations | C | **1st student presentations** | students|
 
 ---
 
@@ -175,16 +173,16 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 18.11. |Lecture | 4 | Packaging and package managers, pip, conda | Ishaan |
-| 18.11. |Lab | 4 | pip and PyPI exercise | Ishaan |
-| 25.11. |Lecture | 4 | CMake | |
-| 25.11. |Lab | 4 | CMake | |
-| 02.12. |Lecture | 4 | tbd. | |
-| 02.12. |Lab | 4 | tbd. | |
-| 09.12. |Lecture | 5 | Documentation tools | Alexander |
-| 09.12. |Lab | 5 | tbd. | |
-| 16.12. |Lecture | 5 | Technical writing | Benjamin |
-| 16.12. |Presentations | C | **2nd student presentations** | students |
+| 17.11. |Lecture | 3 | Packaging and package managers, pip | Ishaan |
+| 17.11. |Lab | 3 | pip and PyPI exercise | Ishaan |
+| 24.11. |Lecture | 3 | CMake | | Benjamin
+| 24.11. |Lab | 3 | CMake | | Benjamin
+| 01.12. |Lecture | 3 | tbd. | |
+| 01.12. |Lab | 3 | tbd. | |
+| 08.12. |Lecture | 4 | tbd. | |
+| 08.12. |Lab | 4 | tbd. | |
+| 15.12. |Lecture | 4 | tbd. | |
+| 15.12. |Presentations | C | **2nd student presentations** | students |
 
 ---
 
@@ -198,16 +196,16 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 13.01. |Lecture | 6 | tbd. | |
-| 13.01. |Lab | 6 | tbd. | |
-| 20.01. |Lecture | 6 | tbd. | |
-| 20.01. |Lab | 6 | tbd. | |
-| 27.01. |Lecture | 7 | tbd. | |
-| 27.01. |Lab | 7 | tbd. | |
-| 03.02. |Lecture | 7 | tbd. | |
-| 03.02. |Lecture | 7 | tbd. | |
-| 10.02. |Presentations | C | **final student presentations** | students|
-| 10.02. |Presentations | C | **final student presentations** | students|
+| 12.01. |Lecture | 5 | tbd. | |
+| 12.01. |Lab | 5 | tbd. | |
+| 19.01. |Lecture | 5 | tbd. | |
+| 19.01. |Lab | 5 | tbd. | |
+| 26.01. |Lecture | 5 | tbd. | |
+| 26.01. |Lab | 5 | tbd. | |
+| 02.02. |Lecture | 6 | tbd. | |
+| 02.02. |Lecture | 6 | tbd. | |
+| 09.02. |Presentations | C | **final student presentations** | students|
+| 09.02. |Presentations | C | **final student presentations** | students|
 
 ---
 
@@ -217,17 +215,17 @@ td {
 - We look at:
     - Challenge (outcome and presentations)
     - Exercises (not every detail, but *"passed"* or *"failed"*)
-    - Overall engagement (interactive lecture, discussions, small presentations, ...)
+    - Overall engagement (interactive lecture, discussions, small presentations, contributions, ...)
 - Let us know if you cannot come to a lecture / exercise (you don't have to give a reason)
 - You will need to register yourself to the *"exam"* on C@MPUS
-- Point of no return: once you gave the first presentation (Nov 11), you have to register (please let us still know when you drop just before the presentation)
+- Point of no return: Once you gave the first presentation (Nov 11), you have to register (please let us still know when you drop just before the presentation)
 
 ---
 
 ## GitLab Account
 
-- Please write a mail till tonight to Alexander
-    - [alexander.jaust@ipvs.uni-stuttgart.de](mailto:alexander.jaust@ipvs.uni-stuttgart.de)
+- Please write a mail till tonight to Ishaan
+    - [ishaan.desai@ipvs.uni-stuttgart.de](mailto:ishaan.desai@ipvs.uni-stuttgart.de)
 - Email subject: "GitLab account SSE course"
 - State your **name** and preferred **email-address**
 - If you already have an IPVS-SIM GitLab account, we only need your username

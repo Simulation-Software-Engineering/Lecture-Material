@@ -154,12 +154,12 @@ td {
 | ---- | ---- | ------- |------ | -------- |
 | 20.10. |Lecture | 0-1 | Course intro, intro to SSE, VC basics | Benjamin |
 | 20.10. |Lecture | 1 | Git: my workflow + quiz, software projects for challenge | Benjamin |
-| 27.10. |Lecture + presentations| 1 | *"My neat little Git trick"*, merge vs rebase, working in teams| Ishaan |
-| 27.10. |Lab | 1 | *"Git cheat sheet"* | Ishaan |
-| 03.11. |Lecture | 2 | Docker tbd. | Ishaan |
-| 03.11. |Lecture | 2 | Docker tbd. | Ishaan |
-| 10.11. |Lab | 2 | Spack tbd. | Ishaan |
-| 10.11. |Presentations | C | **1st student presentations** | students|
+| 27.10. |Lecture | 3 | Packaging, pip and PyPI | Ishaan |
+| 27.10. |Lab | 3 | pip and PyPI exercise | Ishaan |
+| 03.11. |Lecture + presentations| 1 | *"My neat little Git trick"*, merge vs rebase, working in teams| Benjamin |
+| 03.11. |Lab | 1 | Git exercise | Ishaan |
+| 10.11. |Lecture | 2 | Virtual machines | Ishaan |
+| 10.11. |Presentations | C | **1st student presentations** | students |
 
 ---
 
@@ -173,15 +173,15 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 17.11. |Lecture | 3 | Packaging and package managers, pip | Ishaan |
-| 17.11. |Lab | 3 | pip and PyPI exercise | Ishaan |
-| 24.11. |Lecture | 3 | CMake | | Benjamin
-| 24.11. |Lab | 3 | CMake | | Benjamin
-| 01.12. |Lecture | 3 | tbd. | |
-| 01.12. |Lab | 3 | tbd. | |
-| 08.12. |Lecture | 4 | tbd. | |
-| 08.12. |Lab | 4 | tbd. | |
-| 15.12. |Lecture | 4 | tbd. | |
+| 17.11. |Lecture | 2 | Containers | Ishaan |
+| 17.11. |Lab | 2 | Virtual machines and containers | Ishaan |
+| 24.11. |Lecture | 3 | Make and CMake | Benjamin
+| 24.11. |Lab | 3 | CMake | Benjamin |
+| 01.12. |Lecture | 3 | CPack, Debian packages | tbd. |
+| 01.12. |Lab | 3 | CPack, Debian packages | tbd. |
+| 08.12. |Lecture + Lab | 3 | Spack | Ishaan |
+| 08.12. |Lecture | 4 | tbd. | Benjamin |
+| 15.12. |Lecture | 4 | tbd. | Benjamin |
 | 15.12. |Presentations | C | **2nd student presentations** | students |
 
 ---
@@ -196,14 +196,14 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 12.01. |Lecture | 5 | tbd. | |
-| 12.01. |Lab | 5 | tbd. | |
-| 19.01. |Lecture | 5 | tbd. | |
-| 19.01. |Lab | 5 | tbd. | |
-| 26.01. |Lecture | 5 | tbd. | |
-| 26.01. |Lab | 5 | tbd. | |
-| 02.02. |Lecture | 6 | tbd. | |
-| 02.02. |Lecture | 6 | tbd. | |
+| 12.01. |Lecture | 5 | Testing in Python | Ishaan |
+| 12.01. |Lab | 5 | Testing in Python | Ishaan |
+| 19.01. |Lecture | 5 | Automation, CI/CD | Benjamin |
+| 19.01. |Lab | 5 | Automation, CI/CD | Benjamin |
+| 26.01. |Lecture | 5 | Boost.Test | Benjamin |
+| 26.01. |Lab | 5 | Boost.Test | Benjamin |
+| 02.02. |Lecture | 6 | Licenses, versioning, ... | Benjamin |
+| 02.02. |Lecture | 6 | tbd. | tbd. |
 | 09.02. |Presentations | C | **final student presentations** | students|
 | 09.02. |Presentations | C | **final student presentations** | students|
 

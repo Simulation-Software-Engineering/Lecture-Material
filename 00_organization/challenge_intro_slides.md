@@ -95,8 +95,8 @@ Rough workload / grading weights: 25%, 25%, 50%
 
 ## How to Submit my Choice?
 
-- [https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge)
-- Comment in [issue #1](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge/-/issues/1) till **27th of October** (next Thursday) evening (no FCFS)
+- [https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/challenge](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/challenge)
+- Comment in [issue #1](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/challenge/-/issues/1) till **27th of October** (next Thursday) evening (no FCFS)
 - Priority list with at least three choices
 - If not on our suggestion list, write short paragraph what the software does and give links
 

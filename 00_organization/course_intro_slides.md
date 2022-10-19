@@ -213,9 +213,9 @@ td {
 
 - *"Course accompanying examination"*: no exam, but continuous examination (more like a lab course or a seminar)
 - We look at:
-    - Challenge (outcome and presentations)
-    - Exercises (not every detail, but *"passed"* or *"failed"*)
-    - Overall engagement (interactive lecture, discussions, small presentations, contributions, ...)
+    - Challenge (outcome and presentations), (~50%)
+    - Exercises (not every detail, but *"passed"* or *"failed"*) (~40%)
+    - Overall engagement (interactive lecture, discussions, small presentations, contributions, ...) (~10%)
 - Let us know if you cannot come to a lecture / exercise (you don't have to give a reason)
 - You will need to register yourself to the *"exam"* on C@MPUS
 - Point of no return: Once you gave the first presentation (Nov 11), you have to register (please let us still know when you drop just before the presentation)

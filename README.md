@@ -6,9 +6,8 @@
 
 Material of the Simulation Software Engineering lecture. There are different way how to get an overview:
 
-- Look at `timetable.md` of the [current course](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/timetable.md) or [previous courses](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/00_organization/wt2122/timetable.md),
-- Look at the `README.md` files of each chapter / folder,
-- Browse the content through the [course website](https://simulation-software-engineering.github.io/homepage/).
+- Look at `timetable.md` of the [current course](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/timetable.md) or [previous courses](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/00_organization/wt2122/timetable.md), or
+- Look at the `README.md` files of each chapter / folder.
 
 Please note that we update the material over the course of each semester.
 

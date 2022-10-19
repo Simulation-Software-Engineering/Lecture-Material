@@ -72,12 +72,14 @@ Rough workload / grading weights: 25%, 25%, 50%
 - [Firedrake](https://www.firedrakeproject.org/): FEM library in Python
 - [Gmsh](https://gmsh.info/): Mesh generator
 - [LAMMPS](https://www.lammps.org/): MD simulator
+- [Nalu-Wind](https://github.com/Exawind/nalu-wind): CFD solver for wind farms
 - [Palabos](https://palabos.unige.ch/): Lattice Boltzmann
 
 ---
 
 ## Suggestions II
 
+- [OpenFAST](https://www.nrel.gov/wind/nwtc/openfast.html): Multi-fidelity wind turbine simulation tool
 - [PETSc](https://petsc.org/): LA library
 - [preCICE](https://precice.org/): Coupling library (Stuttgart)
 - [pyiron](https://pyiron.org/): Workflow manager in Python
@@ -86,8 +88,8 @@ Rough workload / grading weights: 25%, 25%, 50%
 - [SUNDIALS](https://computing.llnl.gov/projects/sundials): Nonlinear solvers, ODEs
 - [TRILINOS](https://trilinos.github.io/): Collection of scientific software libraries, mainly solvers
 - [VisIt](https://visit-dav.github.io/visit-website/index.html): Scientific visualization software
-- more projects in [xSDK](https://xsdk.info/packages/): [Ginkgo](https://ginkgo-project.github.io/), ...
-- **Or your suggestion**
+- more projects in [xSDK](https://xsdk.info/packages/) or [NumFOCUS](https://numfocus.org/sponsored-projects)
+- **Or your suggestion** (also agent-based or discrete event simulation software)
 
 ---
 

@@ -21,6 +21,15 @@ slideOptions:
   .reveal section h2 {
     color: orange;
   }
+  .reveal code {
+    font-family: 'Ubuntu Mono';
+    color: orange;
+  }
+  .reveal section img {
+    background:none;
+    border:none;
+    box-shadow:none;
+  }
 </style>
 
 
@@ -30,10 +39,10 @@ slideOptions:
 
 ## Schedule
 
-1. Pick a large-scale open-source simulation software (till **Oct 28**, evening)
-2. Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 11**)
-3. Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 16**)
-4. Contribute something small (but not trivial) to the software (*"good first issue"*). Run through complete contribution cycle (issue, discussion, PR, review, merge). Present what you did. Examples: feature, tutorial, documentation, support of new packaging tool, bugfix, ... (**Feb 10**)
+1. Pick a large-scale open-source simulation software (till **Oct 27**, evening)
+2. Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 10**)
+3. Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 15**)
+4. Contribute something small (but not trivial) to the software (*"good first issue"*). Run through complete contribution cycle (issue, discussion, PR, review, merge). Present what you did. Examples: feature, tutorial, documentation, support of new packaging tool, bugfix, ... (**Feb 9**)
 
 Rough workload / grading weights: 25%, 25%, 50%
 
@@ -63,12 +72,14 @@ Rough workload / grading weights: 25%, 25%, 50%
 - [Firedrake](https://www.firedrakeproject.org/): FEM library in Python
 - [Gmsh](https://gmsh.info/): Mesh generator
 - [LAMMPS](https://www.lammps.org/): MD simulator
-- [Palabos](https://palabos.unige.ch/): Lattice Boltzmann
+- [Nalu-Wind](https://github.com/Exawind/nalu-wind): CFD solver for wind farms
+- [Palabos](https://palabos.unige.ch/): Lattice Boltzmann method solver
 
 ---
 
 ## Suggestions II
 
+- [OpenFAST](https://www.nrel.gov/wind/nwtc/openfast.html): Multi-fidelity wind turbine simulation tool
 - [PETSc](https://petsc.org/): LA library
 - [preCICE](https://precice.org/): Coupling library (Stuttgart)
 - [pyiron](https://pyiron.org/): Workflow manager in Python
@@ -77,15 +88,15 @@ Rough workload / grading weights: 25%, 25%, 50%
 - [SUNDIALS](https://computing.llnl.gov/projects/sundials): Nonlinear solvers, ODEs
 - [TRILINOS](https://trilinos.github.io/): Collection of scientific software libraries, mainly solvers
 - [VisIt](https://visit-dav.github.io/visit-website/index.html): Scientific visualization software
-- more projects in [xSDK](https://xsdk.info/packages/): [Ginkgo](https://ginkgo-project.github.io/), ...
-- **Or your suggestion**
+- more projects in [xSDK](https://xsdk.info/packages/) or [NumFOCUS](https://numfocus.org/sponsored-projects)
+- **Or your suggestion** (also agent-based or discrete event simulation software)
 
 ---
 
 ## How to Submit my Choice?
 
-- [https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge)
-- Comment in issue [#1](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge/-/issues/1) till **28th of October** (next Thursday) evening (no FCFS)
+- [https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/challenge](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/challenge)
+- Comment in [issue #1](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/challenge/-/issues/1) till **27th of October** (next Thursday) evening (no FCFS)
 - Priority list with at least three choices
 - If not on our suggestion list, write short paragraph what the software does and give links
 
@@ -93,9 +104,8 @@ Rough workload / grading weights: 25%, 25%, 50%
 
 ## Role of Advisor
 
-- Alexander or Benjamin
+- Benjamin or Ishaan
 - Use exercise blocks and time after lectures for discussions
-    - We both attend all lectures and labs
 - Discuss at least what you plan to contribute
 - Share links etc. to issues and PRs (or tag us)
 
@@ -117,3 +127,4 @@ Rough workload / grading weights: 25%, 25%, 50%
 - Submission via a merge request to the [GitLab challenge repo](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge)
 - Add links, instructions, ... should work like a compact summary for everybody in the end
 - Will be visible to everybody in SSE group
+- We will prepare templates

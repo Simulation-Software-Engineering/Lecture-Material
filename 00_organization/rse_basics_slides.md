@@ -21,13 +21,22 @@ slideOptions:
   .reveal section h2 {
     color: orange;
   }
+  .reveal code {
+    font-family: 'Ubuntu Mono';
+    color: orange;
+  }
+  .reveal section img {
+    background:none;
+    border:none;
+    box-shadow:none;
+  }
 </style>
 
 # Introduction to Research Software Engineering
 
 ---
 
-## Starting Point
+## Starting Points
 
 - [DORA declaration](https://sfdora.org/) in 2012: reshape how research impact should be assessed underlining importance of software
 
@@ -35,6 +44,7 @@ slideOptions:
 
 - [UK survey in 2014](https://zenodo.org/record/1183562): 7 out of 10 researchers could not conduct research without software.
 - [DFG funding calls on research software sustainability](https://www.dfg.de/en/research_funding/programmes/infrastructure/lis/funding_opportunities/call_proposal_software/) in 2016 & 2019
+- [Nationale Forschungsdaten Infrastruktur, NFDI](https://www.nfdi.de/?lang=en) since 2020
 - Lack of careers for software developers in academia
 - Lack of reproducibility of research that uses software (*"works for me on my machine"* vs. *"works for everyone everywhere"*)
 
@@ -52,7 +62,7 @@ slideOptions:
 - *"Movement"* started in the UK, first UK RSE conference in 2016
 - First conferences in Germany and the Netherlands in 2019
 - [de-RSE position paper](https://f1000research.com/articles/9-295/v2) in 2020
-- 14 October 2021 was [First International RSE Day](https://researchsoftware.org/2021/07/29/International-RSE-day.html)
+- Second Thursday of October is the [International RSE Day](https://researchsoftware.org/council/intl-rse-day.html)
 - [Why be an RSE?](https://researchit.blogs.bristol.ac.uk/2021/10/14/international-rse-day-why-be-an-rse/) Interesting and novel projects, technical freedom, RSEs come from varied backgrounds, development for social good
 
 ---
@@ -76,4 +86,3 @@ slideOptions:
     - It is not just about coding. It is about collaborative work.
 - Open-source development excellent door opener for industry.
 - Some companies develop their software as open-source software.
-

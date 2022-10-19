@@ -73,7 +73,7 @@ Rough workload / grading weights: 25%, 25%, 50%
 - [Gmsh](https://gmsh.info/): Mesh generator
 - [LAMMPS](https://www.lammps.org/): MD simulator
 - [Nalu-Wind](https://github.com/Exawind/nalu-wind): CFD solver for wind farms
-- [Palabos](https://palabos.unige.ch/): Lattice Boltzmann
+- [Palabos](https://palabos.unige.ch/): Lattice Boltzmann method solver
 
 ---
 

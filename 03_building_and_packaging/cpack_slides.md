@@ -345,3 +345,4 @@ slideOptions:
 - [Debian CPack generator]([generators](https://cmake.org/cmake/help/latest/cpack_gen/deb.html#cpack_gen:CPack%20DEB%20Generator))
 - [Making a deb package with CMake/CPack and hosting it in a private APT repository](https://decovar.dev/blog/2021/09/23/cmake-cpack-package-deb-apt/)
 - [GNU coding standard](https://www.gnu.org/prep/standards/html_node/Directory-Variables.html)
+

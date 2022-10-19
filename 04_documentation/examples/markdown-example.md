@@ -46,3 +46,4 @@ We can have nice tables
 | Value A  | Value  B |
 
 [course-website]: https://simulation-software-engineering.github.io/homepage/
+

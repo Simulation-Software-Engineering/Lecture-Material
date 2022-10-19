@@ -135,3 +135,4 @@ MAJOR.MINOR.PATCH-<pre-release>+<build>
 - [Semantic versioning homepage](https://semver.org/)
 - [PEP 440: Version Identification and Dependency Specification](https://www.python.org/dev/peps/pep-0440/)
 - [Wikipedia: Software versioning](https://en.wikipedia.org/wiki/Software_versioning)
+

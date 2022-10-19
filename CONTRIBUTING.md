@@ -14,3 +14,4 @@ We appreciate all kinds of contributions to this project. This document gives yo
 ## Licensing of contributed material
 
 By contributing to this project you agree that your contributions will be covered by the same license of as the project. More information about the license can be found in the file `LICENSE`.
+

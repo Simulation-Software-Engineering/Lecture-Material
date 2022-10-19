@@ -188,3 +188,4 @@ Information needed:
 Show pipelines used in the lecture
 
 - [Challenge repository](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge)
+

@@ -65,7 +65,7 @@ Rough workload / grading weights: 25%, 25%, 50%
 
 - [deal.II](https://dealii.org/): FEM library in C++
 - [DuMuX](https://dumux.org/): CFD library based on DUNE in C++ (Stuttgart)
-- [DUNE](https://www.dune-project.org/`): Modular toolbox for PDEs
+- [DUNE](https://www.dune-project.org/): Modular toolbox for PDEs
 - [Eigen](https://eigen.tuxfamily.org): LA library in C++
 - [ESPResSo](https://espressomd.org): MD Simulator with Python API (Stuttgart)
 - [FEniCS(-X)](https://fenicsproject.org/): FEM library in C++ with Python interface

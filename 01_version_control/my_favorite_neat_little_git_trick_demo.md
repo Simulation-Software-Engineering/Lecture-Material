@@ -50,3 +50,30 @@
 - Automatically fix http(s) urls (changing it to the correct ssh url) using git config `url` section
     - Also allows copying url from browser
     - Also allows entering `gh://username/repo` by memory
+
+## Example git config snippet with some of the above tricks
+
+```
+[pull]
+        rebase = true
+[rebase]
+        autoStash = true
+        autosquash = true
+[init]
+        defaultBranch = main
+[alias]
+        # git mr origin 5
+        mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+        pushf = push --force-with-lease
+        fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+[url "git@github.com:"]
+        insteadOf = https://github.com/
+        insteadOf = http://github.com/
+        insteadOf = git://github.com/
+        insteadOf = gh://
+[url "git@gitlab.com:"]
+        insteadOf = https://gitlab.com/
+        insteadOf = http://gitlab.com/
+        insteadOf = git://gitlab.com/
+        insteadOf = gl://
+```

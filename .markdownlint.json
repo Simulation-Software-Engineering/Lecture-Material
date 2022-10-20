@@ -1,0 +1,16 @@
+{
+    "default": true,
+    "MD002": false,
+    "MD004": { "style": "dash" },
+    "MD007": { "indent": 4 },
+    "MD010": false,
+    "MD012": false,
+    "MD013": { "line_length": 99999},
+    "MD026": {"punctuation": ".,;:!"},
+    "MD029": {"style":"ordered"},
+    "MD033": false,
+    "MD034": false,
+    "MD040": false,
+    "MD041": false,
+    "no-hard-tabs": false
+}

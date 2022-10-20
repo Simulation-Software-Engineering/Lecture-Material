@@ -42,3 +42,11 @@
 - One can create empty commits, i.e. a commit without any changes, using the `--allow-empty` options. This can be useful for debugging, for example. The full command could look like this: `git commit --allow-empty -m 'This commit is empty'`
 - You can generate a list of contributors sorted by the number of contributions using `git shortlog --summary --numbered --email.
 - If you have some contributors with several different email addresse and/or configured names, you can merge them via aliases in a file called [`.mailmap`](https://git-scm.com/docs/gitmailmap) that should reside in the root of the repository.
+- Auto rebase on pull and auto stash, on rebase (configured in git config)
+- Git Alias `pushf = push --force-with-lease`
+- Git Alias `fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"`
+    - Allows committing current staged changes as a fixup commit for a previous commit
+    - Follow by `git rebase -i --autosquash` (or enable `autosquash` for rebase on default in git config)
+- Automatically fix http(s) urls (changing it to the correct ssh url) using git config `url` section
+    - Also allows copying url from browser
+    - Also allows entering `gh://username/repo` by memory

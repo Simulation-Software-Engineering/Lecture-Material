@@ -24,8 +24,8 @@
 > - Ensuring reproducible test environments
 
 - After a colon:
-  - Start a full sentence with a capital letter. 
-  - Otherwise, start with a lower-case letter.
+    - Start a full sentence with a capital letter.
+    - Otherwise, start with a lower-case letter.
 - Use [Oxford Comma](https://en.wikipedia.org/wiki/Serial_comma) in a series of three or more terms.
 
 ## Links
@@ -57,5 +57,5 @@ solver.
 - In the `README.md` of each chapter
 - On the [course content page](https://simulation-software-engineering.github.io/homepage/course-content/) of the website
 - At the beginning of intro slides set of each chapter
-- Do not use separate learning goals for a specific lecture session. However, listing parts of or all learning goals again is possible. 
- 
+- Do not use separate learning goals for a specific lecture session. However, listing parts of or all learning goals again is possible.
+

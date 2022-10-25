@@ -50,6 +50,8 @@ pip uninstall nutils
 Installing a package from a folder
 
 ```bash
+git clone https://github.com/evalf/nutils.git
+cd nutils
 pip install --user .
 ```
 
@@ -68,24 +70,16 @@ or for a specific package
 pip show nutils
 ```
 
-## 3. Installing dependencies of a package
-
-- Using `requirements.txt` is a standard way to handle dependency installation.
-
-```bash
-pip install -r requirements.txt
-```
-
-## 4. Running `pip` as a Python module
+## 3. Running `pip` as a Python module
 
 ```bash
 python -m pip install package-name
 ```
 
-## 5. How to read a PEP
+## 4. How to read a PEP
 
 - Have a look at [PEP 8](https://peps.python.org/pep-0008/)
 
-## 6. Understanding a PyPI package webpage
+## 5. Understanding a PyPI package webpage
 
 - Having a look at [fenicsprecice](https://pypi.org/project/fenicsprecice/)

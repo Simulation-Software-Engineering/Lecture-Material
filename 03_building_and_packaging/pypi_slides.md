@@ -31,16 +31,10 @@ slideOptions:
 
 ---
 
-## Everyone has used `pip` at some point
-
-How do we typically use `pip`?
-
----
-
 ## What is pip?
 
 - pip is a package installer to install packages from the [Python Package Index PyPI]((https://pypi.org/)).
-- pip is itself a [package](https://pypi.org/project/pip/) which is available on PyPI.
+- pip is itself a [package](https://pypi.org/project/pip/), which is available on PyPI.
 - pip is open-source and is developed on [GitHub](https://github.com/pypa/pip).
 
 ---

@@ -1,25 +1,47 @@
-# `pip`: Python Packaging Tool (Notes)
+# `pip`: Python Packaging Tool Demo Notes
 
-**Note**: Maybe run everything in a fresh Docker container. I built the container `jaustar/spack-package-tutorial-base` locally for myself. It contains installed/downloaded Spack, that was not set up yet, i.e., one needs to run `spack compiler find` and `spack external find`. `clingo` needs to be downloaded first as well.
+**Note**: Maybe run everything in a fresh Ubuntu Docker container. Launch such a container using `docker run --rm -it ubuntu:jammy`. The other option is to work in a Python virtual environment. An environment can be created as follows
+
+```bash
+python -m venv env-name
+source env-name/bin/activate
+```
+
+## 0. Getting `pip`
+
+If Python has been installed using a system package manager like `apt`, it will not come with `pip`. `pip`can be installed in several ways
+
+```bash
+python -m ensurepip --upgrade
+```
+
+or
+
+```bash
+apt install pip
+```
+
+- If installed with Python, the Python version is used to determine which version of `pip` is installed. So Python 3.8 will install `pip3.8`.
+- In general `pip3` works with Python v3.x.
 
 ## 1. Installing packages with `pip`
 
-Installing a package
+Let us install the finite element library [Nutils](https://nutils.org/)
 
 ```bash
-pip install micro-manager-precice
+pip install nutils
 ```
 
 Install a specific version of a package
 
 ```bash
-pip install micro-manager-precice==0.0.2
+pip install nutils==6.0.0
 ```
 
 Uninstalling a package
 
 ```bash
-pip uninstall micro-manager-precice
+pip uninstall nutils
 ```
 
 - By default `pip` tries to install packages in the system directory, for example `/usr/local/lib/python<version>`. This is problematic as it has no user isolation and it requires root privileges.
@@ -32,16 +54,7 @@ pip install --user .
 ```
 
 - A `build` folder is created and the package files are copied into it.
-- But now `pip3 uninstall package-name` does not work as `pip` looks in the home path. Removal of package can be done by deleting the `build` folder or using manually using `setup.py`.
-
-**NOTE**: To successfully install `micro-manager-precice`, the dependencies `libopenmpi-dev`, `pkg-config`and `precice` which can be installed in the following way
-
-```bash
-apt install libopenmpi-dev pkg-config
-apt install wget
-wget https://github.com/precice/precice/releases/download/v2.5.0/libprecice2_2.5.0_jammy.deb
-apt install ./libprecice2_2.5.0_jammy.deb
-```
+- But now `pip uninstall package-name` does not work as `pip` looks in the home path. Removal of package can be done by deleting the `build` folder or using manually using `setup.py`.
 
 ## 2. Getting information of currently installed packages
 
@@ -52,7 +65,7 @@ pip list
 or for a specific package
 
 ```bash
-pip show micro-manager-precice
+pip show nutils
 ```
 
 ## 3. Installing dependencies of a package
@@ -61,7 +74,6 @@ pip show micro-manager-precice
 
 ```bash
 pip install -r requirements.txt
-
 ```
 
 ## 4. Running `pip` as a Python module
@@ -70,18 +82,10 @@ pip install -r requirements.txt
 python -m pip install package-name
 ```
 
-## 5. Getting information of installed packages
-
-Get package information on the terminal using
-
-```bash
-pip show package-name
-```
-
-## 6. How to read a PEP
+## 5. How to read a PEP
 
 - Have a look at [PEP 8](https://peps.python.org/pep-0008/)
 
-## 7. Understanding a PyPI package webpage
+## 6. Understanding a PyPI package webpage
 
 - Having a look at [fenicsprecice](https://pypi.org/project/fenicsprecice/)

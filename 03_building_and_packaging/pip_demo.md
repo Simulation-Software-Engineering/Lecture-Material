@@ -21,8 +21,9 @@ or
 apt install pip
 ```
 
-- If installed with Python, the Python version is used to determine which version of `pip` is installed. So Python 3.8 will install `pip3.8`.
+- If installed with Python, the Python version is used to determine which `pip` is installed. So Python 3.8 will install a `pip` by the name of `pip3.8` which will be compatible with Python 3.8.
 - In general `pip3` works with Python v3.x.
+- **Note**: Different `pip` names (`pip3`) are not to be confused with the version of the `pip` package, which can be seen with `pip --version`.
 
 ## 1. Installing packages with `pip`
 

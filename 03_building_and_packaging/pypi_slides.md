@@ -37,6 +37,14 @@ How do we typically use `pip`?
 
 ---
 
+## What is pip?
+
+- pip is a package installer to install packages from the [Python Package Index PyPI]((https://pypi.org/)).
+- pip is itself a [package](https://pypi.org/project/pip/) which is available on PyPI.
+- pip is open-source and is developed on [GitHub](https://github.com/pypa/pip).
+
+---
+
 ## Python packaging is itself evolving
 
 Files which are commonly seen:
@@ -109,7 +117,7 @@ setup(
 
 ---
 
-## Using setup.cfg and setup.py
+## Using setup.cfg
 
 Entries moved to `setup.cfg` would look like:
 
@@ -130,15 +138,6 @@ install_requires =
 [options.entry_points]
 console_scripts =
   executable-name = <path-to-main-function-with-dots>
-```
-
-A nominal `setup.py` is still required
-
-```python
-from setuptools import setup
-
-if __name__ == "__main__":
-  setup()
 ```
 
 ---
@@ -172,7 +171,18 @@ dependencies = [
 dynamic = ["<version-number>"]
 ```
 
-A nominal `setup.py` is still required.
+---
+
+## Minimal setup.py is still required
+
+A minimal `setup.py` is required along with `setup.cfg` or `pyproject.toml`
+
+```python
+from setuptools import setup
+
+if __name__ == "__main__":
+  setup()
+```
 
 ---
 
@@ -192,14 +202,6 @@ Drawbacks are
 <span>
 Is there a better way? Yes! Use pip!
 <!-- .element: class="fragment" data-fragment-index="1" --></span>
-
----
-
-## What is pip?
-
-- pip is a package installer to install packages from the [Python Package Index PyPI]((https://pypi.org/)).
-- pip is itself a [package](https://pypi.org/project/pip/) which is available on PyPI.
-- pip is open-source and is developed on [GitHub](https://github.com/pypa/pip).
 
 ---
 

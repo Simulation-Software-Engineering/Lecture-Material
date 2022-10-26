@@ -35,13 +35,6 @@ slideOptions:
 
 ---
 
-## Lets start with a survey
-
-- https://app.sli.do/event/joel1av7
-- **ID: 665367**
-
----
-
 ## What is packaging?
 
 - Bare code is often hard to understand for everyone except the developer.

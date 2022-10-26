@@ -40,6 +40,10 @@
 > Some Title Case Heading 1/2
 > Some Title Case Heading 2/2
 
+- If a sentence needs to be highlighted, add **Note** before it, for example:
+
+> **Note**: This particular concept is only applicable for specific compilers.
+
 ## Learning Goals
 
 ### Style

@@ -79,7 +79,7 @@ All are files which packaging-related tools consume. What do these files do?
 ## Comparison of various approaches
 
 - `setup.py` has been widely popular but main limitation is that it cannot be executed without knowing its dependencies. *Chicken and egg* problem regarding dependencies.
-- Does `setup.cfg` solve the dependencies problem? No, because no packaging tool can directly read dependencies from it.
+- Does `setup.cfg` solve the dependencies problem? No, because packaging tools can directly read dependencies from it.
 - Solution is to use an additional `pyproject.toml` with the `[build-system]` table specified.
 - [PyPA sample project](https://github.com/pypa/sampleproject) shows an example using all three files.
 
@@ -95,17 +95,14 @@ import setuptools
 
 setup(
     name="package-name",
-    version="<version-number>",
-    author="Your Name",
+    version="0.0.1",
+    author="<name-of-developer>",
     description="A small description",
     url="package-website-url",
     package_dir={"": "<directory-name>"},
     packages=setuptools.find_packages(where="<directory-name>"),
     python_requires=">=3.6",
     install_requires=["<dependencies>"]
-    entry_points={
-      'console_scripts': ['package-import-name = <path-to-main-function-with-dots>']
-    }
 )
 ```
 
@@ -118,8 +115,8 @@ Entries moved to `setup.cfg` would look like:
 ```python
 [metadata]
 name="package-name"
-version="<version-number>"
-author="Your Name"
+version="0.0.1"
+author="<name-of-developer>"
 url="package-website-url"
 description="A small description"
 
@@ -128,10 +125,6 @@ packages = find:
 install_requires =
   "<dependencies>"
   python_version>"3.6"
-
-[options.entry_points]
-console_scripts =
-  executable-name = <path-to-main-function-with-dots>
 ```
 
 ---
@@ -146,23 +139,18 @@ Example `pyproject.toml` can look like
 
 ```python
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "package-name"
 description = "A small description"
 readme = "README.md"
+version = "0.0.1"
 requires-python = ">=3.6"
 keywords = ["keyword1", "keyword2"]
 license = {text = "BSD License"}
-classifiers = [
-    "Programming Language :: Python :: 3"
-]
-dependencies = [
-    "requests",
-    'importlib-metadata; python_version<"3.8"',
-]
-dynamic = ["<version-number>"]
+dependencies = []
 ```
 
 ---

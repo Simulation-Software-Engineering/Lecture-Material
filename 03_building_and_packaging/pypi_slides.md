@@ -31,6 +31,14 @@ slideOptions:
 
 ---
 
+## What is pip?
+
+- pip is a package installer to install packages from the [Python Package Index PyPI]((https://pypi.org/)).
+- pip is itself a [package](https://pypi.org/project/pip/), which is available on PyPI.
+- pip is open-source and is developed on [GitHub](https://github.com/pypa/pip).
+
+---
+
 ## Python packaging is itself evolving
 
 Files which are commonly seen:
@@ -48,7 +56,7 @@ All are files which packaging-related tools consume. What do these files do?
 - Packaging workflows are also standardized through PEPs. Examples are
     - [PEP 427](https://www.python.org/dev/peps/pep-0427/) which introduces the built-package format "wheel".
     - [PEP 518](https://peps.python.org/pep-0518/) which introduces a configuration file for packaging.
-- Tip: read the *Rationale* section of the **PEP** convention of a particular feature.
+- Tip: read the *Rationale* section (or introduction) of the **PEP** convention of a particular feature.
 
 ---
 
@@ -103,7 +111,7 @@ setup(
 
 ---
 
-## Using setup.cfg and setup.py
+## Using setup.cfg
 
 Entries moved to `setup.cfg` would look like:
 
@@ -124,15 +132,6 @@ install_requires =
 [options.entry_points]
 console_scripts =
   executable-name = <path-to-main-function-with-dots>
-```
-
-A nominal `setup.py` is still required
-
-```python
-from setuptools import setup
-
-if __name__ == "__main__":
-  setup()
 ```
 
 ---
@@ -166,7 +165,18 @@ dependencies = [
 dynamic = ["<version-number>"]
 ```
 
-A nominal `setup.py` is still required.
+---
+
+## Minimal setup.py is still required
+
+A minimal `setup.py` is required along with `setup.cfg` or `pyproject.toml`
+
+```python
+from setuptools import setup
+
+if __name__ == "__main__":
+  setup()
+```
 
 ---
 
@@ -189,83 +199,6 @@ Is there a better way? Yes! Use pip!
 
 ---
 
-## What is pip?
-
-- pip is a package installer to install packages from the [Python Package Index PyPI]((https://pypi.org/)).
-- pip is itself a [package](https://pypi.org/project/pip/) which is available on PyPI.
-- pip is open-source and is developed on [GitHub](https://github.com/pypa/pip).
-
----
-
-## Using pip 1/2
-
-Executing:
-
-```bash
-pip install package-name
-```
-
-leads to pip choosing a distribution file  for the package and installing it in the environment.
-
-```bash
-python -m pip install package-name
-```
-
-is basically the same as:
-
-```bash
-pip install package-name
-```
-
----
-
-## Using pip 2/2
-
-- pip tracks metadata to allow for easy uninstallation and updating of packages.
-- pip is bundled together with Python 3.x, making it even easier to use.
-- pip can install a package from a source distribution (`.tar.gz`) or a wheel distribution (`.whl`).
-
-**Important**: Do not use
-
-```bash
-sudo pip install <package>
-```
-
-Various security issues with doing so! Go for
-
-```bash
-pip install --user <package>
-```
-
----
-
-## Installing a package in editable mode
-
-```bash
-pip install -e <package>
-```
-
-- Creates a direct link between local package files and installation, which is useful for development.
-- Make sure to *undo* post development.
-
----
-
-## Using pip
-
-Uninstall a package
-
-```bash
-pip uninstall <package>
-```
-
-Update a package
-
-```bash
-pip install --upgrade <package>
-```
-
----
-
 ## What is PyPI?
 
 - [PyPI](https://pypi.org/) = **Python Package Index** is a repository of software developed in the Python community.
@@ -282,7 +215,7 @@ pip install --upgrade <package>
 
 ---
 
-## File structure for code packaging 1/2
+## Folder structure for packaging 1/3
 
 Four places where naming is relevant:
 
@@ -291,13 +224,21 @@ Four places where naming is relevant:
 - Name of the package as seen my PyPI.
 - Name of the package to be used in the `import` statement.
 
+<span>
+Tip: Keep the last three names the same.
+<!-- .element: class="fragment" data-fragment-index="1" --></span>
+
 **All three names are independent of each other.**
+
+---
+
+## Folder structure for packaging 2/3
 
 Example folder structure:
 
 ```bash
-generic_folder_name/
-└── src/
+repository-name/
+└── package-name/
      ├── __init__.py
      └── source-code.py
 ```
@@ -307,16 +248,16 @@ generic_folder_name/
 
 ---
 
-## File structure for code packaging 2/2
+## Folder structure for packaging 3/3
 
 - Once the file structuring is complete, the repository will look like:
 
 ```bash
-generic_folder_name/
+repository-name/
 ├── LICENSE
 ├── setup.py
 ├── README.md
-├── src/
+├── package-name/
 │    ├── __init__.py
 │    └── source-code.py
 └── tests/
@@ -372,9 +313,6 @@ The option `entry_points` provide metadata which are exposed after installation.
 
 ```python
 from setuptools import setup
-
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
 
 setup(
     ...

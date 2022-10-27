@@ -18,7 +18,7 @@
 ## 2.1 – Thu, October 27, 2022
 
 - **15** Introduction to Packaging: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/intro_slides.md)
-- **75** Packaging a Python Code: [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_slides.md), [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_slides.md)
+- **75** Packaging a Python Code: [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_slides.md), [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pip_demo.md)
 
 ## 2.2 – Thu, October 27, 2022
 

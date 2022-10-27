@@ -64,12 +64,12 @@ diffusion2d.solve()
 ## Step 3 - Creating folder structure for packaging
 
 - Now that you have a refactored code, replicate the folder structure we learnt in the lecture to prepare the code for packaging.
-- With the help of the [lecture notes](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_slides.md) create additional files `setup.py`, `setup.cfg`, `pyproject.toml`, `__init__.py` and `README.md`.
+- With the help of the [lecture notes](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_slides.md) create additional files `setup.py`, `setup.cfg` or `pyproject.toml`, `__init__.py` and `README.md`.
+- Make a choice of using either `setup.cfg` or `pyproject.toml` to configure `setuptools` for the packaging. All configuration options needs to be specified in the configuration file and the setup file should only be a minimal file as shown in the lecture slides.
 - It is recommended to have the `package-name/` folder which has the source code in it.
 - **Note**: General recommendation is to have the name of the folder having the source files to be same as the name of the package as seen when imported at the time of use.
 - The `README.md` file consists of a longer description about the code and what it does. Take the information about the code from Step 1 of this exercise and add it to the README. In addition to this fill out the empty sections of the README with relevant information.
 - In the configuration (either `setup.cfg` or `pyproject.toml`) name your package `<your-GitLab-username>-diffusion2D`. We will use semantic versioning, so the version you are developing will be `0.0.1`. The package url is the url of the GitHub repository of this exercise code.
-- Make a choice of using either `setup.cfg` or `pyproject.toml` to configure `setuptools` for the packaging. All configuration options needs to be specified in the configuration file and the setup file should only be a minimal file as shown in the lecture slides.
 - If you see that the distribution archives have been built incorrectly, try to move some metadata into `setup.py` to debug what is going wrong.
 - As the package should be easy to install and provide maximum possible information, try to include as many configuration options as possible.
 - **Hint**: Have a look at the guides on [configuring setuptools with setup.cfg](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html) and [configuring setuptools with pyproject.toml](https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html). All the options covered in the lecture notes are applicable for this exercise.

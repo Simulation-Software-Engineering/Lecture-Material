@@ -32,3 +32,5 @@
 - **10** [GitHub/GitLab standards](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/standards_slides.md)
 
 ## 3.2 – Thu, November 03, 2022
+
+- **90** [Exercise on Git Workflows](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_exercise.md)

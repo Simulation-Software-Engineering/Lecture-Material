@@ -401,6 +401,11 @@ Uploading package_name-0.0.1.tar.gz
 pip install --user --index-url https://test.pypi.org/simple/ <package-name>
 ```
 
+to install dependencies along with the package for pypi test as well use command as:
+```bash
+pip install --user --extra-index-url https://test.pypi.org/simple/ <package-name>
+```
+
 ---
 
 ## Conda

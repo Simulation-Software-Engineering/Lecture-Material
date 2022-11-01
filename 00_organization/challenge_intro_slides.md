@@ -124,7 +124,7 @@ Rough workload / grading weights: 25%, 25%, 50%
 - Please also submit a report for each presentation
 - 1-2 pages (2500-5000 chars)
 - Written in markdown
-- Submission via a merge request to the [GitLab challenge repo](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge)
+- Submission via a merge request to the [GitLab challenge repo](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/challenge)
 - Add links, instructions, ... should work like a compact summary for everybody in the end
 - Will be visible to everybody in SSE group
 - We will prepare templates

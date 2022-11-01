@@ -38,11 +38,11 @@ slideOptions:
 
 ## What do we mean with Standards?
 
-- GitHub uses standards or conventions
-- Certain files or names trigger certain behavior automatically
-- Many are supported by most forges
-    - **This is good**
-    - Everybody should know them
+- GitHub uses standards or conventions.
+- Certain files or names trigger certain behavior automatically.
+- Many are supported by most forges.
+    - **This is good.**
+    - Everybody should know them.
 
 ---
 
@@ -51,22 +51,22 @@ slideOptions:
 Certain files lead to special formatting (normally directly at root of repo):
 
 - `README.md`
-    - Contains meta information / overview / first steps of software
-    - Gets rendered on landing page (and in every folder)
+    - ... contains meta information / overview / first steps of software.
+    - ... gets rendered on landing page (and in every folder).
 - `LICENSE`
-    - Contains software license
-    - Gets rendered on right sidebar, when clicking on license, and on repo preview
+    - ... contains software license.
+    - ... gets rendered on right sidebar, when clicking on license, and on repo preview.
 - `CONTRIBUTING.md`
-    - Contains guidelines for contributing
-    - First-time contributors see banner
+    - ... contains guidelines for contributing.
+    - First-time contributors see banner.
 - `CODE_OF_CONDUCT.md`
-    - Contains code of conduct
-    - Creates link on community profile
+    - ... contains code of conduct.
+    - ... gets rendered on right sidebar.
 
 ---
 
 ## Issues and PRs
 
 - Templates for description in `.github` folder
-- `closes #34` (or several other keywords: `fixes`, `resolves`) in commit message or PR description will close issue 34 when merged
-- `help wanted` label gets rendered on repo preview (e.g. *"3 issues need help"*)
+- `closes #34` (or several other keywords: `fixes`, `resolves`) in commit message or PR description will close issue 34 when merged.
+- `help wanted` label gets rendered on repo preview (e.g. *"3 issues need help"*).

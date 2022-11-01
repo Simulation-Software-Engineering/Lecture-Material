@@ -1,8 +1,8 @@
 # My favorite neat little Git trick
 
-- Students present in 3-5 mins their favorite *neat little Git trick* (a tool, a command, a configuration, a GitHub thing, ...).
+- Students present in 1-3 mins their favorite *neat little Git trick* (a tool, a command, a configuration, a GitHub thing, ...).
 - Preparation should not take longer than 15 mins, should be a demo.
-- Lecturers also prepare some.
+- Lecturers also prepare some
 
 Collected examples:
 

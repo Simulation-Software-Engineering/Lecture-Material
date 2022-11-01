@@ -33,16 +33,16 @@ slideOptions:
 
 ## Why Workflows?
 
-- Git offers a lot of flexibility in managing changes
-- When working in a team, some agreements need to be made however (especially on how to work with branches)
+- Git offers a lot of flexibility in managing changes.
+- When working in a team, some agreements need to be made however (especially on how to work with branches).
 
 ---
 
 ## Which Workflow?
 
-- There are standard solutions
-- It depends on the size of the team
-- Workflow should enhance effectiveness of team, not be a burden that limits productivity
+- There are standard solutions.
+- It depends on the size of the team.
+- Workflow should enhance effectiveness of team, not be a burden that limits productivity.
 
 ---
 
@@ -70,7 +70,7 @@ slideOptions:
 - Rebase feature branch on `main` if necessary
 - Delete remote branch once merged and no longer needed (one click on GitHub after merge)
 - **Good for**: small teams, small projects, prototyping, websites (continuous deployment), documentation
-- Aka [trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development) or [GitHub flow](https://guides.github.com/introduction/flow/)
+- Aka. [trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development) or [GitHub flow](https://guides.github.com/introduction/flow/)
 
 ---
 
@@ -97,7 +97,7 @@ slideOptions:
 - More control over access rights, distinguish between maintainers and external contributors
 - Should maintainers also use branches on their forks?
     - Makes overview of branches easier
-    - Distinguish between prototype branches (on fork, no PR), serious enhancements (on fork with PR), joint enhancements (on upstream)
+    - Distinguishes between prototype branches (on fork, no PR), serious enhancements (on fork with PR), joint enhancements (on upstream)
 - **Good for**: open-source projects with external contributions (used more or less in preCICE)
 
 ---

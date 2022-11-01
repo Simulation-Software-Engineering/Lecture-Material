@@ -2,16 +2,15 @@
 
 ## 1.1 – Thu, October 20, 2022
 
-- **40** [Course planning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/course_intro_slides.md) + questions
-- **15** [Introduction to RSE](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/rse_basics_slides.md)
-- **15** [Introduction to version control](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/intro_slides.md)
-- **15** [Recap of Git basics](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_basics_demo.md#recap-of-git-basics)
-- Tell students how to recap Git in detail if needed: [py-rse book](https://merely-useful.tech/py-rse/)
+- **50** [Course planning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/course_intro_slides.md) + questions
+- **20** [Introduction to RSE](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/rse_basics_slides.md)
+- **20** [Introduction to version control](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/intro_slides.md)
 
 ## 1.2 – Thu, October 20, 2022
 
-- **40** [How I work with Git](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_basics_demo.md#how-i-work-with-git)
-- **30** [Git quiz](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_quiz.md)
+- **15** [Recap of Git basics](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_basics_demo.md#recap-of-git-basics)
+- Tell students how to recap Git in detail if needed: [py-rse book](https://merely-useful.tech/py-rse/)
+- **50** [How I work with Git](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_basics_demo.md#how-i-work-with-git)
 - **20** [Your Challenge: Contribute to Real Simulation Software](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/challenge_intro_slides.md)
 - Ask students to prepare *My favorite neat little Git trick*
 
@@ -23,3 +22,13 @@
 ## 2.2 – Thu, October 27, 2022
 
 - **90** [Exercise on Packaging a Python Code](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_exercise.md)
+
+## 3.1 – Thu, November 03, 2022
+
+- **30-45** [*My favorite neat little Git trick*](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/my_favorite_neat_little_git_trick_demo.md)
+- Maybe: **30** [Git quiz](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_quiz.md)
+- **25** [Merge vs. rebase](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/merge_rebase_slides.md)
+- **20** [Working in teams / Git workflows](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/workflow_slides.md)
+- **10** [GitHub/GitLab standards](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/standards_slides.md)
+
+## 3.2 – Thu, November 03, 2022

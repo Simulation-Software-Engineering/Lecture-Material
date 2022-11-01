@@ -85,5 +85,5 @@ slideOptions:
 - Companies use (more and more) the same workflows and tools.
     - It is not just about coding. It is about collaborative work.
 - Open-source development excellent door opener for industry.
-- Many companies use open-source software tools and frameworks and also need to make contributions.
+- Some companies use open-source software and need to make contributions.
 - Some companies develop their software as open-source software.

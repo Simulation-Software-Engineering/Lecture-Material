@@ -1,101 +1,32 @@
 # Exercise: Git Workflows
 
-## Starting remarks
+Deadline: **Thursday, November 10, 2022, 9:00**
 
-- [Exercise repository link](https://github.com/Simulation-Software-Engineering/git-exercise).
-- Deadline for submitting this exercise is **Thursday 10th November 09:00**.
-- This exercise has been originally created by Dennis Gläser @dglaeser.
+## Preparation
 
-## Brief idea of the exercise
+- Work on the exercises in groups of two. One of you creates a new organization on GitHub (free plan) and adds their partner.
+- Import the [exercise repository](https://github.com/Simulation-Software-Engineering/git-exercise) and name it `git-exercise` again. We refer to this repository as the *upstream* repository.
+- Add a branch protection rule for the `main` branch of the repository:
+    - Require a pull request before merging
+    - Require linear history
+- Finally, everybody forks the repository into their own namespace.
 
-The exercises should be worked on in groups of two people. Start with forking this repository (each one of you), and decide which of the two forks should act as the "main repository". Note that the exercises build upon each other, so you need, for instance, to complete Exercise 1 before you can continue with Exercise 2. Each exercise is described in the comments at the top of the respective `.py` file. Typically, each one of you will have to make one of the already existing tests pass. The tests in a file can be run with `pytest`, for instance, with `python3 -m pytest FILENAME.py`. To run only the test you are working on, use `python3 -m pytest FILE.py -k TESTNAME`.
+## Idea of the Exercise
 
-## Exercise 1
+- There are three separate exercises. Each one consists of an individual Python file `exerciseX.py`. The exercises build upon each other, work from one to three. Each exercise is described in the comments at the top of the respective Python file.
+- Each exercise has two tasks A and B. Distribute the two tasks and **work on them in parallel**.
+- For each task create a new branch with an appropriate name (e.g., `ex-1-task-A`) and use appropriate commit messages (not `Solve task A`).
+- When ready, push the new branch via `git push -u <remote> <branchname>` to your own remote and open a pull request to the main branch upstream.
+- Assign your partner as reviewer. Review, fix problems, and eventually merge. For the best learning experience, use a different order of steps in every exercise.
+- **Goal of the exercises**: Create a linear history with readable commit messages.
 
-Distribute the two tasks A and B and work on them in parallel.
+## Pytest and Python
 
-- Create a branch for your task, giving it an appropriate name, for example `ex-1-task-A`.
-- Commit the solution to your task in a single commit with appropriate name, for example `solution to task A`.
-- Push your commit to your fork of the remote repository.
-- Open a merge request from the branch you are working on to the main branch of the main repository.
-- Together, integrate both tasks via merge requests, while taking care that the final git history is either semi-linear:
+- In each task, you typically need to make one of already existing tests pass. We use `pytest` here (you will learn more about `pytest` after Christmas):
+    - Run all tests of a file with `python3 -m pytest exerciseX.py`.
+    - Run a specific test with `python3 -m pytest exerciseX.py -k TESTNAME`.
+- Ask if you are stuck with Python issues (quick search on Google often helps as well). This exercise is about Git, not Python.
 
-```sh
-* merge task B
-| \
-|  * task B
-| /
-* merge task A
-| \
-|  * task A
-| /
-* commit from which you start your work
-```
+## Credits
 
-or linear:
-
-```sh
-* task B
-|
-* task A
-|
-* commit from which you start your work
-```
-
-## Exercise 2
-
-Repeat the same procedure as from Exercise 1, but this time using the file `exercise2.py`. This time we want a semi-linear history, which should now continue like this:
-
-```sh
-* merge ex2 task B
-| \
-|  * ex2 task B
-| /
-* merge ex2 task A
-| \
-|  * ex2 task A
-| /
-* last commit of exercise 1
-...
-```
-
-Again, proper commit messages and branch names should be used.
-
-## Exercise 3
-
-Repeat the procedure from the previous exercises, but this time using the file `exercise3.py`. We again want a semi-linear history, but this time the entire exercise should be done in one merge request:
-
-```sh
-* merge ex3
-| \
-|  * ex3 task B
-|  * ex3 task A
-| /
-* merge ex2 task B (from last exercise)
-| \
-...
-```
-
-Again, proper commit messages and branch names should be used.
-
-## Exercise 4
-
-In this exercise, we want to achieve yet a different layout of the git history:
-
-```sh
-* merge ex4
-| \
-|  * merge ex4 task B
-|  | \
-|  |  * ex4 task B
-|  | /
-|  * merge ex4 task A
-|  | \
-|  |  * ex 4 task A
-|  | /
-|  * ex 4 task 0
-| /
-* merge ex3 (from last exercise)
-| \
-...
-```
+These exercises are taken from the [RSE 102 block course](https://github.com/RSE-102/git-workflows-exercises), created by [Dennis Gläser](https://github.com/dglaeser).

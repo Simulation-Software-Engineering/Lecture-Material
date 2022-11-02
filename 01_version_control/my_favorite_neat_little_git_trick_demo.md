@@ -6,6 +6,7 @@
 
 Collected examples:
 
+- An interactive learning environment: [Learn Git Branching](https://learngitbranching.js.org/)
 - Click on line number on GitHub and then `blame` to study history of file
 - `git reflog` to resurrect accidentally deleted branches
 - GitHub uses [gitignore templates](https://github.com/github/gitignore) if you create a `.gitignore` file from GitHub

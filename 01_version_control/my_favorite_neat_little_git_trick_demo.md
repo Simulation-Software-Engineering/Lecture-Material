@@ -22,9 +22,11 @@ Collected examples:
 - You can generate a list of contributors sorted by the number of contributions using `git shortlog --summary --numbered --email.
 - If you have some contributors with several different email addresse and/or configured names, you can merge them via aliases in a file called [`.mailmap`](https://git-scm.com/docs/gitmailmap) that should reside in the root of the repository.
 
+### Git Lense
+
 - [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)  extends the Git capabilities built into Visual Studio Code. It helps you visualize code authorship at a glance using Git Blame annotations and Code Lens, seamlessly navigate and explore Git repositories, gain valuable insights with powerful comparison commands, and more.
 
--T he Git Lens extension is one of the most popular in the community and is also the most powerful. In most cases, its functionality can replace either of the previous two extensions.
+- The Git Lens extension is one of the most popular in the community and is also the most powerful. In most cases, its functionality can replace either of the previous two extensions.
 
 - For blame information, a subtle message appears to the right of the line you're working on, letting you know the change was made when it was made and the associated commit message. Some additional information is shown when you hover over this message, like the code change itself, the timestamp, and more.
 

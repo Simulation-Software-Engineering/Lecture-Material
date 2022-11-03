@@ -92,7 +92,7 @@ We use here:
 - `git checkout feature && git rebase main`
     <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/01_version_control/figs/history_rebase/fig.png" width=90%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 - New parents --> new hashes --> history is rewritten
-- If `feature` is already on remote, it needs a force push `git push --force myfork feature`.
+- If `feature` is already on remote, it needs a force push `git push --force-with-lease myfork feature`.
 - Be careful: Only use rebase if **only you** work on a branch (a local branch or a branch on your fork).
 - For local branches very helpful: `git pull --rebase` (fetch & rebase)
 

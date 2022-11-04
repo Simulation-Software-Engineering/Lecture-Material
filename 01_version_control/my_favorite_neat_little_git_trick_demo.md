@@ -30,7 +30,6 @@
 ## Git Lense
 
 - [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)  extends the Git capabilities built into Visual Studio Code. It helps you visualize code authorship at a glance using Git Blame annotations and Code Lens, seamlessly navigate and explore Git repositories, gain valuable insights with powerful comparison commands, and more.
-
 - The Git Lens extension is one of the most popular in the community and is also the most powerful. In most cases, its functionality can replace either of the previous two extensions.
 
 - For blame information, a subtle message appears to the right of the line you're working on, letting you know the change was made when it was made and the associated commit message. Some additional information is shown when you hover over this message, like the code change itself, the timestamp, and more.

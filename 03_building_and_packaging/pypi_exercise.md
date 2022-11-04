@@ -46,9 +46,10 @@ In this exercise you will convert a raw Python code into a packaged code which i
 - Once the functionality is ported, you need to import it into the `diffusion2d.py`. This is done in the following way
 
 ```python
-from .output import create_plot, output_plots
+from output import create_plot, output_plots
 ```
 
+- Note that the `from output` command will only import functions from `output.py` if no global Python package with the name `output` exists. If another package named `output` exists, then a relative import needs to be done.
 - Once the output functionality has been separated from the solver, we need to bundle the solver itself into a function called `solve` in `diffusion2d.py`. We need to do this because later on we will call this function after importing the package
 
 ```python
@@ -69,7 +70,7 @@ diffusion2d.solve()
 - It is recommended to have the `package-name/` folder which has the source code in it.
 - **Note**: General recommendation is to have the name of the folder having the source files to be same as the name of the package as seen when imported at the time of use.
 - The `README.md` file consists of a longer description about the code and what it does. Take the information about the code from Step 1 of this exercise and add it to the README. In addition to this fill out the empty sections of the README with relevant information.
-- In the configuration (either `setup.cfg` or `pyproject.toml`) name your package `<your-GitLab-username>-diffusion2D`. We will use semantic versioning, so the version you are developing will be `0.0.1`. The package url is the url of the GitHub repository of this exercise code.
+- In the configuration (either `setup.cfg` or `pyproject.toml`) name your package `<your-GitLab-username>_diffusion2d` (the underscore `_` between your GitLab username and diffusion2d is important, because any other symbol will not work). We will use semantic versioning, so the version you are developing will be `0.0.1`. The package url is the url of the GitHub repository of this exercise code.
 - If you see that the distribution archives have been built incorrectly, try to move some metadata into `setup.py` to debug what is going wrong.
 - As the package should be easy to install and provide maximum possible information, try to include as many configuration options as possible.
 - **Hint**: Have a look at the guides on [configuring setuptools with setup.cfg](https://setuptools.pypa.io/en/latest/userguide/declarative_config.html) and [configuring setuptools with pyproject.toml](https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html). All the options covered in the lecture notes are applicable for this exercise.
@@ -98,6 +99,7 @@ diffusion2d.solve()
 ## Step 7 - Testing the deployed package
 
 - Using the commands from the lecture notes try to install the package using `pip` and also run the code by importing the `solve()` functionality in a Python script or an interactive Python shell.
+- Even though your package is on TestPyPI, the dependencies of the package need to be installed from PyPI. To make sure that the dependencies are installed from PyPI and not TestPyPI, use the `--extra-index-url` flag in the `pip` command appropriately.
 
 ## Step 8 - Submitting the exercise
 

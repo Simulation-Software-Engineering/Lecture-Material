@@ -27,7 +27,7 @@
 - You can generate a list of contributors sorted by the number of contributions using `git shortlog --summary --numbered --email.
 - If you have some contributors with several different email addresse and/or configured names, you can merge them via aliases in a file called [`.mailmap`](https://git-scm.com/docs/gitmailmap) that should reside in the root of the repository.
 
-### Git Lense
+## Git Lense
 
 - [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)  extends the Git capabilities built into Visual Studio Code. It helps you visualize code authorship at a glance using Git Blame annotations and Code Lens, seamlessly navigate and explore Git repositories, gain valuable insights with powerful comparison commands, and more.
 

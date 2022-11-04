@@ -9,6 +9,12 @@
 - An interactive learning environment: [Learn Git Branching](https://learngitbranching.js.org/)
 - Click on line number on GitHub and then `blame` to study history of file
 - GitHub uses [gitignore templates](https://github.com/github/gitignore) if you create a `.gitignore` file from GitHub
+- To get a nice compact `git log`, you can add the following to your `gitconfig`:
+
+    ```
+    [format]
+            pretty = format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(20,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
+    ```
 
 ## Tricks from Winter Term 2021/22
 

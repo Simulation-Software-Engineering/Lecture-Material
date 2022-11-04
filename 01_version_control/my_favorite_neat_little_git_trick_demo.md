@@ -26,4 +26,4 @@
 - One can create empty commits, i.e. a commit without any changes, using the `--allow-empty` options. This can be useful for debugging, for example. The full command could look like this: `git commit --allow-empty -m 'This commit is empty'`
 - You can generate a list of contributors sorted by the number of contributions using `git shortlog --summary --numbered --email.
 - If you have some contributors with several different email addresse and/or configured names, you can merge them via aliases in a file called [`.mailmap`](https://git-scm.com/docs/gitmailmap) that should reside in the root of the repository.
-- `git gui citool` is a nice GUI to stage parts of your changes (https://git-scm.com/docs/git-gui)
+- `git gui citool` is a nice GUI to stage parts of your changes (https://git-scm.com/docs/git-gui).

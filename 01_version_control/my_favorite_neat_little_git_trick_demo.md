@@ -1,12 +1,17 @@
-# My favorite neat little Git trick
+# My Favorite Neat Little Git Trick
 
 - Students present in 1-3 mins their favorite *neat little Git trick* (a tool, a command, a configuration, a GitHub thing, ...).
 - Preparation should not take longer than 15 mins, should be a demo.
-- Lecturers also prepare some
+- Lecturers also prepare some.
 
-Collected examples:
+## Tricks from Winter Term 2022/23
 
 - An interactive learning environment: [Learn Git Branching](https://learngitbranching.js.org/)
+- Click on line number on GitHub and then `blame` to study history of file
+- GitHub uses [gitignore templates](https://github.com/github/gitignore) if you create a `.gitignore` file from GitHub
+
+## Tricks from Winter Term 2021/22
+
 - Click on line number on GitHub and then `blame` to study history of file
 - `git reflog` to resurrect accidentally deleted branches
 - GitHub uses [gitignore templates](https://github.com/github/gitignore) if you create a `.gitignore` file from GitHub

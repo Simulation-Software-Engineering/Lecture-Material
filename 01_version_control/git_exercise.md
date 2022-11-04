@@ -27,6 +27,10 @@ Deadline: **Thursday, November 10, 2022, 9:00**
     - Run a specific test with `python3 -m pytest exerciseX.py -k TESTNAME`.
 - Ask if you are stuck with Python issues (quick search on Google often helps as well). This exercise is about Git, not Python.
 
+## Submission
+
+Please open an issue (one per group) in the [exercise repository](https://github.com/Simulation-Software-Engineering/git-exercise) with the title `Submission <gitlab_username1> <gitlab_username2>` and post a link to your upstream repository.
+
 ## Credits
 
 These exercises are taken from the [RSE 102 block course](https://github.com/RSE-102/git-workflows-exercises), created by [Dennis Gläser](https://github.com/dglaeser).

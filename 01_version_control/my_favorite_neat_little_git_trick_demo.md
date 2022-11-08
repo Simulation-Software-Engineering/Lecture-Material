@@ -26,6 +26,43 @@
 - For Git history information, this extension offers a variety of features. You can easily access various options, including viewing file history, comparing to previous versions, opening a specific revision, and more. To open these options, you can click the text in the bottom status bar that contains the author who edited the line of code and how long it has been since it was edited.
 - This extension is packed with functionality and will take you a while to absorb everything it offers.
 
+### A helpful git config
+
+```
+[pull]
+        rebase = true
+[rebase]
+        autoStash = true
+        autosquash = true
+[init]
+        defaultBranch = main
+[alias]
+        # git mr origin 5
+        mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
+        pushf = push --force-with-lease
+        fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+[url "git@github.com:"]
+        insteadOf = https://github.com/
+        insteadOf = http://github.com/
+        insteadOf = git://github.com/
+        insteadOf = gh://
+[url "git@gitlab.com:"]
+        insteadOf = https://gitlab.com/
+        insteadOf = http://gitlab.com/
+        insteadOf = git://gitlab.com/
+        insteadOf = gl://
+```
+
+What does it do?
+
+- Auto rebase on pull and auto stash, on rebase (configured in git config)
+- Git Alias `fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"`
+    - Allows committing current staged changes as a fixup commit for a previous commit
+    - Follow by `git rebase -i --autosquash` (or enable `autosquash` for rebase on default in git config)
+- Automatically fix http(s) urls (changing it to the correct ssh url) using git config `url` section
+    - Also allows copying url from browser
+    - Also allows entering `gh://username/repo` by memory
+
 ## Tricks from Winter Term 2021/22
 
 - Click on line number on GitHub and then `blame` to study history of file

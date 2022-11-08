@@ -9,6 +9,22 @@
 - An interactive learning environment: [Learn Git Branching](https://learngitbranching.js.org/)
 - Click on line number on GitHub and then `blame` to study history of file
 - GitHub uses [gitignore templates](https://github.com/github/gitignore) if you create a `.gitignore` file from GitHub
+- To get a nice compact `git log`, you can add the following to your `gitconfig`:
+
+    ```
+    [format]
+            pretty = format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(20,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
+    ```
+
+- `git gui citool` is a nice GUI to stage parts of your changes (https://git-scm.com/docs/git-gui).
+
+### Git Lense
+
+- [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) extends the Git capabilities built into Visual Studio Code. It helps you visualize code authorship at a glance using Git Blame annotations and Code Lens, seamlessly navigate and explore Git repositories, gain valuable insights with powerful comparison commands, and more.
+- The Git Lens extension is one of the most popular in the community and is also the most powerful. In most cases, its functionality can replace either of the previous two extensions.
+- For blame information, a subtle message appears to the right of the line you are working on, letting you know the change was made when it was made and the associated commit message. Some additional information is shown when you hover over this message, like the code change itself, the timestamp, and more.
+- For Git history information, this extension offers a variety of features. You can easily access various options, including viewing file history, comparing to previous versions, opening a specific revision, and more. To open these options, you can click the text in the bottom status bar that contains the author who edited the line of code and how long it has been since it was edited.
+- This extension is packed with functionality and will take you a while to absorb everything it offers.
 
 ## Tricks from Winter Term 2021/22
 

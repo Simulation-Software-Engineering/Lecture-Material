@@ -9,6 +9,7 @@
 - An interactive learning environment: [Learn Git Branching](https://learngitbranching.js.org/)
 - Click on line number on GitHub and then `blame` to study history of file
 - GitHub uses [gitignore templates](https://github.com/github/gitignore) if you create a `.gitignore` file from GitHub
+- `git gui citool` is a nice GUI to stage parts of your changes (https://git-scm.com/docs/git-gui).
 
 ## Tricks from Winter Term 2021/22
 

@@ -18,7 +18,7 @@
 
 - `git gui citool` is a nice GUI to stage parts of your changes (https://git-scm.com/docs/git-gui).
 
-### Git Lense
+### Git Lens
 
 - [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) extends the Git capabilities built into Visual Studio Code. It helps you visualize code authorship at a glance using Git Blame annotations and Code Lens, seamlessly navigate and explore Git repositories, gain valuable insights with powerful comparison commands, and more.
 - The Git Lens extension is one of the most popular in the community and is also the most powerful. In most cases, its functionality can replace either of the previous two extensions.

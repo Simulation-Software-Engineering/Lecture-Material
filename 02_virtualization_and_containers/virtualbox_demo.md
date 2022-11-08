@@ -44,7 +44,7 @@
 - Boot up some configured virtual machine (Ubuntu).
 - Creating a new virtual machine
     - Click on `new`.
-    - I use `expert mode` to set disk location, size and memory. Note, that one can change that also later on.
+    - Use `expert mode` to set disk location, size and memory. Note, that one can change that also later on.
     - After clicking on `Create` a menu to create the `Virtual Hard Disk` opens.
         - One can choose between fixed size and dynamically allocated (i.e. the drive grows). I personally recommend avoiding dynamically allocated without upper limit.
     - Creates empty machine. Will not do much as we do not have any OS installed. VirtualBox will prompt to mount an image (iso).

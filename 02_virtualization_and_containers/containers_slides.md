@@ -31,14 +31,13 @@ slideOptions:
 
 <img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/figs/container-sketch.png" width=30%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
-
 - Container operates in "fenced off" part of the operating system (`namespaces`)
 - Low(er) overhead than virtual machines
     - Runs on kernel (and libraries) of the host OS
     - Cheap to start and stop a container
 - Available features depend on Host
     - Linux container on Windows or vice versa?
-- Container can be isolated
+- Container can be isolated.
 
 ---
 
@@ -46,7 +45,7 @@ slideOptions:
 
 - Microservices
 - Reproducible environments for developing and testing (DevOps)
-- Container hype strongly driven by [Docker](https://www.docker.com/)
+- Container hype strongly driven by [Docker](https://www.docker.com/).
 - More and more in science
     - High-performance computing, "Bring Your Own Environment" (BYOE)
     - Reproducible research

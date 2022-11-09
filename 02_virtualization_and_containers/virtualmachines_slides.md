@@ -49,7 +49,7 @@ slideOptions:
 
 ## Types of Virtual Machines / Hypervisors
 
-- Sometimes distinction not clear, but in general:
+- Sometimes distinction is not clear, but in general:
     - **Type 1**
         - Runs directly on bare-metal hardware
         - Examples: [Microsoft Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [VMware ESXi](https://www.vmware.com/products/esxi-and-esx.html), [Proxmox Virtual Environment](https://www.proxmox.com/en/proxmox-ve), [Xen](https://xenproject.org/)...
@@ -61,8 +61,8 @@ slideOptions:
 
 ## (Some) Features of Virtual Machines
 
-- VM might obtain exclusive access to some of your resources
-- Behaves (more or less) as native installation (root etc., system calls)
+- VM might obtain exclusive access to some of your resources.
+- Behaves (more or less) as native installation (root etc., system calls).
 - (Strict) isolation from host operating system
 - Popular for
     - Safety critical tasks
@@ -81,7 +81,7 @@ slideOptions:
     - Create snapshots before testing, copy VMs etc.
 - Infrastructure consolidation
     - Run many VMs on single host
-- Seperate services from each other (security?!)
+- Separate services from each other (for security)
 - Reproducible software environment for running and developing software
 
 ---
@@ -101,7 +101,7 @@ slideOptions:
 ## Summary
 
 - Isolated environment that emulates a computer
-- Differnt types of Hypervisors (bare-metal or running on OS)
+- Different types of Hypervisors (bare-metal or running on OS)
 - Run additional OSes on your machine
 - VMs are portable
 - Keep security in mind
@@ -115,4 +115,3 @@ slideOptions:
 - [VirtualBox Manual: 1. First Steps](https://www.virtualbox.org/manual/ch01.html)
 - [VirtualBox Manual: 13. Security Guide](https://www.virtualbox.org/manual/ch13.html)
 - ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)
-

@@ -34,3 +34,11 @@
 ## 3.2 – Thu, November 03, 2022
 
 - **90** [Exercise on Git Workflows](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_exercise.md)
+
+## 4.1 – Thu, November 10, 2022
+
+- **5** [Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/intro_slides.md)
+- **10** [Introduction to Virtualization](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualmachines_slides.md)
+- **40** [VirtualBox (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualbox_slides.md)
+- **25** [Vagrant (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/vagrant_slides.md)
+- **10** [Introduction to Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/containers_slides.md)

@@ -12,7 +12,7 @@
     - Emulating a complete computer.
     - Virtual machine brings the full software stack (kernel, libraries etc.)
     - Has a (type 1/2) hypervisor. Type 1 runs on bare metal while type 2 runs within an operating system. Distinction not always clear.
-    - Might need/benefit from virtualization technologies (VT-X)
+    - Might need/benefit from virtualization technologies (VT-X).
     - Great flexibility. Can run (normally) any operating system that runs on the virtualized platform.
     - Strict separation from host operating system. (Popular for safety critical tasks: c't banking os, Desinfec't, Remote laptops)
 - Focus of lecture will be on Linux and Linux-based containers and VMs.
@@ -43,8 +43,8 @@
 - Create a new virtual machine and boot it up (nothing will happen).
 - Boot up some configured virtual machine (Ubuntu).
 - Creating a new virtual machine
-    - Click on `new`
-    - I use `expert mode` to set disk location, size and memory. Note, that one can change that also later on.
+    - Click on `new`.
+    - Use `expert mode` to set disk location, size and memory. Note, that one can change that also later on.
     - After clicking on `Create` a menu to create the `Virtual Hard Disk` opens.
         - One can choose between fixed size and dynamically allocated (i.e. the drive grows). I personally recommend avoiding dynamically allocated without upper limit.
     - Creates empty machine. Will not do much as we do not have any OS installed. VirtualBox will prompt to mount an image (iso).
@@ -70,7 +70,8 @@
         sudo apt install virtualbox-guest-dkms virtualbox-guest-x11 virtualbox-guest-utils
         ```
 
-        - `virtualbox-guest-x11` can be dropped on headless system
+        - The recommended way to install VirtualBox Guest Additions is via the VirtualBox GUI.
+
     - VM will capture mouse pointer. Use `Right-CTRL` to "free" pointer again.
     - Create snapshots on image overview (Burger symbol on the right)
         - Load snapshots for different configuration stages

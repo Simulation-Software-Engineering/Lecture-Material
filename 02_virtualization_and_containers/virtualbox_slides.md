@@ -35,7 +35,7 @@ slideOptions:
 ## Introduction
 
 - Virtualization solution created by Innotek GmbH (Weinstadt, Germany)
-- 2008 obtained by Sun Microsystems in 2008. Since 2010, owned by Oracle
+- Obtained by Sun Microsystems in 2008. Since 2010, owned by Oracle
 - Initially closed source product with special license for personal use and evaluation (PUEL)
 - Now: Open Source edition (GPL2)
 
@@ -49,7 +49,7 @@ slideOptions:
     - Check virtualization settings in BIOS/UEFI if it does not work out of the box
 - Sufficient space on hard drive
     - VM uses a virtual hard drive, i.e., a file on your drive
-- Some video memory (recommend >=64MB)
+- Some video memory (recommended is >=64MB)
 - Exact requirements depend on VM
 
 ---
@@ -60,7 +60,7 @@ slideOptions:
     - **VDI**: "Virtual Disk Image", VirtualBox' native format
     - **VHD**: Format used by Microsoft
     - **VMDK**: VMWare's virtual disk format
-    - Support dynamic allocation
+    - Support for dynamic allocation
 - Further (partially) supported formats: HDD (Parallels format), QCOW, QED
 
 **Note**: If you use btrfs as filesystem, you should disable CoW for the VM's images. (I/O load)
@@ -69,7 +69,7 @@ slideOptions:
 
 ## Content of VirtualBox Image's Directory
 
-- `NAMEOFVM.vdi`: The virtual hard drive containing the Guest os
+- `NAMEOFVM.vdi`: The virtual hard drive containing the Guest OS
 - `NAMEOFVM.vbox`: XML containing metadata and configuration information (RAM, network devices...)
 - `NAMEOFVM.vbox-prev`: Backup of previous settings
 - `Logs/`: Directory containing log files
@@ -96,8 +96,8 @@ slideOptions:
     ```
 
     - Then run installation script of Guest Additions
-- Screen black after/during installation -> Increase video memory to >=64 MB
-
+- Screen black after/during installation -> Increase video memory to >=64 MB.
+- Shared folder not working at all, check if Guest Additions are installed.
 
 ---
 
@@ -120,7 +120,6 @@ Details available in [`virtualbox_demo.md`](https://github.com/Simulation-Softwa
 
     - Consistency of the environment?
     - Sharing image with others?
-
 
 ---
 

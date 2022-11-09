@@ -12,16 +12,43 @@
 
 ## Listings
 
-- Each item starts with a capital letter. Only half sentences start with `...`, a space, and then a lower case letter.
+The two important questions are:
+
+- Should an item start with a capital or a lower case letter?
+- How should an item end?
+
+### Full Sentences
+
+- ... start with a capital letter.
+- ... end with a period, a questions mark, or an exclamation mark. Use exclamation marks with care (do not shout at the student).
+
+Example:
+
+> - Running predefined workflows is simple.
+
+### Items That are no Full Sentences
+
+- ... also start with a capital letter.
+- ... do **not** end with a period, but can end with a question mark, or an exclamation mark. Use exclamation marks with care (do not shout at the student).
+
+Example:
+
+> - Ensuring reproducible test environments
+
+### Half Sentences
+
+What if the sentence starts in a heading and continues in the item?
+
+- Start the item with `...`, a space, and then a lower case letter
+- End with a period, a question mark, or an exclamation mark
+
+Example:
 
 > Git
 > - ... is a version control system.
 > - ... is very important.
 
-- Items that are full or half sentences end with a period, a question mark, or an exclamation mark. Use exclamation marks with care (do not shout at the student). Items that are no full or half sentences do not end with a period.
-
-> - Running predefined workflows is simple.
-> - Ensuring reproducible test environments
+### More Rules
 
 - After a colon:
     - Start a full sentence with a capital letter.
@@ -62,4 +89,3 @@ solver.
 - On the [course content page](https://simulation-software-engineering.github.io/homepage/course-content/) of the website
 - At the beginning of intro slides set of each chapter
 - Do not use separate learning goals for a specific lecture session. However, listing parts of or all learning goals again is possible.
-

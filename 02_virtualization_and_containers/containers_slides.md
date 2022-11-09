@@ -29,7 +29,7 @@ slideOptions:
 
 ## What is a Container?
 
-<img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/figs/container-sketch.png" width=30%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/02_virtualization_and_containers/figs/container-sketch.png" width=30%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 - Container operates in "fenced off" part of the operating system (`namespaces`)
 - Low(er) overhead than virtual machines

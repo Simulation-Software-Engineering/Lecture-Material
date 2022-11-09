@@ -1,4 +1,4 @@
-# Virtual Machines Demo
+# Vagrant Demo
 
 ## Introduction to Vagrant
 

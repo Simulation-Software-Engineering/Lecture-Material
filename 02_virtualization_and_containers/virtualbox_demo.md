@@ -70,6 +70,8 @@
         sudo apt install virtualbox-guest-dkms virtualbox-guest-x11 virtualbox-guest-utils
         ```
 
+        - The recommended way to install VirtualBox Guest Additions is via the VirtualBox GUI.
+
     - VM will capture mouse pointer. Use `Right-CTRL` to "free" pointer again.
     - Create snapshots on image overview (Burger symbol on the right)
         - Load snapshots for different configuration stages

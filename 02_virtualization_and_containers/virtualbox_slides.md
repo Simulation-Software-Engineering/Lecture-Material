@@ -96,7 +96,8 @@ slideOptions:
     ```
 
     - Then run installation script of Guest Additions
-- Screen black after/during installation -> Increase video memory to >=64 MB
+- Screen black after/during installation -> Increase video memory to >=64 MB.
+- Shared folder not working at all, check if Guest Additions are installed.
 
 ---
 
@@ -119,7 +120,6 @@ Details available in [`virtualbox_demo.md`](https://github.com/Simulation-Softwa
 
     - Consistency of the environment?
     - Sharing image with others?
-
 
 ---
 

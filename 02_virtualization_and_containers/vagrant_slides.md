@@ -54,7 +54,7 @@ slideOptions:
     - Tool for configuring the boxes (install software on machine)
     - Examples: shell scripts, Chef, Puppet..
 - Providers
-    - "Backend" the box is based on
+    - "Backend" on which the box is based
     - Examples: VirtualBox, Hyper-V, AWS, Docker...
 
 ---
@@ -118,7 +118,7 @@ slideOptions:
 
 ## Demo: Premade Vagrant VM
 
-Details available in [`virtualmachines_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualmachines_demo.md)
+Details available in [`vagrant_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/vagrant_demo.md)
 
 ---
 

@@ -2,19 +2,19 @@
 
 ## Introduction to Vagrant
 
-- Initially deveoped by Mitchell Hashimoto as side project
-- Released in 2010
-- Now developed by Hashimoto's company HashiCorp
+- Initially developed by Mitchell Hashimoto as side project.
+- Released in 2010.
+- Now developed by Hashimoto's company HashiCorp.
     - HashiCorp develops a variety of open-source tools for DevOps and cloud computing. In general for large scale projects.
 - Configure VMs (I think also containers nowadays) conveniently via text files
 - Infrastructure as code (Git lecture: If you cannot use `diff`, it is the wrong format!)
-- Standard user and all passwords are `vagrant`
+- Standard user and all passwords are `vagrant`.
 
 ## Demo: Premade Vagrant VM
 
 Tutorial case in `/media/jaustar/external-ssd/virtualmachines/vagrant/tutorial`
 
-- `vagrant init hashicorp/bionic64` Initialize repository
+- `vagrant init hashicorp/bionic64` creates a base `Vagrantfile`.
 - `vagrant up` Creates `Vagrantfile`. This file can be put in version control.
 - Download and set up VM.
 - Will also start VM

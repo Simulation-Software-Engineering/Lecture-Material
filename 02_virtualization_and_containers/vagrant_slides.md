@@ -25,11 +25,6 @@ slideOptions:
 
 # Vagrant
 
-
-<img src="https://www.vagrantup.com/img/logo-hashicorp.svg" width=30%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
-
-[https://www.vagrantup.com/img/logo-hashicorp.svg](https://www.vagrantup.com/img/logo-hashicorp.svg)
-
 ---
 
 ## Introduction
@@ -148,7 +143,7 @@ Details available in [`vagrant_demo.md`](https://github.com/Simulation-Software-
 
 - Alternative:
 
-    ```
+    ```bash
     vagrant init ajaust/sse-first-steps
     ```
 
@@ -190,16 +185,12 @@ Details available in [`vagrant_demo.md`](https://github.com/Simulation-Software-
 
 - [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
 
-Details available in [`README.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/README.md)
-
 ---
 
 ## Demo: preCICE VM
 
 - [https://github.com/precice/vm](https://github.com/precice/vm)
 - [Premade box](https://app.vagrantup.com/precice/boxes/precice-vm)
-
-Details available in [`README.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/README.md)
 
 ---
 

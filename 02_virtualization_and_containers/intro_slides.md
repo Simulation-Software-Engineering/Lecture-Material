@@ -41,13 +41,13 @@ slideOptions:
 
 - Developing, testing and debugging software
     - Abstraction layer for different OS, configurations etc.
-    - Ensure software quality.
+    - Ensure software quality
 - Moving/Sharing software
     - Avoid compilation and/or setup complexity, OS dependency
-    - Work around target limitations (e.g. HPC).
+    - Work around target limitations (e.g. HPC)
 - Manage complex workflows
-    - Ideally under version control.
-    - (Potentially) Break down big software into smaller pieces.
+    - Ideally under version control
+    - (Potentially) Break down big software into smaller pieces
 - Reproducible research
     - Make sure others get the same results.
     - Make sure others are able to run your software (also in future).
@@ -58,8 +58,8 @@ slideOptions:
 ## Contents of this Chapter
 
 - Virtual Machines (VMs)
-    - VirtualBox: Popular hypervisor for running VMs.
-    - Vagrant: Popular management system for VMs (and more).
+    - VirtualBox: Popular hypervisor for running VMs
+    - Vagrant: Popular management system for VMs (and more)
 - Containers
-    - Docker: Popular container framework (and more).
-    - Singularity: Popular scientific container framework.
+    - Docker: Popular container framework (and more)
+    - Singularity: Popular scientific container framework

@@ -39,11 +39,11 @@ slideOptions:
 ## Common Terms
 
 - Host operating system (host OS)
-    - The OS the hypervisor is installed on.
+    - The OS the hypervisor is installed on
 - Guest operating system (guest OS)
-    - The OS running inside the virtual machine.
+    - The OS running inside the virtual machine
 - Virtual machine (VM)
-    - Environment the guest is running in.
+    - Environment the guest is running in
 
 ---
 
@@ -51,7 +51,7 @@ slideOptions:
 
 - Sometimes distinction is not clear, but in general:
     - **Type 1**
-        - Runs directly on bare-metal hardware.
+        - Runs directly on bare-metal hardware
         - Examples: [Microsoft Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [VMware ESXi](https://www.vmware.com/products/esxi-and-esx.html), [Proxmox Virtual Environment](https://www.proxmox.com/en/proxmox-ve), [Xen](https://xenproject.org/)...
     - **Type 2**
         - Requires a running OS
@@ -63,7 +63,7 @@ slideOptions:
 
 - VM might obtain exclusive access to some of your resources.
 - Behaves (more or less) as native installation (root etc., system calls).
-- (Strict) isolation from host operating system.
+- (Strict) isolation from host operating system
 - Popular for
     - Safety critical tasks
     - Development and testing

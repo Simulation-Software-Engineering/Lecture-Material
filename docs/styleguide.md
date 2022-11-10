@@ -17,7 +17,7 @@ The two important questions are:
 - Should an item start with a capital or a lower case letter?
 - How should an item end?
 
-### Full Sentences
+### Full sentences
 
 - ... start with a capital letter.
 - ... end with a period, a questions mark, or an exclamation mark. Use exclamation marks with care (do not shout at the student).
@@ -26,7 +26,7 @@ Example:
 
 > - Running predefined workflows is simple.
 
-### Items That are no Full Sentences
+### Items that are not full sentences
 
 - ... also start with a capital letter.
 - ... do **not** end with a period, but can end with a question mark, or an exclamation mark. Use exclamation marks with care (do not shout at the student).
@@ -35,7 +35,7 @@ Example:
 
 > - Ensuring reproducible test environments
 
-### Half Sentences
+### Half sentences
 
 What if the sentence starts in a heading and continues in the item?
 
@@ -48,7 +48,7 @@ Example:
 > - ... is a version control system.
 > - ... is very important.
 
-### More Rules
+### More rules
 
 - After a colon:
     - Start a full sentence with a capital letter.
@@ -71,7 +71,7 @@ Example:
 
 > **Note**: This particular concept is only applicable for specific compilers.
 
-## Learning Goals
+## Learning goals
 
 ### Style
 

@@ -59,6 +59,7 @@ What does it do?
 - Git Alias `fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"`
     - Allows committing current staged changes as a fixup commit for a previous commit
     - Follow by `git rebase -i --autosquash` (or enable `autosquash` for rebase on default in git config)
+    - Requires [`fzf`](https://github.com/junegunn/fzf) to be installed.
 - Automatically fix http(s) urls (changing it to the correct ssh url) using git config `url` section
     - Also allows copying url from browser
     - Also allows entering `gh://username/repo` by memory

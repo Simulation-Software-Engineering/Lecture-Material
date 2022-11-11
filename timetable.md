@@ -41,7 +41,6 @@
 - **10** [Introduction to Virtualization](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualmachines_slides.md)
 - **40** [VirtualBox (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualbox_slides.md)
 - **25** [Vagrant (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/vagrant_slides.md)
-- **10** [Introduction to Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/containers_slides.md)
 
 ## 4.2 – Thu, November 10, 2022
 

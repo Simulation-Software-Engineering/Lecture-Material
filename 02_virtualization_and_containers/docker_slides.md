@@ -122,9 +122,9 @@ slideOptions:
 
 ## Connection to Host
 
-- Container communicates via daemon `dockerd` (runs as     root)
+- Container communicates via daemon `dockerd` (runs as root)
 - Strong isolation (`namespaces` and `cgroups`)
-    - You cannot access Host filesystem by default
+    - You cannot access Host filesystem by default.
     - Several [mount options](https://docs.docker.com/storage) available
 
 ---
@@ -185,7 +185,7 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 
 ---
 
-## Defining and Building own Images 1/2
+## Defining and building own images 1/2
 
 - Define container in `Dockerfile`
     - Git-friendly text file
@@ -208,7 +208,7 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 - `ADD`: Add for from source to destination (powerful and confusing)
 - `CMD`: Command to run under `docker run`
 - `ENV`: Sets environment variable
-- `ARG`: Environment variable for **only** build process
+- `ARG`: Environment variable for **only** the build process
 
 ---
 
@@ -227,11 +227,11 @@ CMD ["echo", "hello"]
 
 ## Demo: Building own image
 
-Details available in [`README.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/README.md)
+Details available in [`docker_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
 
 ---
 
-## Publish own Images
+## Publish own images
 
 - Publication on registry (e.g. [DockerHub](https://hub.docker.com/))
 - `docker build -t ACCOUNT/REPOSITORY[:TAG] .`
@@ -244,7 +244,7 @@ Details available in [`README.md`](https://github.com/Simulation-Software-Engine
 
 ## Demo: Run FEniCS container
 
-Details available in [`README.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/README.md)
+Details available in [`docker_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
 
 ---
 

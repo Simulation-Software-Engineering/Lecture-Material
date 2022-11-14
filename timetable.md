@@ -46,3 +46,13 @@
 ## 4.2 – Thu, November 10, 2022
 
 - The Challenge, step one, presentations
+
+## 5.1 – Thu, November 17, 2022
+
+- **10** [Introduction to Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/containers_slides.md)
+- **60** [Docker (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_slides.md)
+- **20** [Singularity (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/singularity_slides.md)
+
+## 5.2 – Thu, November 17, 2022
+
+- **90** [Exercise: Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualmachines_containers_exercise.md)

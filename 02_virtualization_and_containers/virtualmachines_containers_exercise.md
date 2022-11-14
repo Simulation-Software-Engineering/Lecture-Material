@@ -4,13 +4,60 @@ In this exercise we work the virtualization and container techniques that we hav
 
 ## Deadline
 
-Please finish the the work before **18 November 2021 at 9:00**.
+Please finish the the work before **24 November 2021 at 9:00**.
 
 ## Prerequisites
 
-- Working installation of VirtualBox, Vagrant and Docker [as mentioned in the homework](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/containers_homework_slides.md).
-- SIM GitLab account.
 - Some available space on your hard drive or a USB drive (about 8 GB should be enough).
+- If you have a machine without Linux and or without root rights, you should have a virtual box session with Linux installed.
+
+### Preparatory tasks
+
+- **Note**: All preparatory tasks need to be done before the exercise.
+- What to do?
+    - Install VirtualBox and Vagrant
+    - Install Docker on your machine or in a VM
+- Please follow the manuals on the homepage
+    - [VirtualBox](https://www.virtualbox.org/)
+    - [Vagrant](https://www.vagrantup.com/)
+    - [Docker Engine](https://docs.docker.com/engine/)
+
+#### VirtualBox and Vagrant
+
+- Install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/)
+    - Verify that the installation was successful by creating the Vagrant example from the lecture:
+
+        - Navigate to a directory of your choice
+
+        ```bash
+        vagrant init hashicorp/bionic64
+        vagrant up
+        ```
+
+        - Go into the VM `vagrant ssh` and verify the content of the `/vagrant` directory.
+        - Check in the VirtualBox manager that the VM is active.
+        - Leave the SSH session (type `exit` and press `Enter` or use the shortcut `CTRL+D`)
+        - Destroy the VM `vagrant destroy`
+
+**Note**: Please install Vagrant from the homepage so that it is not too old.
+
+#### Install Docker
+
+- Install [Docker Engine](https://docs.docker.com/engine/)
+    - You can install it on your machine or in a VM
+    - Check that your installation successful by running
+
+    ```bash
+    docker run hello-world
+    ```
+
+    - You might have to prefix a `sudo` command. This depends on your Docker configuration.
+    - You should see a message that starts with
+
+    ```bash
+    Hello from Docker!
+    This message shows that your installation appears to be working correctly
+    ```
 
 ## Before You Start
 
@@ -101,7 +148,6 @@ Congratulations. You have successfully set up a virtual machine, installed Ubunt
 - [Ubuntu Server download page](https://ubuntu.com/download/server)
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
 - If you want to set up SSH forwarding to your VM, you can find instructions, for example, [on the codebot homepage](https://codebots.com/docs/ubuntu-18-04-virtual-machine-setup). The instructions are for Ubuntu 18.04, but it also works for Ubuntu 20.04. Note that most of the steps are preconfigured in current VirtualBox releases, but it does not hurt to check whether the settings are set properly.
-
 
 ## Virtual Machines Using Vagrant
 
@@ -262,7 +308,6 @@ See the instructions in the task list above. The repository initially contains a
 - [Docker documentation](https://docs.docker.com)
 - [DockerHub](https://hub.docker.com/)
 - [DockerHub documentation](https://docs.docker.com/docker-hub/)
-
 
 ## Optional Tasks
 

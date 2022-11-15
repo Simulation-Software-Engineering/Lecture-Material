@@ -1,9 +1,4 @@
-# Docker quiz
-
-- Quiz "What is Docker?"
-    - Start slido quiz
-    - Answer depends on when in time and    you ask.
-        - Containerization framework, container management, company...
+# Docker Demo
 
 ## Introduction to Docker and some practical examples
 
@@ -57,10 +52,10 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 
 - Start VM with docker
 
-    ```
-    cd /media/jaustar/external-ssd/virtualmachines/vagrant/sse-docker-box/
-    vagrant up
-    ```
+```
+cd /media/jaustar/external-ssd/virtualmachines/vagrant/sse-docker-box/
+vagrant up
+```
 
 - Show containers on [DockerHub](https://hub.docker.com/)
 
@@ -114,14 +109,14 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - See also GitHub issues
     - [docker exec into a stopped container](https://github.com/moby/moby/issues/18078). There is also a workaround mentioned in this issue
 
-        ```basg
-        docker commit $STOPPED_CONTAINER user/test_image
-        docker run -ti --entrypoint=sh user/test_image
-        ```
+    ```bash
+    docker commit $STOPPED_CONTAINER user/test_image
+    docker run -ti --entrypoint=sh user/test_image
+    ```
 
-        Also interesting quote
+    Also interesting quote
 
-        > The main reason why is because containers are supposed to be immutable. You cannot exec into a stopped container because it has be be running first.
+    > The main reason why is because containers are supposed to be immutable. You cannot exec into a stopped container because it has be be running first.
 
     - [`docker exec` in stopped containers](https://github.com/moby/moby/issues/30361)
 - See some workaround on [StackOverflow](https://stackoverflow.com/questions/32353055/how-to-start-a-stopped-docker-container-with-a-different-command)

@@ -1,6 +1,6 @@
 # Style Guide for SSE Lecture Material
 
-## Names of folders and files
+## Names of Folders and Files
 
 - Use `snail_case`. Only exception are standard files such as `CONTRIBUTING.md`.
 - Slides end with `_slides.md`, demo notes with `_demo.md`, and exercise sheets with `_exercise.md`.
@@ -17,7 +17,7 @@ The two important questions are:
 - Should an item start with a capital or a lower case letter?
 - How should an item end?
 
-### Full sentences
+### Full Sentences
 
 - ... start with a capital letter.
 - ... end with a period, a questions mark, or an exclamation mark. Use exclamation marks with care (do not shout at the student).
@@ -26,7 +26,7 @@ Example:
 
 > - Running predefined workflows is simple.
 
-### Items that are not full sentences
+### Items that are not full Sentences
 
 - ... also start with a capital letter.
 - ... do **not** end with a period, but can end with a question mark, or an exclamation mark. Use exclamation marks with care (do not shout at the student).
@@ -35,7 +35,7 @@ Example:
 
 > - Ensuring reproducible test environments
 
-### Half sentences
+### Half Sentences
 
 What if the sentence starts in a heading and continues in the item?
 
@@ -48,7 +48,7 @@ Example:
 > - ... is a version control system.
 > - ... is very important.
 
-### More rules
+### More Rules
 
 - After a colon:
     - Start a full sentence with a capital letter.
@@ -71,7 +71,7 @@ Example:
 
 > **Note**: This particular concept is only applicable for specific compilers.
 
-## Learning goals
+## Learning Goals
 
 ### Style
 

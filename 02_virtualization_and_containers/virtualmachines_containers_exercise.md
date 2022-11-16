@@ -179,7 +179,7 @@ See the instructions in the task list above. The repository initially contains a
 #### 2. Initialization of the VM
 
 - We want to start from scratch so initialize a new box using `vagrant init` inside this repository and add the resulting `Vagrantfile` to Git. Then adapt your `Vagrantfile` to incorporate the following settings:
-    - Your virtual machine must be based on the [`ubuntu/focal64` image](https://app.vagrantup.com/ubuntu/boxes/focal64). See [official boxes of Vagrant](https://www.vagrantup.com/docs/boxes#official-boxes).
+    - Your virtual machine must be based on the [`ubuntu/jammy64` image](https://app.vagrantup.com/ubuntu/boxes/jammy64). See [official boxes of Vagrant](https://www.vagrantup.com/docs/boxes#official-boxes).
     - The name of your VM should be `USERNAME-ubuntu-server`.
     - The VM must request [1024 MB of main memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration).
     - We want a [new shared folder](https://www.vagrantup.com/docs/synced-folders/basic_usage) in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted as `/mnt/shared/` in your container.
@@ -255,7 +255,7 @@ Similar to the previous task we want to set up a Docker container for testing. I
 
 This exercise consists of the following main steps:
 
-1. Create a fork of the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-containers)
+1. Create a fork of the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-containers).
 2. Setting up the `Dockerfile`
     - The name of this container will be `USERNAME-ubuntu`.
     - Create a file called `testfile` that contains `USERNAME`. This file should be copied to a directory called `/testfiles` inside the container.
@@ -273,7 +273,7 @@ See the instructions in the task list above. The repository initially contains a
 #### 2. Setting up the `Dockerfile`
 
 - Currently, the [`Dockerfile`](https://docs.docker.com/engine/reference/builder/) is empty. Edit the file such that an container image with the following properties is build:
-    - Your virtual machine should be based on the [`ubuntu:20.04` image](https://hub.docker.com/_/ubuntu).
+    - Your virtual machine should be based on the [`ubuntu:22.04` image](https://hub.docker.com/_/ubuntu).
     - Create a new file with the name `testfile` and add it to the repository. The file should contain your `USERNAME` as text. Add the file to your container and place it in directory `/testfiles`.
     - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`.
     - Make sure that the default command to be executed when running the container is `/bin/bash`.

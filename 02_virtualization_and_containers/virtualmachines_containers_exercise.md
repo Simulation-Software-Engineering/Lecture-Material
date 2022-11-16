@@ -24,20 +24,19 @@ Please finish the the work before **24 November 2021 at 9:00**.
 
 #### VirtualBox and Vagrant
 
-- Install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/)
-    - Verify that the installation was successful by creating the Vagrant example from the lecture:
+- Install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/).
+- Verify that the installation was successful by creating the Vagrant example from the lecture:
+    - Navigate to a directory of your choice
 
-        - Navigate to a directory of your choice
+    ```bash
+    vagrant init hashicorp/bionic64
+    vagrant up
+    ```
 
-        ```bash
-        vagrant init hashicorp/bionic64
-        vagrant up
-        ```
-
-        - Go into the VM `vagrant ssh` and verify the content of the `/vagrant` directory.
-        - Check in the VirtualBox manager that the VM is active.
-        - Leave the SSH session (type `exit` and press `Enter` or use the shortcut `CTRL+D`)
-        - Destroy the VM `vagrant destroy`
+    - Go into the VM `vagrant ssh` and verify the content of the `/vagrant` directory.
+    - Check in the VirtualBox manager that the VM is active.
+    - Leave the SSH session (type `exit` and press `Enter` or use the shortcut `CTRL+D`)
+    - Destroy the VM `vagrant destroy`
 
 **Note**: Please install Vagrant from the homepage so that it is not too old.
 
@@ -61,26 +60,26 @@ Please finish the the work before **24 November 2021 at 9:00**.
 
 ## Before You Start
 
-- **Important**: Whenever `USERNAME` is mentioned in a code block or similar, you have to replace this by your GitLab username. For example, if a task states that you shoud use "[`USERNAME`] Ubuntu Server Installation", then you have to actually use "[`jaustar`] Ubuntu Server Installation" in case `jaustar` is your username.
+- **Important**: Whenever `USERNAME` is mentioned in a code block or similar, you have to replace this by your GitLab username. For example, if a task states that you shoud use "[`USERNAME`] Ubuntu Server Installation", then you have to actually use "[`desaiin`] Ubuntu Server Installation" in case `desaiin` is your username.
 - If you are using a MacBook with ARM CPU and Parallels instead of VirtualBox, please mention this in the issues and pull requests that you create during this exercise. Ideally, use the `Parallels` label on GitLab for that.
 - If you run into problems, check out the "Further Information" sections at the bottom of the tasks. These sections contain information about common pitfalls and link to the documentation of the used tools.
 
 ## Virtual Machines Using VirtualBox
 
-We will install "Ubuntu Server 20.04", a lightweight version of Ubuntu without graphical user interface. However, the ISO image has still 1.2 GB so you might want to start the [download of the image called "Ubuntu Server 20.04.3 LTS"](https://ubuntu.com/download/server) before continuing reading. If you see the name "Focal Fossa" some places, this is the codename of the 20.04 release of Ubuntu.
+We will install "Ubuntu Server 22.04", a lightweight version of Ubuntu without graphical user interface. However, the ISO image has still 1.2 GB so you might want to start the [download of the image called "Ubuntu Server 22.04.1 LTS"](https://ubuntu.com/download/server) before continuing reading. If you see the name "Jammy Jellyfish" some places, this is the codename of the 22.04 release of Ubuntu.
 
 ### Tasks (VirtualBox)
 
 This exercise consists of the following main steps:
 
-1. Download the "Ubuntu Server 20.04" installation image.
+1. Download the "Ubuntu Server 22.04" installation image.
 2. Create a new virtual machine in VirtualBox with
     - 6 GB virtual disk
     - 2048 MB of memory
     - 32 MB video memory
 3. Install Ubuntu on the virtual machine with
-    - user called `USERNAME`, e.g., `jaustar`.
-    - (host)name of the machine `USERNAMEvm`, e.g., `jaustarvm`.
+    - user called `USERNAME`, e.g., `desaiin`.
+    - (host)name of the machine `USERNAMEvm`, e.g., `desaiinvm`.
 4. Install the software package `neofetch`.
 5. Run `neofetch` in the terminal and take a screenshot
 6. Upload the screenshot in a new issue on the SIM GitLab.
@@ -93,14 +92,14 @@ See instruction in the introduction to this section.
 
 #### 2. Creating the Virtual Machine
 
-While the "Ubuntu Server 20.04" installation image is downloading you can already prepare the virtual machine.
+While the "Ubuntu Server 22.04" installation image is downloading you can already prepare the virtual machine.
 
 - Create a new VM in VirtualBox called "Ubuntu Server".
     - Assign 2048 MB of memory to it. If that is not possible on your machine, choose a larger or smaller amount of memory. Make sure the your virtual hard drive is large enough.
     - A maximum size 6 GB for the virtual hard drive should be enough for this exercise. If you choose "dynamic allocation" the actual image size should not grow beyond 4 GB during this exercise. If you are very limited on disk space you can also try a smaller disk size than 6 GB.
 - After the creation the virtual machine shows up in the "VirtualBox Manager" open the settings of the VM and
-    - Inspect the settings of the virtual machine and set the video memory to 32 MB.
-    - When the Ubuntu installation image finished downloading, mount the `ubuntu-20.04.3-live-server-amd64.iso` to your virtual machine's cdrom drive (Storage -> Controller: IDE -> "Add optical drive").
+    - ... inspect the settings of the virtual machine and set the video memory to 32 MB.
+    - When the Ubuntu installation image has finished downloading, mount the `ubuntu-22.04.1-live-server-amd64.iso` to your virtual machine's cdrom drive (Storage -> Controller: IDE -> "Attributes: Optical Drive" -> Choose).
 
 #### 2. Ubuntu installation process
 
@@ -110,12 +109,12 @@ While the "Ubuntu Server 20.04" installation image is downloading you can alread
     - Choose your preferred language and keyboard layout. Note that you cannot use your mouse in the menus, instead you have to use your keyboard.
     - For most settings you can accept the default values Ubuntu suggests (mirror, empty proxy, using entire disk with LVM group, storage configuration etc.)
     - After verifying that Ubuntu wants to use the virtual hard drive, confirm formatting of the virtual hard drive ("Confirm destructive action") when asked so.
-- When setting up your user, please use your GitLab username, e.g. `jaustar`, as username and choose the username + VM, e.g. `jaustarvm`, as the server's name. The password you can choose freely, but it cannot be empty. If you do not feel creative, use `vm` as password.
+- When setting up your user, please use your GitLab username, e.g. `desaiin`, as username and choose the username + VM, e.g. `desaiinvm`, as the server's name. The password you can choose freely, but it cannot be empty. If you do not feel creative, use `vm` as password.
 - When you are asked about the SSH Setup, you can decide whether you want to activate the `Install OpenSSH Server` option (using spacebar) or not. If you want to test out the SSH connection to the VM (optional task), you can activate it now. If you do not activate it here, you can still install the OpenSSH server later.
 - In the next window, skip all suggested "Featured Server Snaps" to keep the size of the image minimal. It suggests common software used on the Ubuntu Server edition, such as Docker, for example. However, we do not need it here. Confirming your choice will start the installation procedure.
 - The installation procedure might take a while since it will also install security updates. You can already start reading on the subsequent sections.
 - After the installation has finished confirm the reboot with "Reboot Now".
-    - Ubuntu should complain that it cannot unmount the cdrom drive. Check in the settings of your VM that VirtualBox has unmounted the `ubuntu-20.04.3-live-server-amd64.iso` image and confirm the reboot by pressing enter. If the image is still mounted, please shutdown the VM (Machine -> ACPI Shutdown), unmount the image manually and boot the VM again.
+    - Ubuntu should complain that it cannot unmount the cdrom drive. Check in the settings of your VM that VirtualBox has unmounted the `ubuntu-22.04.1-live-server-amd64.iso` image and confirm the reboot by pressing enter. If the image is still mounted, please shutdown the VM (Machine -> ACPI Shutdown), unmount the image manually and boot the VM again.
 
 #### 3. Installation of neofetch
 
@@ -129,16 +128,16 @@ While the "Ubuntu Server 20.04" installation image is downloading you can alread
 - Clear the terminal using `clear` and run neofetch via by typing `neofetch` into the terminal and pressing `Enter`. It will show information about the Ubuntu version, available memory etc.
 - Take a screenshot via VirtualBox. At the top of the VirtualBox window you find the menu item `View`. There you find the option `Take Screenshot (Host+E)`. Save the screenshot as `neofetch-screenshot-USERNAME.png`.
 
-Congratulations. You have successfully set up a virtual machine, installed Ubuntu and installed additional software. You are now done with this part of the exercise. If you do not want to play with the VM later nor do you want to do any of the optional assignments, you can poweroff and delete the VM. Be sure that your screenshot displays the correct information though (correct username, correct hostname etc.) before deleting the VM.
+Congratulations. You have successfully set up a virtual machine, installed Ubuntu and installed additional software. You are now done with this part of the exercise. If you do not want to play with the VM later nor do you want to do any of the optional assignments, you can power-off and delete the VM. Be sure that your screenshot displays the correct information though (correct username, correct hostname etc.) before deleting the VM.
 
 #### 5. Upload the Screenshot to SIM GitLab
 
-- Go to the SIM GitLab Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-virtual-machines). You will find an example issue. Your issue should look similar in terms of title, labels etc.
+- Go to the SIM GitLab Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-virtual-machines). You will find an example issue. Your issue should look similar in terms of title, labels etc.
 - Open the issue.
     - As title choose "[`USERNAME`] Ubuntu Server Installation"
     - Attach the screenshot ("Attach a file") that you made in the previous step. By default, the screenshot is saved in the folder of your VM.
-    - If you did **not** assign 2048 MB of memory to the VM, please mention how much memory you assigned  instead.
-    - Add the `VirtualBox` label to the issue and assign the issue to `jaustar`. Finally, create the issue.
+    - If you did **not** assign 2048 MB of memory to the VM, please mention how much memory you assigned instead.
+    - Add the `VirtualBox` label to the issue and assign the issue to `desaiin`. Finally, create the issue.
     - Double-check that your issue looks as expected. You can compare your issue to the example issue in the GitLab Repository.
 
 ### Further Information (VirtualBox)
@@ -147,7 +146,7 @@ Congratulations. You have successfully set up a virtual machine, installed Ubunt
 - You can find more information on the installation procedure in the [Ubuntu Server documentation](https://ubuntu.com/server/docs).
 - [Ubuntu Server download page](https://ubuntu.com/download/server)
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
-- If you want to set up SSH forwarding to your VM, you can find instructions, for example, [on the codebot homepage](https://codebots.com/docs/ubuntu-18-04-virtual-machine-setup). The instructions are for Ubuntu 18.04, but it also works for Ubuntu 20.04. Note that most of the steps are preconfigured in current VirtualBox releases, but it does not hurt to check whether the settings are set properly.
+- If you want to set up SSH forwarding to your VM, you can find instructions, for example, [on the codebot homepage](https://codebots.com/docs/ubuntu-18-04-virtual-machine-setup). The instructions are for Ubuntu 18.04, but it also works for Ubuntu 20.04. Note that most of the steps are pre-configured in current VirtualBox releases, but it does not hurt to check whether the settings are set properly.
 
 ## Virtual Machines Using Vagrant
 

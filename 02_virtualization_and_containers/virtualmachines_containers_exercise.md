@@ -28,10 +28,10 @@ Please finish the the work before **24 November 2021 at 9:00**.
 - Verify that the installation was successful by creating the Vagrant example from the lecture:
     - Navigate to a directory of your choice
 
-    ```bash
-    vagrant init hashicorp/bionic64
-    vagrant up
-    ```
+        ```bash
+        vagrant init hashicorp/bionic64
+        vagrant up
+        ```
 
     - Go into the VM `vagrant ssh` and verify the content of the `/vagrant` directory.
     - Check in the VirtualBox manager that the VM is active.
@@ -46,17 +46,17 @@ Please finish the the work before **24 November 2021 at 9:00**.
     - You can install it on your machine or in a VM
     - Check that your installation successful by running
 
-    ```bash
-    docker run hello-world
-    ```
+        ```bash
+        docker run hello-world
+        ```
 
     - You might have to prefix a `sudo` command. This depends on your Docker configuration.
     - You should see a message that starts with
 
-    ```bash
-    Hello from Docker!
-    This message shows that your installation appears to be working correctly
-    ```
+        ```bash
+        Hello from Docker!
+        This message shows that your installation appears to be working correctly
+        ```
 
 ## Before You Start
 
@@ -156,7 +156,7 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
 
 This exercise consists of the following main steps:
 
-1. Create a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-virtual-machines)
+1. Create a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-virtual-machines)
 2. Initialization of the VM
     - Name this virtual machine `USERNAME-ubuntu-server`.
     - Make sure that the virtual machine requests 1024 MB memory.
@@ -165,10 +165,10 @@ This exercise consists of the following main steps:
 3. Extending the VMs configuration
     - Create a file called `testfile` that contains `USERNAME`. This file should be copied into the home directory of the `vagrant` user during the provisioning process.
     - Edit the `Vagrantfile` such that the `bootstrap.sh` script is run during provisioning. The script should
-        - Add a new environment variable `ENV_TEST_VARIABLE` with the value `USERNAME`.
-        - Install `neofetch`.
-4. Run `neofetch` in the terminal and take a screenshot
-5. Create a merge request containing your changes
+        - ... add a new environment variable `ENV_TEST_VARIABLE` with the value `USERNAME`.
+        - ... install `neofetch`.
+4. Run `neofetch` in the terminal and take a screenshot.
+5. Create a merge request containing your changes.
 
 In the following subsections you will find additional instructions and explanations.
 
@@ -178,10 +178,9 @@ See the instructions in the task list above. The repository initially contains a
 
 #### 2. Initialization of the VM
 
-- We want to start from scratch so initialize a new box using `vagrant init` in inside this repository and add the resulting `Vagrantfile` to Git. Then adapt your `Vagrantfile` to incorporate the following settings:
+- We want to start from scratch so initialize a new box using `vagrant init` inside this repository and add the resulting `Vagrantfile` to Git. Then adapt your `Vagrantfile` to incorporate the following settings:
     - Your virtual machine must be based on the [`ubuntu/focal64` image](https://app.vagrantup.com/ubuntu/boxes/focal64). See [official boxes of Vagrant](https://www.vagrantup.com/docs/boxes#official-boxes).
     - The name of your VM should be `USERNAME-ubuntu-server`.
-    - The [box version](https://www.vagrantup.com/docs/boxes/versioning) of your box should be set `0.1.0`.
     - The VM must request [1024 MB of main memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration).
     - We want a [new shared folder](https://www.vagrantup.com/docs/synced-folders/basic_usage) in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted as `/mnt/shared/` in your container.
     - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can leave the VM. You do **not** have to stop/destroy the VM for the next step.
@@ -191,12 +190,11 @@ See the instructions in the task list above. The repository initially contains a
 We want to provision (`config.vm.provision`) the box in several steps. You can run the provisioning on the running VM with [`vagrant provision`](https://www.vagrantup.com/docs/cli/provision) or [`vagrant up --provision`](https://www.vagrantup.com/docs/cli/up#no-provision) to check every change you apply to the VM by the provisioning process.
 
 - Create a new file with the name `testfile` and add it to the repository. The file must contain your `USERNAME` as text. Add the file to your box using the [file provisioner](https://www.vagrantup.com/docs/provisioning/file) and place it in the home directory of the `vagrant` user (`${HOME}`).
-- Extend the file `bootstrap.sh` for provisioning your box. It should contain commands that you would usually use on the command line like in the VirtualBox task. The script must do the follwing:
+- Extend the file `bootstrap.sh` for provisioning your box. It should contain commands that you would usually use on the command line like in the VirtualBox task. The script must do the following:
     - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`. You can achieve this by adding `export ENV_TEST_VARIABLE=USERNAME` to the `.bashrc` file which resides in the home directory of `vagrant` user.
     - Install `neofetch` as you did in the VirtualBox task.
     - **Note:** In the `bootstrap.sh` you do not have to prefix commands with `sudo` since the script is executed with superuser rights when Vagrant provisions the box.
-
-        The `booststrap.sh` script must be run by the [shell provisioner](https://www.vagrantup.com/docs/provisioning/shell).
+    - The `booststrap.sh` script must be run by the [shell provisioner](https://www.vagrantup.com/docs/provisioning/shell).
 - Rebuild your Vagrant box using the provisioning steps. Make sure that the software is installed, all files are present and the environment variable is set.
 
 #### 4. Running neofetch and Taking a Screenshot (Vagrant)
@@ -207,11 +205,11 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 
 #### 5. Creating a Merge Request (Vagrant)
 
-- After checking your Vagrant box carefully, please open a merge request in the GitHub Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-virtual-machines):
+- After checking your Vagrant box carefully, please open a merge request in the GitHub Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-virtual-machines):
     - As title, choose "[`USERNAME`] Vagrant Box Provisioning".
     - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`). Do not add the hidden folder `.vagrant` to Git.
     - Attach the screenshot ("Attach a file") that you made in the previous step.
-    - Add the label `Vagrant` label to the issue and assign the issue to `jaustar`.
+    - Add the label `Vagrant` label to the issue and assign the issue to `desaiin`.
     - Double-check that all files are in the repository and up to date.
     - Double-check that the source (the new branch on your fork) and the target branch (`main` of original repo) of the merge request is correct.
     - If everything looks good, create the merge request.
@@ -219,31 +217,31 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 ### Further Information (Vagrant)
 
 - You might want to add the option `--provision` to the `vagrant up` or use `vagrant provision` command if you want to reprovision a running box (without destroying it first). In case the box is not being build/rebuild, please read the [documentation about provisioning](https://www.vagrantup.com/docs/provisioning) carefully.
-- By default, Vagrant will store some larger files like the base images/boxes etc.\ in `${HOME}/vagrant.d`. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point the alternative directory. This could look like this:
+- By default, Vagrant will store some larger files like the base images/boxes etc.\ in `${HOME}/vagrant.d`. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point to the alternative directory. This could look like
 
-  ```bash
-  export VAGRANT_HOME=/media/jaustar/external-ssd/virtualmachines/vagrant/.vagrant.d/
-  ```
+    ```bash
+    export VAGRANT_HOME=/media/jaustar/external-ssd/virtualmachines/vagrant/.vagrant.d/
+    ```
 
-    You might want to add this line to your `.bashrc` to make this change persistent. Note, that Vagrant will still create a hidden `.vagrant` directory in the your working directory. However, the `.vagrant` directory normally does not need much space on your hard drive.
+- You might want to add this line to your `.bashrc` to make this change persistent. Note that Vagrant will still create a hidden `.vagrant` directory in the your working directory. However, the `.vagrant` directory normally does not need much space on your hard drive.
 - [Vagrant Homepage](https://www.vagrantup.com/)
 - [Vagrant Introduction](https://www.vagrantup.com/intro)
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
 - If you are using Vagrant on Windows you might run into the following issue/error message:
 
-  ```powershell
-  VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole
-  ```
+    ```powershell
+    VBoxManage.exe: error: Details: code E_FAIL (0x80004005), component ConsoleWrap, interface IConsole
+    ```
 
     - The short version of the solution is given below. The detailed solution is described in this [Stack Overflow thread](https://stackoverflow.com/questions/37955942/vagrant-up-vboxmanage-exe-error-vt-x-is-not-available-verr-vmx-no-vmx-code).
-        - As admin, run the following command in a PowerShell:
+    - As admin, run the following command in a PowerShell:
 
         ```powershell
         bcdedit /set hypervisorlaunchtype off
         ```
 
-        - Restart your computer
-        - After the restart, run the following command as admin a PowerShell:
+    - Restart your computer
+    - After the restart, run the following command as admin a PowerShell:
 
         ```powershell
         bcdedit /set hypervisorlaunchtype auto

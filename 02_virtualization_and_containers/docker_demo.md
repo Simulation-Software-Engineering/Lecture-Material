@@ -53,7 +53,7 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - Show running containers `docker container ls`
 - Show all containers `docker container ls -a`
 - Show images `docker images`
-- Potentially remove some image/container `docker image rm NAME` or `docker container rm NAME/ID`
+- Remove some image/container `docker image rm NAME` or `docker container rm NAME/ID`
 
 ## Tutorial Case
 
@@ -69,31 +69,32 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - We can make sure that the container is removed after exiting by the `--rm` options, i.e., `docker run --rm -i -t ubuntu /bin/bash`
 
 - When container is running, we see it when calling `docker ps`
-- Start container (with name `tutoral`) `docker run --rm -i -t --name tutorial ubuntu    /bin/bash`
+- Start container (with name `tutorial`) `docker run --rm -i -t --name tutorial ubuntu /bin/bash`
 - Leave it `CTRL-P` + `CTRL-Q` (do not let go of `CTRL` while doing this)
 - Reattach to container `docker container attach tutorial`
 - After quitting again show `docker ps -a`
 
-## Files in containers
+## Files in Containers
 
 - We can change files inside the container.
     - `docker run -i -t ubuntu /bin/bash`
     - `touch asdf`
-    - leave container
-    - enter container `docker run -i -t ubuntu /bin/bash`
+    - Leave container `exit`
+    - Enter container `docker run -i -t ubuntu /bin/bash`
     - File is not present because we implicitly created a new container based on the same image.
 
 ## Detached Containers
 
 - `docker run -d -i -t --name test --mount type=bind,source="$(pwd)",target=/mnt/share ubuntu`
     - Create detached container and bind mount
-    - Will run container in detached mode, names it `test` and mounts current directory on Host to `/mnt/share`. Is based on `ubuntu` image.
+    - Will run container in detached mode, names it `test` and mounts current directory on Host to `/mnt/share`. It is based on `ubuntu` image.
     - Bind mount your source code for development for example
     - I do not need `/bin/bash` because that is the default command for the `ubuntu` image.
+    - Enter the container by `docker attach ID`.
 
 ## Restarting a Stopped Container With an Arbitrary Command
 
-- This is currently not possible. The default command or entrypoint is part of the runnable container. One has to create a new container from the stopped container to start it with another command
+- This is currently not possible. The default command or entrypoint is part of the runnable container. One has to create a new container from the stopped container to start it with another command.
 - See also GitHub issues
     - [docker exec into a stopped container](https://github.com/moby/moby/issues/18078). There is also a workaround mentioned in this issue
 
@@ -109,9 +110,9 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
     - [`docker exec` in stopped containers](https://github.com/moby/moby/issues/30361)
 - See some workaround on [StackOverflow](https://stackoverflow.com/questions/32353055/how-to-start-a-stopped-docker-container-with-a-different-command)
     - Find container id `docker container list -a`
-    - Commit stopped container to save its modifed state into a new image `docker commit CONTAINERID USER/IMAGENAME`
-    - Start new container with differnt entry point `docker run -ti --entrypoint=sh USER/IMAGENAME` if an entrypoint is specified in the previews image or `docker run -ti USER/IMAGENAME /bin/sh`
-    - For details on the difference between entry points (`ENTRYPOINT`) and the default for executing a container (`CMD`) check the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
+    - Commit stopped container to save its modified state into a new image `docker commit CONTAINERID USER/IMAGENAME`.
+    - Start new container with different entry point `docker run -ti --entrypoint=sh USER/IMAGENAME` if an entrypoint is specified in the previews image or `docker run -ti USER/IMAGENAME /bin/sh`.
+    - For details on the difference between entry points (`ENTRYPOINT`) and the default for executing a container (`CMD`) check the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/).
 
 ## Demo: Building own Example
 

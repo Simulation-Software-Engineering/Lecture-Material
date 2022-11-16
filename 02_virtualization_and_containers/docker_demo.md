@@ -1,6 +1,6 @@
 # Docker Demo
 
-## Introduction to Docker and some practical examples
+## Introduction to Docker and Some Practical Examples
 
 - [`act`](https://github.com/nektos/act) is a tool to debug/run GitHub actions locally
 - The most popular container framework one finds at the moment
@@ -44,20 +44,9 @@
     - Rootless installation of Docker
     - Namespaces
     - Docker considers itself quite safe
-- We focus on tools to create, run and interact with containers
+- We focus on tools to create, run and interact with containers.
 
 Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/get-started/overview/)
-
-## Demo: Run existing container
-
-- Start VM with docker
-
-```
-cd /media/jaustar/external-ssd/virtualmachines/vagrant/sse-docker-box/
-vagrant up
-```
-
-- Show containers on [DockerHub](https://hub.docker.com/)
 
 ## Some Management Commands
 
@@ -76,15 +65,14 @@ vagrant up
     - Starts container and runs `/bin/bash`
     - `-i` means interactive
     - `-t` allocates pseudo-tty
-- Note that the container will still be there `docker container list -a` vs. `docker container list -a`
+- Note that the container will still be there `docker container list -a`.
 - We can make sure that the container is removed after exiting by the `--rm` options, i.e., `docker run --rm -i -t ubuntu /bin/bash`
 
 - When container is running, we see it when calling `docker ps`
 - Start container (with name `tutoral`) `docker run --rm -i -t --name tutorial ubuntu    /bin/bash`
 - Leave it `CTRL-P` + `CTRL-Q` (do not let go of `CTRL` while doing this)
-- Show container running `docker ps`
 - Reattach to container `docker container attach tutorial`
-- After quitting againg show `docker ps -a`
+- After quitting again show `docker ps -a`
 
 ## Files in containers
 
@@ -99,11 +87,11 @@ vagrant up
 
 - `docker run -d -i -t --name test --mount type=bind,source="$(pwd)",target=/mnt/share ubuntu`
     - Create detached container and bind mount
-    - Will run cotnainer in detached mode, names it `test` and mounts current directory on Host to `/mnt/share`. Is based on `ubuntu` image.
+    - Will run container in detached mode, names it `test` and mounts current directory on Host to `/mnt/share`. Is based on `ubuntu` image.
     - Bind mount your source code for development for example
     - I do not need `/bin/bash` because that is the default command for the `ubuntu` image.
 
-## Restarting a stopped container with arbitrary command
+## Restarting a Stopped Container With an Arbitrary Command
 
 - This is currently not possible. The default command or entrypoint is part of the runnable container. One has to create a new container from the stopped container to start it with another command
 - See also GitHub issues
@@ -125,10 +113,9 @@ vagrant up
     - Start new container with differnt entry point `docker run -ti --entrypoint=sh USER/IMAGENAME` if an entrypoint is specified in the previews image or `docker run -ti USER/IMAGENAME /bin/sh`
     - For details on the difference between entry points (`ENTRYPOINT`) and the default for executing a container (`CMD`) check the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
 
-## Demo: Building own example
+## Demo: Building own Example
 
-- `cd dockerfile-example`
-- Contains Dockerfile
+- Folder containing Dockerfile
 
     ```Dockerfile
     FROM ubuntu:18.04
@@ -158,7 +145,7 @@ vagrant up
     - `~/container-recipes/docker/dumux-precice/ub2004/dumux-3.4-precice-2.2.1`. Also in branch of [`dumux-precice` repository](https://git.iws.uni-stuttgart.de/dumux-appl/dumux-precice/-/blob/add-docker-images/docker/dumux-3.4-precice-2.2.1.dockerfile)+
     - Uses most/all commands on slides
 
-## Demo: FEniCS example
+## Demo: FEniCS Example
 
 `docker run -ti -p 127.0.0.1:8000:8000 -v $(pwd):/home/fenics/shared -w /home/fenics/shared quay.io/fenicsproject/stable:current`
 

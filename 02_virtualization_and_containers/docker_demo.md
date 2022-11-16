@@ -133,7 +133,7 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - `docker run -d -i -t --name testimage testimage` will immediately terminate since the container `CMD` is executed.
 - `docker run -d -i -t --name testimage testimage /bin/bash` keeps container alive since the terminal session is running inside.
 - Create file `touch testfile`, if not present.
-- `docker run -i -t --name testimage -v $(pwd):/app -w /app testimage /bin/bash` starts container, creates volume `/app` and sets working directory to /app
+- `docker run -i -t --name testimage -v $(pwd):/app -w /app testimage /bin/bash` starts container, creates volume `/app` and sets working directory to /app.
 - When going into the container we are in the directory `/app` and the file `testfile` is present.
 - Copy files with `docker cp`. `touch file-to-copy`
 - `docker cp file-to-copy CONTAINERNAME:/app`
@@ -143,13 +143,13 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 ## Demo: DuMuX Dockerfile
 
 - Show more complicated Dockerfile example (`dumux-precice`)?
-    - `~/container-recipes/docker/dumux-precice/ub2004/dumux-3.4-precice-2.2.1`. Also in branch of [`dumux-precice` repository](https://git.iws.uni-stuttgart.de/dumux-appl/dumux-precice/-/blob/add-docker-images/docker/dumux-3.4-precice-2.2.1.dockerfile)+
+    - In the [`dumux-adapter` repository on GitHub](https://github.com/precice/dumux-adapter/tree/develop/docker).
     - Uses most/all commands on slides
 
 ## Demo: FEniCS Example
 
-`docker run -ti -p 127.0.0.1:8000:8000 -v $(pwd):/home/fenics/shared -w /home/fenics/shared quay.io/fenicsproject/stable:current`
+Run `docker run -ti -p 127.0.0.1:8000:8000 -v $(pwd):/home/fenics/shared -w /home/fenics/shared quay.io/fenicsproject/stable:current`
 
-- `-v` creates a volume in the container and mounts the current directory on Host to path `/home/fenics/shared` inside the container
-- `-w` sets the working directory to /home/fenics/shared
+- `-v` creates a volume in the container and mounts the current directory on Host to path `/home/fenics/shared` inside the container.
+- `-w` sets the working directory to `/home/fenics/shared`.
 - Volume allows for persistent data

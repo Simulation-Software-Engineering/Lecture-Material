@@ -51,44 +51,44 @@
     - Show system settings of VM.
     - Storage -> Controller (Mount drive here) and boot again. -> Installation will start up.
         - Normally should unmount image after installation.
-    - Install "VirtualBox Guest Additions". Might have to download the image.
-        - Devices `Insert Guest Additions CD image"
+- Install "VirtualBox Guest Additions". Might have to download the image.
+    - Devices `Insert Guest Additions CD image"
 
-        ```bash
-        sudo mkdir -p /media/cdrom
-        sudo mount /dev/cdrom /media/cdrom
-        cd /media/cdrom
-        sudo apt-get install -y perl dkms build-essential linux-headers-generic linux-headers-$(uname -r)
-        sudo su
-        ./VBoxLinuxAdditions.run
-        ```
+    ```bash
+    sudo mkdir -p /media/cdrom
+    sudo mount /dev/cdrom /media/cdrom
+    cd /media/cdrom
+    sudo apt-get install -y perl dkms build-essential linux-headers-generic linux-headers-$(uname -r)
+    sudo su
+    ./VBoxLinuxAdditions.run
+    ```
 
-        - Will enable clipboard sharing etc
-        - Alternative on Ubuntu
+    - Will enable clipboard sharing etc
+    - Alternative on Ubuntu
 
-        ```bash
-        sudo apt install virtualbox-guest-dkms virtualbox-guest-x11 virtualbox-guest-utils
-        ```
+    ```bash
+    sudo apt install virtualbox-guest-dkms virtualbox-guest-x11 virtualbox-guest-utils
+    ```
 
-        - The recommended way to install VirtualBox Guest Additions is via the VirtualBox GUI.
-
-    - VM will capture mouse pointer. Use `Right-CTRL` to "free" pointer again.
-    - Create snapshots on image overview (Burger symbol on the right)
-        - Load snapshots for different configuration stages
-    - Configure network for ssh
-        - Install `openssh-server`
-        - Shutdown VM
-        - In VirtualBox window -> File -> Host Network Manager -> Verify that network device is configured `vboxnet0`
-        - In virtual machine's settings -> Network -> Adapter 2 -> Enable and set Host only adapter `vboxnet0`
-        - Boot VM
-        - Verify additional network device `enp0s8` and check for ip address. In my case `192.168.56.101`
-        - On host machine `ssh vmuser@192.168.56.101`
+    - The recommended way to install VirtualBox Guest Additions is via the VirtualBox GUI.
+- VM will capture mouse pointer. Use `Right-CTRL` to "free" pointer again.
+- OS on VM may have English keyboard layout by default which may need to be changed if Host machine as a different layout (for e.g. German).
+- Create snapshots on image overview (Burger symbol on the right)
+    - Load snapshots for different configuration stages
+- Configure network for ssh
+    - Install `openssh-server` in th VM.
+    - Shutdown VM.
+    - In VirtualBox window -> File -> Host Network Manager -> Verify that network device is configured `vboxnet0`
+    - In virtual machine's settings -> Network -> Adapter 2 -> Enable and set Host only adapter `vboxnet0`
+    - Boot VM.
+    - Verify additional network device `enp0s8` and check for ip address. In my case the IP is `192.168.56.101`.
+    - On host machine `ssh VM-USERNAME@192.168.56.101`.
 - Show/install extensions to allow for
-    - Some 3D rendering
-    - Shared clipboard
+    - ... some 3D rendering
+    - ... shared clipboard
     - In general: *Better integration* into host system
 - Create a shared drive to exchange data instead of copy and pasting file content.
     - In case one cannot access it `sudo usermod -aG vboxsf $(whoami)`
     - You need to logout and in again afterwards for usergroups to be recognized.
-    - I share `/media/jaustar/external-ssd/virtualmachines/shared-folder`
+    - I share `~/vm_shared/`
     - Add some file there and check that it appears Host and vice versa.

@@ -25,10 +25,6 @@ slideOptions:
 
 # Singularity
 
-<img src="https://sylabs.io/assets/svg/singularity-logo.svg" width=20%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
-
-[https://sylabs.io/assets/svg/singularity-logo.svg](https://sylabs.io/assets/svg/singularity-logo.svg)
-
 ---
 
 ## Introduction
@@ -104,7 +100,7 @@ slideOptions:
 
 ## Demo: Run prebuilt containers
 
-Details available in [`containers_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/containers_demo.md)
+Details available in [`singularity_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/singularity_demo.md)
 
 ---
 
@@ -140,9 +136,6 @@ From: ubuntu:18.04
 
 %runscript
         date | cowsay | lolcat
-
-%labels
-        Author Sylabs
 ```
 
 [https://sylabs.io/guides/master/user-guide/quick_start.html#build-images-from-scratch](https://sylabs.io/guides/master/user-guide/quick_start.html#build-images-from-scratch)
@@ -151,7 +144,7 @@ From: ubuntu:18.04
 
 ## Demo: Build own containers
 
-Details available in [`README.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/README.md)
+Details available in [`singularity_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/singularity_demo.md)
 
 ---
 

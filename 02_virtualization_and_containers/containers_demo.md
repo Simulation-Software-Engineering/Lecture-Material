@@ -17,9 +17,9 @@
 
 ## Concluding Remarks and Discussion about Learning Goals
 
-- Virtual machines are a good abstraction layer that are very flexible. They can run different OS, can be moved etc. VirtualBox is a popular VM solution (hypervisor.)
+- Virtual machines are a good abstraction layer that are very flexible. They can run different OS, can be moved etc. VirtualBox is a popular VM solution (hypervisor).
 - There are tools like Vagrant to manage them more conveniently than with the GUI or CLI.
-- Containers are a light weight alternative to VMs. They are basically "special" processes that run more or less isolated. Therefore, they do not need to bring everything (kernel, libraries...) themselves, but rely on the functionalities of the Host. Example: Containers "run" on the same kernel as the Host. Cannot mix OSes (easily).
+- Containers are a light weight alternative to VMs. They are basically "special" processes that run more or less in an isolated manner. Therefore, they do not need to bring everything (kernel, libraries...) themselves, but rely on the functionalities of the Host. Example: Containers "run" on the same kernel as the Host. Cannot mix OSes (easily).
 - Docker is popular for container framework encapsulating environments and applications. We will use it also more for testing (CI/CD, DevOps). This will come in future lectures.
 - Singularity is a bit more "niche", but important in the computing/simulation business as it focuses on self-contained applications that can easily run on different platforms instead of isolation compared to Docker.
 - For the exercise you should ideally have Docker, VirtualBox, Vagrant (maybe Singularity installed).

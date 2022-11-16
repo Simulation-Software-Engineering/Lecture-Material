@@ -39,9 +39,19 @@
 
 - **5** [Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/intro_slides.md)
 - **10** [Introduction to Virtualization](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualmachines_slides.md)
-- **40** [VirtualBox (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualbox_slides.md)
-- **25** [Vagrant (including practical examples)](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/vagrant_slides.md)
+- **40** VirtualBox: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualbox_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualbox_demo.md)
+- **25** Vagrant: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/vagrant_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/vagrant_demo.md)
 
 ## 4.2 – Thu, November 10, 2022
 
 - The Challenge, step one, presentations
+
+## 5.1 – Thu, November 17, 2022
+
+- **10** [Introduction to Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/containers_slides.md)
+- **60** Docker: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
+- **20** Singularity: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/singularity_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/singularity_demo.md)
+
+## 5.2 – Thu, November 17, 2022
+
+- **90** [Exercise: Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualmachines_containers_exercise.md)

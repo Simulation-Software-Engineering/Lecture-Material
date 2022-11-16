@@ -1,8 +1,5 @@
 # Singularity Demo
 
-- Back story
-    - Created at Lawrence Berkeley National Laboratory but now developed by SyLabs
-    - Based on Go
 - Container solution with high-performance computing in mind
     - "Mobility of compute", "Bring your own environment"
         - Mobility of your compute environment
@@ -53,7 +50,6 @@
             fortune | cowsay | lolcat
     ```
 
-- Go to `/media/jaustar/external-ssd/singularity/singularity-examples/build-image`
 - Show file `singularity-example.def` content
 - `sudo singularity build testimage singularity-example.def`
     - Point out that sudo is needed

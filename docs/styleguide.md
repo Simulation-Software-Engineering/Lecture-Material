@@ -1,6 +1,6 @@
 # Style Guide for SSE Lecture Material
 
-## Names of folders and files
+## Names of Folders and Files
 
 - Use `snail_case`. Only exception are standard files such as `CONTRIBUTING.md`.
 - Slides end with `_slides.md`, demo notes with `_demo.md`, and exercise sheets with `_exercise.md`.
@@ -26,7 +26,7 @@ Example:
 
 > - Running predefined workflows is simple.
 
-### Items That are no Full Sentences
+### Items That are not Full Sentences
 
 - ... also start with a capital letter.
 - ... do **not** end with a period, but can end with a question mark, or an exclamation mark. Use exclamation marks with care (do not shout at the student).

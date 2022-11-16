@@ -26,7 +26,7 @@ Example:
 
 > - Running predefined workflows is simple.
 
-### Items that are not full Sentences
+### Items That are not Full Sentences
 
 - ... also start with a capital letter.
 - ... do **not** end with a period, but can end with a question mark, or an exclamation mark. Use exclamation marks with care (do not shout at the student).

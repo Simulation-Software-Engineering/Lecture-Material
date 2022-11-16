@@ -122,9 +122,9 @@ slideOptions:
 
 ## Connection to Host
 
-- Container communicates via daemon `dockerd` (runs as     root)
+- Container communicates via daemon `dockerd` (runs as root)
 - Strong isolation (`namespaces` and `cgroups`)
-    - You cannot access Host filesystem by default
+    - You cannot access Host filesystem by default.
     - Several [mount options](https://docs.docker.com/storage) available
 
 ---
@@ -179,7 +179,7 @@ slideOptions:
 
 ---
 
-## Demo: Running prebuilt images
+## Demo: Running Prebuilt images
 
 Details available in [`docker_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
 
@@ -208,7 +208,7 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 - `ADD`: Add for from source to destination (powerful and confusing)
 - `CMD`: Command to run under `docker run`
 - `ENV`: Sets environment variable
-- `ARG`: Environment variable for **only** build process
+- `ARG`: Environment variable for **only** the build process
 
 ---
 
@@ -225,9 +225,9 @@ CMD ["echo", "hello"]
 
 ---
 
-## Demo: Building own image
+## Demo: Building own Image
 
-Details available in [`README.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/README.md)
+Details available in [`docker_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
 
 ---
 
@@ -242,9 +242,9 @@ Details available in [`README.md`](https://github.com/Simulation-Software-Engine
 
 ---
 
-## Demo: Run FEniCS container
+## Demo: Run FEniCS Container
 
-Details available in [`README.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/README.md)
+Details available in [`docker_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
 
 ---
 

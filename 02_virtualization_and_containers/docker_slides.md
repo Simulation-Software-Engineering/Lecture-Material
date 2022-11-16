@@ -179,13 +179,13 @@ slideOptions:
 
 ---
 
-## Demo: Running prebuilt images
+## Demo: Running Prebuilt images
 
 Details available in [`docker_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
 
 ---
 
-## Defining and building own images 1/2
+## Defining and Building own Images 1/2
 
 - Define container in `Dockerfile`
     - Git-friendly text file
@@ -225,13 +225,13 @@ CMD ["echo", "hello"]
 
 ---
 
-## Demo: Building own image
+## Demo: Building own Image
 
 Details available in [`docker_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
 
 ---
 
-## Publish own images
+## Publish own Images
 
 - Publication on registry (e.g. [DockerHub](https://hub.docker.com/))
 - `docker build -t ACCOUNT/REPOSITORY[:TAG] .`
@@ -242,7 +242,7 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 
 ---
 
-## Demo: Run FEniCS container
+## Demo: Run FEniCS Container
 
 Details available in [`docker_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
 

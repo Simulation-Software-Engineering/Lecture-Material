@@ -86,7 +86,7 @@ This exercise consists of the following main steps:
 
 In the following subsections you will find additional instructions and explanations. This should help you, especially if you do not have much experience with software installation and Linux.
 
-#### 1. Download the "Ubuntu Server 20.04"
+#### 1. Download the "Ubuntu Server 22.04"
 
 See instruction in the introduction to this section.
 

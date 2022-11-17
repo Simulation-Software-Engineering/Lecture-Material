@@ -179,7 +179,7 @@ Fork and clone the repository mentioned above. The repository initially contains
 #### 2. Initialization of the VM
 
 - We want to start from scratch so initialize a new box using `vagrant init` inside this repository and add the resulting `Vagrantfile` to Git. Then adapt your `Vagrantfile` to incorporate the following settings:
-    - Your virtual machine must be based on the [`ubuntu/jammy64` image](https://app.vagrantup.com/ubuntu/boxes/jammy64). See [official boxes of Vagrant](https://www.vagrantup.com/docs/boxes#official-boxes).
+    - Your virtual machine must be based on the [`ubuntu/focal64` image](https://app.vagrantup.com/ubuntu/boxes/focal64). See [official boxes of Vagrant](https://www.vagrantup.com/docs/boxes#official-boxes).
     - The name of your VM should be `USERNAME-ubuntu-server`.
     - The VM must request [1024 MB of main memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration).
     - We want a [new shared folder](https://www.vagrantup.com/docs/synced-folders/basic_usage) in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted as `/mnt/shared/` in your virtual machine.

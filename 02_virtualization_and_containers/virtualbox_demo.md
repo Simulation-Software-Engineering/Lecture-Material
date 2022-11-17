@@ -8,7 +8,7 @@
 
 - What is virtualization and what is containerization?
     - What problems do they solve? Why do we need them?
-- Virtual machines (VWs)
+- Virtual machines (VMs)
     - Emulating a complete computer.
     - Virtual machine brings the full software stack (kernel, libraries etc.)
     - Has a (type 1/2) hypervisor. Type 1 runs on bare metal while type 2 runs within an operating system. Distinction not always clear.

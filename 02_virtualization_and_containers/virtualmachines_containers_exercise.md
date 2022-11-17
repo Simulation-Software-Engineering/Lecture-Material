@@ -217,7 +217,7 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 ### Further Information (Vagrant)
 
 - You might want to add the option `--provision` to the `vagrant up` or use `vagrant provision` command if you want to reprovision a running box (without destroying it first). In case the box is not being build/rebuild, please read the [documentation about provisioning](https://www.vagrantup.com/docs/provisioning) carefully.
-- By default, Vagrant will store some larger files like the base images/boxes etc.\ in `${HOME}/vagrant.d`. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point to the alternative directory. This could look like
+- By default, Vagrant will store some larger files like the base images/boxes etc.\ in `${HOME}/.vagrant.d`. If Vagrant should use a different directory, you can set the environment variable `VAGRANT_HOME` to point to the alternative directory. This could look like
 
     ```bash
     export VAGRANT_HOME=/media/jaustar/external-ssd/virtualmachines/vagrant/.vagrant.d/

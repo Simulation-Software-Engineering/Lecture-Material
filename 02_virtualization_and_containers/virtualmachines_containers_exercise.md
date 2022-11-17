@@ -1,6 +1,6 @@
 # Exercise: Virtualization and Containers
 
-In this exercise we work the virtualization and container techniques that we have seen in the lecture. We set up a virtual machine manually first and then automatize the process using Vagrant. Afterwards we build our own container using Docker.
+In this exercise, we work with the virtualization and container techniques that we have seen in the lecture. We set up a virtual machine manually first and then automatize the process using Vagrant. Afterwards, we build our own container using Docker.
 
 ## Deadline
 
@@ -150,7 +150,7 @@ Congratulations. You have successfully set up a virtual machine, installed Ubunt
 
 ## Virtual Machines Using Vagrant
 
-In the previous section we have set up a VM manually. This was quite tedious. Therefore, we want to automatize this process now by using [Vagrant](https://www.vagrantup.com/) and setting up our own Vagrant box. We will provision a box based on VirtualBox by using shell scripts and the included provisioning tools of Vagrant.
+In the previous section we set up a VM manually. This was quite tedious. Therefore, we want to automatize this process now by using [Vagrant](https://www.vagrantup.com/) and setting up our own Vagrant box. We will provision a box based on VirtualBox by using shell scripts and the included provisioning tools of Vagrant.
 
 ### Tasks (Vagrant)
 
@@ -174,7 +174,7 @@ In the following subsections you will find additional instructions and explanati
 
 #### 1. Create a Fork (Vagrant)
 
-See the instructions in the task list above. The repository initially contains a `README.md` and an empty file called `bootstrap.sh`. Please also create a new branch in your fork to work on the task.
+Fork and clone the repository mentioned above. The repository initially contains a `README.md` and an empty file called `bootstrap.sh`. Please also create a new branch in your fork to work on the task.
 
 #### 2. Initialization of the VM
 
@@ -268,7 +268,7 @@ This exercise consists of the following main steps:
 
 #### 1. Create a Fork (Docker)
 
-See the instructions in the task list above. The repository initially contains a `README.md` and an empty file called `Dockerfile`. Please also create a new branch in your fork to work on the task.
+Fork and clone the repository mentioned above. The repository initially contains a `README.md` and an empty file called `Dockerfile`. Please also create a new branch in your fork to work on the task.
 
 #### 2. Setting up the `Dockerfile`
 

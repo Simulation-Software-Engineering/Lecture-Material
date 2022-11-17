@@ -182,7 +182,7 @@ Fork and clone the repository mentioned above. The repository initially contains
     - Your virtual machine must be based on the [`ubuntu/jammy64` image](https://app.vagrantup.com/ubuntu/boxes/jammy64). See [official boxes of Vagrant](https://www.vagrantup.com/docs/boxes#official-boxes).
     - The name of your VM should be `USERNAME-ubuntu-server`.
     - The VM must request [1024 MB of main memory](https://www.vagrantup.com/docs/providers/virtualbox/configuration).
-    - We want a [new shared folder](https://www.vagrantup.com/docs/synced-folders/basic_usage) in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted as `/mnt/shared/` in your container.
+    - We want a [new shared folder](https://www.vagrantup.com/docs/synced-folders/basic_usage) in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted as `/mnt/shared/` in your virtual machine.
     - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can leave the VM. You do **not** have to stop/destroy the VM for the next step.
 
 #### 3. Extending the VMs Configuration

@@ -86,7 +86,7 @@ Congratulations. You have successfully set up a virtual machine, installed Ubunt
 
 #### 5. Upload the Screenshot to SIM GitLab
 
-- Go to the SIM GitLab Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-virtual-machines). You will find an example issue. Your issue should look similar in terms of title, labels etc.
+- Go to the SIM GitLab Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-virtual-machines). You will find an example issue. Your issue should look similar in terms of title, labels etc.
 - Open the issue.
     - As title choose "[`USERNAME`] Ubuntu Server Installation"
     - Attach the screenshot ("Attach a file") that you made in the previous step. By default, the screenshot is saved in the folder of your VM.
@@ -111,7 +111,7 @@ In the previous section we have set up a VM manually. This was quite tedious. Th
 
 This exercise consists of the following main steps:
 
-1. Create a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-virtual-machines)
+1. Create a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-virtual-machines)
 2. Initialization of the VM
     - Name this virtual machine `USERNAME-ubuntu-server`.
     - Make sure that the virtual machine requests 1024 MB memory.
@@ -162,7 +162,7 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 
 #### 5. Creating a Merge Request (Vagrant)
 
-- After checking your Vagrant box carefully, please open a merge request in the GitHub Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-virtual-machines):
+- After checking your Vagrant box carefully, please open a merge request in the GitHub Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-virtual-machines):
     - As title, choose "[`USERNAME`] Vagrant Box Provisioning".
     - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`). Do not add the hidden folder `.vagrant` to Git.
     - Attach the screenshot ("Attach a file") that you made in the previous step.
@@ -212,7 +212,7 @@ Similar to the previous task we want to set up a Docker container for testing. I
 
 This exercise consists of the following main steps:
 
-1. Create a fork of the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-containers)
+1. Create a fork of the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-containers)
 2. Setting up the `Dockerfile`
     - The name of this container will be `USERNAME-ubuntu`.
     - Create a file called `testfile` that contains `USERNAME`. This file should be copied to a directory called `/testfiles` inside the container.
@@ -247,7 +247,7 @@ See the instructions in the task list above. The repository initially contains a
 
 #### 4. Creating a Merge Request (Docker)
 
-- Open a merge request in the GitHub Repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-containers).
+- Open a merge request in the GitHub Repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-containers).
     - As title choose "[`USERNAME`] Docker Container Recipe".
     - Make sure all files are up to date (`testfile`, `Dockerfile`).
     - Attach the screenshot ("Attach a file") that you made in the previous step.
@@ -268,7 +268,7 @@ See the instructions in the task list above. The repository initially contains a
 
 Here are some ideas on how to extend your work after you have finished the main tasks. If you have more ideas, please explain them in your issue/pull request. You can also discuss them with us during the exercise.
 
-Extensions to the VirtualBox task should be added to the existing VirtualBox issue in ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-virtual-machines) by adding a new comment under the original screenshot. For all other extensions, please create a new merge request in the corresponding repository. Please use a meaningful title for new merge requests and prefix it with "[`USERNAME`]" as for the other merge requests.
+Extensions to the VirtualBox task should be added to the existing VirtualBox issue in ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-virtual-machines) by adding a new comment under the original screenshot. For all other extensions, please create a new merge request in the corresponding repository. Please use a meaningful title for new merge requests and prefix it with "[`USERNAME`]" as for the other merge requests.
 
 ### VirtualBox
 
@@ -290,5 +290,5 @@ Extensions to the VirtualBox task should be added to the existing VirtualBox iss
 
 ### Singularity
 
-- Rebuild the Docker container as [Singularity container](https://sylabs.io/guides/master/user-guide/). Create a new merge request for this in the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-containers). Please choose the `Singularity` label when creating the merge request.
+- Rebuild the Docker container as [Singularity container](https://sylabs.io/guides/master/user-guide/). Create a new merge request for this in the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-containers). Please choose the `Singularity` label when creating the merge request.
     - Please only add the Singularity recipe to the merge request, but not the container file.

@@ -25,7 +25,7 @@ slideOptions:
 
 # Docker
 
-<img src="https://www.docker.com/sites/default/files/d8/2019-07/Moby-logo.png" width=20%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+<img src="https://www.docker.com/wp-content/uploads/2022/03/horizontal-logo-monochromatic-white.png" width=40%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 [https://www.docker.com/company/newsroom/media-resources](https://www.docker.com/company/newsroom/media-resources)
 
@@ -84,11 +84,22 @@ slideOptions:
 - Containers for consistent development environment
 - Containers for consistent testing environment
 - Portable format for sharing applications
-- Avoid tedious installation procedures by providing Docker container ([FEniCS](https://fenicsproject.org/download/), [GitLab](https://docs.gitlab.com/ee/install/docker.html)...)
+- Avoid tedious installation procedures by providing Docker container ([FEniCS](https://fenicsproject.org/download/), [GitLab](https://docs.gitlab.com/ee/install/docker.html), etc.)
 
 ---
 
 ## Building Blocks 1/2
+
+- Docker objects
+    - **Images**
+        - Read-only template for creating a container
+        - An image can be based on another image
+    - **Containers**
+        - Runnable instance of an image
+
+---
+
+## Building Blocks 2/2
 
 - Docker daemon `dockerd`
     - Controlling instance of containers and reacts to API requests
@@ -98,17 +109,6 @@ slideOptions:
     - That means no direct interaction with containers, images etc.
 - Docker registries
     - Registries that manage Docker images to be used
-
----
-
-## Building Blocks 2/2
-
-- Docker objects
-    - **Images**
-        - Read-only template for creating a container
-        - An image can be based on another image
-    - **Containers**
-        - Runnable instance of an image
 
 ---
 
@@ -215,7 +215,7 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 ## Dockerfile Example
 
 ```Dockerfile
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 
 RUN apt update -y && apt install -y neofetch
 WORKDIR /app
@@ -253,7 +253,7 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 - User ID mapping
 - [Multistage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
     - Build image by combining layers created from different base images
-- [Different mount types](https://docs.docker.com/storage)
+- [Different mount typs](https://docs.docker.com/storage)
     - Volumes, bind mount, tmpfs mount
 - [Persisting data](https://docs.docker.com/get-started/05_persisting_data/)
 - [Multi-container apps](https://docs.docker.com/get-started/07_multi_container/)

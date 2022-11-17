@@ -205,7 +205,7 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 
 #### 5. Creating a Merge Request (Vagrant)
 
-- After checking your Vagrant box carefully, please open a merge request in the GitHub Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-virtual-machines):
+- After checking your Vagrant box carefully, please open a merge request in the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-virtual-machines):
     - As title, choose "[`USERNAME`] Vagrant Box Provisioning".
     - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`). Do not add the hidden folder `.vagrant` to Git.
     - Attach the screenshot ("Attach a file") that you made in the previous step.

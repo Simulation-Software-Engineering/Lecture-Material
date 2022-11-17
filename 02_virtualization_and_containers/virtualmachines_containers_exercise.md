@@ -302,7 +302,7 @@ Fork and clone the repository mentioned above. The repository initially contains
 
 Here are some ideas on how to extend your work after you have finished the main tasks. If you have more ideas, please explain them in your issue/pull request. You can also discuss them with us during the exercise.
 
-Extensions to the VirtualBox task should be added to the existing VirtualBox issue in ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-virtual-machines) by adding a new comment under the original screenshot. For all other extensions, please create a new merge request in the corresponding repository. Please use a meaningful title for new merge requests and prefix it with "[`USERNAME`]" as for the other merge requests.
+Extensions to the VirtualBox task should be added to the existing VirtualBox issue in ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-virtual-machines) by adding a new comment under the original screenshot. For all other extensions, please create a new merge request in the corresponding repository. Please use meaningful titles for new merge requests and prefix them with "[`USERNAME`]" as for the other merge requests.
 
 ### VirtualBox
 

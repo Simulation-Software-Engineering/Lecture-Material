@@ -290,7 +290,7 @@ See the instructions in the task list above. The repository initially contains a
 
 #### 4. Creating a Merge Request (Docker)
 
-- Open a merge request in the GitHub Repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-containers).
+- Open a merge request in the GitHub Repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-containers).
     - As title choose "[`USERNAME`] Docker Container Recipe".
     - Make sure all files are up to date (`testfile`, `Dockerfile`).
     - Attach the screenshot ("Attach a file") that you made in the previous step.
@@ -298,24 +298,16 @@ See the instructions in the task list above. The repository initially contains a
     - Double-check that all files are in the repository and up to date.
     - If everything looks good, create the merge request.
 
-### Further Information (Docker)
-
-- [Dockerfile documentation](https://docs.docker.com/engine/reference/builder/)
-- [Docker](https://www.docker.com/)
-- [Docker documentation](https://docs.docker.com)
-- [DockerHub](https://hub.docker.com/)
-- [DockerHub documentation](https://docs.docker.com/docker-hub/)
-
 ## Optional Tasks
 
 Here are some ideas on how to extend your work after you have finished the main tasks. If you have more ideas, please explain them in your issue/pull request. You can also discuss them with us during the exercise.
 
-Extensions to the VirtualBox task should be added to the existing VirtualBox issue in ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-virtual-machines) by adding a new comment under the original screenshot. For all other extensions, please create a new merge request in the corresponding repository. Please use a meaningful title for new merge requests and prefix it with "[`USERNAME`]" as for the other merge requests.
+Extensions to the VirtualBox task should be added to the existing VirtualBox issue in ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/exercise-virtual-machines) by adding a new comment under the original screenshot. For all other extensions, please create a new merge request in the corresponding repository. Please use a meaningful title for new merge requests and prefix it with "[`USERNAME`]" as for the other merge requests.
 
 ### VirtualBox
 
-- Set up the SSH server on your Ubuntu VM and connect to the Guest from the Host. Take a screenshot when connected to your Guest system and add it to the issue with a short explanation what we see.
-- Install the Guest Additions and created a shared folder. Please also add a screenshot of that in the issue with a short explanation what we see.
+- Set up the SSH server on your Ubuntu VM and connect to the Guest from the Host. Take a screenshot when connected to your Guest system and add it to the issue with a short explanation what you see.
+- Install the Guest Additions and created a shared folder. Please also add a screenshot of that in the issue with a short explanation what you see.
 
 ### Vagrant
 
@@ -333,4 +325,4 @@ Extensions to the VirtualBox task should be added to the existing VirtualBox iss
 ### Singularity
 
 - Rebuild the Docker container as [Singularity container](https://sylabs.io/guides/master/user-guide/). Create a new merge request for this in the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-containers). Please choose the `Singularity` label when creating the merge request.
-    - Please only add the Singularity recipe to the merge request, but not the container file.
+    - Please only add the Singularity recipe to the merge request, and not the container file.

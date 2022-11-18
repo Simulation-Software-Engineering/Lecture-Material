@@ -2,7 +2,6 @@
 
 ## Introduction to Docker and Some Practical Examples
 
-- [`act`](https://github.com/nektos/act) is a tool to debug/run GitHub actions locally
 - The most popular container framework one finds at the moment
 - Short backstory:
     - Started as wrapper around lxc/lxd (Linux' native container format)
@@ -35,6 +34,8 @@
         - Remove all unused objects (images, containers...)
     - `docker logs ID/NAME`
         - Shows log files of container
+    - `docker commit ID USER/NAME:TAG`
+        - Commit a container to an image
 - Explain text-based format (infrastructure as code)
 - One can pre-build own images to reuse them later.
 - Has a layer based build process (which is nice). We do not have to rebuild from scratch, if build fails.
@@ -45,6 +46,7 @@
     - Namespaces
     - Docker considers itself quite safe
 - We focus on tools to create, run and interact with containers.
+- Example of a tool which uses Docker: - [`act`](https://github.com/nektos/act) is a tool to debug/run GitHub actions locally
 
 Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/get-started/overview/)
 
@@ -139,12 +141,6 @@ Source: [https://docs.docker.com/get-started/overview/](https://docs.docker.com/
 - `docker cp file-to-copy CONTAINERNAME:/app`
 - `docker cp CONTAINERNAME:/app file-to-copy`
 - This will fix preserve user and group id
-
-## Demo: DuMuX Dockerfile
-
-- Show more complicated Dockerfile example (`dumux-precice`)?
-    - In the [`dumux-adapter` repository on GitHub](https://github.com/precice/dumux-adapter/tree/develop/docker).
-    - Uses most/all commands on slides
 
 ## Demo: FEniCS Example
 

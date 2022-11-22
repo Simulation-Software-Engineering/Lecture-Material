@@ -11,7 +11,6 @@ Learning goals:
 | Duration | Content |
 | --- | --- |
 | 10 minutes | [`containers_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/containers_slides.md), [`containers_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/containers_demo.md) |
-| 10 minutes | [`containers_homework_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/containers_homework_slides.md) |
 | 65 minutes | [`docker_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_slides.md), [`docker_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md) |
 | 5 minutes | [`intro_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/intro_slides.md) |
 | 20 minutes | [`singularity_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/singularity_slides.md), [`singularity_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/singularity_demo.md) |

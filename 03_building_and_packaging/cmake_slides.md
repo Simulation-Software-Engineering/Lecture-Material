@@ -69,7 +69,7 @@ slideOptions:
 - CMake can generate files for many build systems: Make, ninja, VSCode project, Eclipse project, ...
 - Many **GUIs** and **TUIs**: `ccmake`, `cmake-gui`, integration in probably nearly all IDEs, ...
 - CMake is **cross-platform**: you can ideally use same CMake file in all OS (easy to distinguish platform-specific things).
-- Build directory independent of source directory (build multiple versions with different dependencies, different build types,  etc.)
+- CMake build directory independent of project source directory (build multiple versions with different dependencies, different build types,  etc.)
 - CMake respects choices in user environment (e.g. user defines cpp compiler through `CXX`).
 - Wide language support
 

@@ -6,7 +6,7 @@ Example code is in [`building-and-packaging/material/examples/cmake`](https://gi
 
 - Look at and explain `CMakeLists.txt`.
 - `mkdir build && cd build && cmake ..`
-- Standard to create `build` directory, don't call cmake in root directory.
+- Standard to create `build` directory, don't call `cmake` in root directory.
     - In case of doubt, you can always just delete complete folder.
 - Explain and look at files:
     - `Makefile`: lengthier than you think, many targets, search for `helloworld`
@@ -43,7 +43,7 @@ int main()
 - Generate and build again, this time with verbose output, `make VERBOSE=1`.
     - `cmake` does stuff again, checks build system.
     - How compiled, how linked, ...
-- `make` and run.
+- Run
 - What if there are multiple source files in `sse` folder?
 
 ```diff
@@ -58,53 +58,6 @@ int main()
 - `CONFIGURE_DEPENDS` partial remedy, but costly and no guarantee that all build systems support this.
 - Alternatively, generate list outside of cmake (will come back to this later).
 
-## CTest
-
-- Let's add some dummy tests.
-
-`main.cpp`:
-
-```diff
-+  if (argc > 1)
-+  {
-+    return 1;
-+  }
-```
-
-`CMakeLists.txt`:
-
-```diff
-+ include(CTest)
-+
-+ add_test("test1" "${CMAKE_CURRENT_BINARY_DIR}/helloworld")
-+ add_test("test2" "${CMAKE_CURRENT_BINARY_DIR}/helloworld" "someparam")
-```
-
-- `include` includes a module, [some modules](https://cmake.org/cmake/help/latest/manual/cmake-modules.7.html) are builtin in CMake.
-- Creates target `test`.
-- `make`, `make test`, explain output.
-- We will learn later (after Christmas) how to work with proper packages for testing (e.g. boost).
-
-## CPack (maybe moved to next week if time short)
-
-- We can also package code with CMake (or better: steer from CMake).
-
-```diff
-include(CPack)
-
-install(TARGETS helloworld)
-```
-
-- Run cmake and `make package`, creates `HelloWorld-0.1.1-Linux.tar.gz`
-- We will see later (next week) how to package a `.deb`
-- Set version number
-
-```diff
-+ project("HelloWorld" VERSION 2.3.0)
-```
-
-- `make package` again
-
 ## Building libraries
 
 - `make clean`
@@ -117,11 +70,10 @@ install(TARGETS helloworld)
 - add_executable(helloworld "${SRC_FILES}")
 ```
 
-- Remove `CTest` and `CPack` things for simplicity.
 - Build static lib `libHelloWorld.a`, that's the default
 - Build shared lib by `cmake -DBUILD_SHARED_LIBS=ON ..`, don't change in `CMakeLists.txt`, but stick to standards
-- Define cmake variables with `-D`, we will come back to this later
-- Now, let's use the library
+- Define CMake variables with `-D`, we will come back to this later
+- Now, let's use the library:
 
 ```diff
 + add_executable(helloworld main.cpp)
@@ -177,9 +129,6 @@ find_library(precice REQUIRED)
 target_link_libraries("${PROJECT_NAME}" PRIVATE precice)
 ```
 
-- As a third option, [one can also use pkg-config](https://cmake.org/cmake/help/latest/module/FindPkgConfig.html) (not shown here).
-
-
 ## Options and variables
 
 - For good software, a user should not need to touch `CMakeLists.txt`.
@@ -212,27 +161,3 @@ endif()
 - Build without preCICE `cmake -DENABLE_PRECICE=OFF ..` and `make` and `./helloworld`.
 - Create different folder and build there with preCICE.
 - Build in release mode `-DCMAKE_BUILD_TYPE=Release` and `make VERBOSE=1`.
-- This is a [standard CMake variable](https://cmake.org/cmake/help/latest/manual/cmake-variables.7.html).
-
-## ccmake
-
-`sudo apt-get install cmake-curses-gui`
-
-- `ccmake ..`
-- `c`, look add description of ENABLE_PRECICE`, disable it
-- `t`, show all options, helpful to find out which variables exist
-- `g`, generate `Makefile`
-
-## Explain preCICE `CMakeLists.txt`
-
-- On GitHub [here](https://github.com/precice/precice/blob/develop/CMakeLists.txt)
-    - `CMakeLists.txt` lengthy and own source tree.
-        - If software should be usable (for everybody everywhere), packaging is a project by itself
-    - in `modules` some `FindX.cmake`, partially third-party, partially developed by preCICE devs
-    - Variables and feature summaries
-    - `sources.cmake` included in line 335, no glob, but generated (some python script)
-    - Run it, tells you many things
-    - build in parallel (but takes some time)
-    - `make test`
-    - `make install` standard target, did not yet talk about it, copies to correct paths, needs sudo
-- Another real-world example: [deal.II](https://github.com/dealii/dealii/blob/master/CMakeLists.txt)

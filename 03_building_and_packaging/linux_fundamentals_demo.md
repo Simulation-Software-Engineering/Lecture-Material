@@ -2,9 +2,10 @@
 
 ## Static and Shared Linking
 
+Example code is in [`building-and-packaging/material/examples/shared-and-static-c++`](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/03_building_and_packaging/examples/shared-and-static-c++).
+
 - This example is based on the C++ standard library to emphasize the difference between static and shared libraries.
-- Show example from `examples/shared-and-static-c++/`
-    - Show `main.cpp`, which uses standard lib
+- Show `main.cpp`, which uses standard lib
 - Compile code:
     - Shared: `g++ main.cpp -o main-shared`
     - Static: `g++ -static main.cpp -o main-static`
@@ -40,7 +41,8 @@
 
 ## Environment Variables
 
-- Resources in `examples/environment-variables/`
+Example code is in [`building-and-packaging/material/examples/environment-variables`](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/03_building_and_packaging/examples/environment-variables).
+
 - If necessary build Docker image: `docker build -t "demo_variables" .`
 - Start docker container to have fresh system: `docker run -it demo_variables`
 - Show file structure:

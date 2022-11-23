@@ -31,11 +31,11 @@ slideOptions:
 
 ---
 
-## Learning Goals of this Unit
+## Learning Goals of This Unit
 
-- Students understand the basic functionality of makefiles (timestamps, dependencies, update rules).
-- Students can read simple makefiles and know where to look for additional material for complex makefiles.
-- Students can write simple makefiles for small projects.
+- Understand the basic functionality of makefiles (timestamps, dependencies, update rules).
+- Read simple makefiles and know where to look for additional material for complex makefiles.
+- Write simple makefiles for small projects.
 
 ---
 
@@ -55,7 +55,7 @@ Introduce `Hello-World` example
 
 ---
 
-## How does it work?
+## How Does it Work?
 
 - When you create / change a file, the OS updates timestamp of file.
 - Make compares timestamps to see which files are older / newer than others.
@@ -80,7 +80,7 @@ Introduce `Hello-World` example
     - Variables
     - Rules
     - Wildcards
-- ... but becomes quickly [very hard to read](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html)
+- ... but becomes quickly [very hard to read](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html).
 - Not covered because CMake does this for us.
 - But nicely documented in [py-RSE chapter 9](https://merely-useful.tech/py-rse/automate.html).
 
@@ -88,7 +88,7 @@ Introduce `Hello-World` example
 
 ## Summary
 
-- Make is an important build system by itself and an important building block for cmake.
+- Make is an important build system by itself and an important building block for CMake.
 - Make works by checking timestamps and updating outdated files if necessary.
 - Each file can be a target. A target has dependencies and an update rule.
 - `make target` updates "target", just `make` updates first target.

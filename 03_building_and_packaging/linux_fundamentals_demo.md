@@ -54,7 +54,7 @@ Example code is in [`building-and-packaging/material/examples/environment-variab
 - Use script:
     - `./print_my_environment_variable.sh` -> empty
     - `MY_ENV_VARIABLE="Hi students" ./print_my_environment_variable.sh` -> good
-    - `echo $MY_ENV_VARIABLE` -> empty
+    - `echo $MY_ENV_VARIABLE` -> empty (dereference variable)
     - `./print_my_environment_variable.sh` -> empty
     - `MY_ENV_VARIABLE="Hi students"` and `echo $MY_ENV_VARIABLE` -> good
     - `./print_my_environment_variable.sh` -> empty

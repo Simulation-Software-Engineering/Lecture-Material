@@ -1,8 +1,8 @@
-# Notes for Make demo
+# Notes for Make Demo
 
 Example code is in [`building-and-packaging/material/examples/make`](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/03_building_and_packaging/examples/make).
 
-## "Hello World" starting point
+## "Hello World" Starting Point
 
 Show `main.cpp` and build by hand `g++ -o helloworld main.cpp`
 
@@ -16,7 +16,7 @@ int main()
 }
 ```
 
-## Single rule example
+## Single Rule Example
 
 - Remove `helloworld`.
 - Show `Makefile`.
@@ -32,7 +32,7 @@ int main()
 
 > Makefile:2: *** missing separator (did you mean TAB instead of 8 spaces?).  Stop.
 
-## Multiple rules example and phony targets
+## Multiple Rules Example and Phony Targets
 
 - Show `sse.hpp` and `sse.cpp` in subfolder `sse`.
 - Use it.
@@ -61,7 +61,7 @@ helloworld : main.cpp sse.o
 	$(CXX) -o helloworld sse.o main.cpp
 ```
 
-- Run `make`, only builds `sse.o`.
+- Run `make`, only builds `sse.o`
 - By default, first target is built.
 - `make helloworld` to build specific target
 - phony target (a helper target, doesn't correspond to a file)
@@ -80,7 +80,7 @@ helloworld : main.cpp sse.o
 ```
 
 - Run `make clean`
-- `mkdir clean` and `make clean` confuses Make
+- `mkdir clean` and `make clean` confuses Make.
 
 ```
 + .PHONY : all clean

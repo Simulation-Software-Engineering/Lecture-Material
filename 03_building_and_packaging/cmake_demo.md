@@ -23,7 +23,7 @@ Example code is in [`building-and-packaging/material/examples/cmake`](https://gi
 
 ```diff
 #include <iostream>
-+ #include "sse.hpp"
++ #include "sse/sse.hpp"
 
 int main()
 {
@@ -144,6 +144,8 @@ target_link_libraries("${PROJECT_NAME}" PRIVATE precice)
   std::cout << precice::getVersionInformation() << std::endl;
 #endif
 ```
+
+and around header.
 
 ```cmake
 option(ENABLE_PRECICE "Enable use of preCICE." ON)

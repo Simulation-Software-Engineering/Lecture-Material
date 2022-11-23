@@ -117,8 +117,7 @@ slideOptions:
 - `find_package(dependency REQUIRED MODULE/CONFIG)`
     - Find "cmake-ready" external package on system and make available
     - `MODULE` mode: Is there a `Finddependency.cmake` shipped with CMake or elsewhere?
-    - `CONFIG` mode: Is there a `dependencyCongfig.cmake` installed or in `CMAKE_PREFIX_PATH`
-        - Specific specific version with variable `Dependency_DIR`.
+    - `CONFIG` mode: Is there a `dependencyCongfig.cmake` installed or in `CMAKE_PREFIX_PATH` or specified via variable `Dependency_DIR`?
 - `find_library(dependency REQUIRED)`
     - Find "not-cmake-ready" external package on system (standard system path or adjusted `LIBRARY_PATH`) and make available
 - `target_link_libraries(myexecutable PRIVATE dependency)`

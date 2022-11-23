@@ -28,7 +28,7 @@ SlideOptions:
   .reveal code {
     font-family: 'Ubuntu Mono';
     color: orange;
-  }  
+  }
 </style>
 
 

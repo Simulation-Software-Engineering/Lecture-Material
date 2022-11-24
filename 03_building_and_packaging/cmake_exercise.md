@@ -57,7 +57,7 @@ Some standard packages available on Aptitude might come handy:
 
 ## Dependencies
 
-Add dependencies one by one: Comment in the parts of `main.cpp` that are connected to a specfific dependency. Then, install the dependency and extend the `CMakeLists.txt`. Verify that you can build and run the executable. If everything works, go on and include the next dependency.
+Add dependencies one by one: Comment in the parts of `main.cpp` that are connected to a specific dependency. Then, install the dependency and extend the `CMakeLists.txt`. Verify that you can build and run the executable. If everything works, go on and include the next dependency.
 
 - Maybe start with the boost dependencies. Boost Container is a header-only dependency, Boost Filesystem needs to be linked. Both are available in `libboost-all-dev`. There is a CMake module to [find boost libraries](https://cmake.org/cmake/help/latest/module/FindBoost.html).
 - deal.II is available in `libdeal.ii-dev`. deal.II uses some fancy [CMake macros](https://www.dealii.org/current/users/cmake_user.html).

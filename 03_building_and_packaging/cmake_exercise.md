@@ -8,7 +8,7 @@ Deadline: **Thursday, December 1st, 2022, 9:00**
 
 ## Overview
 
-- The goal of the exercise is to open a pull request from a fork of [the CMake exercise repository](https://github.com/Simulation-Software-Engineering/cmake-exercise-wt2223). Please name your pull request `Add building and container recipes` and assign yourself.
+- The goal of the exercise is to open a pull request from a fork of [the CMake exercise repository](https://github.com/Simulation-Software-Engineering/cmake-exercise-wt2223). Please name your pull request `Add building and container recipes` and assign yourself. In the pull request description, please explain what we need to do to test your code.
 - Your should add a `Dockerfile` and a `CMakeLists.txt`, besides some minor changes in `main.cpp` like commenting in some code parts. It should be possible to create an executable container from your pull request. Inside the container, one should be able to directly build the C++ code (`main.cpp`) using CMake. Use as many of the currently commented-out additional files, which induce additional dependencies.
 
 ## First Steps
@@ -61,4 +61,4 @@ Add dependencies one by one: Comment in the parts of `main.cpp` that are connect
 
 - Maybe start with the boost dependencies. Boost Container is a header-only dependency, Boost Filesystem needs to be linked. Both are available in `libboost-all-dev`. There is a CMake module to [find boost libraries](https://cmake.org/cmake/help/latest/module/FindBoost.html).
 - deal.II is available in `libdeal.ii-dev`. deal.II uses some fancy [CMake macros](https://www.dealii.org/current/users/cmake_user.html).
-- yaml-cpp is an optional bonus task. For some arbitrary reason, we are not happy with the latest release of the software (which would be available through Aptitude), but we want to use the current `master` branch [directly from GitHub](https://github.com/jbeder/yaml-cpp). Get it via `git clone`, and build and install (`make install`) it yourself. Do not forget to add the necessary instructions to the Dockerfile. There is a hard-coded path `../yamlParser/config.yml` in `yamlParser/yamlParser.cpp`. If you do not call `main` from the `build` directory, you may adapt this path or make it configurable.
+- yaml-cpp is an optional bonus task. For some arbitrary reason, we are not happy with the latest release of the software (which would be available through Aptitude), but we want to use the current `master` branch [directly from GitHub](https://github.com/jbeder/yaml-cpp). Get it via `git clone`, and build and install (`make install`) it yourself. Do not forget to add the necessary instructions to the Dockerfile. Sometimes containers behave weirdly: If libraries in `/usr/local/lib` are not found by CMake, please add the path to the environment variable `LD_LIBRARY_PATH`.

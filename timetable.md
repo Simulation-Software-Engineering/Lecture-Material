@@ -61,3 +61,7 @@
 - **25** Some Linux fundamentals: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/linux_fundamentals_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/linux_fundamentals_demo.md)
 - **20** Introduction to Make: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/make_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/make_demo.md)
 - **45** Introduction to CMake: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cmake_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cmake_demo.md)
+
+## 6.2 – Thu, November 24, 2022
+
+- **90** [Exercise: Let's Fight With CMake, Docker, and Some Dependencies](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cmake_exercise.md)

@@ -41,7 +41,7 @@ int main()
 
 ```diff
 #include <iostream>
-+ #include "sse.hpp"
++ #include "sse/sse.hpp"
 
 int main()
 {

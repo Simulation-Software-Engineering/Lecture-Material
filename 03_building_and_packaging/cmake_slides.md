@@ -87,6 +87,7 @@ slideOptions:
 
 - "Hello World"
 - Multiple files
+- Building libraries
 
 ---
 
@@ -107,7 +108,6 @@ slideOptions:
 
 ## Demo 2/3
 
-- Building libraries
 - External dependencies
 
 ---

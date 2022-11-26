@@ -36,7 +36,7 @@ Please choose a meaningful project name. As target name, use `main`. We recommen
 
 ## Docker Setup
 
-The code and all dependencies should run in a Docker container based on the `ubuntu:22.04` image. As by now, you already know how to set up a basic Docker container, we do no longer provide detailed instructions. We recommend to build the Dockerfile incrementally. Start with a rather empty one and install dependencies manually in the interactive mode. Take notes of the commands you use, so you an integrate them into the Dockerfile afterwards and rebuild your image.
+The code and all dependencies should run in a Docker container based on the `ubuntu:22.04` image. As by now, you already know how to set up a basic Docker container, we do no longer provide detailed instructions. We recommend to build the Dockerfile incrementally. Start with a rather empty one and install dependencies manually in the interactive mode. Take notes of the commands you use, so you can integrate them into the Dockerfile afterwards and rebuild your image.
 
 To prevent the image from asking the timezone in some dialog, use ...
 

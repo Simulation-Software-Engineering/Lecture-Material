@@ -105,6 +105,7 @@ Example code is in [`03_building_and_packaging/examples/cpack`](https://github.c
   tree helloworld-unpacked
   ```
 
+- Look at `DEBIAN/control` file: dependencies, meta data
 - Check package via `lintian`: `lintian helloworld_0.1.0_amd64.deb`
 - Many errors and warning, some easy to fix:
 

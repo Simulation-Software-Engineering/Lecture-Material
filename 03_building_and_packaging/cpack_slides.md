@@ -41,18 +41,6 @@ slideOptions:
 
 ---
 
-## Introduction
-
-- Why [Debian](https://www.debian.org/) package format?
-    - It is common Debian, [Ubuntu](https://ubuntu.com/)...
-    - Is the "natural" way to insall software on Debian, Ubuntu etc. (via `dpkg`/aptitude `apt`)
-- Easy to share (`deb` file)
-- Can be hosted and integrated in [official](https://launchpad.net/ubuntu) or third-party repositories
-
-TODO: read more
-
----
-
 ## Step by Step Plan
 
 - Start from CMake configuration of previous lecture
@@ -214,7 +202,6 @@ prefix/
 - Contents (some optional):
     - `control` file: Name, dependencies etc.
     - `md5sum` or similar: Checksums of bundled files
-    - `conffile`: configuration file
     - Debian installation and removal scripts (`preinst`, `postinst`, `prerm`, `postrm`)
     - Files of actual package (binaries, libraries, includes...)
 
@@ -240,22 +227,11 @@ prefix/
 
 ---
 
-## Further Reading 1/2
+## Further Reading
 
 - [Debian Package Basics](https://www.debian.org/doc/manuals/debian-faq/pkg-basics.en.html)
-- [Debian Packaging Guide](https://wiki.debian.org/Packaging)
 - [Ubuntu Packaging Guide](https://packaging.ubuntu.com/html/)
 - [Launchpad](https://launchpad.net/)
-- [lintian reports](https://lintian.debian.org/)
-- [lintian man page](https://lintian.debian.org/)https://lintian.debian.org/
-
----
-
-## Further Reading 2/2
-
 - [CPack documentation](https://cmake.org/cmake/help/latest/module/CPack.html)
 - [List of CPack generators](https://cmake.org/cmake/help/latest/manual/cpack-generators.7.html)
-- [Debian CPack generator]([generators](https://cmake.org/cmake/help/latest/cpack_gen/deb.html#cpack_gen:CPack%20DEB%20Generator))
 - [Making a deb package with CMake/CPack and hosting it in a private APT repository](https://decovar.dev/blog/2021/09/23/cmake-cpack-package-deb-apt/)
-- [GNU coding standard](https://www.gnu.org/prep/standards/html_node/Directory-Variables.html)
-

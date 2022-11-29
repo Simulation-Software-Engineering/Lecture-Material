@@ -24,7 +24,7 @@ slideOptions:
   }
   .reveal code {
     font-family: 'Source Code Pro';
-    color: orange;  
+    color: orange;
   }
 </style>
 
@@ -157,7 +157,7 @@ prefix/
 
 - Generate package
     - `cmake ..` and `cpack -G "TGZ;DEB"` or
-    - `make package` 
+    - `make package`
 - Set default
     - `set(CPACK_GENERATOR "TGZ;DEB")`
 

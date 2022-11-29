@@ -5,6 +5,7 @@ slideOptions:
   width: 1400
   height: 900
   margin: 0.1
+  code-block-font-size: \tiny
 ---
 
 <style>
@@ -23,21 +24,20 @@ slideOptions:
   }
   .reveal code {
     font-family: 'Source Code Pro';
-    color: orange;
+    color: orange;  
   }
 </style>
 
-# Creating Debian Packages from CMake
+# Installation and Packaging with CMake and CPack
 
 ---
 
-## Learning goals
+## Learning Goals of This Unit
 
-- How to add an install target to a CMake project.
-- How to package a CMake project via `CPack`.
-- How to create a Debian (`deb`) package of your program/library using CPack.
-    - We create packages for Ubuntu.
-- How to check the resulting Debian package.
+- Add install targets to simple CMake projects.
+- Package simple CMake projects with CPack.
+- Create Debian (`deb`) packages of simple programs or libraries using CPack on Ubuntu.
+- Check the resulting Debian packages.
 
 ---
 
@@ -49,49 +49,43 @@ slideOptions:
 - Easy to share (`deb` file)
 - Can be hosted and integrated in [official](https://launchpad.net/ubuntu) or third-party repositories
 
+TODO: read more
+
 ---
 
 ## Step by Step Plan
 
-- **Goal**: Create Debian package for HelloWorld code to be used on Ubuntu
+- Start from CMake configuration of previous lecture
+- **Goal**: Create Debian package of HelloWorld code for Ubuntu
 - Steps:
-    1. Extend CMake configuration from previous lecture to have `install` target
-    2. Extend CMake configuration to contain a CPack section
-    3. Extend the CMake configuration to create a Debian package
-    4. Check the Debian package with `lintian` and potentially improve the package
-- Code is on [GitHub](https://github.com/Simulation-Software-Engineering/HelloWorld)
+    1. Add install target
+    2. Add CPack configuration
+    3. Extend CPack configuration to create Debian package
+    4. Check Debian package with `lintian`
 
 ---
 
-## Adding Installation Target
+## Demo (1/4): Add Install Target to CMake Configuration
 
-- Add `install` target for `make`
-- Should install files in appropriate location
+- `make install` should install (i.e. copy) `helloworld` and `libsse` in appropriate locations:
 
-  ```bash
-  prefix/
-    bin/
-    lib/
-    include/
-    ...
-  ```
+```bash
+prefix/
+  bin/
+  lib/
+  include/
+```
 
 ---
 
-## Setting up Header
+## CMake Commands for Installation (1/2)
 
-- Mark public header files
-
-  ```cmake
-  set_target_properties(target
-    PROPERTIES PUBLIC_HEADER "header1.hpp;header2.hpp;..."
-    )
-  ```
-
-- Tell CMake where to find headers
+- `set_target_properties(mylibrary PROPERTIES PUBLIC_HEADER "header1.hpp;header2.hpp;...")`
+    - Make headers publicly visible
+- Where to find headers?
 
   ```cmake
-  target_include_directories(target
+  target_include_directories(mylibrary
       PRIVATE
           # where the library itself will look for its internal headers
           ${CMAKE_CURRENT_SOURCE_DIR}/includedir
@@ -105,9 +99,10 @@ slideOptions:
 
 ---
 
-## Setting Installation Destinations
+## CMake Commands for Installation (2/2)
 
-- Easiest way via CMake module `GNUInstallDirs`
+- Easiest way via CMake module `GNUInstallDirs` (predefines standard destinations and variables: `CMAKE_INSTALL_BINDIR`, `CMAKE_INSTALL_LIBDIR`,...)
+- Which type of file has to go where?
 
   ```cmake
   include(GNUInstallDirs)
@@ -116,13 +111,9 @@ slideOptions:
     ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/includedir
-    INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/  PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/includedir
+    INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/
     )
   ```
-
-  Tells CMake which type of file has to go where.
-
-- Predefines standard destinations and variables (`CMAKE_INSTALL_BINDIR`, `CMAKE_INSTALL_LIBDIR`...)
 
 ---
 
@@ -130,19 +121,27 @@ slideOptions:
 
 - CLI tool and [CMake module](https://cmake.org/cmake/help/latest/module/CPack.html)
 - Go-to solution for packaging of C/C++ code
-- Requires an `install()` routine in CMake project
-- Several [generators](https://cmake.org/cmake/help/latest/manual/cpack-generators.7.html) for archive, DEB, RPM... type of packages
+- Requires an `install()` target in CMake project
+- Several [generators](https://cmake.org/cmake/help/latest/manual/cpack-generators.7.html): archive, DEB, RPM, ...
 
 ---
 
-## CPack configuration
+## Demo (2/4): Add CPack Configuration
 
-- Extend `CMakeLists.txt`  or create own module (`.cmake` file)
-- Set [common CPack variables](https://cmake.org/cmake/help/latest/module/CPack.html#variables-common-to-all-cpack-generators) via `CPACK_PACKAGE_<OPTION>`
+- Add and configure CMake module `CPack` such that `make package` creates packages
+
+---
+
+## CPack Configuration (1/2)
+
+- Set [common CPack variables](https://cmake.org/cmake/help/latest/module/CPack.html#variables-common-to-all-cpack-generators) via `CPACK_PACKAGE_<OPTION>`:
 
   ```cmake
   set(CPACK_PACKAGE_NAME "${PROJECT_NAME}")
-  set(CPACK_PACKAGE_VENDOR "SSE Lecturers / Employer")
+  set(CPACK_PACKAGE_VENDOR "SSE Lecturers")
+  set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "SSE CPack example"
+  CACHE STRING "Extended summary.")
+  set(CPACK_PACKAGE_HOMEPAGE_URL "https://simulation-software-engineering.github.io")
   ```
 
 - Include CPack after variables/options are set
@@ -152,86 +151,57 @@ slideOptions:
   include(CPack)
   ```
 
+---
+
+## CPack Configuration (2/2)
+
 - Generate package
-
-  ```bash
-  cmake -DCMAKE_OPTIONS ..
-  cpack -G "TGZ;DEB"
-  ```
-
-  or
-
-  ```bash
-  make package
-  ```
+    - `cmake ..` and `cpack -G "TGZ;DEB"` or
+    - `make package` 
+- Set default
+    - `set(CPACK_GENERATOR "TGZ;DEB")`
 
 ---
 
-## Common CPack Options 1/2
+## Demo (3/4): Create Debian Package
 
-- Set package name
-
-  ```cmake
-  set(CPACK_PACKAGE_NAME NAME)
-  ```
-
-- Provide package description
-
-  ```cmake
-  set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "SSE CPack example"
-  CACHE STRING "Extended summary.")
-  ```
-
-- Package vendor
-
-  ```cmake
-  set(CPACK_PACKAGE_VENDOR "SSE lecturers")
-  ```
-
-- Contact information
-
-  ```cmake
-  set(CPACK_PACKAGE_CONTACT "Alexander Jaust <alexander.jaust@ipvs.uni-stuttgart.de>")
-  ```
+- Extend `CPack` configuration to create a proper Debian package, which we then `apt install`
 
 ---
 
-## Common CPack Options 2/2
+## Some CPack Options for Debian Packages
 
-- Homepage of software in package
+- Many settings are set from general package settings `CPACK_PACKAGE_<OPTION>`
+- Use Debian file naming scheme
+    - `set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)`
 
-  ```cmake
-  set(CPACK_PACKAGE_HOMEPAGE_URL "https://simulation-software-engineering.github.io/homepage/")
-  ```
+- Extract shared library dependencies via `dpkg-shlibdeps`
+    - `set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)`
 
-- Set version number
-
-  ```cmake
-  set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
-  set(CPACK_PACKAGE_VERSION_MINOR ${PROJECT_VERSION_MINOR})
-  set(CPACK_PACKAGE_VERSION_PATCH ${PROJECT_VERSION_PATCH})
-  ```
-
-- Remove debugging symbols from executable
-
-  ```cmake
-  set(CPACK_STRIP_FILES TRUE)
-  ```
-
-- Default packages to build with `make package`
-
-  ```cmake
-  set(CPACK_GENERATOR "TGZ;DEB")
-  ```
+- More options in [CPack documentation](https://cmake.org/cmake/help/latest/cpack_gen/deb.html#cpack_gen:CPack%20DEB%20Generator)
 
 ---
 
-## Demo 1: Preparing Project
+## Debian Package Naming
 
-1. Installation target
-2. Packaging configuration (CPack, common settings)
+`NAME_VERSION-REVISION_ARCHITECTURE.deb`
 
-**Warning:** We handle example as an seperate executable + library **for demonstration** only.
+- Example ([PETSc package on Launchpad](https://launchpad.net/ubuntu/+source/petsc))
+
+  ```text
+  libpetsc-real3.12-dev_3.12.4+dfsg1-1_amd64.deb
+  ```
+
+- `NAME`: Package name (`libpetsc-real3.12-dev`)
+- `VERSION`: Software version number (e.g. "PETSc 3.12.4" -> `3.12.4+dfsg1`)
+- `REVISION`: Package version number (`1`)
+- `ARCHITECTURE`: Target architecture (`amd64`)
+
+---
+
+## Demo (4/4): Check Debian Package
+
+- Look into Debian package and check for mistakes with `lintian`
 
 ---
 
@@ -245,85 +215,28 @@ slideOptions:
     - `control` file: Name, dependencies etc.
     - `md5sum` or similar: Checksums of bundled files
     - `conffile`: configuration file
-    - Debian installation and removal scripts (`preinst`, `postinst`, `prerm`, a `postrm`)
+    - Debian installation and removal scripts (`preinst`, `postinst`, `prerm`, `postrm`)
     - Files of actual package (binaries, libraries, includes...)
 
 ---
 
-## Debian Package Naming
+## Check Debian Package with Lintian
 
-> NAME_VERSION-REVISION_ARCHITECTURE.deb
-
-- Example ([PETSc package on Launchpad](https://launchpad.net/ubuntu/+source/petsc))
-
-  ```text
-  libpetsc-real3.12-dev_3.12.4+dfsg1-1_amd64.deb
-  ```
-
-- `NAME`: Package name (`libpetsc-real3.12-dev`)
-- `VERSION`: Software Version Number (e.g. "PETSc 3.12.4" -> `3.12.4+dfsg1`)
-- `REVISION`: Package Version Number (`1`)
-- `ARCHITECTURE`: Target architectre (`amd64`)
-
----
-
-## Some CPack Options for Debian Packages
-
-- Many settings are set from general package settings `CPACK_PACKAGE_<OPTION>`
-- Package name, defaults to `CPACK_PACKAGE_NAME`
-
-  ```cmake
-  set(CPACK_DEBIAN_PACKAGE_NAME "Special Debian Name")
-  ```
-
-- Debian package version
-
-  ```cmake
-  set(CPACK_DEBIAN_PACKAGE_VERSION "${SPECIAL_DEBIAN_VERSION}")
-  ```
-
-  but is normally derived from project or `CPACK_PACKAGE_VERSION`.
-
-- Create package according to Debian package naming scheme
-
-  ```cmake
-  set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
-  ```
-
-- Extract shared library dependencies via `dpkg-shlibdeps`
-
-  ```cmake
-  set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
-  ```
-
-- More options in [documentation](https://cmake.org/cmake/help/latest/cpack_gen/deb.html#cpack_gen:CPack%20DEB%20Generator)
-
----
-
-## Testing the package
-
-- Ensure quality standards of package
-    - Requirements higher for packages in official repositories
 - Static analysis tool for Debian packages: [lintian](https://lintian.debian.org/)
-    - `lintian` helps finding problems of package
+
+- Remove debugging symbols from executable
+    - `set(CPACK_STRIP_FILES TRUE)`
 
 ---
 
-## Demo 2: Debian Package
+## Summary
 
-- Extend CPack configuration for Debian packaging
-- Analyze Debian package
-
-**Warning:** We handle example as an seperate executable + library **for demonstration** only.
-
----
-
-## Advanced Topics
-
-- Publishing Packages on [Launchpad](https://launchpad.net/)
-- Usage of our library in other projects
-    - Creation of `pc` file (`pkg-config`) from CMake
-    - [Export targets](https://cmake.org/cmake/help/git-stage/guide/importing-exporting/index.html) to be included in other CMake projects
+- Before packaging, create an install target: `install(TARGETS ...)`
+- CMake module `GNUInstallDirs` provides standard locations
+- CMake module `CPack` is the go-to solution for packaging of C/C++ code
+- Provide meta information via `CPACK_PACKAGE_<OPTION>` variables
+- Create Debian packages with `DEB` generator
+- Check Debian packages with `lintian`
 
 ---
 

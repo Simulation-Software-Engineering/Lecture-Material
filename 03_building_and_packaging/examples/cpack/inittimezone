@@ -1,0 +1,16 @@
+#! /bin/sh
+#
+# initialized the timezone and localtime
+#
+# This is required to prevent debconf to query the information when installing tzdata
+#
+
+if [ -e /etc/timezone -o -e /etc/localtime ]; then
+  echo "Timezone already initalized"
+  exit 0
+fi
+
+export TZ=Europe/Berlin
+echo $TZ > /etc/timezone
+ln -snf /usr/share/zoneinfo/$TZ /etc/localtime
+exit 0

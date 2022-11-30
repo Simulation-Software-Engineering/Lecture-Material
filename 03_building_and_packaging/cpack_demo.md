@@ -3,6 +3,7 @@
 Example code is in [`03_building_and_packaging/examples/cpack`](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/03_building_and_packaging/examples/cpack).
 
 - Show `main.cpp`, `sse/*`: same example as last week
+- Goal of this lecture: How can we give this software to somebody else in a proper way? Remember lecture on packaging for Python; now C++ code
 - Build and start Docker container:
     - `docker build -t "cpack_demo"`
     - `docker run -it cpack_demo`

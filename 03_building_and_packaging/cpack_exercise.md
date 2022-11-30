@@ -15,7 +15,8 @@ Deadline: **Thursday, December 8th, 2022, 9:00**
 1. Fork and clone the repository.
 2. Build the Docker image: `docker build -t IMAGENAME .` (might take a few minutes, continue reading already)
 3. Take a look at the `CMakeLists.txt` file. It should look familiar.
-4. Once the Docker image is ready, run it and mount the current directory: `docker run --rm -it --mount type=bind,source="$(pwd)",target=/mnt/cpack-exercise IMAGENAME`
+4. Once the Docker image is ready, run it and mount the current directory:
+    - `docker run --rm -it --mount type=bind,source="$(pwd)",target=/mnt/cpack-exercise IMAGENAME`
 5. In the Docker container: build the code and run `cpackexample`.
 
 ## Tasks
@@ -34,15 +35,15 @@ The same four steps as in the lecture:
 - Inspect that both packages contain the correct content:
     - To inspect the contents of a `.tar.gz.` file, you can unpack it using the tool `tar`:
 
-    ```bash
-    tar -xzf TARGZFILE
-    ```
+      ```bash
+      tar -xzf TARGZFILE
+      ```
 
     - To inspect the contents of a  `.deb` file, you can unpack it using the tool `dpkg-deb`:
 
-    ```bash
-    dpkg-deb -R DEBFILE DIRECTORY_FOR_UNPACKED_DEBFILE
-    ```
+      ```bash
+      dpkg-deb -R DEBFILE DIRECTORY_FOR_UNPACKED_DEBFILE
+      ```
 
 - Optional: Do the dependencies look correct? Modify the Dockerfile such that `libyaml-cpp` also properly appears as dependency.
 

@@ -94,7 +94,6 @@ diffusion2d.solve()
 - Upload the distribution archives using the commands shown in the lecture notes.
 - Go to TestPyPI and view the package which has been uploaded.
 - Take a screenshot of the TestPyPI webpage which displays your package.
-- **Important**: Add the TestPyPI screenshot in the description of the pull request opened for submission.
 
 ## Step 7 - Testing the deployed package
 
@@ -104,6 +103,7 @@ diffusion2d.solve()
 ## Step 8 - Submitting the exercise
 
 - Open a pull request with the name `Packaged code for PyPI by <your-GitLab-username>` from your fork to the `main` branch of the exercise repository.
+- **Important**: Add the TestPyPI screenshot in the description of the pull request opened for submission.
 
 ## Bonus: Using Versioneer to handle versioning of code
 

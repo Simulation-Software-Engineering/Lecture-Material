@@ -45,12 +45,11 @@ The same four steps as in the lecture:
       dpkg-deb -R DEBFILE DIRECTORY_FOR_UNPACKED_DEBFILE
       ```
 
-- Optional: Do the dependencies look correct? Modify the Dockerfile such that `libyaml-cpp` also properly appears as dependency.
-
 ### 3. Create Debian Package
 
 - Extend the configuration for the generation of Debian packages. Make sure that the package file name is generated according to the Debian package naming scheme.
 - Make sure that you can install the Debian package (`apt install ./DEBFILENAME`) and that you can run the executable `cpackexample`. The executable should now be located in `/usr/bin`.
+- Optional: Inspect the content of the Debian package again. Do the dependencies look correct? Modify the Dockerfile such that `libyaml-cpp` also properly appears as dependency.
 
 ### 4. Check Debian Package
 

@@ -1,63 +1,32 @@
-# Debian packages
+# Notes for Installation and Packaging with CMake and CPack Demo
 
-## Learning goals
+Example code is in [`03_building_and_packaging/examples/cpack`](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/03_building_and_packaging/examples/cpack).
 
-- How to add an install target to a CMake project.
-- How to package a CMake project via `CPack`.
-- How to create a Debian (`deb`) package of your program/library using CPack.
-- How to check the resulting Debian package.
+- Show `main.cpp`, `sse/*`: same example as last week
+- Goal of this lecture: How can we give this software to somebody else in a proper way? Remember lecture on packaging for Python; now C++ code
+- Build and start Docker container:
+    - `docker build -t "cpack_demo"`
+    - `docker run -it cpack_demo`
 
-## 1. Preparing Project (Demo 1)
+## Add Install Target to CMake Configuration
 
-- We will extend the code from the previous lecture.
-    - [GitHub repository](https://github.com/Simulation-Software-Engineering/HelloWorld)
-- Make sure two files are created (a library and an executable). This should be the case when starting with the code from last week's lecture.
-    - **Warning** We handle example as an seperate executable + library **for demonstration** only. There is normally no need handle internal dependencies that complicated.
-- We add the following changes
-    - Adding a version number to the project. This is not needed yet, but I am afraid of forgetting it later.
-    - We mark the include files needed to use the `libsse` library, i.e., `sse/sse.hpp` as publicly visible. This is needed such that CMake knows which headers should be public and should be installed. By default CMake assumes headers are for interal use (within the current project) only.
-        - The [documentation](https://cmake.org/cmake/help/latest/prop_tgt/PUBLIC_HEADER.html) is a bit confusing as it hints that this should/could only be used with Apple framework projects.
-    - We define the target's include directory, i.e., where do we have to look for the dependency depending on the type of build (internally, top-level cmake project, external dependency)
-    - We want to make sure that we have an `install` target for make that, at the same time, considers typical installation directories. That means `make install` should binaries in a `<prefix>/bin`, libraries in `<prefix>/lib` or `<prefix>/lib/helloworld`, include files in `<prefix>/include` etc. We include the predefined CMake macro `GNUInstallDirs` to get predefined variables such as installation directories. The directories names and their purpose are defined in the [GNU coding standard](https://www.gnu.org/prep/standards/html_node/Directory-Variables.html).
-
-Changes:
-
-```diff
-- project("HelloWorld")
-+ project("HelloWorld" VERSION 0.1.0)
-+ add_library(sse sse/sse.cpp)
-+
-+ set_target_properties(sse PROPERTIES PUBLIC_HEADER sse/sse.hpp)
-
-+target_include_directories(sse
-+    PRIVATE
-+        # where the library itself will look for its internal headers
-+        ${CMAKE_CURRENT_SOURCE_DIR}/helloworld
-+    PUBLIC
-+        # where top-level project will look for the library's public headers
-+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/helloworld>
-+        # where external projects will look for the library's public headers
-+        $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/helloworld>
-+)
-
-+# Create install targets
-+include(GNUInstallDirs)
-+install(TARGETS helloworld sse
-+  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-+  ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
-+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-+  PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/helloworld
-+  INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/helloworld
-+  )
-```
-
-- Fire up a prepared container for testing. Container is beneficial as it allows us to mess around with the container's paths without messing up our own system. From the example repository I run
-
-  ```bash
-  sudo docker run --rm -it --name ubuntu-packaging --mount type=bind,source="$(pwd)",target=/mnt/cpack-example jaustar/debian-package-building-base
-  ```
-
-- Build the library and install it
+- Show `CMakeLists.txt`
+- First observations:
+    - We still build a library (`add_library`) and then an executable (`add_executable`).
+    - We do this **for demonstration only**. There is normally no need handle internal dependencies in such a complicated way.
+    - Build the code: We still get an executable `helloworld` and a library `libsse.a`.
+- Changes compared to previous version / last week:
+    - Version number, not needed yet (but later), but good practice
+    - `set_target_properties`: Mark include files needed for `libsse` library (`sse/sse.hpp`) as publicly visible.
+        - Needed such that CMake knows which headers should be public and should be installed. By default CMake assumes headers are for internal use (within the current project) only.
+    - `target_include_directories`: Where do we have to look for the dependency depending on the type of build (internally, top-level cmake project, external dependency).
+        - If there was a `src` directory, for example, mention it here (or `sse` and then don't mention above and in `main.cpp`).
+        - Classic strategy for headers to put them again in a folder named after the project (such that they don't get mixed up).
+        - We do not use the last two here, but they would be used if we created a package config file.
+        - `$<...>` notation: generator expressions, variables are evaluated during build system generation
+    - Include CMake macro `GNUInstallDirs` to get predefined variables such as installation directories. Directories names and their purpose are defined in the [GNU coding standard](https://www.gnu.org/prep/standards/html_node/Directory-Variables.html).
+    - Create install targets (where to install to)
+- Build the library and install it (when installing or distributing a package always set a `CMAKE_BUILD_TYPE`)
 
   ```bash
   mkdir build && cd build
@@ -75,201 +44,80 @@ Changes:
   -- Installing: /usr/local/include/helloworld/sse.hpp
   ```
 
-  **Note** that we have an empty configuration here if we do not specify a `CMAKE_BUILD_TYPE`. Especially when distributing a package one should set a `CMAKE_BUILD_TYPE`.
-- Now we can run `helloworld` from anywhere on the system.
-    - We might need to set `PATH="/usr/local/bin":"${PATH}"`. In my container it was not set.
-- Tear down container
+- Run it: `helloworld`
+- `which helloworld`
+- Set the prefix: `cmake -DCMAKE_INSTALL_PREFIX="../installation" -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ..`, install again, `tree` the folder.
 
-**Note**: At this point we have a package with reasonable installation routine. This is something we would need for (different) packaging solutions such as Debian packages and
+## Add CPack Configuration
 
-## 2. Extend CMake configuration (Demo 1)
-
-In this step we add a CPack configuration such that we can actually create a package.
-
-- We will add the configuration in another directory. Create `cmake/Packaging.cmake`
-    - This allows to separate different parts of the CMake configuration.
-- Additions to `CMakeLists.txt`
+- Packaging happens in separate CMake module called `CPackConfig.cmake`. Include it in `CMakeLists.txt`:
 
   ```diff
-  + # Packaging section
-  + # Adding other cmake modules
+  + # Adding other cmake modules (standard like this)
   + set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
-  + # Include our packaging module
-  + include(Packaging)
+  + # Include our packaging module (standard like this)
+  + include(CPackConfig)
   ```
 
-- Edit `cmake/Packaging.cmake` and add some properties.
+- Look at `cmake/CPackConfig.cmake`:
+    - Basically only definition of meta information
     - `CPack` should be included at the end so it can ingest all preset variables
-    - We can set version, e.g., but by default it will ingest the version number from the `project()` statement in `CMakeLists.txt`.
-    - Full list of statements in [documentation](https://cmake.org/cmake/help/latest/module/CPack.html). Note, that the current statements are common properties of the packaging module.
+- `cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ..`
+    - Creates new files `CPackConfig.cmake` and `CPackSourceConfig.cmake`
+    - Look at `CPackConfig.cmake`: things we added and much more (same name, same content)
+- Create package, e.g., `tar.gz`: `cpack -G TGZ`
+    - If this fails, this is due missing a `README.md` and `LICENSE` file. CPack expects these file to be present.
+    - `-G` is used to specify the package generator. We choose `TGZ` the generator for a compressed archive.
+    - We obtain the resulting file `HelloWorld-0.1.0-Linux.tar.gz`. The file name consists of the project name, version number and installation target.
+- Inspect the package: `tar -xzf HelloWorld-0.1.0-Linux.tar.gz` and `tree`
+- `make clean`
+- Build Debian package: `cpack -G DEB` ... builds again (no need to run `make` first) and complains: no dependencies set
+- `make clean` and `make package`: many things get created. Set default:
 
   ```diff
-  + set(CPACK_PACKAGE_NAME ${PROJECT_NAME})
-  +
-  + set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "SSE hello world example project"
-  +   CACHE STRING "Extended summary.")
-  +
-  + set(CPACK_PACKAGE_VENDOR "SSE Lecturers / Employer")
-  +
-  + set(CPACK_PACKAGE_CONTACT "firstname.lastname@example.com")
-  +
-  + set(CPACK_PACKAGE_HOMEPAGE_URL "https://simulation-software-engineering.github.io/homepage/")
-  +
-  + set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
-  + set(CPACK_PACKAGE_VERSION_MINOR ${PROJECT_VERSION_MINOR})
-  + set(CPACK_PACKAGE_VERSION_PATCH ${PROJECT_VERSION_PATCH})
-  +
-  + include(CPack)
+  + set(CPACK_GENERATOR "TGZ;DEB")
   ```
 
-- Start up container again and then prepare project
+- `make clean` and `make package` again
 
-  ```bash
-  mkdir build && cd build
-  cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ..
-  ```
+## Create Debian Package
 
-- This will create new files `CPackConfig.cmake` and `CPackSourceConfig.cmake`
-- We can create a package, e.g., `tar.gz`
-
-  ```bash
-  cpack -G TGZ
-  ```
-
-  **NOTE** If this fails, this is due missing a `README.md` and `LICENSE` file. CPack expects these file to be present. They are important! Especially the license.
-
-  `-G` is used to specify the package generator. We choose `TGZ` the generator for a compressed archive. We obtain the resulting file `HelloWorld-0.1.0-Linux.tar.gz`. The file name consists of the project name, version number and installation target.
-
-- Inspect the package
-
-  ```bash
-  tar -xzf HelloWorld-0.1.0-Linux.tar.gz
-  ```
-
-  The unpacked package in directory `HelloWorld-0.1.0-Linux` has three subdirectories `bin/`, `lib/`, `include/`.
-
-- We can also run `cpack -G DEB`, but it will complain
-
-  ```bash
-  $ cpack -G DEB
-  CPack: Create package using DEB
-  CPack: Install projects
-  CPack: - Run preinstall target for: HelloWorld
-  CPack: - Install project: HelloWorld []
-  CPack: Create package
-  -- CPACK_DEBIAN_PACKAGE_DEPENDS not set, the package will have no dependencies.
-  CPack: - package: /mnt/cpack-example/build/HelloWorld-0.1.0-Linux.deb generated.
-  ```
-
-  The dependencies are missing for example.
-
-## 3. Extend CPack configuration for Debian Package (Demo 2)
-
-- Setting up Debian package generator by adding lines to `cmake/Packaging.cmake`:
+- Set up Debian package generator by adding lines to `cmake/Packaging.cmake`:
 
   ```diff
   + # Debian packaging section
   + set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
   + set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS YES)
+  include(CPack)
   ```
 
-  `CPACK_DEBIAN_FILE_NAME` will set the package name to follow the standard package naming scheme (see slides) and `CPACK_DEBIAN_PACKAGE_SHLIBDEPS` set to `YES` will (try to) extract the dependencies automatically. We can also set dependencies manually (`CPACK_DEBIAN_PACKAGE_DEPENDS`).
+- `CPACK_DEBIAN_FILE_NAME` sets the package name to follow the standard package naming scheme (see slides)
+- `CPACK_DEBIAN_PACKAGE_SHLIBDEPS` tries to extract dependencies automatically. We can also set dependencies manually (`CPACK_DEBIAN_PACKAGE_DEPENDS`).
+- `cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ..` and `cpack -G DEB` ... no complaints
+- Different package name: `helloworld_0.1.0_amd64.deb`
+- Install the package: `sudo apt install ./helloworld_0.1.0_amd64.deb`
+- `helloworld` and `which helloworld`: now `/usr`, not `/usr/local`, since we use package manager.
 
-- Afterwards there will be no more complaint as the dependency list will be generated
+## Check Debian Package
+
+- Package is already usable. Still, one might want to check quality.
+    - If one wants to submit something to the actual repository of Ubuntu/Debian, then one has to follow standards.
+- Inspect meta information `dpkg --info helloworld_0.1.0_amd64.deb`
+- Check full content:
 
   ```bash
-  $ cpack -G DEB
-  CPack: Create package using DEB
-  CPack: Install projects
-  CPack: - Run preinstall target for: HelloWorld
-  CPack: - Install project: HelloWorld []
-  CPack: Create package
-  CPackDeb: - Generating dependency list
-  CPack: - package: /mnt/cpack-example/build/helloworld_0.1.0_amd64.deb generated.
+  dpkg-deb -R ./helloworld_0.1.0_amd64.deb ./helloworld-unpacked
+  tree helloworld-unpacked
   ```
 
-  We see that the package name was set to "${helloworld}" as lowercase names seem to be preferred.
-
-- We can install the package
-
-  ```bash
-  sudo apt install ./helloworld_0.1.0_amd64.deb
-  ```
-
-  Files are installed in `/usr` now instead of `/usr/local`. That is the default target for Debian packages using the generator!
-
-## 4. Check Debian package (Demo 2)
-
-- The package already is usable. However, one might want to make sure that quality is good. If one wants to submit something to the actual repository of Ubuntu/Debian, then one has to follow the provided standards.
-- If time permits we can checkout the contens of the package.
-    - Inspect meta information
-
-    ```bash
-    dpkg --info helloworld_0.1.0_amd64.deb
-    ```
-
-    - Check full content
-
-    ```bash
-    dpkg-deb -R ./helloworld_0.1.0_amd64.deb ./helloworld-unpacked
-    tree helloworld-unpacked
-    ./helloworld-unpacked/
-    ├── DEBIAN
-    │   ├── control
-    │   ├── md5sums
-    │   ├── postinst
-    │   └── postrm
-    └── usr
-        ├── bin
-        │   └── helloworld
-        ├── include
-        │   └── sse
-        │       └── sse.hpp
-        └── lib
-            ├── cmake
-            │   ├── HelloWorldTargets-release.cmake
-            │   └── HelloWorldTargets.cmake
-            ├── libsse.so -> libsse.so.0.1.0
-            └── libsse.so.0.1.0
-    ```
-
-
-- Check the package via `lintian`. (I need to do this on my host since I did not install lintian in the container).
-
-  ```bash
-  lintian helloworld_0.1.0_amd64.deb
-  ```
-
-- We observe quite some errors and warnings
-
-  ```bash
-  $ lintian helloworld_0.1.0_amd64.deb
-  E: helloworld: changelog-file-missing-in-native-package
-  E: helloworld: extended-description-is-empty
-  E: helloworld: maintainer-name-missing firstname.lastname@example.com
-  E: helloworld: no-copyright-file
-  E: helloworld: package-must-activate-ldconfig-trigger usr/lib/libsse.so
-  E: helloworld: unstripped-binary-or-object usr/bin/helloworld
-  E: helloworld: unstripped-binary-or-object usr/lib/libsse.so
-  W: helloworld: binary-without-manpage usr/bin/helloworld
-  W: helloworld: maintscript-calls-ldconfig postinst
-  W: helloworld: maintscript-calls-ldconfig postrm
-  W: helloworld: package-name-doesnt-match-sonames libsse
-  W: helloworld: shlib-without-versioned-soname usr/lib/libsse.so libsse.so
-  ```
-
-- Some things can be fixed easily by adding parameters to the CMake file
+- Look at `DEBIAN/control` file: dependencies, meta data
+- Check package via `lintian`: `lintian helloworld_0.1.0_amd64.deb`
+- Many errors and warning, some easy to fix:
 
   ```diff
-  + set(CPACK_PACKAGE_CONTACT "SSE lecturers <firstname.lastname@example.com>")
+  # strip really all Debug symbols
   + set(CPACK_STRIP_FILES TRUE)
   ```
 
-  `CPACK_PACKAGE_CONTACT` was missing the name of the maintainer. `CPACK_STRIP_FILES` makes sure build files are stripped. For Debian packages the package maintainer can be set/overwritten with `CPACK_DEBIAN_PACKAGE_MAINTAINER`.
-
-  Besides that one can add a changelog and a copyright file.
-  `extended-description-is-empty` is requesting description of each component, i.e., the executable and the library. We do not provide information for each component at the moment.
-
-- For some points it is harder to fix them
-    - `package-must-activate-ldconfig-trigger`: Seems to be related how packages should be created and [CPack not respecting this yet](https://gitlab.kitware.com/cmake/cmake/-/issues/21834) (or I simply have an old version of CMake). CMake creates a maintainer script that calls `ldconfig` which should not be done anymore. Thus we get several error messages (1x ldconfig not called via trigger and 2x ldconfig called via maintainer script)
-    - `shlib-without-versioned-soname`: No versioning of our library (e.g., `libsse.so -> libsse.so.0.1.0`) thus `shlib` cannot safely determine dependencies for software depending our library.
+- Others harder to fix:
+    - `package-must-activate-ldconfig-trigger`: Seems to be related how packages should be created and [CPack not respecting this yet](https://gitlab.kitware.com/cmake/cmake/-/issues/21834). CMake creates a maintainer script that calls `ldconfig`, which should not be done anymore. Thus we get several error messages (1x ldconfig not called via trigger and 2x ldconfig called via maintainer script)

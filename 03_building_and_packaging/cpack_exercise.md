@@ -1,118 +1,65 @@
 # Packaging with CPack
 
-This exercise is about packaging code with CPack. We work with a simplified version of the code from the previous week's exercise and create packages for it.
+Let us try to package the code from the CMake exercise with CPack, such that we can give the (binary) software to somebody else.
 
-At the end of the exercise you find a section with hints and remarks. Make sure to check this section.
+Deadline: **Thursday, December 8th, 2022, 9:00**
 
-Deadline: **Thursday, December 9th, 2021, 9:00**
+## Overview
 
-## CPack and Packaging for Debian
+- The goal of the exercise is to open a pull request from a fork of [the CPack exercise repository](https://github.com/Simulation-Software-Engineering/cpack-exercise-wt2223). Please name your pull request `Add installation and packaging targets`. In the pull request description, please explain what we need to do to test your code. If you work on any of the optional tasks below, please document in the description as well.
+- The current state of the code is basically a solution of the CMake exercise from last week. For demonstration purpose the code is now, however, artificially split into a library `cpackexamplelib` and an executable `cpackexample`.
+- Your task is to develop a CMake/CPack configuration that allows generating a `.tar.gz` and a Debian `.deb` package of our code. To this end, follow the same four steps as in the lecture (details below).
 
-The ultimate goal is to have a CMake/CPack configuration that allows us to generate packages for different package formats. In this exercise we want to be able to create a `tar.gz` package and a Debian `deb` package.
+## Getting Started
 
+1. Fork and clone the repository.
+2. Build the Docker image: `docker build -t IMAGENAME .` (might take a few minutes, continue reading already)
+3. Take a look at the `CMakeLists.txt` file. It should look familiar.
+4. Once the Docker image is ready, run it and mount the current directory:
+    - `docker run --rm -it --mount type=bind,source="$(pwd)",target=/mnt/cpack-exercise IMAGENAME`
+5. In the Docker container: build the code and run `cpackexample`.
 
-### Code to Package
+## Tasks
 
-We want to package this [CPack example code from GitHub](https://github.com/Simulation-Software-Engineering/cpack-exercise). It is based on the exercise code from last week and has the same dependencies (`Boost`, `deal.ii` and `yaml-cpp`). However, the compilation procedure has been set up already. Moreover, the `yaml-cpp` dependency is milder than last week since version `0.6.0` is new enough to compile the HelloWorld code. Therefore it is sufficient to install `libyaml-cpp-dev` from Ubuntu's package manager (`apt`) instead of compiling `yaml-cpp` yourself.
+The same four steps as in the lecture:
 
-The `CMakeLists.txt` should look familiar. It has two targets
+### 1. Add Install Target to CMake Configuration
 
-1. `cpackexample`: This target creates an executable with same name.
-2. `cpackexamplelib`: This target creates a library (called `libcpackexamplelib.so` or `libcpackexamplelib.a`).
+- The executable `cpackexample` should be installed in a `<prefix>/bin/` directory, the library `libcpackexamplelib.a/so` should be installed in a `<prefix>/lib/` directory, and all header files (`fem.hpp`, `filesystem.hpp`, `flatset.hpp`, `yamlParser.hpp`) should be installed in a `<prefix>/include/cpackexamplelib` directory.
+- Test whether `make install` works as expected.
 
-The executable will take one command line argument to specify a `yaml` file to be parsed. This allows to parse the file `config.yml` inside the `yamlParser/` directory even if the executable is not located within the repository anymore. In last week's exercise the path to `config.yaml` was hard coded. In this exercise you can call the program as
+### 2. Add CPack Configuration
 
-```bash
-cpackexample <path_to_repo>/yamlParser/config.yml
-```
+- Write a seperate CMake module `cmake/CPackConfig.cmake` for the packaging process and include it in the `CMakeLists.txt` file. The created package should contain sufficient information about the package, at least: maintainer, contact, project description, vendor, and homepage (e.g. your fork on GitHub). Feel free to set more [additional options](https://cmake.org/cmake/help/latest/module/CPack.html).
+- `make package` should (only) create a `tar.gz` and a `deb` package.
+- Inspect that both packages contain the correct content:
+    - To inspect the contents of a `.tar.gz.` file, you can unpack it using the tool `tar`:
 
-If you start the program without the additional argument, the program will not try to parse anything.
+      ```bash
+      tar -xzf TARGZFILE
+      ```
 
-### Development/Packaging Environment
+    - To inspect the contents of a  `.deb` file, you can unpack it using the tool `dpkg-deb`:
 
-Please work inside a Docker container when packaging the code. The image should be based on *Ubuntu 20.04* such that you have a consistent work environment. Such a container was also used when the exercise was prepared.
+      ```bash
+      dpkg-deb -R DEBFILE DIRECTORY_FOR_UNPACKED_DEBFILE
+      ```
 
-The code has (almost) the same dependencies as last week, Therefore, you can reuse your container most parts from the previous week's exercise's container, but install `libyaml-cpp-dev` via `apt` instead of compiling `yaml-cpp` manually.
+### 3. Create Debian Package
 
-The code in the repository should compile immediately. It is *not* part of the task to fix the compilation process. If you have problems compiling the code before changing, get in touch with us during the exercise or open a (draft) pull request and ask for help there. If you open a pull request, make sure to add the Dockerfile you have used so we can reproduce the problem.
+- Extend the configuration for the generation of Debian packages. Make sure that the package file name is generated according to the Debian package naming scheme.
+- Make sure that you can install the Debian package (`apt install ./DEBFILENAME`) and that you can run the executable `cpackexample`. The executable should now be located in `/usr/bin`.
+- Optional: Inspect the content of the Debian package again. Do the dependencies look correct? Modify the Dockerfile such that `libyaml-cpp` also properly appears as dependency.
 
-**Note** If you observe linking errors referring to `yaml-cpp`, you can try to add the following to the `CMakeLists.txt`:
+### 4. Check Debian Package
 
-```cmake
-include_directories("${YAMLCPP_INCLUDE_DIRS}")
-```
+- Inspect your Debian package with [lintian](https://manpages.ubuntu.com/manpages/trusty/man1/lintian.1.html): `lintian ./DEBFILENAME`. Check and save the output (report in pull request).
+- Make sure that your compiled code [gets stripped](https://cmake.org/cmake/help/latest/module/CPack.html#variable:CPACK_STRIP_FILES).
+- Optional: Create your package once with stripped and once with unstripped files. This should show a difference in file size, which you can check, for example, with `du -h FILENAME`.
+- Optional: Fix more errors and warnings (not necessarily all). Add the initial and the final output of `lintian` to the pull request such that we can see what errors or warnings disappeared. Briefly describe in the pull request what you did to get rid of errors and warnings.
 
-This should be added after the
+## Optional Bonus Task
 
-```cmake
-find_package(yaml-cpp
-  0.6.0
-  REQUIRED
-  )
-```
+Let us completely automatize the package creation using the Docker image. Simply running a container via `docker run` should automatically build and save the created packages at a predefined location. No further user interaction should be necessary. Once the container exits, the `tar.gz` and `deb` packages should be present on the host system. However, no `build` directory or other temporary files should be present on the host system, i.e., make sure the package is not created in the mounted drive. Please package `cpackexamplelib` as **shared** library when creating the packages.
 
-directive. It might also help to install `libyaml-cpp-dev` via `apt` again inside the container.
-
-### Packaging Steps
-
-- Create a fork of the GitHub repository [CPack exercise](https://github.com/Simulation-Software-Engineering/cpack-exercise).
-- Set up a `Dockerfile` to create a your packaging environment as described above. Add this file to the repository.
-- Add the packaging procedure to the CMake configuration. You can do this step by step to make sure that the individual steps work.
-    1. Add an appropriate installation routine to the project. The executable `cpackexample` should be installed in a `<prefix>/bin/` directory, the library `libcpackexamplelib.a/so` should be installed in a `<prefix>/lib/` directory and all header files (`fem.hpp`, `filesystem.hpp`, `flatset.hpp`, `yamlParser.hpp`) should be installed in a `<prefix>/include/cpackexamplelib` directory. This is also a good time to test whether `make install` works as expected.
-    2. Add a packaging routine via `CPack`. Please write a seperate CMake module called `MyPackagingModule.cmake` for the packaging process and put it into a directory called `cmake/`. Make sure that the new file is added to Git. Don't forget to include this module in the `CMakeLists.txt` and double check that you can actually create packages with your configuration file.
-
-       The created package should contain sufficient information about the package, at least: maintainer, contact address, project description, vendor, version number, homepage. Feel free to set [additional options](https://cmake.org/cmake/help/latest/module/CPack.html). If you set additional options, please mention in the pull request which options you set and why. You can create a `.tar.gz.` and a `deb` package already and verify that they contain the correct contents.
-    3. Make sure that your compiled code [gets stripped](https://cmake.org/cmake/help/latest/module/CPack.html#variable:CPACK_STRIP_FILES) by default. Also ensure that executing `make package` creates (only) a `tar.gz` and a `deb` package.
-
-       Optional: Create your package once with stripped and once with unstripped files. This should show a difference in the file size between the stripped and unstripped file. You can check the file size, for example, with `du -h FILENAME`.
-    4. Extend the configuration for the generation of Debian packages. Make sure that the package file name is generated according to the Debian package naming scheme. Additionally, you should ensure that the dependencies of the Debian package are set appropriately.
-    5. Make sure that you can install your `deb` package (`apt install ./DEBFILENAME`) and that you can run the executable `cpackexample`.
-- Submit your code via a pull request. You can also open a (draft) pull request before you have incorporated all changes. This allows you to ask question if something is unclear. If you opened a draft pull request, do not forget to mark the pull request as ready to review when you are finished.
-    - The pull request should be named `[USERNAME] CPack exercise`, e.g., `[ajaust] CPack exercise`.
-    - Make sure that all files (`CMakeLists.txt`, `MyPackagingModule.cmake`, `Dockerfile`) are added to the repository and up-to-date.
-
-## Optional Tasks
-
-If you work on any of the optional tasks, please mention this in your pull request.
-
-1. Inspect your Debian package with [lintian](https://manpages.ubuntu.com/manpages/trusty/man1/lintian.1.html). Check and save the output of `lintian`. Fix (some of) the errors. Please add the initial output of `lintian` and the final output such that one can see what errors/warnings disappeared. Shortly describe in the pull request what you did to get rid of errors.
-2. We can automatize the package creation using a Docker container. The idea is that one starts the container via `docker run` which will then automatically build and save the created packages at a predefined location. No further user interaction should be necessary.
-
-   Extend your Docker container image such that it automatically creates the Debian image without further user interaction. The Debian image should be copied to the directory `/mnt/package-build-dir` within the running container as `/mnt/package-build-dir` will be mounted at runtime of the container.
-
-   Ultimately, one has to only run the following (or similar) command
-
-   ```bash
-   docker run --rm -it --mount type=bind,source="$(pwd)",target=/mnt/package-build-dir IMAGENAME
-   ```
-
-   Please state the actual command that has to be used with your container your pull request.
-
-   Running the container like this should trigger the preparation of the two packages. After the container is finished running, the `tar.gz` and `deb` packages should be present on the host system. However, no `build` directory or other temporary files should be present on the host system, i.e., make sure the package is not created in the mounted drive. Please package `cpackexamplelib` as **shared** library when creating the packages.
-
-## Remarks and Tips
-
-- If you need to specify a homepage, you can use the course homepage `https://simulation-software-engineering.github.io/homepage/`.
-- (Almost) All parts of the exercise should be ideally done inside a Docker container based on Ubuntu 20.04.
-- If you are in a container and your libraries in `/usr/local/lib` are not found, you can add the path to environment variable `LD_LIBRARY_PATH` accordingly.
-- For editing your fork inside a container you can mount the directory as bind mount when starting the container. Add `--mount type=bind,source=/path/to/repository/directory,target=/container/target/dir` to the command line when starting the container. Replace the paths with the paths you want to use.
-
-  Example:
-  Assuming you are in the repository's directory and want to mount it to the path `/mnt/package-build-dir` inside the container you could use a command looking similar to the following:
-
-  ```bash
-  docker run --rm -it --name CONTAINERNAME --mount type=bind,source="$(pwd)",target=/mnt/package-build-dir IMAGENAME
-  ```
-
-  Just make sure to use the correct image name (`IMAGENAME`).
-- If you want to inspect the contents of a `.tar.gz.` file  you can unpack it using the tool `tar`. The unpacking command would look like this
-
-  ```bash
-  tar xzf TARGZFILE
-  ```
-
-- If you want to inspect the contents of a  `deb` file, you can unpack it using the tool `dpkg-deb`. The unpacking command would look like this
-
-  ```bash
-  dpkg-deb -R DEBFILE DIRECTORY_FOR_UNPACKED_DEBFILE
-  ```
+Extend the Dockerfile accordingly. Please state the actual command that has to be used to run the container in the pull request.

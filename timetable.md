@@ -70,3 +70,7 @@
 
 - **70** Installation and Packaging with CMake and CPack: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_demo.md)
 - **20** More CMake Demo (preCICE and ccmake): [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cmake_more_demo.md)
+
+## 7.2 – Thu, December 1, 2022
+
+- **90** [Exercise: Packaging with CPack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_exercise.md)

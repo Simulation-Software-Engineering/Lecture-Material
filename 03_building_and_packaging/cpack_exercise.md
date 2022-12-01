@@ -25,7 +25,7 @@ The same four steps as in the lecture:
 
 ### 1. Add Install Target to CMake Configuration
 
-- The executable `cpackexample` should be installed in a `<prefix>/bin/` directory, the library `libcpackexamplelib.a/so` should be installed in a `<prefix>/lib/` directory, and all header files (`fem.hpp`, `filesystem.hpp`, `flatset.hpp`, `yamlParser.hpp`) should be installed in a `<prefix>/include/cpackexamplelib` directory.
+- The executable `cpackexample` should be installed in a `<prefix>/bin/` directory, the library `libcpackexamplelib.a` or `libcpackexamplelib.so` should be installed in a `<prefix>/lib/` directory, and all header files (`fem.hpp`, `filesystem.hpp`, `flatset.hpp`, `yamlParser.hpp`) should be installed in a `<prefix>/include/cpackexamplelib` directory.
 - Test whether `make install` works as expected.
 
 ### 2. Add CPack Configuration

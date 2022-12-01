@@ -35,7 +35,7 @@ Example code is in [`03_building_and_packaging/examples/cpack`](https://github.c
   sudo make install
   ```
 
-- Installs in `/usr/local` which is the defaul value of `CMAKE_INSTALL_PREFIX` when using CMake.
+- Installs in `/usr/local` which is the default value of `CMAKE_INSTALL_PREFIX` when using CMake.
 
   ```bash
   -- Install configuration: "Release"

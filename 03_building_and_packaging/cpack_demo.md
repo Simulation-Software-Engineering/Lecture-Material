@@ -13,7 +13,7 @@ Example code is in [`03_building_and_packaging/examples/cpack`](https://github.c
 - Show `CMakeLists.txt`
 - First observations:
     - We still build a library (`add_library`) and then an executable (`add_executable`).
-    - We do this **for demonstration only**. There is normally no need handle internal dependencies that complicated.
+    - We do this **for demonstration only**. There is normally no need handle internal dependencies in such a complicated way.
     - Build the code: We still get an executable `helloworld` and a library `libsse.a`.
 - Changes compared to previous version / last week:
     - Version number, not needed yet, but good practice

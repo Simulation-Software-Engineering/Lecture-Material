@@ -8,9 +8,9 @@ set_target_properties(sse PROPERTIES PUBLIC_HEADER sse/sse.hpp)
 # Set up library includes
 target_include_directories(sse
     PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/helloworld
+        ${CMAKE_CURRENT_SOURCE_DIR}
     PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/helloworld>
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}/helloworld>
 )
 

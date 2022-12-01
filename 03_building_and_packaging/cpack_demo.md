@@ -16,11 +16,15 @@ Example code is in [`03_building_and_packaging/examples/cpack`](https://github.c
     - We do this **for demonstration only**. There is normally no need handle internal dependencies in such a complicated way.
     - Build the code: We still get an executable `helloworld` and a library `libsse.a`.
 - Changes compared to previous version / last week:
-    - Version number, not needed yet, but good practice
+    - Version number, not needed yet (but later), but good practice
     - `set_target_properties`: Mark include files needed for `libsse` library (`sse/sse.hpp`) as publicly visible.
         - Needed such that CMake knows which headers should be public and should be installed. By default CMake assumes headers are for internal use (within the current project) only.
-    - `target_include_directories`: Where do we have to look for the dependency depending on the type of build (internally, top-level cmake project, external dependency) TODO
-    - Include CMake macro `GNUInstallDirs` to get predefined variables such as installation directories. Directories names and their purpose are defined in the [GNU coding standard](https://www.gnu.org/prep/standards/html_node/Directory-Variables.html). TODO
+    - `target_include_directories`: Where do we have to look for the dependency depending on the type of build (internally, top-level cmake project, external dependency).
+        - If there was a `src` directory, for example, mention it here (or `sse` and then don't mention above and in `main.cpp`).
+        - Classic strategy for headers to put them again in a folder named after the project (such that they don't get mixed up).
+        - We do not use the last two here, but they would be used if we created a package config file.
+        - `$<...>` notation: generator expressions, variables are evaluated during build system generation
+    - Include CMake macro `GNUInstallDirs` to get predefined variables such as installation directories. Directories names and their purpose are defined in the [GNU coding standard](https://www.gnu.org/prep/standards/html_node/Directory-Variables.html).
     - Create install targets (where to install to)
 - Build the library and install it (when installing or distributing a package always set a `CMAKE_BUILD_TYPE`)
 
@@ -111,7 +115,6 @@ Example code is in [`03_building_and_packaging/examples/cpack`](https://github.c
 - Many errors and warning, some easy to fix:
 
   ```diff
-  + set(CPACK_PACKAGE_CONTACT "SSE lecturers <firstname.lastname@example.com>")
   # strip really all Debug symbols
   + set(CPACK_STRIP_FILES TRUE)
   ```

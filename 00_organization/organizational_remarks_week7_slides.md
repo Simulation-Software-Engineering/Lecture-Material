@@ -57,7 +57,7 @@ slideOptions:
 
 ## Challenge Step 3
 
-- Please open an issue in the [challenge repo](https://gitlab-sim.informatik.uni-stuttgart.de/ssimulation-software-engineering-wite2223/challenge) explaining what you want to work on for step 3. We will then use these issues to further discuss the progress of the contribution. Provide links to issues, pull requests etc.
+- Please open an issue in the [challenge repo](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/challenge) explaining what you want to work on for step 3. We will then use these issues to further discuss the progress of the contribution. Provide links to issues, pull requests etc.
     - Deadline (for opening the issue): Dec 18, 2022, 23:59
     - If you open earlier, you get feedback earlier
     - Latest feedback from teachers: Jan 12, 2023, 09:45

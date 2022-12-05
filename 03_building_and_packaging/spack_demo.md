@@ -10,8 +10,8 @@
   git clone -b releases/v0.19 https://github.com/spack/spack.git
   ```
 
-  - `v0.19` is currently the latest release
-  - Update to newer versions using `git pull`/`git checkout -b`
+    - `v0.19` is currently the latest release
+    - Update to newer versions using `git pull`/`git checkout -b`
 
 - Initializing Spack with
 
@@ -49,7 +49,7 @@
 
   **Note** `spack external find` is an experimental feature and might fail. System packages [can be defined manually](https://spack.readthedocs.io/en/latest/getting_started.html#system-packages).
 
-- Found packages (including version, configuration etc.) are stored in `~/.spack/packages.yaml`. There one can add further packages manually. **Note**: Maybe show content of this file.
+    - Found packages (including version, configuration etc.) are stored in `~/.spack/packages.yaml`. There one can add further packages manually. **Note**: Maybe show content of this file.
 
 - Concretize a spec to trigger bootstrap process (optional)
 
@@ -214,7 +214,7 @@
 
   This means that the package depends on Python `3.0.0` or newer and newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
 
-  - Show new dependencies
+    - Show new dependencies
 
     ```bash
     spack spec helloworld

@@ -10,8 +10,8 @@
   git clone -b releases/v0.19 https://github.com/spack/spack.git
   ```
 
-    - `v0.19` is currently the latest release
-    - Update to newer versions using `git pull`/`git checkout -b`
+  - `v0.19` is currently the latest release
+  - Update to newer versions using `git pull`/`git checkout -b`
 
 - Initializing Spack with
 
@@ -49,8 +49,7 @@
 
   **Note** `spack external find` is an experimental feature and might fail. System packages [can be defined manually](https://spack.readthedocs.io/en/latest/getting_started.html#system-packages).
 
-    - Found packages (including version, configuration etc.) are stored in `~/.spack/packages.yaml`. There one can add further packages manually.
-        - **Note** Maybe show content of this file.
+- Found packages (including version, configuration etc.) are stored in `~/.spack/packages.yaml`. There one can add further packages manually. **Note**: Maybe show content of this file.
 
 - Concretize a spec to trigger bootstrap process (optional)
 
@@ -215,15 +214,15 @@
 
   This means that the package depends on Python `3.0.0` or newer and newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
 
-    - Show new dependencies
+  - Show new dependencies
 
-      ```bash
-      spack spec helloworld
-      spack spec helloworld@0.2.0
-      spack info helloworld
-      ```
+    ```bash
+    spack spec helloworld
+    spack spec helloworld@0.2.0
+    spack info helloworld
+    ```
 
-      The Python dependency will only show up for the newest version of our software package.
+    The Python dependency will only show up for the newest version of our software package.
 
 - Add an artificial variant
 
@@ -261,8 +260,8 @@
 ### Talks
 
 Talks at FOSDEM
-  
-  - 2020: [Spack's new Concretizer](https://archive.fosdem.org/2020/schedule/event/dependency_solving_not_just_sat/)
-  - 2020: [Build for your microarchitecture: experiences with Spack and archspec](https://archive.fosdem.org/2020/schedule/event/archspec/)
-  - 2018: [Binary packaging for HPC with Spack](https://archive.fosdem.org/2018/schedule/event/llnl_spack/)
-  - 2018: ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)
+
+- 2020: [Spack's new Concretizer](https://archive.fosdem.org/2020/schedule/event/dependency_solving_not_just_sat/)
+- 2020: [Build for your microarchitecture: experiences with Spack and archspec](https://archive.fosdem.org/2020/schedule/event/archspec/)
+- 2018: [Binary packaging for HPC with Spack](https://archive.fosdem.org/2018/schedule/event/llnl_spack/)
+- 2018: ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)

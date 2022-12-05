@@ -1,6 +1,6 @@
 # Packaging for High-Performance Computing (Notes)
 
-**Note**: It is recommended to try out Spack in a fresh Docker container. To understand how Spack itself is installed, follow the Step 1 in a fresh Ubuntu container. To make things simpler, create a container from the [spack/ubuntu-jammy](https://hub.docker.com/r/spack/ubuntu-jammy) image, so that Spack is preinstalled.
+**Note**: It is recommended to try out Spack in a fresh Docker container. To understand how Spack itself is installed, follow the Step 1 in a fresh Ubuntu container. To make things simpler from Step 2 onwards, create a container from the [spack/ubuntu-jammy](https://hub.docker.com/r/spack/ubuntu-jammy) image, so that Spack is preinstalled.
 
 ## 1. Spack Setup/Installation
 
@@ -143,7 +143,8 @@
     - Set URL to SSE homepage
     - Add our GitHub username as maintainer
     - Remove the `cmake_args` part as we only have a standard CMake arguments. Here we could give extra/special arguments specific to the software package.
-- Concretize our package
+
+- Concretize the package
 
   ```bash
   $ spack spec helloworld
@@ -187,7 +188,7 @@
 
   This will concretize (internally, i.e. no output on terminal) and then build the software.
 
-- **Note**: one could add `main` branch and thus GitHub repository
+- **Optional**: one could add `main` branch and thus GitHub repository
 
   ```diff
   + git      = "https://github.com/Simulation-Software-Engineering/HelloWorld.git"
@@ -212,13 +213,14 @@
   + depends_on('zlib@:1.2')
   ```
 
-  Means that the package depends on Python `3.0.0` or newer and newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
+  This means that the package depends on Python `3.0.0` or newer and newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
 
     - Show new dependencies
 
       ```bash
       spack spec helloworld
       spack spec helloworld@0.2.0
+      spack info helloworld
       ```
 
       The Python dependency will only show up for the newest version of our software package.
@@ -243,7 +245,7 @@
   spack info helloworld -python
   ```
 
-  `~` can be (often) used instaed of `-`. There are [examples in the documentation](https://spack.readthedocs.io/en/latest/basic_usage.html#variants).
+  `~` can be (often) used instead of `-`. There are [examples in the documentation](https://spack.readthedocs.io/en/latest/basic_usage.html#variants).
 
 ## Further reading
 
@@ -258,8 +260,9 @@
 
 ### Talks
 
-- Talks at FOSDEM
-    - 2020: [Spack's new Concretizer](https://archive.fosdem.org/2020/schedule/event/dependency_solving_not_just_sat/)
-    - 2020: [Build for your microarchitecture: experiences with Spack and archspec](https://archive.fosdem.org/2020/schedule/event/archspec/)
-    - 2018: [Binary packaging for HPC with Spack](https://archive.fosdem.org/2018/schedule/event/llnl_spack/)
-    - 2018: ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)
+Talks at FOSDEM
+  
+  - 2020: [Spack's new Concretizer](https://archive.fosdem.org/2020/schedule/event/dependency_solving_not_just_sat/)
+  - 2020: [Build for your microarchitecture: experiences with Spack and archspec](https://archive.fosdem.org/2020/schedule/event/archspec/)
+  - 2018: [Binary packaging for HPC with Spack](https://archive.fosdem.org/2018/schedule/event/llnl_spack/)
+  - 2018: ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)

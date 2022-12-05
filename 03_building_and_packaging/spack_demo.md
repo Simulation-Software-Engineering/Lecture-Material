@@ -1,17 +1,18 @@
 # Packaging for High-Performance Computing (Notes)
 
-**Note**: Maybe run everything in a fresh Docker container. I built the container `jaustar/spack-package-tutorial-base` locally for myself. It contains installed/downloaded Spack, that was not set up yet, i.e., one needs to run `spack compiler find` and `spack external find`. `clingo` needs to be downloaded first as well.
+**Note**: It is recommended to try out Spack in a fresh Docker container. To understand how Spack itself is installed, follow the Step 1 in a fresh Ubuntu container. To make things simpler, create a container from the [spack/ubuntu-jammy](https://hub.docker.com/r/spack/ubuntu-jammy) image, so that Spack is preinstalled.
 
 ## 1. Spack Setup/Installation
 
 - Git repository of Python scripts
 
   ```bash
-  git clone -b releases/v0.17 https://github.com/spack/spack.git
+  git clone -b releases/v0.19 https://github.com/spack/spack.git
   ```
 
-    - `v0.17` is currently the latest release
+    - `v0.19` is currently the latest release
     - Update to newer versions using `git pull`/`git checkout -b`
+
 - Initializing Spack with
 
   ```bash
@@ -21,6 +22,7 @@
   will set `SPACK_ROOT` and also add `spack` to `PATH`.
 
   Note that the  `.` operator will run the commands in the supplied script as if we would type the commands supplied by the script in the shell ourselves. In bash the `.` operator is equivalent to `source`. However, `source` is not specified in POSIX and thus using `.` is likely to work on more platforms.
+
 - Finish Spack setup
 
   ```bash
@@ -35,7 +37,7 @@
   spack compilers
   ```
 
-  prints the
+  prints the list of compilers that Spack has added.
 
 - Find external packages (optional)
 
@@ -56,7 +58,7 @@
   spack spec zlib
   ```
 
-  This will try to concretize the package and its dependencies. `clingo`, Spack's concretizer, is needed for this. If one calls this command the very first time, a bootstrapping process is triggered that install `clingo`.
+  This will try to concretize the package and its dependencies. `clingo`, Spack's concretizer, is needed for this. If one calls this command the very first time, a bootstrapping process is triggered that installs `clingo`.
 
 ## 2. Package Installation/Management with Spack
 
@@ -88,7 +90,7 @@
   spack find
   ```
 
-  Checks the root environment and should show `zlib` being available now. Only `zlib` should be shown even if preinstalled software  was found by `spack external find`. These external packages have not been added to the root environment of Spack **explicity** yet and thus do not show up..
+  Checks the root environment and should show `zlib` being available now. Only `zlib` should be shown even if preinstalled software was found by `spack external find`. These external packages have not been added to the root environment of Spack **explicity** yet and thus do not show up yet.
 
 ## 3. Spack Package Creation
 
@@ -129,7 +131,7 @@
           return args
   ```
 
-  At least the `FIXME` statements should be fixed before relasing the package. The Spack package recipe is written in Python so we can also do common Python magic here.
+  At least the `FIXME` statements should be fixed before releasing the package. The Spack package recipe is written in Python so we can also do common Python magic here.
 
 - Spack has deduced a good number of information already.
     - We work with CMake
@@ -140,7 +142,7 @@
     - Package description
     - Set URL to SSE homepage
     - Add our GitHub username as maintainer
-    - Remove the `cmake_args` part as we only have a standard CMake arguments. Here could give extra/special arguments specific to the software package.
+    - Remove the `cmake_args` part as we only have a standard CMake arguments. Here we could give extra/special arguments specific to the software package.
 - Concretize our package
 
   ```bash
@@ -185,7 +187,7 @@
 
   This will concretize (internally, i.e. no output on terminal) and then build the software.
 
-- **Skip this for now** One could add `main` branch and thus GitHub repository
+- **Note**: one could add `main` branch and thus GitHub repository
 
   ```diff
   + git      = "https://github.com/Simulation-Software-Engineering/HelloWorld.git"
@@ -203,7 +205,7 @@
 
   or open `package.py` file in `${HOME}/var/spack/repos/builtin/packages/helloworld/`
 
-- Add artifical dependencies
+- Add artificial dependencies
 
   ```diff
   + depends_on('python@3:', when='@0.3.0:')

@@ -82,7 +82,7 @@ Example code is in [`03_building_and_packaging/examples/cpack`](https://github.c
 
 ## Create Debian Package
 
-- Set up Debian package generator by adding lines to `cmake/Packaging.cmake`:
+- Set up Debian package generator by adding lines to `cmake/CPackConfig.cmake`:
 
   ```diff
   + # Debian packaging section

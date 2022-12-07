@@ -32,7 +32,7 @@ slideOptions:
   }
 </style>
 
-# Packaging for High-Performance Computing and for you
+# Packaging for High-Performance Computing
 
 ---
 
@@ -117,10 +117,10 @@ slideOptions:
 - Installation in user-writable location
 
   ```bash
-  git clone -b releases/v0.17 https://github.com/spack/spack.git
+  git clone -b releases/v0.19 https://github.com/spack/spack.git
   ```
 
-    - `v0.17` is currently the latest release
+    - `v0.19` is currently the latest release
     - Update to newer versions using `git pull`/`git checkout -b`
 
 ---
@@ -131,7 +131,7 @@ slideOptions:
 
 ## Spack Configuration and Caches
 
-- Permanently set up spack
+- Permanently set up Spack
 
   ```bash
   . <spack_prefix>/share/spack/setup-env.sh
@@ -270,7 +270,6 @@ slideOptions:
 
 ## Common Spack Package Properties 1/3
 
-
 - Package class definition
 
   ```python
@@ -375,12 +374,12 @@ slideOptions:
 
 - Popular package managers for HPC
     - [Spack](https://spack.io/)
-        - Originates from LLNL in US
-        - Build around concretizer
+        - ... originates from LLNL in the US
+        - .. is built around concretizer
     - [EasyBuild](https://github.com/easybuilders/easybuild)
-        - Originates from Ghent University in Belgium
+        - ... originates from Ghent University in Belgium
 - Both suitable for users, admins, researchers...
-- Package manager introduce additional complexity -> Alternatives?
+- Package managers introduce additional complexity -> Alternatives?
     - Manual installation and module system like [`Lmod`](https://lmod.readthedocs.io/en/latest/) or [`Modules`](http://modules.sourceforge.net/)
 - General Problem: Compilation times/options
     - Solution: Build caches/precompiled codes?
@@ -394,7 +393,7 @@ slideOptions:
     - Focus on avoiding recompilation
     - Targets workstations/PCs, supercomputers and cloud computing
 - [Extreme-scale Scientific Software Development Kit (xSDK)](https://xsdk.info/)
-    - Initiated in US
+    - Initiated in the US
     - Currently strong focus on mathematical software
     - Focuses on defining requirements scientific should adhere to (build system, testing, documentation...)
 - Both focus on specifying basic software stack for HPC

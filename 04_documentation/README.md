@@ -10,8 +10,8 @@ Learning Goals
 
 | Duration | Content |
 | --- | --- |
-| 90 minutes | [`technical_writing_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/technical_writing_slides.md) |
 | 20 minutes | [`markup_languages_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/markup_languages_slides.md), [`markup_languages_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/markup_languages_demo.md) |
 | 25 minutes | [`pandoc_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/pandoc_slides.md), [`pandoc_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/pandoc_demo.md) |
+| 90 minutes | [`technical_writing_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/technical_writing_slides.md), [`technical_writing_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/technical_writing_demo.md)  |
 | 70 minutes | [`tools_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/tools_slides.md), [`markup_languages_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/tools_demo.md) |
 | 60 minutes | [`tools_exercise.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/tools_exercise.md) |

@@ -79,4 +79,4 @@
 ## 8.1 – Thu, December 8, 2022
 
 - **45** Packaging for High-Performance Computing: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_demo.md)
-- **45** [Exercise: Packages with Spack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_exercise.md)
+- **45** [Exercise: Packaging with Spack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_exercise.md)

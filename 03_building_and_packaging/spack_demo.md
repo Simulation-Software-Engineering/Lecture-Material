@@ -1,6 +1,6 @@
 # Packaging for High-Performance Computing (Notes)
 
-**Note**: It is recommended to try out Spack in a fresh Docker container. To understand how Spack itself is installed, follow the Step 1 in a fresh Ubuntu container. To make things simpler from Step 2 onwards, create a container from the [spack/ubuntu-jammy](https://hub.docker.com/r/spack/ubuntu-jammy) image, so that Spack is preinstalled.
+**Note**: It is recommended to try out Spack in a fresh Docker container. To understand how Spack itself is installed, follow Step 1 in a fresh Ubuntu container. To make things simpler from Step 2 onwards, create a container from the [spack/ubuntu-jammy](https://hub.docker.com/r/spack/ubuntu-jammy) image, so that Spack is preinstalled.
 
 ## 1. Spack Setup/Installation
 

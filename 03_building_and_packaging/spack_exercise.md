@@ -18,7 +18,7 @@ The [code repository](https://github.com/Simulation-Software-Engineering/spack-e
 - `v0.2.0` depends on Boost (at least version `1.65.1`)
 - `v0.3.0` depends on Boost (at least version `1.65.1`) and `yaml-cpp` (at least version `0.7.0`)
 
-**Note**: We require `yaml-cpp` in version `0.7.0`. This package will be automatically installed via Spack if you specify the dependency correctly in you package. You should **not* install `yaml-cpp` manually in this exercise.
+**Note**: We require `yaml-cpp` in version `0.7.0`. This package will be automatically installed via Spack if you specify the dependency correctly in you package. You should **not** install `yaml-cpp` manually in this exercise.
 
 Create a Spack package for all releases of the given code and make sure that the dependencies are specified appropriately. Make sure you also add yourself as maintainer to your package. Your final package should not contain any `FIXME` parts.
 

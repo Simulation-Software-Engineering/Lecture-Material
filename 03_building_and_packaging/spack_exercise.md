@@ -18,7 +18,7 @@ The [code repository](https://github.com/Simulation-Software-Engineering/spack-e
 - `v0.2.0` depends on Boost (at least version `1.65.1`)
 - `v0.3.0` depends on Boost (at least version `1.65.1`) and `yaml-cpp` (at least version `0.7.0`)
 
-**Note**: We require `yaml-cpp` in version `0.7.0` again. This package will be automatically installed via Spack if you specify the dependency correctly in you package. You should **not* install `yaml-cpp` manually in this exercise.
+**Note**: We require `yaml-cpp` in version `0.7.0`. This package will be automatically installed via Spack if you specify the dependency correctly in you package. You should **not* install `yaml-cpp` manually in this exercise.
 
 Create a Spack package for all releases of the given code and make sure that the dependencies are specified appropriately. Make sure you also add yourself as maintainer to your package. Your final package should not contain any `FIXME` parts.
 
@@ -29,8 +29,7 @@ Please do all the development inside a Docker container. The Docker container is
 ### Packaging Steps
 
 - Create a fork of the [GitHub repository](https://github.com/Simulation-Software-Engineering/spack-exercise).
-- Build a docker image based on the recipe provided in the folder `docker/` and then start a container based on this image.
-- Get acclimatized with the Docker container
+- Get acclimatized with the Docker container that you have just created:
     - Inside the container you are the user `spackbuilder`. This user is not root, but you can use `sudo` (without password) if you want to install something inside the container. However, you should not need superuser rights for this exercise.
     - In the home directory you will find a directory called `spack/` which contains a current Spack installation.
     - There is also a hidden directory `.spack/` in the home directory which contains some configuration files for Spack. The file `packages.yaml`, e.g., defines the preinstalled software like Boost or CMake such that Spack does not compile them from scratch. During this exercise, there should be no need to edit any of the files inside `.spack/`.

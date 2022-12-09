@@ -129,6 +129,7 @@ Much content of this lecture is taken from [Write the Docs](https://www.writethe
 ## Documentation Content Should Be
 
 - **ARID** (*"Accept (some) Repetition in Documentation"*)
+    - Not like good code (**DRY**: don't repeat yourself), but also not **WET**
     - Repetition from code to docs
     - Not everything can be auto-generated.
 - **Skimmable**
@@ -149,6 +150,8 @@ Much content of this lecture is taken from [Write the Docs](https://www.writethe
 - Sometimes also third category *"maintainer"*
 - User docs: How to use the software?
 - Dev docs: Why does the software work a certain way? Not only how
+- Dev docs typically closer to where the code is than user docs
+- Example: preCICE: [user docs](https://precice.org/docs.html), [dev docs](https://precice.org/dev-docs-overview.html), [dev docs close to code](https://github.com/precice/precice/blob/1444fd90536f629b08bcf52238816d3c4ca141e4/src/mapping/Mapping.hpp#L15-L32)
 
 ---
 
@@ -236,6 +239,8 @@ Example: brief excerpt of [Google developer documentation style guide](https://d
 
 > Example preCICE:
 > - Treat users as peers. preCICE is a Computer Science PhD student, user is a Mechanical Engineering PhD student.
+
+- Example: [Google style guide – voice and tone](https://developers.google.com/style/tone)
 
 ---
 
@@ -413,6 +418,8 @@ Android's ActionBar class:
 
 **Long description**: how to use, key features, best practices, ...
 
+Example: [preCICE API](https://precice.org/doxygen/main/classprecice_1_1SolverInterface.html)
+
 ---
 
 ## Method Documentation (1/3)
@@ -463,7 +470,7 @@ Example: [preCICE API](https://precice.org/doxygen/main/classprecice_1_1SolverIn
 - Be clear about your audience.
 - Documentation should be skimmable, concise, and consistent.
 - For consistency, define and/or follow a style guide.
-- There are conventions/styles for `README.md`, `CHANGELOG.md`, commit messages, error messages, API documentation
+- There are conventions/styles for README, changelog, commit messages, error messages, API documentation
 
 ---
 
@@ -474,4 +481,4 @@ Example: [preCICE API](https://precice.org/doxygen/main/classprecice_1_1SolverIn
 - [Write the Docs](https://www.writethedocs.org/)
 - [I'd Rather Be Writing blog](https://idratherbewriting.com/)
 - [Google developer documentation style guide](https://developers.google.com/style)
-- [Google API reference](https://developers.google.com/style/api-reference-comments)
+    - [Section on API documentation](https://developers.google.com/style/api-reference-comments)

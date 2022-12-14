@@ -83,3 +83,11 @@
 ## 8.2 – Thu, December 8, 2022
 
 - **90** [Exercise: Packaging with Spack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_exercise.md)
+
+## 9.1 – Thu, December 15, 2022
+
+- **90** Technical Writing: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/technical_writing_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/technical_writing_demo.md)
+
+## 9.2 – Thu, December 15, 2022
+
+- The Challenge, step two, presentations

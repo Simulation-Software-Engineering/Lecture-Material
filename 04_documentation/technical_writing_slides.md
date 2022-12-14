@@ -32,6 +32,15 @@ slideOptions:
 
 ---
 
+## Structure of This Lecture
+
+1. Introduction
+2. What is good documentation?
+3. Standard documentation building blocks (README, changelog, error messages, commit messages)
+4. API documentation
+
+---
+
 ## 1. Introduction
 
 ---
@@ -76,11 +85,11 @@ Bangerth and Heister, 2013: [What makes computational open source software libra
 
 ## Learning Goals
 
-- Raise **awareness** that documentation is crucial in RSE.
+- Be aware that documentation is crucial in RSE.
 - Understand that there is a difference between documentation and **good documentation**.
-- Get to know the purpose and basic structure of several **standard documentation building blocks** (README, commit message, changelog, ...).
-- **Not**: Learn how to really write good documentation. This takes practice and much more than 90 minutes.
-- **Not**: Any technical tools. This will come next week.
+- Know the purpose and basic structure of several **standard documentation building blocks** (README, commit message, changelog, ...).
+- **Not**: Be able to really write good documentation. This takes practice and much more than 90 minutes.
+- **Not**: Use any technical tools. This will come next week.
 
 ---
 
@@ -88,7 +97,7 @@ Bangerth and Heister, 2013: [What makes computational open source software libra
 
 - ... is a job profile between technical know-how (computer science, engineering, ...) and language.
 - ... can be a role in a software development team (*"documentation"*).
-- There is whole community, e.g. [Write the Docs](https://www.writethedocs.org/).
+- There is a whole community, e.g. [Write the Docs](https://www.writethedocs.org/).
 
 Much content of this lecture is taken from [Write the Docs](https://www.writethedocs.org/).
 
@@ -97,9 +106,9 @@ Much content of this lecture is taken from [Write the Docs](https://www.writethe
 ## Technical Writing in Research Software
 
 - Like in a startup, **no dedicated technical writer in team** (even for large projects). Everybody does everything.
-    - -> You need writing skills.
-- In research, we anyway write a lot (papers, proposals, lecture material, ...).
-    - -> Writing/communication skills are very important anyway.
+    - --> You need writing skills.
+- In research, one writes a lot (papers, proposals, lecture material, ...).
+    - --> Writing/communication skills are very important anyway.
 
 ---
 
@@ -113,26 +122,6 @@ Much content of this lecture is taken from [Write the Docs](https://www.writethe
 
 ---
 
-If someone starts using your code ...
-
-## *I made something of value!*
-
----
-
-## *What if it breaks?!*
-
----
-
-## *I am a real open source developer!*
-
----
-
-## *Oh god, someone else is using my code...*
-
-So, better write good documentation.
-
----
-
 ## 2. What is Good Documentation?
 
 ---
@@ -140,6 +129,8 @@ So, better write good documentation.
 ## Documentation Content Should Be
 
 - **ARID** (*"Accept (some) Repetition in Documentation"*)
+    - Not like good code (**DRY**: *"don't repeat yourself"*),
+      but also not **WET**
     - Repetition from code to docs
     - Not everything can be auto-generated.
 - **Skimmable**
@@ -160,6 +151,8 @@ So, better write good documentation.
 - Sometimes also third category *"maintainer"*
 - User docs: How to use the software?
 - Dev docs: Why does the software work a certain way? Not only how
+- Dev docs typically closer to where the code is than user docs
+- Example: preCICE: [user docs](https://precice.org/docs.html), [dev docs](https://precice.org/dev-docs-overview.html), [dev docs close to code](https://github.com/precice/precice/blob/1444fd90536f629b08bcf52238816d3c4ca141e4/src/mapping/Mapping.hpp#L15-L32)
 
 ---
 
@@ -217,12 +210,13 @@ Example: brief excerpt of [Google developer documentation style guide](https://d
 
 ## Style Guides (4/4)
 
-- **Headings**: Use "Sentence case of Headings", not "Title Case for Headings"
+- **Headings**: Use "Sentence case for headings", not "Title Case for Headings"
 - **Image URLs**: Use site-root-relative URL from same domain
 - **Referring to filenames**: code font, word "file" after filename, exact spelling
     - Good: *In the following `build.sh` file, modify the default values for all parameters.*
 
 - ... even [example person names](https://developers.google.com/style/examples#example-person-names)
+- Another example: [SSE lecture material style guide](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/docs/styleguide.md)
 
 ---
 
@@ -235,7 +229,6 @@ Example: brief excerpt of [Google developer documentation style guide](https://d
 
 > Example preCICE:
 > - Three things to define character? Smart, approachable, responsible.
-> - What kind of smartphone does preCICE use? No iPhone.
 > - Does preCICE have a sense of humor? Yes. When do they use it? Only rarely.
 > - ...
 
@@ -243,10 +236,12 @@ Example: brief excerpt of [Google developer documentation style guide](https://d
 
 ## Tone of Voice (2/2)
 
-- Define how to talk to users.
+- Define how to talk to users
 
 > Example preCICE:
 > - Treat users as peers. preCICE is a Computer Science PhD student, user is a Mechanical Engineering PhD student.
+
+- Example: [Google style guide – voice and tone](https://developers.google.com/style/tone)
 
 ---
 
@@ -254,7 +249,7 @@ Example: brief excerpt of [Google developer documentation style guide](https://d
 
 ---
 
-## `README.md`
+## README
 
 **Every** code should contain a README file. There is even [readme driven development](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html).
 
@@ -271,7 +266,7 @@ Minimal variant should contain at least (following [Write the Docs](https://www.
 
 ---
 
-## `CHANGELOG.md` (1/2)
+## Changelog (1/2)
 
 Following [Keep a Changelog](https://keepachangelog.com):
 
@@ -286,7 +281,7 @@ Following [Keep a Changelog](https://keepachangelog.com):
 
 ---
 
-## `CHANGELOG.md` (2/2)
+## Changelog (2/2)
 
 The **Keep a Changelog** convention groups by categories:
 
@@ -353,8 +348,9 @@ Tips from [Write the Docs](https://www.writethedocs.org/guide/writing/style-guid
 
 Who did something wrong? The software or the user?
 
-- The user -> error
-- The software -> assertion
+- Example preCICE:
+    - The user -> error
+    - The software -> assertion
 - Make this transparent to the user
 
 ---
@@ -389,7 +385,11 @@ Tags can also be useful (e.g. `[Bugfix]`), but consistency is key. Our [lecture 
 
 ---
 
-## Application Programming Interface (API) Documentation
+## 4. API Documentation
+
+---
+
+## Starting Remarks
 
 - All basics apply (be consistent, descriptive, and concise; explain the why, ...)
 - Consistency is also great for automatization: rendering, interlinking, suggestions by IDE, ... (next week)
@@ -418,6 +418,8 @@ Android's ActionBar class:
 ## Class Documentation (2/2)
 
 **Long description**: how to use, key features, best practices, ...
+
+Example: [preCICE API](https://precice.org/doxygen/main/classprecice_1_1SolverInterface.html)
 
 ---
 
@@ -459,7 +461,7 @@ Android's ActionBar class:
     - *The bird specified by the given ID.*
     - *True if the bird is in the sanctuary; false otherwise.*
 
-Example: [preCICE API](https://precice.org/doxygen/master/classprecice_1_1SolverInterface.html)
+Example: [preCICE API](https://precice.org/doxygen/main/classprecice_1_1SolverInterface.html)
 
 ---
 
@@ -469,7 +471,7 @@ Example: [preCICE API](https://precice.org/doxygen/master/classprecice_1_1Solver
 - Be clear about your audience.
 - Documentation should be skimmable, concise, and consistent.
 - For consistency, define and/or follow a style guide.
-- There are conventions/styles for `README.md`, `CHANGELOG.md`, commit messages, error messages, API documentation
+- There are conventions/styles for README, changelog, commit messages, error messages, API documentation
 
 ---
 
@@ -480,3 +482,4 @@ Example: [preCICE API](https://precice.org/doxygen/master/classprecice_1_1Solver
 - [Write the Docs](https://www.writethedocs.org/)
 - [I'd Rather Be Writing blog](https://idratherbewriting.com/)
 - [Google developer documentation style guide](https://developers.google.com/style)
+    - [Section on API documentation](https://developers.google.com/style/api-reference-comments)

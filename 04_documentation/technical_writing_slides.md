@@ -32,6 +32,15 @@ slideOptions:
 
 ---
 
+## Structure of This Lecture
+
+1. Introduction
+2. What is good documentation?
+3. Standard documentation building blocks (README, changelog, error messages, commit messages)
+4. API documentation
+
+---
+
 ## 1. Introduction
 
 ---
@@ -84,15 +93,6 @@ Bangerth and Heister, 2013: [What makes computational open source software libra
 
 ---
 
-## Structure of This Lecture
-
-1. Introduction
-2. What is good documentation?
-3. Standard documentation building blocks (README, changelog, error messages, commit messages)
-4. API documentation
-
----
-
 ## Technical Writer
 
 - ... is a job profile between technical know-how (computer science, engineering, ...) and language.
@@ -129,7 +129,8 @@ Much content of this lecture is taken from [Write the Docs](https://www.writethe
 ## Documentation Content Should Be
 
 - **ARID** (*"Accept (some) Repetition in Documentation"*)
-    - Not like good code (**DRY**: don't repeat yourself), but also not **WET**
+    - Not like good code (**DRY**: *"don't repeat yourself"*),
+      but also not **WET**
     - Repetition from code to docs
     - Not everything can be auto-generated.
 - **Skimmable**

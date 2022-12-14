@@ -107,7 +107,7 @@ Much content of this lecture is taken from [Write the Docs](https://www.writethe
 
 - Like in a startup, **no dedicated technical writer in team** (even for large projects). Everybody does everything.
     - --> You need writing skills.
-- In research, we write a lot (papers, proposals, lecture material, ...).
+- In research, one writes a lot (papers, proposals, lecture material, ...).
     - --> Writing/communication skills are very important anyway.
 
 ---

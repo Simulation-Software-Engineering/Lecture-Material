@@ -1,49 +1,39 @@
-# Pandoc Demo
+# Pandoc Demo Notes
 
-- Show [Try Pandoc](https://pandoc.org/try/)
-    - **Note**: The list of options is not complete here!
-- Show very simple example on try pandoc
+## Basic Usage
 
-  ```markdown
-  ---
-  title: My awesome title
-  author: Firstname lastname
-  date: 2022-01-27
-  ---
+- Markdown example in `./examples/pandoc/example.md`
+- Convert to `rst`: `pandoc example.md -o example.rst`
+    - Meta data not used
+- Convert to `pdf`: `pandoc example.md -o example.pdf`
+    - Meta data used
+- Convert to `docx`: `pandoc example.md -o example.docx`
+- Convert to `tex`: `pandoc example.md -o example.tex`
+    - No standalone file (cannot be further compiled into pdf just like that)
+    - Not readable
+- Standalone `tex`: `pandoc example.md -s -o example.tex`
+- [Try pandoc online](https://pandoc.org/try/)
+    - Not all file formats available
+    - Choose example from drop down menu,  e.g. "Markdown to reStructureText"
+    - Command in right top corner
 
-  # Introduction
+## Default Templates
 
-  This is my text
-  ```
+- Print `latex` template: `pandoc -D latex >> template.tex`
+    - Very long
+    - There is no `pdf` template, always goes through `latex`
+- Convert to `pdf`: `pandoc example.md -o example.pdf`
+    - Needs no `-s` option, since `pdf` is always standalone
+    - Point out that link is not colored
+- Color link: `pandoc example.md -V colorlinks -o example.pdf`
+    - Binary option, no value
+    - Find `colorlinks` in `template.tex`
 
-  Convert to different file formats
+## Custom Templates
 
-  If we have time also compile to PDF locally.
-
-- Convert exercise sheet with default template
-
-  ```bash
-  pandoc packaging_spack_exercise.md --pdf-engine=xelatex --listings -V colorlinks -o packaging_spack_exercise.pdf
-  ```
-
-  with [`eisvogel` template](https://github.com/Wandmalfarbe/pandoc-latex-template)
-
-  ```bash
-  pandoc packaging_spack_exercise.md --pdf-engine=xelatex --template eisvogel --listings -V colorlinks -o packaging_spack_exercise.pdf
-  ```
-
-- GitHub Action and script for lecture material.
-    - [Link to the actions](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/.github/workflows)
-    - [Link to the scripts](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/scripts/create-pdf-from-markdown.sh)
-    - Current lecture slides command:
-
-      ```text
-      pandoc --pdf-engine=xelatex -t beamer -V aspectratio=169 -V linkcolor:blue -V fontsize=12pt --listings -s --output=OUTPUTFILENAME INPUTFILENAME
-      ```
-
-    - Current lecture notes command:
-
-      ```text
-      pandoc --pdf-engine=xelatex -V geometry:a4paper -V geometry:left=2.5cm -V geometry:right=2.5cm -V geometry:bottom=2.5cm -V geometry:top=2.5cm -V colorlinks:true -V linkcolor:blue -V fontsize=10pt --listings -s --output=OUTPUTFILENAME INPUTFILENAME
-      ```
-
+- Show that I have `eisvogel` installed: `ls ~/.pandoc/templates`
+- Use template: `pandoc example.md --template eisvogel  -o example.pdf`
+- Even nicer code: use `--listings` option
+    - Uses latex listings package
+    - Has nothing to do with `eisvogel` template
+    - Extensive number of [options](https://pandoc.org/MANUAL.html#options)

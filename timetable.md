@@ -102,5 +102,6 @@
 ## 10.2 – Thu, January 12, 2023
 
 - **20** [Floss Licenses](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/floss_licenses_slides.md)
-- **15** [Versioning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/versioning_slides.md)
-- **15** [Repository Layouts](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/repository_layouts_slides.md)
+- **20** [Versioning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/versioning_slides.md)
+- **20** [Repository Layouts](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/repository_layouts_slides.md)
+- **20** [DOI, Zenodo, DaRUS](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/doi_zenodo_darus_slides.md)

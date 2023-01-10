@@ -38,14 +38,25 @@ slideOptions:
 
 ## Introduction
 
+```text
+- README
+- LICENSE
+- CMakeLists.txt
+- cmake/
+- docs/
+- src/
+- tests/
+...
+```
+
 - Structure of repository important
-    - Makes navigation easier
-    - Clear where to put new files
-- No "best" standard
+    - Makes navigation easier (newcomers and maintainers)
+    - Clear where to put new files (maintainers)
+- There are standards
 
 ---
 
-## Project/Repository Layout
+## Some Layout Standards
 
 - C and C++
     - [Pitchfork](https://github.com/vector-of-bool/pitchfork)
@@ -77,6 +88,8 @@ docs/
 libs/
 ```
 
+- Adding more is not forbidden (`CMakeLists.txt`, `cmake/`, hidden configuration files, ...)
+
 ---
 
 ## The Hitchhiker's Guide to Python
@@ -101,17 +114,8 @@ tests/test_advanced.py
 
 ## Remarks/Tips
 
-- Define a structure and stick to it
-- Don't reinvent the wheel (if no really good reason)
+- Stick to standards as long as meaningful, do not reinvent the wheel
 - Use short, but meaningful names
-- As few files in root of respository as possible
-- Projects might define own structure
+- As few files in root of repository as possible
+- Projects / communities might define own structure -> Then, follow them
     - Example: [DUNE/DuMuX](https://tu-dresden.de/mn/math/numerik/sander/ressourcen/dateien/sander-getting-started-with-dune-2-7.pdf?lang=en)
-
----
-
-## Further Reading
-
-- [Pitchfork GitHub repository](https://github.com/vector-of-bool/pitchfork)
-- [Pitchfork project layout conventions](https://api.csswg.org/bikeshed/?force=1&url=https://raw.githubusercontent.com/vector-of-bool/pitchfork/develop/data/spec.bs)
-- [The Hitchhiker's Guide to Python](https://docs.python-guide.org/writing/structure/)

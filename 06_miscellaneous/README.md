@@ -2,7 +2,7 @@
 
 Learning goals:
 
-TODO
+- Know the basics about several *other* important things concerning research software engineering: FAIRness of research data and research software, FLOSS licenses, versioning schemes, repository layout standards, and more.
 
 | Duration | Content |
 | --- | --- |

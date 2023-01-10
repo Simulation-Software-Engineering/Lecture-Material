@@ -95,6 +95,7 @@ MAJOR.MINOR.PATCH-<pre-release>+<build>
   ```text
   0.0.1, 2.3.6, 5.0.1
   ```
+
     - Major `0`: often work-in-progress, any breaking changes possible
 
 - `<pre-release>` dot-separated pre-release identifiers (optional)

@@ -102,3 +102,4 @@
 ## 10.2 – Thu, January 12, 2023
 
 - **20** [Floss Licenses](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/floss_licenses_slides.md)
+- **15** [Versioning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/versioning_slides.md)

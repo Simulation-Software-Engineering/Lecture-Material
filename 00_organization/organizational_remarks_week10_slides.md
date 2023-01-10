@@ -64,13 +64,18 @@ td {
 
 ## Challenge Step 3: Suggestions
 
-TODO: has everybody opened a suggestion issue?
+- Heterogeneous field: from great already done contributions to not really started
+- If we think you are doing good, we will not interfere much, but you can of course always ask for input.
+- A few have not yet opened an issue in the challenge repo (deadline was Dec 18). Please get in touch with your adviser asap.
 
 ---
 
 ## Challenge Step 3: Report and Presentations
 
-TODO
-
-- Everybody should give at least one presentation
-- We will pick very good contributions for additional presentations
+- Again report + presentation
+- Presentations and deadline for report on Feb 9
+- Issue with detailed instructions will follow soon
+- A bit more and a bit longer presentations
+- We will assign presenters:
+    - Everybody should give at least one presentation.
+    - We will pick nice contributions for additional presentations.

@@ -56,8 +56,7 @@ slideOptions:
 
 - You want to pick a license for your (new) code.
 - You use software of others and want to know what you are allowed to do.
-- You contribute to an existing software and want to understand what this legally means.
-- You want others to be able to use your software.
+- You contribute to an existing software and want to understand what this means legally.
 
 ---
 
@@ -139,6 +138,7 @@ THE SOFTWARE IS PROVIDED "AS IS", ...
         - Example: DuMuX is GPLv3. Thus, if you publish a solver using DuMuX, it needs to be GPLv3 again.
 - **GNU LGPL**: "L" stands for lesser (sometimes also for library)
     - Only restriction A, not B
+        - Example: preCICE is LGPLv3. Thus, an adapter using preCICE can be made a commercial product.
 
 ---
 
@@ -147,7 +147,7 @@ THE SOFTWARE IS PROVIDED "AS IS", ...
 - Not everything is code, CC licenses is specifically for creative work that is not code.
 
 - The basis, plain **CC** or **CC0**: copyright waived, do what you want
-- Restrictions are _"substracted"_:
+- Restrictions are *"substracted"*:
     - **-BY**: attribution -> you need to credit original creation
     - **-SA**: share alike -> modifications need same license (similar to copyleft)
     - **-ND**: no derivatives -> you are not allowed to modify

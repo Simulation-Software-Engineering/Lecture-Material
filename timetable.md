@@ -100,3 +100,5 @@
 - **35** Documentation Website Generators: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/website_generators_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/website_generators_demo.md)
 
 ## 10.2 – Thu, January 12, 2023
+
+- **20** [Floss Licenses](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/floss_licenses_slides.md)

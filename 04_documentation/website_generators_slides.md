@@ -202,6 +202,13 @@ From [project homepage](https://readthedocs.org/)
 
 ---
 
+## More Optional Homework: MkDocs + GitHub Pages
+
+- Last year, we had a homework to document our *"yaml-cpp-dealii-boost code"* using MkDocs and publish on GitHub pages.
+- If you want to get a glimpse on these tools, follow the [exercise sheet](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/ab8476624c39c20198afbc5f9773775fad62785e/04_documentation/tools_exercise.md) from last year.
+
+---
+
 ## Further Reading
 
 - [Sphinx homepage](https://www.sphinx-doc.org/en/master/)

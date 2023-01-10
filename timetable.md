@@ -91,3 +91,12 @@
 ## 9.2 – Thu, December 15, 2022
 
 - The Challenge, step two, presentations
+
+## 10.1 – Thu, January 12, 2023
+
+- **10** [Organizational remarks](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/organizational_remarks_week10_slides.md)
+- **25** Markup Languages: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/markup_languages_slides.md)
+- **20** Pandoc: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/pandoc_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/pandoc_demo.md)
+- **35** Documentation Website Generators: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/website_generators_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/website_generators_demo.md)
+
+## 10.2 – Thu, January 12, 2023

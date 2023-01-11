@@ -22,7 +22,7 @@ Example code is in [`04_documentation/examples/sphinx`](https://github.com/Simul
 - `sphinx-quickstart`
     - You only have to do this once
     - Separate source and build directories (y/n) [n]: n
-        - Of the documentation obviously. Both will go into `docs`.
+        - ... of the documentation obviously. Both will go into `docs`.
     - Project name: Diffusion Solver
     - Author name(s): Benjamin Uekermann
     - Project release []: 0.1.0

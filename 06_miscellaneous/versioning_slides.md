@@ -120,7 +120,7 @@ MAJOR.MINOR.PATCH-<pre-release>+<build>
 
 ## Library Example
 
-In my `/usr/lib/petsc/lib`:
+In my `/usr/local/lib/`:
 
 ```text
 libprecice.so -> libprecice.so.2

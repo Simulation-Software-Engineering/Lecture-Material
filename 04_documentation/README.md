@@ -1,6 +1,6 @@
 # Documentation
 
-Learning Goals TODO
+Learning goals:
 
 - Be aware that documentation is crucial in RSE.
 - Understand that there is a difference between documentation and **good documentation**.

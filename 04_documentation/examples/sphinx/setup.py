@@ -4,10 +4,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="jaustar-SSE-package",
+    name="uekermbn-SSE-package",
     version="0.0.1",
-    author="Alexander Jaust",
-    author_email="alexander.jaust@ipvs.uni-stuttgart.de",
+    author="Benjamin Uekermann",
+    author_email="benjain.uekermann@ipvs.uni-stuttgart.de",
     description="A small description",
     long_description=long_description,
     long_description_content_type="text/markdown",

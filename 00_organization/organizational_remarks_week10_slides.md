@@ -50,7 +50,7 @@ td {
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
 | 12.01. |Lecture | 4 | Documentation Tools | Benjamin |
-| 12.01. |Lecture | 6 | Licenses, Versioning, TODO, ... | Benjamin |
+| 12.01. |Lecture | 6 | Licenses, Versioning, Repo Layouts, ... | Benjamin |
 | 19.01. |Lecture | 5 | Testing in Python | Ishaan |
 | 19.01. |Lab | 5 | Testing in Python | Ishaan |
 | 26.01. |Lecture | 5 | Automation, CI/CD | Benjamin |
@@ -64,9 +64,10 @@ td {
 
 ## Challenge Step 3: Suggestions
 
-- Heterogeneous field: from great already done contributions to not really started
+- Heterogeneous field: from *"already did good contributions"* to *"not really started"*
 - If we think you are doing good, we will not interfere much, but you can of course always ask for input.
 - A few have not yet opened an issue in the challenge repo (deadline was Dec 18). Please get in touch with your adviser asap.
+- In general, please use the issue to keep us posted about any updates.
 
 ---
 

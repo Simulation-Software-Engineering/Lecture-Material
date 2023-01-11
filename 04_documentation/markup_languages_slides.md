@@ -177,7 +177,7 @@ From [reStructuredText - Markup Syntax and Parser Component of Docutils](https:/
 ## reStructuredText Basics
 
 - [Sphinx' reStructuredText primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
-- [A ReStructuredText Primer](https://docutils.sourceforge.io/docs/user/rst/quickstart.html)
+- [A reStructuredText primer](https://docutils.sourceforge.io/docs/user/rst/quickstart.html)
 - [Quick reStructuredText](https://docutils.sourceforge.io/docs/user/rst/quickref.html)
 
 ---

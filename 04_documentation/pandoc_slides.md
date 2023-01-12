@@ -38,28 +38,21 @@ slideOptions:
 
 ## Learning Goals
 
-- You know how to reuse your markup files for different purposes.
-- You know how to convert markup files (Markdown, reStructuredText...) written into other formats (Markdown, reStructuredText...)
-
----
-
-## "Pandoc a Universal Document Converter"
-
-According to the project [homepage](https://pandoc.org/)
+- Convert markup files (Markdown, reStructuredText, ...) into other formats (Markdown, reStructuredText, PDF, docx, ...) with pandoc.
+- Explain how markup languages, version control, and conversion pipelines play together.
 
 ---
 
 ## Pandoc
 
-> If you need to convert files from one markup format into another, pandoc is your swiss-army knife.
->
-> [Homepage](https://pandoc.org/)
+> - A Universal Document Converter
+> - If you need to convert files from one markup format into another, pandoc is your swiss-army knife.
+
+From [pandoc website](https://pandoc.org/)
 
 - Written in Haskell
 - Converts **>=38** file formats into **>=60** file formats
-    - Includes dialects
-    - Results vary on language
-- Write documentation/text in well-supported language, then convert to any format
+    - Includes dialects (e.g. different markdown flavors)
 
 ---
 
@@ -67,52 +60,29 @@ According to the project [homepage](https://pandoc.org/)
 
 <img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/raw/main/04_documentation/figs/pandoc/fig.png?raw=true" width=65%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px;">
 
-- [Full diagram](https://pandoc.org/diagram.jpg) on homepage
+[Full diagram](https://pandoc.org/diagram.jpg) on homepage
+
+- Idea: Write documentation/text in lightweight, easy to read/write, git-diffable language, then convert to any (non-git-diffable) format.
 
 ---
 
-## Usage
+## Basic Usage
 
-- Basic syntax
 
-  ```bash
-  pandoc INPUTFILE OPTIONS -o OUTPUTFILE
-  ```
+```bash
+pandoc INPUTFILE -o OUTPUTFILE
+```
 
-    - Without `OPTIONS` default values are used
-    - Deduces conversion type from `OUTPUTFILE` file extension (by default)
-- Extensive number of [options](https://pandoc.org/MANUAL.html#options)
-
----
-
-## Useful options
-
-- From file format to file format
+- Deduces conversion type from `OUTPUTFILE` file extension (by default)
+- If explicit formats required (e.g. specific md flavors):
 
   ```bash
   --from/-f FORMAT --to/-t FORMAT
   ```
 
-- Create [standalone](https://pandoc.org/MANUAL.html#option--standalone) file
+---
 
-  ```bash
-  -s/--standalone
-  ```
-
-  Uses template to add footer and header
-- Set additional options
-
-  ```bash
-  -V OPTION=VALUE
-  ```
-
-  Options depend of template used
-
-- Specify LaTeX compiler
-
-  ```bash
-  --pdf-engine=xelatex/lualatex/pdflatex
-  ```
+## Demo: Basic Usage
 
 ---
 
@@ -120,37 +90,31 @@ According to the project [homepage](https://pandoc.org/)
 
 <img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/raw/main/04_documentation/figs/pandoc-latex-workflow/fig.png?raw=true" width=95%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px;">
 
+- Specify LaTeX compiler: `--pdf-engine=xelatex/lualatex/pdflatex`
+
 ---
 
-## Templates
+## Standalone and Default Templates
 
-- Has [default templates](https://pandoc.org/MANUAL.html#templates) for different targets
-    - Print template with
-
-      ```bash
-      pandoc -D FORMAT
-      ```
-
-- Can install additional templates
-    - Locations
-
-      ```bash
-      ${HOME}/.local/share/pandoc/templates/
-      ```
-
-      or
-
-      ```bash
-      ${HOME}/.pandoc/templates/
-      ```
-
-- Specify template on command line
+- Create [standalone](https://pandoc.org/MANUAL.html#option--standalone) file
 
   ```bash
-  pandoc --template eisvogel
+  -s/--standalone
   ```
 
-  [Eisvogel template](https://github.com/Wandmalfarbe/pandoc-latex-template)
+- This uses a [default template](https://pandoc.org/MANUAL.html#templates) for specific target format
+    - To define, e.g., footer and header
+    - Print template with, e.g.
+
+      ```bash
+      pandoc -D latex
+      ```
+
+- Set options defined in template
+
+  ```bash
+  -V OPTION=VALUE
+  ```
 
 ---
 
@@ -160,8 +124,8 @@ According to the project [homepage](https://pandoc.org/)
 
   ```yaml
   ---
-  title: "My awesome title"
-  author: Alexander Jaust
+  title: My awesome title
+  author: Firstname lastname
   ...
   ---
   ```
@@ -169,12 +133,56 @@ According to the project [homepage](https://pandoc.org/)
   May also be specified in separate `yaml` file.
 
 - Available parameters depend on template
-- Parameter missing? -> Build own template
 
 ---
 
-## Further Reading
+## Demo: Default Templates
 
-- [Pandoc homepage](https://pandoc.org/)
-- [Eisvogel template](https://github.com/Wandmalfarbe/pandoc-latex-template)
+---
 
+## Custom Templates
+
+- Install additional templates in
+
+  ```bash
+  ${HOME}/.local/share/pandoc/templates/
+  ```
+
+  or
+
+  ```bash
+  ${HOME}/.pandoc/templates/
+  ```
+
+- Specify template on command line, e.g. [Eisvogel template](https://github.com/Wandmalfarbe/pandoc-latex-template)
+
+  ```bash
+  pandoc --template eisvogel
+  ```
+
+---
+
+## Demo: Custom Templates
+
+---
+
+## SSE Lecture Material as Example
+
+- [GitHub Action](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/.github/workflows) and [script](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/scripts/create-pdf-from-markdown.sh)
+- Current lecture slides command:
+
+```text
+pandoc --pdf-engine=xelatex -t beamer -V aspectratio=169 -V \
+             linkcolor:blue -V fontsize=12pt --listings -s \
+             --output=OUTPUTFILENAME INPUTFILENAME
+```
+
+- Current lecture notes command:
+
+```text
+pandoc --pdf-engine=xelatex -V geometry:a4paper \
+       -V geometry:left=2.5cm -V geometry:right=2.5cm \
+       -V geometry:bottom=2.5cm -V geometry:top=2.5cm \
+       -V colorlinks:true -V linkcolor:blue -V fontsize=10pt \
+       --listings -s --output=OUTPUTFILENAME INPUTFILENAME
+```

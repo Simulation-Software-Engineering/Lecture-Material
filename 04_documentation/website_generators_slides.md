@@ -61,7 +61,7 @@ slideOptions:
 ## Brief Overview of Tools
 
 - General documentation site generators
-    - [MkDocs](https://www.mkdocs.org) (md), [Sphinx](https://www.sphinx-doc.org/en/master/) (rst), [Jekill](https://jekyllrb.com/), ...
+    - [MkDocs](https://www.mkdocs.org) (md), [Sphinx](https://www.sphinx-doc.org/en/master/) (rst), [jekyll](https://jekyllrb.com/), ...
 - Code documentation site generators
     - [Doxygen](https://www.doxygen.nl) (C++, C...), Sphinx with [autodoc extension](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html) (Python), ...
 - Publishing tools
@@ -69,7 +69,7 @@ slideOptions:
 
 - Examples:
     - [SSE homepage](https://simulation-software-engineering.github.io/homepage/): MkDocs + [material theme](https://squidfunk.github.io/mkdocs-material/) + GitHub Pages
-    - [preCICE docs](https://precice.org/): Jekill + [Jekyll Doc Theme](https://idratherbewriting.com/documentation-theme-jekyll) + GitHub Pages
+    - [preCICE docs](https://precice.org/): jekyll + [Jekyll Doc Theme](https://idratherbewriting.com/documentation-theme-jekyll) + GitHub Pages
     - Diffusion solver demo: Sphinx + autodoc ext. + Read the Docs
 
 ---

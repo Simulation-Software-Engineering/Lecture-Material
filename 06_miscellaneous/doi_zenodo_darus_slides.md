@@ -42,14 +42,16 @@ Research data should be ...
 
 - **F**indable (metadata, easy to find for humans and machines, ...)
 - **A**ccessible (once found, how can one access data, ... open data ...)
-- **I**nteroperable (with applications or workflows for analysis, storage, and processing ...)
+- **I**nteroperable (with applications for analysis/storage/processing ...)
 - **R**eusable (documentation ...)
 
 - Principles [published in 2016](https://doi.org/10.1038%2FSDATA.2016.18) by [GO FAIR](https://www.go-fair.org/)
 
 > A bottom-up, stakeholder-driven and self-governed initiative that aims to implement the FAIR data principles
 
-- Often research software regarded as data as well, but there is also [FAIR4RS](https://doi.org/10.15497/RDA00068)
+- Often research software regarded as data, but there is also [FAIR4RS](https://doi.org/10.15497/RDA00068)
+
+---
 
 ## Challenges
 
@@ -104,7 +106,7 @@ How to reliably find, access, and reuse research output?
 
 ## Zenodo
 
-> Zenodo, a CERN service, is an open dependable home for the long-tail of science, enabling researchers to share and preserve any research outputs in any size, any format and from any science.
+> Zenodo, a CERN service, is an open dependable home for the long-tail of science, enabling researchers to share and preserve any research outputs in any size and format ...
 
 - Storage option for
     - Papers/preprints
@@ -113,13 +115,11 @@ How to reliably find, access, and reuse research output?
 - Store data under a license
 - Assigns DOI to data
 - [Zenodo](https://zenodo.org/)'s code is [open source](https://github.com/zenodo/zenodo)
-- Example: [DuMuX v3.5.0](https://zenodo.org/badge/DOI/10.5281/zenodo.6606582.svg)
+- Example: [DuMuX v3.5.0](https://doi.org/10.5281/zenodo.2479594)
 
 ---
 
 ## DaRUS
-
-<img src="https://www.izus.uni-stuttgart.de/fokus/img/logoDarusKreis.png" width=35%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px;">
 
 University of Stuttgart's [Dataverse](https://dataverse.org/) instance
 

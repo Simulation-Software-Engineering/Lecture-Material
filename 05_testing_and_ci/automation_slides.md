@@ -32,18 +32,16 @@ slideOptions:
   }
 </style>
 
-# Workflow automation
+# Workflow Automation
 
 ---
 
 ## Learning Goals
 
-- What are continuous methodologies
-- Why to automate common workflows
-- What are common workflows to automate
-- How to automate common workflows with
-    - GitHub Actions
-    - GitLab CI/CD
+- Name and explain common workflows to automate in RSE.
+- Explain the differences between the various continuous methodologies.
+- Explain why automation is crucial in RSE.
+- Develop basic automation scripts with GitHub Actions and GitLab CI/CD.
 
 ---
 
@@ -51,27 +49,26 @@ slideOptions:
 
 - Automatize tasks
     - Run tests frequently, give feedback early etc.
+    - Ensure reproducible test environments
     - Cannot forget automatized tasks
     - Less burden to developer (and their workstation)
-    - Running predefined workflows/pipelines is simple
-    - Ensure reproducible test environments
+    - Avoid manual errors
 - Process often integrated in development workflow
     - Example: Support by Git hooks or Git forges
 
 ---
 
-## Typical Tasks
+## Typical Automation Tasks in RSE
 
 - Check code formatting and quality
 - Compile and test code for different platforms
-- Periodically run tasks
-    - Big tests, nightly builds...
-- Build documentation and deploy it
 - Generate coverage reports and visualization
+- Build documentation and deploy it
+- Build, package, and upload releases
 
 ---
 
-## Common Practices (1/2)
+## Continuous Methodologies (1/2)
 
 - **Continuous Integration** (CI)
     - Continuously integrate changes into "main" branch.
@@ -81,7 +78,7 @@ slideOptions:
 
 ---
 
-## Common Practices (2/2)
+## Continuous Methodologies (2/2)
 
 - **Continuous Delivery** (CD)
     - Software is in a state that allows new release at any time
@@ -110,4 +107,3 @@ slideOptions:
 - [GitHub Actions documentation](https://docs.github.com/en/actions)
 - [GitLab CI/CD documentation](https://docs.gitlab.com/ee/ci/)
 - [What is Continuous Integration?](https://www.atlassian.com/continuous-delivery/continuous-integration)
-

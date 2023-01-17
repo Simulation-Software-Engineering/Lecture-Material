@@ -78,7 +78,7 @@ See [Wikipedia](https://en.wikipedia.org/wiki/Lightweight_markup_language)
 
 ## Common Properties
 
-- **Whitespaces** very important
+- **Whitespaces** are very important
 - Suitable for **conversion** into other formats, especially HTML
 - Plain text files --> Good for us
 
@@ -138,7 +138,7 @@ From [Markdown website](https://daringfireball.net/projects/markdown/)
 ## Markdown Flavors
 
 - Many different flavors
-    - [GitHub](https://github.github.com/gfm/)/[GitLab]((https://docs.gitlab.com/ee/user/markdown.html#differences-between-gitlab-flavored-markdown-and-standard-markdown)) flavored Markdown, [RMarkdown](https://rmarkdown.rstudio.com/), ...
+    - [GitHub](https://github.github.com/gfm/)/[GitLab](https://docs.gitlab.com/ee/user/markdown.html#differences-between-gitlab-flavored-markdown-and-standard-markdown) flavored Markdown, [RMarkdown](https://rmarkdown.rstudio.com/), ...
 - Effort of standardization: [CommonMark](https://commonmark.org/)
 
 ---

@@ -36,19 +36,6 @@ slideOptions:
 
 ---
 
-## Outline of this Demo/Lecture
-
-- Set up simple CI pipeline using GitHub Actions
-- Pipeline has three steps
-
-    1. Check formatting
-    2. Build application
-    3. Test application
-
-- Reuse code of Python testing lecture
-
----
-
 ## What is "GitHub Actions"?
 
 > Automate, customize, and execute your software development workflows right in your repository with GitHub Actions.
@@ -71,7 +58,7 @@ From: [https://docs.github.com/en/actions](https://docs.github.com/en/actions)
 
 - [Workflow](https://docs.github.com/en/actions/using-workflows): Runs one or more jobs
 - [Event](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows): Triggers a workflow
-- [Jobs](https://docs.github.com/en/actions/using-jobs): Set of steps of a workflow (same runner)
+- [Jobs](https://docs.github.com/en/actions/using-jobs): Set of steps (running on same runner)
     - Steps executed consecutively and share data
     - Jobs by default executed in parallel
 - [Action](https://docs.github.com/en/actions/creating-actions): Application performing common, complex task (step) often used in workflows
@@ -122,8 +109,8 @@ jobs:
 
 - Integrated via `uses` directive
 - Additional configuration via `with` (options depend on Action)
-- Find action in [marketplace](https://github.com/marketplace?type=actions)
-- Write [own action](https://docs.github.com/en/actions/creating-actions)
+- Find actions in [marketplace](https://github.com/marketplace?type=actions)
+- Write [own actions](https://docs.github.com/en/actions/creating-actions)
 
 ---
 
@@ -150,9 +137,9 @@ jobs:
 ## User-specified Commands
 
 ```yaml
-- name: Single line command
+- name: "Single line command"
   run: echo "Single line command"
-- name: Multi line command
+- name: "Multi line command"
   run: |
     echo "First line"
     echo "Second line. Directory ${PWD}"
@@ -210,7 +197,7 @@ steps:
 - Uploading artifact
 
   ```yaml
-  - name: 'Upload Artifact'
+  - name: "Upload artifact"
     uses: actions/upload-artifact@v2
     with:
       name: my-artifact
@@ -221,7 +208,7 @@ steps:
 - Downloading artifact
 
   ```yaml
-  - name: Download a single artifact
+  - name: "Download a single artifact"
     uses: actions/download-artifact@v2
     with:
       name: my-artifact
@@ -250,6 +237,15 @@ steps:
 
 ## Demo: GitHub Actions
 
+- Set up simple CI pipeline using GitHub Actions
+- Pipeline has three steps
+
+    1. Check formatting
+    2. Build application
+    3. Test application
+
+- Reuse code of Python testing lecture
+
 ---
 
 ## Advanced Topics
@@ -257,7 +253,7 @@ steps:
 - [Self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners)
 - [Secrets and tokes](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
 - [Continuous deployment](https://docs.github.com/en/actions/deployment/about-deployments/about-continuous-deployment)
-- [Custom Actions](https://docs.github.com/en/actions/creating-actions/about-custom-actions)
+- [Custom actions](https://docs.github.com/en/actions/creating-actions/about-custom-actions)
 - [Build matrices](https://docs.github.com/en/actions/using-workflows/advanced-workflow-features#using-a-build-matrix)
 - Using own Docker containers
 

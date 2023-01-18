@@ -29,16 +29,9 @@ slideOptions:
 
 ## Learning goals of the chapter
 
-- What is it important to test simulation software
-- What are the concepts of unit testing, integration testing and regression testing and how to write such tests for a simulation software
-- How to use the Python testing frameworks `pytest` and `unittest` to generate a automated testing workflow
-
----
-
-## Lets start with a survey
-
-- https://app.sli.do/event/9xfogBPKmJxnScNrM4nUUZ
-- **ID: 407683**
+- Justify the effort of developing testing infrastructure for simulation software
+- Discern the concepts of unit testing, integration testing and regression testing with the perspective of simulation software
+- Work with the Python testing frameworks `pytest` and `unittest`
 
 ---
 
@@ -55,7 +48,7 @@ slideOptions:
 - Improve software reliability and reproducibility.
 - Make sure that changes (bugfixes, new features) do not affect other parts of software.
 - Generally all software is better off being tested regularly. Possible exceptions are very small codes with single users.
-- Ensure that a distributed version of a software actually works.
+- Ensure that a released version of a software actually works.
 
 ---
 
@@ -100,7 +93,7 @@ assert condition, "message"
 - A *unit* is a single function in one situation.
     - A situation is one amongst many possible variations of input parameters.
 - User creates the expected result manually.
-- A fixture is a set of inputs used to generate an actual result.
+- Fixture is the set of inputs used to generate an actual result.
 - Actual result is compared to the expected result, for e.g. using an assertion statement.
 
 ---
@@ -127,9 +120,9 @@ assert condition, "message"
 
 ## Test Coverage
 
-- Coverage is the amount of code a test runs through.
+- Coverage is the amount of code a test touches in one run.
 - Aim for high test coverage.
-- There is a trade-off: extremely high test coverage vs. effort in test development
+- There is a trade-off: high test coverage vs. effort in test development
 
 ---
 

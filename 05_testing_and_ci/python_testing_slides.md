@@ -38,7 +38,7 @@ slideOptions:
 
 ---
 
-## pytest demo
+## pytest Demo
 
 ---
 
@@ -51,7 +51,7 @@ slideOptions:
 
 ---
 
-## unittest demo
+## unittest Demo
 
 ---
 
@@ -63,15 +63,21 @@ slideOptions:
 
 ---
 
-## coverage demo
+## coverage Demo
 
 ---
 
-## Other testing frameworks
+## tox
 
-- [nose](https://pypi.org/project/nose2/) is an extension to `unittest` with added plugins.
-- [testify](https://pypi.org/project/testify/) based on unittest and nose with additional features.
-- [robotframework](https://pypi.org/project/robotframework/) is a generic automation framework.
+- Automation for Python testing, building and distribution
+- Creates virtual environments for each process
+- Depending on the command, dependencies are installed, tests are run, packaging is done, etc.
+- tox command line tool reads and runs files like `pyproject.toml`, `tox.ini`, and `setup.cfg`
+- More information in the [tox wiki](https://tox.wiki/en/4.0.15/index.html).
+
+---
+
+## tox Demo
 
 ---
 

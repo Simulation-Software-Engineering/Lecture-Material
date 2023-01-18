@@ -2,8 +2,8 @@
 
 ## Starting remarks
 
-- [Exercise repository link](https://github.com/Simulation-Software-Engineering/testing-python-exercise)
-- Deadline for submitting this exercise is **Thursday 20th January 2022 09:00**.
+- [Exercise repository link](https://github.com/Simulation-Software-Engineering/testing-python-exercise-wt2223)
+- Deadline for submitting this exercise is **Thursday 26th January 2023 09:00**.
 - Try to structure all the tests in a format similar to what is shown in the [demo code](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/examples/python_testing).
 
 ## Prerequisites
@@ -21,7 +21,7 @@
 
 ## Step 1 - Getting familiar with the code
 
-- Fork the [repository](https://github.com/Simulation-Software-Engineering/testing-python-exercise).
+- Fork the [repository](https://github.com/Simulation-Software-Engineering/testing-python-exercise-wt2223).
 - The code in `diffusion2d.py` is in principle the code used for the Python packaging exercise. The main difference is that now the code has a class `SolveDiffusion2D` which has several member functions.
 - Each function name states what the function does, for example the function `initialize_domain()` takes in input arguments `w` (width), `h` (height), `dx` and `dy` and sets the values to member variables of the class and also calculates the number of points in x and y directions.
 - The functions `initialize_domain` and `initialize_physical_parameters` have default values for all input parameters, hence they can be called without any parameters.
@@ -113,11 +113,15 @@ pytest tests/unit/test_diffusion2d_functions.py
 - Purposely break all the integration tests and copy the failing tests logs into the aforementioned section in the README file.
 - Before moving on from the integration tests, make sure that you have reverted all the intentionally introduced bugs in the original code.
 
-## BONUS Step 6 - Checking test coverage
+## Step 6 - Checking test coverage
 
 - Using the coverage tool generate a HTML report of the code coverage of all the tests.
 - Open the report file in a browser and print the report to a file called `coverage-report.pdf`. Add this file to the repository.
 - **Note**: coverage can be used with both `pytest` and `unittest`. In this case generating the report of the unit tests using unittest is sufficient.
+
+## Step 7 - Automation using tox
+
+- Write a `tox.ini` file such that by running the command `tox`, both `pytest` and `unittest` are executed.
 
 ## Submission
 

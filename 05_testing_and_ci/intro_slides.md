@@ -29,9 +29,9 @@ slideOptions:
 
 ## Learning goals of the chapter
 
-- Learn the importance of test simulation software
+- Justify the effort of developing testing infrastructure for simulation software
 - Discern the concepts of unit testing, integration testing and regression testing with the perspective of simulation software
-- Getting familiar with the Python testing frameworks `pytest` and `unittest`
+- Work with the Python testing frameworks `pytest` and `unittest`
 
 ---
 

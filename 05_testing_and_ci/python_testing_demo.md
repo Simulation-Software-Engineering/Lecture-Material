@@ -2,7 +2,7 @@
 
 Example code is in [05_testing_and_ci/examples](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/examples)
 
-## Software code used
+## Software Code Used
 
 - The file `operations.py` consists of two functions `find_max` and `find_mean` which calculate the maximum and mean of all elements of a list. The `main()` routine in the file applies the functions to a list and prints the output.
 - `main()` function in `operations.py` has assertion statements to check if the correct data type is passed to specific functions.

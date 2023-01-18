@@ -1,6 +1,6 @@
 # Exercise: Testing Python Code
 
-## Starting remarks
+## Starting Remarks
 
 - [Exercise repository link](https://github.com/Simulation-Software-Engineering/testing-python-exercise-wt2223)
 - Deadline for submitting this exercise is **Thursday 26th January 2023 09:00**.
@@ -20,7 +20,7 @@
     - [coverage](https://coverage.readthedocs.io/en/6.2/#quick-start)
     - [tox](https://tox.wiki/en/4.0.15/installation.html)
 
-## Step 1 - Getting familiar with the code
+## Step 1 - Getting Familiar With the Code
 
 - Fork the [repository](https://github.com/Simulation-Software-Engineering/testing-python-exercise-wt2223).
 - The code in `diffusion2d.py` is in principle the same code used for the Python packaging exercise. The main difference is that now the code has a class `SolveDiffusion2D` which has several member functions.
@@ -32,13 +32,13 @@
 - Observe the output produced, it should be the same output as what was seen during the packaging exercise.
 - Spend some time understanding what each function does. It is important to understand all the functions as you will be writing tests for these functions.
 
-## Step 2 - Adding assertion statements
+## Step 2 - Adding Assertion Statements
 
 - Add assertion statements to the functions `initialize_domain` and `initialize_physical_parameters` which check whether all input parameters have type `float`.
 - Rerun the code after inserting all the assertion statements? Does the code break? Which parameters are problematic?
 - The default values of some of the input parameters like `T_hot` and `T_cold` are in fact integers and need to be changed. Change these values to floats and rerun the code to make sure that all assertions are returning true.
 
-## Step 3 - Writing unit tests
+## Step 3 - Writing Unit Tests
 
 - Now you will write all the tests in a way that they can be run using `pytest`.
 - In the repository there is a folder `tests/`. In this folder there are two folders `unit/` and `integration/`. The first tests written will be unit tests.
@@ -66,7 +66,7 @@ pytest tests/unit/test_diffusion2d_functions.py
 - Purposely break all the unit tests and copy the failing tests logs into the aforementioned section in the README file.
 - Before moving on from this step, make sure that you have reverted all the intentionally introduced bugs in the original code.
 
-## Step 4 - Writing unit tests using unittest
+## Step 4 - Writing Unit Tests Using unittest
 
 - Now you will write all the tests in a way that they can be run using `unittest`.
 - Modify the unit tests written in the previous section to be run with unittest. This is done in the same file `tests/unit/test_diffusion2d_functions.py`.
@@ -79,7 +79,7 @@ pytest tests/unit/test_diffusion2d_functions.py
 - Purposely break all the unit tests and copy the failing tests logs into the aforementioned section in the README file.
 - Before moving on from the unit tests, make sure that you have reverted all the intentionally introduced bugs in the original code.
 
-## Step 5 - Writing integration tests
+## Step 5 - Writing Integration Tests
 
 - You will now write integration tests for this code **using pytest**. The integration tests will be written in the file `tests/integration/test_diffusion2d.py`.
 - Integration tests will be written for the functions `initialize_physical_parameters` and `set_initial_conditions`. As these are integration tests, each test should check how different functions from `SolveDiffusion2D` work together.
@@ -95,16 +95,16 @@ pytest tests/unit/test_diffusion2d_functions.py
 - Purposely break all the integration tests and copy the failing tests logs into the aforementioned section in the README file.
 - Before moving on from the integration tests, make sure that you have reverted all the intentionally introduced bugs in the original code.
 
-## Step 6 - Checking test coverage
+## Step 6 - Checking Test Coverage
 
 - Using the coverage tool generate a HTML report of the code coverage of all the tests.
 - Open the report file in a browser and print the report to a file called `coverage-report.pdf`. Add this file to the repository.
 - **Note**: coverage can be used with both `pytest` and `unittest`. In this case generating the report of the unit tests using unittest is sufficient.
 
-## Step 7 - Automation using tox
+## Step 7 - Automation Using tox
 
 - Write a `tox.ini` file such that by running the command `tox`, both `pytest` and `unittest` are executed.
 
-## Submission
+## Step 8 - Submission
 
 - Open a pull request titled `Adding tests by <GitLab username>` from your fork to the main repository.

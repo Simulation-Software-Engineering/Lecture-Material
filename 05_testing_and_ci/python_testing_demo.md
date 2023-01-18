@@ -120,3 +120,25 @@ coverage html
 ```
 
 - The file `htmlcov/index.html` can be opened in a browser to view the test coverage report.
+
+## tox
+
+- Automation for Python testing (and much more)
+- Virtual environments are created for each task, and tox takes care of installing dependencies and the package itself inside of the environment.
+- Order of preference for files that tox tries to read: `pyproject.toml`, `tox.ini`, `setup.cfg`
+- `tox.ini` file
+
+```ini
+[tox]
+envlist = my_env
+skipsdist = true
+
+[testenv]
+deps = pytest
+commands = pytest
+```
+
+- Global settings defined under section `[tox]` in the INI file.
+- Start tox by running the command `tox` in the directory where the `tox.ini` exists.
+- tox takes more time the first time it is run as it creates the necessary virtual environments. Virtual environment setup can be found in the `.tox` repository.
+- Observe that tox starts a virtual environment, installs the dependency (here `pytest`) and runs `pytest`.

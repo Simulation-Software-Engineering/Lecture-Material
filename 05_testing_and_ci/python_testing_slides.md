@@ -75,6 +75,18 @@ slideOptions:
 
 ---
 
+## tox
+
+- Automation for Python testing, building and distribution
+- Creates virtual environments for each process
+- Depending on the command, dependencies are installed, tests are run, packaging is done, etc.
+
+---
+
+## tox demo
+
+---
+
 ## Further reading
 
 - [pytest documentation](https://docs.pytest.org/en/6.2.x/)

@@ -104,6 +104,7 @@ pytest tests/unit/test_diffusion2d_functions.py
 ## Step 7 - Automation Using tox
 
 - Write a `tox.ini` file such that by running the command `tox`, both `pytest` and `unittest` are executed.
+- Use the `requirements.txt` file to send all the dependencies information to tox.
 
 ## Step 8 - Submission
 

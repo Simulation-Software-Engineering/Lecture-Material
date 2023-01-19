@@ -1,12 +1,12 @@
 # Notes for Demos of Python Testing Frameworks
 
-Example code is in [05_testing_and_ci/examples](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/examples)
+Example code is in [05_testing_and_ci/examples/python_testing](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/examples/python_testing)
 
 ## Software Code Used
 
 - The file `operations.py` consists of two functions `find_max` and `find_mean` which calculate the maximum and mean of all elements of a list. The `main()` routine in the file applies the functions to a list and prints the output.
 - `main()` function in `operations.py` has assertion statements to check if the correct data type is passed to specific functions.
-- Assertion statements are the most basic way of testing code and are also used in unit and integration testing as demonstrated here.
+- Assertion statements are the most basic way of testing code and are also used in unit and integration testing.
 - Tests are written in the file `test_operations.py`. The `test_*` prefix in the name is required so that pytest detects the file as a testing file. Suffix form `*_test.py` also works.
 - In all there are two unit tests, one integration test and one regression test.
 - The unit tests test the individual functions `find_max` and `find_mean`.

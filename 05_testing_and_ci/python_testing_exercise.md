@@ -47,7 +47,7 @@
 - As an example, let us look at how we can write a unit test for the function `initialize_domain`.
     - When the function `initialize_domain` is being tested, you need to first identify which variables are being calculated in this function.
     - In this case they are the variables `nx` and `ny`. Now choose some values for the variables `w`, `h`, `dx`, and `dy` which are different from the default values. For these values, manually calculate the values of `nx` and `ny`. These manually calculated values are the expected values in this test.
-    - Now call the function `initialize_domain` which the chosen values of `w`, `h`, `dx`, and `dy` and using an assertion statement, check if the values of `nx` and `ny` in the class member variables are equal to your expected values.
+    - Now call the function `initialize_domain` with the chosen values of `w`, `h`, `dx`, and `dy` and using an assertion statement, check if the values of `nx` and `ny` in the class member variables are equal to your expected values.
     - Note that you have the object of the class `SolveDiffusion2D` and hence you can access member variables, for example `solver.nx` and `solver.ny`. This is useful to check the actual values.
 - Using a similar workflow, complete the other two unit tests.
 - Run the tests using `pytest`.

@@ -36,53 +36,16 @@ slideOptions:
 
 ---
 
-## Outline of this Demo/Lecture
-
-- Set up simple CI pipeline using GitLab CI/CD
-- Pipeline has three steps
-
-    1. Check formatting
-    2. Build application
-    3. Test application
-
-- Reuse code of Python testing lecture
-
----
-
 ## What is "GitLab CI/CD"?
 
-> GitLab CI/CD is a tool for software development using the continuous methodologies:
+> GitLab CI/CD is a tool for software development using the continuous methodologies
 
 From: [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)
 
----
-
-## General Information
-
 - GitLab's integration automation tool
-- Powerful runners
-- Checks out Git repository by default
-- Slightly different meaning of word "trigger"
-    - GitHub: What triggers an action/workflow
-    - GitLab: What should a pipeline trigger and what triggers a pipeline
-
----
-
-## GitLab Runner
-
-- Supports a variety of [executors](https://docs.gitlab.com/runner/executors/)
-    - SSH, Shell, Docker...
-- Installation is simple
-    - Can also run as Docker service
-- Allows reusing existing hardware
-- Preconfigured runners available on [gitlab.com](https://about.gitlab.com/)
-
----
-
-## Demo: GitLab Runner
-
-- Installation of GitLab Runner
-- Registration of a runner to a repository
+- Similar to GitHub Actions though details are different
+- Typically (more than for GitHub Actions): self-hosted runners
+    - More effort, more flexibility
 
 ---
 
@@ -95,6 +58,9 @@ From: [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)
 - [Runner](https://docs.gitlab.com/runner/): Server that runs jobs
 - [Artifacts](https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html): Files to be shared between jobs or to be kept after workflow finishes
 - No "Actions", but instead integrated features
+    - Repository checked out by default
+    - Handling of artifacts integrated
+    - ...
 
 ---
 
@@ -157,38 +123,6 @@ deploy job:
 
 ---
 
-## User-specified Commands
-
-- Commands are given as a list
-
-  ```yaml
-  script:
-    - COMMAND1
-    - COMMAND2
-  ```
-
-- May call functions/scripts of repository
-- Normally behaves as typed into a terminal
-    - Sometimes wrapping in quotes needed
-
----
-
-## Expressions
-
-- Expression evaluation similar to shell
-
-  ```yaml
-  job1:
-    variables:
-      VAR1: "variable1"
-    script:
-      - echo "Test variable comparison"
-    rules:
-      - if: $VAR1 == "variable1"
-  ```
-
----
-
 ## Artifacts
 
 - Data sharing between jobs and data upload
@@ -213,11 +147,9 @@ deploy job:
       - create file
   ```
 
-  **Note**: Drop `dependencies` to download all artifacts. Pass empty list `[]` to not download artifacts.
-
 ---
 
-## Workflow "Triggers"
+## Workflow Triggers
 
 - By default pipelines are created for every commit
 - Filtering by type of events
@@ -237,17 +169,21 @@ deploy job:
       - merge_requests
   ```
 
-- Example: Create pipeline only for merge requests
+---
 
-  ```yaml
-  workflow:
-    rules:
-      - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+## GitLab Runner
 
-  job1:
-    script:
-      - echo "This job runs in pipelines for merge requests"
-  ```
+- Supports a variety of [executors](https://docs.gitlab.com/runner/executors/):
+    - SSH, Shell, Docker...
+- Allows reusing existing hardware
+- Preconfigured runners available on [gitlab.com](https://about.gitlab.com/)
+
+---
+
+## Demo: GitLab Runner
+
+- Installation of a GitLab Runner on a [bwCloud](https://www.bw-cloud.org/) VM (via Docker)
+- Registration of the runner to a repository (Docker as executor)
 
 ---
 
@@ -263,19 +199,8 @@ deploy job:
 
 ---
 
-## Summary of GitHub Actions and GitLab CI/CD
-
-- Run tasks automatically for you
-- Configuration via YAML files stored in repository
-    - Infrastructure as code
-- Highly extendable
-- Jobs executed on runners (self-hosted or forge-hosted)
-
----
-
 ## Further reading
 
 - [GitLab CI/CD documentation](https://docs.gitlab.com/ee/ci/)
 - [GitLab Runner documentation](https://docs.gitlab.com/runner/)
 - [GitLab `gitlab-ci.yml` reference](https://docs.gitlab.com/ee/ci/yaml/)
-

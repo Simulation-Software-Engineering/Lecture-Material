@@ -2,7 +2,7 @@
 
 ## 1. Setting up a Test Job
 
-- TODO Clone [automation lecture repository](https://github.com/RSE-102/automation-lecture)
+- Clone [automation lecture repository](https://github.com/Simulation-Software-Engineering/automation-lecture-wt2223)
 - Set up workflow file
 
   ```bash

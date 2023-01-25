@@ -6,7 +6,7 @@ Deadline: **Thursday, February 2nd, 2023, 09:00**
 
 ## Preparations
 
-Import the [automation exercise repository](https://github.com/Simulation-Software-Engineering/automation-exercise) in your own account/namespace on GitHub and name it `automation-exercise` again. **Note**: We cannot work with forks here because GitHub Actions may not work in pull requests without explicit approval of the owner of the target repository
+Import the [automation exercise repository](https://github.com/Simulation-Software-Engineering/automation-exercise-wt2223) in your own account/namespace on GitHub and name it `automation-exercise` again. **Note**: We cannot work with forks here because GitHub Actions may not work in pull requests without explicit approval of the owner of the target repository
 
 ## Task descriptions
 
@@ -24,7 +24,7 @@ Once the workflow runs successfully, add a [GitHub workflow status badge](https:
 
 ## Submission
 
-- Submit your solution via an issue in the *upstream* [automation exercise repository](https://github.com/Simulation-Software-Engineering/automation-exercise). The issue should be named `[USERNAME] Automation exercise`, e.g., `[uekermbn] Automation exercise`. Please use your GitLab username here. Add a link to your GitHub repository in the issue. If necessary, add further explanations in the issue description.
+- Submit your solution via an issue in the *upstream* [automation exercise repository](https://github.com/Simulation-Software-Engineering/automation-exercise-wt2223). The issue should be named `[USERNAME] Automation exercise`, e.g., `[uekermbn] Automation exercise`. Please use your GitLab username here. Add a link to your GitHub repository in the issue. If necessary, add further explanations in the issue description.
 
 ## Bonus: GitLab CI/CD
 

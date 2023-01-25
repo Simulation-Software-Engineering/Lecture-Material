@@ -20,7 +20,7 @@ The CI workflow should be triggered by `push` events and should have three jobs:
     - Running `coverage report` allows us to inspect the coverage directly in the workflow's output. Saving the XML file allows us to analyze the coverage in more detail with other tools if needed.
     - The resulting file `coverage.xml` should be kept for 14 days.
 
-Once the workflow runs successfully, add a [GitHub workflow status badge](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge) for your workflow to the `README.md`. Label this badge with "RSE 102 CI/CD".
+Once the workflow runs successfully, add a [GitHub workflow status badge](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge) for your workflow to the `README.md`. Label this badge with "SSE CI/CD".
 
 ## Submission
 

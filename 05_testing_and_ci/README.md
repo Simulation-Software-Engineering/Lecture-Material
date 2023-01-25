@@ -2,15 +2,15 @@
 
 Learning goals:
 
-- What is the relevance of testing simulation software.
-- What are the concepts of unit testing, integration testing and regression testing and how to write such tests for a simulation software.
-- How to use the Python testing frameworks `pytest` and `unittest` to generate a automated testing workflow.
-- What continuous methodologies are.
-- Why to automate common workflows.
-- What are common workflows to automate.
-- How to automate common workflows with ...
-    - GitHub Actions.
-    - GitLab CI/CD.
+- Justify the effort of developing testing infrastructure for simulation software.
+- Discern the concepts of unit testing, integration testing and regression testing with the perspective of simulation software.
+- Work with the Python testing frameworks `pytest` and `unittest`.
+- Name and explain common workflows to automate in RSE.
+- Explain the differences between the various continuous methodologies.
+- Explain why automation is crucial in RSE.
+- Write basic automation scripts for GitHub Actions.
+- Read basic automation scripts for GitLab CI/CD.
+- Name and roughly explain the necessary steps to host GitLab Runners yourself.
 - How to use `Boost.Test` to write simple tests for C++ toy codes.
 - What general concepts of test frameworks such as fixtures or decorators are.
 - How tests can be called from CMake via CTest.

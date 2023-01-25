@@ -41,7 +41,9 @@ slideOptions:
 - Name and explain common workflows to automate in RSE.
 - Explain the differences between the various continuous methodologies.
 - Explain why automation is crucial in RSE.
-- Develop basic automation scripts with GitHub Actions and GitLab CI/CD.
+- Write basic automation scripts for GitHub Actions.
+- Read basic automation scripts for GitLab CI/CD.
+- Name and roughly explain the necessary steps to host GitLab Runners yourself.
 
 ---
 

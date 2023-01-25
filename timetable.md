@@ -111,6 +111,16 @@
 - **20** Introduction to Testing: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/intro_slides.md)
 - **70** Testing Python Code: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_demo.md)
 
-## 11.2 -- Thu, January 19, 2023
+## 11.2 – Thu, January 19, 2023
 
 - **90** [Exercise: Testing Python Code](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_exercise.md)
+
+## 12.1 – Thu, January 26, 2023
+
+- **15** [Automation](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/automation_slides.md)
+- **45** GitHub Actions: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/github_action_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/github_action_demo.md)
+- **30** GitLab CI: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/gitlab_ci_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/gitlab_ci_demo.md)
+
+## 12.2 – Thu, January 26, 2023
+
+- **90** [Exercise: Automating Workflows with GitHub Actions](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/automation_exercise.md)

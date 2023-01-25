@@ -1,4 +1,4 @@
-# Automating workflows with GitHub Actions
+# Automating Workflows with GitHub Actions
 
 In this exercise, we create automated workflows and pipelines based on GitHub Actions. We are again working with our beloved diffusion Python code.
 

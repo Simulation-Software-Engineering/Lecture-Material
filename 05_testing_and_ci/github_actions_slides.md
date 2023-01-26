@@ -238,20 +238,19 @@ steps:
 ## Demo: GitHub Actions
 
 - Set up simple CI pipeline using GitHub Actions
+- Reuse code of Python testing lecture
 - Pipeline has three steps
 
     1. Check formatting
     2. Build application
     3. Test application
 
-- Reuse code of Python testing lecture
-
 ---
 
 ## Advanced Topics
 
 - [Self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners)
-- [Secrets and tokes](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
+- [Secrets and tokens](https://docs.github.com/en/actions/security-guides/encrypted-secrets)
 - [Continuous deployment](https://docs.github.com/en/actions/deployment/about-deployments/about-continuous-deployment)
 - [Custom actions](https://docs.github.com/en/actions/creating-actions/about-custom-actions)
 - [Build matrices](https://docs.github.com/en/actions/using-workflows/advanced-workflow-features#using-a-build-matrix)

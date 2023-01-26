@@ -73,7 +73,7 @@ slideOptions:
 ## Continuous Methodologies (1/2)
 
 - **Continuous Integration** (CI)
-    - Continuously integrate changes into "main" branch.
+    - Continuously integrate changes into "main" branch
     - Avoids "merge hell"
     - Relies on testing and checking code continuously
         - Should be automatized

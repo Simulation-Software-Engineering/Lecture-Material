@@ -2,7 +2,7 @@
 
 ## 1. Setting up a Test Job
 
-- Clone [automation lecture repository](https://github.com/Simulation-Software-Engineering/automation-lecture-wt2223)
+- Clone [automation lecture repository](https://github.com/Simulation-Software-Engineering/automation-lecture-wt2223) and run code and tests
 - Set up workflow file
 
   ```bash
@@ -26,7 +26,7 @@
         - uses: actions/checkout@v2
         - uses: actions/setup-python@v2
           with:
-            python-version: '3.8.10'
+            python-version: '3.8'
         - name: "Run unittest"
           run: python -m unittest
   ```
@@ -73,7 +73,7 @@
         - uses: actions/checkout@v2
         - uses: actions/setup-python@v2
           with:
-            python-version: '3.8.10'
+            python-version: '3.8'
         - name: "Install style checker"
           run: pip install black
         - name: "Run style check"
@@ -93,7 +93,7 @@
         - uses: actions/checkout@v2
         - uses: actions/setup-python@v2
           with:
-            python-version: '3.8.10'
+            python-version: '3.8'
         - name: "Run unittest"
           run: python -m unittest
   ```

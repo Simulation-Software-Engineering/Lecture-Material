@@ -2,15 +2,15 @@
 
 Learning goals:
 
-- What is the relevance of testing simulation software.
-- What are the concepts of unit testing, integration testing and regression testing and how to write such tests for a simulation software.
-- How to use the Python testing frameworks `pytest` and `unittest` to generate a automated testing workflow.
-- What continuous methodologies are.
-- Why to automate common workflows.
-- What are common workflows to automate.
-- How to automate common workflows with ...
-    - GitHub Actions.
-    - GitLab CI/CD.
+- Justify the effort of developing testing infrastructure for simulation software.
+- Discern the concepts of unit testing, integration testing and regression testing with the perspective of simulation software.
+- Work with the Python testing frameworks `pytest` and `unittest`.
+- Name and explain common workflows to automate in RSE.
+- Explain the differences between the various continuous methodologies.
+- Explain why automation is crucial in RSE.
+- Write basic automation scripts for GitHub Actions.
+- Read basic automation scripts for GitLab CI/CD.
+- Name and roughly explain the necessary steps to host GitLab Runners yourself.
 - How to use `Boost.Test` to write simple tests for C++ toy codes.
 - What general concepts of test frameworks such as fixtures or decorators are.
 - How tests can be called from CMake via CTest.
@@ -19,13 +19,13 @@ Learning goals:
 
 | Duration | Content |
 | --- | --- |
-| 15 minutes | [automation_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/automation_slides.md), [automation_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/automation_demo.md) |
+| 15 minutes | [automation_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/automation_slides.md) |
 | 90 minutes | [automation_exercise.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/automation_exercise.md) |
 | 70 minutes | [boost_testing_exercise.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_exercise.md) |
 | 25 minutes | [boost_testing_intro_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_intro_slides.md), [boost_testing_intro_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_intro_demo.md) |
 | 65 minutes | [boost_testing_sidemade_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_sidemade_demo.md) |
 | 30 minutes | [intro_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/intro_slides.md) |
 | 60 minutes | [python_testing_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_slides.md), [python_testing_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_demo.md) |
-| 35 minutes | [github_actions_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/github_actions_slides.md), [github_actions_gitlab_ci_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/github_actions_gitlab_ci_demo.md) |
-| 40 minutes | [gitlab_ci_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/gitlab_ci_slides.md), [gitlab_ci_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/gitlab_ci_demo.md) |
+| 45 minutes | [github_actions_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/github_actions_slides.md), [github_actions_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/github_actions_demo.md) |
+| 30 minutes | [gitlab_ci_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/gitlab_ci_slides.md), [gitlab_ci_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/gitlab_ci_demo.md) |
 | 90 minutes | [python_testing_exercise.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_exercise.md) |

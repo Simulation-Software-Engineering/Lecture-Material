@@ -27,7 +27,7 @@ slideOptions:
 
 ---
 
-## Learning goals of the chapter
+## Learning Goals of the Chapter
 
 - Justify the effort of developing testing infrastructure for simulation software
 - Discern the concepts of unit testing, integration testing and regression testing with the perspective of simulation software
@@ -35,7 +35,7 @@ slideOptions:
 
 ---
 
-## What is testing?
+## What is Testing?
 
 - Smelling old milk before using it!
 - A way to determine if a software is not producing reliable results and if so, what is the reason.
@@ -43,7 +43,7 @@ slideOptions:
 
 ---
 
-## Why should you test your software?
+## Why Should you Test your Software?
 
 - Improve software reliability and reproducibility.
 - Make sure that changes (bugfixes, new features) do not affect other parts of software.
@@ -52,7 +52,7 @@ slideOptions:
 
 ---
 
-## Nomenclature in software testing
+## Nomenclature in Software Testing
 
 - **Fixture**: preparatory set for testing.
 - **Actual result**: what the code produces when given the fixture.
@@ -61,7 +61,7 @@ slideOptions:
 
 ---
 
-## Some ways to test software
+## Some Ways to Test Software
 
 - Assertions
 - Unit testing
@@ -87,7 +87,7 @@ assert condition, "message"
 
 ---
 
-## Unit testing
+## Unit Testing
 
 - Catching errors with assertions is good but preventing them is better!
 - A *unit* is a single function in one situation.
@@ -98,7 +98,7 @@ assert condition, "message"
 
 ---
 
-## Integration testing
+## Integration Testing
 
 - Test whether several units work in conjunction.
 - *Integrate* units and test them together in an *integration* test.
@@ -108,7 +108,7 @@ assert condition, "message"
 
 ---
 
-## Regression testing
+## Regression Testing
 
 - Generating an expected result is not possible in some situations.
 - Compare the current actual result with a previous actual result.
@@ -126,7 +126,7 @@ assert condition, "message"
 
 ---
 
-## Comparing floating-point variables
+## Comparing Floating-point Variables
 
 - Very often quantities in simulation software are `float` / `double`.
 - Such quantities cannot be compared to exact values, an approximation is necessary.
@@ -136,7 +136,7 @@ assert condition, "message"
 
 ---
 
-## Test-driven development (TDD)
+## Test-driven Development (TDD)
 
 - Principle is to write a test and then write a code to fulfill the test.
 - Advantages:
@@ -147,7 +147,7 @@ assert condition, "message"
 
 ---
 
-## Checking-driven development (CDD)
+## Checking-driven Development (CDD)
 
 - Developer performs spot checks; sanity checks at intermediate stages
 - Simulation software often has heuristics which are easy to determine.
@@ -155,7 +155,7 @@ assert condition, "message"
 
 ---
 
-## Verifying a test
+## Verifying a Test
 
 - Test written as part of a bug-fix:
     - Reproduce the bug in the test by ensuring that the test fails.
@@ -167,6 +167,6 @@ assert condition, "message"
 
 ---
 
-## Further reading
+## Further Reading
 
 - [Research Software Engineering with Python - Chapter 11: Testing Software](https://merely-useful.tech/py-rse/testing.html)

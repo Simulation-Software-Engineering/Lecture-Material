@@ -52,7 +52,7 @@ slideOptions:
 - Powerful unit test framework
 - Sometimes called (the) **Unit Test Framework** (UTF) or **Boost.Test**
     - Valid on all slides: `namespace utf = boost::unit_test;`
-- [List of contributors and maintainers](https://www.boost.org/doc/libs/1_78_0/libs/test/doc/html/boost_test/acknowledgements.html)
+- [List of contributors and maintainers](https://www.boost.org/doc/libs/1_81_0/libs/test/doc/html/boost_test/acknowledgements.html)
 
 ---
 
@@ -108,7 +108,7 @@ BOOST_AUTO_TEST_SUITE_END()
     BOOST_AUTO_TEST_CASE(Test1, * utf::label("trivial")) {...}
     ```
 
-- Example from preCICE: to filter out tests testing MPI ports functionality if built with specific MPI version
+- Example from preCICE: filter out tests for MPI ports functionality if built with specific MPI version
 - List all labels with `--list_labels` option
 - Decorators can also be added to suites
 
@@ -142,9 +142,9 @@ BOOST_AUTO_TEST_SUITE_END()
 
 ## Fixtures (1/2)
 
-- To set up and tear down test data
-- To fullfil preconditions
-- To do clean-up work
+- Set up and tear down test data
+- Fulfill preconditions
+- Do clean-up work
     - Example from preCICE: static geometry ID seed
 
 ```cpp
@@ -188,6 +188,6 @@ Which behavior do you then expect and why?
 
 ---
 
-## Further reading
+## Further Reading
 
 - [Documentation of Boost Unit Test Framework](https://www.boost.org/doc/libs/1_78_0/libs/test/doc/html/index.html)

@@ -124,3 +124,14 @@
 ## 12.2 – Thu, January 26, 2023
 
 - **90** [Exercise: Automating Workflows with GitHub Actions](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/automation_exercise.md)
+
+## 13.1 – Thu, February 2, 2023
+
+- **20** Introduction to Boost.Test: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_intro_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_intro_demo.md)
+- **60** [Boost.Test and CTest in Action: SideMade Demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_sidemade_demo.md)
+- **10** [Boost.Test in the Real World: preCICE Demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_precice_demo.md)
+
+## 13.2 – Thu, February 2, 2023
+
+- **15** Lecture evaluation
+- **75** [Boost.Test and CTest in Action: SideMade Exercise](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_exercise.md)

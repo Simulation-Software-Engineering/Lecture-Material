@@ -38,11 +38,11 @@ slideOptions:
 
 ## Learning Goals of Complete Lecture
 
-- How to use `Boost.Test` to write simple tests for C++ toy codes.
-- What general concepts of test frameworks such as fixtures or decorators are.
-- How tests can be called from CMake via CTest.
-- How unit and integration tests look like for preCICE as an example of a real simulation software.
-- How `Boost.Test`, CMake, and GitHub Actions work together for preCICE as an example of a real simulation software.
+- Write simple tests for C++ toy codes with `Boost.Test`.
+- Know about general concepts of test frameworks such as fixtures and decorators.
+- Use CTest to call tests from CMake.
+- Know about common challenges of unit and integration tests in real simulation software through preCICE as an example.
+- Explain how `Boost.Test`, CMake, and GitHub Actions can work together. 
 
 ---
 

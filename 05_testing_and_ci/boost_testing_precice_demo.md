@@ -12,7 +12,7 @@ Look around preCICE in the terminal + text editor.
     - `BOOST_CHECK` actually not recommended to use. Is used internally by `BOOST_TEST`.
     - Powerful macro `PRECICE_TEST(1_rank)`; here it means that this test is run on one MPI rank
         - Tests are normally run on 4 MPI ranks to test parallel implementation and to mimic different coupled solvers
-        
+
 ## Unit vs. Integration Tests
 
 - Clear separation in preCICE: integration tests only directly use API of preCICE.
@@ -20,11 +20,11 @@ Look around preCICE in the terminal + text editor.
 - Look at `tests/serial/initialize-data/Explicit.cpp`
     - Explain `PRECICE_TEST` and how it is used
     - More information: [blog post on bssw.io on multiphysics testing](https://bssw.io/blog_posts/overcoming-complexity-in-testing-multiphysics-coupling-software)
-        
-## White-Box Testing        
+
+## White-Box Testing
 
 - Not a UTF feature, but an independent C++ trick
-- Explain black-box testing: 
+- Explain black-box testing:
     - A class has a public API and we only use this API for testing.
     - Makes a lot of sense
 - Sometimes, we want white-box testing:
@@ -35,11 +35,11 @@ Look around preCICE in the terminal + text editor.
     - Does not `friend` every test, but only `WaveformFixture`
     - `src/testing/WaveformFixture.hpp` has functions to access private members
     - This fixture is used in many tests in `src/time/tests/WaveformTests`
-    
+
 ## Test Matrices
 
 - Look at `tests/serial/mapping-nearest-projection/QuadMappingDiagonalNearestProjectionEdgesTallKite.cpp`:
-    - Define test matrix with data sets: `boost::unit_test::data::make` 
+    - Define test matrix with data sets: `boost::unit_test::data::make`
 
 ## Test Context
 

@@ -42,7 +42,7 @@ slideOptions:
 - Know about general concepts of test frameworks such as fixtures and decorators.
 - Use CTest to call tests from CMake.
 - Know about common challenges of unit and integration tests in real simulation software through preCICE as an example.
-- Explain how `Boost.Test`, CMake, and GitHub Actions can work together. 
+- Explain how `Boost.Test`, CMake, and GitHub Actions can work together.
 
 ---
 

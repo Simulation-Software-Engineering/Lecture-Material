@@ -7,7 +7,7 @@ Deadline: **Thursday, February 9th, 2023, 09:00**
 ## Preparation and Submission
 
 
-- Import the [testing boost exercise repository](https://github.com/Simulation-Software-Engineering/testing-boost-exercise) in your own account/namespace on GitHub and name it `testing-boost-exercise` again. **Note**: We cannot work with forks here because GitHub Actions may not work in pull requests without explicit approval of the owner of the target repository
+- Import the [testing boost exercise repository](https://github.com/Simulation-Software-Engineering/testing-boost-exercise-wt2223) in your own account/namespace on GitHub and name it `testing-boost-exercise` again. **Note**: We cannot work with forks here because GitHub Actions may not work in pull requests without explicit approval of the owner of the target repository
 - Create a new branch `extend-tests` from `main` and work in this branch.
 - To submit, open a PR from `extend-tests` to `main` in your own repository. Then paste a link to this PR in a new issue in the original repository. Use `[GITLAB-USERNAME] Boost test exercise` as title of the issue.
 

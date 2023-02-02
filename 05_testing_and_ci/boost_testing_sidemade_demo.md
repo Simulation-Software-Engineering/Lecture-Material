@@ -1,6 +1,6 @@
 # Boost.Test and CTest in Action: SideMade Demo
 
-Repository: [testing boost exercise – demo-start branch](https://github.com/Simulation-Software-Engineering/testing-boost-exercise/tree/demo-start)
+Repository: [testing boost exercise – demo-start branch](https://github.com/Simulation-Software-Engineering/testing-boost-exercise-wt2223/tree/demo-start)
 
 ## 1. Get to Know the Code
 

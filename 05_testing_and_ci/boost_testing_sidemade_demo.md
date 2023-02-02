@@ -205,7 +205,7 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     BOOST_AUTO_TEST_SUITE_END()
     ```
 
-- `cp ../data/config.yml testconfig.yml` and explain what test should do TODO
+- `cp ../data/config.yml testconfig.yml` and explain what test should do (we read in a config and check if you got the expected values)
 - Add expected data:
 
     ```cpp

@@ -96,7 +96,7 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     BOOST_TEST(x == expectedX);
     ```
 
-- Adjust `CMakeLists.txt`
+- Adjust `CMakeLists.txt`:
     - Add `"${SRC_FILES}"` to test executable
     - Make headers visible `target_include_directories(testsidemade PRIVATE ${PROJECT_SOURCE_DIR}/src)`
     - link `Eigen3::Eigen` and also `yaml-cpp` (since used in `SRC_FILES`)

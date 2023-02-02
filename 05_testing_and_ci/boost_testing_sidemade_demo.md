@@ -2,23 +2,24 @@
 
 Repository: [testing boost exercise – demo-start branch](https://github.com/Simulation-Software-Engineering/testing-boost-exercise/tree/demo-start)
 
-## (1) Get to Know the Code
+## 1. Get to Know the Code
 
-- intro: go through all sections of `README.md`
-- try: build and run
-    - explain shell output
-    - try different matrices and algorithms
-- look into the code
+- Go through all sections of `README.md`
+- Try: build and run
+    - Explain shell output
+    - Try different matrices and algorithms
+- Look into the code
     - `main.cpp`
     - `Configuration.hpp/cpp`
     - `matrixIO.hpp/cpp`
     - `MatrixSolver.hpp/cpp`
-- look into `CMakeLists.txt`
-- our mission
+- Look into `CMakeLists.txt`
+- Our mission:
     - The code has no unit tests yet. -> We add some of them with Boost UTF.
     - Exercise: continue with same code, add more tests, set up GitHub Actions, and more
+    - We combine and consolidate knowledge on CMake, Boost UTF, and GitHub Actions.
 
-## (2) First Dummy Test Case
+## 2. First Dummy Test Case
 
 - `mkdir tests`, create `tests/MatrixSolverTest.cpp`
 - `#define BOOST_TEST_MODULE SideMadeTests`
@@ -29,7 +30,7 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     - needed in *every* of our files containing tests
 - `#include <boost/test/unit_test.hpp>`
     - different header/path than for header-only usage
-- add first test
+- Add first test:
 
     ```cpp
     BOOST_AUTO_TEST_CASE(LU)
@@ -38,7 +39,7 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     }
     ```
 
-- adjust `CMakeLists.txt`
+- Adjust `CMakeLists.txt`:
 
     ```cmake
     include(CTest)
@@ -49,18 +50,18 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     add_test(NAME "MatrixSolverTests" COMMAND ${CMAKE_CURRENT_BINARY_DIR}/testsidemade)
     ```
 
-- reconfigure CMake, build, run via
+- Reconfigure CMake, build, run via ...
     - `./testsidemade`
     - `./testsidemade --list_content`
     - `./testsidemade --report_level=detailed`
     - `make test`
     - `ctest`
-- If we leave out the last line (`add_test(...)`), the test will be run via `testsidemade`, but not by `make test` or `ctest` since CMake does not know about the test.
+- If we leave out the last line (`add_test(...)`), the test can be run via `testsidemade`, but not via `make test` or `ctest` since CMake does not know about the test.
 
-## (3) Use Actual Implementation in Matrix Solver Test
+## 3. Use Actual Implementation in Matrix Solver Test
 
 - Give a known matrix `A` and right hand side `b` to the MatrixSolver and compare it to the expected result. Do this test for all available decompositions (LU, QR, LU2).
-- need more includes
+- Needs more includes:
 
     ```cpp
     #include <Eigen/Dense>
@@ -69,9 +70,9 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     using namespace Eigen;
     ```
 
-- create data
-    - show how to manufacture a testcase (a common scheme in numerics)
-    - first choose A, then solution x. Compute right hand side b accordingly.
+- Create data:
+    - Show how to manufacture a testcase (a common scheme in numerics)
+    - First choose A, then solution x. Compute right hand side b accordingly.
 
     ```cpp
     MatrixXd A(3, 3);
@@ -79,14 +80,14 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
          4, 5, 6,
          7, 8, 9;
 
-    VectorXd b(3);
-    b << 3.5, 11, 18.5;
-
     VectorXd expectedX(3);
     expectedX << 2, 0, 0.5;
+
+    VectorXd b(3);
+    b << 3.5, 11, 18.5;
     ```
 
-- add testing code
+- Add testing code:
 
     ```cpp
     MatrixSolver solver(MatrixSolver::LU);
@@ -95,18 +96,18 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     BOOST_TEST(x == expectedX);
     ```
 
-- adjust `CMakeLists.txt`
-    - add `"${SRC_FILES}"` to test executable
-    - makes headers visible `target_include_directories(testsidemade PRIVATE ${PROJECT_SOURCE_DIR}/src)`
+- Adjust `CMakeLists.txt`:
+    - Add `"${SRC_FILES}"` to test executable
+    - Make headers visible `target_include_directories(testsidemade PRIVATE ${PROJECT_SOURCE_DIR}/src)`
     - link `Eigen3::Eigen` and also `yaml-cpp` (since used in `SRC_FILES`)
 
     ```cmake
     add_executable(testsidemade "${TEST_FILES}" "${SRC_FILES}")
     target_include_directories(testsidemade PRIVATE ${PROJECT_SOURCE_DIR}/src)
-    target_link_libraries(testsidemade PRIVATE Boost::unit_test_framework Eigen3::Eigen yaml-cpp)-
+    target_link_libraries(testsidemade PRIVATE Boost::unit_test_framework Eigen3::Eigen yaml-cpp)
     ```
 
-- build ... problem that two "main" functions are defined
+- Build ... problem that two "main" functions are defined
     - Fix by:
 
     ```cmake
@@ -116,17 +117,26 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     add_executable("${PROJECT_NAME}" "${SRC_FILES}" src/main.cpp)
     ```
 
-- build and run tests
+- Build and run tests
 
-## (4) Organize Matrix Solver Tests
+## 4. Organize Matrix Solver Tests
 
-- use a fixture to provide data; just copy test code there
+- Use a fixture to provide data; just copy "create data" code there
 
     ```cpp
     struct MatrixSolverFixture {
       MatrixSolverFixture()
       {
-        ...
+        A = MatrixXd(3, 3);
+        A << 1, 2, 3,
+            4, 5, 6,
+            7, 8, 9;
+
+        b = VectorXd(3);
+        b << 3.5, 11, 18.5;
+
+        expectedX = VectorXd(3);
+        expectedX << 2, 0, 0.5;
       }
 
       MatrixXd A;
@@ -135,8 +145,8 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     };
     ```
 
-- add fixture to test and use: `BOOST_FIXTURE_TEST_CASE(LU, MatrixSolverFixture)`
-- build and run
+- Add fixture to test and use: `BOOST_FIXTURE_TEST_CASE(LU, MatrixSolverFixture)`
+- Build and run
 
 - Add suite to group test cases and add fixture there:
 
@@ -148,13 +158,13 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
 
     - We can change back `BOOST_FIXTURE_TEST_CASE(LU, MatrixSolverFixture)` to `BOOST_AUTO_TEST_CASE(LU)`
 
-- build and run
+- Build and run
 - `./testsidemade --list_content`
-- add tests for `QR` and `LU2`
+- Add tests for `QR` and `LU2` by copying the one for `LU`
 - `make test` -> fail, but which one?
-- `./testsidemade` -> output does not really help. Shows which test fails, but not why/where.
-- `ctest --output-on-failure` will show output of failing test. `ctest --verbose` will show all output.
-- replace with explicit calls to entries
+- `./testsidemade` -> line number tells us that QR test fails, but why?
+- Other ways to get more output: `ctest --output-on-failure` or `ctest --verbose`
+- Replace with explicit calls to entries to further investigate problem
 
     ```cpp
     BOOST_TEST(x(0) == expectedX(0));
@@ -162,14 +172,21 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     BOOST_TEST(x(2) == expectedX(2));
     ```
 
-- For floating point values, we need a tolerance.
-    - use decorator `*boost::unit_test::tolerance(1e-12)` in suite
+- Seems that for floating point values, we need a tolerance. Use decorator, directly add to suite:
 
-## (5) Test Case for Configuration
+    ```cpp
+    BOOST_FIXTURE_TEST_SUITE(MatrixSolverTests, MatrixSolverFixture, *boost::unit_test::tolerance(1e-12))
+    ```
+
+- Better change all comparisons to explicit calls to entries. Or overwrite Eigen implementation.
+- Of course, we could now add much more testcases to `MatrixSolverTests` (different sizes of matrices, failing solve, ...), but this is already good.
+- We could also further reduce code duplication by defining a function.
+
+## 5. Test Case for Configuration
 
 - Test should load a known configuration and compare it to the expected values.
-- create `ConfigurationTest.cpp`
-- add includes (no `BOOST_TEST_MODULE` here)
+- Create `ConfigurationTest.cpp`
+- Add includes (no `BOOST_TEST_MODULE` here)
 
     ```cpp
     #define BOOST_TEST_DYN_LINK
@@ -178,7 +195,7 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     #include "MatrixSolver.hpp"
     ```
 
-- add suite and test case
+- Add suite and test case
 
     ```cpp
     BOOST_AUTO_TEST_SUITE(ConfigurationTests)
@@ -188,8 +205,8 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     BOOST_AUTO_TEST_SUITE_END()
     ```
 
-- `cp ../data/config.yml testconfig.yml` and explain what test should do
-- expected data:
+- `cp ../data/config.yml testconfig.yml` and explain what test should do (we read in a config and check if you got the expected values)
+- Add expected data:
 
     ```cpp
     const MatrixSolver::DecompositionType expectedDecompositionType{MatrixSolver::QR};
@@ -197,7 +214,7 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     const int                             expectedMatrixSize{3};
     ```
 
-- configure and test
+- Configure and test:
 
     ```cpp
     Configuration configuration{"testconfig.yml"};
@@ -206,20 +223,20 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     BOOST_TEST(configuration.matrixSize == expectedMatrixSize);
     ```
 
-- adjust `CMakeLists.txt`
-    - add tests and explain [test unit filters](https://www.boost.org/doc/libs/1_78_0/libs/test/doc/html/boost_test/runtime_config/test_unit_filtering.html)
+- Adjust `CMakeLists.txt`:
+    - In principle OK like it is, but we could organize things a bit better.
+    - Add tests and [filter](https://www.boost.org/doc/libs/1_78_0/libs/test/doc/html/boost_test/runtime_config/test_unit_filtering.html):
 
     ```cmake
     add_test(NAME "MatrixSolverTests" COMMAND ${CMAKE_CURRENT_BINARY_DIR}/testsidemade --run_test=MatrixSolverTests/*)
     add_test(NAME "ConfigurationTests" COMMAND ${CMAKE_CURRENT_BINARY_DIR}/testsidemade --run_test=ConfigurationTests/*)
     ```
 
-    We match by name here. We could also request explicit tests that are part of a suite such as `--run_test=MatrixSolverTests/LU`. We could also use labels `run_test=@LLABELNAME`. `@L` is tells the test tool to look for specific labels. We can also use the `*` wildcard to run tests with certain prefixes or suffixes.
+    - We match by name here. We could also request explicit tests that are part of a suite such as `--run_test=MatrixSolverTests/LU`. We could also use labels `run_test=@LLABELNAME`. `@L` is tells the test tool to look for specific labels. We can also use the `*` wildcard to run tests with certain prefixes or suffixes.
 
-    **Note**: Test that are a precondition of a specified test will still be run even if they are not specified. Failure of such preconditions lead the dependent job to be skipped.
-
-- build, run -> does not find config file
-    - add working directory to test
+- Build, run -> does not find config file
+    - We could run it from the `tests` folder, but this cannot be the solution: `cd ../tests && ../build/testsidemade`
+    - Add working directory to test:
 
     ```cmake
     add_test(NAME "ConfigurationTests" COMMAND ... WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/tests)

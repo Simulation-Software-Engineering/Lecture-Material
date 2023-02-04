@@ -9,7 +9,7 @@
         - Container runs kernel of the host OS -> Does **not** run its own OS in.
         - Operating system (OS) needs to be compatible with underlying OS. Cannot run different OS than host. (TODO: Verify this)
             - **Note**: Windows 10 can run Linux containers! (Due to Windows Subsystem for Linux?!)
-        - A process for which (and its childs) special rules apply.
+        - A process for which (and its children) special rules apply.
 - Shortly recap what we have learned about containers.
     - Fenced-off, relies on capabilities of OS etc.
 - LXD/LXC and its container registry [Linux containers](https://linuxcontainers.org/)

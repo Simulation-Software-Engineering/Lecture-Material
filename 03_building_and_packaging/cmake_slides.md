@@ -162,7 +162,7 @@ slideOptions:
 ## Further Reading
 
 - [Official CMake docs](https://cmake.org/cmake/help/latest/index.html)
-- [Offical CMake tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
+- [Official CMake tutorial](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
 - [Basic (unofficial) Cmake Tutorial for Linux Video](https://www.youtube.com/watch?v=mKZ-i-UfGgQ)
 - [Advanced, but very good video tutorial](https://www.youtube.com/watch?v=bsXLMQ6WgIk)
 - [An Introduction to Modern CMake](https://cliutils.gitlab.io/modern-cmake/)

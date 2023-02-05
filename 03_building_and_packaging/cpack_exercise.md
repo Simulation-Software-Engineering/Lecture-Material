@@ -30,7 +30,7 @@ The same four steps as in the lecture:
 
 ### 2. Add CPack Configuration
 
-- Write a seperate CMake module `cmake/CPackConfig.cmake` for the packaging process and include it in the `CMakeLists.txt` file. The created package should contain sufficient information about the package, at least: maintainer, contact, project description, vendor, and homepage (e.g. your fork on GitHub). Feel free to set more [additional options](https://cmake.org/cmake/help/latest/module/CPack.html).
+- Write a separate CMake module `cmake/CPackConfig.cmake` for the packaging process and include it in the `CMakeLists.txt` file. The created package should contain sufficient information about the package, at least: maintainer, contact, project description, vendor, and homepage (e.g. your fork on GitHub). Feel free to set more [additional options](https://cmake.org/cmake/help/latest/module/CPack.html).
 - `make package` should (only) create a `tar.gz` and a `deb` package.
 - Inspect that both packages contain the correct content:
     - To inspect the contents of a `.tar.gz.` file, you can unpack it using the tool `tar`:

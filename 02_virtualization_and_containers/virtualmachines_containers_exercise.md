@@ -60,7 +60,7 @@ Please finish the the work before **24 November 2022 at 9:00**.
 
 ## Before You Start
 
-- **Important**: Whenever `USERNAME` is mentioned in a code block or similar, you have to replace this by your GitLab username. For example, if a task states that you shoud use "[`USERNAME`] Ubuntu Server Installation", then you have to actually use "[`desaiin`] Ubuntu Server Installation" in case `desaiin` is your username.
+- **Important**: Whenever `USERNAME` is mentioned in a code block or similar, you have to replace this by your GitLab username. For example, if a task states that you should use "[`USERNAME`] Ubuntu Server Installation", then you have to actually use "[`desaiin`] Ubuntu Server Installation" in case `desaiin` is your username.
 - If you are using a MacBook with ARM CPU and Parallels instead of VirtualBox, please mention this in the issues and pull requests that you create during this exercise. Ideally, use the `Parallels` label on GitLab for that.
 - If you run into problems, check out the "Further Information" sections at the bottom of the tasks. These sections contain information about common pitfalls and link to the documentation of the used tools.
 

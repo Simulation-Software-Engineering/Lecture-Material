@@ -49,7 +49,7 @@ Introduce `Hello-World` example
 
 - A build system
 - The / a go-to solution for small (research) projects (e.g., latex document, processing data, ...), though also used in big projects ([Linux kernel](https://github.com/torvalds/linux))
-- A buidling block for CMake
+- A building block for CMake
 - Nice non-expert introduction in [py-RSE book, chapter 9](https://merely-useful.tech/py-rse/automate.html)
 - [GNU Make](https://www.gnu.org/software/make/): standard implementation of Make for Linux and macOS
 

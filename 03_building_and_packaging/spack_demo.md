@@ -29,7 +29,7 @@
   spack compiler find
   ```
 
-  This will find preinstalled compilers which is important. Without any compiler Spack is most likey useless as most packages need to be compiled.
+  This will find preinstalled compilers which is important. Without any compiler Spack is most likely useless as most packages need to be compiled.
 
   The command
 
@@ -89,7 +89,7 @@
   spack find
   ```
 
-  Checks the root environment and should show `zlib` being available now. Only `zlib` should be shown even if preinstalled software was found by `spack external find`. These external packages have not been added to the root environment of Spack **explicity** yet and thus do not show up yet.
+  Checks the root environment and should show `zlib` being available now. Only `zlib` should be shown even if preinstalled software was found by `spack external find`. These external packages have not been added to the root environment of Spack **explicitly** yet and thus do not show up yet.
 
 ## 3. Spack Package Creation
 

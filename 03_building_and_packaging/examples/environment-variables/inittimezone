@@ -6,7 +6,7 @@
 #
 
 if [ -e /etc/timezone -o -e /etc/localtime ]; then
-  echo "Timezone already initalized"
+  echo "Timezone already initialized"
   exit 0
 fi
 

@@ -147,7 +147,7 @@ THE SOFTWARE IS PROVIDED "AS IS", ...
 - Not everything is code, CC licenses is specifically for creative work that is not code.
 
 - The basis, plain **CC** or **CC0**: copyright waived, do what you want
-- Restrictions are *"substracted"*:
+- Restrictions are *"subtracted"*:
     - **-BY**: attribution -> you need to credit original creation
     - **-SA**: share alike -> modifications need same license (similar to copyleft)
     - **-ND**: no derivatives -> you are not allowed to modify

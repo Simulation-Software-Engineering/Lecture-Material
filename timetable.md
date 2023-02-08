@@ -135,3 +135,11 @@
 
 - **15** Lecture evaluation
 - **75** [Boost.Test and CTest in Action: SideMade Exercise](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_exercise.md)
+
+## 14.1 – Thu, February 9, 2023
+
+- The Challenge, step three, presentations
+
+## 14.2 – Thu, February 9, 2023
+
+- The Challenge, step three, presentations

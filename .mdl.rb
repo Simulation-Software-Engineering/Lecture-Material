@@ -1,3 +1,5 @@
+# Don't forget to also edit .markdownlint.json
+
 # Enable all rules by default
 all
 

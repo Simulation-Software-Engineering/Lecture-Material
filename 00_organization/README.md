@@ -12,4 +12,4 @@ Learning goals:
 | 40 minutes | [`course_intro_slides.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/course_intro_slides.md) |
 | 15 minutes | [`rse_basics.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/rse_basics_slides.md) |
 
-The folder `wt2122` contains organizational content specific to the lecture in winter term 2021/22.
+Folders such as `wt2122` contain organizational content specific to previous lectures.

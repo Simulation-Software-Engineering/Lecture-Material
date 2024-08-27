@@ -6,7 +6,7 @@
 
 Material of the Simulation Software Engineering lecture. There are different way how to get an overview:
 
-- Look at `timetable.md` of the [current course](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/timetable.md) or [previous courses](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/00_organization/wt2122/timetable.md), or
+- Look at `timetable.md` of the [current course](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/timetable.md) or [a previous course](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/00_organization/wt2223/timetable.md), or
 - Look at the `README.md` files of each chapter / folder.
 
 Please note that we update the material over the course of each semester.
@@ -34,7 +34,7 @@ It will automatically read the markdownlint configuration of this repository. Th
 
 In several parts of the material, we use content from
 
-> Irving, Hertweck, Johnston, Ostblom, Wickham, and Wilson: [Research Software Engineering with Python](https://merely-useful.tech/py-rse), 2021,
+> Irving, Hertweck, Johnston, Ostblom, Wickham, and Wilson: [Research Software Engineering with Python](https://third-bit.com/py-rse), 2021,
 
 a book, which we also recommend to recap Git/Bash/Python basics.
 

@@ -1,4 +1,4 @@
-# Git -- the standard version control system
+# Git – The Standard Version Control System
 
 Learning goals:
 

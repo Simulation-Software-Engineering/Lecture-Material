@@ -175,7 +175,7 @@ td {
 | ---- | ---- | ------- |------ | -------- |
 | 17.11. |Lecture | 2 | Containers | Ishaan |
 | 17.11. |Lab | 2 | Virtual machines and containers | Ishaan |
-| 24.11. |Lecture | 3 | Make and CMake | Benjamin
+| 24.11. |Lecture | 3 | Make and CMake | Benjamin |
 | 24.11. |Lab | 3 | CMake | Benjamin |
 | 01.12. |Lecture | 3 | CPack, Debian packages | tbd. |
 | 01.12. |Lab | 3 | CPack, Debian packages | tbd. |

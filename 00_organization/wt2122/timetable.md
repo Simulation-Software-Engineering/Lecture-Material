@@ -146,6 +146,6 @@
 
 ## 13.2 -- Thu, February 03. 2022
 
-- **15** Software development tools (Alex) [tools_alex_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/tools_alex_slides.md), [tools_alex_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/tools_alex_demo.md) |
+- **15** Software development tools (Alex) [tools_alex_slides.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/tools_alex_slides.md), [tools_alex_demo.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/tools_alex_demo.md)
 - **15** Evaluation (EvaSys)
 - **10** Call for master's theses and course participation: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/master_thesis_suggestions_slides.md)

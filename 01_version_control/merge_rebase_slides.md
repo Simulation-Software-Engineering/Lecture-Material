@@ -88,6 +88,7 @@ slideOptions:
 <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/01_version_control/figs/history_merge/fig.png" width=70%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px" >
 
 - `git log`
+
     ```
     3e70cb5 8 seconds .. Merge branch 'feature' HEAD -> main
     607a08a 18 seconds.. E feature

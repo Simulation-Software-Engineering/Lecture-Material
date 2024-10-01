@@ -51,10 +51,28 @@ slideOptions:
 
 ---
 
-## Merge Commits
+## Branches
+
+- It is natural to branch off in version control.
+- `git checkout -b feature`
+    <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/01_version_control/figs/history_branch/fig.png" width=70%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px" >
+- For well-organized projects, real conflicts are rare.
+
+---
+
+## Merge Commits 1/2
 
 - `git checkout main && git merge feature`
     <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/01_version_control/figs/history_merge/fig.png" width=70%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px" >
+- Remember: commits are **snapshots**, no diffs
+- If conflicts, resolve before creating the commit
+
+---
+
+## Merge Commits 2/2
+
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/01_version_control/figs/history_merge/fig.png" width=70%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px" >
+
 - A merge commit (normally) has two parent commits `M^1` and `M^2` (don't confuse `^2` with `~2`)
     - Can't show unique diff
     - First parent relative to the branch you are on (`M^1` = `C`, `M^2` = `E`)
@@ -65,6 +83,26 @@ slideOptions:
 
 ---
 
+## History of a Merge
+
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/01_version_control/figs/history_merge/fig.png" width=70%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px" >
+
+- `git log`
+    ```
+    3e70cb5 8 seconds .. Merge branch 'feature' HEAD -> main
+    607a08a 18 seconds.. E feature
+    2e4f61f 28 seconds.. C
+    27294a8 76 seconds.. D
+    43d448e 2 minutes .. B
+    e3a9f8d 2 minutes .. A
+    ```
+
+- A merge takes all commits from `feature` to `main`.
+- Sorted by timestamp
+- Graph view: `git log --graph`
+
+---
+
 ## Why is a Linear History Important?
 
 We use here:
@@ -72,7 +110,6 @@ We use here:
 > Linear history := no merge commits
 
 - Merge commits are hard to understand per se.
-- A merge takes all commits from `feature` to `main` (on `git log`). --> Hard to understand
 - Developers often follow projects by reading commits (reading the diffs). --> Harder to read (where happened what)
 - Tracing bugs easier with linear history (see `git bisect`)
     - Example: We know a bug was introduced between `v1.3` and `v1.4`.
@@ -83,15 +120,25 @@ We use here:
 
 - Real conflicts are very rare in real projects, most merge commits are false positives (not conflicts) and should be avoided.
 - If there are no changes on `main`, `git merge` does a *"fast-forward"* merge (no merge commit).
+    <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/01_version_control/figs/history_fastforward/fig.png" width=70%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px" >
 - If there are changes on `main`, rebase `feature` branch.
 
 ---
 
-## Rebase
+## Rebase 1/2
+
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/01_version_control/figs/history_branch/fig.png" width=50%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 - `git checkout feature && git rebase main`
     <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/01_version_control/figs/history_rebase/fig.png" width=90%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
-- States of issues change (and new parents) --> history is rewritten
+- States of commits change (and new parents) --> history is rewritten
+
+---
+
+## Rebase 2/2
+
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/01_version_control/figs/history_rebase/fig.png" width=90%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
 - If `feature` is already on remote, it needs a force push `git push --force myfork feature` (or `--force-with-lease`).
 - Be careful: Only use rebase if **only you** work on a branch (a local branch or a branch on your fork).
 - For local branches very helpful: `git pull --rebase` (fetch & rebase)
@@ -104,7 +151,7 @@ We use here:
     - Create a merge commit
     - Squash and merge
     - Rebase and merge
-- Look at a PR together, e.g. [PR 1432 from preCICE](https://github.com/precice/precice/pull/1432) (will be closed eventually)
+- Look at a PR together, e.g. [PR 2059 from preCICE](https://github.com/precice/precice/pull/2059) (will be closed eventually)
 
 > What do the options do?
 
@@ -135,8 +182,6 @@ We use here:
 - Don't use rebase on a public/shared branch during development
 - Squash before merging if reasonable
 - Delete `feature` branch after merging
-- Local view: `git log --graph`
-- Remote view on GitHub, e.g. [for preCICE](https://github.com/precice/precice/network)
 
 ---
 

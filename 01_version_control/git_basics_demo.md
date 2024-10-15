@@ -9,7 +9,7 @@
     - Maintainer: rebase, squash, cherry-pick, bisect
     - Owner: submodules
 
-![git overview picture from py-rse](https://merely-useful.tech/py-rse/figures/git-cmdline/git-remote.png)
+![git overview picture from py-rse](https://third-bit.com/py-rse/figures/git-cmdline/git-remote.png)
 
 - `git --help`, `git commit --help`
 - incomplete statement `git comm`

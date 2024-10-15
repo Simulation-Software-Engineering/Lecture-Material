@@ -11,8 +11,8 @@ on:
 
 jobs:
   create_pdfs:
-    runs-on: ubuntu-20.04
-    container: pandoc/latex:latest
+    runs-on: ubuntu-22.04
+    container: pandoc/latex:2
     steps:
       - name: Install bash
         run: apk add bash
@@ -21,7 +21,8 @@ jobs:
       - name: Compile PDFs (slides)
         run: |
           ./scripts/create-pdf-from-markdown.sh slides
-      - uses: actions/upload-artifact@master
+      - name: Upload slides
+        uses: actions/upload-artifact@master
         with:
           name: slides
           path: slides
@@ -29,23 +30,14 @@ jobs:
       - name: Compile PDFs (quizzes)
         run: |
           ./scripts/create-pdf-from-markdown.sh quiz
-      - uses: actions/upload-artifact@master
-        with:
-          name: texts
-          path: texts
-          retention-days: 7
       - name: Compile PDFs (exercises)
         run: |
           ./scripts/create-pdf-from-markdown.sh exercise
-      - uses: actions/upload-artifact@master
-        with:
-          name: texts
-          path: texts
-          retention-days: 7
       - name: Compile PDFs (demos)
         run: |
           ./scripts/create-pdf-from-markdown.sh demo
-      - uses: actions/upload-artifact@master
+      - name: Upload texts
+        uses: actions/upload-artifact@master
         with:
           name: texts
           path: texts

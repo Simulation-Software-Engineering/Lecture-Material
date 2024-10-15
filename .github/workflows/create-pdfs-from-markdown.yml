@@ -29,19 +29,9 @@ jobs:
       - name: Compile PDFs (quizzes)
         run: |
           ./scripts/create-pdf-from-markdown.sh quiz
-      - uses: actions/upload-artifact@master
-        with:
-          name: texts
-          path: texts
-          retention-days: 7
       - name: Compile PDFs (exercises)
         run: |
           ./scripts/create-pdf-from-markdown.sh exercise
-      - uses: actions/upload-artifact@master
-        with:
-          name: texts
-          path: texts
-          retention-days: 7
       - name: Compile PDFs (demos)
         run: |
           ./scripts/create-pdf-from-markdown.sh demo

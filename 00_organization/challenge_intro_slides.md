@@ -21,6 +21,10 @@ slideOptions:
   .reveal section h2 {
     color: orange;
   }
+  .reveal section h3 {
+    color: orange;
+    text-align: left;
+  }
   .reveal code {
     font-family: 'Ubuntu Mono';
     color: orange;
@@ -37,20 +41,38 @@ slideOptions:
 
 ---
 
-## Schedule
+## The Challenge
 
-1. Pick a large-scale open-source simulation software (till **Oct 27**, evening)
-2. Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 10**)
-3. Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 15**)
-4. Contribute something small (but not trivial) to the software (*"good first issue"*). Run through complete contribution cycle (issue, discussion, PR, review, merge). Present what you did. Examples: feature, tutorial, documentation, support of new packaging tool, bugfix, ... (**Feb 9**)
+- Contribute something small (but not trivial) to a large-scale open-source simulation software (*"good first issue"*)
+- Examples: feature, tutorial, documentation, new packaging, bugfix, ...
+- Run through complete cycle (issue, discussion, PR, review, merge)
 
-Rough workload / grading weights: 25%, 25%, 50%
+### Timeline
+
+1. Pick a software (till **Oct 23**, evening)
+2. Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 6**)
+3. Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 11**)
+4. Suggest contribution (**Dec 16**)
+5. Present the contribution (**Feb 5**)
+
+---
+
+## Grading
+
+Challenge / exercises / engagement = 45% / 50% / 5%
+
+The challenge part:
+
+- All 3 reports: 3/8
+- Presentation: 1/8
+- Actual contribution: 2/8 difficulty, 2/8 quality (*"net benefit"* for maintainers?)
+- *"outstanding"* / *"passed"* / *"failed"*
 
 ---
 
 ## Which Software to Pick?
 
-- Something in the simulation universe (this includes equation solvers, meshing, scientific visualization, ...)
+- Something in the simulation universe (this includes equation solvers, meshing, scientific visualization, (AI), ...)
 - Truly open source, all development in public
 - Uses Git
 - Written in Python or C++ (not a strict must)
@@ -95,25 +117,25 @@ Rough workload / grading weights: 25%, 25%, 50%
 
 ## How to Submit my Choice?
 
-- [https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/challenge](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/challenge)
-- Comment in [issue #1](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/challenge/-/issues/1) till **27th of October** (next Thursday) evening (no FCFS)
+- [https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/challenge](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/challenge)
+- Comment in [issue #1](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/challenge/-/issues/1) till **23rd of October** (next Wednesday) evening (no FCFS)
 - Priority list with at least three choices
-- If not on our suggestion list, write short paragraph what the software does and give links
+- If **not** on our suggestion list, write short paragraph what the software does and give links
 
 ---
 
 ## Role of Advisor
 
-- Benjamin or Ishaan
-- Use exercise blocks and time after lectures for discussions
-- Discuss at least what you plan to contribute
+- Benjamin, Frédéric, Gerasimos, or Ishaan
+- Use, for example, exercise blocks and time after lectures for discussions
 - Share links etc. to issues and PRs (or tag us)
 
 ---
 
 ## Presentations
 
-- Length depends on students in course (maybe 5-10 mins for first two presentations, 10-20 mins for last)
+- Length depends on number of students in course (maybe 5-10 mins)
+- Everybody has to present at least once
 - Everybody should learn something from every presentation
 - Style: like a presentation in a team meeting, not like a presentation at a conference
 
@@ -121,10 +143,10 @@ Rough workload / grading weights: 25%, 25%, 50%
 
 ## Reports
 
-- Please also submit a report for each presentation
+- Submit a report for each step
 - 1-2 pages (2500-5000 chars)
 - Written in markdown
-- Submission via a merge request to the [GitLab challenge repo](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/challenge)
+- Submission via a merge request to the [GitLab challenge repo](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/challenge)
 - Add links, instructions, ... should work like a compact summary for everybody in the end
 - Will be visible to everybody in SSE group
 - We will prepare templates

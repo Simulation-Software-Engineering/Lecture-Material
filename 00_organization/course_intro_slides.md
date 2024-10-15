@@ -21,6 +21,10 @@ slideOptions:
   .reveal section h2 {
     color: orange;
   }
+  .reveal section h3 {
+    color: orange;
+    text-align: left; 
+  } 
   .reveal code {
     font-family: 'Ubuntu Mono';
     color: orange;
@@ -146,7 +150,8 @@ Two parallel branches:
 - Examples: feature, tutorial, documentation, new packaging, bugfix, ...
 - Run through complete cycle (issue, discussion, PR, review, merge)
 
-**Timeline**
+### Timeline
+
 1. Pick a software (till **Oct 23**, evening)
 2. Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 6**)
 3. Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 11**)

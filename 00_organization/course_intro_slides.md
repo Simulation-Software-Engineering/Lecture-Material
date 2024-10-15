@@ -147,7 +147,6 @@ Two parallel branches:
 - Run through complete cycle (issue, discussion, PR, review, merge)
 
 **Timeline**
-
 1. Pick a software (till **Oct 23**, evening)
 2. Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 6**)
 3. Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 11**)

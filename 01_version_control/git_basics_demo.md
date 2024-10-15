@@ -85,7 +85,7 @@ Starting remarks:
     - `git fetch alex`
     - `git checkout -t alex/[branch-name]`
     - I could now also push to `ajaust`'s remote
-    
+
 - (8) GitHub CLI
     - `git push -u ...` and `git pull -t ...` maybe hard to remember at first.
     - Things get easier with the [GitHub CLI](https://cli.github.com/), but bound to GitHub, obviously.

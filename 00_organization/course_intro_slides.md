@@ -23,8 +23,8 @@ slideOptions:
   }
   .reveal section h3 {
     color: orange;
-    text-align: left; 
-  } 
+    text-align: left;
+  }
   .reveal code {
     font-family: 'Ubuntu Mono';
     color: orange;

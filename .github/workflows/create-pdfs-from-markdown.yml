@@ -12,7 +12,7 @@ on:
 jobs:
   create_pdfs:
     runs-on: ubuntu-22.04
-    container: pandoc/latex:latest
+    container: pandoc/latex:2
     steps:
       - name: Install bash
         run: apk add bash

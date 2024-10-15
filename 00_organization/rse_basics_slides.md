@@ -61,9 +61,8 @@ slideOptions:
 
 - *"Movement"* started in the UK, first UK RSE conference in 2016
 - First conferences in Germany and the Netherlands in 2019
-- [first de-RSE position paper](https://f1000research.com/articles/9-295/v2) in 2020, [several working groups](https://de-rse.org/en/working_groups.html)
-   - [learning and teaching RSE](https://de-rse.org/learn-and-teach/), [foundational competencies of an RSE](https://de-rse.org/blog/2024/10/08/identifying-the-foundational-competencies-of-an-RSE-en.html)
-- Second Thursday of October is the [International RSE Day](https://researchsoftware.org/council/intl-rse-day.html)
+- [First de-RSE position paper](https://f1000research.com/articles/9-295/v2) in 2020, [several working groups](https://de-rse.org/en/working_groups.html)
+    - [Learning and teaching RSE](https://de-rse.org/learn-and-teach/), [foundational competencies of an RSE](https://de-rse.org/blog/2024/10/08/identifying-the-foundational-competencies-of-an-RSE-en.html)
 - [Why be an RSE?](https://researchit.blogs.bristol.ac.uk/2021/10/14/international-rse-day-why-be-an-rse/) Interesting and novel projects, technical freedom, RSEs come from varied backgrounds, development for social good
 
 ---

@@ -37,7 +37,7 @@ Starting remarks:
     - fork -> my fork
 
 - (2) Working directory:
-    - ZSH shell shows git branches. There are similar solutions for Bash as well.
+    - ZSH shell shows git branches. There are [similar solutions for Bash](https://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt) as well.
     - `git remote -v` (I have upstream, myfork, ...)
     - mention difference between ssh and https (also see GitHub)
     - get newest changes `git pull upstream develop`

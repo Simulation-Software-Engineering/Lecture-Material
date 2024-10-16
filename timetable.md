@@ -2,7 +2,8 @@
 
 ## 1.1 – Wed, October 16, 2024
 
-- **50** min.: [Course planning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/course_intro_slides.md) + questions
+- **40** min.: [Course planning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/course_intro_slides.md) + questions
+- **10** min.: [Overview demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/topic_overview_demo.md)
 - **20** min.: [Introduction to RSE](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/rse_basics_slides.md)
 - **20** min.: [Introduction to version control](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/intro_slides.md)
 

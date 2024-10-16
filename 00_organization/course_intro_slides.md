@@ -144,6 +144,10 @@ Two parallel branches:
 
 ---
 
+## Topic Overview Demo
+
+---
+
 ## The Challenge
 
 - Contribute something small (but not trivial) to a large-scale open-source simulation software (*"good first issue"*)

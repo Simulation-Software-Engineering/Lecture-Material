@@ -1,0 +1,30 @@
+# Topic Overview Demo
+
+- We will use [preCICE](https://precice.org/) as an example for many things in this course.
+- Briefly sprint through all 6 chapters of the course and preview what we will learn.
+- preCICE is a coupling library for partitioned multi-physics simulations, developed at US and TUM.
+- Chapter 1. Version Control
+    - [preCICE organization on GitHub](https://github.com/precice), multi-repo approach
+    - at the core is a [library called precice](https://github.com/precice/precice)
+    - forking workflow with protected main branch, develop is default, open a PR, explain source and target
+    - linear history, show commits
+- Chapter 2. Virtualization and Containers
+    - being a coupling library, many software components are involved in actual simulations --> virtualization is an important topic to handle all these components
+    - [preCICE Docker images](https://hub.docker.com/u/precice) for testing only (preCICE and downstream repositories), not meant for users
+    - [virtual machine](https://precice.org/installation-vm.html) for demo (sandbox) mode with many components, scripted using Vagrant
+- Chapter 3. Building and Packaging
+    - [installation overview](https://precice.org/installation-overview.html), Debian package, spack, Python bindings on PyPI
+    - package creation and [building from source](https://precice.org/installation-source-configuration.html) via CMake
+- Chapter 4. Documentation
+    - written in markdown in distributed places (click edit on some page), rendered via jekyll, hosted via GitHub Pages
+    - distinguish user from dev docs, tutorials, configuration references
+    - [brief styleguide](https://precice.org/docs-meta-content-guidelines.html)
+    - [changelog](https://github.com/precice/precice/blob/develop/CHANGELOG.md)
+- Chapter 5. Testing and Continuous Integration
+    - [unit and integration](https://precice.org/dev-docs-dev-testing.html) tests via Boost.Test
+    - [tests and more automation](https://github.com/precice/precice/actions) run on Github Actions
+    - many Python components use unittest
+- Chapter 6. Miscellaneous
+    - LGPL3 license
+    - semantic versioning scheme
+    - [distribution published on DaRUS](https://darus.uni-stuttgart.de/dataset.xhtml?persistentId=doi:10.18419/darus-4167)

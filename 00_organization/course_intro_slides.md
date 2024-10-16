@@ -127,7 +127,6 @@ Two parallel branches:
 - By definition, we study quickly evolving technology ... help us staying up to date
 - There are surely still flaws in the material ... help us fix them
 - Contribute by opening PRs
-- Click `edit me` on website
 - For large parts (new tool, new chapter, ...), discuss in issue first
 - See also [`CONTRIBUTING.md`](https://github.com/Simulation-Software-Engineering/lecture-materials/blob/main/CONTRIBUTING.md)
 

@@ -152,7 +152,7 @@ We use here:
     - Create a merge commit
     - Squash and merge
     - Rebase and merge
-- Look at a PR together, e.g. [PR 2059 from preCICE](https://github.com/precice/precice/pull/2059) (will be closed eventually)
+- Look at a PR together, e.g. [PR 2113 from preCICE](https://github.com/precice/precice/pull/2113) (will be closed eventually)
 
 > What do the options do?
 

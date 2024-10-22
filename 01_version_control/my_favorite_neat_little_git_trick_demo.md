@@ -26,6 +26,7 @@
     [format]
             pretty = format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(20,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
     ```
+
 - `git gui citool` is a nice GUI to stage parts of your changes (https://git-scm.com/docs/git-gui).
 
 ### Git Lens

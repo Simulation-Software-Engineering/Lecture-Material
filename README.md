@@ -4,14 +4,14 @@
 [![PDFs](https://github.com/Simulation-Software-Engineering/lecture-materials/actions/workflows/create-pdfs-from-markdown.yml/badge.svg)](https://github.com/Simulation-Software-Engineering/Lecture-Material/actions/workflows/create-pdfs-from-markdown.yml)
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
-Material of the Simulation Software Engineering lecture. There are different way how to get an overview:
+Material of the Simulation Software Engineering lecture. There are different ways how to get an overview:
 
 - Look at `timetable.md` of the [current course](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/timetable.md) or [a previous course](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/00_organization/wt2223/timetable.md), or
 - Look at the `README.md` files of each chapter / folder.
 
 Please note that we update the material over the course of each semester.
 
-## List of chapters
+## List of Chapters
 
 1. [Version Control](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/01_version_control)
 2. [Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/02_virtualization_and_containers)
@@ -22,7 +22,7 @@ Please note that we update the material over the course of each semester.
 
 ## Linting
 
-The markdown files can be checked using [markdownlint](https://github.com/markdownlint/markdownlint/). Once the linter is installed one can run it locally from the root of this repository using
+The markdown files can be checked using [markdownlint](https://github.com/markdownlint/markdownlint/). Once the linter is installed, run it locally from the root of this repository using
 
 ```
 mdl .
@@ -30,7 +30,7 @@ mdl .
 
 It will automatically read the markdownlint configuration of this repository. The linter is configured in the files `.mdl.rb` and `.mdlrc`. The majority of the configuration is done in `.mdl.rb`.
 
-## Third-party content
+## Third-Party Content
 
 In several parts of the material, we use content from
 

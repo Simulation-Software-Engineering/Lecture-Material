@@ -2,12 +2,12 @@
 
 Learning goals:
 
-- What is code packaging and which technologies are available to package code
-- How is Python code packaged for uploading to PyPI and installation with pip
-- What are libraries, how can they be used
-- How can codes be build and dependencies handled with Make and CMake
-- How are software packages provided via common packaging approaches (pip, apt, npm)
-- How are software packages provided for high-performance computing (Spack, EasyBuild)
+- Explain why software is packaged.
+- Create Python packages, upload to PyPI, and install with pip.
+- Understand the difference between static and dynamic libraries and common ways of installation on Linux.
+- Build C++ software and handle dependencies with Make and CMake.
+- Package C++ software with CPack and create Debian packages.
+- Create Spack packages for high-performance computing.
 
 | Duration | Content |
 | --- | --- |

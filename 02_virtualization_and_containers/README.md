@@ -2,11 +2,10 @@
 
 Learning goals:
 
-- Understand the difference between virtualization and containers.
-- Have clarity on when and how to use virtual machines and/or containers.
-- Work with virtual machines (VirtualBox) and manage them with Vagrant.
-- Work with containers with Docker (and Singularity).
-- Know how to set up own containers tailored to your requirements.
+- Understand the difference between virtualization and containers and when to use what.
+- Create and modify virtual machines with VirtualBox and generate them with Vagrant.
+- Create and manage Docker containers.
+- Know about Singularity.
 
 | Duration | Content |
 | --- | --- |

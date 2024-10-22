@@ -17,10 +17,9 @@
 
 ## 2.1 – Wed, October 23, 2024
 
-- **30-45** min.: [*My favorite neat little Git trick*](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/my_favorite_neat_little_git_trick_demo.md)
-- Maybe: **30** min.: [Git quiz](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_quiz.md)
+- **30** min.: [*My favorite neat little Git trick*](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/my_favorite_neat_little_git_trick_demo.md)
 - **25** min.: [Merge vs. rebase](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/merge_rebase_slides.md)
-- **20** min.: [Working in teams / Git workflows](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/workflow_slides.md)
+- **25** min.: [Working in teams / Git workflows](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/workflow_slides.md)
 - **10** min.: [GitHub/GitLab standards](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/standards_slides.md)
 
 ## 2.2 – Wed, October 23, 2024

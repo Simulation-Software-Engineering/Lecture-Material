@@ -19,6 +19,7 @@
     - [GitLab](https://about.gitlab.com/), open-source, hosted e.g. at [IPVS](https://gitlab-sim.informatik.uni-stuttgart.de)
     - [Bitbucket](https://bitbucket.org/product/)
     - [SourceForge](https://sourceforge.net/)
+    - Non-profit alternative: [Codeberg](https://codeberg.org/)
     - many more
     - often, more than just hosting, also DevOps
 
@@ -29,7 +30,7 @@
 Starting remarks:
 
 - There is not *the one solution* how to do things with Git. I simply show what I typically use.
-- Don't use a client if you don't understand the command line `git`
+- Don't use a client if you don't understand the command line `git`, meaning you don't have a mental model of Git yet.
 
 - (1) Look at GitHub
     - [preCICE repository](https://github.com/precice/precice)
@@ -99,6 +100,9 @@ Starting remarks:
 - Chapters [6](https://third-bit.com/py-rse/git-cmdline.html) and [7](https://third-bit.com/py-rse/git-advanced.html) of Research Software Engineering with Python
 - [Podcast All Things Git: History of VC](https://www.allthingsgit.com/episodes/the_history_of_vc_with_eric_sink.html)
 - [git purr](https://girliemac.com/blog/2017/12/26/git-purr/)
+- [Oh Shit, Git!?!](https://ohshitgit.com/)
+- [Why Git is hard](https://roadrunnertwice.dreamwidth.org/596185.html)
+- [What is in that .git directory?](https://blog.meain.io/2023/what-is-in-dot-git/)
 
 ### References
 

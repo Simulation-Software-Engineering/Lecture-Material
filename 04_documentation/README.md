@@ -5,7 +5,7 @@ Learning goals:
 - Be aware that documentation is crucial in RSE.
 - Understand that there is a difference between documentation and *good* documentation.
 - Know the purpose and basic structure of several standard documentation building blocks (README, commit message, changelog, ...).
-- Read and write common lightweight markup languages and generate PDFs from them.
+- Read and write common lightweight markup languages and generate PDF files from them.
 - Know about the most important website generators and hosting options for research software documentation.
 
 | Duration | Content |

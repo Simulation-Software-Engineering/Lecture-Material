@@ -2,7 +2,7 @@
 
 Learning goals:
 
-- Understand the difference between virtualization and containers and when to use what.
+- Name differences between virtualization and containers and name use cases for each.
 - Create and modify virtual machines with VirtualBox and generate them with Vagrant.
 - Create and manage Docker containers.
 - Know about Singularity.

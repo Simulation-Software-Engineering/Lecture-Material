@@ -15,6 +15,10 @@
             pretty = format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(20,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
     ```
 
+- Fix spelling mistakes in latest commit, which was not pushed to the remote yet
+    - `git commit -m "Improved commit message" --amend`
+    - Use with local changes only!
+
 ## Tricks from Winter Term 2022/23
 
 - An interactive learning environment: [Learn Git Branching](https://learngitbranching.js.org/)

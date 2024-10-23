@@ -18,6 +18,11 @@
 - Fix spelling mistakes in latest commit, which was not pushed to the remote yet
     - `git commit -m "Improved commit message" --amend`
     - Use with local changes only!
+ 
+- Be faster with Git using aliases
+    - For example with the `zsh` shell and the [OhMyZsh! git plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
+        - `git commit -> gc`
+        - `git log --graph -> glgg`
 
 ## Tricks from Winter Term 2022/23
 

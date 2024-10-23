@@ -48,6 +48,7 @@ slideOptions:
     - (`^` is the same as `~1`)
     - Pointer to parent commit goes into hash
 - `git show` gives diff of commit to parent
+    - similarly, `git cherry-pick` or `git revert`
 
 ---
 
@@ -192,3 +193,5 @@ We use here:
 - [Hackernoon: "What's the diff?"](https://hackernoon.com/git-merge-vs-rebase-whats-the-diff-76413c117333)
 - [GitHub Blog: "Commits are snapshots, not diffs"](https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/)
 - [Stack Overflow: "Git show of a merge commit"](https://stackoverflow.com/questions/40986518/git-show-of-a-merge-commit?)
+- [Why Git is hard](https://roadrunnertwice.dreamwidth.org/596185.html)
+- [What is in that .git directory?](https://blog.meain.io/2023/what-is-in-dot-git/)

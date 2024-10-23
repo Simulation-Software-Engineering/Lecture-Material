@@ -3,7 +3,7 @@
 Learning goals:
 
 - Explain why software is packaged.
-- Create Python packages, upload to PyPI, and install with pip.
+- Create Python packages, publish on PyPI, and install with pip.
 - Understand the difference between static and dynamic libraries and common ways of installation on Linux.
 - Build C++ software and handle dependencies with Make and CMake.
 - Package C++ software with CPack and create Debian packages.

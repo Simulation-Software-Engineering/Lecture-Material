@@ -24,6 +24,10 @@
         - `git commit -> gc`
         - `git log --graph -> glgg`
 
+- To create a custom `.gitignore` file using *multiple* languages or IDEs, you can also use [gitignore.io](https://gitignore.io/).
+    - *Toptal* also provides a [cli tool](https://docs.gitignore.io/install/command-line) which enables quick creation of a `.gitignore` file in the current repository.
+    - You can also use `wget` or `curl` in combination with [https://www.toptal.com/developers/gitignore/api/](https://www.toptal.com/developers/gitignore/api/) followed by a comma (`,`) separated list to get the `.gitignore` file directly without the cli.
+
 ## Tricks from Winter Term 2022/23
 
 - An interactive learning environment: [Learn Git Branching](https://learngitbranching.js.org/)

@@ -15,6 +15,10 @@
             pretty = format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(20,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
     ```
 
+- To create a custom `.gitignore` file using *multiple* languages or IDEs you can also use [gitignore.io](https://gitignore.io/)
+    - *Toptal* also provides a [cli tool](https://docs.gitignore.io/install/command-line) which enables quick creation of a `.gitignore` file in the current repository
+    - You can also use `wget` or `curl` in combination with [https://www.toptal.com/developers/gitignore/api/](https://www.toptal.com/developers/gitignore/api/) followed by a comma (`,`) seperated list to get the `.gitignore` file directly without the cli
+
 ## Tricks from Winter Term 2022/23
 
 - An interactive learning environment: [Learn Git Branching](https://learngitbranching.js.org/)

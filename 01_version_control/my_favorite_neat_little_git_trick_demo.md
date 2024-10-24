@@ -15,6 +15,15 @@
             pretty = format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(20,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
     ```
 
+- Fix spelling mistakes in latest commit, which was not pushed to the remote yet
+    - `git commit -m "Improved commit message" --amend`
+    - Use with local changes only!
+
+- Be faster with Git using aliases
+    - For example with the `zsh` shell and the [OhMyZsh! git plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)
+        - `git commit -> gc`
+        - `git log --graph -> glgg`
+
 - To create a custom `.gitignore` file using *multiple* languages or IDEs, you can also use [gitignore.io](https://gitignore.io/).
     - *Toptal* also provides a [cli tool](https://docs.gitignore.io/install/command-line) which enables quick creation of a `.gitignore` file in the current repository.
     - You can also use `wget` or `curl` in combination with [https://www.toptal.com/developers/gitignore/api/](https://www.toptal.com/developers/gitignore/api/) followed by a comma (`,`) separated list to get the `.gitignore` file directly without the cli.

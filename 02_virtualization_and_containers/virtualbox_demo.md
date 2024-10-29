@@ -1,42 +1,5 @@
 # VirtualBox demo
 
-## Introduction to Virtualization
-
-![A sketch of virtual machines](./material/figs/virtualmachine-sketch.png)
-
-![A sketch of containers](./material/figs/container-sketch.png)
-
-- What is virtualization and what is containerization?
-    - What problems do they solve? Why do we need them?
-- Virtual machines (VMs)
-    - Emulating a complete computer.
-    - Virtual machine brings the full software stack (kernel, libraries etc.)
-    - Has a (type 1/2) hypervisor. Type 1 runs on bare metal while type 2 runs within an operating system. Distinction not always clear.
-    - Might need/benefit from virtualization technologies (VT-X).
-    - Great flexibility. Can run (normally) any operating system that runs on the virtualized platform.
-    - Strict separation from host operating system. (Popular for safety critical tasks: c't banking os, Desinfec't, Remote laptops)
-- Focus of lecture will be on Linux and Linux-based containers and VMs.
-- Various virtualization and container technologies and tools to manage them. Sometimes separation is a bit vague/complicated and changed over time (lxc/lxd, Docker).
-- We discuss tools and use cases that are (more) likely to be encountered in simulation software.
-
-## Introduction to VirtualBox
-
-- You can have root rights inside your virtual machine.
-- What problems does it solve?
-    - You want to run a different operating system within your current one. Example: I am on Linux, but want to use Microsoft Office and other stuff (without using WINE/Proton).
-    - You want to run services in an encapsulated way. Want to run than one server on one physical machine. (Proxmox, KVM)
-- Hypervisors create some overhead.
-- Content of a VirtualBox Image
-    - Show directory on drive:
-        - `NAMEOFVM.vdi`: The virtual hard drive containing the guest os
-        - `NAMEOFVM.vbox`: XML containing metadata and configuration information (RAM, network devices...)
-        - `NAMEOFVM.vbox-prev`: Backup of previous settings
-        - `Logs/`: Directory containing log files
-        - `Snapshots/`: Snapshots of image
-- Short question: What type of hypervisor is VirtualBox? Type 2
-
-## Demo
-
 - Discuss configuration:
     - Virtual machine will reserve cores/threads of your CPU and main memory.
 - Maybe go through installation process to show that it is the same as installing an OS on your normal computer.
@@ -76,13 +39,14 @@
 - Create snapshots on image overview (Burger symbol on the right)
     - Load snapshots for different configuration stages
 - Configure network for ssh
-    - Install `openssh-server` in th VM.
+    - Install `openssh-server` in the VM.
     - Shutdown VM.
     - In VirtualBox window -> File -> Host Network Manager -> Verify that network device is configured `vboxnet0`
     - In virtual machine's settings -> Network -> Adapter 2 -> Enable and set Host only adapter `vboxnet0`
     - Boot VM.
-    - Verify additional network device `enp0s8` and check for ip address. In my case the IP is `192.168.56.101`.
+    - Verify additional network device `enp0s8` and check for ip address. In my case the IP is `192.168.56.101` (seems to be standard).
     - On host machine `ssh VM-USERNAME@192.168.56.101`.
+    - In case of `Too many authentication failures`, see https://serverfault.com/a/540613
 - Show/install extensions to allow for
     - ... some 3D rendering
     - ... shared clipboard

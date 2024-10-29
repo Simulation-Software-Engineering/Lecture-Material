@@ -29,11 +29,10 @@ slideOptions:
 
 ## Learning Goals
 
-- Understand the difference between virtualization and containers.
-- Have clarity on when and how to use virtual machines and/or containers.
-- Work with virtual machines (VirtualBox) and manage them with Vagrant.
-- Work with containers with Docker (and Singularity).
-- Know how to set up own containers tailored to your requirements.
+- Name differences between virtualization and containers and name use cases for each.
+- Create and modify virtual machines with VirtualBox and generate them with Vagrant.
+- Create and manage Docker containers.
+- Name containerization technologies beyond Docker and name their main differences.
 
 ---
 
@@ -41,17 +40,12 @@ slideOptions:
 
 - Developing, testing and debugging software
     - Abstraction layer for different OS, configurations etc.
-    - Ensure software quality
 - Moving/Sharing software
     - Avoid compilation and/or setup complexity, OS dependency
-    - Work around target limitations (e.g. HPC)
-- Manage complex workflows
-    - Ideally under version control
-    - (Potentially) Break down big software into smaller pieces
+- Manage complex workflows, ideally under version control
 - Reproducible research
-    - Make sure others get the same results.
     - Make sure others are able to run your software (also in future).
-- Focus on established, open-source software.
+    - Make sure others get the same results.
 
 ---
 

@@ -42,7 +42,7 @@ slideOptions:
 - [Sylabs Cloud](https://cloud.sylabs.io/library)
     - Image registry and remote builder
 - [Singularity Hub](https://singularityhub.github.io)
-   - Older open source registry
+    - Older open source registry
 
 ---
 
@@ -176,3 +176,4 @@ Details available in [`singularity_demo.md`](https://github.com/Simulation-Softw
 - [Apptainer user guide](https://apptainer.org/docs/user/latest/index.html)
 - [Singularity User Guide](https://docs.sylabs.io/guides/main/user-guide/)
 - [Singularity Cloud](https://cloud.sylabs.io/library)
+- [Sarus](https://user.cscs.ch/tools/containers/sarus/)

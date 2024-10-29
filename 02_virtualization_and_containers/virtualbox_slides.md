@@ -76,10 +76,10 @@ slideOptions:
 - Software and drivers to improves Guest's performance
     - Better video support, shared clipboard, ...
 - Might need additional packages. On Ubuntu 24.04 (guest):
+
     ```bash
     sudo apt install virtualbox-guest-utils virtualbox-guest-x11
     ```
-
 
 ---
 
@@ -99,7 +99,6 @@ Details available in [`virtualbox_demo.md`](https://github.com/Simulation-Softwa
     - How to share a VM image with others?
 
     > "If you can't git diff a file format, it's broken."
-
 
 ---
 

@@ -33,7 +33,7 @@ slideOptions:
 
 - Infrastructure as code
 
-    > Vagrant is a tool for building and managing virtual machine environments in a single workflow. 
+    > Vagrant is a tool for building and managing virtual machine environments in a single workflow.
     > <small>https://developer.hashicorp.com/vagrant/intro</small>
 
 - Initial release 2010 by Mitchell Hashimoto, now [HashiCorp](https://www.hashicorp.com/)

@@ -54,9 +54,7 @@ slideOptions:
 ## Container Solutions
 
 - Plenty of different container formats
-
-  * [lxc/lxd](https://linuxcontainers.org/), [Docker](https://www.docker.com/), [Apptainer](https://apptainer.org/) (Singularity), [podman](https://podman.io/), [Sarus](https://user.cscs.ch/tools/containers/sarus/)...
-
+    - [lxc/lxd](https://linuxcontainers.org/), [Docker](https://www.docker.com/), [Apptainer](https://apptainer.org/), [podman](https://podman.io/), [Sarus](https://user.cscs.ch/tools/containers/sarus/)...
 - Different solutions with different strengths due to different use cases
     - Working on the (Super-)Userspace
     - Direct access to hardware vs. encapsulation

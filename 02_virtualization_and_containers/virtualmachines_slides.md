@@ -50,11 +50,11 @@ slideOptions:
 ## Types of Hypervisors
 
 - **Type 1**
-  - Runs directly on bare-metal hardware, like the host OS
-  - Examples: [Microsoft Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [VMware ESXi](https://www.vmware.com/products/esxi-and-esx.html), [Xen](https://xenproject.org/), [KVM](https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine), ...
+    - Runs directly on bare-metal hardware, like the host OS
+    - Examples: [Microsoft Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [VMware ESXi](https://www.vmware.com/products/esxi-and-esx.html), [Xen](https://xenproject.org/), [KVM](https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine), ...
 - **Type 2**
-  - Negotiates resources shared with a host OS
-  - Examples: [VirtualBox](https://www.virtualbox.org/), [VMWare Workstation Player](https://www.vmware.com/products/workstation-player.html), [Parallels](https://www.parallels.com/eu/products/desktop/)...
+    - Negotiates resources shared with a host OS
+    - Examples: [VirtualBox](https://www.virtualbox.org/), [VMWare Workstation Player](https://www.vmware.com/products/workstation-player.html), [Parallels](https://www.parallels.com/eu/products/desktop/)...
 
 ---
 

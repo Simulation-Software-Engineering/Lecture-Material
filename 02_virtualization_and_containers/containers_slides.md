@@ -32,11 +32,10 @@ slideOptions:
 <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/02_virtualization_and_containers/figs/container-sketch.png" width=30%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 - Container operates in "fenced off" part of the operating system (`namespaces`)
-- Low(er) overhead than virtual machines
+- Lower overhead than virtual machines
     - Runs on kernel (and libraries) of the host OS
     - Cheap to start and stop a container
-- Available features depend on Host
-    - Linux container on Windows or vice versa?
+- Available features depend on Host (Linux, Windows)
 - Container can be isolated.
 
 ---
@@ -47,7 +46,7 @@ slideOptions:
 - Reproducible environments for developing and testing (DevOps)
 - Container hype strongly driven by [Docker](https://www.docker.com/).
 - More and more in science
-    - High-performance computing, "Bring Your Own Environment" (BYOE)
+    - High-performance computing, "Bring Your Own Environment"
     - Reproducible research
 
 ---
@@ -55,11 +54,13 @@ slideOptions:
 ## Container Solutions
 
 - Plenty of different container formats
-    - [lxc/lxd](https://linuxcontainers.org/), [Docker](https://www.docker.com/), [Singularity](https://sylabs.io/), [podman](https://podman.io/), [Sarus](https://user.cscs.ch/tools/containers/sarus/)...
+
+  * [lxc/lxd](https://linuxcontainers.org/), [Docker](https://www.docker.com/), [Apptainer](https://apptainer.org/) (Singularity), [podman](https://podman.io/), [Sarus](https://user.cscs.ch/tools/containers/sarus/)...
+
 - Different solutions with different strengths due to different use cases
-    - (Super-)Userspace
-    - Direct access to hardware (memory, storage, GPUs) vs. encapsulation
-    - Generic or with integration in software ecosystem (e.g. schedulers)
+    - Working on the (Super-)Userspace
+    - Direct access to hardware vs. encapsulation
+    - Generic or with integration in software ecosystem (e.g. job schedulers)
 - Effort to establish certain standards
     - [Open Container Initiative (OCI)](https://opencontainers.org/)
 
@@ -67,16 +68,12 @@ slideOptions:
 
 ## Security
 
-- Docker considers itself safe
+- Containers are isolated
 
     > Applications are safer in containers and Docker provides the strongest default isolation capabilities in the industry
 
-    - But so do most others
 - Read the manual
-- Are third-part containers trust worthy?
-    - There have been cases [of malicious images](https://www.trendmicro.com/vinfo/fr/security/news/virtualization-and-cloud/malicious-docker-hub-container-images-cryptocurrency-mining)
-- Containers isolation from Host depends on container framework
-- Think about **what** you do, **before** you do it
+- Are third-part containers trust-worthy?
 
 ---
 
@@ -85,11 +82,10 @@ slideOptions:
 - Shares many similarities with VMs, but
     - Lightweight alternative to VMs
     - Stricter limitations than VMs
+    - Often different use cases and working together
 - Many different containers solutions
     - Standardization effort
-    - Choose right container for your use case
-
-**Note**: Do not (only) use containers for shipping your software. Not everyone can run/use them.
+    - Choose right solution for your use case
 
 ---
 
@@ -97,7 +93,7 @@ slideOptions:
 
 - [Docker](https://www.docker.com/)
 - [Docker Hub](https://hub.docker.com/)
-- [Singularity](https://sylabs.io/)
+- [Apptainer](https://apptainer.org/)
 - [Sarus](https://user.cscs.ch/tools/containers/sarus/)
 - [lxc/lxd](https://linuxcontainers.org/)
 - [podman](https://podman.io/)

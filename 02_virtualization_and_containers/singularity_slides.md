@@ -23,24 +23,26 @@ slideOptions:
   }
 </style>
 
-# Singularity
+# Singularity / Apptainer
 
 ---
 
 ## Introduction
 
-- Initiated at Lawrence Berkeley National Laboratory
-- Now: Developed by [Sylabs](https://sylabs.io)
-- Written in    Go
-- Comes in [different flavors](https://sylabs.io/singularity/)
-    - SingularityCE (Community edition, open source, BSD licensed)
-    - SingularityPro (Enterprise)
-    - Singularity Enterprise (More enterprise?)
-    - SingularityDesktop (Mac, Beta)
-    - [Sylabs Cloud](https://cloud.sylabs.io/library)
-        - Image registry and remote builder
-    - [Singularity Hub](https://singularityhub.github.io)
-        - Open source registry
+- Initiated in 2015 at Lawrence Berkeley National Laboratory
+- Two open source projects, fork in 2021:
+    - [Apptainer](https://apptainer.org/) (The Linux Foundation)
+    - SingularityCE (Sylabs)
+- More [related enterprise products by Sylabs](https://sylabs.io/products/)
+
+---
+
+## Image registries
+
+- [Sylabs Cloud](https://cloud.sylabs.io/library)
+    - Image registry and remote builder
+- [Singularity Hub](https://singularityhub.github.io)
+    - Older open source registry
 
 ---
 
@@ -57,13 +59,12 @@ slideOptions:
 
 ---
 
-## Notable Properties / Differences Compared to Docker
+## Differences to Docker
 
-- Only needs root when creating images
-- User rights for running container
-- Automatically mounts [common directories](https://sylabs.io/guides/latest/user-guide/bind_paths_and_mounts.html#system-defined-bind-paths)
+- User rights enough for running container
+- Automatically mounts [common directories](https://apptainer.org/docs/user/latest/bind_paths_and_mounts.html#system-defined-bind-paths)
     - `${HOME}`, `${PWD}`, network etc.
-- Allows to run "untrusted user to run untrusted containers"
+- Allows "untrusted user to run untrusted containers"
     - Important for shared facilities (computing centers etc.)
 - (Normally) Immutable containers
     - Set up environment and immutable data in container
@@ -94,7 +95,7 @@ slideOptions:
     - Build a new Singularity container
     - Use `--sandbox` for mutable container
 - `singularity pull`
-    - Pull a Singularity/Docker container to ${PWD}
+    - Pull a Singularity image (`.sif` file)
 
 ---
 
@@ -116,29 +117,29 @@ Details available in [`singularity_demo.md`](https://github.com/Simulation-Softw
     - `%environment`: Set environment variables (`PATH` etc.)
     - `%runscript`: Container behavior under `singularity run`
     - `%labels`: Extra information
-    - `%pre`, `%setup`... (see [Documentation](https://sylabs.io/guides/master/user-guide/definition_files.html#sections))
+    - `%pre`, `%setup`... (see [Documentation](https://apptainer.org/docs/user/latest/definition_files.html))
 
 ---
 
 ## Image Recipe Example
 
 ```Singularity
-BootStrap: library
-From: ubuntu:18.04
+BootStrap: docker
+From: ubuntu:22.04
 
 %post
-        apt-get -y update
-        apt-get -y install date cowsay lolcat
+   apt-get -y update
+   apt-get -y install cowsay lolcat
 
 %environment
-        export LC_ALL=C
-        export PATH=/usr/games:$PATH
+   export LC_ALL=C
+   export PATH=/usr/games:$PATH
 
 %runscript
-        date | cowsay | lolcat
+   date | cowsay | lolcat
 ```
 
-[https://sylabs.io/guides/master/user-guide/quick_start.html#build-images-from-scratch](https://sylabs.io/guides/master/user-guide/quick_start.html#build-images-from-scratch)
+https://apptainer.org/docs/user/latest/quick_start.html
 
 ---
 
@@ -166,12 +167,13 @@ Details available in [`singularity_demo.md`](https://github.com/Simulation-Softw
 - Special container format for scientific computing
 - Immutable containers in a single file
 - Prefers integration over isolation
-- Potential successor: [Sarus](https://user.cscs.ch/tools/containers/sarus/)
+- Other solutions: [Sarus](https://user.cscs.ch/tools/containers/sarus/), [Charliecloud](https://hpc.github.io/charliecloud/)
 
 ---
 
 ## Further Reading
 
-- [Singularity User Guide](https://sylabs.io/guides/master/user-guide)
+- [Apptainer user guide](https://apptainer.org/docs/user/latest/index.html)
+- [Singularity User Guide](https://docs.sylabs.io/guides/main/user-guide/)
 - [Singularity Cloud](https://cloud.sylabs.io/library)
 - [Sarus](https://user.cscs.ch/tools/containers/sarus/)

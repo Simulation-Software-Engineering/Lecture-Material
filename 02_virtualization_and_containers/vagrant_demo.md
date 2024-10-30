@@ -1,19 +1,9 @@
 # Vagrant Demo
 
-## Introduction to Vagrant
-
-- Initially developed by Mitchell Hashimoto as side project.
-- Released in 2010.
-- Now developed by Hashimoto's company HashiCorp.
-    - HashiCorp develops a variety of open-source tools for DevOps and cloud computing. In general for large scale projects.
-- Configure VMs (I think also containers nowadays) conveniently via text files
-- Infrastructure as code (Git lecture: If you cannot use `diff`, it is the wrong format!)
-- Standard user and all passwords are `vagrant`.
-
 ## Demo: Create VM based on a base Ubuntu box
 
 - Create a working directory and enter it.
-- `vagrant init hashicorp/bionic64` creates a base `Vagrantfile`.
+- `vagrant init bento/ubuntu-24.04` creates a base `Vagrantfile`.
 - `vagrant up` Creates `Vagrantfile`. This file can be put in version control.
 - Download and set up VM.
 - Will also start VM
@@ -27,18 +17,17 @@
 - `vagrant status` Shows status of currently running VMs
 - Exchanging files
     - Check output `default: Mounting shared folders...`
-    - Default: Directory containing `Vagrantfile` is mounted as    `/vagrant`
+    - Default: Directory containing `Vagrantfile` is mounted as `/vagrant`
     - Can configure more drives
     - Show example by creating file from Vagrant session
 
 ## Demo: Start VM from own box
 
-- [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
 - Open `Vagrantfile` and refer to name of VM
 
     ```ruby
     Vagrant.configure("2") do |config|
-        config.vm.box = "ubuntu/focal64"
+        config.vm.box = "bento/ubuntu-24.04"
         config.vm.provision :shell, path: "bootstrap.sh"
 
         config.vm.provider "virtualbox" do |vb|
@@ -64,14 +53,11 @@
     - Call `neofetch`
     - `echo $TEST_ENV_VAR` to show that variable is actually set.
 - `vagrant package --base "sse-first-step" --output sse-first-step.box`: Export VM
-    - File has ben uploaded already
 - `sse-first-steps.box` can be uploaded to [Vagrant Cloud](https://app.vagrantup.com)
 - Go to directory `using-own-box/`
     - Show `Vagrantfile` that is has my uploaded image as base image
     - Skip building box `vagrant up` as it takes too long, should be prebuilt
-    - `vagrant box list` should show my box in overview.
-    - **Note** My uploaded box is called `ajaust/sse-first-step`**s**
-    - **Note** The box seems to be broken all of a sudden.
+    - After `vagrant box add <box> --name <name>`, `vagrant box list` should show my box in overview.
 
 ## Demo: preCICE VM
 

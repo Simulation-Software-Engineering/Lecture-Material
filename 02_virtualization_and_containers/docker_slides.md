@@ -25,27 +25,26 @@ slideOptions:
 
 # Docker
 
-<img src="https://www.docker.com/wp-content/uploads/2022/03/horizontal-logo-monochromatic-white.png" width=40%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Docker_logo.svg/2560px-Docker_logo.svg.png" width=40%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
-[https://www.docker.com/company/newsroom/media-resources](https://www.docker.com/company/newsroom/media-resources)
+<small>Image by https://www.docker.com/, Fair use, https://en.wikipedia.org/w/index.php?curid=70663056</small>
 
 ---
 
-## What is Docker? 1/2
+## What is Docker? 1/3
 
 - Docker Inc.
-    - Company promoting Docker
 - Docker Desktop
 
     > Developer productivity tools and a local Kubernetes environment.
 
 - Docker Engine
 
-    > Docker Engine is an open source containerization technology for building and containerizing your applications.
+    > an open source containerization technology for building and containerizing your applications.
 
 ---
 
-## What is Docker? 2/2
+## What is Docker? 2/3
 
 - Docker Hub
 
@@ -53,13 +52,13 @@ slideOptions:
 
 - Docker Compose
 
-    > Compose is a tool for defining and running multi-container Docker applications.
+    > a tool for defining and running multi-container Docker applications.
 
-- According to documentation
+---
 
-    > Docker is an open platform for developing, shipping, and running applications.
+## What is Docker? 3/3
 
-- We use definition from documentation.
+> Docker is an open platform for developing, shipping, and running applications.
 
 ---
 
@@ -67,14 +66,10 @@ slideOptions:
 
 - 2010: Docker Inc. founded
 - 2013: First Docker release
-    - Then based on [LXC](https://linuxcontainers.org/)
-    - Released as open source
+    - Open source, Then based on [LXC](https://linuxcontainers.org/)
 - 2014: Replaced LXC by own execution environment
-- 2017: [Moby project](https://mobyproject.org/) for open source
-
-    > Moby is an open framework created by Docker to assemble specialized container systems without reinventing the wheel.
-
-- Nowadays one of the most popular container frameworks/services
+- 2017: [Moby project](https://mobyproject.org/) for open source development
+- 2023: The most popular container solution ([survey](https://survey.stackoverflow.co/2023/#section-most-popular-technologies-other-tools))
 
 ---
 
@@ -84,7 +79,7 @@ slideOptions:
 - Containers for consistent development environment
 - Containers for consistent testing environment
 - Portable format for sharing applications
-- Avoid tedious installation procedures by providing Docker container ([FEniCS](https://fenicsproject.org/download/), [GitLab](https://docs.gitlab.com/ee/install/docker.html), etc.)
+- Avoid tedious installation procedures by providing Docker container ([FEniCS](https://fenicsproject.org/download/), [OpenFOAM](https://www.openfoam.com/download/openfoam-installation-on-windows-docker), [GitLab](https://docs.gitlab.com/ee/install/docker.html), etc.)
 
 ---
 
@@ -114,9 +109,9 @@ slideOptions:
 
 ## Docker Architecture
 
-<img src="https://docs.docker.com/engine/images/architecture.svg" width=80%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+<img src="https://docs.docker.com/get-started/images/docker-architecture.webp" width=80%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
-[https://docs.docker.com/engine/images/architecture.svg](https://docs.docker.com/engine/images/architecture.svg)
+<small>https://docs.docker.com/get-started/docker-overview/</small>
 
 ---
 
@@ -133,49 +128,56 @@ slideOptions:
 
 - Root rights for installation
 - `dockerd` runs as root -> Interaction needs root rights
-    - Prefix commands with `sudo`
-    - Be member of group `docker` (=makes you root), expected by some applications (e.g. `act`)
-    - [Attack surface?!](https://docs.docker.com/engine/security/#docker-daemon-attack-surface)
-        - [Isolate user namespace](https://docs.docker.com/engine/security/userns-remap/)
-        - Use trustworthy containers
+    - Option 1: Prefix commands with `sudo`
+    - Option 2: Be member of group `docker` (=makes you root), expected by some applications (e.g. `act`)
 - Alternatives:
     - [Rootless mode](https://docs.docker.com/engine/security/rootless/)
-    - Run Docker in a VM
+    - Run Docker in a VM for better isolation
 - Check [security notes](https://docs.docker.com/engine/security/)
 
 ---
 
-## Useful Commands 1/2
+## Useful Commands 1/4
 
 - `docker run OPTIONS`
     - Run a container
-- `docker image ls`
-    - List locally available images
+- `docker container ls`
+    - List running containers
+    - Add `-a` to see also the stopped containers
+    - Alias: `docker ps`
+
+---
+
+## Useful Commands 2/4
+
 - `docker pull NAME:TAG`
     - Pulls an image from registry, `TAG` optional
 - `docker container create IMAGE`
     - Create container from image
-- `docker container ls`
-    - List running containers
-    - Add `-a` to see all containers
-
----
-
-## Useful Commands 2/2
-
 - `docker container start/stop NAME`
     - Start/stop container
 - `docker container attach NAME`
     - Attach to running container
+
+---
+
+## Useful Commands 3/4
+
 - `docker build`
     - Creates an image from a given Dockerfile
 - `docker cp`
     - Copy files in/out of container
 - `docker image history IMAGE`
     - Show layers of image (including commands)
+
+---
+
+## Useful Commands 4/4
+
+- `docker image ls`
+    - List locally available images
 - `docker system prune`
     - Remove all unused objects (images, containers...)
-- Many commands have similar/same outcome
 
 ---
 
@@ -195,7 +197,7 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
     - Layers are added separately -> Keep number of layers low
     - Layers are cached
     - Changed layer requires downstream layers to be recreated
-- Container (layers) have commit hashes
+- Container layers have commit hashes
 
 ---
 
@@ -215,12 +217,12 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 ## Dockerfile Example
 
 ```Dockerfile
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
 RUN apt update -y && apt install -y neofetch
 WORKDIR /app
 COPY testfile .
-CMD ["echo", "hello"]
+CMD ["neofetch"]
 ```
 
 ---

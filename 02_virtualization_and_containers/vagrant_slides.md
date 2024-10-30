@@ -25,21 +25,19 @@ slideOptions:
 
 # Vagrant
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Vagrant.png" width=30%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
 ---
 
 ## Introduction
 
-- Remember:
-
-    > If you can't git diff a file format, it's broken.
-
 - Infrastructure as code
 
     > Vagrant is a tool for building and managing virtual machine environments in a single workflow.
+    > <small>https://developer.hashicorp.com/vagrant/intro</small>
 
-    [https://www.vagrantup.com/intro](https://www.vagrantup.com/intro)
 - Initial release 2010 by Mitchell Hashimoto, now [HashiCorp](https://www.hashicorp.com/)
-- HashiCorp develops open-source DevOps/Cloud tools like [Vagrant](https://www.vagrantup.com/), [TerraForm](https://www.terraform.io/)...
+- HashiCorp develops DevOps tools such as [Vagrant](https://www.vagrantup.com/) and [TerraForm](https://www.terraform.io/)
 
 ---
 
@@ -47,10 +45,10 @@ slideOptions:
 
 - Provisioners
     - Tool for configuring the boxes (install software on machine)
-    - Examples: shell scripts, Chef, Puppet..
+    - Examples: shell scripts, Ansible, Chef, Puppet..
 - Providers
     - "Backend" on which the box is based
-    - Examples: VirtualBox, Hyper-V, AWS, Docker...
+    - Examples: VirtualBox, Hyper-V, libvirt, AWS, Docker...
 
 ---
 
@@ -107,7 +105,7 @@ slideOptions:
 - `vagrant halt`
     - Shuts down machine keeping changes
 - `vagrant reload --provision` or `vagrant provision`
-    - Rebuild (partially) build image
+    - Rebuild (partially) built image
 
 ---
 
@@ -121,7 +119,6 @@ Details available in [`vagrant_demo.md`](https://github.com/Simulation-Software-
 
 - File `Vagrantfile`
     - Contains configuration of VM
-    - Ruby script
 - Supplementary files, scripts etc. for configuring VM
     - Example: `bootstrap.sh`
 - Files are usually text files (Git friendly)
@@ -130,21 +127,20 @@ Details available in [`vagrant_demo.md`](https://github.com/Simulation-Software-
 
 ## Setting up a Virtual Machine
 
-- Install VirtualBox
-- Install Vagrant (ideally from homepage so it is a recent release)
+- Install VirtualBox and Vagrant
 - Create `Vagrantfile` and specify image
 
     ```ruby
     Vagrant.configure("2") do |config|
-        config.vm.box = "ajaust/sse-first-steps"
-        config.vm.box_version = "0.1.0"
+        config.vm.box = "bento/ubuntu-24.04"
+        config.vm.box_version = "202407.23.0"
     end
     ```
 
-- Alternative:
+- Alternative (creates the corresponding `Vagrantfile`):
 
     ```bash
-    vagrant init ajaust/sse-first-steps
+    vagrant init bento/ubuntu-24.04
     ```
 
 - Start VM with `vagrant up`
@@ -162,14 +158,15 @@ Details available in [`vagrant_demo.md`](https://github.com/Simulation-Software-
 
     - Files can be exchanged between Guest and Host (bidirectional)
 - Default:
-    - Directory containing `Vagrantfile` mounted to `/vagrant` in Guest
+    - Directory containing `Vagrantfile` mounted to `/vagrant`
+    - Natural use case: Build your code in a VM
 
 ---
 
 ## Vagrant Cloud
 
-- Repository of premade boxes: [https://app.vagrantup.com/](https://app.vagrantup.com/)
-- Pack box:
+- Repository of premade boxes: [HashiCorp Cloud](https://portal.cloud.hashicorp.com/vagrant/discover)
+- Package a box:
 
     ```bash
     vagrant package --base "NAMEOFVM" --output BOXNAME.box
@@ -177,26 +174,24 @@ Details available in [`vagrant_demo.md`](https://github.com/Simulation-Software-
 
     - `NAMEOFVM` is name as shown in VirtualBox
     - `BOXNAME` name to store box to
-- [Publish own boxes](https://www.vagrantup.com/docs/providers/virtualbox/boxes) by uploading to [Vagrant Cloud](https://app.vagrantup.com/)
+- [Publish own boxes](https://developer.hashicorp.com/vagrant/docs/providers/virtualbox/boxes)
 
 ---
 
 ## Demo: Own box
 
-- [Own box online](https://app.vagrantup.com/ajaust/boxes/sse-first-steps/versions/0.1.0)
-
----
-
-## Demo: preCICE VM
-
-- [https://github.com/precice/vm](https://github.com/precice/vm)
-- [Premade box](https://app.vagrantup.com/precice/boxes/precice-vm)
+- `bento/ubuntu-24.04`:
+    - [HashiCorp Cloud](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04)
+    - [GitHub](https://github.com/chef/bento)
+- `precice/precice-vm`:
+    - [HashiCorp Cloud](https://portal.cloud.hashicorp.com/vagrant/discover/precice/precice-vm)
+    - [GitHub](https://github.com/precice/vm)
+    - [User Documentation](https://precice.org/installation-vm.html)
 
 ---
 
 ## Summary
 
-- Open-source tool
 - Git-friendly way of configuring VMs
 - Simple management of VMs
 - Creates consistent workflows
@@ -208,6 +203,7 @@ Details available in [`vagrant_demo.md`](https://github.com/Simulation-Software-
 ## Further Reading
 
 - [Vagrant Homepage](https://www.vagrantup.com/)
-- [Vagrant Introduction](https://www.vagrantup.com/intro)
+- [Vagrant Introduction](https://developer.hashicorp.com/vagrant/intro)
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
-- ["Should I use Vagrant or Docker for creating an isolated environment?"](https://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-for-creating-an-isolated-environment)
+- StackOverflow: ["Should I use Vagrant or Docker for creating an isolated environment?"](https://stackoverflow.com/questions/16647069/should-i-use-vagrant-or-docker-for-creating-an-isolated-environment)
+    with answers by both Vagrant and Docker creators (!)

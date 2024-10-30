@@ -173,7 +173,7 @@ Fork and clone the repository mentioned above. The repository initially contains
 #### 2. Initialization of the VM
 
 - We want to start from scratch so initialize a new box using `vagrant init` inside this repository and add the resulting `Vagrantfile` to Git. Then adapt your `Vagrantfile` to incorporate the following settings:
-    - Your virtual machine must be based on the [`bento/ubuntu-24.04` image](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04).
+    - Your virtual machine should be based on the [`bento/ubuntu-24.04` image](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04). In case you need a different provider (e.g., `libvirt`), feel free to use another box, but state this in your submission.
     - The name of your VM should be `USERNAME-ubuntu-server`.
     - The VM must request [1024 MB of main memory](https://developer.hashicorp.com/vagrant/docs/providers/virtualbox/configuration).
     - We want a [new shared folder](https://developer.hashicorp.com/vagrant/docs/synced-folders/basic_usage) in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted by default as `/mnt/shared/` in your virtual machine.

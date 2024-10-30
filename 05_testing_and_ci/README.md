@@ -3,19 +3,14 @@
 Learning goals:
 
 - Justify the effort of developing testing infrastructure for simulation software.
-- Discern the concepts of unit testing, integration testing and regression testing with the perspective of simulation software.
+- Discern the concepts of unit testing, integration testing, and regression testing with the perspective of simulation software.
 - Work with the Python testing frameworks `pytest` and `unittest`.
-- Name and explain common workflows to automate in RSE.
-- Explain the differences between the various continuous methodologies.
-- Explain why automation is crucial in RSE.
-- Write basic automation scripts for GitHub Actions.
-- Read basic automation scripts for GitLab CI/CD.
-- Name and roughly explain the necessary steps to host GitLab Runners yourself.
 - Write simple tests for C++ toy codes with `Boost.Test`.
 - Know about general concepts of test frameworks such as fixtures and decorators.
+- Name and explain common workflows to automate in RSE.
+- Write basic automation scripts for GitHub Actions.
+- Read basic automation scripts for GitLab CI/CD and explain the necessary steps to host GitLab Runners yourself.
 - Use CTest to call tests from CMake.
-- Know about common challenges of unit and integration tests in real simulation software through preCICE as an example.
-- Explain how `Boost.Test`, CMake, and GitHub Actions can work together.
 
 | Duration | Content |
 | --- | --- |

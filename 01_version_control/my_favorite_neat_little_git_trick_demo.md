@@ -28,6 +28,12 @@
     - *Toptal* also provides a [cli tool](https://docs.gitignore.io/install/command-line) which enables quick creation of a `.gitignore` file in the current repository.
     - You can also use `wget` or `curl` in combination with [https://www.toptal.com/developers/gitignore/api/](https://www.toptal.com/developers/gitignore/api/) followed by a comma (`,`) separated list to get the `.gitignore` file directly without the cli.
 
+- Use Git Bisect to identify bugs in your code
+    - This command uses a binary search algorithm to find which commit in your project's history introduced a bug. You use it by first telling it a "bad" commit that is known to contain the bug, and a "good" commit that is known to be before the bug was introduced. Then git bisect picks a commit between those two endpoints and asks you whether the selected commit is "good" or "bad".
+    - Start bisecting with `git bisect start`, mark the bad commit using `git bisect bad <commit>` and the last known good one with `git bisect good <commit>`. After a bisect session, to clean up the bisection state use `git bisect reset`.
+    - It continues narrowing down the range until it finds the exact commit that introduced the change/bug.
+    - For a practical demonstration, refer to the following repository: [Git Bisect Little Trick Demo](https://github.com/Vaish-W/git-bisect-little-trick-demo).
+
 ## Tricks from Winter Term 2022/23
 
 - An interactive learning environment: [Learn Git Branching](https://learngitbranching.js.org/)

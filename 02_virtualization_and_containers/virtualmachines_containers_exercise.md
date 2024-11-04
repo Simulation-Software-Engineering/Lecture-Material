@@ -67,17 +67,17 @@ We will install the minimal (server) version of Ubuntu 24.04 (codename Noble Num
 
 This exercise consists of the following main steps:
 
-1. Download the "Ubuntu Server 24.04" installation image.
-2. Create a new virtual machine in VirtualBox with (recommended, lower might work as well)
+1. Downloading the "Ubuntu Server 24.04" installation image.
+2. Creating a new virtual machine in VirtualBox with (recommended, lower might work as well)
     - 6 GB virtual disk
     - 1024 MB of memory
     - 32 MB video memory
-3. Install Ubuntu on the virtual machine with
+3. Installing Ubuntu on the virtual machine with
     - user called `USERNAME` (if your GitLab name is `@musterm`, then `musterm`)
     - (host)name of the machine `USERNAMEvm` (e.g., `mustermvm`)
-4. Install the software package `neofetch`.
-5. Run `neofetch` in the terminal and take a screenshot
-6. Upload the screenshot in a new issue on the SIM GitLab.
+4. Installing the software package `neofetch`.
+5. Running `neofetch` in the terminal and take a screenshot
+6. Uploading the screenshot in a new issue on the SIM GitLab.
 
 In the following subsections you will find additional instructions and explanations. This should help you, especially if you do not have much experience with software installation and Linux.
 
@@ -90,6 +90,7 @@ See instruction in the introduction to this section.
 While the "Ubuntu Server 24.04" installation image is downloading, you can already prepare the virtual machine.
 
 - Create a new VM in VirtualBox called "Ubuntu Server".
+    - If given the option, select `Skip Unattended Installation`: let's experience the full process this time.
     - Assign RAM and virtual drive as stated in the introduction.
 - After the creation, the virtual machine shows up in the "VirtualBox Manager". Open the settings of the VM and:
     - inspect the settings of the virtual machine and set the video memory to at least 32 MB.
@@ -104,13 +105,14 @@ This is a summary of the [Ubuntu Server installation tutorial](https://ubuntu.co
 - The VM will boot from the Ubuntu image and will welcome you with a configuration program. Choose your preferred language and then choose "Start Ubuntu Server". It brings you to the installation routine. The starting process might take a short while.
 - When the boot process has finished, you will be presented with Ubuntu's installation program. Go through it carefully.
     - Choose your preferred language and keyboard layout. Note that you cannot use your mouse in the menus, instead you have to use your keyboard.
+    - You do not need to update the installer.
     - For most settings you can accept the default values Ubuntu suggests (mirror, empty proxy, using entire disk with LVM group, storage configuration etc.)
     - After verifying that Ubuntu wants to use the virtual hard drive, confirm formatting of the virtual hard drive ("Confirm destructive action") when asked so.
 - When setting up your user, please use your GitLab username, e.g. `musterm`, as username and choose the username + VM, e.g. `mustermvm`, as the server's name. The password you can choose freely, but it cannot be empty. If you do not feel creative, use `sse` as password.
 - When you are asked about the SSH Setup, you can decide whether you want to activate the `Install OpenSSH Server` option (using spacebar) or not. If you want to test out the SSH connection to the VM (optional task), you can activate it now. If you do not activate it here, you can still install the OpenSSH server later.
 - In the next window, skip all suggested "Featured Server Snaps" to keep the size of the image minimal. It suggests common software used on the Ubuntu Server edition, such as Docker, for example. However, we do not need it here. Confirming your choice will start the installation procedure.
 - The installation procedure might take a while since it will also install security updates. You can already start reading on the subsequent sections.
-- After the installation has finished confirm the reboot with "Reboot Now".
+- After the installation has finished confirm the reboot with "Reboot Now". The installation medium is automatically removed, so just press ENTER when asked.
 
 #### 3. Installation of neofetch
 

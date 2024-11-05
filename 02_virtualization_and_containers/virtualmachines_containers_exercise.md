@@ -257,7 +257,7 @@ This exercise consists of the following main steps:
 
 1. Create a fork of the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-containers).
 2. Setting up the `Dockerfile`
-    - The name of this container will be `USERNAME-ubuntu`.
+    - Base your image on Ubuntu 24.04
     - Create a file called `testfile` that contains `USERNAME`. This file should be copied to a directory called `/testfiles` inside the container.
     - Set the environment variable `ENV_TEST_VARIABLE` inside the container.
     - Define a default run command for the container.

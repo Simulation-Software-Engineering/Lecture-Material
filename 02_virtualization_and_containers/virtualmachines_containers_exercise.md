@@ -35,6 +35,11 @@ Deadline: **Wednesday, November 13, 2024, 9:00**
     - Check in the VirtualBox manager that the VM is active.
     - Leave the SSH session (type `exit` and press `Enter` or use the shortcut `CTRL+D`)
     - Destroy the VM `vagrant destroy`
+- **Additional note**: Currently (WT24/25) the latest versions of Vagrant (2.4.1) and VirtualBox (7.1) are incompatible. Either use an older version of VirtualBox (7.0) or use a workaround mentioned in [this Vagrant issue](https://github.com/hashicorp/vagrant/issues/13501).
+    - One workaround that is verified to work is to to modify the VirtualBox provider plugin and add a fake mapping to treat VirtualBox 7.1 like VirtualBox 7.0.
+      For further information look at [the original proposal of the workaround](https://github.com/hashicorp/vagrant/issues/13501#issuecomment-2389606077).
+        - Filepath for Windows: `C:\\Program Files\Vagrant\embedded\gems\gems\vagrant-2.4.1\plugins\providers\virtualbox\driver`
+        - Filepath for Linux:`/opt/vagrant/embedded/gems/gems/vagrant-2.4.1/plugins/providers/virtualbox/driver`
 
 #### Install Docker
 

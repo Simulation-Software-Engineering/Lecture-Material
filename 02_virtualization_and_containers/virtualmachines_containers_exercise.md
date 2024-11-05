@@ -96,7 +96,7 @@ While the "Ubuntu Server 24.04" installation image is downloading, you can alrea
     - inspect the settings of the virtual machine and set the video memory to at least 32 MB.
     - in the same settings, you can also increase the number of CPU cores allocated (not necessary).
 
-#### 2. Ubuntu installation process
+#### 3. Ubuntu installation process
 
 This is a summary of the [Ubuntu Server installation tutorial](https://ubuntu.com/tutorials/install-ubuntu-server).
 
@@ -114,21 +114,21 @@ This is a summary of the [Ubuntu Server installation tutorial](https://ubuntu.co
 - The installation procedure might take a while since it will also install security updates. You can already start reading on the subsequent sections.
 - After the installation has finished confirm the reboot with "Reboot Now". The installation medium is automatically removed, so just press ENTER when asked.
 
-#### 3. Installation of neofetch
+#### 4. Installation of neofetch
 
 - After (re)booting you will be greeted by the Ubuntu login screen. If it looks like a mess press `CTRL-C` to clear the screen. You might have to wait for a moment and maybe switch in and out of the VM's window for it to be refreshed properly.
 - Login using your username and password.
 - We want to install [`neofetch`](https://github.com/dylanaraps/neofetch) which prints the system's information to the terminal and take a screenshot of this.
     - Install `neofetch` via `sudo apt update && sudo apt install -y neofetch`. This command will download and install `neofetch` using the package manager [`apt`](https://wiki.debian.org/Apt).
 
-#### 4. Running neofetch and Taking a Screenshot (VirtualBox)
+#### 5. Running neofetch and Taking a Screenshot (VirtualBox)
 
 - Clear the terminal using `clear` (or `Ctrl-L`) and run neofetch via by typing `neofetch` into the terminal and pressing `Enter`. It will show information about the Ubuntu version, available memory etc.
 - Take a screenshot via VirtualBox. At the top of the VirtualBox window you find the menu item `View`. There you find the option `Take Screenshot (Host+E)`. Save the screenshot as `neofetch-screenshot-USERNAME.png`.
 
 Congratulations. You have successfully set up a virtual machine, installed Ubuntu and installed additional software. You are now done with this part of the exercise. If you do not want to play with the VM later nor do you want to do any of the optional assignments, you can power-off and delete the VM. Be sure that your screenshot displays the correct information though (correct username, correct hostname etc.) before deleting the VM.
 
-#### 5. Upload the Screenshot to SIM GitLab
+#### 6. Upload the Screenshot to SIM GitLab
 
 - Go to the SIM GitLab Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-virtual-machines). You will find an example issue. Your issue should look similar in terms of title, labels etc.
 - Open the issue.
@@ -154,7 +154,7 @@ This exercise consists of the following main steps:
 
 1. Create a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-virtual-machines)
 2. Initialization of the VM
-    - Name this virtual machine `USERNAME-ubuntu-server`.
+    - Name this virtual machine `USERNAME-ubuntu-server-vagrant`.
     - Make sure that the virtual machine requests 1024 MB memory.
     - Create a shared/synced directory `/mnt/shared` inside the VM.
     - Test the new VM.

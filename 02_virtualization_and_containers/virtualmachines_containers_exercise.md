@@ -67,17 +67,17 @@ We will install the minimal (server) version of Ubuntu 24.04 (codename Noble Num
 
 This exercise consists of the following main steps:
 
-1. Download the "Ubuntu Server 24.04" installation image.
-2. Create a new virtual machine in VirtualBox with (recommended, lower might work as well)
+1. Downloading the "Ubuntu Server 24.04" installation image.
+2. Creating a new virtual machine in VirtualBox with (recommended, lower might work as well)
     - 6 GB virtual disk
     - 1024 MB of memory
     - 32 MB video memory
-3. Install Ubuntu on the virtual machine with
+3. Installing Ubuntu on the virtual machine with
     - user called `USERNAME` (if your GitLab name is `@musterm`, then `musterm`)
     - (host)name of the machine `USERNAMEvm` (e.g., `mustermvm`)
-4. Install the software package `neofetch`.
-5. Run `neofetch` in the terminal and take a screenshot
-6. Upload the screenshot in a new issue on the SIM GitLab.
+4. Installing the software package `neofetch`.
+5. Running `neofetch` in the terminal and take a screenshot
+6. Uploading the screenshot in a new issue on the SIM GitLab.
 
 In the following subsections you will find additional instructions and explanations. This should help you, especially if you do not have much experience with software installation and Linux.
 
@@ -90,12 +90,13 @@ See instruction in the introduction to this section.
 While the "Ubuntu Server 24.04" installation image is downloading, you can already prepare the virtual machine.
 
 - Create a new VM in VirtualBox called "Ubuntu Server".
+    - If given the option, select `Skip Unattended Installation`: let's experience the full process this time.
     - Assign RAM and virtual drive as stated in the introduction.
 - After the creation, the virtual machine shows up in the "VirtualBox Manager". Open the settings of the VM and:
     - inspect the settings of the virtual machine and set the video memory to at least 32 MB.
     - in the same settings, you can also increase the number of CPU cores allocated (not necessary).
 
-#### 2. Ubuntu installation process
+#### 3. Ubuntu installation process
 
 This is a summary of the [Ubuntu Server installation tutorial](https://ubuntu.com/tutorials/install-ubuntu-server).
 
@@ -104,29 +105,30 @@ This is a summary of the [Ubuntu Server installation tutorial](https://ubuntu.co
 - The VM will boot from the Ubuntu image and will welcome you with a configuration program. Choose your preferred language and then choose "Start Ubuntu Server". It brings you to the installation routine. The starting process might take a short while.
 - When the boot process has finished, you will be presented with Ubuntu's installation program. Go through it carefully.
     - Choose your preferred language and keyboard layout. Note that you cannot use your mouse in the menus, instead you have to use your keyboard.
+    - You do not need to update the installer.
     - For most settings you can accept the default values Ubuntu suggests (mirror, empty proxy, using entire disk with LVM group, storage configuration etc.)
     - After verifying that Ubuntu wants to use the virtual hard drive, confirm formatting of the virtual hard drive ("Confirm destructive action") when asked so.
 - When setting up your user, please use your GitLab username, e.g. `musterm`, as username and choose the username + VM, e.g. `mustermvm`, as the server's name. The password you can choose freely, but it cannot be empty. If you do not feel creative, use `sse` as password.
 - When you are asked about the SSH Setup, you can decide whether you want to activate the `Install OpenSSH Server` option (using spacebar) or not. If you want to test out the SSH connection to the VM (optional task), you can activate it now. If you do not activate it here, you can still install the OpenSSH server later.
 - In the next window, skip all suggested "Featured Server Snaps" to keep the size of the image minimal. It suggests common software used on the Ubuntu Server edition, such as Docker, for example. However, we do not need it here. Confirming your choice will start the installation procedure.
 - The installation procedure might take a while since it will also install security updates. You can already start reading on the subsequent sections.
-- After the installation has finished confirm the reboot with "Reboot Now".
+- After the installation has finished confirm the reboot with "Reboot Now". The installation medium is automatically removed, so just press ENTER when asked.
 
-#### 3. Installation of neofetch
+#### 4. Installation of neofetch
 
 - After (re)booting you will be greeted by the Ubuntu login screen. If it looks like a mess press `CTRL-C` to clear the screen. You might have to wait for a moment and maybe switch in and out of the VM's window for it to be refreshed properly.
 - Login using your username and password.
 - We want to install [`neofetch`](https://github.com/dylanaraps/neofetch) which prints the system's information to the terminal and take a screenshot of this.
     - Install `neofetch` via `sudo apt update && sudo apt install -y neofetch`. This command will download and install `neofetch` using the package manager [`apt`](https://wiki.debian.org/Apt).
 
-#### 4. Running neofetch and Taking a Screenshot (VirtualBox)
+#### 5. Running neofetch and Taking a Screenshot (VirtualBox)
 
 - Clear the terminal using `clear` (or `Ctrl-L`) and run neofetch via by typing `neofetch` into the terminal and pressing `Enter`. It will show information about the Ubuntu version, available memory etc.
 - Take a screenshot via VirtualBox. At the top of the VirtualBox window you find the menu item `View`. There you find the option `Take Screenshot (Host+E)`. Save the screenshot as `neofetch-screenshot-USERNAME.png`.
 
 Congratulations. You have successfully set up a virtual machine, installed Ubuntu and installed additional software. You are now done with this part of the exercise. If you do not want to play with the VM later nor do you want to do any of the optional assignments, you can power-off and delete the VM. Be sure that your screenshot displays the correct information though (correct username, correct hostname etc.) before deleting the VM.
 
-#### 5. Upload the Screenshot to SIM GitLab
+#### 6. Upload the Screenshot to SIM GitLab
 
 - Go to the SIM GitLab Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-virtual-machines). You will find an example issue. Your issue should look similar in terms of title, labels etc.
 - Open the issue.
@@ -150,9 +152,9 @@ In the previous section we set up a VM manually. This was quite tedious. Therefo
 
 This exercise consists of the following main steps:
 
-1. Create a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-virtual-machines)
+1. Creating a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-virtual-machines)
 2. Initialization of the VM
-    - Name this virtual machine `USERNAME-ubuntu-server`.
+    - Name this virtual machine `USERNAME-ubuntu-server-vagrant`.
     - Make sure that the virtual machine requests 1024 MB memory.
     - Create a shared/synced directory `/mnt/shared` inside the VM.
     - Test the new VM.
@@ -161,8 +163,8 @@ This exercise consists of the following main steps:
     - Edit the `Vagrantfile` such that the `bootstrap.sh` script is run during provisioning. The script should:
         - add a new environment variable `ENV_TEST_VARIABLE` with the value `USERNAME`.
         - install `neofetch`.
-4. Run `neofetch` in the terminal and take a screenshot.
-5. Create a merge request containing your changes.
+4. Running `neofetch` in the terminal and taking a screenshot.
+5. Creating a merge request containing your changes.
 
 In the following subsections you will find additional instructions and explanations.
 
@@ -255,7 +257,7 @@ This exercise consists of the following main steps:
 
 1. Create a fork of the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-containers).
 2. Setting up the `Dockerfile`
-    - The name of this container will be `USERNAME-ubuntu`.
+    - Base your image on Ubuntu 24.04
     - Create a file called `testfile` that contains `USERNAME`. This file should be copied to a directory called `/testfiles` inside the container.
     - Set the environment variable `ENV_TEST_VARIABLE` inside the container.
     - Define a default run command for the container.

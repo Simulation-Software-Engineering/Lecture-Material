@@ -152,7 +152,7 @@ In the previous section we set up a VM manually. This was quite tedious. Therefo
 
 This exercise consists of the following main steps:
 
-1. Create a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-virtual-machines)
+1. Creating a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-virtual-machines)
 2. Initialization of the VM
     - Name this virtual machine `USERNAME-ubuntu-server-vagrant`.
     - Make sure that the virtual machine requests 1024 MB memory.
@@ -163,8 +163,8 @@ This exercise consists of the following main steps:
     - Edit the `Vagrantfile` such that the `bootstrap.sh` script is run during provisioning. The script should:
         - add a new environment variable `ENV_TEST_VARIABLE` with the value `USERNAME`.
         - install `neofetch`.
-4. Run `neofetch` in the terminal and take a screenshot.
-5. Create a merge request containing your changes.
+4. Running `neofetch` in the terminal and taking a screenshot.
+5. Creating a merge request containing your changes.
 
 In the following subsections you will find additional instructions and explanations.
 

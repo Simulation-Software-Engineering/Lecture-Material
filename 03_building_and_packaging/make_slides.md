@@ -33,7 +33,7 @@ slideOptions:
 
 ## Learning Goals of This Unit
 
-- Understand the basic functionality of makefiles (timestamps, dependencies, update rules).
+- Explain the basic functionality of makefiles (timestamps, dependencies, update rules).
 - Read simple makefiles and know where to look for additional material for complex makefiles.
 - Write simple makefiles for small projects.
 

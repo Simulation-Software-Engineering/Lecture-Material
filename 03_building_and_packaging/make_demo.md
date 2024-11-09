@@ -6,16 +6,6 @@ Example code is in [`building-and-packaging/material/examples/make`](https://git
 
 Show `main.cpp` and build by hand `g++ -o helloworld main.cpp`
 
-```cpp
-#include <iostream>
-
-int main()
-{
-  std::cout << "Hello World!" << std::endl;
-  return 0;
-}
-```
-
 ## Single Rule Example
 
 - Remove `helloworld`.

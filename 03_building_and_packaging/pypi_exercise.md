@@ -2,8 +2,8 @@
 
 ## Starting remarks
 
-- [Exercise repository link](https://github.com/Simulation-Software-Engineering/diffusion2d)
-- Deadline for submitting this exercise is **Thursday 3rd November 09:00**.
+- [Exercise repository link](https://github.com/Simulation-Software-Engineering/diffusion2D)
+- Deadline for submitting this exercise is **Wednesday 20th November 09:00**.
 - The code in this exercise produces plots and in order to view them you need to use a GUI-based operating system or environment.
 
 ## Brief idea of the exercise

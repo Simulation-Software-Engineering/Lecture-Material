@@ -290,9 +290,9 @@ Example folder structure:
 
 ```bash
 generic_folder_name/
-└── src/
-     ├── __init__.py
-     └── source-code.py
+- src/
+  - __init__.py
+  - source-code.py
 ```
 
 - The file `__init__.py` is required to import the `package_name/` as a package. This file is mostly empty
@@ -306,13 +306,13 @@ generic_folder_name/
 
 ```bash
 generic_folder_name/
-├── LICENSE
-├── setup.py
-├── README.md
-├── src/
-│    ├── __init__.py
-│    └── source-code.py
-└── tests/
+- LICENSE
+- setup.py
+- README.md
+- src/
+  - __init__.py
+  - source-code.py
+  - tests/
 ```
 
 ---

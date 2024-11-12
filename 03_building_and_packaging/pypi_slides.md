@@ -361,7 +361,7 @@ setup(
 
 ## Additional options in setup.py 3/3
 
-The option `entry_points` provide metadata which are exposed after installation. For example: executable functions from a terminal.
+The option `entry_points` exposes code for direct use. For example: executable functions from a terminal.
 
 ```python
 from setuptools import setup

@@ -24,7 +24,7 @@ In this exercise you will convert a raw Python code into a packaged code which i
 
 ## Step 1 - Acquiring the raw code and getting familiar with it
 
-- Fork the [exercise repository](https://github.com/Simulation-Software-Engineering/diffusion2d).
+- Fork the [exercise repository](https://github.com/Simulation-Software-Engineering/diffusion2D).
 - Open the file `diffusion2d.py` and go through the file and try to understand the code components.
 - Check if your system has Python version >= 3.6 and update it if it is older than 3.6.
 - Install pip, build, and Twine.

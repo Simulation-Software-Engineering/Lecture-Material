@@ -454,7 +454,7 @@ Uploading distributions to https://test.pypi.org/legacy/
 Enter your username: [your username]
 Enter your password: [your password]
 Uploading package_name-0.0.1.tar.gz
-100%|█████████████████████| 4.25k/4.25k [00:01<00:00, 3.05kB/s]
+100%|                 | 4.25k/4.25k [00:01<00:00, 3.05kB/s]
 ```
 
 ---

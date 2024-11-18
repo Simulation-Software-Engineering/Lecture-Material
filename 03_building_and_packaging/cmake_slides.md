@@ -33,7 +33,7 @@ slideOptions:
 
 ## Learning Goals of This Unit
 
-- Understand the motivation of learning CMake.
+- Explain the motivation of learning CMake.
 - Work with CMake as a user of a project following good practices (using variables, specifying locations of dependencies).
 - Develop simple CMake projects (executable vs. library, dependencies) and know how to learn more.
 
@@ -168,3 +168,4 @@ slideOptions:
 - [An Introduction to Modern CMake](https://cliutils.gitlab.io/modern-cmake/)
 - [Professional CMake](https://crascit.com/professional-cmake/), an up-to-date (non-public) book
 - [CMake Cookbook](https://github.com/dev-cafe/cmake-cookbook)
+- [Code Refinery CMake course](https://coderefinery.github.io/cmake-workshop/)

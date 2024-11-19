@@ -33,7 +33,7 @@ slideOptions:
 
 ## Learning Goals of This Unit
 
-- Understand the motivation of learning CMake.
+- Explain the motivation of learning CMake.
 - Work with CMake as a user of a project following good practices (using variables, specifying locations of dependencies).
 - Develop simple CMake projects (executable vs. library, dependencies) and know how to learn more.
 
@@ -54,7 +54,7 @@ slideOptions:
 
 ## Are There Alternatives?
 
-> Yes, `autotools`, `scons`, ...
+> Yes, `autotools`, `scons`, `meson`, `bazel`, ...
 
 ---
 
@@ -67,9 +67,9 @@ slideOptions:
 ## At Least Some Reasons Why CMake is Great?
 
 - CMake can generate files for many build systems: Make, ninja, VSCode project, Eclipse project, ...
-- Many **GUIs** and **TUIs**: `ccmake`, `cmake-gui`, integration in probably nearly all IDEs, ...
+- Many **GUIs** and **TUIs**: `ccmake`, `cmake-gui`, integration with IDEs, ...
 - CMake is **cross-platform**: you can ideally use same CMake file in all OS (easy to distinguish platform-specific things).
-- CMake build directory independent of project source directory (build multiple versions with different dependencies, different build types,  etc.)
+- CMake build directory independent of project source directory (build multiple versions with different dependencies, build types, ...)
 - CMake respects choices in user environment (e.g. user defines cpp compiler through `CXX`).
 - Wide language support
 
@@ -168,3 +168,4 @@ slideOptions:
 - [An Introduction to Modern CMake](https://cliutils.gitlab.io/modern-cmake/)
 - [Professional CMake](https://crascit.com/professional-cmake/), an up-to-date (non-public) book
 - [CMake Cookbook](https://github.com/dev-cafe/cmake-cookbook)
+- [Code Refinery CMake course](https://coderefinery.github.io/cmake-workshop/)

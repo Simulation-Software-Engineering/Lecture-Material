@@ -6,16 +6,6 @@ Example code is in [`building-and-packaging/material/examples/make`](https://git
 
 Show `main.cpp` and build by hand `g++ -o helloworld main.cpp`
 
-```cpp
-#include <iostream>
-
-int main()
-{
-  std::cout << "Hello World!" << std::endl;
-  return 0;
-}
-```
-
 ## Single Rule Example
 
 - Remove `helloworld`.
@@ -64,13 +54,12 @@ helloworld : main.cpp sse.o
 - Run `make`, only builds `sse.o`
 - By default, first target is built.
 - `make helloworld` to build specific target
-- phony target (a helper target, doesn't correspond to a file)
 
 ```diff
 + all : helloworld sse.o
 ```
 
-- Why does Make not just build directly build all targets? We could want to do different things with different targets.
+- Why does Make not just directly build all targets? We could want to do different things with different targets.
 - `all` typically comes first.
 - Add `clean` target, has no dependency.
 
@@ -81,6 +70,7 @@ helloworld : main.cpp sse.o
 
 - Run `make clean`
 - `mkdir clean` and `make clean` confuses Make.
+- phony target (a helper target, doesn't correspond to a file)
 
 ```
 + .PHONY : all clean

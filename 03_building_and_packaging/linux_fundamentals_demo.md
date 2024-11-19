@@ -15,6 +15,7 @@ Example code is in [`building-and-packaging/material/examples/shared-and-static-
 - Run `ldd` on `main-shared` and `main-static`.
     - There will several libraries linked to `main-shared`.
     - When using `ldd` on `main-static`, we get the message `not a dynamic executable`.
+    - Easier to grasp: `libtree -v main-shared`, [libtree](https://github.com/haampie/libtree)
 - Run `ls -lah` to show different executable sizes:
 
   ```bash
@@ -30,14 +31,11 @@ Example code is in [`building-and-packaging/material/examples/shared-and-static-
 
 - `/`: primary root
 - `/home`: contains user's home directories
-- `/bin`: executables important for the system/OS
-- `/sbin`: executables important for the system/OS to be executed by the super user
-- `/usr/`: second hierarchy level containing things not required by the OS:
-    - `/usr/lib/`
-    - `/usr/bin/`, `/usr/sbin/`
-    - `/usr/include/`
-    - `/usr/local`: third level hierarchy level containing packages built manually
-- ...and more directories. Details and meaning can be found on [homepage of FHS](https://refspecs.linuxfoundation.org/fhs.shtml).
+- `/bin`: executables installed by package manager
+- `/sbin`: executables installed by package manager, executed by the super user
+- `/lib`: libraries installed by package manager
+- `/usr/`: historic reasons, often today simply symbolic links
+    - `/usr/local`: third level hierarchy level containing packages installed manually
 
 ## Environment Variables
 
@@ -49,6 +47,7 @@ Example code is in [`building-and-packaging/material/examples/environment-variab
     - `ls`
     - `ls usr`
     - `ls usr/local`
+- `echo $PATH`
 - Show all environment variables: `env`
 - Show script `print_my_environment_variable.sh`
 - Use script:

@@ -33,7 +33,7 @@ slideOptions:
 
 ## Learning Goals of This Unit
 
-- Understand the basic functionality of makefiles (timestamps, dependencies, update rules).
+- Explain the basic functionality of makefiles (timestamps, dependencies, update rules).
 - Read simple makefiles and know where to look for additional material for complex makefiles.
 - Write simple makefiles for small projects.
 
@@ -50,7 +50,7 @@ Introduce `Hello-World` example
 - A build system
 - The / a go-to solution for small (research) projects (e.g., latex document, processing data, ...), though also used in big projects ([Linux kernel](https://github.com/torvalds/linux))
 - A building block for CMake
-- Nice non-expert introduction in [py-RSE book, chapter 9](https://merely-useful.tech/py-rse/automate.html)
+- Nice non-expert introduction in [py-RSE book, chapter 9](https://third-bit.com/py-rse/automate.html)
 - [GNU Make](https://www.gnu.org/software/make/): standard implementation of Make for Linux and macOS
 
 ---
@@ -82,7 +82,7 @@ Introduce `Hello-World` example
     - Wildcards
 - ... but becomes quickly [very hard to read](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html).
 - Not covered because CMake does this for us.
-- But nicely documented in [py-RSE chapter 9](https://merely-useful.tech/py-rse/automate.html).
+- But nicely documented in [py-RSE chapter 9](https://third-bit.com/py-rse/automate.html).
 
 ---
 

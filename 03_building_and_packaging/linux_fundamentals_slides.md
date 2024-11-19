@@ -73,8 +73,9 @@ SlideOptions:
 
 ## Filesystem Hierarchy Standard
 
-- Defines filesystem layout and location of common files on Linux
-    <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/03_building_and_packaging/figs/filesystem_hierarchy_structure/fig.png" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+- Defines filesystem layout on Linux
+    <img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/03_building_and_packaging/figs/filesystem_hierarchy_structure/fig.png" width=80%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+- Often symbolic links between 1st and 2nd hierarchy: `bin -> usr/bin`
 - [Official homepage of FHS](https://refspecs.linuxfoundation.org/fhs.shtml)
 
 ---

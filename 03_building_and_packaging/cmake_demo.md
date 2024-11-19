@@ -5,9 +5,11 @@ Example code is in [`building-and-packaging/material/examples/cmake`](https://gi
 ## CMake "Hello World"
 
 - Look at and explain `CMakeLists.txt`.
+- `cmake --help-command-list`, `cmake --help-command add_executable`
 - `mkdir build && cd build && cmake ..`
 - Standard to create `build` directory, don't call `cmake` in root directory.
     - In case of doubt, you can always just delete complete folder.
+    - And you can have multiple build folders.
 - Explain and look at files:
     - `Makefile`: lengthier than you think, many targets, search for `helloworld`
     - `CMakeCache.txt`: stores values of variables, used by GUIs for example
@@ -15,6 +17,10 @@ Example code is in [`building-and-packaging/material/examples/cmake`](https://gi
     - `CMakeFiles`: even much more things that are not so important right now
 - `make` and `./helloworld`
 - `make clean`
+- Makefiles are created by default, one can also create other things: `cmake --help`
+- A bit more modern: From project root call:
+    - `cmake -S. -Bbuild`
+    - `cmake --build build` (independent of generator)
 
 ## Multiple files
 
@@ -70,7 +76,7 @@ int main()
 - add_executable(helloworld "${SRC_FILES}")
 ```
 
-- Build static lib `libHelloWorld.a`, that's the default
+- Build static lib `libsse.a`, that's the default
 - Build shared lib by `cmake -DBUILD_SHARED_LIBS=ON ..`, don't change in `CMakeLists.txt`, but stick to standards
 - Define CMake variables with `-D`, we will come back to this later
 - Now, let's use the library:
@@ -96,7 +102,7 @@ int main()
 `main.cpp`:
 
 ```diff
-+ #include "precice/SolverInterface.hpp"
++ #include "precice/Tooling.hpp"
 ...
 sse();
 + std::cout << precice::getVersionInformation() << std::endl;
@@ -107,15 +113,17 @@ sse();
 `CMakeLists.txt`:
 
 ```diff
-find_package(precice REQUIRED CONFIG)
+find_package(precice 3 REQUIRED CONFIG)
 target_link_libraries(helloworld PRIVATE precice::precice)
 ```
 
 - `cmake ..` and `make` and `./helloworld`
 - `find_package` works if dependency is "cmake-ready"
+    - `3` is the major version we look for.
     - There is a ["module" and a "config" mode](https://cmake.org/cmake/help/latest/command/find_package.html)
     - "module" mode
         - Is there a `Findprecice.cmake` module in CMake? Some are shipped with CMake. But this doesn't scale.
+            - Find out which: `cmake --help-module-list | grep "Find"`
         - Is there a `Findprecice.cmake` module elsewhere? We could ship one with our helloworld program. But these modules often out-of-date.
     - "config" mode (here the case, the newer/better way of doing things)
         - Is there a `preciceCongfig.cmake`? A file installed by preCICE. Scales and up-to-date.
@@ -135,8 +143,6 @@ target_link_libraries("${PROJECT_NAME}" PRIVATE precice)
 - Use variables to talk to CMake.
 - Let's try to make preCICE an optional dependency of our code (not really everybody has preCICE installed, sadly).
 
-`CMakeLists.txt`:
-
 `main.cpp`:
 
 ```c++
@@ -145,7 +151,9 @@ target_link_libraries("${PROJECT_NAME}" PRIVATE precice)
 #endif
 ```
 
-and around header.
+and around header (double negating is also the standard way to do things here).
+
+`CMakeLists.txt`:
 
 ```cmake
 option(ENABLE_PRECICE "Enable use of preCICE." ON)

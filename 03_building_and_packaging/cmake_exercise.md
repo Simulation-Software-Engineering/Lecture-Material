@@ -18,6 +18,7 @@ Deadline: **Thursday, November 27th, 2024, 9:00**
 1. Fork and clone the repository, have a look at the `main.cpp` and the `README.md`.
 2. Build `main.cpp` manually (e.g. `g++ main.cpp -o main`) and run the executable (`./main`).
 3. Build a Docker image, run a container (in interactive mode), and repeat steps 1 and 2 within the container.
+4. Look into and use the `build_and_run.sh` script.
 
 ## Repository Structure
 

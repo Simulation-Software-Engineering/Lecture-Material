@@ -8,8 +8,8 @@ Deadline: **Thursday, November 27th, 2024, 9:00**
 
 ## Overview
 
-- The goal of the exercise is to open a pull request from a fork of [the CMake exercise repository](https://github.com/Simulation-Software-Engineering/cmake-exercise-wt2425). Please name your pull request `Add building and container recipes` and assign yourself. 
-- Your pull request should add a `Dockerfile` and a `CMakeLists.txt`, besides some minor changes in `main.cpp`, such as commenting in some code parts. 
+- The goal of the exercise is to open a pull request from a fork of [the CMake exercise repository](https://github.com/Simulation-Software-Engineering/cmake-exercise-wt2425). Please name your pull request `Add building and container recipes` and assign yourself.
+- Your pull request should add a `Dockerfile` and a `CMakeLists.txt`, besides some minor changes in `main.cpp`, such as commenting in some code parts.
 - From your pull request, it should be possible to create an executable container. After running the container, it should be possible to `cd` into `cmake-exercise` and then run the `build_and_run.sh` script.
 - Use as many of the currently commented-out additional files, which induce additional dependencies.
 

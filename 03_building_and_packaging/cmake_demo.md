@@ -113,12 +113,13 @@ sse();
 `CMakeLists.txt`:
 
 ```diff
-find_package(precice REQUIRED CONFIG)
+find_package(precice 3 REQUIRED CONFIG)
 target_link_libraries(helloworld PRIVATE precice::precice)
 ```
 
 - `cmake ..` and `make` and `./helloworld`
 - `find_package` works if dependency is "cmake-ready"
+    - `3` is the major version we look for.
     - There is a ["module" and a "config" mode](https://cmake.org/cmake/help/latest/command/find_package.html)
     - "module" mode
         - Is there a `Findprecice.cmake` module in CMake? Some are shipped with CMake. But this doesn't scale.

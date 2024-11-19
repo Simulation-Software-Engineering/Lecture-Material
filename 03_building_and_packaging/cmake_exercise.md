@@ -30,7 +30,7 @@ The bare `main.cpp` uses several additions, which are located in the following s
 
 ## Docker Setup
 
-The code and all dependencies should run in a Docker container based on the `ubuntu:24.04` image. As by now, you already know how to set up a basic Docker container, we do no longer provide detailed instructions. We recommend to build the Dockerfile incrementally. Start with a rather empty one and install dependencies manually in the interactive mode. Take notes of the commands you use, so you can integrate them into the Dockerfile afterwards and rebuild your image.
+The code and all dependencies should run in a Docker container based on the `ubuntu:24.04` image. As by now, you already know how to set up a basic Docker container, we do no longer provide detailed instructions. We recommend building the Dockerfile incrementally. Start with a rather empty one and install dependencies manually in the interactive mode. Take notes of the commands you use, so you can integrate them into the Dockerfile afterwards and rebuild your image.
 
 Some standard packages available on Aptitude might come handy:
 
@@ -46,4 +46,4 @@ Add dependencies one by one: Comment in the parts of `main.cpp` that are connect
 
 - Maybe start with the boost dependencies. Boost Container is a header-only dependency, Boost Filesystem needs to be linked. Both are available in `libboost-all-dev`. There is a CMake module to [find boost libraries](https://cmake.org/cmake/help/latest/module/FindBoost.html).
 - deal.II is available in `libdeal.ii-dev`. deal.II uses some specific [CMake macros](https://www.dealii.org/current/users/cmake_user.html).
-- yaml-cpp is an optional bonus task. For some arbitrary reason, we are not happy with the latest release of the software (which would be available through Aptitude), but we want to use exactly version `v0.6.3` [directly from GitHub](https://github.com/jbeder/yaml-cpp/releases/tag/yaml-cpp-0.6.3). Get the sources with [wget](https://linuxize.com/post/wget-command-examples/) and build and install (`make install`) it yourself. Do not forget to add the necessary instructions to the Dockerfile. Sometimes containers behave weirdly: If libraries in `/usr/local/lib` are not found by CMake, please add the path to the environment variable `LD_LIBRARY_PATH`.
+- yaml-cpp is an optional bonus task. For some arbitrary reason, we are not happy with the latest release of the software (which would be available through Aptitude), but we want to use exactly version `v0.6.3` [directly from GitHub](https://github.com/jbeder/yaml-cpp/releases/tag/yaml-cpp-0.6.3). Get the sources with [wget](https://linuxize.com/post/wget-command-examples/) and build and install (`make install`) it yourself. Do not forget to add the necessary instructions to the Dockerfile. If libraries in `/usr/local/lib` are not found by CMake, please add the path to the environment variable `LD_LIBRARY_PATH`.

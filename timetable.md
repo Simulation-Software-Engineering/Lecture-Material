@@ -68,20 +68,20 @@
 
 ## 7.1 – Wed, November 27, 2024
 
-- **70** min.: Installation and Packaging with CMake and CPack: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_demo.md)
-- **20** min.: More CMake Demo (preCICE and ccmake): [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cmake_more_demo.md)
+- **90** min.: Packaging for High-Performance Computing: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_demo.md)
 
 ## 7.2 – Wed, November 27, 2024
 
-- **90** min.: [Exercise: Packaging with CPack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_exercise.md)
+- **90** min.: [Exercise: Packaging with Spack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_exercise.md)
 
 ## 8.1 – Wed, December 4, 2024
 
-- **90** min.: Packaging for High-Performance Computing: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_demo.md)
+- **70** min.: Installation and Packaging with CMake and CPack: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_demo.md)
+- **20** min.: More CMake Demo (preCICE and ccmake): [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cmake_more_demo.md)
 
 ## 8.2 – Wed, December 4, 2024
 
-- **90** min.: [Exercise: Packaging with Spack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_exercise.md)
+- **90** min.: [Exercise: Packaging with CPack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_exercise.md)
 
 ## 9.1 – Wed, December 11, 2024
 

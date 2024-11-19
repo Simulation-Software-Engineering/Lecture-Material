@@ -76,7 +76,7 @@ int main()
 - add_executable(helloworld "${SRC_FILES}")
 ```
 
-- Build static lib `libHelloWorld.a`, that's the default
+- Build static lib `libsse.a`, that's the default
 - Build shared lib by `cmake -DBUILD_SHARED_LIBS=ON ..`, don't change in `CMakeLists.txt`, but stick to standards
 - Define CMake variables with `-D`, we will come back to this later
 - Now, let's use the library:
@@ -102,7 +102,7 @@ int main()
 `main.cpp`:
 
 ```diff
-+ #include "precice/precice.hpp"
++ #include "precice/Tooling.hpp"
 ...
 sse();
 + std::cout << precice::getVersionInformation() << std::endl;

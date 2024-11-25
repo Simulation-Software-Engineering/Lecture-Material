@@ -38,9 +38,9 @@ slideOptions:
 
 ## Learning goals
 
-- What are the challenges when bringing (your) software to supercomputers?
-- How to use Spack to install software.
-- How to create a Spack package for your own software.
+- Understand the challenges when bringing (your) software to supercomputers.
+- Use Spack to install software.
+- Create a Spack package for your own software.
 
 ---
 
@@ -104,7 +104,7 @@ slideOptions:
 - Steps:
     1. Install and configure Spack
     2. Learn how to use Spack for package management and installation
-    3. Create a Spack package for our HelloWorld code
+    3. Create a Spack package for a HelloWorld code
 - Code is on [GitHub](https://github.com/Simulation-Software-Engineering/HelloWorld)
 
 ---
@@ -112,16 +112,15 @@ slideOptions:
 ## Spack Installation
 
 - Dependencies: Python, Git, C/C++ compiler, patch, make, tar...
-    - Basically `build-essentials`, `git`, and `python` on Ubuntu
+    - Basically `build-essential`, `git`, and `python` on Ubuntu
     - May be old, install newer versions with Spack if needed
 - Installation in user-writable location
 
   ```bash
-  git clone -b releases/v0.19 https://github.com/spack/spack.git
+  git clone -b v0.23.0 -c feature.manyFiles=true --depth=2 https://github.com/spack/spack.git
   ```
 
-    - `v0.19` is currently the latest release
-    - Update to newer versions using `git pull`/`git checkout -b`
+    - `v0.23.0` is currently the latest major release
 
 ---
 

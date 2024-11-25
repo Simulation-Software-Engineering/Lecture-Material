@@ -7,11 +7,10 @@
 - Git repository of Python scripts
 
   ```bash
-  git clone -b releases/v0.19 https://github.com/spack/spack.git
+  git clone -b v0.23.0 -c feature.manyFiles=true --depth=2 https://github.com/spack/spack.git
   ```
 
-    - `v0.19` is currently the latest release
-    - Update to newer versions using `git pull`/`git checkout -b`
+    - `v0.23.0` is currently the latest major release
 
 - Initializing Spack with
 

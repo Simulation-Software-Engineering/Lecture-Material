@@ -12,6 +12,8 @@
 
     - `v0.23.0` is currently the latest major release
 
+- Install `curl`, `libcurl4-openssl-dev`, and `vim` to ensure that Spack v0.23.0 works in a Ubuntu Jammy container.
+
 - Initializing Spack with
 
   ```bash
@@ -158,6 +160,12 @@
 
   We see that `cmake` is an implicit dependency as we need it for building our package.
 
+- Make sure Spack finds external packages that `HelloWorld` needs
+
+  ```bash
+  spack external find
+  ```
+
 - Install package
 
   ```bash
@@ -245,7 +253,7 @@
 
   `~` can be (often) used instead of `-`. There are [examples in the documentation](https://spack.readthedocs.io/en/latest/basic_usage.html#variants).
 
-## Further reading
+## Further material
 
 ### References
 

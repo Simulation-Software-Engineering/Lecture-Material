@@ -4,11 +4,11 @@ This exercise is about packaging code with Spack. We work with a simplified vers
 
 At the end of the exercise you find a section with hints and remarks. Make sure to check this section.
 
-Deadline: **Thursday, December 15th, 2022, 9:00**
+Deadline: **Wednesday, December 4th, 2024, 09:00**
 
 ## Creation of a Spack Package
 
-We want to package the [Spack example code on GitHub](https://github.com/Simulation-Software-Engineering/spack-exercise). It is an adapted version of the previous week's exercise again. The `deal.ii` dependency has been removed as compiling `deal.ii` from scratch takes too long. Additionally, several releases with different dependencies have been added. The code in the repository creates an executable that is called `spackexample`. It also creates a library  `libspackexamplelib` (what a name) which is needed to run `spackexample`.
+We want to package the [Spack example code on GitHub](https://github.com/Simulation-Software-Engineering/spack-exercise). It is an adapted version of the last week's exercise. The `deal.ii` dependency has been removed as compiling `deal.ii` from scratch takes too long. Additionally, several releases with different dependencies have been added. The code in the repository creates an executable that is called `spackexample`. It also creates a library  `libspackexamplelib` (what a name) which is needed to run `spackexample`.
 
 The default name of your Spack package is `spack-exercise`. The Spack package should create the executable `spackexample` and the corresponding library `libspackexamplelib` mentioned above. Under normal circumstances you do not need to edit the CMake configuration for this exercise.
 
@@ -24,7 +24,7 @@ Create a Spack package for all releases of the given code and make sure that the
 
 ### Development/Packaging Environment
 
-Please do all the development inside a Docker container. The Docker container is based on the image built from the recipe provided in the [exercise repository](https://github.com/Simulation-Software-Engineering/spack-exercise). You can find the recipe of the image inside the `docker/` directory of [the example code on GitHub](https://github.com/Simulation-Software-Engineering/spack-exercise). The image itself is based on Ubuntu 20.04 and has the Boost dependency preinstalled. Additionally, Spack has been set up in the recipe. Two editors `vim` and `nano` preinstalled. If you want to install further software in your container you are free to do so.
+Please do all the development inside a Docker container. The Docker container is based on the image built from the recipe provided in the [exercise repository](https://github.com/Simulation-Software-Engineering/spack-exercise). You can find the recipe of the image inside the `docker/` directory. The image itself is based on Ubuntu 20.04 and has the Boost dependency preinstalled. Additionally, Spack has been set up in the recipe. Two editors `vim` and `nano` are preinstalled. If you want to install further software in your container you are free to do so.
 
 ### Packaging Steps
 

@@ -7,11 +7,12 @@
 - Git repository of Python scripts
 
   ```bash
-  git clone -b releases/v0.19 https://github.com/spack/spack.git
+  git clone -b v0.23.0 -c feature.manyFiles=true --depth=2 https://github.com/spack/spack.git
   ```
 
-    - `v0.19` is currently the latest release
-    - Update to newer versions using `git pull`/`git checkout -b`
+    - `v0.23.0` is currently the latest major release
+
+- **Note:** Install `curl`, `libcurl4-openssl-dev`, and `vim` to ensure that Spack v0.23.0 works in a fresh Ubuntu Jammy container.
 
 - Initializing Spack with
 
@@ -159,6 +160,14 @@
 
   We see that `cmake` is an implicit dependency as we need it for building our package.
 
+- If the same Docker container as in step 2 is used, make sure to uninstall `zlib` before installing `helloworld`.
+
+- Make sure Spack finds external packages that `HelloWorld` needs
+
+  ```bash
+  spack external find
+  ```
+
 - Install package
 
   ```bash
@@ -187,16 +196,6 @@
 
   This will concretize (internally, i.e. no output on terminal) and then build the software.
 
-- **Optional**: one could add `main` branch and thus GitHub repository
-
-  ```diff
-  + git      = "https://github.com/Simulation-Software-Engineering/HelloWorld.git"
-  +
-  + version('main', branch='main')
-  ```
-
-  This can also be used for `develop` branches etc. It is useful if one needs really the newest version of a package or if one develops software using Spack.
-
 - If one wants to edit the package later, there are two options
 
   ```bash
@@ -205,11 +204,21 @@
 
   or open `package.py` file in `${HOME}/var/spack/repos/builtin/packages/helloworld/`
 
+- **Optional**: one could add `main` branch and thus GitHub repository
+
+  ```diff
+  + git      = "https://github.com/Simulation-Software-Engineering/HelloWorld.git"
+  +
+  + version("main", branch="main")
+  ```
+
+  This can also be used for `develop` branches etc. It is useful if one needs really the newest version of a package or if one develops software using Spack.
+
 - Add artificial dependencies
 
   ```diff
-  + depends_on('python@3:', when='@0.3.0:')
-  + depends_on('zlib@:1.2')
+  + depends_on("python@3:", when="@0.3.0:")
+  + depends_on("zlib@:1.2")
   ```
 
   This means that the package depends on Python `3.0.0` or newer and newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
@@ -227,9 +236,9 @@
 - Add an artificial variant
 
   ```diff
-  + variant('python', default=True, description='Enable Python support')
-  - depends_on('python@3:', when='@0.3.0:')
-  + depends_on('python@3:', when='@0.3.0:+python')
+  - depends_on("python@3:", when="@0.3.0:")
+  + variant("python", default=True, description="Enable Python support")
+  + depends_on("python@3:", when="@0.3.0:+python")
   ```
 
   and check its existence
@@ -246,7 +255,7 @@
 
   `~` can be (often) used instead of `-`. There are [examples in the documentation](https://spack.readthedocs.io/en/latest/basic_usage.html#variants).
 
-## Further reading
+## Further material
 
 ### References
 

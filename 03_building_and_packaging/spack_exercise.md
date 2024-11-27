@@ -26,6 +26,8 @@ Create a Spack package for all releases of the given code and make sure that the
 
 Please do all the development inside a Docker container. The Docker container is based on the image built from the recipe provided in the [exercise repository](https://github.com/Simulation-Software-Engineering/spack-exercise). You can find the recipe of the image inside the `docker/` directory. The image itself is based on Ubuntu 20.04 and has the Boost dependency preinstalled. Additionally, Spack has been set up in the recipe. Two editors `vim` and `nano` are preinstalled. If you want to install further software in your container you are free to do so.
 
+**Note for MacOS users**: While building the Docker image, you may have to add the flag `--platform=linux/amd64`.
+
 ### Packaging Steps
 
 - Create a fork of the [GitHub repository](https://github.com/Simulation-Software-Engineering/spack-exercise).

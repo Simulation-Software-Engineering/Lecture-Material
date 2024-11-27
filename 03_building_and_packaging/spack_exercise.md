@@ -80,7 +80,7 @@ Please do all the development inside a Docker container. The Docker container is
     - Verify that you can install and use `spack-exercise@0.2.0` and `spack-exercise@0.3.0`. There is a `config.yml` file inside the `yamlParser` directory that you should be able to parse with `spack-exercise@0.3.0` with a command like
 
       ```bash
-      spackexample <path_to_repo>/yamlParser/config.yml
+      spackexample <path_to_local_folder>/yamlParser/config.yml
       ```
 
     - Check the output of `spack info spack-exercise` and make sure that it makes sense. The additional dependencies (`yaml-cpp` and `Boost`) should appear in the output.

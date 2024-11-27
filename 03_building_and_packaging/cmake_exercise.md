@@ -4,7 +4,7 @@ In this exercise, we need to fight. Not everything always works smoothly. This i
 
 To get an independent and reproducible environment as common ground, we use and, thus repeat, Docker.
 
-Deadline: **Thursday, November 27th, 2024, 9:00**
+Deadline: **Wednesday, November 27th, 2024, 9:00**
 
 ## Overview
 

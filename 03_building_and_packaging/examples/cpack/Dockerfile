@@ -1,4 +1,4 @@
-From ubuntu:22.04
+From ubuntu:24.04
 
 RUN apt-get -qq update && \
     apt-get -qq -y install \

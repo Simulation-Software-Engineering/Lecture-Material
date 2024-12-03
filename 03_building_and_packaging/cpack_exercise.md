@@ -2,13 +2,13 @@
 
 Let us try to package the code from the CMake exercise with CPack, such that we can give the (binary) software to somebody else.
 
-Deadline: **Thursday, December 8th, 2022, 9:00**
+Deadline: **December 11, 2024, 9:00**
 
 ## Overview
 
-- The goal of the exercise is to open a pull request from a fork of [the CPack exercise repository](https://github.com/Simulation-Software-Engineering/cpack-exercise-wt2223). Please name your pull request `Add installation and packaging targets`. In the pull request description, please explain what we need to do to test your code. If you work on any of the optional tasks below, please document in the description as well.
+- The goal of the exercise is to open a pull request from a fork of [the CPack exercise repository](https://github.com/Simulation-Software-Engineering/cpack-exercise-wt2425). Please name your pull request `Add installation and packaging targets`. In the pull request description, please explain what we need to do to test your code. If you work on any of the optional tasks below, please document in the description as well.
 - The current state of the code is basically a solution of the CMake exercise from last week. For demonstration purpose the code is now, however, artificially split into a library `cpackexamplelib` and an executable `cpackexample`.
-- Your task is to develop a CMake/CPack configuration that allows generating a `.tar.gz` and a Debian `.deb` package of our code. To this end, follow the same four steps as in the lecture (details below).
+- Your task is to develop a CMake/CPack configuration that allows generating a `.tar.gz` and a Debian `.deb` package of the code. To this end, follow the same four steps as in the lecture (details below).
 
 ## Getting Started
 

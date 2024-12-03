@@ -8,7 +8,7 @@
     - `tree cmake`
     - If software should be usable (for everybody everywhere), building and packaging is a project by itself
 - In `modules`: some `FindX.cmake`, partially third-party, partially developed by preCICE devs
-- In `CMakeLists.txt`: `sources.cmake` included (around line 345)
+- In `CMakeLists.txt`: `sources.cmake` included (around line 510)
     - No glob, but generated externally (some python script)
     - Look at `src/sources.cmake`
 - Look at `CPackConfig.cmake`

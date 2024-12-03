@@ -8,9 +8,6 @@ all
 # Allow first header to not be a top level header
 # since top-level is set by metadata
 exclude_rule 'MD002'
-# Allow hard tabs such that they can be used in code blocks
-# as needed for Makefiles
-exclude_rule 'MD010'
 # First line in file does not have to be a top level header
 # since top-level is set by metadata
 exclude_rule 'MD041'

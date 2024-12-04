@@ -5,8 +5,8 @@ Example code is in [`03_building_and_packaging/examples/cpack`](https://github.c
 - Show `main.cpp`, `sse/*`: same example as last week
 - Goal of this lecture: How can we give this software to somebody else in a proper way? Remember lecture on packaging for Python; now C++ code
 - Build and start Docker container:
-    - `docker build -t "cpack_demo"`
-    - `docker run -it cpack_demo`
+    - `docker build -t "cpack_demo" .`
+    - `docker run --rm -it cpack_demo`
 
 ## Add Install Target to CMake Configuration
 
@@ -32,7 +32,7 @@ Example code is in [`03_building_and_packaging/examples/cpack`](https://github.c
   mkdir build && cd build
   cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ..
   make -j
-  sudo make install
+  make install
   ```
 
 - Installs in `/usr/local` which is the default value of `CMAKE_INSTALL_PREFIX` when using CMake.
@@ -95,7 +95,7 @@ Example code is in [`03_building_and_packaging/examples/cpack`](https://github.c
 - `CPACK_DEBIAN_PACKAGE_SHLIBDEPS` tries to extract dependencies automatically. We can also set dependencies manually (`CPACK_DEBIAN_PACKAGE_DEPENDS`).
 - `cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ..` and `cpack -G DEB` ... no complaints
 - Different package name: `helloworld_0.1.0_amd64.deb`
-- Install the package: `sudo apt install ./helloworld_0.1.0_amd64.deb`
+- Install the package: `apt install ./helloworld_0.1.0_amd64.deb`
 - `helloworld` and `which helloworld`: now `/usr`, not `/usr/local`, since we use package manager.
 
 ## Check Debian Package

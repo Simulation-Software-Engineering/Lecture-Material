@@ -64,7 +64,7 @@ diffusion2d.solve()
 
 ## Step 3 - Creating folder structure for packaging
 
-- Now that you have a refactored code, replicate the folder structure we learnt in the lecture to prepare the code for packaging.
+- Now that you have a refactored code, replicate the folder structure we learned in the lecture to prepare the code for packaging.
 - With the help of the [lecture notes](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_slides.md) create additional files `setup.py`, `setup.cfg` or `pyproject.toml`, `__init__.py` and `README.md`.
 - Make a choice of using either `setup.cfg` or `pyproject.toml` to configure `setuptools` for the packaging. All configuration options needs to be specified in the configuration file and the setup file should only be a minimal file as shown in the lecture slides.
 - It is recommended to have the `package-name/` folder which has the source code in it.

@@ -169,4 +169,4 @@ assert condition, "message"
 
 ## Further Reading
 
-- [Research Software Engineering with Python - Chapter 11: Testing Software](https://merely-useful.tech/py-rse/testing.html)
+- [Research Software Engineering with Python - Chapter 11: Testing Software](https://third-bit.com/py-rse/testing.html)

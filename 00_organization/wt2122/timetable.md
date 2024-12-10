@@ -6,7 +6,7 @@
 - **15** [Introduction to RSE](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/rse_basics_slides.md)
 - **15** [Introduction to version control](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/intro_slides.md)
 - **15** [Recap of Git basics](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_basics_demo.md#recap-of-git-basics)
-- Tell students how to recap Git in detail if needed: [py-rse book](https://merely-useful.tech/py-rse/)
+- Tell students how to recap Git in detail if needed: [py-rse book](https://third-bit.com/py-rse/)
 
 ## 1.2 – Thu, October 21, 2021
 

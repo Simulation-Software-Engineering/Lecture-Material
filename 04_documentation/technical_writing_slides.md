@@ -156,7 +156,7 @@ Much content of this lecture is taken from [Write the Docs](https://www.writethe
 
 ---
 
-From [py-RSE](https://merely-useful.tech/py-rse/documentation.html):
+From [py-RSE](https://third-bit.com/py-rse/documentation.html):
 
 > The best function names in the world aren't going to answer the questions “Why does the software do this?” and “Why doesn’t it do this in a simpler way?”
 
@@ -164,7 +164,7 @@ From [py-RSE](https://merely-useful.tech/py-rse/documentation.html):
 
 ## Be Clear About Your Audience (2/2)
 
-[py-RSE](https://merely-useful.tech/py-rse/documentation.html) distinguishes novices, competent practitioners, and experts (following [Wilson 2019, Teaching Tech Together](https://doi.org/10.1201/9780429330704))
+[py-RSE](https://third-bit.com/py-rse/documentation.html) distinguishes novices, competent practitioners, and experts (following [Wilson 2019, Teaching Tech Together](https://doi.org/10.1201/9780429330704))
 
 - A **novice** doesn’t yet have a mental model of the domain. -> Needs **tutorials** that introduce key ideas one by one.
     - Good example: [deal.ii tutorials](https://dealii.org/developer/doxygen/deal.II/Tutorial.html)).
@@ -477,8 +477,8 @@ Example: [preCICE API](https://precice.org/doxygen/main/classprecice_1_1SolverIn
 
 ## Further Reading
 
-- [py-rse appendix on documentation](https://merely-useful.tech/py-rse/documentation.html)
-- [py-rse on docstrings](https://merely-useful.tech/py-rse/scripting.html#scripting-docstrings)
+- [py-rse appendix on documentation](https://third-bit.com/py-rse/documentation.html)
+- [py-rse on docstrings](https://third-bit.com/py-rse/scripting.html#scripting-docstrings)
 - [Write the Docs](https://www.writethedocs.org/)
 - [I'd Rather Be Writing blog](https://idratherbewriting.com/)
 - [Google developer documentation style guide](https://developers.google.com/style)

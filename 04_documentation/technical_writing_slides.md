@@ -419,7 +419,7 @@ Android's ActionBar class:
 
 **Long description**: how to use, key features, best practices, ...
 
-Example: [preCICE API](https://precice.org/doxygen/main/classprecice_1_1SolverInterface.html)
+Example: [preCICE API](https://precice.org/doxygen/main/classprecice_1_1Participant.html)
 
 ---
 
@@ -461,7 +461,7 @@ Example: [preCICE API](https://precice.org/doxygen/main/classprecice_1_1SolverIn
     - *The bird specified by the given ID.*
     - *True if the bird is in the sanctuary; false otherwise.*
 
-Example: [preCICE API](https://precice.org/doxygen/main/classprecice_1_1SolverInterface.html)
+Example: [preCICE API](https://precice.org/doxygen/main/classprecice_1_1Participant.html)
 
 ---
 
@@ -483,3 +483,5 @@ Example: [preCICE API](https://precice.org/doxygen/main/classprecice_1_1SolverIn
 - [I'd Rather Be Writing blog](https://idratherbewriting.com/)
 - [Google developer documentation style guide](https://developers.google.com/style)
     - [Section on API documentation](https://developers.google.com/style/api-reference-comments)
+- [Kubernetes documentation style guide](https://kubernetes.io/docs/contribute/style/style-guide/#avoid-words-that-assume-a-specific-level-of-understanding)
+- [Ten simple rules for documenting scientific software](https://doi.org/10.1371/journal.pcbi.1006561)

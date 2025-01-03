@@ -1,7 +1,7 @@
 ---
 title: My awesome title
 author: Firstname lastname
-date: 2023-01-13
+date: 2025-01-08
 ---
 
 # Introduction

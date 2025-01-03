@@ -28,6 +28,7 @@
 - Color link: `pandoc example.md -V colorlinks -o example.pdf`
     - Binary option, no value
     - Find `colorlinks` in `template.tex`
+    - [All variables for LaTeX](https://pandoc.org/MANUAL.html#variables-for-latex)
 
 ## Custom Templates
 

@@ -77,8 +77,8 @@ slideOptions:
 ## HIWI Wanted
 
 - Migrate preCICE website generator from jekyll to Hugo
-  - Pitfalls with current setup: [issue 471](https://github.com/precice/precice.github.io/issues/471)
-  - Migration: [issue 472](https://github.com/precice/precice.github.io/issues/472)
+    - Pitfalls with current setup: [issue 471](https://github.com/precice/precice.github.io/issues/471)
+    - Migration: [issue 472](https://github.com/precice/precice.github.io/issues/472)
 
 ---
 

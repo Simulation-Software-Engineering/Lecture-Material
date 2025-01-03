@@ -70,7 +70,7 @@ slideOptions:
 ## Pitchfork (Layout)
 
 - Originated from [Reddit](https://www.reddit.com/r/cpp/comments/996q8o/prepare_thy_pitchforks_a_de_facto_standard/): "Prepare thy Pitchforks: A (de facto) Standard Project Layout"
-- [GitHub repo](https://github.com/vector-of-bool/pitchfork) includes conventions and useful tools
+- [GitHub repo](https://github.com/vector-of-bool/pitchfork) includes conventions and tools
 
 ```text
 README

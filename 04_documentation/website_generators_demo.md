@@ -54,7 +54,7 @@ Example code is in [`04_documentation/examples/sphinx`](https://github.com/Simul
     +.. include:: ../README.rst
     ```
 
-- Look at `conf.py` and change style to `classic`
+- Look at `conf.py` and change theme to `classic`
 
 ## Code Documentation
 

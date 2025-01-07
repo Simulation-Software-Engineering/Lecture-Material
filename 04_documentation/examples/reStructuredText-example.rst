@@ -41,7 +41,7 @@ Code uses backticks. This can be code/variable names in text that ``appear`` in 
    }
 
 ..
-    Quotations can be by indenting them more than surronding. We use an empty comment ``..`` in order to separate the code block from this quote.
+    Quotations work by indenting them more than the surrounding. We use an empty comment ``..`` in order to separate the code block from this quote.
 
 We can also have hyperlinks to other websites. We could link to the `course website`_, but separate the link and target definition.
 

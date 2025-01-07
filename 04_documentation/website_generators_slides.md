@@ -61,7 +61,7 @@ slideOptions:
 ## Brief Overview of Tools
 
 - General documentation site generators
-    - [MkDocs](https://www.mkdocs.org) (md), [Sphinx](https://www.sphinx-doc.org/en/master/) (rst), [jekyll](https://jekyllrb.com/), ...
+    - [MkDocs](https://www.mkdocs.org) (md), [Sphinx](https://www.sphinx-doc.org/en/master/) (rst), [jekyll](https://jekyllrb.com/), [Hugo](https://gohugo.io/), ...
 - Code documentation site generators
     - [Doxygen](https://www.doxygen.nl) (C++, C...), Sphinx with [autodoc extension](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html) (Python), ...
 - Publishing tools
@@ -71,6 +71,14 @@ slideOptions:
     - [SSE homepage](https://simulation-software-engineering.github.io/homepage/): MkDocs + [material theme](https://squidfunk.github.io/mkdocs-material/) + GitHub Pages
     - [preCICE docs](https://precice.org/): jekyll + [Jekyll Doc Theme](https://idratherbewriting.com/documentation-theme-jekyll) + GitHub Pages
     - Diffusion solver demo: Sphinx + autodoc ext. + Read the Docs
+
+---
+
+## HIWI Wanted
+
+- Migrate preCICE website generator from jekyll to Hugo
+    - Pitfalls with current setup: [issue 471](https://github.com/precice/precice.github.io/issues/471)
+    - Migration: [issue 472](https://github.com/precice/precice.github.io/issues/472)
 
 ---
 
@@ -204,8 +212,8 @@ From [project homepage](https://readthedocs.org/)
 
 ## More Optional Homework: MkDocs + GitHub Pages
 
-- Last year, we had a homework to document our *"yaml-cpp-dealii-boost code"* using MkDocs and publish on GitHub pages.
-- If you want to get a glimpse on these tools, follow the [exercise sheet](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/ab8476624c39c20198afbc5f9773775fad62785e/04_documentation/tools_exercise.md) from last year.
+- Previously, we had a homework to document our *"yaml-cpp-dealii-boost code"* using MkDocs and publish on GitHub pages.
+- If you want to get a glimpse on these tools, follow the [abandoned exercise sheet](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/ab8476624c39c20198afbc5f9773775fad62785e/04_documentation/tools_exercise.md).
 
 ---
 

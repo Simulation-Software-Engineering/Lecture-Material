@@ -199,7 +199,6 @@ From [YAML website](https://yaml.org/)
 - Popular for configurations
 - Indentation with **two** spaces is important.
     - Tabs **not** allowed for indentation
-- Can differentiate between datatypes
 - Recommended file extension `yaml` (also `yml`)
 
 ---

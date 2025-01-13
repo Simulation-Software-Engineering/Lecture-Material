@@ -29,7 +29,7 @@ slideOptions:
 
 ## Learning Goals of the Chapter
 
-- Know the need of developing testing infrastructure for simulation software.
+- Explain why developing tests is crucial.
 - Explain the concepts of unit testing, integration testing and regression testing with the perspective of simulation software.
 - Write tests using the Python libraries `pytest` and `unittest`.
 - Write tests in C++ using `Boost.Test`.

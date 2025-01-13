@@ -90,7 +90,7 @@ assert condition, "message"
 
 ---
 
-## Unit testing
+## Unit Testing
 
 - Catching errors with assertions is good but preventing them is better!
 - A *unit* is a single function in one situation.
@@ -101,7 +101,7 @@ assert condition, "message"
 
 ---
 
-## Integration testing
+## Integration Testing
 
 - Test whether several units work in conjunction.
 - *Integrate* units and test them together in an *integration* test.
@@ -111,7 +111,7 @@ assert condition, "message"
 
 ---
 
-## Regression testing
+## Regression Testing
 
 - Generating an expected result is not possible in some situations.
 - Compare the current actual result with a previous actual result.
@@ -129,7 +129,7 @@ assert condition, "message"
 
 ---
 
-## Comparing floating-point variables
+## Comparing Floating-point Variables
 
 - Very often quantities in simulation software are `float` / `double`.
 - Such quantities cannot be compared to exact values, an approximation is necessary.
@@ -139,7 +139,7 @@ assert condition, "message"
 
 ---
 
-## Test-driven development (TDD)
+## Test-driven Development (TDD)
 
 - Principle of writing a test and then write a code to fulfill the test.
 - Advantages:
@@ -155,7 +155,7 @@ Source: https://en.wikipedia.org/wiki/Test-driven_development
 
 ---
 
-## Verifying a test
+## Verifying a Test
 
 - Test written as part of a bug-fix:
     - Reproduce the bug in the test by ensuring that the test fails.

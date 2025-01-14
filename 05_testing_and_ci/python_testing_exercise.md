@@ -9,15 +9,14 @@
 
 - An operating system / software / environment where you can install Python and some basic Python tools
 - An editor or IDE to edit Python code and write text files
-- The following Python tools:
-    - Python (version >= 3)
-    - [pip](https://pypi.org/project/pip/)
-    - [NumPy](https://numpy.org/)
-    - [Matplotlib](https://matplotlib.org/)
-    - [pytest](https://docs.pytest.org/en/6.2.x/getting-started.html#install-pytest)
-    - [unittest](https://docs.python.org/3/library/unittest.html#module-unittest)
-    - [coverage](https://coverage.readthedocs.io/en/6.2/#quick-start)
-    - [tox](https://tox.wiki/en/4.23.2/installation.html)
+- Python (version >= 3)
+- [pip](https://pypi.org/project/pip/)
+- [NumPy](https://numpy.org/)
+- [Matplotlib](https://matplotlib.org/)
+- [pytest](https://docs.pytest.org/en/6.2.x/getting-started.html#install-pytest)
+- [unittest](https://docs.python.org/3/library/unittest.html#module-unittest)
+- [coverage](https://coverage.readthedocs.io/en/6.2/#quick-start)
+- [tox](https://tox.wiki/en/4.23.2/installation.html)
 
 ## Step 1 - Getting Familiar With the Code
 
@@ -98,7 +97,7 @@ pytest tests/unit/test_diffusion2d_functions.py
 
 - Using the coverage tool generate a HTML report of the code coverage of all the tests.
 - Open the report file in a browser and print the report to a file called `coverage-report.pdf`. Add this file to the repository.
-- **Note**: coverage can be used with both `pytest` and `unittest`. In this case generating the report of the unit tests using unittest is sufficient.
+- **Note**: coverage can be used with both `pytest` and `unittest`. In this case, generating the report of the unit tests using unittest is sufficient.
 
 ## Step 7 - Automation Using tox
 
@@ -107,4 +106,4 @@ pytest tests/unit/test_diffusion2d_functions.py
 
 ## Step 8 - Submission
 
-- Open a pull request titled `[your GitLab username] Adding tests` from your fork to the main repository.
+- Open a pull request titled `[<your GitLab username>] Adding tests` (for example: `[desaiin] Adding tests`) from your fork to the main branch of the exercise repository.

@@ -24,7 +24,7 @@ pip install -U pytest
 - All tests can be run using the command-line tool called `pytest`. Just type `pytest` in the working directory and hit ENTER.
 - If pytest is installed in some other way, you might need to run it like `python -m pytest`.
 - One test is expected to fail. Reading the error message we understand that the failure occurs because floating-point variable comparison is not handled correctly.
-- We need to tell pytest that while comparing two floating-point variables the value needs to be correct only up to a certain tolerance limit. To do this the expected mean value needs to be changed by uncommenting the line in the following part of the code:
+- We need to tell pytest that while comparing two floating-point variables the value needs to be correct only up to a certain tolerance limit. To do this, the expected mean value needs to be changed by uncommenting the line in the following part of the code:
 
 ```python
 # Expected result
@@ -32,12 +32,12 @@ pip install -U pytest
     # expected_result = pytest.approx(78.3, abs=0.01)
 ```
 
-- **Comparing floating point variables** needs to be handled in functions like `find_average` and is done using `pytest.approx(value, abs)`. The `abs` value is the tolerance up to which the floating-point value will be checked, that is `78.33 +/- 0.01`.
+- **Comparing floating point variables** needs to be handled in functions like `find_mean` and is done using `pytest.approx(value, abs)`. The `abs` value is the tolerance up to which the floating-point value will be checked, that is `78.33 +/- 0.01`.
 - Even if one test fails, pytest runs all the tests and gives a report on the failing test. The assertion failure report generated my pytest is also more detailed than the usual Python assertion report. When the test fails, the following is observed:
 
 ```bash
-=============================================== FAILURES ====================================================
-____________________________________________ test_find_mean _________________________________________________
+========================================== FAILURES ===============================================
+_______________________________________ test_find_mean ____________________________________________
 
     def test_find_mean():
         """
@@ -73,20 +73,21 @@ tests/
 ```
 
 - Putting the tests in a folder `tests/` does not affect the behavior of pytest. When pytest is run from the original directory, the tests are found and run.
+- **Note**: revert to the old directory structure before proceeding to the next section.
 
 ## unittest
 
-- Base class `unittest.TestCase` is used to create a test suite consisting of all the tests of a software.
+- Base class `unittest.TestCase` is used to create a test suite.
 - Each test is now a function of a class which is derived from the class `unittest.TestCase`.
 - The same tests as for `pytest` are implemented using `unittest` in the file `test_operations_unittests.py`. The tests are functions of a class named `TestOperations` which tests our mathematical operations. The class `TestOperations` is derived from `unittest.TestCase`.
-- unittest can be run by:
+- unittest can be run as a Python module:
 
 ```bash
 python -m unittest
 ```
 
-- unittest.TestCase offers functions like `assertEqual`, `assertAlmostEqual`, `assertTrue`, etc. for use instead of the usual assertion statements. These statements help the test runner to accumulate all test results and generate a test report.
-- `unittest.main()` provides an option to run the tests from a command-line interface.
+- unittest.TestCase offers functions like `assertEqual`, `assertAlmostEqual`, `assertTrue`, and more ([see unittest.TestCase documentation](https://docs.python.org/3/library/unittest.html#unittest.TestCase)) for use instead of the usual assertion statements. These statements ensure that test runner to accumulate all test results and generate a test report.
+- `unittest.main()` provides an option to run the tests from a command-line interface and also from a file.
 - `setUp` function is executed before all the tests. Similar a clean up function `tearDown` exists.
 - The intention is to group together sets of similar tests in an instant of `unittest.TestCase` and have multiple such instances.
 - Decorators such as `@unittest.skip`, `@unittest.skipIf`, `@unittest.expectedFailure` can be used to gain flexibility over working of tests.
@@ -123,22 +124,21 @@ coverage html
 
 ## tox
 
-- Automation for Python testing (and much more)
-- Virtual environments are created for each task, and tox takes care of installing dependencies and the package itself inside of the environment.
-- Order of preference for files that tox tries to read: `pyproject.toml`, `tox.ini`, `setup.cfg`
-- `tox.ini` file
+- Environment orchestrator to setup and execute various tools for a project.
+- `tox` creates virtual environments to run each tools in.
+- `tox.toml` file:
 
-```ini
-[tox]
-envlist = my_env
-skipsdist = true
+```toml
+requires = ["tox>=4"]
+env_list = ["testing"]
 
-[testenv]
-deps = pytest
-commands = pytest
+[env.testing]
+description = "Run pytest"
+deps = ["pytest>=8"]
+commands = [["pytest"]]
 ```
 
-- Global settings defined under section `[tox]` in the INI file.
-- Start tox by running the command `tox` in the directory where the `tox.ini` exists.
+- Global settings defined under section at the top of the `tox.toml` file.
+- Start tox by running the command `tox` in the directory where the `tox.toml` exists.
 - tox takes more time the first time it is run as it creates the necessary virtual environments. Virtual environment setup can be found in the `.tox` repository.
 - Observe that tox starts a virtual environment, installs the dependency (here `pytest`) and runs `pytest`.

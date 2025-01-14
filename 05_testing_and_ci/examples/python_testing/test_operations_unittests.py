@@ -2,6 +2,7 @@
 Tests for mathematical operations functions.
 """
 from operations import find_max, find_mean
+import unittest
 from unittest import TestCase
 import csv
 
@@ -78,3 +79,7 @@ class TestOperations(TestCase):
 
         # Test
         self.assertAlmostEqual(actual_mean, reference_mean[0], 2)
+
+if __name__ == "__main__":
+    # Run the tests
+    unittest.main()

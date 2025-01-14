@@ -29,9 +29,12 @@ slideOptions:
 
 ## Learning Goals of the Chapter
 
-- Justify the effort of developing testing infrastructure for simulation software
-- Discern the concepts of unit testing, integration testing and regression testing with the perspective of simulation software
-- Work with the Python testing frameworks `pytest` and `unittest`
+- Explain why developing tests is crucial.
+- Explain the concepts of unit testing, integration testing and regression testing with the perspective of simulation software.
+- Write tests using the Python libraries `pytest` and `unittest`.
+- Write tests in C++ using `Boost.Test`.
+- Explain the concepts of automation workflows in RSE.
+- Write automation workflows using GitHub Actions and GitLab CI.
 
 ---
 
@@ -48,7 +51,7 @@ slideOptions:
 - Improve software reliability and reproducibility.
 - Make sure that changes (bugfixes, new features) do not affect other parts of software.
 - Generally all software is better off being tested regularly. Possible exceptions are very small codes with single users.
-- Ensure that a released version of a software actually works.
+- Ensure that a distributed/packaged software actually works.
 
 ---
 
@@ -93,7 +96,7 @@ assert condition, "message"
 - A *unit* is a single function in one situation.
     - A situation is one amongst many possible variations of input parameters.
 - User creates the expected result manually.
-- Fixture is the set of inputs used to generate an actual result.
+- A fixture is a set of inputs used to generate an actual result.
 - Actual result is compared to the expected result, for e.g. using an assertion statement.
 
 ---
@@ -120,9 +123,9 @@ assert condition, "message"
 
 ## Test Coverage
 
-- Coverage is the amount of code a test touches in one run.
+- Coverage is the amount of code a test runs through.
 - Aim for high test coverage.
-- There is a trade-off: high test coverage vs. effort in test development
+- There is a trade-off: extremely high test coverage vs. effort in test development
 
 ---
 
@@ -138,20 +141,17 @@ assert condition, "message"
 
 ## Test-driven Development (TDD)
 
-- Principle is to write a test and then write a code to fulfill the test.
+- Principle of writing a test and then write a code to fulfill the test.
 - Advantages:
-    - In the end user ends up with a test alongside the code.
+    - Leads to a robust test along with the implementation.
     - Eliminates confirmation bias of the user.
-    - Writing tests gives clarity on what the code is supposed to do.
-- Disadvantage: known to not improve productivity.
+    - Facilitates continuous integration.
+    - Reduces need for debugging.
+- Disadvantages:
+    - False security from tests.
+    - Neglect of overall design.
 
----
-
-## Checking-driven Development (CDD)
-
-- Developer performs spot checks; sanity checks at intermediate stages
-- Simulation software often has heuristics which are easy to determine.
-- Keep performing same checks at different stages of development to ensure the code works.
+Source: https://en.wikipedia.org/wiki/Test-driven_development
 
 ---
 

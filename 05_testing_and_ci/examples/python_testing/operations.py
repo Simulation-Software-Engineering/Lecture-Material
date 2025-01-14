@@ -54,10 +54,10 @@ def main():
     data = [5, 3, 14, 27, 4, 9]
 
     maximum = find_max(data)
-    print("Maximum = {}".format(maximum))
+    print("Maximum of {} is {}".format(data, maximum))
 
     mean = find_mean(data)
-    print("Average = {}".format(mean))
+    print("Average of {} is {}".format(data, mean))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,7 @@
+requires = ["tox>=4"]
+env_list = ["testing"]
+
+[env.testing]
+description = "Run pytest"
+deps = ["pytest>=8"]
+commands = [["pytest"]]

@@ -24,7 +24,7 @@ pip install -U pytest
 - All tests can be run using the command-line tool called `pytest`. Just type `pytest` in the working directory and hit ENTER.
 - If pytest is installed in some other way, you might need to run it like `python -m pytest`.
 - One test is expected to fail. Reading the error message we understand that the failure occurs because floating-point variable comparison is not handled correctly.
-- We need to tell pytest that while comparing two floating-point variables the value needs to be correct only up to a certain tolerance limit. To do this the expected mean value needs to be changed by uncommenting the line in the following part of the code:
+- We need to tell pytest that while comparing two floating-point variables the value needs to be correct only up to a certain tolerance limit. To do this, the expected mean value needs to be changed by uncommenting the line in the following part of the code:
 
 ```python
 # Expected result
@@ -73,6 +73,7 @@ tests/
 ```
 
 - Putting the tests in a folder `tests/` does not affect the behavior of pytest. When pytest is run from the original directory, the tests are found and run.
+- **Note**: revert to the old directory structure before proceeding to the next section.
 
 ## unittest
 
@@ -125,20 +126,16 @@ coverage html
 
 - Environment orchestrator to setup and execute various tools for a project.
 - `tox` creates virtual environments to run each tools in.
-- Order of preference for files that tox tries to read: `pyproject.toml`, `tox.toml`, `setup.cfg`
 - `tox.toml` file:
 
 ```toml
 requires = ["tox>=4"]
 env_list = ["testing"]
 
-[env_run_base]
-description = "run unit tests"
-deps = [
-    "pytest>=8",
-    "pytest-sugar"
-]
-commands = [["pytest", { replace = "posargs", default = ["tests"], extend = true }]]
+[env.testing]
+description = "Run pytest"
+deps = ["pytest>=8"]
+commands = [["pytest"]]
 ```
 
 - Global settings defined under section at the top of the `tox.toml` file.

@@ -15,12 +15,7 @@ Example code is in [05_testing_and_ci/examples/python_testing](https://github.co
 
 ## pytest
 
-- pytest is installed by:
-
-```bash
-pip install -U pytest
-```
-
+- pytest is installed using pip: `pip install pytest`.
 - All tests can be run using the command-line tool called `pytest`. Just type `pytest` in the working directory and hit ENTER.
 - If pytest is installed in some other way, you might need to run it like `python -m pytest`.
 - One test is expected to fail. Reading the error message we understand that the failure occurs because floating-point variable comparison is not handled correctly.
@@ -80,12 +75,7 @@ tests/
 - Base class `unittest.TestCase` is used to create a test suite.
 - Each test is now a function of a class which is derived from the class `unittest.TestCase`.
 - The same tests as for `pytest` are implemented using `unittest` in the file `test_operations_unittests.py`. The tests are functions of a class named `TestOperations` which tests our mathematical operations. The class `TestOperations` is derived from `unittest.TestCase`.
-- unittest can be run as a Python module:
-
-```bash
-python -m unittest
-```
-
+- unittest can be run as a Python module: `python -m unittest`.
 - unittest.TestCase offers functions like `assertEqual`, `assertAlmostEqual`, `assertTrue`, and more ([see unittest.TestCase documentation](https://docs.python.org/3/library/unittest.html#unittest.TestCase)) for use instead of the usual assertion statements. These statements ensure that test runner to accumulate all test results and generate a test report.
 - `unittest.main()` provides an option to run the tests from a command-line interface and also from a file.
 - `setUp` function is executed before all the tests. Similar a clean up function `tearDown` exists.
@@ -95,12 +85,7 @@ python -m unittest
 
 ## coverage
 
-- Installing coverage using pip:
-
-```bash
-pip install -U coverage
-```
-
+- Installing coverage using pip: `pip install coverage`.
 - Testing frameworks can be run via coverage. Lets take our first example and run pytest via coverage:
 
 ```bash

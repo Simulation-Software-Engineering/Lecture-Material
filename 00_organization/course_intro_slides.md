@@ -218,7 +218,7 @@ td {
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
 | 08.01. |Lecture | 4 | Markup, Pandoc, website gener. | Benjamin |
-| 08.01. |Lecture | 6 | FLOSS, versioning, repo layouts, DOI, Zenodo, DaRUS | Benjamin |
+| 08.01. |Lecture | 4 | FLOSS, versioning, repo layouts, DOI, Zenodo, DaRUS | Benjamin |
 | 15.01. |Lecture | 5 | Intro testing, testing in Python | Ishaan |
 | 15.01. |Lab | 5 | Testing in Python | Ishaan |
 | 22.01. |Lecture | 5 | Automation, GitHub Actions, GitLab CI | Gerasimos|

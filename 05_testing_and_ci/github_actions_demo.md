@@ -107,12 +107,12 @@
 ## 3. Other Workflows
 
 - Show workflows of [preCICE](https://github.com/precice/precice)
-  - Show `Actions` tab
-    - `Build and test` job, click on a run
-    - Jobs created through test matrix
-    - Click on a job, click on a few steps
-  - Show `workflows` folder, click on `Build and Test`
-  - Only one job. `build`, `test`, ... are modeled as steps
+    - Show `Actions` tab
+        - `Build and test` job, click on a run
+        - Jobs created through test matrix
+        - Click on a job, click on a few steps
+    - Show `workflows` folder, click on `Build and Test`
+    - Only one job. `build`, `test`, ... are modeled as steps
 
 ## 4. act Demo
 

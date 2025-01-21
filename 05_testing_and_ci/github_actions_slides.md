@@ -69,7 +69,7 @@ From: [https://docs.github.com/en/actions](https://docs.github.com/en/actions)
 
 ## Components (2/2)
 
-<img src="https://docs.github.com/assets/cb-25628/images/help/images/overview-actions-simple.png" width=95%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px; background: #eeeeee">
+<img src="https://docs.github.com/assets/cb-25535/mw-1440/images/help/actions/overview-actions-simple.webp" width=95%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px; background: #eeeeee">
 
 
 From [GitHub Actions tutorial](https://docs.github.com/en/actions)
@@ -78,7 +78,7 @@ From [GitHub Actions tutorial](https://docs.github.com/en/actions)
 
 ## Setting up a Workflow
 
-- Workflow file files stored `${REPO_ROOT}/.github/workflows`
+- Workflow files stored in `${REPO_ROOT}/.github/workflows`
 - Configured via YAML file
 
 ```yaml
@@ -198,7 +198,7 @@ steps:
 
   ```yaml
   - name: "Upload artifact"
-    uses: actions/upload-artifact@v2
+    uses: actions/upload-artifact@v4
     with:
       name: my-artifact
       path: my_file.txt
@@ -238,12 +238,13 @@ steps:
 ## Demo: GitHub Actions
 
 - Set up simple CI pipeline using GitHub Actions
-- Reuse code of Python testing lecture
 - Pipeline has three steps
 
     1. Check formatting
     2. Build application
     3. Test application
+
+- Reusing code of Python testing lecture
 
 ---
 

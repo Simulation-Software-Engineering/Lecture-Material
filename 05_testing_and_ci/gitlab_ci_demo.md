@@ -1,6 +1,6 @@
 # Demo: GitLab Runner
 
-Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2223/lecture-automation) on our GitLab instance
+Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/lecture-automation) on our GitLab instance
 
 ## Inspect Repository
 

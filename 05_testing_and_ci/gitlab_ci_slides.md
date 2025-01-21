@@ -56,7 +56,7 @@ From: [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)
     - Jobs in one stage my be executed in parallel
 - Stages: Group jobs and determine running order
 - [Runner](https://docs.gitlab.com/runner/): Server that runs jobs
-- [Artifacts](https://docs.gitlab.com/ee/ci/pipelines/job_artifacts.html): Files to be shared between jobs or to be kept after workflow finishes
+- [Artifacts](https://docs.gitlab.com/ee/ci/jobs/job_artifacts.html): Files to be shared between jobs or to be kept after workflow finishes
 - No "Actions", but instead integrated features
     - Repository checked out by default
     - Handling of artifacts integrated
@@ -191,11 +191,10 @@ deploy job:
 
 - Complex pipelines, e.g.,
     - [Directed Acyclic Graph](https://docs.gitlab.com/ee/ci/directed_acyclic_graph/)
-    - [Multi-project pipelines](https://docs.gitlab.com/ee/ci/pipelines/multi_project_pipelines.html)
-    - [Parent-child pipelines](https://docs.gitlab.com/ee/ci/pipelines/parent_child_pipelines.html)
+    - [Multi-project pipelines](https://docs.gitlab.com/ee/ci/pipelines/downstream_pipelines.html#multi-project-pipelines)
 - [Anchors](https://docs.gitlab.com/ee/ci/yaml/yaml_optimization.html#anchors)
 - [ChatOps](https://docs.gitlab.com/ee/ci/chatops/)
-- [Extended testing](https://docs.gitlab.com/ee/ci/unit_test_reports.html)
+- [Extended testing](https://docs.gitlab.com/ee/ci/testing/unit_test_reports.html)
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## 1. Setting up a Test Job
 
-- Clone [automation lecture repository](https://github.com/Simulation-Software-Engineering/automation-lecture-wt2223) and run code and tests
+- Clone [automation lecture repository](https://github.com/Simulation-Software-Engineering/automation-lecture-wt2425) and run code and tests
 - Set up workflow file
 
   ```bash
@@ -107,12 +107,12 @@
 ## 3. Other Workflows
 
 - Show workflows of [preCICE](https://github.com/precice/precice)
-    - Show `Actions` tab
-        - `Build and test` job, click on a run
-        - Jobs created through test matrix
-        - Click on a job, click on a few steps
-    - Show `workflows` folder, click on `Build and Test`
-    - Only one job. `build`, `test`, ... are modeled as steps
+  - Show `Actions` tab
+    - `Build and test` job, click on a run
+    - Jobs created through test matrix
+    - Click on a job, click on a few steps
+  - Show `workflows` folder, click on `Build and Test`
+  - Only one job. `build`, `test`, ... are modeled as steps
 
 ## 4. act Demo
 

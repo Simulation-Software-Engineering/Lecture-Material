@@ -2,11 +2,13 @@
 
 In this exercise, we create automated workflows and pipelines based on GitHub Actions. We are again working with our beloved diffusion Python code.
 
-Deadline: **Thursday, February 2nd, 2023, 09:00**
+Deadline: **Thursday, January 29th, 2025, 09:00**
 
 ## Preparations
 
-Import the [automation exercise repository](https://github.com/Simulation-Software-Engineering/automation-exercise-wt2223) in your own account/namespace on GitHub and name it `automation-exercise` again. **Note**: We cannot work with forks here because GitHub Actions may not work in pull requests without explicit approval of the owner of the target repository
+Import the [automation exercise repository](https://github.com/Simulation-Software-Engineering/automation-exercise-wt2425) in your own account/namespace on GitHub and name it `automation-exercise`. It is also easier to add badges (see below) to the `README.md` if the repository is under your control.
+
+**Note**: We cannot work with forks here because GitHub Actions may not work in pull requests without explicit approval of the owner of the target repository
 
 ## Task descriptions
 
@@ -24,7 +26,7 @@ Once the workflow runs successfully, add a [GitHub workflow status badge](https:
 
 ## Submission
 
-- Submit your solution via an issue in the *upstream* [automation exercise repository](https://github.com/Simulation-Software-Engineering/automation-exercise-wt2223). The issue should be named `[USERNAME] Automation exercise`, e.g., `[uekermbn] Automation exercise`. Please use your GitLab username here. Add a link to your GitHub repository in the issue. If necessary, add further explanations in the issue description.
+- Submit your solution via an issue in the *upstream* [automation exercise repository](https://github.com/Simulation-Software-Engineering/automation-exercise-wt2425). The issue should be named `[USERNAME] Automation exercise`, e.g., `[uekermbn] Automation exercise`. Please use your GitLab username here. Add a link to your GitHub repository in the issue. If necessary, add further explanations in the issue description.
 
 ## Bonus: GitLab CI/CD
 
@@ -32,4 +34,4 @@ Realize the same workflows in GitLab CI/CD :)
 
 - Create a new project under your namespace and push your existing automation repository to this remote.
 - Create a VM on [bwCloud](https://www.bw-cloud.org/) and create a GitLab Runner with a Docker executor there. Register the runner in your repository.
-- Add a link to this repository in the submission issue above and, if necessary, explain what you did. Be sure that your repository is visible to us (either public or add `uekermbn`).
+- Add a link to this repository in the submission issue above and, if necessary, explain what you did. Be sure that your repository is visible to us (either public or add `gchourdakis`).

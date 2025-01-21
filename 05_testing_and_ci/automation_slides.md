@@ -64,8 +64,10 @@ slideOptions:
 
 - Check code formatting and quality
 - Compile and test code for different platforms
-- Generate coverage reports and visualization
+- Periodically run tasks
+    - Big tests, nightly builds...
 - Build documentation and deploy it
+- Generate coverage reports and visualization
 - Build, package, and upload releases
 
 ---

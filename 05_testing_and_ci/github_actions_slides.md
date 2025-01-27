@@ -204,13 +204,14 @@ steps:
       path: my_file.txt
       include-hidden-files: true
       retention-days: 5
+      include-hidden-files: true # Necessary if upload contains hidden file.
   ```
 
 - Downloading artifact
 
   ```yaml
   - name: "Download a single artifact"
-    uses: actions/download-artifact@v2
+    uses: actions/download-artifact@v4
     with:
       name: my-artifact
   ```

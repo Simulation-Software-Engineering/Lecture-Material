@@ -202,6 +202,7 @@ steps:
     with:
       name: my-artifact
       path: my_file.txt
+      include-hidden-files: true
       retention-days: 5
   ```
 

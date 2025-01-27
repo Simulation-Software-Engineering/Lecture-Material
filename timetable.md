@@ -132,8 +132,7 @@
 
 ## 13.2 – Wed, January 29, 2025
 
-- **15** min.: Lecture evaluation
-- **75** min.: [Boost.Test and CTest in Action: SideMade Exercise](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_exercise.md)
+- **90** min.: [Boost.Test and CTest in Action: SideMade Exercise](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_exercise.md)
 
 ## 14.1 – Wed, February 5, 2025
 

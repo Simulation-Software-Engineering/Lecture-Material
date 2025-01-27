@@ -50,6 +50,8 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     target_link_libraries(testsidemade PRIVATE Boost::unit_test_framework)
     add_test(NAME "MatrixSolverTests" COMMAND ${CMAKE_CURRENT_BINARY_DIR}/testsidemade)
     ```
+    
+    - `add_test` can work with anything that returns an exit code. Does not have to be a fancy testing framework.
 
 - Reconfigure CMake, build, run via ...
     - `./testsidemade`

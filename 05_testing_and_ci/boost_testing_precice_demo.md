@@ -49,3 +49,7 @@ Look around preCICE in the terminal + text editor.
 ## CMake
 
 - Look at `cmake/CTestConfig.cmake`: Complicated, but more things tested than only UTF (search for `add_test`)
+
+## CTest in Parallel
+
+- Build preCICE and run tests via `ctest -j 16`, runs tests in parallel, automatic feature of CTest

@@ -59,6 +59,9 @@
 ### A helpful git config
 
 ```
+[push]
+        default = simple
+        autoSetupRemote = true
 [pull]
         rebase = true
 [rebase]
@@ -85,6 +88,7 @@
 
 What does it do?
 
+- When pushing new branches, automatically set the upstream branch to a branch with the same name on the primary remote
 - Auto rebase on pull and auto stash, on rebase (configured in git config)
 - Git Alias `fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"`
     - Allows committing current staged changes as a fixup commit for a previous commit

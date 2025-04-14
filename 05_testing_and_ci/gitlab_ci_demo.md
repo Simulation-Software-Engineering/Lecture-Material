@@ -14,6 +14,7 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 - Edit in pipeline editor -> Visualize
 - Settings -> CI/CD -> Runners -> Specific runners
     - URL and Token; we will need this in a minute
+    - Select `Run untagged jobs` (optional, but can make things simpler for now)
 
 ## Inspect bwCloud
 
@@ -22,11 +23,13 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 - I have already set up a VM. What I did:
     - Add public SSH key
     - Instances -> Launch instance
-        - Ubuntu 22.04
+        - Ubuntu 24.04
         - Flavor: m1.small
     - `sudo apt update && sudo apt -y upgrade`
     - `sudo apt install -y docker.io`
 - VM is up and running, connect to it: `ssh ubuntu@<IP>`
+
+You can get the IP from the [Instances view](https://portal.bw-cloud.org/project/instances/). Note that there are two addresses here: an IPv4 (decimal) and an IPv6 (hexadecimal) address. New VMs on bwCloud only support IPv6 networks, so you need the second address.
 
 ## Setup GitLab Runner
 
@@ -34,12 +37,14 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 
   ```bash
   sudo docker run -d --name gitlab-runner --restart always \
+           --network host \
            -v /srv/gitlab-runner/config:/etc/gitlab-runner \
            -v /var/run/docker.sock:/var/run/docker.sock \
            gitlab/gitlab-runner:latest
   ```
 
     - `docker run -d --name gitlab-runner --restart always` runs the container in the background (`-d` means detached) names it `gitlab-runner` and makes sure that it always runs. The container is automatically restarted once it stops/crashes. If you want to stop the container, you have to stop it manually (`docker container stop`).
+    - `--network host` tells Docker to use the host network stack and is needed on bwCloud VMs, which only support IPv6.
     - `-v /srv/gitlab-runner/config:/etc/gitlab-runner` mounts the directory `/srv/gitlab-runner/config` into the container.
     - `-v /var/run/docker.sock:/var/run/docker.sock` mounts important Docker files into the container such that the container can start other containers (for pipelines).
     - `gitlab/gitlab-runner:latest` is the GitLab Runner image used from Docker Hub.
@@ -51,8 +56,18 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 
 ## Register Runner
 
-- `sudo docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register`
-    - URL: `https://gitlab-sim.informatik.uni-stuttgart.de/`
+You can register a runner using the following command. Notice again the `--network host` option, which tells Docker to use the host network stack. This is an important workaround for the fact that bwCloud only supports IPv6 networks:
+
+```bash
+sudo docker run --rm -it \
+         --network host \
+         -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+         gitlab/gitlab-runner register \
+         --url https://gitlab-sim.informatik.uni-stuttgart.de/
+```
+
+- Enter the following details: 
+    - URL: (press Enter to confirm)
     - Token: see above
     - Description: `SSE Automation Demo Runner`
     - No tags, no maintenance note

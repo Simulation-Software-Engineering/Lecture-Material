@@ -66,7 +66,7 @@ sudo docker run --rm -it \
          --url https://gitlab-sim.informatik.uni-stuttgart.de/
 ```
 
-- Enter the following details: 
+- Enter the following details:
     - URL: (press Enter to confirm)
     - Token: see above
     - Description: `SSE Automation Demo Runner`

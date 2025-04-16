@@ -84,11 +84,11 @@ The `--network host` and `-e GODEBUG="netdns=go+ipv6"` are needed in this IPv6-o
 
 ## Workarounds for IPv6
 
-New bwCloud VMs only support IPv6 by default. Asking for IPv4 for a specific VM might be possible via the [helpdesk](https://bw-cloud.org/q/t).
+New bwCloud VMs only support IPv6 by default. Asking for IPv4 for a specific VM might be possible via the [helpdesk](https://bw-cloud.org/q/t). A few workarounds are needed to make the GitLab runner work in this IPv6-only environment.
 
-A few workarounds are needed to make the GitLab runner work in this IPv6-only environment, especially since [`registry.gitlab.com` does not support IPv6](https://gitlab.com/gitlab-com/gl-infra/production-engineering/-/issues/18058) and the Docker support for IPv6 needs to be expliticly configured.
+First, we need to start Docker with `-e GODEBUG="netdns=go+ipv6"`. This is related to Go prioritizing IPv4 connections.
 
-First, we need to tell Docker to use the host network and DNS. We also need to replace the helper image with [the one from Docker Hub](https://hub.docker.com/r/gitlab/gitlab-runner-helper/tags?name=x86_64-v17.10.1) (depends on the GitLab version. You can start without this setting, and see which image GitLab is trying to pull). Edit the `[runners.docker]` section in `/srv/gitlab-runner/config/config.toml`:
+We also need to tell Docker to use the host network stack. We also need to replace the helper image with [the one from Docker Hub](https://hub.docker.com/r/gitlab/gitlab-runner-helper/tags?name=x86_64-v17.10.1) (depends on the GitLab version), since [`registry.gitlab.com` does not support IPv6](https://gitlab.com/gitlab-com/gl-infra/production-engineering/-/issues/18058). You can start without this setting, and see which image GitLab is trying to pull). Edit the `[runners.docker]` section in `/srv/gitlab-runner/config/config.toml`:
 
 ```toml
   helper_image = "gitlab/gitlab-runner-helper:x86_64-v17.10.1"

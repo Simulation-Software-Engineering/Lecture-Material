@@ -59,6 +59,7 @@ You can register a runner using the following command. Notice again the `--netwo
 ```bash
 sudo docker run --rm -it \
          --network host \
+         -e GODEBUG="netdns=go+ipv6" \
          -v /srv/gitlab-runner/config:/etc/gitlab-runner \
          gitlab/gitlab-runner register \
          --url https://gitlab-sim.informatik.uni-stuttgart.de/
@@ -75,7 +76,7 @@ sudo docker run --rm -it \
 - Verify that there is now a runner in the repo settings
 - Verify that pipeline now ran
 
-The `--network host` is needed in this IPv6-only VM (see section below).
+The `--network host` and `-e GODEBUG="netdns=go+ipv6"` are needed in this IPv6-only VM (see section below).
 
 - More information:
     - [Executors and their abilities](https://docs.gitlab.com/runner/executors/)

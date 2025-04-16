@@ -91,19 +91,9 @@ A few workarounds are needed to make the GitLab runner work in this IPv6-only en
 First, we need to tell Docker to use the host network and DNS. We also need to replace the helper image with [the one from Docker Hub](https://hub.docker.com/r/gitlab/gitlab-runner-helper/tags?name=x86_64-v17.10.1) (depends on the GitLab version. You can start without this setting, and see which image GitLab is trying to pull). Edit the `[runners.docker]` section in `/srv/gitlab-runner/config/config.toml`:
 
 ```toml
-  volumes = ["/etc/resolv.conf:/etc/resolv.conf:ro", "/srv/gitlab-runner/custom-hosts:/etc/hosts:ro", "/cache"]
   helper_image = "gitlab/gitlab-runner-helper:x86_64-v17.10.1"
   network_mode = "host"
 ```
 
 While we already pass `--network host` to `docker run`, setting this system-wide makes it easier to also start the job containers with the same settings.
 
-Whenever changing this configuration file, we need to restart the runner (e.g., by restarting the respective container).
-
-We also need to hard-code the IPv6 address that corresponds to the GitLab instance domain. Add the following line in the `/srv/gitlab-runner/custom-hosts` (create the file):
-
-```
-2001:7c0:2015:216::19 gitlab-sim.informatik.uni-stuttgart.de
-```
-
-You can get this address by running `dig aaaa gitlab-sim.informatik.uni-stuttgart.de`.

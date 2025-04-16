@@ -31,20 +31,44 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 
 You can get the IP from the [Instances view](https://portal.bw-cloud.org/project/instances/). Note that there are two addresses here: an IPv4 (decimal) and an IPv6 (hexadecimal) address. New VMs on bwCloud only support IPv6 networks, so you need the second address.
 
+## Workarounds for IPv6
+
+New bwCloud VMs only support IPv6 by default. Asking for IPv4 for a specific VM might be possible via the [helpdesk](https://bw-cloud.org/q/t).
+
+A few workarounds are needed to make the GitLab runner work in this IPv6-only environment, especially since [`registry.gitlab.com` does not support IPv6](https://gitlab.com/gitlab-com/gl-infra/production-engineering/-/issues/18058) and the Docker support for IPv6 needs to be expliticly configured.
+
+First, we need to tell Docker to use the host network and DNS. We also need to replace the helper image with [the one from Docker Hub](https://hub.docker.com/r/gitlab/gitlab-runner-helper/tags?name=x86_64-v17.10.1). Edit the `[runners.docker]` section in `/srv/gitlab-runner/config/config.toml`:
+
+```toml
+  volumes = ["/etc/resolv.conf:/etc/resolv.conf:ro", "/srv/gitlab-runner/custom-hosts:/etc/hosts:ro", "/cache"]
+  helper_image = "gitlab/gitlab-runner-helper:x86_64-v17.10.1"
+  network_mode = "host"
+```
+
+While you could pass `--network host` to `docker run`, setting this system-wide makes it easier to also start the job containers with the same settings.
+
+Whenever changing this configuration file, we need to restart the runner (e.g., by restarting the respective container).
+
+We also need to hard-code the IPv6 address that corresponds to the GitLab instance domain. Add the following line in the `/srv/gitlab-runner/custom-hosts`:
+
+```
+2001:7c0:2015:216::19 gitlab-sim.informatik.uni-stuttgart.de
+```
+
+You can get this address by running `dig aaaa gitlab-sim.informatik.uni-stuttgart.de`.
+
 ## Setup GitLab Runner
 
 - Install GitLab Runner via Docker:
 
   ```bash
   sudo docker run -d --name gitlab-runner --restart always \
-           --network host \
            -v /srv/gitlab-runner/config:/etc/gitlab-runner \
            -v /var/run/docker.sock:/var/run/docker.sock \
            gitlab/gitlab-runner:latest
   ```
 
     - `docker run -d --name gitlab-runner --restart always` runs the container in the background (`-d` means detached) names it `gitlab-runner` and makes sure that it always runs. The container is automatically restarted once it stops/crashes. If you want to stop the container, you have to stop it manually (`docker container stop`).
-    - `--network host` tells Docker to use the host network stack and is needed on bwCloud VMs, which only support IPv6.
     - `-v /srv/gitlab-runner/config:/etc/gitlab-runner` mounts the directory `/srv/gitlab-runner/config` into the container.
     - `-v /var/run/docker.sock:/var/run/docker.sock` mounts important Docker files into the container such that the container can start other containers (for pipelines).
     - `gitlab/gitlab-runner:latest` is the GitLab Runner image used from Docker Hub.
@@ -60,7 +84,6 @@ You can register a runner using the following command. Notice again the `--netwo
 
 ```bash
 sudo docker run --rm -it \
-         --network host \
          -v /srv/gitlab-runner/config:/etc/gitlab-runner \
          gitlab/gitlab-runner register \
          --url https://gitlab-sim.informatik.uni-stuttgart.de/

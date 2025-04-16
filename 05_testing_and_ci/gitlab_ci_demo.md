@@ -14,7 +14,7 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 - Edit in pipeline editor -> Visualize
 - Settings -> CI/CD -> Runners -> Specific runners
     - URL and Token; we will need this in a minute
-    - Select `Run untagged jobs` (optional, but can make things simpler for now)
+    - Select `Run untagged jobs`
 
 ## Inspect bwCloud
 

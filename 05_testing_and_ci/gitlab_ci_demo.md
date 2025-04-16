@@ -37,12 +37,15 @@ You can get the IP from the [Instances view](https://portal.bw-cloud.org/project
 
   ```bash
   sudo docker run -d --name gitlab-runner --restart always \
+           --network host \
+           -e GODEBUG="netdns=go+ipv6" \
            -v /srv/gitlab-runner/config:/etc/gitlab-runner \
            -v /var/run/docker.sock:/var/run/docker.sock \
            gitlab/gitlab-runner:latest
   ```
 
     - `docker run -d --name gitlab-runner --restart always` runs the container in the background (`-d` means detached) names it `gitlab-runner` and makes sure that it always runs. The container is automatically restarted once it stops/crashes. If you want to stop the container, you have to stop it manually (`docker container stop`).
+    - The `--network host` and `-e GODEBUG="netdns=go+ipv6"` are needed in this IPv6-only VM (see section below).
     - `-v /srv/gitlab-runner/config:/etc/gitlab-runner` mounts the directory `/srv/gitlab-runner/config` into the container.
     - `-v /var/run/docker.sock:/var/run/docker.sock` mounts important Docker files into the container such that the container can start other containers (for pipelines).
     - `gitlab/gitlab-runner:latest` is the GitLab Runner image used from Docker Hub.
@@ -75,8 +78,6 @@ sudo docker run --rm -it \
 - `sudo vi /srv/gitlab-runner/config/config.toml`
 - Verify that there is now a runner in the repo settings
 - Verify that pipeline now ran
-
-The `--network host` and `-e GODEBUG="netdns=go+ipv6"` are needed in this IPv6-only VM (see section below).
 
 - More information:
     - [Executors and their abilities](https://docs.gitlab.com/runner/executors/)

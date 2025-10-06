@@ -177,9 +177,9 @@ td {
 | 15.10. |Lecture | 1 | Git basics, my Git workflow, Git quiz, how to challenge  | Benjamin |
 | 22.10. |Lecture | 1 | *My neat little Git trick*, merge vs rebase, working in teams| Benjamin |
 | 22.10. |Lab | 1 | Git  | Benjamin |
-| 29.10. |Lecture | 2 | Intro containers, Docker, Singularity | Gerasimos |
-| 29.10. |Lecture | 2 | Intro virtualization, VirtualBox, Vagrant | Gerasimos |
-| 05.11. |Lab | 2 | Virtualization and containers | Gerasimos |
+| 29.10. |Lecture | 2 | Containers and virtualization | Gerasimos |
+| 29.10. |Lab | 2 | Containers and virtualization | Gerasimos |
+| 05.11. |Presentations | C | **1st student presentations** | students |
 | 05.11. |Presentations | C | **1st student presentations** | students |
 
 ---
@@ -203,7 +203,9 @@ td {
 | 03.12. |Lecture | 3 | CPack and more CMake | Benjamin |
 | 03.12. |Lab | 3 | CPack | Benjamin |
 | 10.12. |Lecture | 4 | Technical writing | Gerasimos |
-| 10.12. |Presentations | C | **2nd student presentations** | students |
+| 10.12. |Lab | 4 | Code review | Gerasimos |
+| 19.12. |Presentations | C | **2nd student presentations** | students |
+| 19.12. |Presentations | C | **2nd student presentations** | students |
 
 ---
 

@@ -68,8 +68,8 @@ The challenge part:
 - All 3 reports: **3/9**
 - Presentation: **2/9**
 - Actual contribution: **2/9** difficulty + **2/9** quality
-  - **difficulty**: extend / difficulty of the contribution
-  - **quality**: how well executed? Communication, documentation, tests, ... (*"net benefit"* for maintainers?)
+    - **difficulty**: extend / difficulty of the contribution
+    - **quality**: how well executed? Communication, documentation, tests, ... (*"net benefit"* for maintainers?)
 - *"outstanding"* / *"good"* / *"ok"* / *"not enough"* (*"good"* -> 1.0)
 - You need to pass (at least *"ok"*) all steps individually
 

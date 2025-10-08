@@ -47,6 +47,11 @@ slideOptions:
 - Gerasimos (Chourdakis) [`@MakisH`](https://github.com/MakisH)
 - Ishaan (Desai) [`@IshaanDesai`](https://github.com/IshaanDesai)
 
+Additional challenge advisors:
+
+- Frédéric (Simonis) [`@fsimonis`](https://github.com/fsimonis)
+- Felix (Neubauer) [`@Logende`](https://github.com/Logende)
+
 SSE Hall of Fame:
 
 - Alexander (Jaust) [`@ajaust`](https://github.com/ajaust)
@@ -71,15 +76,13 @@ SSE Hall of Fame:
 Two parallel branches:
 
 - **Weekly lectures** (90 mins) and **exercises** (90 mins) to learn and train concepts and tools
-    - Wednesdays, 09:45–11:15 and 15:45–17:15
-    - This room: 38-0.108
-    - No strict distinction between lecture and exercise
-    - Interactive style (not a theory course)
+    - Wednesdays, 09:45–11:15 (in V47.05) and 15:45–17:15 (in 38-0.108, might be too small in first week)
+    - Typically lecture in the morning and exercise in the afternoon
 - **Individual challenge**: contribute to real simulation software :rocket:
     - List of software candidates: this afternoon
     - 3 rounds of presentations from you (more later)
     - You get a direct advisor
-    - Use exercise blocks and time after lectures for discussions
+    - Use time before and after lectures for discussions
 
 ---
 
@@ -88,6 +91,8 @@ Two parallel branches:
 - Basic programming (Python, C++)
 - Basic software development skills (bash, Git, md, ...)
 - Some simulation background
+    - SimTech, COMMAS students: no issue
+    - CS, SE: ideally through Numerical Fundamentals (NumGL) and Fundamentals of Scientific Computing (WissRech)
 
 ---
 
@@ -100,22 +105,13 @@ Two parallel branches:
 
 ---
 
-## Waiting List
-
-- Students who have a fixed spot (top 40) in either the lecture or the exercise get in.
-- We take 50 students in total.
-- Remaining spots are filled by waiting list provided presence or excused today.
-- We manually add these students at the end of this week.
-
----
-
 ## Material
 
 - Great open-source book to recap: Irving, Hertweck, Johnston, Ostblom, Wickham, and Wilson: [Research Software Engineering with Python](https://third-bit.com/py-rse/)
 - All our material is on [https://github.com/Simulation-Software-Engineering](https://github.com/Simulation-Software-Engineering)
 - Mainly markdown ... use your favorite tool to render (simply GitHub viewer, [GWDG Hedgedoc](https://pad.gwdg.de/), [stuvus Hedgedoc](https://pad.stuvus.de/), [pandoc](https://pandoc.org/), [PDFs generated in CI](https://github.com/Simulation-Software-Engineering/Lecture-Material/actions/workflows/create-pdfs-from-markdown.yml), [Marp example](https://github.com/uekerman/sse-marp-example), ...)
 - We rework the material as the semester goes.
-- We give many links to videos, docs, blog posts, podcasts, ...
+- We give links to docs, videos, blog posts, podcasts, ...
 
 ---
 
@@ -129,6 +125,15 @@ Two parallel branches:
 - Contribute by opening PRs
 - For large parts (new tool, new chapter, ...), discuss in issue first
 - See also [`CONTRIBUTING.md`](https://github.com/Simulation-Software-Engineering/lecture-materials/blob/main/CONTRIBUTING.md)
+
+---
+
+## Use of Generative AI
+
+- Also changes RSE rapidly
+- Even more important: having a good overview of technology and being able to **read** code (what we teach in this course)
+- If you use generative AI for your exercises or your challenge: **mandatory** to make this transparent (which parts of your code, how, ...)
+- It is important, experiment! But also build a firm understanding of the basics of technology!
 
 ---
 
@@ -155,11 +160,11 @@ Two parallel branches:
 
 ### Timeline
 
-1. Pick a software (till **Oct 23**, evening)
-2. Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 6**)
-3. Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 11**)
-4. Suggest contribution (**Dec 16**)
-5. Present the contribution (**Feb 5**)
+- Pick a software (till **Oct 22**, evening)
+- **Step 1**: Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 5**)
+- **Step 2**: Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 17**)
+- Suggest contribution (**Dec 17**)
+- **Step 3**: Present the contribution (**Feb 4**)
 
 ---
 
@@ -196,8 +201,8 @@ td {
 | ---- | ---- | ------- |------ | -------- |
 | 12.11. |Lecture | 3 | Intro packaging, Python packaging | Ishaan |
 | 12.11. |Lab | 3 | Python packaging | Ishaan |
-| 19.11. |Lecture | 3 | Linux fundamentals, Make, CMake | Benjamin |
-| 19.11. |Lab | 3 | CMake and Docker | Benjamin |
+| 19.11. |Lecture | 3 | Linux fundamentals, Make, CMake | Gerasimos |
+| 19.11. |Lab | 3 | CMake and Docker | Gerasimos |
 | 26.11. |Lecture | 3 | Spack | Ishaan |
 | 26.11. |Lab | 3 | Spack | Ishaan |
 | 03.12. |Lecture | 3 | CPack and more CMake | Benjamin |
@@ -235,13 +240,16 @@ td {
 ## Examination
 
 - *"Course accompanying examination"*: no exam, but continuous examination (more like a lab course or a seminar)
-- Attendance is mandatory.
+- Attendance is mandatory
 - We look at:
-    - Challenge (reports, presentations, contribution) (45%)
-    - Exercises (not every detail, but *"outstanding"* / *"passed"* / *"failed"* ) (50%)
-    - Overall engagement (interactive lecture, discussions, small presentations, contributions, ...) (5%)
+    - Challenge (reports, presentations, contribution; more in the afternoon) (45%)
+    - Exercises (not every detail, but *"outstanding"* / *"good"* / *"ok"* / *"not enough"* ) (50%)
+    - Other (e.g. contributions to lecture material, ...) (5%)
+- *"good"* everywhere leads to 1.0.
+- We give (brief) feedback after every exercise.
 - You will need to register yourself to the *"exam"* on C@MPUS.
-- Point of no return: Once you handed in the first report (Nov 6), you have to register.
+- Last in: The deadline to pick a software (**Oct 22**, evening)
+- Last out: Once you handed in the first report (**Nov 6**)
 
 ---
 

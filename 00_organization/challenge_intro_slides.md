@@ -124,7 +124,7 @@ The challenge part:
 - [SUNDIALS](https://computing.llnl.gov/projects/sundials): Nonlinear solvers, ODEs
 - [TRILINOS](https://trilinos.github.io/): Collection of scientific software libraries, mainly solvers
 - [VisIt](https://visit-dav.github.io/visit-website/index.html): Scientific visualization software
-- more projects in [xSDK](https://xsdk.info/packages/) or [NumFOCUS](https://numfocus.org/sponsored-projects) or [HiRSE Code Promotion](https://www.helmholtz-hirse.de/promo.html)
+- more projects in [xSDK](https://xsdk.info/packages/), [NumFOCUS](https://numfocus.org/sponsored-projects), or [HiRSE Code Promotion](https://www.helmholtz-hirse.de/promo.html)
 - **Or your suggestion** (also agent-based or discrete event simulation software)
 
 ---

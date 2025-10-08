@@ -157,7 +157,7 @@ The challenge part:
 ## Presentations
 
 - Length depends on number of students in course (maybe 5-10 mins)
-- Everybody has to present at least once, better twice
+- Everybody has to present once or twice (depending on number of students)
 - Everybody should learn something from every presentation
 - Style: like a presentation in a team meeting, not like a presentation at a conference
 

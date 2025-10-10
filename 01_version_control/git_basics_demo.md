@@ -23,7 +23,7 @@
     - many more
     - often, more than just hosting, also DevOps
 
-- Give outlook on remainder of Git chapter: *How I work with Git*, quiz, advanced topics (workflows, rebase, standards), *my neat little Git trick*
+- Give outlook on remainder of Git chapter: *How I work with Git*, *my neat little Git trick*, advanced topics (workflows, rebase, standards)
 
 ## How I work with Git
 
@@ -82,10 +82,10 @@ Starting remarks:
     - have a look at an existing PR, look at all tabs, show suggestion feature
     - but sometimes we want to really build and try sth out ...
     - `git remote -v`
-    - `git remote add alex git@github.com:ajaust/precice.git` if I don't have remote already (or somebody else)
-    - `git fetch alex`
-    - `git checkout -t alex/[branch-name]`
-    - I could now also push to `ajaust`'s remote
+    - `git remote add [remote-name] git@github.com:[remote-name]/precice.git` if I don't have remote already (or somebody else)
+    - `git fetch [remote-name]`
+    - `git checkout -t [remote-name]/[branch-name]`
+    - I could now also push to `[remote-name]`'s remote
 
 - (8) GitHub CLI
     - `git push -u ...` and `git pull -t ...` maybe hard to remember at first.

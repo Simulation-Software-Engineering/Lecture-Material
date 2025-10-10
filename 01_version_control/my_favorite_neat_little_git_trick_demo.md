@@ -4,6 +4,17 @@
 - Preparation should not take longer than 15 mins, should be a demo.
 - Lecturers also prepare some.
 
+## Tricks from Winter Team 2025/26
+
+- Click on line number on GitHub and then `blame` to study history of file
+- GitHub uses [gitignore templates](https://github.com/github/gitignore) if you create a `.gitignore` file from GitHub
+- To get a nice compact `git log`, you can add the following to your `gitconfig`:
+
+    ```
+    [format]
+            pretty = format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(20,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
+    ```
+
 ## Tricks from Winter Term 2024/25
 
 - Click on line number on GitHub and then `blame` to study history of file

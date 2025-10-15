@@ -1,5 +1,9 @@
 # Style Guide for SSE Lecture Material
 
+## Commit Messages
+
+- Follow the [the seven rules of a great Git commit message](https://chris.beams.io/git-commit/) in a reasonable fashion.
+
 ## Names of Folders and Files
 
 - Use `snail_case`. Only exception are standard files such as `CONTRIBUTING.md`.

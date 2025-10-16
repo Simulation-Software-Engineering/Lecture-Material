@@ -209,8 +209,8 @@ td {
 | 03.12. |Lab | 3 | CPack | Benjamin |
 | 10.12. |Lecture | 4 | Technical writing | Gerasimos |
 | 10.12. |Lab | 4 | Code review | Gerasimos |
-| 19.12. |Presentations | C | **2nd student presentations** | students |
-| 19.12. |Presentations | C | **2nd student presentations** | students |
+| 17.12. |Presentations | C | **2nd student presentations** | students |
+| 17.12. |Presentations | C | **2nd student presentations** | students |
 
 ---
 

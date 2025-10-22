@@ -13,7 +13,7 @@ We appreciate all kinds of contributions to this project. This document gives yo
 
 ## Style
 
-Please follow the guidelines in `docs/styleguide.md`.
+Please follow the guidelines in [docs/styleguide.md](docs/styleguide.md).
 
 ## Licensing of Contributed Material
 

@@ -14,6 +14,10 @@
     [format]
             pretty = format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(20,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
     ```
+- `git rerere` — remember conflict resolutions. Git auto-resolves the same merge conflicts next time.
+      - example: `git config rerere.enabled true`  -> Git learns your conflict resolutions forever
+- `git notes` Attach notes to a commit without changing history (useful for audits, reviewers, Jira notes)
+      - example: `git notes add -m "Ticket ABC-123 analyzed"` -> Add metadata without touching commit
 
 ## Tricks from Winter Term 2024/25
 

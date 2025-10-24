@@ -23,11 +23,11 @@ slideOptions:
     }
 </style>
 
-# Introduction to version control
+# Introduction to Version Control
 
 ---
 
-## Learning goals of chapter
+## Learning Goals of Chapter
 
 - Refresh and organize students' existing knowledge on Git (learn how to learn more).
 - Students can explain difference between merge and rebase and when to use what.
@@ -36,7 +36,7 @@ slideOptions:
 
 ---
 
-## Why do we need version control?
+## Why Do We Need Version Control?
 
 Version control ...
 
@@ -48,7 +48,15 @@ Version control ...
 
 ---
 
-## How does version control work?
+## The Alternative: A Story Told in File Names
+
+<img src="http://phdcomics.com/comics/archive/phd052810s.gif" width=60% style="margin-left:auto; margin-right:auto">
+
+[http://phdcomics.com/comics/archive/phd052810s.gif](http://phdcomics.com/comics/archive/phd052810s.gif)
+
+---
+
+## How Does Version Control Work?
 
 - *master* (or *main*) copy of code in repository, can't edit directly
 - Instead: check out a working copy of code, edit, commit changes back
@@ -58,15 +66,7 @@ Version control ...
 
 ---
 
-## The alternative: A story told in file names
-
-<img src="http://phdcomics.com/comics/archive/phd052810s.gif" width=60% style="margin-left:auto; margin-right:auto">
-
-[http://phdcomics.com/comics/archive/phd052810s.gif](http://phdcomics.com/comics/archive/phd052810s.gif)
-
----
-
-## A very short history of version control I
+## A Very Short History of Version Control I
 
 The old centralized variants:
 
@@ -77,7 +77,7 @@ The old centralized variants:
 
 ---
 
-## A very short history of version control II
+## A Very Short History of Version Control II
 
 Distributed version control:
 
@@ -93,7 +93,7 @@ Learn more: [Podcast All Things Git: History of VC](https://www.allthingsgit.com
 
 ---
 
-## The only standard today: Git
+## The Only Standard Today: Git
 
 No longer a fragmented market, there is nearly only Git today:
 
@@ -104,7 +104,7 @@ No longer a fragmented market, there is nearly only Git today:
 
 ---
 
-## More facts on Git
+## More Facts on Git
 
 Git itself is open-source: GPL license
 

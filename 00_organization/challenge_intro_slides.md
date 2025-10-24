@@ -94,6 +94,7 @@ The challenge part:
 - A project that is open for contributions (`CONTRIBUTING.md` or similar)
 - Ideally a software you have not worked with before (if you have, please discuss with us)
 - Ideally, everybody picks something different
+- You need to understand the background at least a bit
 
 ---
 
@@ -143,6 +144,7 @@ The challenge part:
 - Comment in [issue #1](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/challenge/-/issues/1) till **22rd of October** (next Wednesday) evening (no FCFS)
 - Priority list with at least three choices
 - If **not** on our suggestion list, write short paragraph what the software does and give links
+- Add pre-knowledge that you have in the field. For example, if you pick pyMOR, you should know already what MOR is.
 
 ---
 

@@ -55,7 +55,7 @@
 - `vagrant package --base "sse-first-step" --output sse-first-step.box`: Export VM
 - `sse-first-steps.box` can be uploaded to [Vagrant Cloud](https://app.vagrantup.com)
 - Go to directory `using-own-box/`
-    - Show `Vagrantfile` that is has my uploaded image as base image
+    - Show `Vagrantfile` that has my uploaded image as base image
     - Skip building box `vagrant up` as it takes too long, should be prebuilt
     - After `vagrant box add <box> --name <name>`, `vagrant box list` should show my box in overview.
 
@@ -65,7 +65,7 @@
     - [https://github.com/precice/vm](https://github.com/precice/vm)
 - Run [Premade box](https://app.vagrantup.com/precice/boxes/precice-vm)
     - Create a dedicated folder `mkdir precice`
-    - Create box with `vagrant init` (Done before lecture as it takes to long)
+    - Create box with `vagrant init` (Done before lecture as it takes too long)
     - Start box `vagrant up`
     - Comes with a GUI
     - Preconfigured

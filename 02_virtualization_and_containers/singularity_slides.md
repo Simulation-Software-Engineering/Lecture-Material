@@ -167,7 +167,7 @@ Details available in [`singularity_demo.md`](https://github.com/Simulation-Softw
 - Special container format for scientific computing
 - Immutable containers in a single file
 - Prefers integration over isolation
-- Other solutions: [Sarus](https://user.cscs.ch/tools/containers/sarus/), [Charliecloud](https://hpc.github.io/charliecloud/)
+- Other solutions: [Sarus](https://user.cscs.ch/tools/containers/sarus/), [Charliecloud](https://charliecloud.io/latest/index.html)
 
 ---
 

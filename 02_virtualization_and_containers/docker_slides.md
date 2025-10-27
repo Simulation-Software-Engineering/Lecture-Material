@@ -23,7 +23,7 @@ slideOptions:
   }
 </style>
 
-# Docker
+# Containers with Docker
 
 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Docker_logo.svg/2560px-Docker_logo.svg.png" width=40%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
@@ -31,38 +31,42 @@ slideOptions:
 
 ---
 
-## What is Docker? 1/3
+## What is a Container?
 
-- Docker Inc.
-- Docker Desktop
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/02_virtualization_and_containers/figs/container-sketch.png" width=30%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
-    > Developer productivity tools and a local Kubernetes environment.
-
-- Docker Engine
-
-    > an open source containerization technology for building and containerizing your applications.
-
----
-
-## What is Docker? 2/3
-
-- Docker Hub
-
-    > Cloud-based application registry and development team collaboration services.
-
-- Docker Compose
-
-    > a tool for defining and running multi-container Docker applications.
+- Container operates in "fenced off" part of the operating system (`namespaces`)
+- Lower overhead than a virtual machine
+    - Runs on kernel (and libraries) of the host OS
+    - Cheap to start and stop a container
+- Available features depend on Host (Linux, Windows)
+- Container can be isolated.
 
 ---
 
-## What is Docker? 3/3
+## Common Use-Cases
 
-> Docker is an open platform for developing, shipping, and running applications.
+- Microservices
+- Reproducible environments for developing and testing (DevOps)
+- More and more in science
+    - High-performance computing, "Bring Your Own Environment"
+    - Reproducible research
 
 ---
 
-## Introduction
+## Container Solutions
+
+- Plenty of different container formats
+    - [lxc/lxd](https://linuxcontainers.org/), [Docker](https://www.docker.com/), [podman](https://podman.io/), [Apptainer](https://apptainer.org/), [Sarus](https://user.cscs.ch/tools/containers/sarus/)...
+- Different solutions with different strengths due to different use cases
+    - Working on the (Super-)Userspace
+    - Direct access to hardware vs. encapsulation
+    - Generic or with integration in software ecosystem (e.g. job schedulers)
+- Common standard: [Open Container Initiative (OCI)](https://opencontainers.org/)
+
+---
+
+## Docker
 
 - 2010: Docker Inc. founded
 - 2013: First Docker release

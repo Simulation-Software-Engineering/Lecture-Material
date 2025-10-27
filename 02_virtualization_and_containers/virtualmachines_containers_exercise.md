@@ -1,8 +1,8 @@
 # Exercise: Virtualization and Containers
 
-In this exercise, we work with the virtualization and container techniques that we have seen in the lecture. We set up a virtual machine manually first and then automatize the process using Vagrant. Afterwards, we build our own container using Docker.
+In this exercise, we work with the virtualization and container techniques that we have seen in the lecture. We set up a virtual machine manually first and then automate the process using Vagrant. Afterwards, we build our own container using Docker.
 
-Deadline: **Wednesday, November 13, 2024, 9:00**
+Deadline: **Wednesday, November 5, 2025, 9:00**
 
 ## Prerequisites
 
@@ -11,14 +11,24 @@ Deadline: **Wednesday, November 13, 2024, 9:00**
 
 ### Preparatory tasks
 
-- **Note**: All preparatory tasks need to be done before the exercise.
-- What to do?
-    - Install VirtualBox and Vagrant
-    - Install Docker on your machine or in a VM
-- Please follow the manuals on the homepage
-    - [VirtualBox](https://www.virtualbox.org/)
-    - [Vagrant](https://www.vagrantup.com/)
-    - [Docker Engine](https://docs.docker.com/engine/)
+These steps take significant time, so it would be good to prepare them before the exercise session:
+
+1. Install [VirtualBox](https://www.virtualbox.org/)
+2. Install [Vagrant](https://www.vagrantup.com/)
+3. Install [Docker Engine](https://docs.docker.com/engine/) on your machine or in a VM
+4. Download an installation image for your VM:
+    - Default: [Alpine Linux](https://alpinelinux.org/downloads/)
+    - Alternative: [Ubuntu Server](https://ubuntu.com/download/server)
+
+**Note:** Every new major/minor version of VirtualBox needs a new version of Vagrant that supports it, which typically comes later.
+You might need to use a version of VirtualBox that is not the very latest if Vagrant cannot recognize the latest one.
+VirtualBox 7.2 is supported starting from Vagrant 2.4.9.
+VirtualBox 7.1 is supported starting from Vagrant 2.4.2.
+
+**Note:** If you have an ARM-based system, you will need at least VirtualBox v7.1 for macOS, or at least v7.2 for Windows.
+You will also need installation images for your CPU architecture.
+Look for the latest version of the respective distribution and `aarch64` or `ARM 64-bit`.
+If you have an Intel or AMD CPU, look for the `x86-64` architecture images.
 
 #### VirtualBox and Vagrant
 
@@ -27,7 +37,7 @@ Deadline: **Wednesday, November 13, 2024, 9:00**
     - Navigate to a directory of your choice
 
         ```bash
-        vagrant init bento/ubuntu-24.04
+        vagrant init boxen/alpine-3.22
         vagrant up
         ```
 
@@ -35,11 +45,8 @@ Deadline: **Wednesday, November 13, 2024, 9:00**
     - Check in the VirtualBox manager that the VM is active.
     - Leave the SSH session (type `exit` and press `Enter` or use the shortcut `CTRL+D`)
     - Destroy the VM `vagrant destroy`
-- **Additional note**: Currently (WT24/25) the latest versions of Vagrant (2.4.1) and VirtualBox (7.1) are incompatible. Either use an older version of VirtualBox (7.0) or use a workaround mentioned in [this Vagrant issue](https://github.com/hashicorp/vagrant/issues/13501).
-    - One workaround that is verified to work is to to modify the VirtualBox provider plugin and add a fake mapping to treat VirtualBox 7.1 like VirtualBox 7.0.
-      For further information look at [the original proposal of the workaround](https://github.com/hashicorp/vagrant/issues/13501#issuecomment-2389606077).
-        - Filepath for Windows: `C:\\Program Files\Vagrant\embedded\gems\gems\vagrant-2.4.1\plugins\providers\virtualbox\driver`
-        - Filepath for Linux:`/opt/vagrant/embedded/gems/gems/vagrant-2.4.1/plugins/providers/virtualbox/driver`
+
+If you are looking for Ubuntu instead of Alpine, one example of an Ubuntu box would be `bento/ubuntu-24.04`.
 
 #### Install Docker
 
@@ -66,18 +73,20 @@ Deadline: **Wednesday, November 13, 2024, 9:00**
 
 ## Virtual Machines Using VirtualBox
 
-We will install the minimal (server) version of Ubuntu 24.04 (codename Noble Numbat). This version does not include a graphical environment.
+We will install the very minimal Alpine Linux distribution, which will be enough to demonstrate the concept, without requiring much storage.
+Alpine Linux does not include a graphical environment, consider installing another distribution if you need one.
 
 ### Tasks (VirtualBox)
 
 This exercise consists of the following main steps:
 
-1. Downloading the "Ubuntu Server 24.04" installation image.
+1. Downloading the installation image (see preparation steps).
 2. Creating a new virtual machine in VirtualBox with (recommended, lower might work as well)
-    - 6 GB virtual disk
+    - name `SSE VM`
+    - 2 GB virtual disk
     - 1024 MB of memory
-    - 32 MB video memory
-3. Installing Ubuntu on the virtual machine with
+    - 32 MB of video memory
+3. Installing a Linux distribution on the virtual machine with
     - user called `USERNAME` (if your GitLab name is `@musterm`, then `musterm`)
     - (host)name of the machine `USERNAMEvm` (e.g., `mustermvm`)
 4. Installing the software package `neofetch`.
@@ -86,24 +95,41 @@ This exercise consists of the following main steps:
 
 In the following subsections you will find additional instructions and explanations. This should help you, especially if you do not have much experience with software installation and Linux.
 
-#### 1. Download the "Ubuntu Server 24.04"
+#### 1. Download the installation image
 
-See instruction in the introduction to this section.
+By default, [download Alpine Linux](https://alpinelinux.org/downloads/). [Ubuntu Server](https://ubuntu.com/download/server) is also fine.
 
 #### 2. Creating the Virtual Machine
 
-While the "Ubuntu Server 24.04" installation image is downloading, you can already prepare the virtual machine.
+While the installation image is downloading, you can already prepare the virtual machine.
 
-- Create a new VM in VirtualBox called "Ubuntu Server".
-    - If given the option, select `Skip Unattended Installation`: let's experience the full process this time.
+- Create a new VM in VirtualBox called "SSE VM".
+    - Select `Type: Linux` and `Subtype: Other Linux`.
+    - If given the option (e.g., if you use an Ubuntu image), select `Skip Unattended Installation`: let's experience the full process this time.
     - Assign RAM and virtual drive as stated in the introduction.
 - After the creation, the virtual machine shows up in the "VirtualBox Manager". Open the settings of the VM and:
-    - inspect the settings of the virtual machine and set the video memory to at least 32 MB.
+    - inspect the settings of the virtual machine and set the video memory to at least 32 MB (not necessary for Alpine, but you will probably need it in other setups).
     - in the same settings, you can also increase the number of CPU cores allocated (not necessary).
 
-#### 3. Ubuntu installation process
+#### 3a. Linux installation process - Alpine
 
-This is a summary of the [Ubuntu Server installation tutorial](https://ubuntu.com/tutorials/install-ubuntu-server).
+This is a summary of the [Alpine installation documentation](https://docs.alpinelinux.org/user-handbook/0.1a/Installing/setup_alpine.html).
+
+**Note:** At any time, the command line at the bottom of the screen might not be visible unless you resize the VirualBox window.
+
+**Note:** Close any pop-up windows to be able to see the full screen. Once you click on the VM window, you will need a special key to disengage (typically Right Ctl).
+
+- Start the virtual machine.
+- VirtualBox will ask you for an installation medium. Add the installation image you just now downloaded (`.iso` file).
+- When asked for a login, type `root` (no password)
+- Run the quick installation: `setup-alpine -q`
+- Select your keyboard layout. For German, type `de`, for example.
+
+Since Alpine needs more steps to install (see [Installing Alpine in a virtual machine](https://wiki.alpinelinux.org/wiki/Installing_Alpine_in_a_virtual_machine)), which are not interesting for our course, continue with step 4 without rebooting the VM (otherwise, your changes will be lost).
+
+#### 3b. Linux installation process - Ubuntu Server
+
+If you opted for installing Ubuntu instead of Alpine, this is a summary of the [Ubuntu Server installation tutorial](https://ubuntu.com/tutorials/install-ubuntu-server).
 
 - Start the virtual machine.
 - VirtualBox will ask you for an installation medium. Add the installation image you just now downloaded (`.iso` file).
@@ -119,47 +145,46 @@ This is a summary of the [Ubuntu Server installation tutorial](https://ubuntu.co
 - The installation procedure might take a while since it will also install security updates. You can already start reading on the subsequent sections.
 - After the installation has finished confirm the reboot with "Reboot Now". The installation medium is automatically removed, so just press ENTER when asked.
 
-#### 4. Installation of neofetch
+#### 4a. Install and run fastfetch - Alpine
 
-- After (re)booting you will be greeted by the Ubuntu login screen. If it looks like a mess press `CTRL-C` to clear the screen. You might have to wait for a moment and maybe switch in and out of the VM's window for it to be refreshed properly.
+At the time of this writing, the `neofetch` package is only available in the testing repositories of Alpine 3.22.
+Let's install `fastfetch` from the community repositories, instead:
+
+- Enable the community repositories with `setup-apkrepos -c` and use the default settings
+- Update the cache with `apk update`
+- Install fastfetch with `apk add fastfetch`
+
+Continue to step 5.
+
+#### 4b. Install and run neofetch - Ubuntu
+
+- After (re)booting you will be greeted by the Ubuntu login screen. If it looks like a mess, press `CTRL-C` to clear the screen. You might have to wait for a moment and maybe switch in and out of the VM's window for it to be refreshed properly.
 - Login using your username and password.
 - We want to install [`neofetch`](https://github.com/dylanaraps/neofetch) which prints the system's information to the terminal and take a screenshot of this.
     - Install `neofetch` via `sudo apt update && sudo apt install -y neofetch`. This command will download and install `neofetch` using the package manager [`apt`](https://wiki.debian.org/Apt).
+- Clear the terminal using `clear` (or `Ctrl-L`) and run neofetch via by typing `neofetch` (or `fastfetch`) into the terminal and pressing `Enter`. It will show information about the Linux distribution version, available memory etc.
 
-#### 5. Running neofetch and Taking a Screenshot (VirtualBox)
+#### 5. Upload the Screenshot to SIM GitLab
 
-- Clear the terminal using `clear` (or `Ctrl-L`) and run neofetch via by typing `neofetch` into the terminal and pressing `Enter`. It will show information about the Ubuntu version, available memory etc.
-- Take a screenshot via VirtualBox. At the top of the VirtualBox window you find the menu item `View`. There you find the option `Take Screenshot (Host+E)`. Save the screenshot as `neofetch-screenshot-USERNAME.png`.
-
-Congratulations. You have successfully set up a virtual machine, installed Ubuntu and installed additional software. You are now done with this part of the exercise. If you do not want to play with the VM later nor do you want to do any of the optional assignments, you can power-off and delete the VM. Be sure that your screenshot displays the correct information though (correct username, correct hostname etc.) before deleting the VM.
-
-#### 6. Upload the Screenshot to SIM GitLab
-
-- Go to the SIM GitLab Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-virtual-machines). You will find an example issue. Your issue should look similar in terms of title, labels etc.
+- Take a screenshot via VirtualBox. At the top of the VirtualBox window you find the menu item `View`. There you find the option `Take Screenshot (Host+E)`. Save the screenshot as `screenshot-virtualbox-USERNAME.png`.
+- Go to the SIM GitLab Repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/exercise-virtual-machines). You will find an example issue. Your issue should look similar in terms of title, labels etc.
 - Open the issue.
-    - As title choose "[`USERNAME`] Ubuntu Server Installation"
+    - As title choose "[`USERNAME`] VM Installation"
     - Attach the screenshot ("Attach a file") that you made in the previous step. By default, the screenshot is saved in the folder of your VM.
     - Add the `VirtualBox` label to the issue and create the issue.
     - Double-check that your issue looks as expected. You can compare your issue to the example issue in the GitLab Repository.
 
-### Further Information (VirtualBox)
-
-- If your mouse pointer gets caught, use the **right** `CTRL` (`STRG` on German keyboards) key on your keyboard to release it again.
-- You can find more information on the installation procedure in the [Ubuntu Server documentation](https://ubuntu.com/server/docs).
-- [Ubuntu Server download page](https://ubuntu.com/download/server)
-- [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
-
 ## Virtual Machines Using Vagrant
 
-In the previous section we set up a VM manually. This was quite tedious. Therefore, we want to automatize this process now by using [Vagrant](https://www.vagrantup.com/) and setting up our own Vagrant box. We will provision a box based on VirtualBox by using shell scripts and the included provisioning tools of Vagrant.
+In the previous section we set up a VM manually. This was quite tedious. Therefore, we want to automate this process now using [Vagrant](https://www.vagrantup.com/) and setting up our own Vagrant box. We will provision a box based on VirtualBox by using shell scripts and the included provisioning tools of Vagrant.
 
 ### Tasks (Vagrant)
 
 This exercise consists of the following main steps:
 
-1. Creating a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-virtual-machines)
+1. Creating a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/exercise-virtual-machines)
 2. Initialization of the VM
-    - Name this virtual machine `USERNAME-ubuntu-server-vagrant`.
+    - Name this virtual machine depending on the image you used: `USERNAME-vm-vagrant`.
     - Make sure that the virtual machine requests 1024 MB memory.
     - Create a shared/synced directory `/mnt/shared` inside the VM.
     - Test the new VM.
@@ -167,8 +192,8 @@ This exercise consists of the following main steps:
     - Create a file called `testfile` that contains `USERNAME`. This file should be copied into the home directory of the `vagrant` user during the provisioning process.
     - Edit the `Vagrantfile` such that the `bootstrap.sh` script is run during provisioning. The script should:
         - add a new environment variable `ENV_TEST_VARIABLE` with the value `USERNAME`.
-        - install `neofetch`.
-4. Running `neofetch` in the terminal and taking a screenshot.
+        - install and run `fastfetch` or `neofetch`.
+4. Taking a screenshot.
 5. Creating a merge request containing your changes.
 
 In the following subsections you will find additional instructions and explanations.
@@ -181,7 +206,7 @@ Fork and clone the repository mentioned above. The repository initially contains
 
 - We want to start from scratch so initialize a new box using `vagrant init` inside this repository and add the resulting `Vagrantfile` to Git. Then adapt your `Vagrantfile` to incorporate the following settings:
     - Your virtual machine should be based on the [`bento/ubuntu-24.04` image](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04). In case you need a different provider (e.g., `libvirt`), feel free to use another box, but state this in your submission.
-    - The name of your VM should be `USERNAME-ubuntu-server`.
+    - The name of your VM should be `USERNAME-vm`.
     - The VM must request [1024 MB of main memory](https://developer.hashicorp.com/vagrant/docs/providers/virtualbox/configuration).
     - We want a [new shared folder](https://developer.hashicorp.com/vagrant/docs/synced-folders/basic_usage) in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted by default as `/mnt/shared/` in your virtual machine.
     - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can `exit` the VM. You do **not** have to stop/destroy the VM for the next step.
@@ -193,7 +218,7 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 - Create a new file with the name `testfile` and add it to the repository. The file must contain your `USERNAME` as text. Add the file to your box using the [file provisioner](https://developer.hashicorp.com/vagrant/docs/provisioning/file) and place it in the home directory of the `vagrant` user (`${HOME}`).
 - Extend the file `bootstrap.sh` for provisioning your box. It should contain commands that you would usually use on the command line like in the VirtualBox task. The script must do the following:
     - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`. You can achieve this by adding `export ENV_TEST_VARIABLE=USERNAME` to the `.bashrc` file which resides in the home directory of `vagrant` user. You might need to `source` your `.bashrc` to access the variable.
-    - Install `neofetch` as you did in the VirtualBox task.
+    - Install `fastfetch` or `neofetch` as you did in the VirtualBox task.
     - **Note:** In the `bootstrap.sh` you do not have to prefix commands with `sudo` since the script is executed with superuser rights when Vagrant provisions the box.
     - The `booststrap.sh` script must be run by the [shell provisioner](https://developer.hashicorp.com/vagrant/docs/provisioning/shell).
 - Rebuild your Vagrant box using the provisioning steps. Make sure that the software is installed, all files are present, and the environment variable is set.
@@ -201,12 +226,12 @@ We want to provision (`config.vm.provision`) the box in several steps. You can r
 #### 4. Running neofetch and Taking a Screenshot (Vagrant)
 
 - Go into your running VM by using the `vagrant ssh` command.
-- Clear the terminal using `clear` and run neofetch by typing `neofetch` into the terminal and pressing `Enter`. It will show information about the Ubuntu version, available memory etc.
-- Take a screenshot and save it as `neofetch-screenshot-vagrant-USERNAME.png`.
+- Clear the terminal using `clear` and run fastfetch/neofetch, as in the VirtualBox task.
+- Take a screenshot and save it as `screenshot-vagrant-USERNAME.png`.
 
 #### 5. Creating a Merge Request (Vagrant)
 
-- After checking your Vagrant box carefully, please open a merge request in the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-virtual-machines):
+- After checking your Vagrant box carefully, please open a merge request in the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/exercise-virtual-machines):
     - As title, choose "[`USERNAME`] Vagrant Box Provisioning".
     - Make sure all files are up to date (`testfile`, `bootstrap.sh`, `Vagrantfile`). Do not add the hidden folder `.vagrant` to Git.
     - Attach the screenshot ("Attach a file") that you made in the previous step.
@@ -260,15 +285,15 @@ Similarly to the previous task, we want to set up a Docker container for testing
 
 This exercise consists of the following main steps:
 
-1. Create a fork of the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-containers).
+1. Create a fork of the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/exercise-containers).
 2. Setting up the `Dockerfile`
     - Base your image on Ubuntu 24.04
     - Create a file called `testfile` that contains `USERNAME`. This file should be copied to a directory called `/testfiles` inside the container.
     - Set the environment variable `ENV_TEST_VARIABLE` inside the container.
     - Define a default run command for the container.
-    - Install `neofetch` inside the container
+    - Install `fastfetch` or `neofetch` inside the container
     - Test the new container
-3. Run `neofetch` in a terminal inside the container and take a screenshot
+3. Run `fastfetch` or `neofetch` in a terminal inside the container and take a screenshot
 4. Create a merge request containing your changes.
 
 #### 1. Create a Fork (Docker)
@@ -278,11 +303,12 @@ Fork and clone the repository mentioned above. The repository initially contains
 #### 2. Setting up the `Dockerfile`
 
 - Currently, the [`Dockerfile`](https://docs.docker.com/reference/dockerfile/) is empty. Edit the file such that a container image with the following properties is built:
-    - Your virtual machine should be based on the [`ubuntu:24.04` image](https://hub.docker.com/_/ubuntu).
+    - Your virtual machine should be based on the [`alpine:latest` image](https://hub.docker.com/_/alpine).
+        - Alternatively, you can use the (larger) [`ubuntu:24.04` image](https://hub.docker.com/_/ubuntu).
     - Create a new file with the name `testfile` and add it to the repository. The file should contain your `USERNAME` as text. Add the file to your container and place it in directory `/testfiles`.
     - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`.
     - Make sure that the default command to be executed when running the container is `/bin/bash`.
-    - Install `neofetch`.
+    - Install `fastfetch` (Alpine) or `neofetch` (Ubuntu).
     - **Note:** In the `Dockerfile` you do not have to prefix commands such as `apt` with `sudo` since the script is executed with superuser rights.
 - Test your Docker container locally. Are all variables set and files available?
     - **Note:** If you rebuild your container often, you might end up with dangling containers. You can remove them (together with any unused images, containers, or objects) with [`docker [image|container|system] prune`)](https://docs.docker.com/engine/reference/commandline/system_prune/) depending on what you want to remove. To delete everything unused: `docker system prune`.
@@ -290,12 +316,12 @@ Fork and clone the repository mentioned above. The repository initially contains
 #### 3. Running neofetch and Taking a Screenshot (Docker)
 
 - Go into your running container.
-- Clear the terminal using `clear` and run neofetch by typing `neofetch` into the terminal and pressing `Enter`. It will show information about the Ubuntu version, available memory etc.
-- Take a screenshot and save it as `neofetch-screenshot-docker-USERNAME.png`.
+- Clear the terminal using `clear` and run fastfetch/neofetch as before.
+- Take a screenshot and save it as `screenshot-docker-USERNAME.png`.
 
 #### 4. Creating a Merge Request (Docker)
 
-- Open a merge request in the GitHub Repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-containers).
+- Open a merge request in the GitHub Repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/exercise-containers).
     - As title choose "[`USERNAME`] Docker Container Recipe".
     - Make sure all files are up to date (`testfile`, `Dockerfile`).
     - Attach the screenshot ("Attach a file") that you made in the previous step.
@@ -307,27 +333,24 @@ Fork and clone the repository mentioned above. The repository initially contains
 
 Here are some ideas on how to extend your work after you have finished the main tasks. If you have more ideas, please explain them in your issue/pull request. You can also discuss them with us during the exercise.
 
-Extensions to the VirtualBox task should be added to the existing VirtualBox issue in ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2425/exercise-virtual-machines) by adding a new comment under the original screenshot. For all other extensions, please create a new merge request in the corresponding repository. Please use meaningful titles for new merge requests and prefix them with "[`USERNAME`]" as for the other merge requests.
+Extensions to the VirtualBox task should be added to the existing VirtualBox issue in ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/exercise-virtual-machines) by adding a new comment under the original screenshot. For all other extensions, please create a new merge request in the corresponding repository. Please use meaningful titles for new merge requests and prefix them with "[`USERNAME`]" as for the other merge requests.
 
-### VirtualBox
+### VM: VirtualBox
 
-- Set up the SSH server on your Ubuntu VM and connect to the Guest from the Host. Take a screenshot when connected to your Guest system and add it to the issue with a short explanation what you see.
+- Set up the SSH server on your VM and connect to the Guest from the Host. Take a screenshot when connected to your Guest system and add it to the issue with a short explanation what you see.
 - Install the Guest Additions and created a shared folder. Please also add a screenshot of that in the issue with a short explanation what you see.
 
-### Vagrant
+### VM: Vagrant
 
 - Use Vagrant to set up a box with Docker.
 - Publish a Vagrant box to Vagrant cloud. Please link to it in the issue.
     - Link the published repository in the issue
     - Please add all files (`Vagrantfile` etc.) that you have used to set up this box and shortly describe which commands you have used to do so.
 
-### Docker
+### Containers: Docker/Apptainer
 
 - Publish a [Docker base image](https://docs.docker.com/build/building/base-images/) to DockerHub.
     - Link the published DockerHub repository in the issue.
     - Please add all files (`Dockerfile` etc.) that you have used to set up this container and shortly describe which commands you have used to do so.
-
-### Singularity
-
-- Rebuild the Docker container as an [Apptainer container](https://apptainer.org/docs/user/latest/). Create a new merge request for this in the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/exercise-containers). Please choose the `Singularity` label when creating the merge request.
-    - **Important:** only add the Singularity recipe to the merge request, and not the container file.
+- Rebuild the Docker container as an [Apptainer container](https://apptainer.org/docs/user/latest/). Create a new merge request for this in the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/exercise-containers). Please choose the `Apptainer` label when creating the merge request.
+    - **Important:** only add the Apptainer recipe to the merge request, and not the container image file.

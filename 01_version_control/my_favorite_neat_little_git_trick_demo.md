@@ -15,6 +15,8 @@
             pretty = format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(20,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
     ```
 
+- If you rebased/merged and messed up your history, use `git reflog` to go back to a previous state
+- If you only need one file from another commit or branch, use `git checkout <branch_or_sha> -- <path>`
 - Use [Git LFS](https://git-lfs.com/) for big files >10 MB or for non-diffable binaries (e.g., images, media, archives, shared libraries).
 
 ## Tricks from Winter Term 2024/25

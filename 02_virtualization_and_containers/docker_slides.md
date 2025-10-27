@@ -255,7 +255,7 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 - User ID mapping
 - [Multistage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
     - Build image by combining layers created from different base images
-- [Different mount typs](https://docs.docker.com/storage)
+- [Different mount types](https://docs.docker.com/storage)
     - Volumes, bind mount, tmpfs mount
 - [Persisting data](https://docs.docker.com/get-started/05_persisting_data/)
 - [Multi-container apps](https://docs.docker.com/get-started/07_multi_container/)

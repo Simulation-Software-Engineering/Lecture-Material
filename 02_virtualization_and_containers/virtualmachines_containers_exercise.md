@@ -6,7 +6,7 @@ Deadline: **Wednesday, November 5, 2025, 9:00**
 
 ## Prerequisites
 
-- Some available space on your hard drive or a USB drive (about 10 GB should be enough).
+- Some available space on your hard drive or a USB drive (about 10 GB should be enough, probably much less).
 - If you have a machine without Linux and or without root rights, a virtual box session with Linux installed is also fine.
 
 ### Preparatory tasks
@@ -29,6 +29,8 @@ VirtualBox 7.1 is supported starting from Vagrant 2.4.2.
 You will also need installation images for your CPU architecture.
 Look for the latest version of the respective distribution and `aarch64` or `ARM 64-bit`.
 If you have an Intel or AMD CPU, look for the `x86-64` architecture images.
+
+**Important**: Whenever `USERNAME` is mentioned in a code block or similar, you have to replace this with your GitLab username.
 
 #### VirtualBox and Vagrant
 
@@ -65,11 +67,6 @@ If you are looking for Ubuntu instead of Alpine, one example of an Ubuntu box wo
         Hello from Docker!
         This message shows that your installation appears to be working correctly
         ```
-
-## Before You Start
-
-- **Important**: Whenever `USERNAME` is mentioned in a code block or similar, you have to replace this with your GitLab username.
-- If you run into problems, check out the "Further Information" sections at the bottom of the tasks. These sections contain information about common pitfalls and link to the documentation of the used tools.
 
 ## Virtual Machines Using VirtualBox
 

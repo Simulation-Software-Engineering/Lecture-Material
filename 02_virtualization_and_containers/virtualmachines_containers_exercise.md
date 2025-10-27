@@ -183,7 +183,7 @@ This exercise consists of the following main steps:
 
 1. Creating a fork of the GitLab repository ["Exercise Virtual Machines"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/exercise-virtual-machines)
 2. Initialization of the VM
-    - Name this virtual machine depending on the image you used: `USERNAME-vm-vagrant`.
+    - Name this virtual machine `USERNAME-vm-vagrant`.
     - Make sure that the virtual machine requests 1024 MB memory.
     - Create a shared/synced directory `/mnt/shared` inside the VM.
     - Test the new VM.

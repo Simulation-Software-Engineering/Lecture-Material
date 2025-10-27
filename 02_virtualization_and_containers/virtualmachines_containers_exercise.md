@@ -124,6 +124,8 @@ This is a summary of the [Alpine installation documentation](https://docs.alpine
 
 Since Alpine needs more steps to install (see [Installing Alpine in a virtual machine](https://wiki.alpinelinux.org/wiki/Installing_Alpine_in_a_virtual_machine)), which are not interesting for our course, continue with step 4 without rebooting the VM (otherwise, your changes will be lost).
 
+Continue to step 4.
+
 #### 3b. Linux installation process - Ubuntu Server
 
 If you opted for installing Ubuntu instead of Alpine, this is a summary of the [Ubuntu Server installation tutorial](https://ubuntu.com/tutorials/install-ubuntu-server).

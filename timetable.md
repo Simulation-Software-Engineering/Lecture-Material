@@ -25,3 +25,11 @@
 ## 2.2 – Wed, October 22, 2025
 
 - **90** min.: [Exercise on Git Workflows](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_exercise.md)
+
+## 3.1 – Wed, October 29, 2025
+
+(pending, slides update - VM and Containers)
+
+## 3.2 – Wed, October 29, 2025
+
+- **90** min.: [Exercise: Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualmachines_containers_exercise.md)

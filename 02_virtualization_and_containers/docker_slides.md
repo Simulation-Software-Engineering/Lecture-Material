@@ -23,46 +23,50 @@ slideOptions:
   }
 </style>
 
-# Docker
+# Containers with Docker
 
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Docker_logo.svg/2560px-Docker_logo.svg.png" width=40%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Docker_%28container_engine%29_logo.png" width=40%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 <small>Image by https://www.docker.com/, Fair use, https://en.wikipedia.org/w/index.php?curid=70663056</small>
 
 ---
 
-## What is Docker? 1/3
+## What is a Container?
 
-- Docker Inc.
-- Docker Desktop
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/02_virtualization_and_containers/figs/container-sketch.png" width=30%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
-    > Developer productivity tools and a local Kubernetes environment.
-
-- Docker Engine
-
-    > an open source containerization technology for building and containerizing your applications.
-
----
-
-## What is Docker? 2/3
-
-- Docker Hub
-
-    > Cloud-based application registry and development team collaboration services.
-
-- Docker Compose
-
-    > a tool for defining and running multi-container Docker applications.
+- Container operates in "fenced off" part of the operating system (`namespaces`)
+- Lower overhead than a virtual machine
+    - Runs on kernel (and libraries) of the host OS
+    - Cheap to start and stop a container
+- Available features depend on Host (Linux, Windows)
+- Container can be isolated.
 
 ---
 
-## What is Docker? 3/3
+## Common Use-Cases
 
-> Docker is an open platform for developing, shipping, and running applications.
+- Microservices
+- Reproducible environments for developing and testing (DevOps)
+- More and more in science
+    - High-performance computing, "Bring Your Own Environment"
+    - Reproducible research
 
 ---
 
-## Introduction
+## Container Solutions
+
+- Plenty of different container formats
+    - [lxc/lxd](https://linuxcontainers.org/), [Docker](https://www.docker.com/), [podman](https://podman.io/), [Apptainer](https://apptainer.org/), [Sarus](https://user.cscs.ch/tools/containers/sarus/)...
+- Different solutions with different strengths due to different use cases
+    - Working on the (Super-)Userspace
+    - Direct access to hardware vs. encapsulation
+    - Generic or with integration in software ecosystem (e.g. job schedulers)
+- Common standard: [Open Container Initiative (OCI)](https://opencontainers.org/)
+
+---
+
+## Docker
 
 - 2010: Docker Inc. founded
 - 2013: First Docker release
@@ -70,16 +74,6 @@ slideOptions:
 - 2014: Replaced LXC by own execution environment
 - 2017: [Moby project](https://mobyproject.org/) for open source development
 - 2023: The most popular container solution ([survey](https://survey.stackoverflow.co/2023/#section-most-popular-technologies-other-tools))
-
----
-
-## Typical Docker Applications
-
-- Applications as Microservices
-- Containers for consistent development environment
-- Containers for consistent testing environment
-- Portable format for sharing applications
-- Avoid tedious installation procedures by providing Docker container ([FEniCS](https://fenicsproject.org/download/), [OpenFOAM](https://www.openfoam.com/download/openfoam-installation-on-windows-docker), [GitLab](https://docs.gitlab.com/ee/install/docker.html), etc.)
 
 ---
 
@@ -241,12 +235,6 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 - `docker push ACCOUNT/REPOSITORY[:TAG]`
     - Push image to registry (default DockerHub)
     - Needs account and must be logged in via `docker login`
-
----
-
-## Demo: Run FEniCS Container
-
-Details available in [`docker_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
 
 ---
 

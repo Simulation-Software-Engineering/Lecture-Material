@@ -24,17 +24,49 @@ slideOptions:
   }
 </style>
 
-# VirtualBox
+# Virtual machines with VirtualBox
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/VirtualBox_2024_Logo.svg" width=20%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 ---
 
-## Introduction
+## What is a Virtual Machine?
+
+<img src="https://raw.githubusercontent.com/Simulation-Software-Engineering/Lecture-Material/main/02_virtualization_and_containers/figs/virtualmachine-sketch.png" width=40%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
+- A computer inside your computer, with its own OS and resources
+- Virtual Machines are portable and flexible
+
+---
+
+## (Some) Features of Virtual Machines
+
+- Exclusive access to some of your resources
+- Behaves like a native installation
+- Isolation from host operating system
+- Popular for
+    - Safety critical tasks
+    - Development and testing
+    - Wherever one wants a portable solution
+
+---
+
+## Types of Hypervisors
+
+- **Type 1**
+    - Runs directly on bare-metal hardware, like the host OS
+    - Examples: [Microsoft Hyper-V](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/about/), [VMware ESXi](https://www.vmware.com/products/esxi-and-esx.html), [Xen](https://xenproject.org/), [KVM](https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine), ...
+- **Type 2**
+    - Negotiates resources shared with a host OS
+    - Examples: [VirtualBox](https://www.virtualbox.org/), [VMWare Workstation Player](https://www.vmware.com/products/workstation-player.html), [Parallels](https://www.parallels.com/eu/products/desktop/)...
+
+---
+
+## VirtualBox
 
 - Hosted hypervisor created by Innotek GmbH (Weinstadt, Germany)
 - Obtained by Sun Microsystems in 2008. Since 2010, owned by Oracle
-- Open source (GPLv3)
+- Free software (GPLv3)
 
 ---
 
@@ -50,14 +82,12 @@ slideOptions:
 
 ---
 
-## Virtual Hard Drive Formats
+## Note on CPU architectures
 
-- Virtual hard drive as a file
-- Multiple formats, for example:
-    - **VDI**: "Virtual Disk Image", VirtualBox' native format
-    - **VHD**: Format used by Microsoft
-    - **VMDK**: VMWare's virtual disk format
-    - Support for dynamic allocation
+- VirtualBox runs both on x86 and ARM
+- ARM hosts need ARM VMs (no emulation)
+- Linux support limited/recent (e.g., Ubuntu 25.10)
+- Emulation alternative (very slow): [UTM](https://mac.getutm.app/)
 
 ---
 
@@ -89,21 +119,10 @@ Details available in [`virtualbox_demo.md`](https://github.com/Simulation-Softwa
 
 ---
 
-## Summary and Outlook
-
-- VirtualBox is an open-source system for virtual machines
-- Simple to set up and run
-- Manual setup, but command-line interface exists
-- Next step: Infrastructure as code
-    - Consistency of the environment?
-    - How to share a VM image with others?
-
-    > "If you can't git diff a file format, it's broken."
-
----
-
 ## Further Reading
 
 - [VirtualBox Manual](https://www.virtualbox.org/manual/UserManual.html)
+- [VirtualBox Manual: 1. First Steps](https://www.virtualbox.org/manual/ch01.html)
 - [VirtualBox Manual: 4. Guest Additions](https://www.virtualbox.org/manual/ch04.html)
+- [VirtualBox Manual: 13. Security Guide](https://www.virtualbox.org/manual/ch13.html)
 - [Overview of different disk formats](https://www.parallels.com/blogs/ras/vdi-vs-vhd-vs-vmdk/)

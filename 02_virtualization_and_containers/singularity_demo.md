@@ -19,7 +19,7 @@
 
     ```Singularity
     BootStrap: docker
-    From: ubuntu:22.04
+    From: precice/precice
 
     %post
     apt-get -y update
@@ -30,7 +30,7 @@
     export PATH=/usr/games:$PATH
 
     %runscript
-    date | cowsay | lolcat
+    precice-tools --version | cowsay | lolcat
     ```
 
 - Show file `lolcow.def` content

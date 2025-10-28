@@ -55,13 +55,8 @@ slideOptions:
 ## What for?
 
 - Developing software
-    - Set up consistent development environment
-    - Share environment with others
+    - Set up / share consistent development environment
 - Testing software, workflows...
-    - Disposable environments
-    - Consistent workflows
-- More general
-    - Simple way to setup virtual machine
 - Reproducible environment
 
 ---
@@ -70,12 +65,11 @@ slideOptions:
 
 - Strong focus on workflow consistency
 - (Re)use existing images
-- Automatize VM creation and configuration
+- Automate VM creation and configuration
     - Easier than with VirtualBox CLI and shell scripts
 - Store in Git-friendly format
-- For us:
-    - Management of VirtualBox VMs (testing, developing...)
-    - Sharing of VMs (debugging, workshops...)
+
+> "If you can't git diff a file format, it's broken."
 
 ---
 
@@ -133,7 +127,7 @@ Details available in [`vagrant_demo.md`](https://github.com/Simulation-Software-
     ```ruby
     Vagrant.configure("2") do |config|
         config.vm.box = "bento/ubuntu-24.04"
-        config.vm.box_version = "202407.23.0"
+        config.vm.box_version = "202510.26.0"
     end
     ```
 

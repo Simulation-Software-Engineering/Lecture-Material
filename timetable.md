@@ -34,7 +34,6 @@
 - **30** min.: Docker: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
 - **20** min.: Singularity / Apptainer: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/singularity_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/singularity_demo.md)
 
-
 ## 3.2 – Wed, October 29, 2025
 
 - **90** min.: [Exercise: Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualmachines_containers_exercise.md)

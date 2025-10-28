@@ -77,16 +77,6 @@ slideOptions:
 
 ---
 
-## Typical Docker Applications
-
-- Applications as Microservices
-- Containers for consistent development environment
-- Containers for consistent testing environment
-- Portable format for sharing applications
-- Avoid tedious installation procedures by providing Docker container ([FEniCS](https://fenicsproject.org/download/), [OpenFOAM](https://www.openfoam.com/download/openfoam-installation-on-windows-docker), [GitLab](https://docs.gitlab.com/ee/install/docker.html), etc.)
-
----
-
 ## Building Blocks 1/2
 
 - Docker objects
@@ -245,12 +235,6 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 - `docker push ACCOUNT/REPOSITORY[:TAG]`
     - Push image to registry (default DockerHub)
     - Needs account and must be logged in via `docker login`
-
----
-
-## Demo: Run FEniCS Container
-
-Details available in [`docker_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/docker_demo.md)
 
 ---
 

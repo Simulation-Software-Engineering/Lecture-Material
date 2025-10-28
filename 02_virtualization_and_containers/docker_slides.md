@@ -25,7 +25,7 @@ slideOptions:
 
 # Containers with Docker
 
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Docker_logo.svg/2560px-Docker_logo.svg.png" width=40%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Docker_%28container_engine%29_logo.png" width=40%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
 <small>Image by https://www.docker.com/, Fair use, https://en.wikipedia.org/w/index.php?curid=70663056</small>
 

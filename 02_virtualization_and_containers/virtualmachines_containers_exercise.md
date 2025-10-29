@@ -152,6 +152,7 @@ Let's install `fastfetch` from the community repositories, instead:
 - Enable the community repositories with `setup-apkrepos -c` and use the default settings
 - Update the cache with `apk update`
 - Install fastfetch with `apk add fastfetch`
+- Run fastfetch with `fastfetch`
 
 Continue to step 5.
 

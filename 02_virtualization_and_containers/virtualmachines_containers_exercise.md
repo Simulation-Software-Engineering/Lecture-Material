@@ -96,6 +96,8 @@ In the following subsections you will find additional instructions and explanati
 
 By default, [download Alpine Linux](https://alpinelinux.org/downloads/). [Ubuntu Server](https://ubuntu.com/download/server) is also fine.
 
+**Note:** If you are operating on an **ARM 64-bit architecture**, it is recommended to use **Ubuntu 25.10 (Desktop version)** instead, due to its compatibility with ubuntu.
+
 #### 2. Creating the Virtual Machine
 
 While the installation image is downloading, you can already prepare the virtual machine.
@@ -104,6 +106,7 @@ While the installation image is downloading, you can already prepare the virtual
     - Select `Type: Linux` and `Subtype: Other Linux`.
     - If given the option (e.g., if you use an Ubuntu image), select `Skip Unattended Installation`: let's experience the full process this time.
     - Assign RAM and virtual drive as stated in the introduction.
+      - If you are running Ubuntu Desktop on an ARM 64-bit architecture, it’s recommended to assign at least **4096 MB** of RAM and **8 GB** of storage to ensure smooth performance.
 - After the creation, the virtual machine shows up in the "VirtualBox Manager". Open the settings of the VM and:
     - inspect the settings of the virtual machine and set the video memory to at least 32 MB (not necessary for Alpine, but you will probably need it in other setups).
     - in the same settings, you can also increase the number of CPU cores allocated (not necessary).
@@ -162,6 +165,8 @@ Continue to step 5.
 - We want to install [`neofetch`](https://github.com/dylanaraps/neofetch) which prints the system's information to the terminal and take a screenshot of this.
     - Install `neofetch` via `sudo apt update && sudo apt install -y neofetch`. This command will download and install `neofetch` using the package manager [`apt`](https://wiki.debian.org/Apt).
 - Clear the terminal using `clear` (or `Ctrl-L`) and run neofetch via by typing `neofetch` (or `fastfetch`) into the terminal and pressing `Enter`. It will show information about the Linux distribution version, available memory etc.
+
+**Note:** If you are running **Ubuntu Desktop on an ARM 64-bit architecture**, you may encounter an error when trying to install `neofetch` (e.g., `E: Unable to locate package`). In this case, you can use `fastfetch` as an alternative, which can be installed via `apt`.
 
 #### 5. Upload the Screenshot to SIM GitLab
 

@@ -96,7 +96,7 @@ In the following subsections you will find additional instructions and explanati
 
 By default, [download Alpine Linux](https://alpinelinux.org/downloads/). [Ubuntu Server](https://ubuntu.com/download/server) is also fine.
 
-**Note:** If you are operating on an **ARM 64-bit architecture**, it is recommended to use **Ubuntu 25.10 (Desktop version)** instead, due to its compatibility with ubuntu.
+**Note:** If you are operating on an **ARM 64-bit architecture**, use **Ubuntu 25.10 (Desktop version)** or a later version, instead.
 
 #### 2. Creating the Virtual Machine
 

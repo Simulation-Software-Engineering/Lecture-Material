@@ -83,6 +83,7 @@ This exercise consists of the following main steps:
     - 2 GB virtual disk
     - 1024 MB of memory
     - 32 MB of video memory
+    - These specifications are for a server-only distribution. For a distribution with a Desktop environment (GUI), assign 4 GB of RAM and 8 GB of storage.
 3. Installing a Linux distribution on the virtual machine with
     - user called `USERNAME` (if your GitLab name is `@musterm`, then `musterm`)
     - (host)name of the machine `USERNAMEvm` (e.g., `mustermvm`)
@@ -106,7 +107,6 @@ While the installation image is downloading, you can already prepare the virtual
     - Select `Type: Linux` and `Subtype: Other Linux`.
     - If given the option (e.g., if you use an Ubuntu image), select `Skip Unattended Installation`: let's experience the full process this time.
     - Assign RAM and virtual drive as stated in the introduction.
-      - If you are running Ubuntu Desktop on an ARM 64-bit architecture, it’s recommended to assign at least **4096 MB** of RAM and **8 GB** of storage to ensure smooth performance.
 - After the creation, the virtual machine shows up in the "VirtualBox Manager". Open the settings of the VM and:
     - inspect the settings of the virtual machine and set the video memory to at least 32 MB (not necessary for Alpine, but you will probably need it in other setups).
     - in the same settings, you can also increase the number of CPU cores allocated (not necessary).

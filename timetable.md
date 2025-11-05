@@ -37,3 +37,11 @@
 ## 3.2 – Wed, October 29, 2025
 
 - **90** min.: [Exercise: Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualmachines_containers_exercise.md)
+
+## 4.1 – Wed, November 5, 2025
+
+- The Challenge, step one, presentations
+
+## 4.2 – Wed, November 5, 2025
+
+- The Challenge, step one, presentations

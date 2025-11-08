@@ -200,8 +200,8 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 - `FROM`: Defines base image
 - `RUN`: Defines commands to execute
 - `WORKDIR`: Defines working directory for following commands
-- `COPY`: Copy for from source to destination
-- `ADD`: Add for from source to destination (powerful and confusing)
+- `COPY`: Copy file from source to destination
+- `ADD`: Add file from source to destination (powerful and confusing)
 - `CMD`: Command to run under `docker run`
 - `ENV`: Sets environment variable
 - `ARG`: Environment variable for **only** the build process

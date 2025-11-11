@@ -217,7 +217,7 @@ Built distribution (wheel)
 - No compilation done, just a copy paste into a directory.
 - In most cases only one generic wheel is required. Exceptions are different Python interpreters, different OS configurations.
 - Run
-  
+
   ```bash
   python3 -m build --wheel source-tree-directory
   ```
@@ -236,9 +236,9 @@ Built distribution (wheel)
   ```
 
 - Use `twine` because ...
-    - ... it uses secure authentication of the user over HTTPS.
-    - ... its predecessor `python setup.py upload` required careful configuration, and is deprecated.
-    - ... encourages users to create distribution files to promote testing before releasing.
+  - ... it uses secure authentication of the user over HTTPS.
+  - ... its predecessor `python setup.py upload` required careful configuration, and is deprecated.
+  - ... encourages users to create distribution files to promote testing before releasing.
 - The archive files are uploaded to a package index from where pip can get them.
 
 ---

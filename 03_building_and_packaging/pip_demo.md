@@ -73,11 +73,3 @@ pip show nutils
 ```bash
 python -m pip install package-name
 ```
-
-## 4. How to read a PEP
-
-- Have a look at [PEP 8](https://peps.python.org/pep-0008/)
-
-## 5. Understanding a PyPI package webpage
-
-- Having a look at [fenicsprecice](https://pypi.org/project/fenicsprecice/)

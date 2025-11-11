@@ -72,7 +72,7 @@ In this lecture, we work with pip, because ...
 - PEP is an evolving design document which provides information regarding new features, processes and new environments.
 - PEPs typically involve concise technical information, which also acts as standardizations.
 - Packaging is standardized by [Packaging PEPs](https://peps.python.org/topic/packaging/).
-- Example of a Packaging PEP: 
+- Example of a Packaging PEP: [PEP 427 – The Wheel Binary Package Format 1.0](https://peps.python.org/pep-0427/).
 
 ---
 
@@ -82,6 +82,7 @@ Distribution package
 
 - Something you can install.
 - `pip install pkg`.
+- Directly acquired from a packaging index.
 
 Import package
 
@@ -104,43 +105,49 @@ Read more about [distribution package vs. import package](https://packaging.pyth
 
 ---
 
-## Create the source tree 1/2
+## Create the source tree 1/3
+
+Source tree of code:
+
+```bash
+application/
+├── source.py
+├── tests/
+```
+
+`source.py` contains the code. It can be multiple files.
+
+---
+
+## Create the source tree 2/3
+
+Once the file structuring is complete, the source tree is:
+
+```bash
+application/
+├── LICENSE
+├── README.md
+├── pyproject.toml
+├── package_name/
+|   ├── __init__.py
+|   ├── source.py
+└── tests/
+```
+
+- The file `__init__.py` is required to import the directory `package_name/` as a package.
+
+---
+
+## Create the source tree 3/3
 
 Four places where naming is relevant:
 
 - Name of the repository (on GitHub or GitLab).
 - Name of the folder which has the source code.
-- Name of the package as seen by PyPI.
-- Name of the package to be used in the `import` statement.
+- Name of the distribution package.
+- Name of the import package.
 
-**All names are independent of each other.**
-
-Example folder structure:
-
-```bash
-generic_folder_name/
-- src/
-  - __init__.py
-  - source-code.py
-```
-
-- The file `__init__.py` is required to import the `package_name/` as a package. This file is mostly empty
-- `source-code.py` contains the code. It can be multiple files.
-
----
-
-## Create the source tree 2/2
-
-- Once the file structuring is complete, the source tree is:
-
-```bash
-generic_folder_name/
-- pyproject.toml
-- src/
-  - __init__.py
-  - source-code.py
-  - tests/
-```
+**All names are independent of each other, but try to have one name.**
 
 ---
 
@@ -191,6 +198,8 @@ Read more in [is setup.py deprecated?](https://packaging.python.org/en/latest/di
 ## Create Build Artifacts 1/3
 
 Source distribution (sdist) vs. built distribution (wheel)
+
+Base command is `python3 -m build`.
 
 ---
 
@@ -310,7 +319,9 @@ List packages by running
 pip freeze
 ```
 
-or
+also useful to generate `requirements.txt`: `pip freeze > requirements.txt`.
+
+Additionally what works is
 
 ```bash
 pipx list
@@ -320,7 +331,7 @@ pipx list
 
 ## PyPI
 
-- [PyPI](https://pypi.org/) = **Python Package Index** is a repository of software developed in the Python community.
+- [PyPI](https://pypi.org/) = **Python Package Index** is an online index of Python packages.
 - PyPI itself is developed on GitHub through another software called [Warehouse](https://github.com/pypa/warehouse).
 - PyPI has an informative [public dashboard](https://p.datadoghq.com/sb/7dc8b3250-85dcf667bd) to show its activity.
 - A major advantage is the active maintenance of PyPI and the packages indexed in it.
@@ -356,10 +367,9 @@ pip install --index-url https://test.pypi.org/simple/ <package-name>
 
 ## Important takeaways
 
-Packaging of Python code is
+Packaging of Python code consists of ...
 
-- creation of a standardized folder structure to convert raw Python code into a project.
-- creating and uploading distribution archives.
-- Uploading distribution archives to a package index.
-
-We saw the process of packaging and uploading to TestPyPI which is similar to uploading to the PyPI.
+- ... creating a standardized folder structure to convert raw Python code into a project.
+- ... creating build artifacts.
+- ... uploading build artifacts to a package index.
+- ... testing if the uploaded package can be installed.

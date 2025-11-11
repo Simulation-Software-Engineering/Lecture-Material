@@ -89,7 +89,6 @@ diffusion2d.solve()
 
 - Upload the build artifacts to TestPyPI.
 - Go to TestPyPI and view the package which has been uploaded.
-- Take a screenshot of the TestPyPI webpage which displays your package.
 
 ## Step 7 - Testing the deployed package
 
@@ -100,4 +99,4 @@ diffusion2d.solve()
 
 - Open a pull request with the name `Packaged code by <your-GitLab-username>` from your fork to the `main` branch of the exercise repository.
 - Only push the refactored code, `pyproject.toml`, `README.md`, and `__init__.py`. Do not push the build artifacts.
-- **Important**: Add the TestPyPI screenshot in the description of the pull request opened for submission.
+- **Important**: Add a link to the TestPyPI package page in the description of the pull request.

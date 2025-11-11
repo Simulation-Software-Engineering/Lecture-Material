@@ -2,13 +2,14 @@
 
 ## Starting remarks
 
-- [Exercise repository link](https://github.com/Simulation-Software-Engineering/diffusion2D)
+- [Exercise repository link](https://github.com/Simulation-Software-Engineering/diffusion2d)
 - Deadline for submitting this exercise is **Wednesday 19th November 09:00**.
 - The code in this exercise produces plots and in order to view them you need to use a GUI-based operating system or environment.
+- The exercise follows the steps in the [Python packaging tutorial](https://packaging.python.org/en/latest/tutorials/packaging-projects/).
 
 ## Brief idea of the exercise
 
-In this exercise you will convert a raw Python code into a packaged code which is uploaded to the testing index of PyPI called [TestPyPI](https://test.pypi.org/). You may find such exercises online, for example, [the tutorial on python.org](https://packaging.python.org/tutorials/packaging-projects/), but in this exercise we will attempt to package a simulation code. After preparing the code we will create build artifacts and upload them to the package index.
+In this exercise you will convert a Python code into a package that is on [TestPyPI](https://test.pypi.org/). The code is a simple simulation code. After preparing the code for packaging, you will create build artifacts and upload them to the package index.
 
 ## Prerequisites
 
@@ -25,7 +26,7 @@ In this exercise you will convert a raw Python code into a packaged code which i
 ## Step 1 - Acquiring the code and getting familiar with it
 
 - Fork the [exercise repository](https://github.com/Simulation-Software-Engineering/diffusion2D).
-- Open the file `diffusion2d.py` and go through the file and try to understand the code components.
+- Open the file `diffusion2d.py` and go through the file and try to understand it.
 - Check if your system has Python version >= 3.6 and update it if it is older than 3.6.
 - Install pip, build, and twine.
 - Install NumPy and Matplotlib with `pip`. The installation instructions can be found on the webpages (links in the Prerequisites section of this document).
@@ -92,8 +93,8 @@ diffusion2d.solve()
 
 ## Step 7 - Testing the deployed package
 
-- Using the commands from the lecture notes try to install the package using `pip` and also run the code by importing the `solve()` functionality in a Python script or an interactive Python shell.
-- Even though your package is on TestPyPI, the dependencies of the package need to be installed from PyPI. To make sure that the dependencies are installed from PyPI and not TestPyPI, use the `--extra-index-url` flag in the `pip` command appropriately.
+- Try to install the package using `pip` and also run the code by importing the `solve()` functionality in a Python script or an interactive Python shell.
+- Even though your package is on TestPyPI, the dependencies of the package need to be installed from PyPI. To make sure that the dependencies are installed from PyPI and not TestPyPI, use the `--extra-index-url` option of `pip`.
 
 ## Step 8 - Submitting the exercise
 

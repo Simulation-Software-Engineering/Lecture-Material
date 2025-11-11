@@ -60,7 +60,6 @@ diffusion2d.solve()
 
 - Once you have refactored the code, try calling the `solve()` function again through a Python script or directly in a Python shell. Compare the plots with the plots in the figure you saved earlier. Both outputs should be identical.
 - The function `solve()` should take in physical parameters as input arguments. In this case, change the parameters `dx`, `dy` and `D` such that they are passed to the `solve()` function by the user. Provide default values for all three of these parameters.
-- In some cases an additional `__init__.py` file may be necessary on each level of the directory structure to ensure that the local import `from .output ...` works. First try to run the refactored code without adding any additional file, and if it is does not work, add the `__init__.py` file. The `__init__.py` should be empty in this case. An explanation of why this file is necessary is found in the [Python packaging documentation](https://packaging.python.org/en/latest/tutorials/packaging-projects/#a-simple-project).
 
 ## Step 3 - Creating folder structure for packaging
 
@@ -70,14 +69,14 @@ diffusion2d.solve()
 - **Note**: General recommendation is to have the name of the folder having the source files to be same as the name of the package as seen when imported at the time of use.
 - The `README.md` file consists of a longer description about the code and what it does. Take the information about the code from Step 1 of this exercise and add it to the README. In addition to this fill out the empty sections of the README with relevant information.
 - In the `pyproject.toml`, name your package `<your-GitLab-username>_diffusion2d` (the underscore `_` between your GitLab username and diffusion2d is important, because any other symbol will not work). We will use semantic versioning, so the version you are developing will be `0.0.1`. The package url is the url of the GitHub repository of this exercise code.
-- As the package should be easy to install and provide maximum possible information, try to include as many configuration options as possible.
+- Try to add as many configuration options as you can.
 - **Hint**: Look at the guide on [configuring setuptools with pyproject.toml](https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html).
 
-## Step 4 - Create distribution archives
+## Step 4 - Create build artifacts
 
-- With reference to the lecture notes, create distribution archives for this project. Use the `build` tool to create the distribution archives.
+- Create build artifacts for this project. Use the `build` tool to create the build artifacts.
 - After creating the distribution packages, check the `dist/` folder to ensure that the archive files have been created.
-- **Important**: If for some reason the package does not work and you wish to upload a changed state of the package, then you have to remove all contents of `dist/` before creating new distribution archives.
+- **Important**: If for some reason the package does not work and you wish to upload a changed state of the package, you have to remove all contents of `dist/` before creating new build artifacts.
 
 ## Step 5 - Create an account and a API Token on TestPyPI
 
@@ -88,7 +87,7 @@ diffusion2d.solve()
 
 ## Step 6 - Uploading the package
 
-- Upload the distribution archives to TestPyPI.
+- Upload the build artifacts to TestPyPI.
 - Go to TestPyPI and view the package which has been uploaded.
 - Take a screenshot of the TestPyPI webpage which displays your package.
 
@@ -99,10 +98,6 @@ diffusion2d.solve()
 
 ## Step 8 - Submitting the exercise
 
-- Open a pull request with the name `Packaged code for PyPI by <your-GitLab-username>` from your fork to the `main` branch of the exercise repository.
-- Only push the `pyproject.toml`, `README.md`, and `__init__.py` in addition to the refactored code.
+- Open a pull request with the name `Packaged code by <your-GitLab-username>` from your fork to the `main` branch of the exercise repository.
+- Only push the refactored code, `pyproject.toml`, `README.md`, and `__init__.py`. Do not push the build artifacts.
 - **Important**: Add the TestPyPI screenshot in the description of the pull request opened for submission.
-
-## Bonus: Using Versioneer to handle versioning of code
-
-- Use [Versioneer](https://pypi.org/project/versioneer/) to handle the versioning in your package.

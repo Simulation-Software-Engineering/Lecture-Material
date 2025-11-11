@@ -33,12 +33,7 @@ slideOptions:
 
 ## Python Package Managers 1/3
 
-The most significant package managers:
-
-- pip
-- Conda
-- Poetry
-- uv
+Many package managers out there: **pip**, **Conda**, **Poetry**, **uv**, and more.
 
 ---
 
@@ -58,19 +53,19 @@ Poetry and uv are newer variants with better functionality and speed.
 
 ## Python Package Managers 3/3
 
-In this lecture, we work with pip, because ...
+In this lecture we work with pip, because ...
 
 - ... of its wide use in the Python community.
-- ... the package repository PyPI is large.
-- ... it is still the fundamental way to package Python code.
+- ... the packaging index PyPI is large.
+- ... it is still the go-to solution to package Python code.
 - ... it is easy to understand and use.
 
 ---
 
 ## Python Enhancement Proposals (PEPs)
 
-- PEP is an evolving design document which provides information regarding new features, processes and new environments.
-- PEPs typically involve concise technical information, which also acts as standardizations.
+- PEP is an evolving design document which guides Python development.
+- PEPs typically involve concise technical information, which also act as standards.
 - Packaging is standardized by [Packaging PEPs](https://peps.python.org/topic/packaging/).
 - Example of a Packaging PEP: [PEP 427 – The Wheel Binary Package Format 1.0](https://peps.python.org/pep-0427/).
 
@@ -78,21 +73,15 @@ In this lecture, we work with pip, because ...
 
 ## Distribution Package vs. Import Package
 
-Distribution package
+- Distribution package is ...
+  - ... something you can install, like `pip install pkg`.
+  - ... directly acquired from a packaging index.
+- Import package
+  - ... is a Python module which typically contains submodules.
+  - ... is used within a file: `import pkg` or `from pkg import xyz`.
+  - ... is available when its distribution package is installed.
 
-- Something you can install.
-- `pip install pkg`.
-- Directly acquired from a packaging index.
-
-Import package
-
-- An import package is a Python module which typically contains submodules.
-- Writing `import pkg` in a file. Potentially also `from pkg import xyz`.
-- Import package is available when its distribution package is installed.
-
-Distribution package name and import package need not be the same, but usually is.
-
-Read more about [distribution package vs. import package](https://packaging.python.org/en/latest/discussions/distribution-package-vs-import-package/#distribution-package-vs-import-package).
+Distribution package name and import package need not be the same, but usually is. Read more about [distribution package vs. import package](https://packaging.python.org/en/latest/discussions/distribution-package-vs-import-package/#distribution-package-vs-import-package).
 
 ---
 
@@ -101,7 +90,7 @@ Read more about [distribution package vs. import package](https://packaging.pyth
 1. Get or create a source tree of the code.
 2. Write a packaging configuration file, typically `pyproject.toml`.
 3. Create build artifacts.
-4. Upload the build artifacts to the package distribution service (PyPI).
+4. Upload the build artifacts to a packaging index.
 
 ---
 
@@ -147,7 +136,7 @@ Four places where naming is relevant:
 - Name of the distribution package.
 - Name of the import package.
 
-**All names are independent of each other, but try to have one name.**
+**All names are independent of each other, but try to have a single name.**
 
 ---
 
@@ -187,9 +176,9 @@ What happened to the files `setup.py` and `setup.cfg`?
 
 - `setup.py` is a configuration file for the build backend `setuptools`.
 - It still remains a valid configuration file.
-- Using `setup.py` as a command line tool is **deprecated**, avoid `python setup.py`.
+- Using `setup.py` as a command line tool is **deprecated**.
 - `setup.cfg` is yet another valid configuration file for `setuptools`.
-- These files are necessary if the Python package as C extensions.
+- These files are necessary if the Python package has C extensions.
 
 Read more in [is setup.py deprecated?](https://packaging.python.org/en/latest/discussions/setup-py-deprecated/#setup-py-deprecated).
 
@@ -197,9 +186,13 @@ Read more in [is setup.py deprecated?](https://packaging.python.org/en/latest/di
 
 ## Create Build Artifacts 1/3
 
-Source distribution (sdist) vs. built distribution (wheel)
+Source distribution (sdist) vs. built distribution (wheel).
 
-Base command is `python3 -m build`.
+Base command
+
+```bash
+python3 -m build
+```
 
 ---
 
@@ -207,8 +200,12 @@ Base command is `python3 -m build`.
 
 Source distribution (sdist)
 
-- Contains files enough to install the package from source at end location.
-- Run `python3 -m build --sdist source-tree-directory`.
+- Contains files enough to install the package from source.
+- Run
+
+  ```bash
+  python3 -m build --sdist source-tree-directory
+  ```
 
 ---
 
@@ -216,22 +213,32 @@ Source distribution (sdist)
 
 Built distribution (wheel)
 
-- Contains files needed only to run package at end location.
-- No compilation done, just a copy paste into a directory at end location.
+- Contains files needed only to run package.
+- No compilation done, just a copy paste into a directory.
 - In most cases only one generic wheel is required. Exceptions are different Python interpreters, different OS configurations.
-- Run `python3 -m build --wheel source-tree-directory`.
+- Run
+  
+  ```bash
+  python3 -m build --wheel source-tree-directory
+  ```
+
 - If no wheel is available, pip falls back to source distribution.
 
 ---
 
 ## Uploading Build Artifacts
 
-- The [twine](https://twine.readthedocs.io/en/latest/) is a tool to upload the build artifacts.
-- Run `twine upload dist/package-name-version.tar.gz dist/package-name-version-py3-none-any.whl`.
-- Why Twine?
-    - Secure authentication of the user over HTTPS using a verified connection.
-    - Its predecessor `python setup.py upload` required careful configuration, and is deprecated.
-    - Encourages users to create distribution files to promote testing before releasing.
+- [twine](https://twine.readthedocs.io/en/latest/) is a tool to upload the build artifacts.
+- Run
+
+  ```bash
+  twine upload dist/package-name-version.tar.gz dist/package-name-version-py3-none-any.whl
+  ```
+
+- Use `twine` because ...
+    - ... it uses secure authentication of the user over HTTPS.
+    - ... its predecessor `python setup.py upload` required careful configuration, and is deprecated.
+    - ... encourages users to create distribution files to promote testing before releasing.
 - The archive files are uploaded to a package index from where pip can get them.
 
 ---
@@ -241,6 +248,10 @@ Built distribution (wheel)
 - pip is a package installer to install packages from the Python package index [PyPI]((https://pypi.org/)).
 - pip is itself a [package](https://pypi.org/project/pip/) which is available on PyPI.
 - pip is open-source and is developed on [GitHub](https://github.com/pypa/pip).
+
+---
+
+## pip Demo
 
 ---
 
@@ -319,7 +330,11 @@ List packages by running
 pip freeze
 ```
 
-also useful to generate `requirements.txt`: `pip freeze > requirements.txt`.
+also useful to generate `requirements.txt`:
+
+```bash
+pip freeze > requirements.txt
+```
 
 Additionally what works is
 
@@ -348,9 +363,7 @@ pipx list
 
 ---
 
-## Example of PyPI package: fenicsprecice
-
-- Having a look at [fenicsprecice](https://pypi.org/project/fenicsprecice/)
+## Example of PyPI package: [fenicsprecice](https://pypi.org/project/fenicsprecice/)
 
 ---
 

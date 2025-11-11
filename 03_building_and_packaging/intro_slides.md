@@ -30,7 +30,7 @@ slideOptions:
 ## Learning goals of chapter
 
 - Explain why software is packaged.
-- Create a distributable package of a raw Python code, publish on PyPI, and install with pip.
+- Create a distributable package of a Python code, publish on PyPI, and install with pip.
 - Understand the difference between static and dynamic libraries and common ways of installation on Linux.
 - Build C++ software and handle dependencies with Make and CMake.
 - Package C++ software with CPack and create Debian packages.
@@ -73,10 +73,10 @@ slideOptions:
 
 - First step is finding the right standard for your code.
 - There are several options:
-    - One of the many Linux package managers: apt, dpkg, yum, RPM and many more ...
-    - [CMake](https://cmake.org/) <span>: building / installation / packaging tool mostly for C, C++ projects<!-- .element: class="fragment" data-fragment-index="1" --></span>
-    - [Spack](https://spack.io/) <span>: a package management tool mostly for supercomputing centers<!-- .element: class="fragment" data-fragment-index="1" --></span>
-    - [Conan](https://conan.io/) <span>: open-source package manager for C and C++ development<!-- .element: class="fragment" data-fragment-index="1" --></span>
+    - Linux package managers: apt, dpkg, yum, RPM, etc.
+    - [CMake](https://cmake.org/)
+    - [Spack](https://spack.io/)
+    - [Conan](https://conan.io/)
     - [pip](https://pypi.org/project/pip/)
     - [Conda](https://docs.conda.io/en/latest/)
     - and many more ...
@@ -87,7 +87,7 @@ slideOptions:
 
 - Python is easy to understand and widely used in research software.
 - Well established package managers and packaging tools already exist in the Python community.
-- Several examples of packaged codes: [NumPy](https://pypi.org/project/numpy/), [SciPy](https://pypi.org/project/scipy/), [PyTorch](https://pypi.org/project/torch/) and more ...
+- Several examples of packaged codes: [NumPy](https://pypi.org/project/numpy/), [SciPy](https://pypi.org/project/scipy/), [PyTorch](https://pypi.org/project/torch/).
 
 ---
 

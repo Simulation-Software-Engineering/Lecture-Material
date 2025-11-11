@@ -73,13 +73,16 @@ In this lecture we work with pip, because ...
 
 ## Distribution Package vs. Import Package
 
-- Distribution package is ...
-  - ... something you can install, like `pip install pkg`.
-  - ... directly acquired from a packaging index.
-- Import package
-  - ... is a Python module which typically contains submodules.
-  - ... is used within a file: `import pkg` or `from pkg import xyz`.
-  - ... is available when its distribution package is installed.
+Distribution package is ...
+
+- ... something you can install, like `pip install pkg`.
+- ... directly acquired from a packaging index.
+
+Import package ...
+
+- ... is a Python module which typically contains submodules.
+- ... is used within a file: `import pkg` or `from pkg import xyz`.
+- ... is available when its distribution package is installed.
 
 Distribution package name and import package need not be the same, but usually is. Read more about [distribution package vs. import package](https://packaging.python.org/en/latest/discussions/distribution-package-vs-import-package/#distribution-package-vs-import-package).
 
@@ -235,11 +238,11 @@ Built distribution (wheel)
   twine upload dist/package-name-version.tar.gz dist/package-name-version-py3-none-any.whl
   ```
 
-- Use `twine` because ...
-  - ... it uses secure authentication of the user over HTTPS.
-  - ... its predecessor `python setup.py upload` required careful configuration, and is deprecated.
-  - ... encourages users to create distribution files to promote testing before releasing.
-- The archive files are uploaded to a package index from where pip can get them.
+Use `twine` because ...
+
+- ... it uses secure authentication of the user over HTTPS.
+- ... its predecessor `python setup.py upload` required careful configuration, and is deprecated.
+- ... encourages users to create distribution files to promote testing before releasing.
 
 ---
 

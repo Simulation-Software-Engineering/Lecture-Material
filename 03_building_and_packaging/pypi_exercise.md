@@ -9,7 +9,7 @@
 
 ## Brief idea of the exercise
 
-In this exercise you will convert a Python code into a package that is on [TestPyPI](https://test.pypi.org/). The code is a simple simulation code. After preparing the code for packaging, you will create build artifacts and upload them to the package index.
+In this exercise you, will convert a simple simulation code written in Python into a package that is available on [TestPyPI](https://test.pypi.org/).
 
 ## Prerequisites
 
@@ -30,14 +30,14 @@ In this exercise you will convert a Python code into a package that is on [TestP
 - Check if your system has Python version >= 3.6 and update it if it is older than 3.6.
 - Install pip, build, and twine.
 - Install NumPy and Matplotlib with `pip`. The installation instructions can be found on the webpages (links in the Prerequisites section of this document).
-- Run the code using `python diffusion2d.py` and observe the output. You should see four plots combined into one figure. Save this figure on your system.
-- **Information about diffusion2d.py**: This code solves the diffusion equation in 2D over a square domain which is at a certain temperature and a circular disc at the center which is at a higher temperature. This code solves the diffusion equation using the [finite-difference method](https://en.wikipedia.org/wiki/Finite_difference_method). The thermal diffusivity and initial conditions of the system can be changed by the user. The code produces four plots at various timepoints of the simulation. The diffusion process can be clearly observed in these plots.
+- Run the code by running `python diffusion2d.py` and observe the output. You should see four plots combined into one figure. Save this figure on your system.
+- **Information about diffusion2d.py**: This code solves the diffusion equation over a two dimensional square domain which is at a certain temperature, and a circular disc at its center which is at a higher temperature. The diffusion equation is solved using the [finite-difference method](https://en.wikipedia.org/wiki/Finite_difference_method). The thermal diffusivity and initial conditions of the system can be changed by the user. The code produces four plots at various timepoints of the simulation. The diffusion process can be clearly observed in these plots.
 - Take a few minutes to play around with parameters `dx`, `dy` and `D` in the solver file and observe how the value of `dt` and the output changes. Do you notice if the code takes more or less time to finish the computation?
-- If you are interested in the theoretical background of the code, please have a look in [Chapter 7 of the book "Learning Scientific Programming with Python"](https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/).
+- If you are interested in the theoretical background of the code, take a look at [chapter 7 of the book "Learning Scientific Programming with Python"](https://scipython.com/book/chapter-7-matplotlib/examples/the-two-dimensional-diffusion-equation/).
 
 ## Step 2 - Refactoring the code
 
-- It is good practice to put code specific to a functionality in a separate file for better organization and code sustainability. We will do the same here.
+- It is good practice to put code specific to a functionality in a separate file for better readability and sustainability.
 - Create a file `output.py` on the same level as `diffusion2d.py`.
 - Create two functions in the file `output.py` called `create_plot()` and `output_plots()`.
     - The function `create_plot()` should create one plot for one time stamp. In the earlier output, this would be one of the four plots. You will find this functionality inside the time loop in `diffusion2d.py`.

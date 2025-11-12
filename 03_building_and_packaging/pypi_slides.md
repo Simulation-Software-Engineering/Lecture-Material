@@ -64,8 +64,8 @@ In this lecture we work with pip, because ...
 
 ## Python Enhancement Proposals (PEPs)
 
-- PEP is an evolving design document which guides Python development.
-- PEPs typically involve concise technical information, which also act as standards.
+- PEPs are evolving design documents that guide Python development.
+- PEPs typically involve concise technical information. They are essentially standards.
 - Packaging is standardized by [Packaging PEPs](https://peps.python.org/topic/packaging/).
 - Example of a Packaging PEP: [PEP 427 – The Wheel Binary Package Format 1.0](https://peps.python.org/pep-0427/).
 
@@ -84,13 +84,13 @@ Import package ...
 - ... is used within a file: `import pkg` or `from pkg import xyz`.
 - ... is available when its distribution package is installed.
 
-Distribution package name and import package need not be the same, but usually is. Read more about [distribution package vs. import package](https://packaging.python.org/en/latest/discussions/distribution-package-vs-import-package/#distribution-package-vs-import-package).
+Both names need not be the same, but they usually are. Read more about [distribution package vs. import package](https://packaging.python.org/en/latest/discussions/distribution-package-vs-import-package/#distribution-package-vs-import-package).
 
 ---
 
 ## Steps in Packaging a Python Code
 
-1. Get or create a source tree of the code.
+1. Create a source tree of the code.
 2. Write a packaging configuration file, typically `pyproject.toml`.
 3. Create build artifacts.
 4. Upload the build artifacts to a packaging index.
@@ -203,7 +203,7 @@ python3 -m build
 
 Source distribution (sdist)
 
-- Contains files enough to install the package from source.
+- Contains files to install the package from source.
 - Run
 
   ```bash
@@ -216,7 +216,7 @@ Source distribution (sdist)
 
 Built distribution (wheel)
 
-- Contains files needed only to run package.
+- Contains binary files to run package.
 - No compilation done, just a copy paste into a directory.
 - In most cases only one generic wheel is required. Exceptions are different Python interpreters, different OS configurations.
 - Run

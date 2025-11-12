@@ -27,7 +27,7 @@ slideOptions:
 
 ---
 
-## Learning goals of chapter
+## Learning Goals of Chapter
 
 - Explain why software is packaged.
 - Create a distributable package of a Python code, publish on PyPI, and install with pip.
@@ -38,7 +38,7 @@ slideOptions:
 
 ---
 
-## What is packaging?
+## What is Packaging?
 
 - Bare code is often hard to understand for everyone except the developer(s).
 - Packaging is a workflow to convert a code into a standardized distributable software.
@@ -50,7 +50,7 @@ slideOptions:
 
 ---
 
-## Why should we package code? 1/2
+## Why Package Code? 1/2
 
 - A code with many files typically has difficulties like
     - multiple dependencies and requirements of specific versions of dependencies.
@@ -59,7 +59,7 @@ slideOptions:
 
 ---
 
-## Why should we package code? 2/2
+## Why Package Code? 2/2
 
 - Create a package to
     - benefit from a package index or package manager which is familiar to a broad audience.
@@ -69,7 +69,7 @@ slideOptions:
 
 ---
 
-## How to package code?
+## How to Package Code?
 
 - First step is finding the right standard for your code.
 - There are several options:
@@ -83,15 +83,15 @@ slideOptions:
 
 ---
 
-## Why do we look at packaging a Python code?
+## Why Packaging a Python Code?
 
 - Python is easy to understand and widely used in research software.
 - Well established package managers and packaging tools already exist in the Python community.
-- Several examples of packaged codes: [NumPy](https://pypi.org/project/numpy/), [SciPy](https://pypi.org/project/scipy/), [PyTorch](https://pypi.org/project/torch/).
+- Many famous examples: [NumPy](https://pypi.org/project/numpy/), [SciPy](https://pypi.org/project/scipy/), [PyTorch](https://pypi.org/project/torch/).
 
 ---
 
-## Key takeaways
+## Key Takeaways
 
 - Packaging or creating build recipe of a code is a standardized process.
 - Many options in packaging / building tools.

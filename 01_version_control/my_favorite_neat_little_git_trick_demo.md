@@ -18,6 +18,19 @@
 - If you rebased/merged and messed up your history, use `git reflog` to go back to a previous state
 - If you only need one file from another commit or branch, use `git checkout <branch_or_sha> -- <path>`
 - Use [Git LFS](https://git-lfs.com/) for big files >10 MB or for non-diffable binaries (e.g., images, media, archives, shared libraries).
+- Prefer `git add -p` over `git add [FILE]`. This allows you to specify what you want to add to a commit in a more fine-grained manner
+- A very nice alias for editing any earlier commit, without having to manually rebase:
+
+    ```
+    [alias]
+        amend = "!f() { \
+            COMMIT=$(git rev-parse --short \"$1\") && \
+            git commit --fixup \"$COMMIT\" && \
+            GIT_SEQUENCE_EDITOR=true git rebase --autosquash --autostash --interactive "$COMMIT^"; \
+        }; f"
+    ```
+
+    Usage: e.g. `git add -p ...` and then `git amend HEAD~5`. This would add the staged changes to the fifth last commit.
 
 ## Tricks from Winter Term 2024/25
 

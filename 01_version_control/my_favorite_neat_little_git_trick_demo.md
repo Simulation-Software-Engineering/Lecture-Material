@@ -29,7 +29,7 @@
             GIT_SEQUENCE_EDITOR=true git rebase --autosquash --autostash --interactive "$COMMIT^"; \
         }; f"
     ```
-    
+
     Usage: e.g. `git add -p ...` and then `git amend HEAD~5`. This would add the staged changes to the fifth last commit.
 
 ## Tricks from Winter Term 2024/25

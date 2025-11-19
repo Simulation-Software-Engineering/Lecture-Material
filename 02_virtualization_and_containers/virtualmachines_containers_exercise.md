@@ -83,6 +83,7 @@ This exercise consists of the following main steps:
     - 2 GB virtual disk
     - 1024 MB of memory
     - 32 MB of video memory
+    - These specifications are for a server-only distribution. For a distribution with a Desktop environment (GUI), assign 4 GB of RAM and 8 GB of storage.
 3. Installing a Linux distribution on the virtual machine with
     - user called `USERNAME` (if your GitLab name is `@musterm`, then `musterm`)
     - (host)name of the machine `USERNAMEvm` (e.g., `mustermvm`)
@@ -95,6 +96,8 @@ In the following subsections you will find additional instructions and explanati
 #### 1. Download the installation image
 
 By default, [download Alpine Linux](https://alpinelinux.org/downloads/). [Ubuntu Server](https://ubuntu.com/download/server) is also fine.
+
+**Note:** If you are operating on an **ARM 64-bit architecture**, use **Ubuntu 25.10 (Desktop version)** or a later version, instead.
 
 #### 2. Creating the Virtual Machine
 
@@ -152,6 +155,7 @@ Let's install `fastfetch` from the community repositories, instead:
 - Enable the community repositories with `setup-apkrepos -c` and use the default settings
 - Update the cache with `apk update`
 - Install fastfetch with `apk add fastfetch`
+- Run fastfetch with `fastfetch`
 
 Continue to step 5.
 
@@ -162,6 +166,8 @@ Continue to step 5.
 - We want to install [`neofetch`](https://github.com/dylanaraps/neofetch) which prints the system's information to the terminal and take a screenshot of this.
     - Install `neofetch` via `sudo apt update && sudo apt install -y neofetch`. This command will download and install `neofetch` using the package manager [`apt`](https://wiki.debian.org/Apt).
 - Clear the terminal using `clear` (or `Ctrl-L`) and run neofetch via by typing `neofetch` (or `fastfetch`) into the terminal and pressing `Enter`. It will show information about the Linux distribution version, available memory etc.
+
+**Note:** If you are running **Ubuntu Desktop on an ARM 64-bit architecture**, you may encounter an error when trying to install `neofetch` (e.g., `E: Unable to locate package`). In this case, you can use `fastfetch` as an alternative, which can be installed via `apt`.
 
 #### 5. Upload the Screenshot to SIM GitLab
 
@@ -205,7 +211,7 @@ Fork and clone the repository mentioned above. The repository initially contains
 
 - We want to start from scratch so initialize a new box using `vagrant init` inside this repository and add the resulting `Vagrantfile` to Git. Then adapt your `Vagrantfile` to incorporate the following settings:
     - Your virtual machine should be based on the [`bento/ubuntu-24.04` image](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04). In case you need a different provider (e.g., `libvirt`), feel free to use another box, but state this in your submission.
-    - The name of your VM should be `USERNAME-vm`.
+    - The name of your VM should be `USERNAME-vm-vagrant`.
     - The VM must request [1024 MB of main memory](https://developer.hashicorp.com/vagrant/docs/providers/virtualbox/configuration).
     - We want a [new shared folder](https://developer.hashicorp.com/vagrant/docs/synced-folders/basic_usage) in our virtual machine. The directory where the `Vagrantfile` resides, i.e. `.`, should be mounted by default as `/mnt/shared/` in your virtual machine.
     - Run your box with `vagrant up` and make sure that everything works out as expected (`vagrant ssh`). If everything is fine, you can `exit` the VM. You do **not** have to stop/destroy the VM for the next step.

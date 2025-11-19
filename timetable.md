@@ -37,3 +37,30 @@
 ## 3.2 – Wed, October 29, 2025
 
 - **90** min.: [Exercise: Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/virtualmachines_containers_exercise.md)
+
+## 4.1 – Wed, November 5, 2025
+
+- The Challenge, step one, presentations
+
+## 4.2 – Wed, November 5, 2025
+
+- The Challenge, step one, presentations
+
+## 5.1 – Wed, November 12, 2025
+
+- **15** min.: [Introduction to Packaging](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/intro_slides.md)
+- **75** min.: Packaging a Python Code: [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_demo.md), [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_slides.md)
+
+## 5.2 – Wed, November 12, 2025
+
+- **90** min.: [Exercise on Packaging a Python Code](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_exercise.md)
+
+## 6.1 – Wed, November 19, 2025
+
+- **25** min.: Some Linux fundamentals: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/linux_fundamentals_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/linux_fundamentals_demo.md)
+- **20** min.: Introduction to Make: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/make_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/make_demo.md)
+- **45** min.: Introduction to CMake: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cmake_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cmake_demo.md)
+
+## 6.2 – Wed, November 19, 2025
+
+- **90** min.: [Exercise: Let's Fight With CMake, Docker, and Some Dependencies](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cmake_exercise.md)

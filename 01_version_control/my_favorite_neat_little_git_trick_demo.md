@@ -21,6 +21,19 @@
 - Use `git switch -c <branch-name>` to create a new branch and immediately check it out!
 - Don't get stuck thinking that branches are only used as feature branches or issue branches! You can always create a short-lived temporary branch for something small, like shelving an experimental change.
 - If a temporary branch is still too much overhead for you, you can instantly stash your local changes with `git stash`. Restore your stashed changes later with `git stash pop`.
+- Prefer `git add -p` over `git add [FILE]`. This allows you to specify what you want to add to a commit in a more fine-grained manner
+- A very nice alias for editing any earlier commit, without having to manually rebase:
+
+    ```
+    [alias]
+        amend = "!f() { \
+            COMMIT=$(git rev-parse --short \"$1\") && \
+            git commit --fixup \"$COMMIT\" && \
+            GIT_SEQUENCE_EDITOR=true git rebase --autosquash --autostash --interactive "$COMMIT^"; \
+        }; f"
+    ```
+
+    Usage: e.g. `git add -p ...` and then `git amend HEAD~5`. This would add the staged changes to the fifth last commit.
 
 ## Tricks from Winter Term 2024/25
 

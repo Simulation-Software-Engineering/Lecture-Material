@@ -38,7 +38,7 @@ slideOptions:
 
 ## Learning goals
 
-- Understand the challenges when bringing (your) software to supercomputers.
+- Understand the challenges of deploying software to supercomputers.
 - Use Spack to install software.
 - Create a Spack package for your own software.
 
@@ -47,20 +47,21 @@ slideOptions:
 ## Introduction 1/2
 
 - Scientific software installation on supercomputers faces challenges:
-    - Parallel architectures (MPI, OpenMP, HPX...)
-    - Special hardware (accelerators, network...)
-    - Greatly varying architectures (AMD, Intel, ARM...)
-    - Missing dependencies (too new, too old...)
-    - Admins will not/cannot install software for you, you do not have superuser rights
+    - Parallel architectures (MPI, OpenMP, HPX, ...)
+    - Special hardware (accelerators, network, ...)
+    - Greatly varying architectures (AMD, Intel, ARM, ...)
+    - Missing dependencies (too new, too old)
+    - Admins will not/cannot install software for you
+    - You do not have superuser rights
 
 ---
 
 ## Introduction 2/2
 
-- Software should have best possible performance
+- Performance is critical on supercomputers
     - Software needs to be **compiled** to get best performance (special libraries, compilers...)
     - Optimized compilation settings (best settings not always obvious)
-    - Optimal settings depend on platform (supercomputers might be heterogeneous, different generation of CPUs e.g.)
+    - Optimal settings depend on platform (supercomputers might be heterogeneous, for e.g., different generation of CPUs)
 - **HPC-friendly package managers** can help with
     - organizing software installations
     - compilation of software
@@ -87,14 +88,14 @@ slideOptions:
     - Common scientific software included
     - No superuser rights needed
     - Spack's [dependencies](https://spack.readthedocs.io/en/latest/getting_started.html#system-prerequisites) commonly available on supercomputers
-- Deals with dependency resolution, compilation flags and **compilation**
+- Deals with dependency resolution, compilation flags and compilation
 - [Open-source project on GitHub](https://github.com/spack/spack)
 - Valuable resources:
     - [Good starter guides](https://spack-tutorial.readthedocs.io/en/latest/)
     - [Extensive documentation](https://spack.readthedocs.io)
     - [Spack Slack](https://slack.spack.io/) for communication with community
-- Heavily relies on concretizer [`clingo`](https://spack.readthedocs.io/en/latest/getting_started.html#bootstrapping-clingo)
-    - Prefers to install newest version of packages
+- Spack [bootstraps](https://spack.readthedocs.io/en/latest/bootstrapping.html) its own dependencies the first time it is used
+- Prefers to install newest version of packages
 
 ---
 
@@ -109,28 +110,13 @@ slideOptions:
 
 ---
 
-## Spack Installation
-
-- Dependencies: Python, Git, C/C++ compiler, patch, make, tar...
-    - Basically `build-essential`, `git`, and `python` on Ubuntu
-    - May be old, install newer versions with Spack if needed
-- Installation in user-writable location
-
-  ```bash
-  git clone -b v0.23.0 -c feature.manyFiles=true --depth=2 https://github.com/spack/spack.git
-  ```
-
-    - `v0.23.0` is currently the latest major release
-
----
-
 ## Demo 1: Spack Installation
 
 ---
 
 ## Spack Configuration and Caches
 
-- Permanently set up Spack
+- Set up Spack
 
   ```bash
   . <spack_prefix>/share/spack/setup-env.sh
@@ -150,7 +136,7 @@ slideOptions:
 
 - Spack works with `spec`s (`spec`=specification)
 
-  ```
+  ```bash
   spack install petsc@3.16.1+mpi -shared~suite-sparse
   ```
 
@@ -164,12 +150,6 @@ slideOptions:
   ```bash
   spack load petsc@3.16.1
   spack unload petsc@3.16.1
-  ```
-
-- [General syntax](https://spack.readthedocs.io/en/latest/command_index.html)
-
-  ```bash
-  spack COMMAND OPTION
   ```
 
 ---
@@ -345,7 +325,7 @@ slideOptions:
 
 ## Demo 3: Package Creation
 
-- Create package for our [HelloWorld example](https://github.com/Simulation-Software-Engineering/HelloWorld)
+- Create package for our [HelloWorld](https://github.com/Simulation-Software-Engineering/HelloWorld) code
     1. Create boilerplate package
     2. Add package details
     3. Verify package
@@ -361,7 +341,6 @@ slideOptions:
 - [Chained installation](https://spack.readthedocs.io/en/latest/chain.html)
 - [Stacks (build matrices)](https://spack-tutorial.readthedocs.io/en/latest/tutorial_stacks.html)
 - [Software management (modules)](https://spack.readthedocs.io/en/latest/module_file_support.html)
-- ...
 
 ---
 

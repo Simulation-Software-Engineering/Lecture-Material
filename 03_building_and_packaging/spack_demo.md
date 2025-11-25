@@ -1,18 +1,16 @@
 # Packaging for High-Performance Computing (Notes)
 
-**Note**: It is recommended to try out Spack in a fresh Docker container. To understand how Spack itself is installed, follow Step 1 in a fresh Ubuntu container. To make things simpler from Step 2 onwards, create a container from the [spack/ubuntu-jammy](https://hub.docker.com/r/spack/ubuntu-jammy) image, so that Spack is preinstalled.
+**Note**: It is recommended to try out Spack in a fresh Docker container. To understand how Spack itself is installed, follow Step 1 in a fresh Ubuntu Noble container (`docker run --rm -it ubuntu:noble`). To make things simpler from Step 2 onwards, create a container from the [spack/ubuntu-noble](https://hub.docker.com/r/spack/ubuntu-noble) image, so that Spack is preinstalled.
 
 ## 1. Spack Setup/Installation
 
-- Git repository of Python scripts
+- This demo (and Spack) needs Python, Git, a C/C++ compiler, patch, make, tar, and a few more tools. Basically `build-essential`, `git`, and `python` on Ubuntu Noble.
+
+- Get the Spack repository
 
   ```bash
-  git clone -b v0.23.0 -c feature.manyFiles=true --depth=2 https://github.com/spack/spack.git
+  git clone -b v1.1.0 --depth=2 https://github.com/spack/spack.git
   ```
-
-    - `v0.23.0` is currently the latest major release
-
-- **Note:** Install `curl`, `libcurl4-openssl-dev`, and `vim` to ensure that Spack v0.23.0 works in a fresh Ubuntu Jammy container.
 
 - Initializing Spack with
 
@@ -20,9 +18,7 @@
   . <spack_prefix>/share/spack/setup-env.sh
   ```
 
-  will set `SPACK_ROOT` and also add `spack` to `PATH`.
-
-  Note that the  `.` operator will run the commands in the supplied script as if we would type the commands supplied by the script in the shell ourselves. In bash the `.` operator is equivalent to `source`. However, `source` is not specified in POSIX and thus using `.` is likely to work on more platforms.
+  will set `SPACK_ROOT` and also add `spack` to `PATH`. Note that the  `.` operator will run the commands in the supplied script as if we would type the commands supplied by the script in the shell ourselves. In bash the `.` operator is equivalent to `source`. However, `source` is not specified in POSIX and thus using `.` is likely to work on more platforms.
 
 - Finish Spack setup
 
@@ -40,7 +36,7 @@
 
   prints the list of compilers that Spack has added.
 
-- Find external packages (optional)
+- Find external packages
 
   ```bash
   spack external find
@@ -48,17 +44,15 @@
 
   This command tries to find preinstalled software packages which are also in Spack's package database. This way we do not have to recompile everything from scratch.
 
-  **Note** `spack external find` is an experimental feature and might fail. System packages [can be defined manually](https://spack.readthedocs.io/en/latest/getting_started.html#system-packages).
+  Found packages (including version, configuration etc.) are stored in `~/.spack/packages.yaml`. There one can add further packages manually. Look at contents of this file.
 
-    - Found packages (including version, configuration etc.) are stored in `~/.spack/packages.yaml`. There one can add further packages manually. **Note**: Maybe show content of this file.
-
-- Concretize a spec to trigger bootstrap process (optional)
+- Concretize a spec to trigger bootstrap process
 
   ```bash
   spack spec zlib
   ```
 
-  This will try to concretize the package and its dependencies. `clingo`, Spack's concretizer, is needed for this. If one calls this command the very first time, a bootstrapping process is triggered that installs `clingo`.
+  This will try to concretize the package and its dependencies. `clingo`, Spack's concretizer, is needed for this. Running `spack spec` for the first time triggers a bootstrapping process that installs `clingo`.
 
 ## 2. Package Installation/Management with Spack
 
@@ -68,15 +62,7 @@
   spack info zlib
   ```
 
-- Install a simple example package
-
-  ```bash
-  spack spec zlib
-  ```
-
-  This will trigger the bootstrap process of Spack. It installs `clingo`, the dependency resolver, if not done before.
-
-- Install `zlib`
+- Install the package
 
   ```bash
   spack install --reuse zlib
@@ -102,7 +88,7 @@
 
   Spack will fetch the archive and try to deduce some basic settings. It will also check for other releases and asks whether to add checksums. We want all checksums.
 
-- Afterwards Spack drops us in the boilerplate package.
+- Spack immediately drops you in a boilerplate package file.
 
   ```Python
   class Helloworld(CMakePackage):
@@ -133,7 +119,7 @@
 
   At least the `FIXME` statements should be fixed before releasing the package. The Spack package recipe is written in Python so we can also do common Python magic here.
 
-- Spack has deduced a good number of information already.
+- Spack has deduced a good amount of information already.
     - We work with CMake
     - There are 3 releases of the software
     - The URL to download packages
@@ -259,16 +245,16 @@
 
 ### References
 
-- [EasyBuild](https://github.com/easybuilders/easybuild)
-- [EasyConfigs](https://github.com/easybuilders/easybuild-easyconfigs)
 - [Spack](https://spack.io/)
 - [Spack docs](https://spack.readthedocs.io/en/latest/)
 - [Spack 101 tutorials](https://spack-tutorial.readthedocs.io/en/latest/)
+- [EasyBuild](https://github.com/easybuilders/easybuild)
+- [EasyConfigs](https://github.com/easybuilders/easybuild-easyconfigs)
 - [archspec project](https://github.com/archspec/)
 
-### Talks
+### Interesting Talks On This Topic
 
-Talks at FOSDEM
+FOSDEM talks:
 
 - 2020: [Spack's new Concretizer](https://archive.fosdem.org/2020/schedule/event/dependency_solving_not_just_sat/)
 - 2020: [Build for your microarchitecture: experiences with Spack and archspec](https://archive.fosdem.org/2020/schedule/event/archspec/)

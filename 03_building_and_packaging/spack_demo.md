@@ -166,7 +166,7 @@
   spack find
   ```
 
-- Load installed package, run code and unload
+- Load installed package, run, and unload
 
   ```bash
   spack load helloworld
@@ -174,7 +174,7 @@
   spack unload helloworld
   ```
 
-- Install different version of code
+- Install different version
 
   ```bash
   spack install helloworld@0.2.0
@@ -190,7 +190,7 @@
 
   or open `package.py` file in `${HOME}/var/spack/repos/builtin/packages/helloworld/`
 
-- **Optional**: one could add `main` branch and thus GitHub repository
+- Add the `main` branch as a version
 
   ```diff
   + git      = "https://github.com/Simulation-Software-Engineering/HelloWorld.git"
@@ -198,7 +198,7 @@
   + version("main", branch="main")
   ```
 
-  This can also be used for `develop` branches etc. It is useful if one needs really the newest version of a package or if one develops software using Spack.
+  This can also be used for `develop` branches etc. It is useful if the development state is required, or if one develops software using Spack.
 
 - Add artificial dependencies
 
@@ -207,17 +207,17 @@
   + depends_on("zlib@:1.2")
   ```
 
-  This means that the package depends on Python `3.0.0` or newer and newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
+  This states that the package depends on Python version `3.0.0` or newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
 
-    - Show new dependencies
+- Show new dependencies
 
-    ```bash
-    spack spec helloworld
-    spack spec helloworld@0.2.0
-    spack info helloworld
-    ```
+  ```bash
+  spack spec helloworld
+  spack spec helloworld@0.2.0
+  spack info helloworld
+  ```
 
-    The Python dependency will only show up for the newest version of our software package.
+  The Python dependency will only show up for version `0.3.0`.
 
 - Add an artificial variant
 

@@ -4,7 +4,7 @@
 - Preparation should not take longer than 15 mins, should be a demo.
 - Lecturers also prepare some.
 
-## Tricks from Winter Team 2025/26
+## Tricks from Winter Term 2025/26
 
 - Click on line number on GitHub and then `blame` to study history of file
 - GitHub uses [gitignore templates](https://github.com/github/gitignore) if you create a `.gitignore` file from GitHub
@@ -18,6 +18,22 @@
 - If you rebased/merged and messed up your history, use `git reflog` to go back to a previous state
 - If you only need one file from another commit or branch, use `git checkout <branch_or_sha> -- <path>`
 - Use [Git LFS](https://git-lfs.com/) for big files >10 MB or for non-diffable binaries (e.g., images, media, archives, shared libraries).
+- Use `git switch -c <branch-name>` to create a new branch and immediately check it out!
+- Don't get stuck thinking that branches are only used as feature branches or issue branches! You can always create a short-lived temporary branch for something small, like shelving an experimental change.
+- If a temporary branch is still too much overhead for you, you can instantly stash your local changes with `git stash`. Restore your stashed changes later with `git stash pop`.
+- Prefer `git add -p` over `git add [FILE]`. This allows you to specify what you want to add to a commit in a more fine-grained manner
+- A very nice alias for editing any earlier commit, without having to manually rebase:
+
+    ```
+    [alias]
+        amend = "!f() { \
+            COMMIT=$(git rev-parse --short \"$1\") && \
+            git commit --fixup \"$COMMIT\" && \
+            GIT_SEQUENCE_EDITOR=true git rebase --autosquash --autostash --interactive "$COMMIT^"; \
+        }; f"
+    ```
+
+    Usage: e.g. `git add -p ...` and then `git amend HEAD~5`. This would add the staged changes to the fifth last commit.
 
 ## Tricks from Winter Term 2024/25
 

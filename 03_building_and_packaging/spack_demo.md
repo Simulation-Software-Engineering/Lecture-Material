@@ -1,18 +1,16 @@
-# Packaging for High-Performance Computing (Notes)
+# Packaging for High-Performance Computing Demo Notes
 
-**Note**: It is recommended to try out Spack in a fresh Docker container. To understand how Spack itself is installed, follow Step 1 in a fresh Ubuntu container. To make things simpler from Step 2 onwards, create a container from the [spack/ubuntu-jammy](https://hub.docker.com/r/spack/ubuntu-jammy) image, so that Spack is preinstalled.
+**Note**: It is recommended to try out Spack in a fresh Docker container. To understand how Spack itself is installed, follow Step 1 in a fresh Ubuntu Noble container (`docker run --rm -it ubuntu:noble`). To make things simpler from Step 2 onwards, create a container from the [spack/ubuntu-noble](https://hub.docker.com/r/spack/ubuntu-noble) image, so that Spack is preinstalled.
 
 ## 1. Spack Setup/Installation
 
-- Git repository of Python scripts
+- This demo (and Spack) needs Python, Git, a C/C++ compiler, patch, make, tar, and a few more tools. Basically `build-essential`, `git`, and `python` on Ubuntu Noble.
+
+- Get the Spack repository
 
   ```bash
-  git clone -b v0.23.0 -c feature.manyFiles=true --depth=2 https://github.com/spack/spack.git
+  git clone -b v1.1.0 --depth=2 https://github.com/spack/spack.git
   ```
-
-    - `v0.23.0` is currently the latest major release
-
-- **Note:** Install `curl`, `libcurl4-openssl-dev`, and `vim` to ensure that Spack v0.23.0 works in a fresh Ubuntu Jammy container.
 
 - Initializing Spack with
 
@@ -20,9 +18,7 @@
   . <spack_prefix>/share/spack/setup-env.sh
   ```
 
-  will set `SPACK_ROOT` and also add `spack` to `PATH`.
-
-  Note that the  `.` operator will run the commands in the supplied script as if we would type the commands supplied by the script in the shell ourselves. In bash the `.` operator is equivalent to `source`. However, `source` is not specified in POSIX and thus using `.` is likely to work on more platforms.
+  will set `SPACK_ROOT` and also add `spack` to `PATH`. Note that the  `.` operator will run the commands in the supplied script as if we would type the commands supplied by the script in the shell ourselves. In bash the `.` operator is equivalent to `source`. However, `source` is not specified in POSIX and thus using `.` is likely to work on more platforms.
 
 - Finish Spack setup
 
@@ -40,7 +36,7 @@
 
   prints the list of compilers that Spack has added.
 
-- Find external packages (optional)
+- Find external packages
 
   ```bash
   spack external find
@@ -48,17 +44,15 @@
 
   This command tries to find preinstalled software packages which are also in Spack's package database. This way we do not have to recompile everything from scratch.
 
-  **Note** `spack external find` is an experimental feature and might fail. System packages [can be defined manually](https://spack.readthedocs.io/en/latest/getting_started.html#system-packages).
+  Found packages (including version, configuration etc.) are stored in `~/.spack/packages.yaml`. There one can add further packages manually. Look at contents of this file.
 
-    - Found packages (including version, configuration etc.) are stored in `~/.spack/packages.yaml`. There one can add further packages manually. **Note**: Maybe show content of this file.
-
-- Concretize a spec to trigger bootstrap process (optional)
+- Concretize a spec to trigger bootstrap process
 
   ```bash
   spack spec zlib
   ```
 
-  This will try to concretize the package and its dependencies. `clingo`, Spack's concretizer, is needed for this. If one calls this command the very first time, a bootstrapping process is triggered that installs `clingo`.
+  This will try to concretize the package and its dependencies. `clingo`, Spack's concretizer, is needed for this. Running `spack spec` for the first time triggers a bootstrapping process that installs `clingo`.
 
 ## 2. Package Installation/Management with Spack
 
@@ -68,15 +62,7 @@
   spack info zlib
   ```
 
-- Install a simple example package
-
-  ```bash
-  spack spec zlib
-  ```
-
-  This will trigger the bootstrap process of Spack. It installs `clingo`, the dependency resolver, if not done before.
-
-- Install `zlib`
+- Install the package
 
   ```bash
   spack install --reuse zlib
@@ -102,7 +88,7 @@
 
   Spack will fetch the archive and try to deduce some basic settings. It will also check for other releases and asks whether to add checksums. We want all checksums.
 
-- Afterwards Spack drops us in the boilerplate package.
+- Spack immediately drops you in a boilerplate package file.
 
   ```Python
   class Helloworld(CMakePackage):
@@ -133,16 +119,16 @@
 
   At least the `FIXME` statements should be fixed before releasing the package. The Spack package recipe is written in Python so we can also do common Python magic here.
 
-- Spack has deduced a good number of information already.
+- Spack has deduced a good amount of information already.
     - We work with CMake
     - There are 3 releases of the software
-    - The URL to download packages
-    - The name of the Package we work with `class Helloworld`. This is also the name of the software now within Spack.
+    - The URL to download the package
+    - The name of the package we work with `class Helloworld`. This is also the name of the software now within Spack.
 - We want to fix/extend the package with some standard information
     - Package description
     - Set URL to SSE homepage
-    - Add our GitHub username as maintainer
-    - Remove the `cmake_args` part as we only have a standard CMake arguments. Here we could give extra/special arguments specific to the software package.
+    - Add GitHub username as maintainer
+    - Remove the `cmake_args` part as there are only standard CMake arguments.
 
 - Concretize the package
 
@@ -158,7 +144,7 @@
     ^cmake@3.16.3%gcc@9.3.0~doc+ncurses+openssl+ownlibs~qt build_type=Release patches=1c540040c7e203dd8e27aa20345ecb07fe06570d56410a24a266ae570b1c4c39,bf695e3febb222da2ed94b3beea600650e4318975da90e4a71d6f31a6d5d8c3d arch=linux-ubuntu20.04-skylake
   ```
 
-  We see that `cmake` is an implicit dependency as we need it for building our package.
+  `cmake` is an implicit dependency as we need it for building our package.
 
 - If the same Docker container as in step 2 is used, make sure to uninstall `zlib` before installing `helloworld`.
 
@@ -180,7 +166,7 @@
   spack find
   ```
 
-- Load installed package, run code and unload
+- Load installed package, run, and unload
 
   ```bash
   spack load helloworld
@@ -188,7 +174,7 @@
   spack unload helloworld
   ```
 
-- Install different version of code
+- Install different version
 
   ```bash
   spack install helloworld@0.2.0
@@ -204,15 +190,15 @@
 
   or open `package.py` file in `${HOME}/var/spack/repos/builtin/packages/helloworld/`
 
-- **Optional**: one could add `main` branch and thus GitHub repository
+- Add the `main` branch as a version
 
   ```diff
-  + git      = "https://github.com/Simulation-Software-Engineering/HelloWorld.git"
+  + git = "https://github.com/Simulation-Software-Engineering/HelloWorld.git"
   +
   + version("main", branch="main")
   ```
 
-  This can also be used for `develop` branches etc. It is useful if one needs really the newest version of a package or if one develops software using Spack.
+  This can also be used for `develop` branches etc. It is useful if the development state is required, or if one develops software using Spack.
 
 - Add artificial dependencies
 
@@ -221,17 +207,17 @@
   + depends_on("zlib@:1.2")
   ```
 
-  This means that the package depends on Python `3.0.0` or newer and newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
+  This states that the package depends on Python version `3.0.0` or newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
 
-    - Show new dependencies
+- Show new dependencies
 
-    ```bash
-    spack spec helloworld
-    spack spec helloworld@0.2.0
-    spack info helloworld
-    ```
+  ```bash
+  spack spec helloworld
+  spack spec helloworld@0.2.0
+  spack info helloworld
+  ```
 
-    The Python dependency will only show up for the newest version of our software package.
+  The Python dependency will only show up for version `0.3.0`.
 
 - Add an artificial variant
 
@@ -247,28 +233,26 @@
   spack info helloworld
   ```
 
-  where Python now shows up as variant with its description. We can deactivate Python by specifying
+  where Python now shows up as variant with its description. Python dependency is removed by doing
 
   ```bash
   spack info helloworld -python
   ```
 
-  `~` can be (often) used instead of `-`. There are [examples in the documentation](https://spack.readthedocs.io/en/latest/basic_usage.html#variants).
-
 ## Further material
 
 ### References
 
-- [EasyBuild](https://github.com/easybuilders/easybuild)
-- [EasyConfigs](https://github.com/easybuilders/easybuild-easyconfigs)
 - [Spack](https://spack.io/)
 - [Spack docs](https://spack.readthedocs.io/en/latest/)
 - [Spack 101 tutorials](https://spack-tutorial.readthedocs.io/en/latest/)
+- [EasyBuild](https://github.com/easybuilders/easybuild)
+- [EasyConfigs](https://github.com/easybuilders/easybuild-easyconfigs)
 - [archspec project](https://github.com/archspec/)
 
-### Talks
+### Interesting Talks On This Topic
 
-Talks at FOSDEM
+FOSDEM talks:
 
 - 2020: [Spack's new Concretizer](https://archive.fosdem.org/2020/schedule/event/dependency_solving_not_just_sat/)
 - 2020: [Build for your microarchitecture: experiences with Spack and archspec](https://archive.fosdem.org/2020/schedule/event/archspec/)

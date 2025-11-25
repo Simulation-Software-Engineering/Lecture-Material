@@ -64,3 +64,11 @@
 ## 6.2 – Wed, November 19, 2025
 
 - **90** min.: [Exercise: Let's Fight With CMake, Docker, and Some Dependencies](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cmake_exercise.md)
+
+## 7.1 – Wed, November 26, 2025
+
+- **90** min.: Packaging for High-Performance Computing: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_demo.md)
+
+## 7.2 – Wed, November 26, 2025
+
+- **90** min.: [Exercise: Packaging with Spack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_exercise.md)

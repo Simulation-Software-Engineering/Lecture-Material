@@ -1,4 +1,4 @@
-# Packaging for High-Performance Computing (Notes)
+# Packaging for High-Performance Computing Demo Notes
 
 **Note**: It is recommended to try out Spack in a fresh Docker container. To understand how Spack itself is installed, follow Step 1 in a fresh Ubuntu Noble container (`docker run --rm -it ubuntu:noble`). To make things simpler from Step 2 onwards, create a container from the [spack/ubuntu-noble](https://hub.docker.com/r/spack/ubuntu-noble) image, so that Spack is preinstalled.
 
@@ -122,13 +122,13 @@
 - Spack has deduced a good amount of information already.
     - We work with CMake
     - There are 3 releases of the software
-    - The URL to download packages
-    - The name of the Package we work with `class Helloworld`. This is also the name of the software now within Spack.
+    - The URL to download the package
+    - The name of the package we work with `class Helloworld`. This is also the name of the software now within Spack.
 - We want to fix/extend the package with some standard information
     - Package description
     - Set URL to SSE homepage
-    - Add our GitHub username as maintainer
-    - Remove the `cmake_args` part as we only have a standard CMake arguments. Here we could give extra/special arguments specific to the software package.
+    - Add GitHub username as maintainer
+    - Remove the `cmake_args` part as there are only standard CMake arguments.
 
 - Concretize the package
 
@@ -144,7 +144,7 @@
     ^cmake@3.16.3%gcc@9.3.0~doc+ncurses+openssl+ownlibs~qt build_type=Release patches=1c540040c7e203dd8e27aa20345ecb07fe06570d56410a24a266ae570b1c4c39,bf695e3febb222da2ed94b3beea600650e4318975da90e4a71d6f31a6d5d8c3d arch=linux-ubuntu20.04-skylake
   ```
 
-  We see that `cmake` is an implicit dependency as we need it for building our package.
+  `cmake` is an implicit dependency as we need it for building our package.
 
 - If the same Docker container as in step 2 is used, make sure to uninstall `zlib` before installing `helloworld`.
 
@@ -193,7 +193,7 @@
 - Add the `main` branch as a version
 
   ```diff
-  + git      = "https://github.com/Simulation-Software-Engineering/HelloWorld.git"
+  + git = "https://github.com/Simulation-Software-Engineering/HelloWorld.git"
   +
   + version("main", branch="main")
   ```
@@ -233,13 +233,11 @@
   spack info helloworld
   ```
 
-  where Python now shows up as variant with its description. We can deactivate Python by specifying
+  where Python now shows up as variant with its description. Python dependency is removed by doing
 
   ```bash
   spack info helloworld -python
   ```
-
-  `~` can be (often) used instead of `-`. There are [examples in the documentation](https://spack.readthedocs.io/en/latest/basic_usage.html#variants).
 
 ## Further material
 

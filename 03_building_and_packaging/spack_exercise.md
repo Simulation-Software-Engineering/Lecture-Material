@@ -1,10 +1,10 @@
 # Packages with Spack
 
-This exercise is about packaging code with Spack. We work with a simplified version of the code from the previous week's exercise and create packages for it.
+This exercise is about packaging code with Spack. We work with a simplified version of the code from the previous week's exercise and create a Spack package of it.
 
-At the end of the exercise you find a section with hints and remarks. Make sure to check this section.
+**Note**: At the end of the exercise you find a section with hints and remarks. Make sure to check this section.
 
-Deadline: **Wednesday, December 4th, 2024, 09:00**
+Deadline: **Wednesday, December 3rd, 2025, 09:00**
 
 ## Creation of a Spack Package
 
@@ -20,7 +20,7 @@ The [code repository](https://github.com/Simulation-Software-Engineering/spack-e
 
 **Note**: We require `yaml-cpp` in version `0.7.0`. This package will be automatically installed via Spack if you specify the dependency correctly in you package. You should **not** install `yaml-cpp` manually in this exercise.
 
-Create a Spack package for all releases of the given code and make sure that the dependencies are specified appropriately. Make sure you also add yourself as maintainer to your package. Your final package should not contain any `FIXME` parts.
+Create a Spack package for all releases of the given code and make sure that the dependencies are specified appropriately. Make sure you also add yourself as maintainer to your package. Your packaging file should not contain any `FIXME` parts.
 
 ### Development/Packaging Environment
 

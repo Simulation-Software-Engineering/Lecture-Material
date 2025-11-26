@@ -41,7 +41,7 @@ Please do all the development inside a Docker container. The Docker container is
 
   **Note 1**: When specifying the URL to the software, you need to use the URL of the original repository name [`spack-exercise`](https://github.com/Simulation-Software-Engineering/spack-exercise). Sometimes the versions are not correctly detected from the original repository name. In case this happens, use the URL of one version, for example [v0.1.0](https://github.com/Simulation-Software-Engineering/spack-exercise/releases/tag/v0.1.0) of the original repository. Spack will then detect the respective version. To add more versions, change the URL accordingly. Packaging the code from your fork will fail because the releases are forked only partially. In your fork the archives, i.e., the `zip` and `tar.gz` files, will be missing.
 
-  **Note 2**: Spack will open the created package file automatically in an editor. If you want to use a different editor or want to edit the package later, you can find the package file in `${HOME}/spack/var/spack/repos/builtin/packages/spack-exercise/package.py` (inside the container).
+  **Note 2**: Spack will open the created package file automatically in an editor. If you want to use a different editor or want to edit the package later, you can find the package file in `${HOME}/.spack/package_repos/fncqgg4/repos/spack_repo/builtin/packages/spack_exercise$` (inside the container).
 
     - Verify that the class name of the package is `SpackExercise`.
     - Verify that all three releases are listed.

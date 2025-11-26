@@ -1,6 +1,8 @@
 # Packaging for High-Performance Computing Demo Notes
 
-**Note**: It is recommended to try out Spack in a fresh Docker container. To understand how Spack itself is installed, follow Step 1 in a fresh Ubuntu Noble container (`docker run --rm -it ubuntu:noble`). To make things simpler from Step 2 onwards, create a container from the [spack/ubuntu-noble](https://hub.docker.com/r/spack/ubuntu-noble) image, so that Spack is preinstalled.
+It is recommended to do this demo in a fresh Docker container. To understand how Spack itself is installed, follow Step 1 in a fresh Ubuntu Noble container (`docker run --rm -it ubuntu:noble`).
+
+To make things simpler from Step 2 onwards, create a container from the [spack/ubuntu-noble](https://hub.docker.com/r/spack/ubuntu-noble) image, so that Spack is preinstalled. Install a text editor (for e.g. vim) before running a Spack command.
 
 ## 1. Spack Setup/Installation
 
@@ -133,15 +135,7 @@
 - Concretize the package
 
   ```bash
-  $ spack spec helloworld
-  Input spec
-  --------------------------------
-  helloworld
-
-  Concretized
-  --------------------------------
-  helloworld@0.3.0%gcc@9.3.0~ipo build_type=RelWithDebInfo arch=linux-ubuntu20.04-skylake
-    ^cmake@3.16.3%gcc@9.3.0~doc+ncurses+openssl+ownlibs~qt build_type=Release patches=1c540040c7e203dd8e27aa20345ecb07fe06570d56410a24a266ae570b1c4c39,bf695e3febb222da2ed94b3beea600650e4318975da90e4a71d6f31a6d5d8c3d arch=linux-ubuntu20.04-skylake
+  spack spec helloworld
   ```
 
   `cmake` is an implicit dependency as we need it for building our package.
@@ -188,7 +182,7 @@
   spack edit helloworld
   ```
 
-  or open `package.py` file in `${HOME}/var/spack/repos/builtin/packages/helloworld/`
+  or open `package.py` file in `.spack/package_repos/fncqgg4/repos/spack_repo/builtin/packages/helloworld/package.py`
 
 - Add the `main` branch as a version
 

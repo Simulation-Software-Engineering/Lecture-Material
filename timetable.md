@@ -49,7 +49,7 @@
 ## 5.1 – Wed, November 12, 2025
 
 - **15** min.: [Introduction to Packaging](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/intro_slides.md)
-- **75** min.: Packaging a Python Code: [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_demo.md), [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_slides.md)
+- **75** min.: Packaging a Python Code: [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pip_demo.md), [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_slides.md)
 
 ## 5.2 – Wed, November 12, 2025
 

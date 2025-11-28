@@ -350,7 +350,7 @@ slideOptions:
 - Popular package managers for HPC.
     - [Spack](https://spack.io/)
         - ... originates from LLNL in the US.
-        - .. is built around concretizer.
+        - ... is built around concretizer.
     - [EasyBuild](https://github.com/easybuilders/easybuild)
         - ... originates from Ghent University in Belgium.
 - Both suitable for users, admins, researchers.

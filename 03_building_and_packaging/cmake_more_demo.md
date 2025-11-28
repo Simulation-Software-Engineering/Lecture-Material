@@ -18,7 +18,7 @@
 
 - There are many tools around CMake, `ccmake` is also developed by KitWare
 - Separate package on Ubuntu: `sudo apt-get install cmake-curses-gui`
-  - If necessary, use Docker recipe in [`03_building_and_packaging/examples/ccmake`](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/03_building_and_packaging/examples/ccmake).
+    - If necessary, use Docker recipe in [`03_building_and_packaging/examples/ccmake`](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/03_building_and_packaging/examples/ccmake).
 - Delete previous build folder and start from scratch
 - `ccmake ..`
 - `[c]` if not yet configured before

@@ -70,7 +70,7 @@ To make things simpler from Step 2 onwards, create a container from the [spack/u
   spack install --reuse zlib
   ```
 
-  This installs the package `zlib` by downloading and compiling it. `--reuse` tells spack to reuse already existing packages if possible
+  This installs the package `zlib` by downloading and compiling it. `--reuse` tells spack to reuse already existing packages if possible.
 
 - List installed packages
 
@@ -90,7 +90,7 @@ To make things simpler from Step 2 onwards, create a container from the [spack/u
 
   Spack will fetch the archive and try to deduce some basic settings. It will also check for other releases and asks whether to add checksums. We want all checksums.
 
-- Spack immediately drops you in a boilerplate package file.
+- Spack immediately drops you in a boilerplate package file
 
   ```Python
   class Helloworld(CMakePackage):
@@ -126,7 +126,7 @@ To make things simpler from Step 2 onwards, create a container from the [spack/u
     - There are 3 releases of the software
     - The URL to download the package
     - The name of the package we work with `class Helloworld`. This is also the name of the software now within Spack.
-- We want to fix/extend the package with some standard information
+- We want to fix/extend the package with some standard information.
     - Package description
     - Set URL to SSE homepage
     - Add GitHub username as maintainer
@@ -174,7 +174,7 @@ To make things simpler from Step 2 onwards, create a container from the [spack/u
   spack install helloworld@0.2.0
   ```
 
-  This will concretize (internally, i.e. no output on terminal) and then build the software.
+  This will concretize (internally, i.e., no output on terminal) and then build the software.
 
 - If one wants to edit the package later, there are two options
 
@@ -182,7 +182,7 @@ To make things simpler from Step 2 onwards, create a container from the [spack/u
   spack edit helloworld
   ```
 
-  or open `package.py` file in `.spack/package_repos/fncqgg4/repos/spack_repo/builtin/packages/helloworld/package.py`
+  or open `package.py` file in `.spack/package_repos/fncqgg4/repos/spack_repo/builtin/packages/helloworld/package.py`.
 
 - Add the `main` branch as a version
 

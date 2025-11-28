@@ -8,7 +8,7 @@
     - `tree cmake`
     - If software should be usable (for everybody everywhere), building and packaging is a project by itself
 - In `modules`: some `FindX.cmake`, partially third-party, partially developed by preCICE devs
-- In `CMakeLists.txt`: `sources.cmake` included (around line 510)
+- In `CMakeLists.txt`: `sources.cmake` included (around line 553)
     - No glob, but generated externally (some python script)
     - Look at `src/sources.cmake`
 - Look at `CPackConfig.cmake`
@@ -18,6 +18,7 @@
 
 - There are many tools around CMake, `ccmake` is also developed by KitWare
 - Separate package on Ubuntu: `sudo apt-get install cmake-curses-gui`
+  - If necessary, use Docker recipe in [`03_building_and_packaging/examples/ccmake`](https://github.com/Simulation-Software-Engineering/Lecture-Material/tree/main/03_building_and_packaging/examples/ccmake).
 - Delete previous build folder and start from scratch
 - `ccmake ..`
 - `[c]` if not yet configured before

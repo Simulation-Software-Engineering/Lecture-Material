@@ -96,7 +96,7 @@ Example code is in [`03_building_and_packaging/examples/cpack`](https://github.c
 - `cmake -DBUILD_SHARED_LIBS=ON -DCMAKE_BUILD_TYPE=Release ..` and `cpack -G DEB` ... no complaints
 - Different package name: `helloworld_0.1.0_amd64.deb`
 - Install the package: `apt install ./helloworld_0.1.0_amd64.deb`
-- `helloworld` and `which helloworld`: now `/usr`, not `/usr/local`, since we use package manager.
+- `helloworld` and `which helloworld`: we just installed one in `/usr`, not in `/usr/local`, since we used package manager (but the old one could still be called first).
 
 ## Check Debian Package
 

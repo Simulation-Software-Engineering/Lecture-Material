@@ -48,7 +48,7 @@ Please do all the development inside a Docker container. The Docker container is
     - Go through the `FIXME` sections and fill them in accordingly, but leave out the `depends_on` part for the moment.
         - Add the course homepage `https://simulation-software-engineering.github.io/homepage/` as homepage.
         - Add your *GitHub* username as maintainer.
-        - You do not have to specify  additional arguments to `CMake` such that the `cmake_args` function can be removed.
+        - You do not have to specify additional arguments to `CMake` such that the `cmake_args` function can be removed.
     - Check the output of `spack info spack-exercise` and make sure that it makes sense.
     - You already should be able to build/install the `0.1.0` version of our package with
 

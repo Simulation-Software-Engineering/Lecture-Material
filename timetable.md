@@ -72,3 +72,13 @@
 ## 7.2 – Wed, November 26, 2025
 
 - **90** min.: [Exercise: Packaging with Spack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_exercise.md)
+
+## 8.1 – Wed, December 3, 2025
+
+- **5** min.: Organizational remarks: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/organizational_remarks_week8_slides.md)
+- **65** min.: Installation and Packaging with CMake and CPack: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_demo.md)
+- **20** min.: More CMake Demo (preCICE and ccmake): [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cmake_more_demo.md)
+
+## 8.2 – Wed, December 3, 2025
+
+- **90** min.: [Exercise: Packaging with CPack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_exercise.md)

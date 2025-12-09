@@ -89,4 +89,4 @@
 
 ## 9.2 - Wed, December 10, 2025
 
-- **90** min.: [Exercise: Reviewing with AI tools](https://github.com/Simulation-Software-Engineering/reviewing-exercise)
+- **90** min.: [Exercise: Reviewing with AI tools](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/reviewing_exercise.md)

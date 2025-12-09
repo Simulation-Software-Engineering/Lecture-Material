@@ -97,9 +97,9 @@ Bangerth and Heister, 2013: [What makes computational open source software libra
 
 - ... is a job profile between technical know-how (computer science, engineering, ...) and language.
 - ... can be a role in a software development team (*"documentation"*).
-- There is a whole community, e.g. [Write the Docs](https://www.writethedocs.org/).
 
-Much content of this lecture is taken from [Write the Docs](https://www.writethedocs.org/).
+Much content of this lecture is taken from [Write the Docs](https://www.writethedocs.org/),
+a community of technical writers.
 
 ---
 
@@ -170,7 +170,7 @@ From [py-RSE](https://third-bit.com/py-rse/documentation.html):
     - Good example: [deal.ii tutorials](https://dealii.org/developer/doxygen/deal.II/Tutorial.html)).
 - A **competent practitioner** knows enough to accomplish routine tasks with routine effort. -> Needs **reference guides, cookbooks, and Q&A sites**.
     - Good example: [preCICE config reference](https://precice.org/configuration-xml-reference.html)).
-- An **expert** need this material as well – nobody's memory is perfect.
+- An **expert** needs this material as well – nobody's memory is perfect.
 
 ---
 

@@ -82,3 +82,11 @@
 ## 8.2 – Wed, December 3, 2025
 
 - **90** min.: [Exercise: Packaging with CPack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/cpack_exercise.md)
+
+## 9.1 - Wed, December 10, 2025
+
+- **90** min.: Technical Writing: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/technical_writing_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/technical_writing_demo.md)
+
+## 9.2 - Wed, December 10, 2025
+
+- **90** min.: [Exercise: Reviewing with AI tools](https://github.com/Simulation-Software-Engineering/reviewing-exercise)

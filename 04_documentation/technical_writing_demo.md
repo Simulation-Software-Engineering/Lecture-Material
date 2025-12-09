@@ -19,7 +19,7 @@ Example code is in [`04_documentation/examples/technical_writing`](https://githu
 
     ```python
     """2D diffusion equation solved with finite differences
-    
+
     See `main()` for example usage
     """
     ```
@@ -51,7 +51,7 @@ Example code is in [`04_documentation/examples/technical_writing`](https://githu
 
     ```python
     """Initializes physical parameters and computes time step size
-    
+
     You need to call `initialize_domain` before this method.
     """
     ```

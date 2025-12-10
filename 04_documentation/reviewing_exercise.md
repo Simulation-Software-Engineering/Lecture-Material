@@ -34,11 +34,11 @@ Now that we have set some guidelines, let's see the strengths in action:
 
 1. Login to the [Responsible AI](https://rai.uni-stuttgart.de) provided by the University of Stuttgart.
    - Due to a bug (as of December 2025), start by saying "Hi" before proceeding with actual prompts. Apparently, bots also have psychological needs. :)
-3. In your own words, ask the tool to generate code for solving a heat equation, in a programming language you understand (e.g., Python).
+2. In your own words, ask the tool to generate code for solving a heat equation, in a programming language you understand (e.g., Python).
    Ask it to take parameters from a configuration file and write results to an output file.
    Ask for some documentation, tests, or anything else you would like to see in such a code.
-4. Create a repository on GitHub (under your namespace) and initialize it with a `README.md` file.
-5. Add the files that RAI created to the repository, in a branch called `feature`. In your commit message, clearly disclose the tool. For example:
+3. Create a repository on GitHub (under your namespace) and initialize it with a `README.md` file.
+4. Add the files that RAI created to the repository, in a branch called `feature`. In your commit message, clearly disclose the tool. For example:
 
    ```text
     I acknowledge the use of RAI (https://rai.uni-stuttgart.de/) to implement the entirety of this code.
@@ -50,7 +50,7 @@ Now that we have set some guidelines, let's see the strengths in action:
 
    The more details you add, the better.
 
-6. Open a merge request from the branch `feature` to the `main` branch.
+5. Open a merge request from the branch `feature` to the `main` branch.
 
 ## Review the code
 

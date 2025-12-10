@@ -19,6 +19,8 @@ More specifically, you will:
 
 In the end, you will need to open an issue in the [exercise repository](https://github.com/Simulation-Software-Engineering/reviewing-exercise) with name `[username] Reviewing exercise submission`.
 
+**Update, Dec 10:** GitHub copilot is available as part of GitHub Pro, which you can get access to as a student via [GitHub Education](https://github.com/education/students). After verification, according to GitHub, it might take up to 72h for the features to be available. If for any reason you cannot or do not want sign up for it, you can try any other code reviewing tool you might have available (e.g., Copilot in VSCode). For the grading, we do not need to see the output of the tool, but only your comments on your experience with it. If you have no access to AI reviewing tools, declare that and put more emphasis on the comparison with your challenge project.
+
 ## Generate code
 
 Generating code can be very useful to kick-start a project or to fill rather clear code parts (such as basic tests or documentation).
@@ -31,11 +33,12 @@ You remain in control and responsible for your projects.
 Now that we have set some guidelines, let's see the strengths in action:
 
 1. Login to the [Responsible AI](https://rai.uni-stuttgart.de) provided by the University of Stuttgart.
-2. In your own words, ask the tool to generate code for solving a heat equation, in a programming language you understand (e.g., Python).
+   - Due to a bug (as of December 2025), start by saying "Hi" before proceeding with actual prompts. Apparently, bots also have psychological needs. :)
+3. In your own words, ask the tool to generate code for solving a heat equation, in a programming language you understand (e.g., Python).
    Ask it to take parameters from a configuration file and write results to an output file.
    Ask for some documentation, tests, or anything else you would like to see in such a code.
-3. Create a repository on GitHub (under your namespace) and initialize it with a `README.md` file.
-4. Add the files that RAI created to the repository, in a branch called `feature`. In your commit message, clearly disclose the tool. For example:
+4. Create a repository on GitHub (under your namespace) and initialize it with a `README.md` file.
+5. Add the files that RAI created to the repository, in a branch called `feature`. In your commit message, clearly disclose the tool. For example:
 
    ```text
     I acknowledge the use of RAI (https://rai.uni-stuttgart.de/) to implement the entirety of this code.
@@ -47,7 +50,7 @@ Now that we have set some guidelines, let's see the strengths in action:
 
    The more details you add, the better.
 
-5. Open a merge request from the branch `feature` to the `main` branch.
+6. Open a merge request from the branch `feature` to the `main` branch.
 
 ## Review the code
 

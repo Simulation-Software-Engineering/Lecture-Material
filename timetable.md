@@ -90,3 +90,11 @@
 ## 9.2 - Wed, December 10, 2025
 
 - **90** min.: [Exercise: Reviewing with AI tools](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/reviewing_exercise.md)
+
+## 10.1 – Wed, December 17, 2025
+
+- The Challenge, step two, presentations
+
+## 10.2 – Wed, December 17, 2025
+
+- The Challenge, step two, presentations

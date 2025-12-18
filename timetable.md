@@ -93,6 +93,7 @@
 
 ## 10.1 – Wed, December 17, 2025
 
+- [Day of Research Software at the Uni Stuttgart, March 2, 2026](https://www.iws.uni-stuttgart.de/en/lh2/conferences-seminars-workshops/research-software-day/)
 - The Challenge, step two, presentations
 
 ## 10.2 – Wed, December 17, 2025

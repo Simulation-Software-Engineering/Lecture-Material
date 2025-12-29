@@ -99,3 +99,16 @@
 ## 10.2 – Wed, December 17, 2025
 
 - The Challenge, step two, presentations
+
+## 11.1 – Wed, January 7, 2026
+
+- **25** min.: Markup Languages: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/markup_languages_slides.md)
+- **20** min.: Pandoc: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/pandoc_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/pandoc_demo.md)
+- **35** min.: Documentation Website Generators: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/website_generators_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/website_generators_demo.md)
+
+## 11.2 – Wed, January 7, 2026
+
+- **20** min.: [Floss Licenses](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/floss_licenses_slides.md)
+- **20** min.: [Versioning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/versioning_slides.md)
+- **20** min.: [Repository Layouts](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/repository_layouts_slides.md)
+- **20** min.: [DOI, Zenodo, DaRUS](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/doi_zenodo_darus_slides.md)

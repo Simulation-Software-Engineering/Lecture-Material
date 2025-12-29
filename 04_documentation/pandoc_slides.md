@@ -186,3 +186,9 @@ pandoc --pdf-engine=xelatex -V geometry:a4paper \
        -V colorlinks:true -V linkcolor:blue -V fontsize=10pt \
        --listings -s --output=OUTPUTFILENAME INPUTFILENAME
 ```
+
+---
+
+## Pandoc and Generative AI
+
+> In the age of Large Language Models (LLMs), is Pandoc still relevant?

@@ -2,87 +2,91 @@
 Tests for mathematical operations functions.
 """
 
-from operations import find_max, find_mean
+from operations import MathOperations
 import pytest
 import csv
 
 
+@pytest.fixture
+def math_operations():
+    """
+    Fixture for MathOperations class
+    """
+    data = [43, 32, 167, 18, 1, 209, 17]
+    return MathOperations(data)
+
 # Unit test
-def test_find_max():
+def test_find_max(math_operations):
     """
     Test operations.find_max 
     """
-    # Fixture
-    data = [43, 32, 167, 18, 1, 209]
-
     # Expected result
     expected_max = 209
 
     # Actual result
-    actual_max = find_max(data)
+    actual_max = math_operations.find_max()
 
     # Test
     assert actual_max == expected_max
 
+# Unit test
+def test_reorder_data(math_operations):
+    """
+    Test operations.reorder_data
+    """
+    # Expected result
+    expected_data = [1, 17, 18, 32, 43, 167, 209]
+
+    # Actual result
+    math_operations.reorder_data()
+    actual_data = math_operations._data
+
+    # Test
+    assert actual_data == expected_data
 
 # Unit test
-def test_find_mean():
+def test_find_mean(math_operations):
     """
     Test operations.find_mean
     """
-    # Fixture
-    data = [43, 32, 167, 18, 1, 209]
-    
     # Expected result
-    expected_mean = 78.33
-    # expected_mean = pytest.approx(78.33, abs=0.01)
-    
+    expected_mean = 69.57
+
     # Actual result
-    actual_mean = find_mean(data)
-    
+    actual_mean = math_operations.find_mean()
+
     # Test
     assert actual_mean == expected_mean
 
-
 # Integration test
-def test_mean_of_max():
+def test_find_median(math_operations):
     """
-    Test operations.find_max and operations.find_mean
-    """
-    # Fixture
-    data1 = [43, 32, 167, 18, 1, 209]
-    data2 = [3, 13, 33, 23, 498]
-
+    Test operations.find_median
+    """   
     # Expected result
-    expected_mean_of_max = 353.5
-
-    maximum1 = find_max(data1)
-    maximum2 = find_max(data2)
-
+    expected_median = 32
+    
     # Actual result
-    actual_mean_of_max = find_mean([maximum1, maximum2])
+    actual_median = math_operations.find_median()
     
     # Test
-    assert actual_mean_of_max == expected_mean_of_max
+    assert actual_median == expected_median
 
 
 # Regression test
-def test_regression_mean():
+def test_reg_reorder_data(math_operations):
     """
-    Test operations.find_mean on a previously generated dataset
+    Test operations.reorder_data with data from CSV file
     """
-    with open("mean_data.csv") as f:
+    with open("reordered_data.csv") as f:
         rows = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
-        # Fixture
-        data = next(rows)
-
-        # Expected result
-        reference_mean = next(rows)
+    
+        for row in rows:
+            expected_reordered_data = row
 
     # Actual result
-    actual_mean = find_mean(data)
-    
-    expected_mean = pytest.approx(reference_mean[0], abs=0.01)
-    
+    math_operations.reorder_data()
+    actual_reordered_data = math_operations._data
+
     # Test
-    assert actual_mean == expected_mean
+    assert actual_reordered_data == expected_reordered_data

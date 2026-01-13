@@ -29,12 +29,12 @@ slideOptions:
 
 ## pytest
 
-- Library to write and manage tests.
-- Command-line tool also called `pytest`.
-- Install using pip: `pip install -U pytest`.
+- Package to write and manage tests.
+- Includes command-line interface called `pytest`.
+- Install using pip: `pip install pytest`.
 - All tests need to be in files named `test_*.py`.
 - Each test function needs to be named as `test_*`.
-- pytest gives a detailed description of assertion checks.
+- pytest gives a detailed description for failing tests.
 
 ---
 
@@ -48,6 +48,7 @@ slideOptions:
 - Many features like test automation, sharing of setup and shutdown of tests, etc.
 - Use the base class `unittest.TestCase` to create a test suite.
 - Command-line interface: `python -m unittest test_module1 test_module2 ...`.
+- Part of the Python standard library.
 
 ---
 

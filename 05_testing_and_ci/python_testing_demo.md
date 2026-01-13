@@ -4,57 +4,26 @@ Example code is in [05_testing_and_ci/examples/python_testing](https://github.co
 
 ## Software Code Used
 
-- The file `operations.py` consists of two functions `find_max` and `find_mean` which calculate the maximum and mean of all elements of a list. The `main()` routine in the file applies the functions to a list and prints the output.
-- `main()` function in `operations.py` has assertion statements to check if the correct data type is passed to specific functions.
-- Assertion statements are the most basic way of testing code and are also used in unit and integration testing.
-- Tests are written in the file `test_operations.py`. The `test_*` prefix in the name is required so that pytest detects the file as a testing file. Suffix form `*_test.py` also works.
-- In all there are two unit tests, one integration test and one regression test.
-- The unit tests test the individual functions `find_max` and `find_mean`.
-- The integration test triggers both the functions `find_max` and `find_mean` and checks that the mean is less than the maximum, something that should always be true for a set of numbers.
-- The regression test first reads an old data set and a mean value from a CSV file. Then the function `find_mean` is run with the old data set and the new mean value is compared to the old one.
+The file [operations.py](examples/python_testing/operations.py) consists of a class `MathOperations` that has the following functions: `reorder_data`, `find_max`, `find_median`, and `find_mean`. The `main()` routine in the file applies the functions to a list and prints the output.
 
 ## pytest
 
 - pytest is installed using pip: `pip install pytest`.
 - All tests can be run using the command-line tool called `pytest`. Just type `pytest` in the working directory and hit ENTER.
 - If pytest is installed in some other way, you might need to run it like `python -m pytest`.
-- One test is expected to fail. Reading the error message we understand that the failure occurs because floating-point variable comparison is not handled correctly.
-- We need to tell pytest that while comparing two floating-point variables the value needs to be correct only up to a certain tolerance limit. To do this, the expected mean value needs to be changed by uncommenting the line in the following part of the code:
+- Tests are written in the file `test_operations.py`. The `test_*` prefix in the name is required so that pytest detects the file as a testing file. Suffix form `*_test.py` also works.
+- There are unit tests for the functions `reorder_data`, `find_max`, and `find_mean`.
+- There is an integration test for the function `find_median`, and a regression test for `reorder_data`. The regression test reads in a list from a CSV file.
+- The test fixture is defined under `@pytest.fixture`. pytest runs this once at the start and stores the returned output while running all other tests.
+- One test fails. Error message states that the failure occurs because floating-point variable comparison is not handled correctly.
+- While comparing two floating-point variables the value needs to be correct only up to a certain tolerance limit. To do this, the expected mean value needs to be changed in the following way:
 
 ```python
 # Expected result
-    expected_mean = 78.33
-    # expected_result = pytest.approx(78.3, abs=0.01)
+expected_mean = pytest.approx(69.57, rel=1e-2)
 ```
 
-- **Comparing floating point variables** needs to be handled in functions like `find_mean` and is done using `pytest.approx(value, abs)`. The `abs` value is the tolerance up to which the floating-point value will be checked, that is `78.33 +/- 0.01`.
-- Even if one test fails, pytest runs all the tests and gives a report on the failing test. The assertion failure report generated my pytest is also more detailed than the usual Python assertion report. When the test fails, the following is observed:
-
-```bash
-========================================== FAILURES ===============================================
-_______________________________________ test_find_mean ____________________________________________
-
-    def test_find_mean():
-        """
-        Test operations.find_mean
-        """
-        # Fixture
-        data = [43, 32, 167, 18, 1, 209]
-
-        # Expected result
-        expected_mean = 78.33
-        # expected_result = pytest.approx(78.33, abs=0.01)
-
-        # Actual result
-        actual_mean = find_mean(data)
-
-        # Test
->       assert actual_mean == expected_mean
-E       assert 78.33333333333333 == 78.33
-
-test_operations.py:44: AssertionError
-```
-
+- Even if one test fails, pytest runs the rest and gives a report on the failing test.
 - pytest not only points to the assertion but also prints out the test which has failed.
 - It is worth noting that pytest is also able to detect tests from other files and run them even if they are not in the conventional test formats.
 - pytest is able to detect tests in several forms of folder structures, and the folder structures have advantages and disadvantages. More information on this is in the [documentation](https://docs.pytest.org/en/6.2.x/goodpractices.html#choosing-a-test-layout-import-rules). In this demo we use the simplest folder structure where the source file and the test files are at the same directory level. Very often this is not the case. A more organized folder structure can be generated:

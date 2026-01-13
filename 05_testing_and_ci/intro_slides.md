@@ -29,7 +29,7 @@ slideOptions:
 
 ## Learning Goals of the Chapter
 
-- Explain why developing tests is crucial.
+- Explain the importance of writing tests for simulation software.
 - Explain the concepts of unit testing, integration testing and regression testing with the perspective of simulation software.
 - Write tests using the Python libraries `pytest` and `unittest`.
 - Write tests in C++ using `Boost.Test`.
@@ -41,35 +41,36 @@ slideOptions:
 ## What is Testing?
 
 - Smelling old milk before using it!
-- A way to determine if a software is not producing reliable results and if so, what is the reason.
-- Manual testing vs. Automated testing.
+- A method to ensure that a software is producing reliable results.
+- Manual testing vs. automated testing.
 
 ---
 
 ## Why Should you Test your Software?
 
-- Improve software reliability and reproducibility.
-- Make sure that changes (bugfixes, new features) do not affect other parts of software.
-- Generally all software is better off being tested regularly. Possible exceptions are very small codes with single users.
-- Ensure that a distributed/packaged software actually works.
+- Catch errors before software use in the real world.
+- Improve software reliability.
+- Make sure that changes (bugfixes, features) do not introduce bugs.
+- All software is better off being tested regularly. Exceptions could be very small codes with single users.
+- Packaged version works as expected.
 
 ---
 
 ## Nomenclature in Software Testing
 
-- **Fixture**: preparatory set for testing.
-- **Actual result**: what the code produces when given the fixture.
-- **Expected result**: what the actual result is compared to.
-- **Test coverage**: how much of the code do tests touch in one run.
+- **Fixture**: preparatory definitions for testing.
+- **Actual result**: what the software produces with the fixture.
+- **Expected result**: ground truth or true result.
+- **Test coverage**: how much of the software do tests run through.
 
 ---
 
 ## Some Ways to Test Software
 
 - Assertions
-- Unit testing
-- Integration testing
-- Regression testing
+- Unit tests
+- Integration tests
+- Regression tests
 
 ---
 
@@ -78,11 +79,11 @@ slideOptions:
 - Principle of *defensive programming*.
 - Nothing happens when an assertion is true; throws error when false.
 - Types of assertion statements:
-    - Precondition
-    - Postcondition
-    - Invariant
+    - Precondition: something that must be true at the start.
+    - Postcondition: something that is true after execution.
+    - Invariant: something that is always true.
 - A basic but powerful tool to test a software on-the-go.
-- Assertion statement syntax in Python
+- Assertion statement syntax in Python:
 
 ```python
 assert condition, "message"
@@ -90,50 +91,48 @@ assert condition, "message"
 
 ---
 
-## Unit Testing
+## Unit Tests
 
 - Catching errors with assertions is good but preventing them is better!
 - A *unit* is a single function in one situation.
     - A situation is one amongst many possible variations of input parameters.
-- User creates the expected result manually.
-- A fixture is a set of inputs used to generate an actual result.
+- Expected result is created manually.
 - Actual result is compared to the expected result, for e.g. using an assertion statement.
 
 ---
 
-## Integration Testing
+## Integration Tests
 
 - Test whether several units work in conjunction.
 - *Integrate* units and test them together in an *integration* test.
 - Often more complicated than a unit test and has more test coverage.
-- A fixture is used to generate an actual result.
 - Actual result is compared to the expected result, for e.g. using an assertion statement.
 
 ---
 
-## Regression Testing
+## Regression Tests
 
-- Generating an expected result is not possible in some situations.
+- Generating an expected result is not always possible.
 - Compare the current actual result with a previous actual result.
 - No guarantee that the current actual result is correct.
-- Risk of a bug being carried over indefinitely.
-- Main purpose is to identify changes in the current state of the code with respect to a past state.
+- Does not catch long-existing bugs.
+- Compare changes in the current state of the software with respect to a past (reliable) state.
 
 ---
 
 ## Test Coverage
 
-- Coverage is the amount of code a test runs through.
+- Coverage is the amount of software that is run by running the tests.
 - Aim for high test coverage.
-- There is a trade-off: extremely high test coverage vs. effort in test development
+- Trade-off: extremely high test coverage vs. effort in test development
 
 ---
 
 ## Comparing Floating-point Variables
 
-- Very often quantities in simulation software are `float` / `double`.
-- Such quantities cannot be compared to exact values, an approximation is necessary.
-- Comparison of floating point variables needs to be done to a certain tolerance.
+- Very often data in simulation software is of type `float` or `double`.
+- Such data cannot be compared to exact values, an approximation is necessary.
+- Comparing such data up to a certain tolerance.
 - In `pytest` there is `pytest.approx(value, abs=tol)`.
 - In `unittest` there is `assertAlmostEqual()`.
 
@@ -141,7 +140,7 @@ assert condition, "message"
 
 ## Test-driven Development (TDD)
 
-- Principle of writing a test and then write a code to fulfill the test.
+- Idea: write a test and then write part of the software to fulfill the test.
 - Advantages:
     - Leads to a robust test along with the implementation.
     - Eliminates confirmation bias of the user.
@@ -151,19 +150,15 @@ assert condition, "message"
     - False security from tests.
     - Neglect of overall design.
 
-Source: https://en.wikipedia.org/wiki/Test-driven_development
+[TDD on Wikipedia](https://en.wikipedia.org/wiki/Test-driven_development)
 
 ---
 
 ## Verifying a Test
 
-- Test written as part of a bug-fix:
-    - Reproduce the bug in the test by ensuring that the test fails.
-    - Fix the bug.
-    - Rerun the test to ensure that it passes.
-- Test written to increase code coverage:
-    - Make sure that the first iteration of the test passes.
-    - Try introducing a small fixable bug in the code to verify if the test fails.
+- Reproduce the bug in the test by ensuring that the test fails.
+- Fix the bug.
+- Rerun the test to ensure that it passes.
 
 ---
 

@@ -1,6 +1,6 @@
 # Notes for Demos of Python Testing Frameworks
 
-Example code is in [05_testing_and_ci/examples/python_testing](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/examples/python_testing)
+Example code is in [05_testing_and_ci/examples/python_testing](examples/python_testing/).
 
 ## Software Code Used
 
@@ -44,6 +44,7 @@ tests/
 - Base class `unittest.TestCase` is used to create a test suite.
 - Each test is now a function of a class which is derived from the class `unittest.TestCase`.
 - The same tests as for `pytest` are implemented using `unittest` in the file `test_operations_unittests.py`. The tests are functions of a class named `TestOperations` which tests our mathematical operations. The class `TestOperations` is derived from `unittest.TestCase`.
+- unittest discovers tests based on identifiers. A [test discovery](https://docs.python.org/3/library/unittest.html#test-discovery) mechanism is followed.
 - unittest can be run as a Python module: `python -m unittest`.
 - unittest.TestCase offers functions like `assertEqual`, `assertAlmostEqual`, `assertTrue`, and more ([see unittest.TestCase documentation](https://docs.python.org/3/library/unittest.html#unittest.TestCase)) for use instead of the usual assertion statements. These statements ensure that test runner to accumulate all test results and generate a test report.
 - `unittest.main()` provides an option to run the tests from a command-line interface and also from a file.
@@ -54,13 +55,14 @@ tests/
 
 ## coverage
 
-- Installing coverage using pip: `pip install coverage`.
-- Testing frameworks can be run via coverage. Lets take our first example and run pytest via coverage:
+- Install coverage using pip: `pip install coverage`.
+- Testing frameworks can be run via coverage. Run pytest via coverage:
 
 ```bash
 coverage run -m pytest
 ```
 
+- The `-m` flag tells coverage to run `pytest` module and measure test coverage. This flag would not exist if a Python file was directly being run.
 - coverage does not generate any output immediately as it would interfere with the test output.
 - Code coverage information is stored in a file `.coverage` in the working directory. This information can be viewed using:
 
@@ -80,19 +82,7 @@ coverage html
 
 - Environment orchestrator to setup and execute various tools for a project.
 - `tox` creates virtual environments to run each tools in.
-- `tox.toml` file:
-
-```toml
-requires = ["tox>=4"]
-env_list = ["testing"]
-
-[env.testing]
-description = "Run pytest"
-deps = ["pytest>=8"]
-commands = [["pytest"]]
-```
-
+- `tox.toml` file consists of two environments, one to run pytest and one to run unittest.
 - Global settings defined under section at the top of the `tox.toml` file.
 - Start tox by running the command `tox` in the directory where the `tox.toml` exists.
-- tox takes more time the first time it is run as it creates the necessary virtual environments. Virtual environment setup can be found in the `.tox` repository.
-- Observe that tox starts a virtual environment, installs the dependency (here `pytest`) and runs `pytest`.
+- First execution of tox is slow because it creates the necessary virtual environments. Virtual environment setups are in the `.tox` repository.

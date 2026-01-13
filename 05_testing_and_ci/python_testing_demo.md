@@ -49,8 +49,8 @@ tests/
 - `unittest.main()` provides an option to run the tests from a command-line interface and also from a file.
 - `setUp` function is executed before all the tests. Similar a clean up function `tearDown` exists.
 - The intention is to group together sets of similar tests in an instant of `unittest.TestCase` and have multiple such instances.
+- A unit test for the function `find_median` is written by mocking the function `reorder_data` using [MagicMock](https://docs.python.org/3/library/unittest.mock.html#magic-mock) from unittest. The function `reorder_data` is mocked so that the function `find_median` can be tested in isolation.
 - Decorators such as `@unittest.skip`, `@unittest.skipIf`, `@unittest.expectedFailure` can be used to gain flexibility over working of tests.
-- `unittest.TestCase.subTest` can be used to distinguish parameters inside the body of a test.
 
 ## coverage
 

@@ -1,9 +1,10 @@
 """
 Tests for mathematical operations functions.
 """
-from operations import find_max, find_mean
+from operations import MathOperations
 import unittest
 from unittest import TestCase
+from unittest.mock import MagicMock
 import csv
 
 
@@ -13,8 +14,8 @@ class TestOperations(TestCase):
     """
     def setUp(self):
         # Fixture
-        self.data1 = [43, 32, 167, 18, 1, 209]
-        self.data2 = [3, 13, 33, 23, 498]
+        self._data = [43, 32, 167, 18, 1, 209, 17]
+        self._math_ops = MathOperations(self._data)
 
     # Unit test
     def test_find_max(self):
@@ -25,7 +26,7 @@ class TestOperations(TestCase):
         expected_max = 209
 
         # Actual result
-        actual_max = find_max(self.data1)
+        actual_max = self._math_ops.find_max()
 
         # Test
         self.assertEqual(actual_max, expected_max)
@@ -36,49 +37,62 @@ class TestOperations(TestCase):
         Test operations.find_mean
         """
         # Expected result
-        expected_mean = 78.33
+        expected_mean = 69.57
 
         # Actual result
-        actual_mean = find_mean(self.data1)
+        actual_mean = self._math_ops.find_mean()
 
         # Test
         self.assertAlmostEqual(actual_mean, expected_mean, 2)
 
-    # Integration test
-    def test_mean_of_max(self):
+    # Unit test
+    def test_unit_find_median(self):
         """
-        Test operations.find_max and operations.find_mean
+        Test operations.find_median
         """
         # Expected result
-        expected_mean_of_max = 353.5
+        expected_median = 32
 
-        maximum1 = find_max(self.data1)
-        maximum2 = find_max(self.data2)
+        # Mock reorder_data to isolate the test
+        self._math_ops.reorder_data = MagicMock(return_value=[1, 17, 18, 32, 43, 167, 209])
 
         # Actual result
-        actual_mean_of_max = find_mean([maximum1, maximum2])
-        
+        actual_median = self._math_ops.find_median()
+
         # Test
-        self.assertEqual(actual_mean_of_max, expected_mean_of_max)
+        self.assertEqual(actual_median, expected_median)
+
+    # Integration test
+    def test_median(self):
+        """
+        Test operations.find_median
+        """
+        # Expected result
+        expected_median = 32
+
+        # Actual result
+        actual_median = self._math_ops.find_median()
+
+        # Test
+        self.assertEqual(actual_median, expected_median)
 
     # Regression test
-    def test_regression_mean(self):
+    def test_reg_reorder_data(self):
         """
-        Test operations.find_mean on a previously generated dataset
+        Test operations.reorder_data with data from CSV file
         """
-        with open("mean_data.csv") as f:
+        with open("reordered_data.csv") as f:
             rows = csv.reader(f, quoting=csv.QUOTE_NONNUMERIC)
-            # Fixture
-            data = next(rows)
-            
-            # Expected result
-            reference_mean = next(rows)
+        
+            for row in rows:
+                expected_reordered_data = row
 
         # Actual result
-        actual_mean = find_mean(data)
+        self._math_ops.reorder_data()
+        actual_reordered_data = self._math_ops._data
 
         # Test
-        self.assertAlmostEqual(actual_mean, reference_mean[0], 2)
+        self.assertEqual(actual_reordered_data, expected_reordered_data)
 
 if __name__ == "__main__":
     # Run the tests

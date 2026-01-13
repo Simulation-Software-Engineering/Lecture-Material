@@ -1,60 +1,29 @@
 # Notes for Demos of Python Testing Frameworks
 
-Example code is in [05_testing_and_ci/examples/python_testing](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/examples/python_testing)
+Example code is in [05_testing_and_ci/examples/python_testing](examples/python_testing/).
 
 ## Software Code Used
 
-- The file `operations.py` consists of two functions `find_max` and `find_mean` which calculate the maximum and mean of all elements of a list. The `main()` routine in the file applies the functions to a list and prints the output.
-- `main()` function in `operations.py` has assertion statements to check if the correct data type is passed to specific functions.
-- Assertion statements are the most basic way of testing code and are also used in unit and integration testing.
-- Tests are written in the file `test_operations.py`. The `test_*` prefix in the name is required so that pytest detects the file as a testing file. Suffix form `*_test.py` also works.
-- In all there are two unit tests, one integration test and one regression test.
-- The unit tests test the individual functions `find_max` and `find_mean`.
-- The integration test triggers both the functions `find_max` and `find_mean` and checks that the mean is less than the maximum, something that should always be true for a set of numbers.
-- The regression test first reads an old data set and a mean value from a CSV file. Then the function `find_mean` is run with the old data set and the new mean value is compared to the old one.
+The file [operations.py](examples/python_testing/operations.py) consists of a class `MathOperations` that has the following functions: `reorder_data`, `find_max`, `find_median`, and `find_mean`. The `main()` routine in the file applies the functions to a list and prints the output.
 
 ## pytest
 
 - pytest is installed using pip: `pip install pytest`.
 - All tests can be run using the command-line tool called `pytest`. Just type `pytest` in the working directory and hit ENTER.
 - If pytest is installed in some other way, you might need to run it like `python -m pytest`.
-- One test is expected to fail. Reading the error message we understand that the failure occurs because floating-point variable comparison is not handled correctly.
-- We need to tell pytest that while comparing two floating-point variables the value needs to be correct only up to a certain tolerance limit. To do this, the expected mean value needs to be changed by uncommenting the line in the following part of the code:
+- Tests are written in the file `test_operations.py`. The `test_*` prefix in the name is required so that pytest detects the file as a testing file. Suffix form `*_test.py` also works.
+- There are unit tests for the functions `reorder_data`, `find_max`, and `find_mean`.
+- There is an integration test for the function `find_median`, and a regression test for `reorder_data`. The regression test reads in a list from a CSV file.
+- The test fixture is defined under `@pytest.fixture`. pytest runs this once at the start and stores the returned output while running all other tests.
+- One test fails. Error message states that the failure occurs because floating-point variable comparison is not handled correctly.
+- While comparing two floating-point variables the value needs to be correct only up to a certain tolerance limit. To do this, the expected mean value needs to be changed in the following way:
 
 ```python
 # Expected result
-    expected_mean = 78.33
-    # expected_result = pytest.approx(78.3, abs=0.01)
+expected_mean = pytest.approx(69.57, rel=1e-2)
 ```
 
-- **Comparing floating point variables** needs to be handled in functions like `find_mean` and is done using `pytest.approx(value, abs)`. The `abs` value is the tolerance up to which the floating-point value will be checked, that is `78.33 +/- 0.01`.
-- Even if one test fails, pytest runs all the tests and gives a report on the failing test. The assertion failure report generated my pytest is also more detailed than the usual Python assertion report. When the test fails, the following is observed:
-
-```bash
-========================================== FAILURES ===============================================
-_______________________________________ test_find_mean ____________________________________________
-
-    def test_find_mean():
-        """
-        Test operations.find_mean
-        """
-        # Fixture
-        data = [43, 32, 167, 18, 1, 209]
-
-        # Expected result
-        expected_mean = 78.33
-        # expected_result = pytest.approx(78.33, abs=0.01)
-
-        # Actual result
-        actual_mean = find_mean(data)
-
-        # Test
->       assert actual_mean == expected_mean
-E       assert 78.33333333333333 == 78.33
-
-test_operations.py:44: AssertionError
-```
-
+- Even if one test fails, pytest runs the rest and gives a report on the failing test.
 - pytest not only points to the assertion but also prints out the test which has failed.
 - It is worth noting that pytest is also able to detect tests from other files and run them even if they are not in the conventional test formats.
 - pytest is able to detect tests in several forms of folder structures, and the folder structures have advantages and disadvantages. More information on this is in the [documentation](https://docs.pytest.org/en/6.2.x/goodpractices.html#choosing-a-test-layout-import-rules). In this demo we use the simplest folder structure where the source file and the test files are at the same directory level. Very often this is not the case. A more organized folder structure can be generated:
@@ -75,23 +44,25 @@ tests/
 - Base class `unittest.TestCase` is used to create a test suite.
 - Each test is now a function of a class which is derived from the class `unittest.TestCase`.
 - The same tests as for `pytest` are implemented using `unittest` in the file `test_operations_unittests.py`. The tests are functions of a class named `TestOperations` which tests our mathematical operations. The class `TestOperations` is derived from `unittest.TestCase`.
+- unittest discovers tests based on identifiers. A [test discovery](https://docs.python.org/3/library/unittest.html#test-discovery) mechanism is followed.
 - unittest can be run as a Python module: `python -m unittest`.
 - unittest.TestCase offers functions like `assertEqual`, `assertAlmostEqual`, `assertTrue`, and more ([see unittest.TestCase documentation](https://docs.python.org/3/library/unittest.html#unittest.TestCase)) for use instead of the usual assertion statements. These statements ensure that test runner to accumulate all test results and generate a test report.
 - `unittest.main()` provides an option to run the tests from a command-line interface and also from a file.
 - `setUp` function is executed before all the tests. Similar a clean up function `tearDown` exists.
 - The intention is to group together sets of similar tests in an instant of `unittest.TestCase` and have multiple such instances.
+- A unit test for the function `find_median` is written by mocking the function `reorder_data` using [MagicMock](https://docs.python.org/3/library/unittest.mock.html#magic-mock) from unittest. The function `reorder_data` is mocked so that the function `find_median` can be tested in isolation.
 - Decorators such as `@unittest.skip`, `@unittest.skipIf`, `@unittest.expectedFailure` can be used to gain flexibility over working of tests.
-- `unittest.TestCase.subTest` can be used to distinguish parameters inside the body of a test.
 
 ## coverage
 
-- Installing coverage using pip: `pip install coverage`.
-- Testing frameworks can be run via coverage. Lets take our first example and run pytest via coverage:
+- Install coverage using pip: `pip install coverage`.
+- Testing frameworks can be run via coverage. Run pytest via coverage:
 
 ```bash
 coverage run -m pytest
 ```
 
+- The `-m` flag tells coverage to run `pytest` module and measure test coverage. This flag would not exist if a Python file was directly being run.
 - coverage does not generate any output immediately as it would interfere with the test output.
 - Code coverage information is stored in a file `.coverage` in the working directory. This information can be viewed using:
 
@@ -111,19 +82,7 @@ coverage html
 
 - Environment orchestrator to setup and execute various tools for a project.
 - `tox` creates virtual environments to run each tools in.
-- `tox.toml` file:
-
-```toml
-requires = ["tox>=4"]
-env_list = ["testing"]
-
-[env.testing]
-description = "Run pytest"
-deps = ["pytest>=8"]
-commands = [["pytest"]]
-```
-
+- `tox.toml` file consists of two environments, one to run pytest and one to run unittest.
 - Global settings defined under section at the top of the `tox.toml` file.
 - Start tox by running the command `tox` in the directory where the `tox.toml` exists.
-- tox takes more time the first time it is run as it creates the necessary virtual environments. Virtual environment setup can be found in the `.tox` repository.
-- Observe that tox starts a virtual environment, installs the dependency (here `pytest`) and runs `pytest`.
+- First execution of tox is slow because it creates the necessary virtual environments. Virtual environment setups are in the `.tox` repository.

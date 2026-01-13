@@ -112,3 +112,12 @@
 - **20** min.: [Versioning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/versioning_slides.md)
 - **20** min.: [Repository Layouts](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/repository_layouts_slides.md)
 - **20** min.: [DOI, Zenodo, DaRUS](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/doi_zenodo_darus_slides.md)
+
+## 12.1 – Wed, January 14, 2026
+
+- **20** min.: Introduction to Testing: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/intro_slides.md)
+- **70** min.: Testing Python Code: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_demo.md)
+
+## 12.2 – Wed, January 14, 2025
+
+- **90** min.: [Exercise: Testing Python Code](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_exercise.md)

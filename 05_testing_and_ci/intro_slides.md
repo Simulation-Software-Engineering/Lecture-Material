@@ -43,6 +43,7 @@ slideOptions:
 - Smelling old milk before using it!
 - A method to ensure that a software is producing reliable results.
 - Manual testing vs. automated testing.
+- You already saw tests in the [Git exercise](https://github.com/Simulation-Software-Engineering/git-exercise).
 
 ---
 

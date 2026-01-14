@@ -44,7 +44,9 @@
     - Now call the function `initialize_domain` with the chosen values of `w`, `h`, `dx`, and `dy` and using an assertion statement, check if the values of `nx` and `ny` in the class member variables are equal to your expected values.
     - Note that you have the object of the class `SolveDiffusion2D` and hence you can access member variables, for example `solver.nx` and `solver.ny`. This is useful to check the actual values.
 - Using a similar workflow, complete the other two unit tests.
-- Sometimes pytest is not able to find the tests. One reason is the way pytest is installed, which is typically either using pip or apt. Refer to the [corresponding section](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_demo.md#pytest) in the demo for more details. If such errors occur, then try to explicitly point pytest to the relevant test file in the following way:
+- **Troubleshooting:**
+    - If pytest is not able to locate the `diffusion2d` module, try `python3 -m pytest` instead to add the current directory to `sys.path`, see [documentation](https://docs.pytest.org/en/stable/how-to/usage.html).
+    - Sometimes pytest is not able to find the tests. One reason is the way pytest is installed, which is typically either using pip or apt. Refer to the [corresponding section](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_demo.md#pytest) in the demo for more details. If such errors occur, then try to explicitly point pytest to the relevant test file in the following way:
 
 ```bash
 pytest tests/unit/test_diffusion2d_functions.py

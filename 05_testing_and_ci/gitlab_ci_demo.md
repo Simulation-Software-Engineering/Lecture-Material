@@ -25,7 +25,7 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
     - Instances -> Launch instance
         - Ubuntu 24.04
         - Flavor: m1.small
-- VM is up and running, connect to it: `ssh ubuntu@<IP>`
+- VM is up and running, connect to it: `ssh ubuntu@<IPv6>`
 - Apply updates: `sudo apt update && sudo apt -y upgrade`
 - Install Docker: `sudo apt install -y docker.io`
 

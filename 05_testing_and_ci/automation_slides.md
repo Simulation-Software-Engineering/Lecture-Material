@@ -99,9 +99,11 @@ slideOptions:
 
 - [GitHub Actions](https://github.com/features/actions)
 - [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
+- [Jenkins](https://www.jenkins.io/)
+- [Woodpecker CI](https://woodpecker-ci.org/)
+  (e.g., in [Codeberg](https://docs.codeberg.org/ci/))
 - [Circle CI](https://circleci.com/)
 - [Travis CI](https://www.travis-ci.com/)
-- [Jenkins](https://www.jenkins.io/)
 - ...
 
 ---

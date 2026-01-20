@@ -66,7 +66,7 @@ From: [https://docs.gitlab.com/ee/ci/](https://docs.gitlab.com/ee/ci/)
 
 ## Components (2/2)
 
-<img src="https://docs.gitlab.com/ee/ci/pipelines/img/manual_pipeline_v14_2.png" width=95%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px; background: #eeeeee">
+<img src="https://docs.gitlab.com/ci/pipelines/img/manual_job_v17_9.png" width=95%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px; background: #eeeeee">
 
 From [GitLab CI/CD tutorial](https://docs.gitlab.com/ee/ci/pipelines/index.html)
 
@@ -110,11 +110,11 @@ deploy job:
 
   ```yaml
   variables:
-    TEST_VAR: "All jobs can use this variable's value"
+    TEST_VAR: "All jobs can use this variable"
 
   job1:
     variables:
-      TEST_VAR_JOB: "Only job1 can use this variable's value"
+      TEST_VAR_JOB: "Only job1 can use this variable"
     script:
       - echo "$TEST_VAR" and "$TEST_VAR_JOB"
   ```
@@ -182,16 +182,14 @@ deploy job:
 
 ## Demo: GitLab Runner
 
-- Installation of a GitLab Runner on a [bwCloud](https://www.bw-cloud.org/) VM (via Docker)
+- Installation of a GitLab Runner on a [bwCloud](https://portal.bw-cloud.org/) VM (via Docker)
 - Registration of the runner to a repository (Docker as executor)
 
 ---
 
 ## Advanced Topics
 
-- Complex pipelines, e.g.,
-    - [Directed Acyclic Graph](https://docs.gitlab.com/ee/ci/directed_acyclic_graph/)
-    - [Multi-project pipelines](https://docs.gitlab.com/ee/ci/pipelines/downstream_pipelines.html#multi-project-pipelines)
+- [Multi-project pipelines](https://docs.gitlab.com/ee/ci/pipelines/downstream_pipelines.html#multi-project-pipelines)
 - [Anchors](https://docs.gitlab.com/ee/ci/yaml/yaml_optimization.html#anchors)
 - [ChatOps](https://docs.gitlab.com/ee/ci/chatops/)
 - [Extended testing](https://docs.gitlab.com/ee/ci/testing/unit_test_reports.html)

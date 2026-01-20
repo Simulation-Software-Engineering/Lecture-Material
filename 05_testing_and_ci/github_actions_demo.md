@@ -2,7 +2,7 @@
 
 ## 1. Setting up a Test Job
 
-- Clone [automation lecture repository](https://github.com/Simulation-Software-Engineering/automation-lecture-wt2425) and run code and tests
+- Clone [automation lecture repository](https://github.com/Simulation-Software-Engineering/automation-lecture) and run code and tests
 - Set up workflow file
 
   ```bash
@@ -23,10 +23,10 @@
     test:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v2
-        - uses: actions/setup-python@v2
+        - uses: actions/checkout@v6
+        - uses: actions/setup-python@v6
           with:
-            python-version: '3.8'
+            python-version: '3.10'
         - name: "Run unittest"
           run: python -m unittest
   ```
@@ -70,10 +70,10 @@
     style:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v2
-        - uses: actions/setup-python@v2
+        - uses: actions/checkout@v6
+        - uses: actions/setup-python@v6
           with:
-            python-version: '3.8'
+            python-version: '3.10'
         - name: "Install style checker"
           run: pip install black
         - name: "Run style check"
@@ -87,20 +87,20 @@
         - name: "Run build phase"
           run: echo "Building project $PROJECT_NAME"
     test:
-      needs: build
+      # needs: build
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v2
-        - uses: actions/setup-python@v2
+        - uses: actions/checkout@v6
+        - uses: actions/setup-python@v6
           with:
-            python-version: '3.8'
+            python-version: '3.10'
         - name: "Run unittest"
           run: python -m unittest
   ```
 
-- We need to run `actions/checkout@v2` in each job
+- We need to run `actions/checkout` in each job
     - We could share the repository between jobs via artifacts, but that is uncommon.
-- We need to run `actions/setup-python@v2` since jobs do not share the environment.
+- We need to run `actions/setup-python` since jobs do not share the environment.
 - We specify dependencies by `needs` such that the steps run after each other.
 - We do not have a real build step since it is Python. However, this might be interesting for compiled code.
 

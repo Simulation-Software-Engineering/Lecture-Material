@@ -2,13 +2,13 @@
 
 In this exercise, we create automated workflows and pipelines based on GitHub Actions. We are again working with our beloved diffusion Python code.
 
-Deadline: **Wednesday, January 29th, 2025, 09:00**
+Deadline: **Wednesday, January 28th, 2025, 09:00**
 
 ## Preparations
 
-Import the [automation exercise repository](https://github.com/Simulation-Software-Engineering/automation-exercise-wt2425) in your own account/namespace on GitHub and name it `automation-exercise`. It is also easier to add badges (see below) to the `README.md` if the repository is under your control.
+Import (not fork) the [automation exercise repository](https://github.com/Simulation-Software-Engineering/automation-exercise) in your own account/namespace on GitHub.
 
-**Note**: We cannot work with forks here because GitHub Actions may not work in pull requests without explicit approval of the owner of the target repository
+**Note**: We cannot work with forks here because GitHub Actions may not work in pull requests without explicit approval of the owner of the target repository. It is also easier to add badges (see below) to the `README.md` if the repository is under your control.
 
 ## Task descriptions
 
@@ -26,7 +26,7 @@ Once the workflow runs successfully, add a [GitHub workflow status badge](https:
 
 ## Submission
 
-- Submit your solution via an issue in the *upstream* [automation exercise repository](https://github.com/Simulation-Software-Engineering/automation-exercise-wt2425). The issue should be named `[USERNAME] Automation exercise`, e.g., `[uekermbn] Automation exercise`. Please use your GitLab username here. Add a link to your GitHub repository in the issue. If necessary, add further explanations in the issue description.
+- Submit your solution via an issue in the *upstream* [automation exercise repository](https://github.com/Simulation-Software-Engineering/automation-exercise). The issue should be named `[USERNAME] Automation exercise`, e.g., `[uekermbn] Automation exercise`. Please use your GitLab username here. Add a link to your GitHub repository in the issue. If necessary, add further explanations in the issue description.
 
 ## Bonus: GitLab CI/CD
 

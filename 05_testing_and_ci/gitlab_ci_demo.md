@@ -14,6 +14,7 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 - Edit in pipeline editor -> Visualize
 - Settings -> CI/CD -> Runners -> Specific runners
     - URL and Token; we will need this in a minute
+    - Select `Run untagged jobs`
 
 ## Inspect bwCloud
 
@@ -22,11 +23,13 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 - I have already set up a VM. What I did:
     - Add public SSH key
     - Instances -> Launch instance
-        - Ubuntu 22.04
+        - Ubuntu 24.04
         - Flavor: m1.small
-    - `sudo apt update && sudo apt -y upgrade`
-    - `sudo apt install -y docker.io`
-- VM is up and running, connect to it: `ssh ubuntu@<IP>`
+- VM is up and running, connect to it: `ssh ubuntu@<IPv6>`
+- Apply updates: `sudo apt update && sudo apt -y upgrade`
+- Install Docker: `sudo apt install -y docker.io`
+
+You can get the IP from the [Instances view](https://portal.bw-cloud.org/project/instances/). Note that there are two addresses here: an IPv4 (decimal) and an IPv6 (hexadecimal) address. New VMs on bwCloud only support IPv6 networks, so you need the second address.
 
 ## Setup GitLab Runner
 
@@ -34,12 +37,15 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 
   ```bash
   sudo docker run -d --name gitlab-runner --restart always \
+           --network host \
+           -e GODEBUG="netdns=go+ipv6" \
            -v /srv/gitlab-runner/config:/etc/gitlab-runner \
            -v /var/run/docker.sock:/var/run/docker.sock \
            gitlab/gitlab-runner:latest
   ```
 
     - `docker run -d --name gitlab-runner --restart always` runs the container in the background (`-d` means detached) names it `gitlab-runner` and makes sure that it always runs. The container is automatically restarted once it stops/crashes. If you want to stop the container, you have to stop it manually (`docker container stop`).
+    - The `--network host` and `-e GODEBUG="netdns=go+ipv6"` are needed in this IPv6-only VM (see section below).
     - `-v /srv/gitlab-runner/config:/etc/gitlab-runner` mounts the directory `/srv/gitlab-runner/config` into the container.
     - `-v /var/run/docker.sock:/var/run/docker.sock` mounts important Docker files into the container such that the container can start other containers (for pipelines).
     - `gitlab/gitlab-runner:latest` is the GitLab Runner image used from Docker Hub.
@@ -51,10 +57,21 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 
 ## Register Runner
 
-- `sudo docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitlab-runner register`
-    - URL: `https://gitlab-sim.informatik.uni-stuttgart.de/`
+You can register a runner using the following command. Notice again the `--network host` option, which tells Docker to use the host network stack. This is an important workaround for the fact that bwCloud only supports IPv6 networks:
+
+```bash
+sudo docker run --rm -it \
+         --network host \
+         -e GODEBUG="netdns=go+ipv6" \
+         -v /srv/gitlab-runner/config:/etc/gitlab-runner \
+         gitlab/gitlab-runner register \
+         --url https://gitlab-sim.informatik.uni-stuttgart.de/
+```
+
+- Enter the following details:
+    - URL: (press Enter to confirm)
     - Token: see above
-    - Description: `SSE Automation Demo Runner`
+    - Name/Description: `SSE Automation Demo Runner`
     - No tags, no maintenance note
     - Executor: `docker`
     - Default Docker image: `alpine:latest` (used for pipelines that do not specify any Docker image themselves, can be overwritten in configuration of pipeline)
@@ -65,3 +82,19 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 - More information:
     - [Executors and their abilities](https://docs.gitlab.com/runner/executors/)
     - [Registering runners](https://docs.gitlab.com/runner/register/index.html#docker).
+
+## Workarounds for IPv6
+
+New bwCloud VMs only support IPv6 by default. Asking for IPv4 for a specific VM might be possible via the [helpdesk](https://bw-support.scc.kit.edu/). A few workarounds are needed to make the GitLab runner work in this IPv6-only environment.
+
+First, we need to start Docker with `-e GODEBUG="netdns=go+ipv6"`. This is related to Go prioritizing IPv4 connections.
+
+We also need to tell Docker to use the host network stack. We also need to replace the helper image with [the one from Docker Hub](https://hub.docker.com/r/gitlab/gitlab-runner-helper/tags?name=x86_64-v17.10.1) (depends on the GitLab version), since [`registry.gitlab.com` does not support IPv6](https://gitlab.com/gitlab-com/gl-infra/production-engineering/-/issues/18058). You can start without this setting, and see which image GitLab is trying to pull). Edit the `[runners.docker]` section in `/srv/gitlab-runner/config/config.toml`:
+
+```toml
+  helper_image = "gitlab/gitlab-runner-helper:x86_64-v17.10.1"
+  network_mode = "host"
+```
+
+While we already pass `--network host` to `docker run`, setting this system-wide makes it easier to also start the job containers with the same settings.
+

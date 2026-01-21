@@ -89,10 +89,10 @@ New bwCloud VMs only support IPv6 by default. Asking for IPv4 for a specific VM 
 
 First, we need to start Docker with `-e GODEBUG="netdns=go+ipv6"`. This is related to Go prioritizing IPv4 connections.
 
-We also need to tell Docker to use the host network stack. We also need to replace the helper image with [the one from Docker Hub](https://hub.docker.com/r/gitlab/gitlab-runner-helper/tags?name=x86_64-v17.10.1) (depends on the GitLab version), since [`registry.gitlab.com` does not support IPv6](https://gitlab.com/gitlab-com/gl-infra/production-engineering/-/issues/18058). You can start without this setting, and see which image GitLab is trying to pull). Edit the `[runners.docker]` section in `/srv/gitlab-runner/config/config.toml`:
+We also need to tell Docker to use the host network stack. We also need to replace the helper image with [the one from Docker Hub](https://hub.docker.com/r/gitlab/gitlab-runner-helper) (tag depends on the GitLab version, e.g., [x86_64-v18.8.0](https://hub.docker.com/layers/gitlab/gitlab-runner-helper/x86_64-v18.8.0/images/sha256-9b95c50a9b4b49dd5be9ea9e2191164b649f33f94cc81886a517e846ae4096ee)), since [`registry.gitlab.com` does not support IPv6](https://gitlab.com/gitlab-com/gl-infra/production-engineering/-/issues/18058). You can start without this setting, and see which image GitLab is trying to pull). Edit the `[runners.docker]` section in `/srv/gitlab-runner/config/config.toml`:
 
 ```toml
-  helper_image = "gitlab/gitlab-runner-helper:x86_64-v17.10.1"
+  helper_image = "gitlab/gitlab-runner-helper:x86_64-v18.8.0"
   network_mode = "host"
 ```
 

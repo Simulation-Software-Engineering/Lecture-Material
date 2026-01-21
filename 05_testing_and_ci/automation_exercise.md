@@ -2,7 +2,7 @@
 
 In this exercise, we create automated workflows and pipelines based on GitHub Actions. We are again working with our beloved diffusion Python code.
 
-Deadline: **Wednesday, January 28th, 2025, 09:00**
+Deadline: **Wednesday, January 28th, 2026, 09:00**
 
 ## Preparations
 

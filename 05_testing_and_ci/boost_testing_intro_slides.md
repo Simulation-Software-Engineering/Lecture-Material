@@ -52,7 +52,7 @@ slideOptions:
 - Powerful unit test framework
 - Sometimes called (the) **Unit Test Framework** (UTF) or **Boost.Test**
     - Valid on all slides: `namespace utf = boost::unit_test;`
-- [List of contributors and maintainers](https://www.boost.org/doc/libs/1_87_0/libs/test/doc/html/boost_test/acknowledgements.html)
+- [List of contributors and maintainers](https://www.boost.org/doc/libs/latest/libs/test/doc/html/boost_test/acknowledgements.html)
 
 ---
 

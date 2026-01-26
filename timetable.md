@@ -131,3 +131,14 @@
 ## 12.2 – Wed, January 21, 2026
 
 - **90** min.: [Exercise: Automating Workflows with GitHub Actions](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/automation_exercise.md)
+
+## 13.1 – Wed, January 28, 2026
+
+- **20** min.: Introduction to Boost.Test: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_intro_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_intro_demo.md)
+- **15** min.: [Lecture evaluation](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/challenge/-/issues/42)
+- **60** min.: [Boost.Test and CTest in Action: SideMade Demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_sidemade_demo.md)
+- **10** min.: [Boost.Test in the Real World: preCICE Demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_precice_demo.md)
+
+## 13.2 – Wed, January 28, 2026
+
+- **90** min.: [Boost.Test and CTest in Action: SideMade Exercise](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_exercise.md)

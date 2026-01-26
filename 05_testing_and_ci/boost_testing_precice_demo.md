@@ -17,7 +17,7 @@ Look around preCICE in the terminal + text editor.
 - Clear separation in preCICE: integration tests only directly use API of preCICE.
 - They are located in `tests` folder.
 - Look at `tests/serial/initialize-data/Explicit.cpp`:
-    - Explain `PRECICE_TEST_SETUP` and how it is used: test is run on two MPI ranks living in seperate MPI communicators.
+    - Explain `PRECICE_TEST_SETUP` and how it is used: test is run on two MPI ranks living in separate MPI communicators.
     - Information can be accessed via `context`.
     - More information: [blog post on bssw.io on multiphysics testing](https://bssw.io/blog_posts/overcoming-complexity-in-testing-multiphysics-coupling-software)
 
@@ -30,11 +30,11 @@ Look around preCICE in the terminal + text editor.
 - Sometimes, we want white-box testing:
     - Why? Access and/or check private members
     - Could `friend` the test, but this quickly gets out of hand
-- Example: class `src/time/Waveform.hpp`
-    - Has public and private members. We want to check the private members in tests.
-    - Does not `friend` every test, but only `WaveformFixture`
-    - `src/testing/WaveformFixture.hpp` has functions to access private members
-    - This fixture is used in many tests in `src/time/tests/WaveformTests` (but not handed over to test like normal UTF fixtures)
+- Example: class `src/precice/implDataContext.hpp`
+    - Has public and protected or private members. We want to check the protected members in tests.
+    - Does not `friend` every test, but only `DataContextFixture`
+    - `src/testing/DataContextFixture.hpp` has functions to access protected members
+    - This fixture is used in many tests in `src/precice/tests/DataContextTest` (but not handed over to test like normal UTF fixtures)
 
 ## Test Matrices
 

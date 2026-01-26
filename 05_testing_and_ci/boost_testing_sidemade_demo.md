@@ -1,6 +1,6 @@
 # Boost.Test and CTest in Action: SideMade Demo
 
-Repository: [testing boost exercise – demo-start branch](https://github.com/Simulation-Software-Engineering/testing-boost-exercise-wt2223/tree/demo-start)
+Repository: [testing boost exercise – demo-start branch](https://github.com/Simulation-Software-Engineering/testing-boost-exercise/tree/demo-start)
 
 ## 1. Get to Know the Code
 
@@ -46,7 +46,7 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
     find_package(Boost 1.71 REQUIRED unit_test_framework)
     file(GLOB_RECURSE TEST_FILES CONFIGURE_DEPENDS tests/*.cpp)
     add_executable(testsidemade "${TEST_FILES}")
-    set_property(target testsidemade PROPERTY CXX_STANDARD 11)
+    set_property(TARGET testsidemade PROPERTY CXX_STANDARD 11)
     target_link_libraries(testsidemade PRIVATE Boost::unit_test_framework)
     add_test(NAME "MatrixSolverTests" COMMAND ${CMAKE_CURRENT_BINARY_DIR}/testsidemade)
     ```
@@ -228,7 +228,7 @@ Repository: [testing boost exercise – demo-start branch](https://github.com/Si
 
 - Adjust `CMakeLists.txt`:
     - In principle OK like it is, but we could organize things a bit better.
-    - Add tests and [filter](https://www.boost.org/doc/libs/1_78_0/libs/test/doc/html/boost_test/runtime_config/test_unit_filtering.html):
+    - Add tests and [filter](https://www.boost.org/doc/libs/latest/libs/test/doc/html/boost_test/runtime_config/test_unit_filtering.html):
 
     ```cmake
     add_test(NAME "MatrixSolverTests" COMMAND ${CMAKE_CURRENT_BINARY_DIR}/testsidemade --run_test=MatrixSolverTests/*)

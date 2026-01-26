@@ -53,3 +53,10 @@ Look around preCICE in the terminal + text editor.
 ## CTest in Parallel
 
 - Build preCICE and run tests via `ctest -j 16`, runs tests in parallel, automatic feature of CTest
+
+## Mocking preCICE
+
+- Even more important than for "normal" software, since coupling library needs two software stacks to couple.
+- WIP: mock shipped with preCICE, currently there is "only" a prototype in Python bindings
+  - Look at [how both environments are distinguished](https://github.com/precice/python-bindings/blob/313441ca296da9bbc694bd99ba930c64b48aa11a/setup.py#L35-L39)
+  - Look at files in [`test/`](https://github.com/precice/python-bindings/tree/develop/test)

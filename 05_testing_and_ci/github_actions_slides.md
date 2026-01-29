@@ -264,3 +264,4 @@ steps:
 
 - [GitHub Actions documentation](https://docs.github.com/en/actions)
 - [GitHub Actions quickstart](https://docs.github.com/en/actions/quickstart)
+- [Multi-project CI/CD](https://multiprojectdevops.github.io/tutorials/)

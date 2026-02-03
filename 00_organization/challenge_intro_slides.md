@@ -141,7 +141,7 @@ The challenge part:
 ## How to Submit my Choice?
 
 - [https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/challenge](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/challenge)
-- Comment in [issue #1](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/challenge/-/issues/1) till **22rd of October** (next Wednesday) evening (no FCFS)
+- Comment in [issue #1](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/challenge/-/issues/1) till **22nd of October** (next Wednesday) evening (no FCFS)
 - Priority list with at least three choices
 - If **not** on our suggestion list, write short paragraph what the software does and give links
 - Add pre-knowledge that you have in the field. For example, if you pick pyMOR, you should know already what MOR is.

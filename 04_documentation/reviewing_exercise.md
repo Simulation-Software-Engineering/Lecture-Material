@@ -43,7 +43,7 @@ Now that we have set some guidelines, let's see the strengths in action:
    ```text
     I acknowledge the use of RAI (https://rai.uni-stuttgart.de/) to implement the entirety of this code.
 
-    Promts:
+    Prompts:
     1. I would like a Python script that solves the heat equation.
     2. ...
    ```

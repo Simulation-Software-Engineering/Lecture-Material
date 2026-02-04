@@ -2,7 +2,7 @@
 
 In this exercise, you extend and automate the unit tests of the [SideMade code](https://github.com/Simulation-Software-Engineering/testing-boost-exercise), on which we worked during the lecture.
 
-Deadline: **Thursday, February 4, 2026, 09:00**
+Deadline: **Wednesday, February 4, 2026, 09:00**
 
 ## Preparation and Submission
 

@@ -34,6 +34,10 @@
     ```
 
     Usage: e.g. `git add -p ...` and then `git amend HEAD~5`. This would add the staged changes to the fifth last commit.
+- Update an open PR without cluttering the history
+    - `git commit --amend --no-edit`
+    - `git push --force-with-lease origin <branch-name>`
+    - Perfect for fixing small nits or typos from code reviews. It updates the existing commit instead of adding a messy "fix typo" log.
 
 ## Tricks from Winter Term 2024/25
 

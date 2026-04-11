@@ -36,7 +36,7 @@ You remain in control and responsible for your projects.
 Now that we have set some guidelines, let's see the strengths in action:
 
 1. Login to the [Responsible AI](https://rai.uni-stuttgart.de) provided by the University of Stuttgart.
-   - If the first prompt does not work, start by saying "Hi" before proceeding with actual prompts. Apparently, bots also have psychological needs. :)
+    - If the first prompt does not work, start by saying "Hi" before proceeding with actual prompts. Apparently, bots also have psychological needs. :)
 2. In your own words, ask the tool to generate code for solving a heat equation, in a programming language you understand (e.g., Python).
    Ask it to take parameters from a configuration file and write results to an output file.
    Ask for some documentation, tests, or anything else you would like to see in such a code.
@@ -45,7 +45,7 @@ Now that we have set some guidelines, let's see the strengths in action:
 
    ```text
     (... usual commit message ...)
-    
+        
     I acknowledge the use of RAI (https://rai.uni-stuttgart.de/) to implement the entirety of this code.
 
     Prompts:

@@ -45,7 +45,7 @@ Now that we have set some guidelines, let's see the strengths in action:
 
    ```text
     (... usual commit message ...)
-        
+
     I acknowledge the use of RAI (https://rai.uni-stuttgart.de/) to implement the entirety of this code.
 
     Prompts:

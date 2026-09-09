@@ -16,10 +16,10 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
     - URL and Token; we will need this in a minute
     - Select `Run untagged jobs`
 
-## Inspect bwCloud
+## Inspect bwCloud-OS
 
-- bwCloud: many services academia in BW can use; e.g. VMs
-- Go to dashboard: https://portal.bw-cloud.org/ and login with Uni Stuttgart account
+- bwCloud-OS: many services academia in BW can use; e.g. VMs
+- Go to dashboard: https://bwcloud-os.de/ and login with Uni Stuttgart account
 - I have already set up a VM. What I did:
     - Add public SSH key
     - Instances -> Launch instance
@@ -29,7 +29,7 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 - Apply updates: `sudo apt update && sudo apt -y upgrade`
 - Install Docker: `sudo apt install -y docker.io`
 
-You can get the IP from the [Instances view](https://portal.bw-cloud.org/project/instances/). Note that there are two addresses here: an IPv4 (decimal) and an IPv6 (hexadecimal) address. New VMs on bwCloud only support IPv6 networks, so you need the second address.
+You can get the IP from the Instances view (`project/instances/`). Note that there are two addresses here: an IPv4 (decimal) and an IPv6 (hexadecimal) address. VMs on bwCloud-OS only support IPv6 networks, so you need the second address.
 
 ## Setup GitLab Runner
 
@@ -57,7 +57,7 @@ You can get the IP from the [Instances view](https://portal.bw-cloud.org/project
 
 ## Register Runner
 
-You can register a runner using the following command. Notice again the `--network host` option, which tells Docker to use the host network stack. This is an important workaround for the fact that bwCloud only supports IPv6 networks:
+You can register a runner using the following command. Notice again the `--network host` option, which tells Docker to use the host network stack. This is an important workaround for the fact that bwCloud-OS only supports IPv6 networks:
 
 ```bash
 sudo docker run --rm -it \
@@ -85,7 +85,7 @@ sudo docker run --rm -it \
 
 ## Workarounds for IPv6
 
-New bwCloud VMs only support IPv6 by default. Asking for IPv4 for a specific VM might be possible via the [helpdesk](https://bw-support.scc.kit.edu/). A few workarounds are needed to make the GitLab runner work in this IPv6-only environment.
+VMs on bwCloud-OS only support IPv6 by default. Asking for IPv4 for a specific VM might be possible via the [helpdesk](https://bw-support.scc.kit.edu/). A few workarounds are needed to make the GitLab runner work in this IPv6-only environment.
 
 First, we need to start Docker with `-e GODEBUG="netdns=go+ipv6"`. This is related to Go prioritizing IPv4 connections.
 

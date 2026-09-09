@@ -182,7 +182,7 @@ deploy job:
 
 ## Demo: GitLab Runner
 
-- Installation of a GitLab Runner on a [bwCloud](https://portal.bw-cloud.org/) VM (via Docker)
+- Installation of a GitLab Runner on a [bwCloud-OS](https://bwcloud-os.de/) VM (via Docker)
 - Registration of the runner to a repository (Docker as executor)
 
 ---

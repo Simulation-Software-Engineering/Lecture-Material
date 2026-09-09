@@ -14,13 +14,13 @@ authors:
   given-names: "Gerasimos"
   orcid: "https://orcid.org/0000-0002-3977-1385"
 title: "Simulation Software Engineering Lecture Material"
-version: 1.0.0
-doi: 10.5281/zenodo.18823855
 date-released: 2026-03-01
 url: "https://github.com/Simulation-Software-Engineering/Lecture-Material"
 preferred-citation:
   title: "Four years of experience teaching Simulation Software Engineering"
   type: article
+  doi: 10.5281/zenodo.18823855
+  version: v1
   conference:
     name: "deRSE26 - 6th conference for Research Software Engineering in Germany"
   authors:

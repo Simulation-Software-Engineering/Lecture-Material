@@ -19,6 +19,8 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
 ## Inspect bwCloud-OS
 
 - bwCloud-OS: many services academia in BW can use; e.g. VMs
+    - Our university provides the service to all students and employees, under specific quotas. Students get one VM instance. See the [TIK page](https://www.tik.uni-stuttgart.de/dienste-a-z/bwCloud/).
+    - Not to be confused with the previous phase of the project (Gen2), under the `bw-cloud.org` domain name. The current service is the continuation of that (Gen3).
 - Go to dashboard: https://bwcloud-os.de/ and login with Uni Stuttgart account
 - I have already set up a VM. What I did:
     - Add public SSH key

@@ -23,11 +23,11 @@ Test code in [automation lecture repository](https://gitlab-sim.informatik.uni-s
     - Not to be confused with the previous phase of the project (Gen2), under the `bw-cloud.org` domain name. The current service is the continuation of that (Gen3).
 - Go to dashboard: https://bwcloud-os.de/ and login with Uni Stuttgart account
 - I have already set up a VM. What I did:
-    - Add public SSH key
+    - Added a [public SSH key](https://docs.gitlab.com/user/ssh/#generate-an-ssh-key-pair)
     - Instances -> Launch instance
-        - Ubuntu 24.04
-        - Flavor: m1.small
-- VM is up and running, connect to it: `ssh ubuntu@<IPv6>`
+        - Source: Ubuntu 26.04
+        - Flavor: p1.nano (1 vCPU, 1GB RAM, according to the student quota)
+- VM is up and running, connect to it: `ssh ubuntu@<IPv6>` (you need to be in the university network - see [TIK VPN](https://www.tik.uni-stuttgart.de/en/services-a-z/VPN/))
 - Apply updates: `sudo apt update && sudo apt -y upgrade`
 - Install Docker: `sudo apt install -y docker.io`
 
@@ -74,10 +74,8 @@ sudo docker run --rm -it \
     - URL: (press Enter to confirm)
     - Token: see above
     - Name/Description: `SSE Automation Demo Runner`
-    - No tags, no maintenance note
     - Executor: `docker`
     - Default Docker image: `alpine:latest` (used for pipelines that do not specify any Docker image themselves, can be overwritten in configuration of pipeline)
-- `sudo vi /srv/gitlab-runner/config/config.toml`
 - Verify that there is now a runner in the repo settings
 - Verify that pipeline now ran
 
@@ -91,7 +89,7 @@ VMs on bwCloud-OS only support IPv6 by default. Asking for IPv4 for a specific V
 
 First, we need to start Docker with `-e GODEBUG="netdns=go+ipv6"`. This is related to Go prioritizing IPv4 connections.
 
-We also need to tell Docker to use the host network stack. We also need to replace the helper image with [the one from Docker Hub](https://hub.docker.com/r/gitlab/gitlab-runner-helper) (tag depends on the GitLab version, e.g., [x86_64-v18.8.0](https://hub.docker.com/layers/gitlab/gitlab-runner-helper/x86_64-v18.8.0/images/sha256-9b95c50a9b4b49dd5be9ea9e2191164b649f33f94cc81886a517e846ae4096ee)), since [`registry.gitlab.com` does not support IPv6](https://gitlab.com/gitlab-com/gl-infra/production-engineering/-/issues/18058). You can start without this setting, and see which image GitLab is trying to pull). Edit the `[runners.docker]` section in `/srv/gitlab-runner/config/config.toml`:
+We also need to tell Docker to use the host network stack. We also need to replace the helper image with [the one from Docker Hub](https://hub.docker.com/r/gitlab/gitlab-runner-helper) (tag depends on the GitLab version, e.g., [x86_64-v18.8.0](https://hub.docker.com/layers/gitlab/gitlab-runner-helper/x86_64-v18.8.0/images/sha256-9b95c50a9b4b49dd5be9ea9e2191164b649f33f94cc81886a517e846ae4096ee)), since [`registry.gitlab.com` does not support IPv6](https://gitlab.com/gitlab-com/gl-infra/production-engineering/-/issues/18058). You can start without this setting, and see which image GitLab is trying to pull. Edit the `[runners.docker]` section in `/srv/gitlab-runner/config/config.toml`:
 
 ```toml
   helper_image = "gitlab/gitlab-runner-helper:x86_64-v18.8.0"
@@ -99,4 +97,3 @@ We also need to tell Docker to use the host network stack. We also need to repla
 ```
 
 While we already pass `--network host` to `docker run`, setting this system-wide makes it easier to also start the job containers with the same settings.
-

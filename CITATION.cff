@@ -22,7 +22,7 @@ preferred-citation:
   title: "Four years of experience teaching Simulation Software Engineering"
   type: article
   doi: 10.5281/zenodo.18823855
-  version: v1
+  version: 1
   conference:
     name: "deRSE26 - 6th conference for Research Software Engineering in Germany"
   authors:

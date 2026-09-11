@@ -293,12 +293,12 @@ This exercise consists of the following main steps:
 1. Create a fork of the GitLab repository ["Exercise Containers"](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/exercise-containers).
 2. Setting up the `Dockerfile`
     - Base your image on Ubuntu 24.04
-    - Create a file called `testfile` that contains `USERNAME`. This file should be copied to a directory called `/testfiles` inside the container.
+    - Install `fastfetch` or `neofetch` inside the container
+    - Create a file called `testfile` that contains `USERNAME`. Using a `COPY`, copy this file to a directory called `/testfiles` inside the container.
     - Set the environment variable `ENV_TEST_VARIABLE` inside the container.
     - Define a default run command for the container.
-    - Install `fastfetch` or `neofetch` inside the container
     - Test the new container
-3. Run `fastfetch` or `neofetch` in a terminal inside the container and take a screenshot
+3. Manually run `fastfetch` or `neofetch` in a terminal inside the container at runtime and take a screenshot
 4. Create a merge request containing your changes.
 
 #### 1. Create a Fork (Docker)
@@ -310,11 +310,11 @@ Fork and clone the repository mentioned above. The repository initially contains
 - Currently, the [`Dockerfile`](https://docs.docker.com/reference/dockerfile/) is empty. Edit the file such that a container image with the following properties is built:
     - Your virtual machine should be based on the [`alpine:latest` image](https://hub.docker.com/_/alpine).
         - Alternatively, you can use the (larger) [`ubuntu:24.04` image](https://hub.docker.com/_/ubuntu).
-    - Create a new file with the name `testfile` and add it to the repository. The file should contain your `USERNAME` as text. Add the file to your container and place it in directory `/testfiles`.
-    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`.
-    - Make sure that the default command to be executed when running the container is `/bin/bash`.
     - Install `fastfetch` (Alpine) or `neofetch` (Ubuntu).
     - **Note:** In the `Dockerfile` you do not have to prefix commands such as `apt` with `sudo` since the script is executed with superuser rights.
+    - Create a new file with the name `testfile` and add it to the repository. The file should contain your `USERNAME` as text. Add the file to your container and place it in directory `/testfiles` using `COPY`.
+    - Set the environment variable `ENV_TEST_VARIABLE` to have the value of your `USERNAME`.
+    - Make sure that the default command to be executed when running the container is `/bin/bash`.
 - Test your Docker container locally. Are all variables set and files available?
     - **Note:** If you rebuild your container often, you might end up with dangling containers. You can remove them (together with any unused images, containers, or objects) with [`docker [image|container|system] prune`)](https://docs.docker.com/engine/reference/commandline/system_prune/) depending on what you want to remove. To delete everything unused: `docker system prune`.
 

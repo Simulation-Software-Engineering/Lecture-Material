@@ -50,7 +50,7 @@ slideOptions:
 
 Additional challenge advisors:
 
-- Serge Kotchourko [`@TODO`](TODO)
+- Serge Kotchourko [`@kotserge`](https://github.com/kotserge)
 
 SSE Hall of Fame:
 

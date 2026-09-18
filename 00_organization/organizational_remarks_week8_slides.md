@@ -45,23 +45,6 @@ td {
 }
 </style>
 
-| Date | Type | Chapter | Topic | Lecturer |
-| ---- | ---- | ------- |------ | -------- |
-| 12.11. |Lecture | 3 | Intro packaging, Python packaging | Ishaan |
-| 12.11. |Lab | 3 | Python packaging | Ishaan |
-| 19.11. |Lecture | 3 | Linux fundamentals, Make, CMake | Gerasimos |
-| 19.11. |Lab | 3 | CMake and Docker | Gerasimos |
-| 26.11. |Lecture | 3 | Spack | Ishaan |
-| 26.11. |Lab | 3 | Spack | Ishaan |
-| **03.12.** |**Lecture** | **3** | **CPack and more CMake** | **Benjamin** |
-| 03.12. |Lab | 3 | CPack | Benjamin |
-| 10.12. |Lecture | 4 | Technical writing | Gerasimos |
-| 10.12. |Lab | 4 | Code review | Gerasimos |
-| 17.12. |Presentations | C | **2nd student presentations** | students |
-| 17.12. |Presentations | C | **2nd student presentations** | students |
-
----
-
 ## Exam Registration
 
 - You have to register for exam (we cannot do this for you)

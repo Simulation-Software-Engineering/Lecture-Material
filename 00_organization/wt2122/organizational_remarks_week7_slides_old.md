@@ -67,7 +67,7 @@ slideOptions:
 
 - Information on **second step** on [GitLab](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge/-/issues/3)
     - Now, the *"other half"* presents.
-    - Still, everybody needs to hand in a report (deadline: Dec 16, 2021, 15:45).
+    - Still, everybody needs to hand in a report (deadline: Dec 16, 2021, 15:45). TODO: Update
 - Please open an issue in the [challenge repo](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering/challenge/) explaining what you want to work on for step 3. We will then use these issues to further discuss the progress of the contribution. Provide links to issues, pull requests etc.
     - Deadline (for opening the issue): Jan 10, 2022, 23:59
     - Title of issue: "Contribution to SOFTWARE by USERNAME"

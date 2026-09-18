@@ -178,8 +178,8 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 13.10. |Lecture | 0-1 | Course intro, intro to SSE, VC basics | Benjamin |
-| 13.10. |Lecture | 1 | Git basics, my Git workflow, Git quiz, how to challenge  | Benjamin |
+| 14.10. |Lecture | 0-1 | Course intro, intro to SSE, VC basics | Benjamin |
+| 14.10. |Lecture | 1 | Git basics, my Git workflow, Git quiz, how to challenge  | Benjamin |
 | 21.10. |Lecture | 1 | *My neat little Git trick*, merge vs rebase, working in teams| Benjamin |
 | 21.10. |Lab | 1 | Git  | Benjamin |
 | 28.10. |Lecture | 2 | Containers and virtualization | Gerasimos |

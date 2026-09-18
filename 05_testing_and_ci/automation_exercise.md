@@ -33,5 +33,5 @@ Once the workflow runs successfully, add a [GitHub workflow status badge](https:
 Realize the same workflows in GitLab CI/CD :)
 
 - Create a new project under your namespace and push your existing automation repository to this remote.
-- Create a VM on [bwCloud](https://www.bw-cloud.org/) and create a GitLab Runner with a Docker executor there. Register the runner in your repository.
+- Create a VM on [bwCloud-OS](https://bwcloud-os.de/) and create a GitLab Runner with a Docker executor there. Register the runner in your repository.
 - Add a link to this repository in the submission issue above and, if necessary, explain what you did. Be sure that your repository is visible to us (either public or add `gchourdakis`).

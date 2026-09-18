@@ -160,11 +160,11 @@ Two parallel branches:
 
 ### Timeline
 
-- Pick a software (till **Oct 22**, evening)
-- **Step 1**: Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 5**)
-- **Step 2**: Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 17**)
-- Suggest contribution (**Dec 17**)
-- **Step 3**: Present the contribution (**Feb 4**)
+- Pick a software (till **Oct 21**, evening)
+- **Step 1**: Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 4**)
+- **Step 2**: Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 16**)
+- Suggest contribution (**Dec 16**)
+- **Step 3**: Present the contribution (**Feb 3**)
 
 ---
 
@@ -178,10 +178,10 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 14.10. |Lecture | 0-1 | Course intro, intro to SSE, VC basics | Benjamin |
-| 14.10. |Lecture | 1 | Git basics, my Git workflow, Git quiz, how to challenge  | Benjamin |
-| 21.10. |Lecture | 1 | *My neat little Git trick*, merge vs rebase, working in teams| Benjamin |
-| 21.10. |Lab | 1 | Git  | Benjamin |
+| 14.10. |Lecture | 0-1 | Course intro, intro to SSE, VC basics | Gerasimos |
+| 14.10. |Lecture | 1 | Git basics, my Git workflow, Git quiz, how to challenge  | Gerasimos |
+| 21.10. |Lecture | 1 | *My neat little Git trick*, merge vs rebase, working in teams| Frédéric |
+| 21.10. |Lab | 1 | Git  | Frédéric |
 | 28.10. |Lecture | 2 | Containers and virtualization | Gerasimos |
 | 28.10. |Lab | 2 | Containers and virtualization | Gerasimos |
 | 04.11. |Presentations | C | **1st student presentations** | students |
@@ -199,14 +199,14 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 11.11. |Lecture | 3 | Intro packaging, Python packaging | Ishaan |
-| 11.11. |Lab | 3 | Python packaging | Ishaan |
+| 11.11. |Lecture | 3 | Intro packaging, Python packaging | Felix |
+| 11.11. |Lab | 3 | Python packaging | Felix |
 | 18.11. |Lecture | 3 | Linux fundamentals, Make, CMake | Gerasimos |
 | 18.11. |Lab | 3 | CMake and Docker | Gerasimos |
-| 25.11. |Lecture | 3 | Spack | Ishaan |
-| 25.11. |Lab | 3 | Spack | Ishaan |
-| 02.12. |Lecture | 3 | CPack and more CMake | Benjamin |
-| 02.12. |Lab | 3 | CPack | Benjamin |
+| 25.11. |Lecture | 3 | Spack | Frédéric |
+| 25.11. |Lab | 3 | Spack | Frédéric |
+| 02.12. |Lecture | 3 | CPack and more CMake | Frédéric |
+| 02.12. |Lab | 3 | CPack | Frédéric |
 | 09.12. |Lecture | 4 | Technical writing | Gerasimos |
 | 09.12. |Lab | 4 | Code review | Gerasimos |
 | 16.12. |Presentations | C | **2nd student presentations** | students |
@@ -224,14 +224,14 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 13.01. |Lecture | 4 | Markup, Pandoc, website gener. | Benjamin |
-| 13.01. |Lecture | 4 | FLOSS, versioning, repo layouts, DOI, Zenodo, DaRUS | Benjamin |
-| 20.01. |Lecture | 5 | Intro testing, testing in Python | Ishaan |
-| 20.01. |Lab | 5 | Testing in Python | Ishaan |
-| 27.01. |Lecture | 5 | Automation, GitHub Actions, GitLab CI | Gerasimos|
-| 27.01. |Lab | 5 | GitHub Actions | Gerasimos|
-| 03.02. |Lecture | 5 | Boost.Test and CTest | Benjamin |
-| 03.02. |Lab | 5 | Boost.Test and CTest | Benjamin |
+| 13.01. |Lecture | 5 | Intro testing, testing in Python | Felix |
+| 13.01. |Lab | 5 | Testing in Python | Felix |
+| 20.01. |Lecture | 4 | Markup, Pandoc, website gener. | Felix |
+| 20.01. |Lecture | 4 | FLOSS, versioning, repo layouts, DOI, Zenodo, DaRUS | Gerasimos |
+| 27.01. |Lecture | 5 | Automation, GitHub Actions, GitLab CI | Felix |
+| 27.01. |Lab | 5 | GitHub Actions | Felix |
+| 03.02. |Lecture | 5 | Boost.Test and CTest | Frédéric |
+| 03.02. |Lab | 5 | Boost.Test and CTest | Frédéric |
 | 10.02. |Presentations | C | **3rd student presentations** | students |
 | 10.02. |Presentations | C | **3rd student presentations** | students |
 

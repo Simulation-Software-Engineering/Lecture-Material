@@ -43,18 +43,19 @@ slideOptions:
 
 ## The Lecturers
 
-- Benjamin (Uekermann) [`@uekerman`](https://github.com/uekerman)
 - Gerasimos (Chourdakis) [`@MakisH`](https://github.com/MakisH)
-- Ishaan (Desai) [`@IshaanDesai`](https://github.com/IshaanDesai)
+- Frédéric (Simonis) [`@fsimonis`](https://github.com/fsimonis)
+- Felix (Neubauer) [`@Logende`](https://github.com/Logende)
+- On leave this year: Benjamin (Uekermann) [`@uekerman`](https://github.com/uekerman)
 
 Additional challenge advisors:
 
-- Frédéric (Simonis) [`@fsimonis`](https://github.com/fsimonis)
-- Felix (Neubauer) [`@Logende`](https://github.com/Logende)
+- Serge Kotchourko [`@kotserge`](https://github.com/kotserge)
 
 SSE Hall of Fame:
 
 - Alexander (Jaust) [`@ajaust`](https://github.com/ajaust)
+- Ishaan (Desai) [`@IshaanDesai`](https://github.com/IshaanDesai)
 
 ---
 
@@ -160,11 +161,11 @@ Two parallel branches:
 
 ### Timeline
 
-- Pick a software (till **Oct 22**, evening)
-- **Step 1**: Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 5**)
-- **Step 2**: Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 17**)
-- Suggest contribution (**Dec 17**)
-- **Step 3**: Present the contribution (**Feb 4**)
+- Pick a software (till **Oct 21**, evening)
+- **Step 1**: Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 4**)
+- **Step 2**: Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 16**)
+- Suggest contribution (**Dec 16**)
+- **Step 3**: Present the contribution (**Feb 3**)
 
 ---
 
@@ -178,14 +179,14 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 15.10. |Lecture | 0-1 | Course intro, intro to SSE, VC basics | Benjamin |
-| 15.10. |Lecture | 1 | Git basics, my Git workflow, Git quiz, how to challenge  | Benjamin |
-| 22.10. |Lecture | 1 | *My neat little Git trick*, merge vs rebase, working in teams| Benjamin |
-| 22.10. |Lab | 1 | Git  | Benjamin |
-| 29.10. |Lecture | 2 | Containers and virtualization | Gerasimos |
-| 29.10. |Lab | 2 | Containers and virtualization | Gerasimos |
-| 05.11. |Presentations | C | **1st student presentations** | students |
-| 05.11. |Presentations | C | **1st student presentations** | students |
+| 14.10. |Lecture | 0-1 | Course intro, intro to SSE, VC basics | Gerasimos |
+| 14.10. |Lecture | 1 | Git basics, my Git workflow, Git quiz, how to challenge  | Gerasimos |
+| 21.10. |Lecture | 1 | *My neat little Git trick*, merge vs rebase, working in teams| Frédéric |
+| 21.10. |Lab | 1 | Git  | Frédéric |
+| 28.10. |Lecture | 2 | Containers and virtualization | Gerasimos |
+| 28.10. |Lab | 2 | Containers and virtualization | Gerasimos |
+| 04.11. |Presentations | C | **1st student presentations** | students |
+| 04.11. |Presentations | C | **1st student presentations** | students |
 
 ---
 
@@ -199,18 +200,18 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 12.11. |Lecture | 3 | Intro packaging, Python packaging | Ishaan |
-| 12.11. |Lab | 3 | Python packaging | Ishaan |
-| 19.11. |Lecture | 3 | Linux fundamentals, Make, CMake | Gerasimos |
-| 19.11. |Lab | 3 | CMake and Docker | Gerasimos |
-| 26.11. |Lecture | 3 | Spack | Ishaan |
-| 26.11. |Lab | 3 | Spack | Ishaan |
-| 03.12. |Lecture | 3 | CPack and more CMake | Benjamin |
-| 03.12. |Lab | 3 | CPack | Benjamin |
-| 10.12. |Lecture | 4 | Technical writing | Gerasimos |
-| 10.12. |Lab | 4 | Code review | Gerasimos |
-| 17.12. |Presentations | C | **2nd student presentations** | students |
-| 17.12. |Presentations | C | **2nd student presentations** | students |
+| 11.11. |Lecture | 3 | Intro packaging, Python packaging | Felix |
+| 11.11. |Lab | 3 | Python packaging | Felix |
+| 18.11. |Lecture | 3 | Linux fundamentals, Make, CMake | Gerasimos |
+| 18.11. |Lab | 3 | CMake and Docker | Gerasimos |
+| 25.11. |Lecture | 3 | Spack | Frédéric |
+| 25.11. |Lab | 3 | Spack | Frédéric |
+| 02.12. |Lecture | 3 | CPack and more CMake | Frédéric |
+| 02.12. |Lab | 3 | CPack | Frédéric |
+| 09.12. |Lecture | 4 | Technical writing | Gerasimos |
+| 09.12. |Lab | 4 | Code review | Gerasimos |
+| 16.12. |Presentations | C | **2nd student presentations** | students |
+| 16.12. |Presentations | C | **2nd student presentations** | students |
 
 ---
 
@@ -224,16 +225,16 @@ td {
 
 | Date | Type | Chapter | Topic | Lecturer |
 | ---- | ---- | ------- |------ | -------- |
-| 07.01. |Lecture | 4 | Markup, Pandoc, website gener. | Benjamin |
-| 07.01. |Lecture | 4 | FLOSS, versioning, repo layouts, DOI, Zenodo, DaRUS | Benjamin |
-| 14.01. |Lecture | 5 | Intro testing, testing in Python | Ishaan |
-| 14.01. |Lab | 5 | Testing in Python | Ishaan |
-| 21.01. |Lecture | 5 | Automation, GitHub Actions, GitLab CI | Gerasimos|
-| 21.01. |Lab | 5 | GitHub Actions | Gerasimos|
-| 28.01. |Lecture | 5 | Boost.Test and CTest | Benjamin |
-| 28.01. |Lab | 5 | Boost.Test and CTest | Benjamin |
-| 04.02. |Presentations | C | **3rd student presentations** | students |
-| 04.02. |Presentations | C | **3rd student presentations** | students |
+| 13.01. |Lecture | 5 | Intro testing, testing in Python | Felix |
+| 13.01. |Lab | 5 | Testing in Python | Felix |
+| 20.01. |Lecture | 4 | Markup, Pandoc, website gener. | Felix |
+| 20.01. |Lecture | 4 | FLOSS, versioning, repo layouts, DOI, Zenodo, DaRUS | Gerasimos |
+| 27.01. |Lecture | 5 | Automation, GitHub Actions, GitLab CI | Felix |
+| 27.01. |Lab | 5 | GitHub Actions | Felix |
+| 03.02. |Lecture | 5 | Boost.Test and CTest | Frédéric |
+| 03.02. |Lab | 5 | Boost.Test and CTest | Frédéric |
+| 10.02. |Presentations | C | **3rd student presentations** | students |
+| 10.02. |Presentations | C | **3rd student presentations** | students |
 
 ---
 
@@ -248,7 +249,7 @@ td {
 - *"good"* everywhere leads to 1.0.
 - We give (brief) feedback after every exercise.
 - You will need to register yourself to the *"exam"* on C@MPUS.
-- Last in: The deadline to pick a software (**Oct 22**, evening)
+- Last in: The deadline to pick a software (**Oct 21**, evening)
 - Last out: Once you handed in the first report (**Nov 6**)
 
 ---

@@ -1,6 +1,6 @@
 # Exercise: Git Workflows
 
-Deadline: **Wednesday, October 29, 2025, 9:00**
+Deadline: **Wednesday, October 29, 2025, 9:00** TODO: Update all deadlines
 
 ## Preparation
 

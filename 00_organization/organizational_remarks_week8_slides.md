@@ -45,23 +45,6 @@ td {
 }
 </style>
 
-| Date | Type | Chapter | Topic | Lecturer |
-| ---- | ---- | ------- |------ | -------- |
-| 12.11. |Lecture | 3 | Intro packaging, Python packaging | Ishaan |
-| 12.11. |Lab | 3 | Python packaging | Ishaan |
-| 19.11. |Lecture | 3 | Linux fundamentals, Make, CMake | Gerasimos |
-| 19.11. |Lab | 3 | CMake and Docker | Gerasimos |
-| 26.11. |Lecture | 3 | Spack | Ishaan |
-| 26.11. |Lab | 3 | Spack | Ishaan |
-| **03.12.** |**Lecture** | **3** | **CPack and more CMake** | **Benjamin** |
-| 03.12. |Lab | 3 | CPack | Benjamin |
-| 10.12. |Lecture | 4 | Technical writing | Gerasimos |
-| 10.12. |Lab | 4 | Code review | Gerasimos |
-| 17.12. |Presentations | C | **2nd student presentations** | students |
-| 17.12. |Presentations | C | **2nd student presentations** | students |
-
----
-
 ## Exam Registration
 
 - You have to register for exam (we cannot do this for you)
@@ -83,10 +66,12 @@ td {
 ## Challenge Contribution
 
 - Please open an issue in the [challenge repo](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/challenge) explaining what you want to work on in the contribution. We will then use these issues to further discuss the progress of the contribution. Provide links to issues, pull requests etc.
-    - Deadline (for opening the issue): Dec 17, 2025, 23:59
+    - Deadline (for opening the issue): Dec 16, 2026, 23:59
     - If you open earlier, you get feedback earlier
-    - Latest feedback from supervisors: Jan 7, 2025, 09:45
+    - Latest feedback from supervisors: Jan 13, 2027, 09:45
     - Title of issue: "Contribution to SOFTWARE by USERNAME"
     - Tag your supervisor in description
 - Get in touch with maintainers early (through official channels)
     - Discuss before you start developing
+
+TODO: Move dates out of here

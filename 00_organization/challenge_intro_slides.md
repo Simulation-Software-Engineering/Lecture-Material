@@ -150,7 +150,7 @@ The challenge part:
 
 ## Role of Advisor
 
-- Benjamin, Felix, Frédéric, Gerasimos, or Ishaan
+- Felix, Frédéric, Serge, or Gerasimos
 - Use, for example, exercise blocks and time before and after lectures for discussions
 - Share links etc. to issues and PRs (or tag us)
 

@@ -43,18 +43,19 @@ slideOptions:
 
 ## The Lecturers
 
-- Benjamin (Uekermann) [`@uekerman`](https://github.com/uekerman)
 - Gerasimos (Chourdakis) [`@MakisH`](https://github.com/MakisH)
-- Ishaan (Desai) [`@IshaanDesai`](https://github.com/IshaanDesai)
+- Frédéric (Simonis) [`@fsimonis`](https://github.com/fsimonis)
+- Felix (Neubauer) [`@Logende`](https://github.com/Logende)
+- On leave this year: Benjamin (Uekermann) [`@uekerman`](https://github.com/uekerman)
 
 Additional challenge advisors:
 
-- Frédéric (Simonis) [`@fsimonis`](https://github.com/fsimonis)
-- Felix (Neubauer) [`@Logende`](https://github.com/Logende)
+- Serge Kotchourko [`@TODO`](TODO)
 
 SSE Hall of Fame:
 
 - Alexander (Jaust) [`@ajaust`](https://github.com/ajaust)
+- Ishaan (Desai) [`@IshaanDesai`](https://github.com/IshaanDesai)
 
 ---
 

@@ -249,7 +249,7 @@ td {
 - *"good"* everywhere leads to 1.0.
 - We give (brief) feedback after every exercise.
 - You will need to register yourself to the *"exam"* on C@MPUS.
-- Last in: The deadline to pick a software (**Oct 22**, evening)
+- Last in: The deadline to pick a software (**Oct 21**, evening)
 - Last out: Once you handed in the first report (**Nov 6**)
 
 ---

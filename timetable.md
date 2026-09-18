@@ -1,5 +1,7 @@
 # Time Table
 
+TODO: Duplication of dates here and in course_intro_slides -> Drop dates from headings, move table here, show the table directly on GitHub.
+
 ## 1.1 – Wed, October 14, 2026
 
 - **40** min.: [Course planning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/course_intro_slides.md) + questions
@@ -93,7 +95,7 @@
 
 ## 10.1 – Wed, December 16, 2026
 
-- [Day of Research Software at the Uni Stuttgart, March 2, 2026](https://www.iws.uni-stuttgart.de/en/lh2/conferences-seminars-workshops/research-software-day/)
+- [Day of Research Software at the Uni Stuttgart, March 2, 2026](https://www.iws.uni-stuttgart.de/en/lh2/conferences-seminars-workshops/research-software-day/) TODO: Update
 - The Challenge, step two, presentations
 
 ## 10.2 – Wed, December 16, 2026
@@ -107,6 +109,8 @@
 - **35** min.: Documentation Website Generators: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/website_generators_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/website_generators_demo.md)
 
 ## 11.2 – Wed, January 13, 2027
+
+TODO: Swap lectures
 
 - **20** min.: [Floss Licenses](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/floss_licenses_slides.md)
 - **20** min.: [Versioning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/06_miscellaneous/versioning_slides.md)

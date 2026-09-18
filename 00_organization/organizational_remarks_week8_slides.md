@@ -66,10 +66,12 @@ td {
 ## Challenge Contribution
 
 - Please open an issue in the [challenge repo](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2526/challenge) explaining what you want to work on in the contribution. We will then use these issues to further discuss the progress of the contribution. Provide links to issues, pull requests etc.
-    - Deadline (for opening the issue): Dec 17, 2025, 23:59
+    - Deadline (for opening the issue): Dec 16, 2026, 23:59
     - If you open earlier, you get feedback earlier
-    - Latest feedback from supervisors: Jan 7, 2025, 09:45
+    - Latest feedback from supervisors: Jan 13, 2027, 09:45
     - Title of issue: "Contribution to SOFTWARE by USERNAME"
     - Tag your supervisor in description
 - Get in touch with maintainers early (through official channels)
     - Discuss before you start developing
+
+TODO: Move dates out of here

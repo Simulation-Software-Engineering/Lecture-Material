@@ -186,14 +186,14 @@ See [GitHub: timetable.md](https://github.com/Simulation-Software-Engineering/Le
 - *"good"* everywhere leads to 1.0.
 - We give (brief) feedback after every exercise.
 - You will need to register yourself to the *"exam"* on C@MPUS.
-- Last in: The deadline to pick a software (**Oct 21**, evening)
-- Last out: Once you handed in the first report (**Nov 6**)
+- Last in: The deadline to pick a software
+- Last out: Once you handed in the first report
 
 ---
 
 ## GitLab Account
 
-- Please write a mail till tonight to Ishaan.
+- Please write a mail till tonight to Gerasimos.
     - [gerasimos.chourdakis@ipvs.uni-stuttgart.de](mailto:gerasimos.chourdakis@ipvs.uni-stuttgart.de)
 - Email subject: "GitLab account SSE course"
 - State your **name** and preferred **email-address**

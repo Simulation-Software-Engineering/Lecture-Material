@@ -14,4 +14,4 @@ Learning goals:
 | 15 minutes | [`rse_basics.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/rse_basics_slides.md) |
 | 10 minutes | [`topic_overview_demo.md`](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/topic_overview_demo.md) |
 
-Folders such as `wt2122` contain organizational content specific to previous lectures.
+Folders such as `wt2x2y` contain organizational content specific to previous lectures.

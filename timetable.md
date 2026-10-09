@@ -1,42 +1,44 @@
 # Timetable
 
-| Week           | Date   | Type | Ch | Topic | Lecturer |
-| ----           | ----   | ---- | ------- |------ | -------- |
-| [1](#week-1)   | 14.10. | 🧑‍🏫 | 0 | Course intro, intro to SSE, VC basics | Gerasimos |
-|                |        | 🧑‍🏫 | 1 | Git basics, my Git workflow, Git quiz, how to challenge  | Gerasimos |
-| [2](#week-2)   | 21.10. | 🧑‍🏫 | 1 | *My neat little Git trick*, merge vs rebase, working in teams| Frédéric |
-|                |        | 💻️ | 1 | Git  | Frédéric |
-| [3](#week-3)   | 28.10. | 🧑‍🏫 | 2 | Containers and virtualization | Gerasimos |
-|                |        | 💻️ | 2 | Containers and virtualization | Gerasimos |
-| [4](#week-4)   | 04.11. | 🎉 |   | **1st student presentations** | |
-|                |        | 🎉 |   | **1st student presentations** | |
-| [5](#week-5)   | 11.11. | 🧑‍🏫 | 3 | Intro packaging, Python packaging | Felix |
-|                |        | 💻️ | 3 | Python packaging | Felix |
-| [6](#week-6)   | 18.11. | 🧑‍🏫 | 3 | Linux fundamentals, Make, CMake | Gerasimos |
-|                |        | 💻️ | 3 | CMake and Docker | Gerasimos |
-| [7](#week-7)   | 25.11. | 🧑‍🏫 | 3 | Spack | Frédéric |
-|                |        | 💻️ | 3 | Spack | Frédéric |
-| [8](#week-8)   | 02.12. | 🧑‍🏫 | 3 | CPack and more CMake | Frédéric |
-|                |        | 💻️ | 3 | CPack | Frédéric |
-| [9](#week-9)   | 09.12. | 🧑‍🏫 | 4 | Technical writing | Gerasimos |
-|                |        | 💻️ | 4 | Code review | Gerasimos |
-| [10](#week-10) | 16.12. | 🎉 |   | **2nd student presentations** | |
-|                |        | 🎉 |   | **2nd student presentations** | |
-|                | 23.12. | 🎄 | | _Christmasn break_ | |
-|                | 30.12. | 🎄 | | _Christmasn break_ | |
-|                | 06.01. | 🎄 | | _Christmasn break_ | |
-| [11](#week-11) | 13.01. | 🧑‍🏫 | 5 | Intro testing, testing in Python | Felix |
-|                |        | 💻️ | 5 | Testing in Python | Felix |
-| [12](#week-12) | 20.01. | 🧑‍🏫 | 4 | Markup, Pandoc, website gener. | Felix |
-|                |        | 🧑‍🏫 | 4 | FLOSS, versioning, repo layouts, DOI, Zenodo, DaRUS | Gerasimos |
-| [13](#week-13) | 27.01. | 🧑‍🏫 | 5 | Automation, GitHub Actions, GitLab CI | Felix |
-|                |        | 💻️ | 5 | GitHub Actions | Felix |
-| [14](#week-14) | 03.02. | 🧑‍🏫 | 5 | Boost.Test and CTest | Frédéric |
-|                |        | 💻️ | 5 | Boost.Test and CTest | Frédéric |
-| [15](#week-15) | 10.02. | 🎉 |   | **3rd student presentations** | |
-|                |        | 🎉 |   | **3rd student presentations** | |
+| Week           | Date   | Type | Topic | Lecturer |
+| ----           | ----   | ---- | ------ | -------- |
+| [1](#week-1)   | 14.10. | 🧑‍🏫 | Course intro, intro to SSE, VC basics | Gerasimos |
+|                |        | 🧑‍🏫 | Git basics, my Git workflow, Git quiz, how to challenge | Gerasimos |
+| [2](#week-2)   | 21.10. | 🧑‍🏫 | *My neat little Git trick*, merge vs rebase, working in teams | Frédéric |
+|                |        | 💻️ | Git | Frédéric |
+| [3](#week-3)   | 28.10. | 🧑‍🏫 | Virtualization and containers | Gerasimos |
+|                |        | 💻️ | Containers | Gerasimos |
+| [4](#week-4)   | 04.11. | 🎉 | **1st student presentations** | |
+|                |        | 🎉 | **1st student presentations** | |
+| [5](#week-5)   | 11.11. | 🧑‍🏫 | Intro packaging, Python packaging | Felix |
+|                |        | 💻️ | Python packaging | Felix |
+| [6](#week-6)   | 18.11. | 🧑‍🏫 | Linux fundamentals, Make, CMake | Gerasimos |
+|                |        | 💻️ | CMake and Docker | Gerasimos |
+| [7](#week-7)   | 25.11. | 🧑‍🏫 | Spack | Frédéric |
+|                |        | 💻️ | Spack | Frédéric |
+| [8](#week-8)   | 02.12. | 🧑‍🏫 | CPack and more CMake | Frédéric |
+|                |        | 💻️ | CPack | Frédéric |
+| [9](#week-9)   | 09.12. | 🧑‍🏫 | Technical writing | Gerasimos |
+|                |        | 💻️ | Code review | Gerasimos |
+| [10](#week-10) | 16.12. | 🎉 | **2nd student presentations** | |
+|                |        | 🎉 | **2nd student presentations** | |
+|                | 23.12. | 🎄 | _Christmasn break_ | |
+|                | 30.12. | 🎄 | _Christmasn break_ | |
+|                | 06.01. | 🎄 | _Christmasn break_ | |
+| [11](#week-11) | 13.01. | 🧑‍🏫 | Intro testing, testing in Python | Felix |
+|                |        | 💻️ | Testing in Python | Felix |
+| [12](#week-12) | 20.01. | 🧑‍🏫 | Markup, Pandoc, website gener. | Felix |
+|                |        | 🧑‍🏫 | FLOSS, versioning, repo layouts, DOI, Zenodo, DaRUS | Gerasimos |
+| [13](#week-13) | 27.01. | 🧑‍🏫 | Automation, GitHub Actions, GitLab CI | Felix |
+|                |        | 💻️ | GitHub Actions | Felix |
+| [14](#week-14) | 03.02. | 🧑‍🏫 | Boost.Test and CTest | Frédéric |
+|                |        | 💻️ | Boost.Test and CTest | Frédéric |
+| [15](#week-15) | 10.02. | 🎉 | **3rd student presentations** | |
+|                |        | 🎉 | **3rd student presentations** | |
 
 ## Week 1
+
+Introduction and Chapter 1: Version control
 
 - Morning:
   - **40** min.: [Course planning](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/course_intro_slides.md) + questions
@@ -52,6 +54,8 @@
 
 ## Week 2
 
+Chapter 1: Version control (cont.)
+
 - Morning:
   - **30** min.: [*My favorite neat little Git trick*](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/my_favorite_neat_little_git_trick_demo.md)
   - **25** min.: [Merge vs. rebase](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/merge_rebase_slides.md)
@@ -61,6 +65,8 @@
   - **90** min.: [Exercise on Git Workflows](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_exercise.md)
 
 ## Week 3
+
+Chapter 2: Virtualization and containers
 
 - Morning:
   - **5** min.: [Virtualization and Containers](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/02_virtualization_and_containers/intro_slides.md)
@@ -73,12 +79,16 @@
 
 ## Week 4
 
+Student presentations
+
 - Morning:
   - The Challenge, step one, presentations
 - Afternoon:
   - The Challenge, step one, presentations
 
 ## Week 5
+
+Chapter 3: Building and packaging - Python
 
 - Morning:
   - **15** min.: [Introduction to Packaging](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/intro_slides.md)
@@ -87,6 +97,8 @@
   - **90** min.: [Exercise on Packaging a Python Code](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/pypi_exercise.md)
 
 ## Week 6
+
+Chapter 3: Building and packaging - Linux
 
 - Morning:
   - **25** min.: Some Linux fundamentals: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/linux_fundamentals_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/linux_fundamentals_demo.md)
@@ -97,12 +109,16 @@
 
 ## Week 7
 
+Chapter 3: Building and packaging - Spack
+
 - Morning:
   - **90** min.: Packaging for High-Performance Computing: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_demo.md)
 - Afternoon:
   - **90** min.: [Exercise: Packaging with Spack](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/spack_exercise.md)
 
 ## Week 8
+
+Chapter 3: Building and packaging - CMake and CPack
 
 - Morning:
   - **5** min.: Organizational remarks: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/00_organization/organizational_remarks_week8_slides.md)
@@ -113,12 +129,16 @@
 
 ## Week 9
 
+Chapter 4: Documentation - Technical writing, code review
+
 - Morning:
   - **90** min.: Technical Writing: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/technical_writing_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/technical_writing_demo.md)
 - Afternoon:
   - **90** min.: [Exercise: Reviewing with AI tools](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/reviewing_exercise.md)
 
 ## Week 10
+
+Student presentations
 
 - Morning:
   - The Challenge, step two, presentations
@@ -127,6 +147,8 @@
 
 ## Week 11
 
+Chapter 5: Testing and continuous integration - Python
+
 - Morning:
   - **20** min.: Introduction to Testing: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/intro_slides.md)
   - **70** min.: Testing Python Code: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_demo.md)
@@ -134,6 +156,9 @@
   - **90** min.: [Exercise: Testing Python Code](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/python_testing_exercise.md)
 
 ## Week 12
+
+Chapter 4: Documentation - Tools,<br/>
+Chapter 6: Publishing and free software
 
 - Morning:
   - **25** min.: Markup Languages: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/04_documentation/markup_languages_slides.md)
@@ -147,6 +172,8 @@
 
 ## Week 13
 
+Chapter 5: Testing and continuous integration - GitHub Actions and GitLab CI
+
 - Morning:
   - **15** min.: [Automation](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/automation_slides.md)
   - **45** min.: GitHub Actions: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/github_actions_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/github_actions_demo.md)
@@ -155,6 +182,8 @@
   - **90** min.: [Exercise: Automating Workflows with GitHub Actions](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/automation_exercise.md)
 
 ## Week 14
+
+Chapter 5: Testing and continuous integration - Boost.Test and CTest
 
 - Morning:
   - **20** min.: Introduction to Boost.Test: [slides](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_intro_slides.md), [demo](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_intro_demo.md)
@@ -165,6 +194,8 @@
   - **90** min.: [Boost.Test and CTest in Action: SideMade Exercise](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/05_testing_and_ci/boost_testing_exercise.md)
 
 ## Week 15
+
+Student presentations
 
 - Morning:
   - The Challenge, step three, presentations

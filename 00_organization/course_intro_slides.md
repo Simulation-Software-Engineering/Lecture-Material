@@ -257,7 +257,7 @@ td {
 ## GitLab Account
 
 - Please write a mail till tonight to Ishaan.
-    - [ishaan.desai@ipvs.uni-stuttgart.de](mailto:ishaan.desai@ipvs.uni-stuttgart.de)
+    - [gerasimos.chourdakis@ipvs.uni-stuttgart.de](mailto:gerasimos.chourdakis@ipvs.uni-stuttgart.de)
 - Email subject: "GitLab account SSE course"
 - State your **name** and preferred **email-address**
 - If you already have an IPVS-SIM GitLab account, we only need your username.

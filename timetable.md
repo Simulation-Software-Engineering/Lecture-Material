@@ -1,17 +1,16 @@
 # Timetable
 
-Semester: Winter term 2026-27
-
-| Week           | Date   | Type | Topic | Lecturer |
+| Week           | Date   | Type | Description | Lecturer |
 | ----           | ----   | ---- | ------ | -------- |
 | [1](#week-1)   | 14.10. | 🧑‍🏫 | Course intro, intro to SSE, VC basics | Gerasimos |
 |                |        | 🧑‍🏫 | Git basics, my Git workflow, Git quiz, how to challenge | Gerasimos |
 | [2](#week-2)   | 21.10. | 🧑‍🏫 | *My neat little Git trick*, merge vs rebase, working in teams | Frédéric |
 |                |        | 💻️ | Git | Frédéric |
+|                |        | ⚠️ | **Deadline:** Register for the Challenge (pick software) | |
 | [3](#week-3)   | 28.10. | 🧑‍🏫 | Virtualization and containers | Gerasimos |
 |                |        | 💻️ | Containers | Gerasimos |
-| [4](#week-4)   | 04.11. | 🎉 | **1st student presentations** | |
-|                |        | 🎉 | **1st student presentations** | |
+| [4](#week-4)   | 04.11. | 🎉 | Student presentations: Challenge - step 1 | |
+|                |        | 🎉 | Student presentations: Challenge - step 1 | |
 | [5](#week-5)   | 11.11. | 🧑‍🏫 | Intro packaging, Python packaging | Felix |
 |                |        | 💻️ | Python packaging | Felix |
 | [6](#week-6)   | 18.11. | 🧑‍🏫 | Linux fundamentals, Make, CMake | Gerasimos |
@@ -22,8 +21,9 @@ Semester: Winter term 2026-27
 |                |        | 💻️ | CPack | Frédéric |
 | [9](#week-9)   | 09.12. | 🧑‍🏫 | Technical writing | Gerasimos |
 |                |        | 💻️ | Code review | Gerasimos |
-| [10](#week-10) | 16.12. | 🎉 | **2nd student presentations** | |
-|                |        | 🎉 | **2nd student presentations** | |
+| [10](#week-10) | 16.12. | 🎉 | Student presentations: Challenge - step 2 | |
+|                |        | 🎉 | Student presentations: Challenge - step 2 | |
+|                |        | ⚠️ | **Deadline:** Suggest a Challenge contribution | |
 |                | 23.12. | 🎄 | _Christmasn break_ | |
 |                | 30.12. | 🎄 | _Christmasn break_ | |
 |                | 06.01. | 🎄 | _Christmasn break_ | |
@@ -35,8 +35,14 @@ Semester: Winter term 2026-27
 |                |        | 💻️ | GitHub Actions | Felix |
 | [14](#week-14) | 03.02. | 🧑‍🏫 | Boost.Test and CTest | Frédéric |
 |                |        | 💻️ | Boost.Test and CTest | Frédéric |
-| [15](#week-15) | 10.02. | 🎉 | **3rd student presentations** | |
-|                |        | 🎉 | **3rd student presentations** | |
+| [15](#week-15) | 10.02. | 🎉 | Student presentations: Challenge - step 3 | |
+|                |        | 🎉 | Student presentations: Challenge - step 3 | |
+
+This timetable is for the winter term 2026-27.
+
+Resources:
+
+- [Challenge respository](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2627/challenge)
 
 ## Week 1
 
@@ -65,6 +71,8 @@ Chapter 1: Version control (cont.)
     - **10** min.: [GitHub/GitLab standards](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/standards_slides.md)
 - Afternoon:
     - **90** min.: [Exercise on Git Workflows](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/01_version_control/git_exercise.md)
+
+**Deadline:** (23:59) Register for the Challenge.
 
 ## Week 3
 
@@ -146,6 +154,8 @@ Student presentations
     - The Challenge, step two, presentations
 - Afternoon:
     - The Challenge, step two, presentations
+
+**Deadline:** Suggest a Challenge contribution.
 
 ## Week 11
 

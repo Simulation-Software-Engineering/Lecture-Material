@@ -161,11 +161,11 @@ Two parallel branches:
 
 ### Timeline
 
-- Pick a software (till **Oct 21**, evening)
-- **Step 1**: Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 4**)
-- **Step 2**: Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 16**)
-- Suggest contribution (**Dec 16**)
-- **Step 3**: Present the contribution (**Feb 3**)
+- Pick a software project to contribute to
+- **Step 1**: Present the software: how you got it, what are main features, some tutorials you did, ...
+- **Step 2**: Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work?
+- Suggest contribution
+- **Step 3**: Present the contribution
 
 ---
 

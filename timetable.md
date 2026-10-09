@@ -1,7 +1,7 @@
 # Timetable
 
 | Week           | Date   | Type | Description | Lecturer |
-| ----           | ----   | ---- | ------ | -------- |
+| ---            | ---    | ---  | ---         | ---      |
 | [1](#week-1)   | 14.10. | 🧑‍🏫 | Course intro, intro to SSE, VC basics | Gerasimos |
 |                |        | 🧑‍🏫 | Git basics, my Git workflow, Git quiz, how to challenge | Gerasimos |
 | [2](#week-2)   | 21.10. | 🧑‍🏫 | *My neat little Git trick*, merge vs rebase, working in teams | Frédéric |

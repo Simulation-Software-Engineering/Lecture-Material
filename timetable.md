@@ -1,40 +1,40 @@
 # Timetable
 
-| Week           | Date | Type | Chapter | Topic | Lecturer |
-| ----           | ---- | ---- | ------- |------ | -------- |
-| [1](#week-1)   | 14.10. |Lecture | 0-1 | Course intro, intro to SSE, VC basics | Gerasimos |
-|                |        |Lecture | 1 | Git basics, my Git workflow, Git quiz, how to challenge  | Gerasimos |
-| [2](#week-2)   | 21.10. |Lecture | 1 | *My neat little Git trick*, merge vs rebase, working in teams| Frédéric |
-|                |        |Lab | 1 | Git  | Frédéric |
-| [3](#week-3)   | 28.10. |Lecture | 2 | Containers and virtualization | Gerasimos |
-|                |        |Lab | 2 | Containers and virtualization | Gerasimos |
-| [4](#week-4)   | 04.11. |Presentations | C | **1st student presentations** | students |
-|                |        |Presentations | C | **1st student presentations** | students |
-| [5](#week-5)   | 11.11. |Lecture | 3 | Intro packaging, Python packaging | Felix |
-|                |        |Lab | 3 | Python packaging | Felix |
-| [6](#week-6)   | 18.11. |Lecture | 3 | Linux fundamentals, Make, CMake | Gerasimos |
-|                |        |Lab | 3 | CMake and Docker | Gerasimos |
-| [7](#week-7)   | 25.11. |Lecture | 3 | Spack | Frédéric |
-|                |        |Lab | 3 | Spack | Frédéric |
-| [8](#week-8)   | 02.12. |Lecture | 3 | CPack and more CMake | Frédéric |
-|                |        |Lab | 3 | CPack | Frédéric |
-| [9](#week-9)   | 09.12. |Lecture | 4 | Technical writing | Gerasimos |
-|                |        |Lab | 4 | Code review | Gerasimos |
-| [10](#week-10) | 16.12. |Presentations | C | **2nd student presentations** | students |
-|                |        |Presentations | C | **2nd student presentations** | students |
+| Week           | Date   | Type | Ch | Topic | Lecturer |
+| ----           | ----   | ---- | ------- |------ | -------- |
+| [1](#week-1)   | 14.10. | 🧑‍🏫 | 0 | Course intro, intro to SSE, VC basics | Gerasimos |
+|                |        | 🧑‍🏫 | 1 | Git basics, my Git workflow, Git quiz, how to challenge  | Gerasimos |
+| [2](#week-2)   | 21.10. | 🧑‍🏫 | 1 | *My neat little Git trick*, merge vs rebase, working in teams| Frédéric |
+|                |        | 💻️ | 1 | Git  | Frédéric |
+| [3](#week-3)   | 28.10. | 🧑‍🏫 | 2 | Containers and virtualization | Gerasimos |
+|                |        | 💻️ | 2 | Containers and virtualization | Gerasimos |
+| [4](#week-4)   | 04.11. | 🎉 |   | **1st student presentations** | |
+|                |        | 🎉 |   | **1st student presentations** | |
+| [5](#week-5)   | 11.11. | 🧑‍🏫 | 3 | Intro packaging, Python packaging | Felix |
+|                |        | 💻️ | 3 | Python packaging | Felix |
+| [6](#week-6)   | 18.11. | 🧑‍🏫 | 3 | Linux fundamentals, Make, CMake | Gerasimos |
+|                |        | 💻️ | 3 | CMake and Docker | Gerasimos |
+| [7](#week-7)   | 25.11. | 🧑‍🏫 | 3 | Spack | Frédéric |
+|                |        | 💻️ | 3 | Spack | Frédéric |
+| [8](#week-8)   | 02.12. | 🧑‍🏫 | 3 | CPack and more CMake | Frédéric |
+|                |        | 💻️ | 3 | CPack | Frédéric |
+| [9](#week-9)   | 09.12. | 🧑‍🏫 | 4 | Technical writing | Gerasimos |
+|                |        | 💻️ | 4 | Code review | Gerasimos |
+| [10](#week-10) | 16.12. | 🎉 |   | **2nd student presentations** | |
+|                |        | 🎉 |   | **2nd student presentations** | |
 |                | 23.12. | 🎄 | | _Christmasn break_ | |
 |                | 30.12. | 🎄 | | _Christmasn break_ | |
 |                | 06.01. | 🎄 | | _Christmasn break_ | |
-| [11](#week-11) | 13.01. |Lecture | 5 | Intro testing, testing in Python | Felix |
-|                |        |Lab | 5 | Testing in Python | Felix |
-| [12](#week-12) | 20.01. |Lecture | 4 | Markup, Pandoc, website gener. | Felix |
-|                |        |Lecture | 4 | FLOSS, versioning, repo layouts, DOI, Zenodo, DaRUS | Gerasimos |
-| [13](#week-13) | 27.01. |Lecture | 5 | Automation, GitHub Actions, GitLab CI | Felix |
-|                |        |Lab | 5 | GitHub Actions | Felix |
-| [14](#week-14) | 03.02. |Lecture | 5 | Boost.Test and CTest | Frédéric |
-|                |        |Lab | 5 | Boost.Test and CTest | Frédéric |
-| [15](#week-15) | 10.02. |Presentations | C | **3rd student presentations** | students |
-|                |        |Presentations | C | **3rd student presentations** | students |
+| [11](#week-11) | 13.01. | 🧑‍🏫 | 5 | Intro testing, testing in Python | Felix |
+|                |        | 💻️ | 5 | Testing in Python | Felix |
+| [12](#week-12) | 20.01. | 🧑‍🏫 | 4 | Markup, Pandoc, website gener. | Felix |
+|                |        | 🧑‍🏫 | 4 | FLOSS, versioning, repo layouts, DOI, Zenodo, DaRUS | Gerasimos |
+| [13](#week-13) | 27.01. | 🧑‍🏫 | 5 | Automation, GitHub Actions, GitLab CI | Felix |
+|                |        | 💻️ | 5 | GitHub Actions | Felix |
+| [14](#week-14) | 03.02. | 🧑‍🏫 | 5 | Boost.Test and CTest | Frédéric |
+|                |        | 💻️ | 5 | Boost.Test and CTest | Frédéric |
+| [15](#week-15) | 10.02. | 🎉 |   | **3rd student presentations** | |
+|                |        | 🎉 |   | **3rd student presentations** | |
 
 ## Week 1
 

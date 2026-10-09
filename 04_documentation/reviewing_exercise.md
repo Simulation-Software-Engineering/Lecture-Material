@@ -2,7 +2,7 @@
 
 Let us get familiar with code review tools and practices.
 
-Deadline: **December 17, 2025, 9:00**
+Deadline: **December 16, 2026, 9:00**
 
 **Note:** In this exercise, we use GenAI tools, which evolve rapidly. Feedback and suggestions are very welcome - [open an issue](https://github.com/Simulation-Software-Engineering/Lecture-Material/issues).
 

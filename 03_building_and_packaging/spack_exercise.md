@@ -4,7 +4,7 @@ This exercise is about packaging code with Spack. We work with a simplified vers
 
 **Note**: At the end of the exercise you find a section with hints and remarks. Make sure to check this section.
 
-Deadline: **Wednesday, December 3rd, 2025, 09:00**
+Deadline: **Wednesday, December 2, 2026, 09:00**
 
 ## Creation of a Spack Package
 

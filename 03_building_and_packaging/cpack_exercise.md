@@ -2,7 +2,7 @@
 
 Let us try to package the code from the CMake exercise with CPack, such that we can give the (binary) software to somebody else.
 
-Deadline: **December 10, 2025, 9:00**
+Deadline: **December 9, 2026, 9:00**
 
 ## Overview
 

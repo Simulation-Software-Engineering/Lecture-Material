@@ -2,7 +2,7 @@
 
 In this exercise, we work with the virtualization and container techniques that we have seen in the lecture. We set up a virtual machine manually first and then automate the process using Vagrant. Afterwards, we build our own container using Docker.
 
-Deadline: **Wednesday, November 5, 2025, 9:00**
+Deadline: **Wednesday, November 4, 2026, 9:00**
 
 ## Prerequisites
 

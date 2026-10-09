@@ -43,18 +43,19 @@ slideOptions:
 
 ## The Lecturers
 
-- Benjamin (Uekermann) [`@uekerman`](https://github.com/uekerman)
 - Gerasimos (Chourdakis) [`@MakisH`](https://github.com/MakisH)
-- Ishaan (Desai) [`@IshaanDesai`](https://github.com/IshaanDesai)
+- Frédéric (Simonis) [`@fsimonis`](https://github.com/fsimonis)
+- Felix (Neubauer) [`@Logende`](https://github.com/Logende)
+- On leave this year: Benjamin (Uekermann) [`@uekerman`](https://github.com/uekerman)
 
 Additional challenge advisors:
 
-- Frédéric (Simonis) [`@fsimonis`](https://github.com/fsimonis)
-- Felix (Neubauer) [`@Logende`](https://github.com/Logende)
+- Serge Kotchourko [`@kotserge`](https://github.com/kotserge)
 
 SSE Hall of Fame:
 
 - Alexander (Jaust) [`@ajaust`](https://github.com/ajaust)
+- Ishaan (Desai) [`@IshaanDesai`](https://github.com/IshaanDesai)
 
 ---
 
@@ -76,7 +77,7 @@ SSE Hall of Fame:
 Two parallel branches:
 
 - **Weekly lectures** (90 mins) and **exercises** (90 mins) to learn and train concepts and tools
-    - Wednesdays, 09:45–11:15 (in V47.05) and 15:45–17:15 (in 38-0.108, might be too small in first week)
+    - Wednesdays, 09:45–11:15 (in V47.05) and 15:45–17:15 (in 38-0.124, might be too small in the beginning)
     - Typically lecture in the morning and exercise in the afternoon
 - **Individual challenge**: contribute to real simulation software :rocket:
     - List of software candidates: this afternoon
@@ -160,80 +161,17 @@ Two parallel branches:
 
 ### Timeline
 
-- Pick a software (till **Oct 22**, evening)
-- **Step 1**: Present the software: how you got it, what are main features, some tutorials you did, ... (**Nov 5**)
-- **Step 2**: Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? (**Dec 17**)
-- Suggest contribution (**Dec 17**)
-- **Step 3**: Present the contribution (**Feb 4**)
+- Pick a software project to contribute to
+- **Step 1**: Present the software: how you got it, what are main features, some tutorials you did, ...
+- **Step 2**: Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work?
+- Suggest contribution
+- **Step 3**: Present the contribution
 
 ---
 
-## Time Table I
+## Timetable
 
-<style>
-td {
-    font-size: 35px
-}
-</style>
-
-| Date | Type | Chapter | Topic | Lecturer |
-| ---- | ---- | ------- |------ | -------- |
-| 15.10. |Lecture | 0-1 | Course intro, intro to SSE, VC basics | Benjamin |
-| 15.10. |Lecture | 1 | Git basics, my Git workflow, Git quiz, how to challenge  | Benjamin |
-| 22.10. |Lecture | 1 | *My neat little Git trick*, merge vs rebase, working in teams| Benjamin |
-| 22.10. |Lab | 1 | Git  | Benjamin |
-| 29.10. |Lecture | 2 | Containers and virtualization | Gerasimos |
-| 29.10. |Lab | 2 | Containers and virtualization | Gerasimos |
-| 05.11. |Presentations | C | **1st student presentations** | students |
-| 05.11. |Presentations | C | **1st student presentations** | students |
-
----
-
-## Time Table II
-
-<style>
-td {
-    font-size: 35px
-}
-</style>
-
-| Date | Type | Chapter | Topic | Lecturer |
-| ---- | ---- | ------- |------ | -------- |
-| 12.11. |Lecture | 3 | Intro packaging, Python packaging | Ishaan |
-| 12.11. |Lab | 3 | Python packaging | Ishaan |
-| 19.11. |Lecture | 3 | Linux fundamentals, Make, CMake | Gerasimos |
-| 19.11. |Lab | 3 | CMake and Docker | Gerasimos |
-| 26.11. |Lecture | 3 | Spack | Ishaan |
-| 26.11. |Lab | 3 | Spack | Ishaan |
-| 03.12. |Lecture | 3 | CPack and more CMake | Benjamin |
-| 03.12. |Lab | 3 | CPack | Benjamin |
-| 10.12. |Lecture | 4 | Technical writing | Gerasimos |
-| 10.12. |Lab | 4 | Code review | Gerasimos |
-| 17.12. |Presentations | C | **2nd student presentations** | students |
-| 17.12. |Presentations | C | **2nd student presentations** | students |
-
----
-
-## Time Table III
-
-<style>
-td {
-    font-size: 35px
-}
-</style>
-
-| Date | Type | Chapter | Topic | Lecturer |
-| ---- | ---- | ------- |------ | -------- |
-| 07.01. |Lecture | 4 | Markup, Pandoc, website gener. | Benjamin |
-| 07.01. |Lecture | 4 | FLOSS, versioning, repo layouts, DOI, Zenodo, DaRUS | Benjamin |
-| 14.01. |Lecture | 5 | Intro testing, testing in Python | Ishaan |
-| 14.01. |Lab | 5 | Testing in Python | Ishaan |
-| 21.01. |Lecture | 5 | Automation, GitHub Actions, GitLab CI | Gerasimos|
-| 21.01. |Lab | 5 | GitHub Actions | Gerasimos|
-| 28.01. |Lecture | 5 | Boost.Test and CTest | Benjamin |
-| 28.01. |Lab | 5 | Boost.Test and CTest | Benjamin |
-| 04.02. |Presentations | C | **3rd student presentations** | students |
-| 04.02. |Presentations | C | **3rd student presentations** | students |
+See [GitHub: timetable.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/timetable.md)
 
 ---
 
@@ -248,15 +186,15 @@ td {
 - *"good"* everywhere leads to 1.0.
 - We give (brief) feedback after every exercise.
 - You will need to register yourself to the *"exam"* on C@MPUS.
-- Last in: The deadline to pick a software (**Oct 22**, evening)
-- Last out: Once you handed in the first report (**Nov 6**)
+- Last in: The deadline to pick a software
+- Last out: Once you handed in the first report
 
 ---
 
 ## GitLab Account
 
-- Please write a mail till tonight to Ishaan.
-    - [ishaan.desai@ipvs.uni-stuttgart.de](mailto:ishaan.desai@ipvs.uni-stuttgart.de)
+- Please write a mail till tonight to Gerasimos.
+    - [gerasimos.chourdakis@ipvs.uni-stuttgart.de](mailto:gerasimos.chourdakis@ipvs.uni-stuttgart.de)
 - Email subject: "GitLab account SSE course"
 - State your **name** and preferred **email-address**
 - If you already have an IPVS-SIM GitLab account, we only need your username.

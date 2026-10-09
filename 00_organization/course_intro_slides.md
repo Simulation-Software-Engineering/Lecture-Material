@@ -77,7 +77,7 @@ SSE Hall of Fame:
 Two parallel branches:
 
 - **Weekly lectures** (90 mins) and **exercises** (90 mins) to learn and train concepts and tools
-    - Wednesdays, 09:45–11:15 (in V47.05) and 15:45–17:15 (in 38-0.108, might be too small in first week)
+    - Wednesdays, 09:45–11:15 (in V47.05) and 15:45–17:15 (in 38-0.124, might be too small in the beginning)
     - Typically lecture in the morning and exercise in the afternoon
 - **Individual challenge**: contribute to real simulation software :rocket:
     - List of software candidates: this afternoon

@@ -169,72 +169,9 @@ Two parallel branches:
 
 ---
 
-## Time Table I
+## Timetable
 
-<style>
-td {
-    font-size: 35px
-}
-</style>
-
-| Date | Type | Chapter | Topic | Lecturer |
-| ---- | ---- | ------- |------ | -------- |
-| 14.10. |Lecture | 0-1 | Course intro, intro to SSE, VC basics | Gerasimos |
-| 14.10. |Lecture | 1 | Git basics, my Git workflow, Git quiz, how to challenge  | Gerasimos |
-| 21.10. |Lecture | 1 | *My neat little Git trick*, merge vs rebase, working in teams| Frédéric |
-| 21.10. |Lab | 1 | Git  | Frédéric |
-| 28.10. |Lecture | 2 | Containers and virtualization | Gerasimos |
-| 28.10. |Lab | 2 | Containers and virtualization | Gerasimos |
-| 04.11. |Presentations | C | **1st student presentations** | students |
-| 04.11. |Presentations | C | **1st student presentations** | students |
-
----
-
-## Time Table II
-
-<style>
-td {
-    font-size: 35px
-}
-</style>
-
-| Date | Type | Chapter | Topic | Lecturer |
-| ---- | ---- | ------- |------ | -------- |
-| 11.11. |Lecture | 3 | Intro packaging, Python packaging | Felix |
-| 11.11. |Lab | 3 | Python packaging | Felix |
-| 18.11. |Lecture | 3 | Linux fundamentals, Make, CMake | Gerasimos |
-| 18.11. |Lab | 3 | CMake and Docker | Gerasimos |
-| 25.11. |Lecture | 3 | Spack | Frédéric |
-| 25.11. |Lab | 3 | Spack | Frédéric |
-| 02.12. |Lecture | 3 | CPack and more CMake | Frédéric |
-| 02.12. |Lab | 3 | CPack | Frédéric |
-| 09.12. |Lecture | 4 | Technical writing | Gerasimos |
-| 09.12. |Lab | 4 | Code review | Gerasimos |
-| 16.12. |Presentations | C | **2nd student presentations** | students |
-| 16.12. |Presentations | C | **2nd student presentations** | students |
-
----
-
-## Time Table III
-
-<style>
-td {
-    font-size: 35px
-}
-</style>
-
-| Date | Type | Chapter | Topic | Lecturer |
-| ---- | ---- | ------- |------ | -------- |
-| 13.01. |Lecture | 5 | Intro testing, testing in Python | Felix |
-| 13.01. |Lab | 5 | Testing in Python | Felix |
-| 20.01. |Lecture | 4 | Markup, Pandoc, website gener. | Felix |
-| 20.01. |Lecture | 4 | FLOSS, versioning, repo layouts, DOI, Zenodo, DaRUS | Gerasimos |
-| 27.01. |Lecture | 5 | Automation, GitHub Actions, GitLab CI | Felix |
-| 27.01. |Lab | 5 | GitHub Actions | Felix |
-| 03.02. |Lecture | 5 | Boost.Test and CTest | Frédéric |
-| 03.02. |Lab | 5 | Boost.Test and CTest | Frédéric |
-| 10.02. |Presentations | C | **3rd student presentations** | students |
-| 10.02. |Presentations | C | **3rd student presentations** | students |
+See [GitHub: timetable.md](https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/timetable.md)
 
 ---
 

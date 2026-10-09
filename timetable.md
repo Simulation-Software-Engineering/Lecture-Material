@@ -1,5 +1,7 @@
 # Timetable
 
+Semester: Winter term 2026-27
+
 | Week           | Date   | Type | Topic | Lecturer |
 | ----           | ----   | ---- | ------ | -------- |
 | [1](#week-1)   | 14.10. | 🧑‍🏫 | Course intro, intro to SSE, VC basics | Gerasimos |

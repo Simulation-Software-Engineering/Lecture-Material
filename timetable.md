@@ -24,9 +24,9 @@
 | [10](#week-10) | 16.12. | 🎉 | Student presentations: Challenge - step 2 | |
 |                |        | 🎉 | Student presentations: Challenge - step 2 | |
 |                |        | ⚠️ | **Deadline:** Suggest a Challenge contribution | |
-| -              | 23.12. | 🎄 | _Christmasn break_ | |
-| -              | 30.12. | 🎄 | _Christmasn break_ | |
-| -              | 06.01. | 🎄 | _Christmasn break_ | |
+| -              | 23.12. | 🎄 | _Christmas break_ | |
+| -              | 30.12. | 🎄 | _Christmas break_ | |
+| -              | 06.01. | 🎄 | _Christmas break_ | |
 | [11](#week-11) | 13.01. | 🧑‍🏫 | Intro testing, testing in Python | Felix |
 |                |        | 💻️ | Testing in Python | Felix |
 | [12](#week-12) | 20.01. | 🧑‍🏫 | Markup, Pandoc, website gener. | Felix |

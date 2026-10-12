@@ -28,3 +28,6 @@
     - LGPL3 license
     - semantic versioning scheme
     - [distribution published on DaRUS](https://darus.uni-stuttgart.de/dataset.xhtml?persistentId=doi:10.18419/darus-4167)
+- Contributors:
+    - Many contributors in the [core](https://github.com/precice/precice), [tutorials](https://github.com/precice/tutorials), and more repositories.
+    - Participated in the [Google Summer of Code 2026](https://precice.org/community-contribute-open-projects.html) - Maybe interesting to apply.

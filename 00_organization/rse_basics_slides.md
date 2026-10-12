@@ -36,13 +36,18 @@ slideOptions:
 
 ---
 
-## Starting Points
+## Starting ooints
 
 - [DORA declaration](https://sfdora.org/) in 2012: reshape how research impact should be assessed underlining importance of software
 
 > For the purposes of research assessment, consider the value and impact of all research outputs (including datasets and software) in addition to research publications ...
 
 - [UK survey in 2014](https://zenodo.org/record/1183562): 7 out of 10 researchers could not conduct research without software.
+
+---
+
+## First steps and clear need
+
 - DFG funding calls on research software in 2016 & 2019 & [2022](https://www.dfg.de/en/news/news-topics/announcements-proposals/2022/info-wissenschaft-22-85)
 - [Nationale Forschungsdaten Infrastruktur, NFDI](https://www.nfdi.de/?lang=en) since 2020
 - Lack of careers for software developers in academia
@@ -50,7 +55,7 @@ slideOptions:
 
 ---
 
-## RSE Movement
+## RSE movement
 
 ... academic software developers needed a name:
 **Research Software Engineers**
@@ -59,8 +64,14 @@ slideOptions:
 
 > A Research Software Engineer (RSE) combines professional software engineering expertise with an intimate understanding of research.
 
-- *"Movement"* started in the UK, first UK RSE conference in 2016
-- First conferences in Germany and the Netherlands in 2019 ([deRSE 2026](https://events.hifis.net/event/2945/) is in Stuttgart, March 3-5)
+*"Movement"* started in the UK, first UK RSE conference in 2016
+
+---
+
+## The RSE movement in Germany
+
+- First conferences in Germany and the Netherlands in 2019
+- [deRSE 2026](https://events.hifis.net/event/2945/) was in Stuttgart, 2027 in Dortmund
 - [First de-RSE position paper](https://f1000research.com/articles/9-295/v2) in 2020, [several working groups](https://de-rse.org/en/working_groups.html)
     - [Learning and teaching RSE](https://de-rse.org/learn-and-teach/), [foundational competencies](https://de-rse.org/blog/2024/10/08/identifying-the-foundational-competencies-of-an-RSE-en.html)
 - [Why be an RSE?](https://researchit.blogs.bristol.ac.uk/2021/10/14/international-rse-day-why-be-an-rse/) Interesting and novel projects, technical freedom, RSEs come from varied backgrounds, development for social good
@@ -68,8 +79,6 @@ slideOptions:
 ---
 
 ## How is Simulation Software Engineering different from RSE?
-
-> Why is the name of the course SSE and not RSE?
 
 - Difference is not so big actually.
 - Simulation research depends on software by definition (even less a *"by-product"* than for research in Chemistry, Biology, ...).
@@ -81,9 +90,20 @@ slideOptions:
 ## Do I need this in Industry?
 
 - Yes. Research also happens in industry.
-- All things we learn (Git, packaging, CI/CD, virtualization, documentation, ...) is also highly relevant for non-research software.
+- All topics we discuss also apply to non-research software.
 - Companies use (more and more) the same workflows and tools.
     - It is not just about coding. It is about collaborative work.
-- Open-source development excellent door opener for industry.
+- Open-source development is excellent door opener for industry.
 - Some companies use open-source software and need to make contributions.
 - Some companies develop their software as open-source software.
+
+---
+
+## How can I start contributing to open-source?
+
+- Fix something that annoys you.
+- Support programs:
+  - [Outreachy](https://www.outreachy.org/)
+  - [Google Summer of Code](https://summerofcode.withgoogle.com/)
+- Do your thesis on an open-source project 😉
+- Do the SSE challenge!

@@ -43,6 +43,7 @@ This timetable is for the winter term 2026-27.
 Resources:
 
 - [Challenge respository](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2627/challenge)
+- [Register for the Challenge](https://gitlab-sim.informatik.uni-stuttgart.de/simulation-software-engineering-wite2627/challenge/-/work_items/1)
 
 ## Week 1
 

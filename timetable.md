@@ -9,7 +9,8 @@
 |                |        | ⚠️ | **Deadline:** Register for the Challenge | |
 | [3](#week-3)   | 28.10. | 🧑‍🏫 | Virtualization and containers | Gerasimos |
 |                |        | 💻️ | Containers | Gerasimos |
-| [4](#week-4)   | 04.11. | 🎉 | Student presentations: Challenge - step 1 | |
+| [4](#week-4)   | 04.11. | ✏️ | Interim assessment 1 | |
+|                |        | 🎉 | Student presentations: Challenge - step 1 | |
 |                |        | 🎉 | Student presentations: Challenge - step 1 | |
 | [5](#week-5)   | 11.11. | 🧑‍🏫 | Intro packaging, Python packaging | Felix |
 |                |        | 💻️ | Python packaging | Felix |
@@ -21,7 +22,8 @@
 |                |        | 💻️ | CPack | Frédéric |
 | [9](#week-9)   | 09.12. | 🧑‍🏫 | Technical writing | Gerasimos |
 |                |        | 💻️ | Code review | Gerasimos |
-| [10](#week-10) | 16.12. | 🎉 | Student presentations: Challenge - step 2 | |
+| [10](#week-10) | 16.12. | ✏️ | Interim assessment 2 | |
+|                |        | 🎉 | Student presentations: Challenge - step 2 | |
 |                |        | 🎉 | Student presentations: Challenge - step 2 | |
 |                |        | ⚠️ | **Deadline:** Suggest a Challenge contribution | |
 | -              | 23.12. | 🎄 | _Christmas break_ | |
@@ -35,7 +37,8 @@
 |                |        | 💻️ | GitHub Actions | Felix |
 | [14](#week-14) | 03.02. | 🧑‍🏫 | Boost.Test and CTest | Frédéric |
 |                |        | 💻️ | Boost.Test and CTest | Frédéric |
-| [15](#week-15) | 10.02. | 🎉 | Student presentations: Challenge - step 3 | |
+| [15](#week-15) | 10.02. | ✏️ | Interim assessment 3 | |
+|                |        | 🎉 | Student presentations: Challenge - step 3 | |
 |                |        | 🎉 | Student presentations: Challenge - step 3 | |
 
 This timetable is for the winter term 2026-27.
@@ -90,9 +93,10 @@ Chapter 2: Virtualization and Containers
 
 ## Week 4
 
-Student presentations
+Interim assessment 1 and student presentations 1
 
 - Morning:
+    - Assessment on the topics of weeks 1, 2, 3.
     - The Challenge, step one, presentations
 - Afternoon:
     - The Challenge, step one, presentations
@@ -149,9 +153,10 @@ Chapter 4: Documentation - Technical Writing, Code Review
 
 ## Week 10
 
-Student presentations
+Interim assessment 2 and student presentations 2
 
 - Morning:
+    - Assessment on the topics of weeks 5, 6, 7, 8, 9.
     - The Challenge, step two, presentations
 - Afternoon:
     - The Challenge, step two, presentations
@@ -208,9 +213,10 @@ Chapter 5: Testing and Continuous Integration - Boost.Test and CTest
 
 ## Week 15
 
-Student presentations
+Interim assessment 3 and student presentations 3
 
 - Morning:
+    - Assessment on the topics of weeks 11, 12, 13, 14.
     - The Challenge, step three, presentations
 - Afternoon:
     - The Challenge, step three, presentations

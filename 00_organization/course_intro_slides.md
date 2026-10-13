@@ -140,6 +140,7 @@ Two parallel branches:
 - Even more important: having a good overview of technology and being able to **read** code (what we teach in this course)
 - If you use generative AI for your exercises or your challenge: **mandatory** to make this transparent (where, how, ...)
 - It is important, experiment! But also build a firm understanding of the basics of technology!
+- **Not allowed:** GenAI for communication (reports/exercise PR descriptions).
 
 ---
 
@@ -192,7 +193,7 @@ See [GitHub: timetable.md](https://github.com/Simulation-Software-Engineering/Le
 - *"Course accompanying examination"*: no exam, but continuous examination (more like a lab course or a seminar)
 - We look at:
     - Challenge (reports, presentations, contribution; more in the afternoon) (45%)
-    - Exercises (not every detail, but *"outstanding"* / *"good"* / *"ok"* / *"not enough"* ) (50%)
+    - Exercises (pass/fail) + interim assessments on the course topics (25%+25%)
     - Engagement (e.g., contributions to lecture material, ...) (5%)
 - *"good"* everywhere leads to 1.0.
 - We give (brief) feedback after every exercise.
@@ -200,9 +201,18 @@ See [GitHub: timetable.md](https://github.com/Simulation-Software-Engineering/Le
 
 ---
 
+## Examination details
+
+- Challenge: Must pass every step.
+- Exercises: Collect points
+- Feedback on exercises: pass/fail
+- On each presentation week (morning slot): a few (primarily closed-form) understanding questions
+
+---
+
 ## Examination logistics
 
-- You will need to register yourself to the *"exam"* on C@MPUS.
+- You will need to register yourself for the *"exam"* on C@MPUS.
 - Last in: The deadline to pick a software
 - Last out: Once you handed in the first report
 
@@ -210,7 +220,7 @@ See [GitHub: timetable.md](https://github.com/Simulation-Software-Engineering/Le
 
 ## GitLab Account
 
-- Please write a mail till tonight to Gerasimos.
+- Please write an email until tonight to Gerasimos.
     - [gerasimos.chourdakis@ipvs.uni-stuttgart.de](mailto:gerasimos.chourdakis@ipvs.uni-stuttgart.de)
 - Email subject: "GitLab account SSE course"
 - State your **name** and preferred **email-address**

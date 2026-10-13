@@ -54,8 +54,8 @@ slideOptions:
 
 - On leave this year: Benjamin Uekermann - [`@uekerman`](https://github.com/uekerman)
 - SSE Hall of Fame:
-  - Alexander Jaust - [`@ajaust`](https://github.com/ajaust)
-  - Ishaan Desai - [`@IshaanDesai`](https://github.com/IshaanDesai)
+    - Alexander Jaust - [`@ajaust`](https://github.com/ajaust)
+    - Ishaan Desai - [`@IshaanDesai`](https://github.com/IshaanDesai)
 
 ---
 

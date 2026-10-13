@@ -103,7 +103,7 @@ slideOptions:
 
 - Fix something that annoys you.
 - Support programs:
-  - [Outreachy](https://www.outreachy.org/)
-  - [Google Summer of Code](https://summerofcode.withgoogle.com/)
+    - [Outreachy](https://www.outreachy.org/)
+    - [Google Summer of Code](https://summerofcode.withgoogle.com/)
 - Do your thesis on an open-source project 😉
 - Do the SSE challenge!

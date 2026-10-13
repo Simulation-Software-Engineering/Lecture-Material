@@ -36,7 +36,7 @@ slideOptions:
 
 ---
 
-## Starting ooints
+## Starting points
 
 - [DORA declaration](https://sfdora.org/) in 2012: reshape how research impact should be assessed underlining importance of software
 

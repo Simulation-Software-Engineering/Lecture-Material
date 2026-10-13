@@ -191,13 +191,13 @@ See [GitHub: timetable.md](https://github.com/Simulation-Software-Engineering/Le
 ## Examination
 
 - *"Course accompanying examination"*: no exam, but continuous examination (more like a lab course or a seminar)
+- Attendance is mandatory
 - We look at:
     - Challenge (reports, presentations, contribution; more in the afternoon) (45%)
     - Exercises (pass/fail) + interim assessments on the course topics (25%+25%)
     - Engagement (e.g., contributions to lecture material, ...) (5%)
 - *"good"* everywhere leads to 1.0.
 - We give (brief) feedback after every exercise.
-- This year: Adding 3x short multiple-choice exams (optional, engagement points if all passed)
 
 ---
 

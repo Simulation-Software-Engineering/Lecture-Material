@@ -41,38 +41,43 @@ slideOptions:
 
 ---
 
-## The Lecturers
+## Involved people
 
-- Gerasimos (Chourdakis) [`@MakisH`](https://github.com/MakisH)
-- Frédéric (Simonis) [`@fsimonis`](https://github.com/fsimonis)
-- Felix (Neubauer) [`@Logende`](https://github.com/Logende)
-- On leave this year: Benjamin (Uekermann) [`@uekerman`](https://github.com/uekerman)
-
-Additional challenge advisors:
-
-- Serge Kotchourko [`@kotserge`](https://github.com/kotserge)
-
-SSE Hall of Fame:
-
-- Alexander (Jaust) [`@ajaust`](https://github.com/ajaust)
-- Ishaan (Desai) [`@IshaanDesai`](https://github.com/IshaanDesai)
+- Gerasimos Chourdakis - [`@MakisH`](https://github.com/MakisH)
+- Frédéric Simonis - [`@fsimonis`](https://github.com/fsimonis)
+- Felix Neubauer - [`@Logende`](https://github.com/Logende)
+- Serge Kotchourko - [`@kotserge`](https://github.com/kotserge)
 
 ---
 
-## The Idea & Learning Goals
+## Involved people (2)
 
-- No (advanced) programming course
+- On leave this year: Benjamin Uekermann - [`@uekerman`](https://github.com/uekerman)
+- SSE Hall of Fame:
+    - Alexander Jaust - [`@ajaust`](https://github.com/ajaust)
+    - Ishaan Desai - [`@IshaanDesai`](https://github.com/IshaanDesai)
+
+---
+
+## Learning goals
+
 - Learn about all the other things you need to develop research /
     simulation software (to become a *"Research Software Engineer"*):
-    continuous integration, virtualization, building & packaging, documentation, ...
-- Focus on tools for C++ and Python
-- More than a *"3-days software carpentry workshop on Python and Git"*
+    continuous integration, containers, building & packaging, documentation, ...
 - Learn how to contribute to large-scale open-source simulation software projects
 - Learn which important simulation software packages exist and how to use them
 
 ---
 
-## Building Blocks
+## Specific angle
+
+- No (advanced) programming course (for C++ and Python)
+- More than a *"3-days software carpentry workshop on Python and Git"*
+- Focus on simulation software
+
+---
+
+## Building blocks
 
 Two parallel branches:
 
@@ -90,7 +95,7 @@ Two parallel branches:
 ## Prerequisites: Skills
 
 - Basic programming (Python, C++)
-- Basic software development skills (bash, Git, md, ...)
+- Basic software development skills (CLI, Git, Markdown, ...)
 - Some simulation background
     - SimTech, COMMAS students: no issue
     - CS, SE: ideally through Numerical Fundamentals (NumGL) and Fundamentals of Scientific Computing (WissRech)
@@ -108,15 +113,15 @@ Two parallel branches:
 
 ## Material
 
-- Great open-source book to recap: Irving, Hertweck, Johnston, Ostblom, Wickham, and Wilson: [Research Software Engineering with Python](https://third-bit.com/py-rse/)
-- All our material is on [https://github.com/Simulation-Software-Engineering](https://github.com/Simulation-Software-Engineering)
+- Great open-source book to recap: Irving, Hertweck, Johnston, Ostblom, Wickham, and Wilson:<br/> [Research Software Engineering with Python](https://third-bit.com/py-rse/)
+- All our material is on GitHub:<br/> [https://github.com/Simulation-Software-Engineering](https://github.com/Simulation-Software-Engineering)
 - Mainly markdown ... use your favorite tool to render (simply GitHub viewer, [GWDG Hedgedoc](https://pad.gwdg.de/), [stuvus Hedgedoc](https://pad.stuvus.de/), [pandoc](https://pandoc.org/), [PDFs generated in CI](https://github.com/Simulation-Software-Engineering/Lecture-Material/actions/workflows/create-pdfs-from-markdown.yml), [Marp example](https://github.com/uekerman/sse-marp-example), ...)
 - We rework the material as the semester goes.
 - We give links to docs, videos, blog posts, podcasts, ...
 
 ---
 
-## Contribute to the Material
+## Contribute to the material
 
 - You, no joke :see_no_evil: ([many students already contributed](https://github.com/Simulation-Software-Engineering/Lecture-Material/graphs/contributors))
 - Typos, broken links, ...
@@ -133,8 +138,13 @@ Two parallel branches:
 
 - Also changes RSE rapidly
 - Even more important: having a good overview of technology and being able to **read** code (what we teach in this course)
-- If you use generative AI for your exercises or your challenge: **mandatory** to make this transparent (which parts of your code, how, ...)
+- If you use generative AI for your exercises or your challenge: **mandatory** to make this transparent (where, how, ...)
 - It is important, experiment! But also build a firm understanding of the basics of technology!
+- **Not allowed:** GenAI for communication (reports/exercise PR descriptions).
+
+---
+
+## Goal: Learn
 
 ---
 
@@ -145,7 +155,7 @@ Two parallel branches:
 3. Building and Packaging
 4. Documentation
 5. Testing and Continuous Integration
-6. Miscellaneous
+6. Miscellaneous: Publishing, Licenses, ...
 
 ---
 
@@ -157,15 +167,18 @@ Two parallel branches:
 
 - Contribute something small (but not trivial) to a large-scale open-source simulation software (*"good first issue"*)
 - Examples: feature, tutorial, documentation, new packaging, bugfix, ...
-- Run through complete cycle (issue, discussion, PR, review, merge)
+- Run through the complete cycle (issue, discussion, PR, review, merge)
 
-### Timeline
+---
+
+## The Challenge: Timeline
 
 - Pick a software project to contribute to
-- **Step 1**: Present the software: how you got it, what are main features, some tutorials you did, ...
-- **Step 2**: Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work?
-- Suggest contribution
-- **Step 3**: Present the contribution
+- **Step 1**: Present the software: how you got it, what are the main features, some tutorials you did, ...
+- **Step 2**: Present *"RSE infrastructure"* of the software: Which CI / documentation / building / git workflow ... does it use? How do contributions work? Is there a GenAI policy?
+- Suggest a contribution
+- **Step 3**: Present your contribution
+
 
 ---
 
@@ -181,11 +194,25 @@ See [GitHub: timetable.md](https://github.com/Simulation-Software-Engineering/Le
 - Attendance is mandatory
 - We look at:
     - Challenge (reports, presentations, contribution; more in the afternoon) (45%)
-    - Exercises (not every detail, but *"outstanding"* / *"good"* / *"ok"* / *"not enough"* ) (50%)
-    - Other (e.g. contributions to lecture material, ...) (5%)
+    - Exercises (pass/fail) + interim assessments on the course topics (25%+25%)
+    - Engagement (e.g., contributions to lecture material, ...) (5%)
 - *"good"* everywhere leads to 1.0.
 - We give (brief) feedback after every exercise.
-- You will need to register yourself to the *"exam"* on C@MPUS.
+
+---
+
+## Examination details
+
+- Challenge: Must pass every step.
+- Exercises: Collect points
+- Feedback on exercises: pass/fail
+- On each presentation week (morning slot): a few (primarily closed-form) understanding questions
+
+---
+
+## Examination logistics
+
+- You will need to register yourself for the *"exam"* on C@MPUS.
 - Last in: The deadline to pick a software
 - Last out: Once you handed in the first report
 
@@ -193,7 +220,7 @@ See [GitHub: timetable.md](https://github.com/Simulation-Software-Engineering/Le
 
 ## GitLab Account
 
-- Please write a mail till tonight to Gerasimos.
+- Please write an email until tonight to Gerasimos.
     - [gerasimos.chourdakis@ipvs.uni-stuttgart.de](mailto:gerasimos.chourdakis@ipvs.uni-stuttgart.de)
 - Email subject: "GitLab account SSE course"
 - State your **name** and preferred **email-address**

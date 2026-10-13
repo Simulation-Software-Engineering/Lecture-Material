@@ -33,26 +33,18 @@ slideOptions:
   }
 </style>
 
-# Organizational Things Week 8
+# Organizational remarks
 
 ---
 
-## Time Table
+## Exam registration
 
-<style>
-td {
-    font-size: 35px
-}
-</style>
-
-## Exam Registration
-
-- You have to register for the exam node on C@MPUS (we cannot do this for you)
+- You have to register for the exam node on C@MPUS<br/> (we cannot do this for you)
 - The deadline should be very soon
 
 ---
 
-## Challenge First Report: MR Feedback
+## Challenge first report: MR feedback
 
 - Try to write good MR titles and descriptions
 - Resolve threads when comments are answered, done, or dropped
@@ -63,14 +55,12 @@ td {
 
 ---
 
-## Challenge Contribution
+## Challenge contribution
 
 - Please open an issue in the Challenge repo explaining what you want to work on in the contribution. We will then use these issues to further discuss the progress of the contribution. Provide links to issues, pull requests etc.
     - Remember the deadline for opening the issue (see timetable)
-    - If you open earlier, you get feedback earlier
-    - Latest feedback from supervisors: first course week after Christmas
+    - If you open earlier, you get feedback earlier (till early January)
     - Title of issue: "Contribution to SOFTWARE by USERNAME"
     - Tag your supervisor in description
 - Get in touch with maintainers early (through official channels)
     - Discuss before you start developing
-

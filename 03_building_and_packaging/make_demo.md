@@ -43,6 +43,8 @@ int main()
 
 `Makefile`:
 
+<!-- markdownlint-configure-file {"MD010": false } -->
+
 ```makefile
 sse.o : sse/sse.hpp sse/sse.cpp
 	$(CXX) -c sse/sse.cpp
@@ -72,7 +74,7 @@ helloworld : main.cpp sse.o
 - `mkdir clean` and `make clean` confuses Make.
 - phony target (a helper target, doesn't correspond to a file)
 
-```
+```makefile
 + .PHONY : all clean
 ```
 

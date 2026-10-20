@@ -10,7 +10,7 @@
 - GitHub uses [gitignore templates](https://github.com/github/gitignore) if you create a `.gitignore` file from GitHub
 - To get a nice compact `git log`, you can add the following to your `gitconfig`:
 
-    ```
+    ```rc
     [format]
             pretty = format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(20,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
     ```
@@ -24,7 +24,7 @@
 - Prefer `git add -p` over `git add [FILE]`. This allows you to specify what you want to add to a commit in a more fine-grained manner
 - A very nice alias for editing any earlier commit, without having to manually rebase:
 
-    ```
+    ```rc
     [alias]
         amend = "!f() { \
             COMMIT=$(git rev-parse --short \"$1\") && \
@@ -45,7 +45,7 @@
 - GitHub uses [gitignore templates](https://github.com/github/gitignore) if you create a `.gitignore` file from GitHub
 - To get a nice compact `git log`, you can add the following to your `gitconfig`:
 
-    ```
+    ```rc
     [format]
             pretty = format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(20,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
     ```
@@ -76,7 +76,7 @@
 - GitHub uses [gitignore templates](https://github.com/github/gitignore) if you create a `.gitignore` file from GitHub
 - To get a nice compact `git log`, you can add the following to your `gitconfig`:
 
-    ```
+    ```rc
     [format]
             pretty = format:%C(auto,yellow)%h %C(auto,blue)%>(12,trunc)%ad %C(auto,green)%<(20,trunc)%aN%C(auto,reset)%s%C(auto,red)% gD% D
     ```
@@ -93,7 +93,7 @@
 
 ### A helpful git config
 
-```
+```rc
 [push]
         default = simple
         autoSetupRemote = true

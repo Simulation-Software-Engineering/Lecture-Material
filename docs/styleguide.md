@@ -61,6 +61,8 @@ Example:
 
 ## Links
 
+<!-- markdownlint-configure-file {"MD059": false } -->
+
 - Do not use [click here](https://www.smashingmagazine.com/2012/06/links-should-never-say-click-here/) links.
 
 ## Slides

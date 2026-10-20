@@ -29,7 +29,7 @@ cat motivation.txt
 - `Documenting major milestones.`
 - The following:
 
-```
+```text
 Sharing information about myself.
 Documenting major milestones.
 ```

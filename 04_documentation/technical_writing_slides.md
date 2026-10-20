@@ -128,6 +128,8 @@ a community of technical writers.
 
 ## Documentation Content Should Be
 
+<!-- markdownlint-configure-file {"MD059": false } -->
+
 - **ARID** (*"Accept (some) Repetition in Documentation"*)
     - Not like good code (**DRY**: *"don't repeat yourself"*),
       but also not **WET**

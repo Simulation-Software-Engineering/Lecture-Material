@@ -65,7 +65,7 @@ If you know one, the next one is easy to learn.
 - [CppUnit](http://sourceforge.net/apps/mediawiki/cppunit/index.php?title=Main_Page)
 - [Cute](http://www.cute-test.com/)
 - [GoogleTest](http://code.google.com/p/googletest/)
-- [More](https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#C.2B.2B)
+- [More testing frameworks](https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks#C.2B.2B)
 
 ---
 

@@ -30,7 +30,7 @@ pre-commit install       # Install/enable pre-commit in the specific repository
 pre-commit run -a        # Run all pre-commit hooks (not necessary, automatically when committing)
 ```
 
-It will automatically read the markdownlint configuration of this repository. The linter is configured in the files `.mdl.rb` and `.mdlrc`. The majority of the configuration is done in `.mdl.rb`.
+It will automatically read the markdownlint configuration of this repository. The linter is configured in the file `.markdownlint.json`.
 
 ## Third-Party Content
 

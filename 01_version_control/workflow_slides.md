@@ -108,6 +108,7 @@ slideOptions:
     - Easier to review
     - Faster to merge --> fewer conflicts
     - Easier to squash
+- Since 2026, GitHub also allows [stacked PRs](https://docs.github.com/en/pull-requests/how-tos/stacked-pull-requests)
 
 ---
 

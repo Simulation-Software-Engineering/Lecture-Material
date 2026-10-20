@@ -46,7 +46,7 @@ slideOptions:
 
 ---
 
-## Special Files
+## Special Files (1)
 
 Certain files lead to special formatting (normally directly at root of repo):
 
@@ -55,18 +55,37 @@ Certain files lead to special formatting (normally directly at root of repo):
     - ... gets rendered on landing page (and in every folder).
 - `LICENSE`
     - ... contains software license.
-    - ... gets rendered on right sidebar, when clicking on license, and on repo preview.
+    - ... gets rendered on the sidebar and on repo preview.
+
+---
+
+## Special Files (2)
+
 - `CONTRIBUTING.md`
     - ... contains guidelines for contributing.
     - First-time contributors see banner.
 - `CODE_OF_CONDUCT.md`
     - ... contains code of conduct.
-    - ... gets rendered on right sidebar.
+    - ... gets rendered on the sidebar.
+
+---
+
+## Special Files (3)
+
+- `CITATION.cff`
+  - ... contains preferred citation details.
+  - ... gets rendered on the sidebar.
+  - ... export to BibTeX.
+- `AGENTS.md`
+  - ... contains context and instructions for GenAI.
+  - ... more and more coding agents read it.
+
 
 ---
 
 ## Issues and PRs
 
-- Templates for description in `.github` folder
+- Templates for description are placed in the `.github` folder.
 - `closes #34` (or several other keywords: `fixes`, `resolves`) in commit message or PR description will close issue 34 when merged.
-- `help wanted` label gets rendered on repo preview (e.g. *"3 issues need help"*).
+- `co-authored-by: name <email>` will attach multiple authors.
+- `help wanted` issue label gets rendered on repository preview<br/> (e.g. *"3 issues need help"*).

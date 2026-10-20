@@ -73,12 +73,12 @@ Certain files lead to special formatting (normally directly at root of repo):
 ## Special Files (3)
 
 - `CITATION.cff`
-  - ... contains preferred citation details.
-  - ... gets rendered on the sidebar.
-  - ... export to BibTeX.
+    - ... contains preferred citation details.
+    - ... gets rendered on the sidebar.
+    - ... export to BibTeX.
 - `AGENTS.md`
-  - ... contains context and instructions for GenAI.
-  - ... more and more coding agents read it.
+    - ... contains context and instructions for GenAI.
+    - ... more and more coding agents read it.
 
 
 ---

@@ -90,7 +90,7 @@ slideOptions:
 
 - `git log`
 
-    ```
+    ```text
     3e70cb5 8 seconds .. Merge branch 'feature' HEAD -> main
     607a08a 18 seconds.. E feature
     2e4f61f 28 seconds.. C

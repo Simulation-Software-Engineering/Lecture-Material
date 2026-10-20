@@ -4,7 +4,7 @@ author: Firstname lastname
 date: 2026-01-07
 ---
 
-# Introduction
+## Introduction
 
 This is text, **bold text**, *italic text*, and `inline code`.
 

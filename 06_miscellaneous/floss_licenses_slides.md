@@ -111,7 +111,7 @@ Focus on big picture: There are mainly **three types**:
 
 ... so simple, we can actually read and mostly understand it:
 
-```
+```text
 Copyright (c) [year] [fullname]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

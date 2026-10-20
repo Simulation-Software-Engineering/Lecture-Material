@@ -22,10 +22,12 @@ Please note that we update the material over the course of each semester.
 
 ## Linting
 
-The markdown files can be checked using [markdownlint](https://github.com/markdownlint/markdownlint/). Once the linter is installed, run it locally from the root of this repository using
+The markdown files can be checked using [markdownlint](https://github.com/markdownlint/markdownlint/), which is automatically being called from [pre-commit](https://pre-commit.com/):
 
-```
-mdl .
+```shell
+pipx install pre-commit  # Install pre-commit as a tool
+pre-commit install       # Install/enable pre-commit in the specific repository
+pre-commit run -a        # Run all pre-commit hooks (not necessary, automatically when committing)
 ```
 
 It will automatically read the markdownlint configuration of this repository. The linter is configured in the files `.mdl.rb` and `.mdlrc`. The majority of the configuration is done in `.mdl.rb`.

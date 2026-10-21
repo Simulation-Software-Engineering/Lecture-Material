@@ -195,3 +195,4 @@ We use here:
 - [Stack Overflow: "Git show of a merge commit"](https://stackoverflow.com/questions/40986518/git-show-of-a-merge-commit?)
 - [Why Git is hard](https://roadrunnertwice.dreamwidth.org/596185.html)
 - [What is in that .git directory?](https://blog.meain.io/2023/what-is-in-dot-git/)
+- [Julia Evans: Inside .git](https://jvns.ca/blog/2024/01/26/inside-git/)

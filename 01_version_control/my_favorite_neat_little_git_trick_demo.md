@@ -4,6 +4,11 @@
 - Preparation should not take longer than 15 mins, should be a demo.
 - Lecturers also prepare some.
 
+## Tricks from Winter Term 2026/27
+
+- You can always do an interactive rebase: `git rebase -i main`
+- To split repositories, you can use [git-filter-repo](https://github.com/newren/git-filter-repo)
+
 ## Tricks from Winter Term 2025/26
 
 - Click on line number on GitHub and then `blame` to study history of file

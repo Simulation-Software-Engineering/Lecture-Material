@@ -86,14 +86,14 @@ slideOptions:
 
 - VirtualBox runs both on x86 and ARM
 - ARM hosts need ARM VMs (no emulation)
-- Linux support limited/recent (e.g., Ubuntu 25.10)
+- Linux support limited/recent (e.g., Ubuntu 26.04)
 - Emulation alternative (very slow): [UTM](https://mac.getutm.app/)
 
 ---
 
 ## Content of a VirtualBox Image Directory
 
-- `VM.vdi`: The virtual hard drive containing the Guest OS
+- `VM.vdi` / `VM.vmdk`: The virtual hard drive containing the Guest OS
 - `VM.vbox`: XML containing metadata and configuration information (RAM, network devices...)
 - `VM.vbox-prev`: Backup of previous settings
 - `Logs/`: Directory containing log files
@@ -105,10 +105,10 @@ slideOptions:
 
 - Software and drivers to improves Guest's performance
     - Better video support, shared clipboard, ...
-- Might need additional packages. On Ubuntu 24.04 (guest):
+- Might need additional packages. On Ubuntu 26.04 (guest):
 
     ```bash
-    sudo apt install virtualbox-guest-utils virtualbox-guest-x11
+    sudo apt install virtualbox-guest-utils
     ```
 
 ---

@@ -60,12 +60,12 @@ docker container attach tutorial
 - Contains Dockerfile
 
 ```Dockerfile
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 
-RUN apt-get update -y && apt install -y neofetch
+RUN apt-get update -y && apt install -y fastfetch
 WORKDIR /app
 COPY testfile .
-CMD ["neofetch"]
+CMD ["fastfetch"]
 ```
 
 - `docker buildx build --tag testimage .`

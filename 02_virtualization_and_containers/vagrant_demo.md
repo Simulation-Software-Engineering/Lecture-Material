@@ -3,7 +3,7 @@
 ## Demo: Create VM based on a base Ubuntu box
 
 - Create a working directory and enter it.
-- `vagrant init bento/ubuntu-24.04` creates a base `Vagrantfile`.
+- `vagrant init bento/ubuntu-26.04` creates a base `Vagrantfile`.
 - `vagrant up` Creates `Vagrantfile`. This file can be put in version control.
 - Download and set up VM.
 - Will also start VM
@@ -27,7 +27,7 @@
 
     ```ruby
     Vagrant.configure("2") do |config|
-        config.vm.box = "bento/ubuntu-24.04"
+        config.vm.box = "bento/ubuntu-26.04"
         config.vm.provision :shell, path: "bootstrap.sh"
 
         config.vm.provider "virtualbox" do |vb|
@@ -42,7 +42,7 @@
     !/usr/bin/env bash
 
     apt-get update
-    apt-get install -y neofetch vim
+    apt-get install -y fastfetch vim
     echo "export TEST_ENV_VAR=\"Hello SSE\"" >> .bashrc
     ```
 
@@ -50,7 +50,7 @@
 - `vagrant up`: Create VM
     - Image should be prebuilt
 - `vagrant ssh`
-    - Call `neofetch`
+    - Call `fastfetch`
     - `echo $TEST_ENV_VAR` to show that variable is actually set.
 - `vagrant package --base "sse-first-step" --output sse-first-step.box`: Export VM
 - `sse-first-steps.box` can be uploaded to [Vagrant Cloud](https://app.vagrantup.com)

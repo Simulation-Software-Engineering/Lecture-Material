@@ -47,6 +47,14 @@ Fork and clone the repository mentioned above. The repository initially contains
 - Test your Docker container locally. Are all variables set and files available?
     - **Note:** If you rebuild your container often, you might end up with dangling containers. You can remove them (together with any unused images, containers, or objects) with [`docker [image|container|system] prune`)](https://docs.docker.com/engine/reference/commandline/system_prune/) depending on what you want to remove. To delete everything unused: `docker system prune`.
 
+Hints for installing `fastfetch` on Alpine:
+
+- Update the cache with `apk update`
+- Install fastfetch with `apk add fastfetch`
+- Run fastfetch with `fastfetch`
+
+To install `fastfetch` on Ubuntu, do `apt update` and `apt install fastfetch`.
+
 ### 3. Running neofetch and Taking a Screenshot
 
 - Go into your running container.

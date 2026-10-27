@@ -80,9 +80,10 @@ slideOptions:
     - Creates `Vagrantfile` -> Text file (Git friendly)
 - `vagrant up`
     - Create VM and start it
-    - VM is stored in `${HOME}/.vagrant.d/boxes` (overruled by `VAGRANT_HOME`)
+    - VM is stored in `${HOME}/.vagrant.d/boxes`<br/> (overruled by `VAGRANT_HOME`)
 - `vagrant ssh`
     - Connect to VM via ssh
+    - Get an SSH configuration with `vagrant ssh-config`
 - `vagrant destroy`
     - Stops the virtual machine and removes its disk
 
@@ -126,15 +127,15 @@ Details available in [`vagrant_demo.md`](https://github.com/Simulation-Software-
 
     ```ruby
     Vagrant.configure("2") do |config|
-        config.vm.box = "bento/ubuntu-24.04"
-        config.vm.box_version = "202510.26.0"
+        config.vm.box = "bento/ubuntu-26.04"
+        config.vm.box_version = "202606.01.0"
     end
     ```
 
 - Alternative (creates the corresponding `Vagrantfile`):
 
     ```bash
-    vagrant init bento/ubuntu-24.04
+    vagrant init bento/ubuntu-26.04
     ```
 
 - Start VM with `vagrant up`
@@ -160,6 +161,7 @@ Details available in [`vagrant_demo.md`](https://github.com/Simulation-Software-
 ## Vagrant Cloud
 
 - Repository of premade boxes: [HashiCorp Cloud](https://portal.cloud.hashicorp.com/vagrant/discover)
+- **However:** This is now deprecated -> community hosting
 - Package a box:
 
     ```bash
@@ -174,8 +176,8 @@ Details available in [`vagrant_demo.md`](https://github.com/Simulation-Software-
 
 ## Demo: Own box
 
-- `bento/ubuntu-24.04`:
-    - [HashiCorp Cloud](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-24.04)
+- `bento/ubuntu-26.04`:
+    - [HashiCorp Cloud](https://portal.cloud.hashicorp.com/vagrant/discover/bento/ubuntu-26.04)
     - [GitHub](https://github.com/chef/bento)
 - `precice/precice-vm`:
     - [HashiCorp Cloud](https://portal.cloud.hashicorp.com/vagrant/discover/precice/precice-vm)

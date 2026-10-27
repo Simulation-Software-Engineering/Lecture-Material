@@ -125,7 +125,7 @@ Details available in [`singularity_demo.md`](https://github.com/Simulation-Softw
 
 ```Singularity
 BootStrap: docker
-From: ubuntu:22.04
+From: ubuntu:26.04
 
 %post
    apt-get -y update
@@ -167,7 +167,7 @@ Details available in [`singularity_demo.md`](https://github.com/Simulation-Softw
 - Special container format for scientific computing
 - Immutable containers in a single file
 - Prefers integration over isolation
-- Other solutions: [Sarus](https://user.cscs.ch/tools/containers/sarus/), [Charliecloud](https://charliecloud.io/latest/index.html)
+- Other solutions: [Sarus](https://sarus.readthedocs.io/), [Charliecloud](https://charliecloud.io/)
 
 ---
 
@@ -176,4 +176,3 @@ Details available in [`singularity_demo.md`](https://github.com/Simulation-Softw
 - [Apptainer user guide](https://apptainer.org/docs/user/latest/index.html)
 - [Singularity User Guide](https://docs.sylabs.io/guides/main/user-guide/)
 - [Singularity Cloud](https://cloud.sylabs.io/library)
-- [Sarus](https://user.cscs.ch/tools/containers/sarus/)

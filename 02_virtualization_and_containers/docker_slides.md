@@ -57,7 +57,7 @@ slideOptions:
 ## Container Solutions
 
 - Plenty of different container formats
-    - [lxc/lxd](https://linuxcontainers.org/), [Docker](https://www.docker.com/), [podman](https://podman.io/), [Apptainer](https://apptainer.org/), [Sarus](https://user.cscs.ch/tools/containers/sarus/)...
+    - [lxc/lxd](https://linuxcontainers.org/), [Docker](https://www.docker.com/), [podman](https://podman.io/), [Apptainer](https://apptainer.org/), ...
 - Different solutions with different strengths due to different use cases
     - Working on the (Super-)Userspace
     - Direct access to hardware vs. encapsulation
@@ -126,7 +126,7 @@ slideOptions:
     - Option 2: Be member of group `docker` (=makes you root), expected by some applications (e.g. `act`)
 - Alternatives:
     - [Rootless mode](https://docs.docker.com/engine/security/rootless/)
-    - Run Docker in a VM for better isolation
+    - Run Docker in a VM for better isolation ([Docker Sandboxes](https://www.docker.com/products/docker-sandboxes/))
 - Check [security notes](https://docs.docker.com/engine/security/)
 
 ---
@@ -211,12 +211,12 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 ## Dockerfile Example
 
 ```Dockerfile
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 
-RUN apt update -y && apt install -y neofetch
+RUN apt update -y && apt install -y fastfetch
 WORKDIR /app
 COPY testfile .
-CMD ["neofetch"]
+CMD ["fastfetch"]
 ```
 
 ---
@@ -235,6 +235,15 @@ Details available in [`docker_demo.md`](https://github.com/Simulation-Software-E
 - `docker push ACCOUNT/REPOSITORY[:TAG]`
     - Push image to registry (default DockerHub)
     - Needs account and must be logged in via `docker login`
+
+---
+
+## Making Images Smaller
+
+- Base image: `alpine` instead of `ubuntu`
+- Remove APT cache: `rm -rf /var/lib/apt/lists/*`
+- Remove intermediate build files (`*.o`)
+- Nice disk usage utility: [ncdu](https://en.wikipedia.org/wiki/Ncdu)
 
 ---
 

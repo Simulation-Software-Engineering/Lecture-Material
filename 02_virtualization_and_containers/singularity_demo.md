@@ -7,7 +7,7 @@
 - `apptainer shell precice_latest.sif`
     - Run shell in container
     - `whoami` will show same user as I am on the computer
-- `apptainer exec precice_latest.sif precice-tools --version`
+- `apptainer exec precice_latest.sif precice-version`
     - Run command in container
 - Show the mounted filesystems and hardware access.
 - Show that we cannot run things as root.
@@ -30,7 +30,7 @@
     export PATH=/usr/games:$PATH
 
     %runscript
-    precice-tools --version | cowsay | lolcat
+    precice-version | cowsay | lolcat
     ```
 
 - Show file `lolcow.def` content

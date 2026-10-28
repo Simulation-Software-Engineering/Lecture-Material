@@ -9,9 +9,10 @@ Deadline: **Wednesday, November 4, 2026, 9:00**
 These steps take significant time, so it would be good to prepare them before the exercise session:
 
 1. Install [Docker Engine](https://docs.docker.com/engine/)
-2. Install [Apptainer](https://apptainer.org/)
+2. Install [Apptainer](https://apptainer.org/) ([instructions for Ubuntu](https://apptainer.org/docs/admin/main/installation.html#install-ubuntu-packages))
 
 If you have a machine without Linux and or without root rights, a virtual box session with Linux installed is also fine.
+[WSL (Ubuntu on Windows)](https://ubuntu.com/wsl) also works.
 
 Use the demo from the lecture to test your installation.
 

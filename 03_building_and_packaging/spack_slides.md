@@ -247,7 +247,10 @@ Performance is critical on supercomputers
     - Set `EDITOR` environment variable to control what editor is used.
 - `spack info PKG`:
     - Shows information about given package.
-
+- `spack location --package-dir PKG`:
+    - Shows the directory of a package.
+- `spack location --install-dir SPEC`:
+    - Shows directory of an installed spec.
 ---
 
 ## Common Spack Package Properties 1/3
@@ -308,6 +311,7 @@ Performance is critical on supercomputers
 - Dependency specification
 
   ```python
+  depends_on("PACKAGE@VERSION")
   depends_on("PACKAGE@VERSION", when="CONDITION")
   ```
 

@@ -5,6 +5,11 @@ slideOptions:
   width: 1400
   height: 900
   margin: 0.1
+revealjs:
+  transition: slide
+  width: 1400
+  height: 900
+  margin: 0.1
 ---
 
 <style>
@@ -46,31 +51,38 @@ slideOptions:
 
 ## Introduction 1/2
 
-- Scientific software installation on supercomputers faces challenges:
-    - Parallel architectures (MPI, OpenMP, HPX, ...)
-    - Special hardware (accelerators, network, ...)
-    - Greatly varying architectures (AMD, Intel, ARM, ...)
-    - Missing dependencies (too new, too old)
-    - Admins will not/cannot install software for you.
-    - You do not have superuser rights.
+Scientific software installation on supercomputers faces challenges:
+
+- Distributed infrastructure (MPI, OpenMP, HPX, ...)
+- Special hardware (accelerators, network, ...)
+- Greatly varying architectures (AMD/Intel x86-64, ARM, ...)
+- Missing dependencies (too niche, too new, too old)
+- Admins will not/cannot install software for you.
+- You do not have superuser rights.
 
 ---
 
 ## Introduction 2/2
 
-- Performance is critical on supercomputers.
-    - Software needs to be **compiled** to get best performance (special libraries, compilers...).
-    - Optimized compilation settings (best settings not always obvious).
-    - Optimal settings depend on platform (supercomputers might be heterogeneous, for e.g., different generation of CPUs).
-- **HPC-friendly package managers** can help with ...
-    - ... organizing software installations.
-    - ... compilation of software.
+Performance is critical on supercomputers
+
+- Software needs to be **compiled** to achieve the best performance (special libraries, compilers...).
+- Optimized compilation settings (best settings not always obvious).
+- Optimal settings depend on platform (supercomputers might be heterogeneous, for e.g., different generation of CPUs and GPUs).
+
+**HPC-friendly package managers** can help with ...
+
+- ... organizing software installations.
+- ... compilation of software.
+- ... reproducibility of performance.
 
 ---
 
 ## Dependency Graph of FEniCS
 
 <img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/figs/spack/fenics-dependencies.png?raw=true" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
+
+*Libraries, build tools, interpreters*
 
 ---
 
@@ -82,26 +94,34 @@ slideOptions:
 
 ---
 
-## Spack Introduction
+## Spack Introduction 1/2
 
 - HPC-friendly package manager.
     - Common scientific software included.
+    - Builds entire dependency tree from source.
     - No superuser rights needed.
     - Spack's [dependencies](https://spack.readthedocs.io/en/latest/getting_started.html#system-prerequisites) commonly available on supercomputers.
-- Deals with dependency resolution, compilation flags and compilation.
+- Deals with variants, dependency resolution, compilation flags and compilation.
+- Prefers to install newest version of packages.
+- Can find and use external packages (good for compilers and tools).
+
+---
+
+## Spack Introduction 2/2
+
 - [Open-source project on GitHub](https://github.com/spack/spack).
+- Separate [package repository](https://github.com/spack/spack-packages).
 - Valuable resources:
     - [Good starter guides](https://spack-tutorial.readthedocs.io/en/latest/).
     - [Extensive documentation](https://spack.readthedocs.io).
     - [Spack Slack](https://slack.spack.io/) for communication with community.
 - Spack [bootstraps](https://spack.readthedocs.io/en/latest/bootstrapping.html) its own dependencies the first time it is used.
-- Prefers to install newest version of packages.
 
 ---
 
 ## Step by Step Plan
 
-- **Goal**: Create a Spack package for HelloWorld code.
+- **Goal**: Create a Spack package for a HelloWorld code.
 - Steps:
     1. Install and configure Spack.
     2. Learn how to use Spack for package management and installation.
@@ -128,7 +148,6 @@ slideOptions:
     - Take care of spaces when editing (2 space indent).
 - User configuration in `${HOME}/.spack`.
 - Several [other configuration scopes](https://spack.readthedocs.io/en/latest/configuration.html).
-- If cache is out of date check `${HOME}/.spack/cache/`.
 
 ---
 
@@ -137,19 +156,21 @@ slideOptions:
 - Spack works with `spec`s (`spec`=specification), for example
 
   ```bash
-  spack install petsc@3.16.1+mpi -shared~suite-sparse
+  spack install cmake@3.31 +doc -ncurses ~qtgui
   ```
 
   A spec may be more precise than just a package name.
 
     - `+` selects some option
     - `~`/`-` deselects some option
+    - `cppflags="..."` adds additional compilation flags
+    - `^ SPEC` constrains dependencies
 
 - Loading and unloading of specs by
 
   ```bash
-  spack load petsc@3.16.1
-  spack unload petsc@3.16.1
+  spack load cmake@3.31
+  spack unload cmake@3.31
   ```
 
 ---
@@ -166,7 +187,6 @@ slideOptions:
     - Show packages that would be installed for specified package.
 - `spack install SPEC`:
     - Installs package.
-    - `--reuse` parameter will try to reuse installed packages.
 - `spack uninstall SPEC`:
     - Uninstalls package.
 - `spack load SPEC`:
@@ -182,6 +202,8 @@ slideOptions:
     - Shows information about given package.
 - `spack remove SPEC`:
     - Removes a spec from current environment.
+- `spack repo ...`:
+    - Manages package repositories
 - `spack gc`:
     - Garbage collection, removes all packages not needed in any environment.
     - Will remove compile-time/link-time dependencies.
@@ -201,7 +223,7 @@ slideOptions:
 
 ## Spack Packaging
 
-- By default packages reside in
+- By default, packages reside in
 
   ```bash
   .spack/package_repos/*user*/repos/spack_repo/builtin/packages/
@@ -216,8 +238,9 @@ slideOptions:
 
 ## Helpful Spack Packaging Commands
 
-- `spack create URL`
-    - Creates boilerplate package from template.
+- `spack create --template T URL`
+    - Creates boilerplate package using a build system template.
+    - Build system `T` can be make, cmake, python, cargo, ...
     - `URL` points to some archive one can download.
 - `spack edit PKG`:
     - Open given Spack package in editor.
@@ -259,22 +282,23 @@ slideOptions:
 
 ## Common Spack Package Properties 2/3
 
-- Version number and hash of archive
+- Version number and hash of its archive
 
   ```python
   version("0.2.0", sha256="a77499bbfd0...")
   ```
 
+- Version name and branch of repository
+
+  ```python
+  version("develop", branch="develop")
+  ```
+
 - Variants
 
   ```python
-  variant("name", default=BOOL, description="STRING")
-  ```
-
-  Example:
-
-  ```python
-  variant("python", default=True, description="Enable Python support")
+  variant("debug_log", default=True, description="Enable DEBUG log.")
+  variant("assertions", default=False, description="Enable asserts.")
   ```
 
 ---
@@ -293,6 +317,7 @@ slideOptions:
   variant("python", default=True, description="Enable Python support")
 
   depends_on("python@3:", when="+python")
+  depends_on("python@3.10:", when="@4: +python")
   ```
 
 - `@3:`, `@:3`, `@2:3`:
@@ -351,8 +376,10 @@ slideOptions:
     - [Spack](https://spack.io/)
         - ... originates from LLNL in the US.
         - ... is built around concretizer.
+        - ... captures what can be built.
     - [EasyBuild](https://github.com/easybuilders/easybuild)
         - ... originates from Ghent University in Belgium.
+        - ... captures configurations that are known to work.
 - Both suitable for users, admins, researchers.
 - Package managers introduce additional complexity -> Alternatives?
     - Manual installation and module system like [`Lmod`](https://lmod.readthedocs.io/en/latest/) or [`Modules`](http://modules.sourceforge.net/).
@@ -367,10 +394,12 @@ slideOptions:
     - Initiated in Europe.
     - Focus on avoiding recompilation.
     - Targets workstations/PCs, supercomputers and cloud computing.
+    - Built on EasyBuild
 - [Extreme-scale Scientific Software Development Kit (xSDK)](https://xsdk.info/).
     - Initiated in the US.
     - Currently strong focus on mathematical software.
     - Focuses on defining requirements scientific should adhere to (build system, testing, documentation, etc.).
+    - Built on Spack
 - Both focus on specifying basic software stack for HPC.
 
 ---
@@ -388,8 +417,9 @@ slideOptions:
 
 ## Presentations
 
+- [Spack v1.0 and Beyond: Managing HPC Software Stacks](https://archive.fosdem.org/2026/schedule/event/DHUQAN-spack-one-zero-and-beyond/)
 - [Spack's new Concretizer](https://archive.fosdem.org/2020/schedule/event/dependency_solving_not_just_sat/)
 - [Build for your microarchitecture: experiences with Spack and archspec](https://archive.fosdem.org/2020/schedule/event/archspec/)
 - [Binary packaging for HPC with Spack](https://archive.fosdem.org/2018/schedule/event/llnl_spack/)
-- ["How To Make Package Managers Cry"](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)
+- [How To Make Package Managers Cry](https://archive.fosdem.org/2018/schedule/event/how_to_make_package_managers_cry/)
 - [Software Packages in HPC with Spack and EasyBuild](https://www.archer2.ac.uk/training/courses/200617-spack-easybuild/)

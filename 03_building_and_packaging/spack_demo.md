@@ -1,8 +1,8 @@
 # Packaging for High-Performance Computing Demo Notes
 
-It is recommended to do this demo in a fresh Docker container. To understand how Spack itself is installed, follow Step 1 in a fresh Ubuntu Noble container (`docker run --rm -it ubuntu:noble`).
+It is recommended to do this demo in a fresh Docker container. To understand how Spack itself is installed, follow Step 1 in a fresh Ubuntu container (`docker run --rm -it ubuntu:noble`).
 
-To make things simpler from Step 2 onwards, create a container from the [spack/ubuntu-noble](https://hub.docker.com/r/spack/ubuntu-noble) image, so that Spack is preinstalled. Install a text editor (for e.g. vim) before running a Spack command.
+To make things simpler from Step 2 onwards, create a container from the [spack/ubuntu-noble:1.2.2](https://hub.docker.com/r/spack/ubuntu-noble) image, so that Spack is preinstalled. Install a text editor (for e.g. vim) before running a Spack command.
 
 ## 1. Spack Setup/Installation
 
@@ -11,7 +11,7 @@ To make things simpler from Step 2 onwards, create a container from the [spack/u
 - Get the Spack repository
 
   ```bash
-  git clone -b v1.1.0 --depth=2 https://github.com/spack/spack.git
+  git clone -b v1.2.2 --depth=2 https://github.com/spack/spack.git
   ```
 
 - Initializing Spack with

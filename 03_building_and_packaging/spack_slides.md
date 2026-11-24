@@ -82,7 +82,7 @@ Performance is critical on supercomputers
 
 <img src="https://github.com/Simulation-Software-Engineering/Lecture-Material/blob/main/03_building_and_packaging/figs/spack/fenics-dependencies.png?raw=true" width=100%; style="margin-left:auto; margin-right:auto; padding-top: 25px; padding-bottom: 25px">
 
-*Libraries, build tools, interpreters*
+Libraries, build tools, interpreters
 
 ---
 

@@ -32,6 +32,11 @@ pre-commit run -a        # Run all pre-commit hooks (not necessary, automaticall
 
 It will automatically read the markdownlint configuration of this repository. The linter is configured in the file `.markdownlint.json`.
 
+## Local Slides
+
+To render the slides locally, install `mkslides` using pipx or uv.
+Then run `mkslides serve --open .` in the root of the repository.
+
 ## Third-Party Content
 
 In several parts of the material, we use content from

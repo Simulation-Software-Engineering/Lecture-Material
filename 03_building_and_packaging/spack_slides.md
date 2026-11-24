@@ -39,8 +39,8 @@ slideOptions:
 ## Learning goals
 
 - Understand the challenges of deploying software to supercomputers.
-- Use Spack to install software.
-- Create a Spack package for your own software.
+- Learn how to use Spack to install software.
+- Learn how to create a Spack package for your own software.
 
 ---
 
@@ -48,12 +48,13 @@ slideOptions:
 
 Scientific software installation on supercomputers faces challenges:
 
-- Distributed infrastructure (MPI, OpenMP, HPX, ...)
+- Parallel computing (OpenMP, Intel TBB, ...)
+- Distributed infrastructure (MPI, HPX, ...)
 - Special hardware (accelerators, network, ...)
 - Greatly varying architectures (AMD/Intel x86-64, ARM, ...)
 - Missing dependencies (too niche, too new, too old)
-- Admins will not/cannot install software for you.
 - You do not have superuser rights.
+- Admins will not/cannot install software for you.
 
 ---
 

@@ -5,11 +5,6 @@ slideOptions:
   width: 1400
   height: 900
   margin: 0.1
-revealjs:
-  transition: slide
-  width: 1400
-  height: 900
-  margin: 0.1
 ---
 
 <style>

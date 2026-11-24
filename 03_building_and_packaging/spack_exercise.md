@@ -16,7 +16,7 @@ The [code repository](https://github.com/Simulation-Software-Engineering/spack-e
 
 - `v0.1.0` has no special dependencies. The C++ standard library is automatically included.
 - `v0.2.0` depends on Boost (at least version `1.65.1`)
-- `v0.3.0` depends on Boost (at least version `1.65.1`) and `yaml-cpp` (at least version `0.7.0`)
+- `v0.3.0` depends on Boost (at least version `1.65.1`) and `yaml-cpp` (version `0.7.0`)
 
 **Note**: We require `yaml-cpp` in version `0.7.0`. This package will be automatically installed via Spack if you specify the dependency correctly in you package. You should **not** install `yaml-cpp` manually in this exercise.
 

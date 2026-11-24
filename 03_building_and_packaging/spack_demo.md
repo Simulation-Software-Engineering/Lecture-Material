@@ -98,18 +98,29 @@ To make things simpler from Step 2 onwards, create a container from the [spack/u
 
       # FIXME: Add a proper url for your package's homepage here.
       homepage = "https://www.example.com"
-      url      = "https://github.com/Simulation-Software-Engineering/HelloWorld/archive/refs/tags/v0.3.0.tar.gz"
+      url = "https://github.com/Simulation-Software-Engineering/HelloWorld/archive/refs/tags/v0.3.0.tar.gz"
+
+      # FIXME: Uncomment and add the upstream supplier (organization or author).
+      # If unknown or inapplicable, remove this entire block.
+      # supplier = organization_or_author
 
       # FIXME: Add a list of GitHub accounts to
       # notify when the package is updated.
-      # maintainers = ['github_user1', 'github_user2']
+      # maintainers("github_user1", "github_user2")
 
-      version('0.3.0', sha256='5e95bf1904ebfbd5c28b064bff098a3bb654bf7c407f2031295e3588d6d9e8fa')
-      version('0.2.0', sha256='a77499bbfd0b8f4d7070b06c491e062fa608fdd7e939d6c37796bdafdbbaa35a')
-      version('0.1.0', sha256='2e99e2ff2b955b9d17645367a0a7eeb485162d9336cdbf0034b9d95d464f3157')
+      # FIXME: Add the SPDX identifier of the project's license below.
+      # See https://spdx.org/licenses/ for a list. Upon manually verifying
+      # the license, set checked_by to your Github username.
+      license("UNKNOWN", checked_by="github_user1")
+
+      version("0.3.0", sha256="5e95bf1904ebfbd5c28b064bff098a3bb654bf7c407f2031295e3588d6d9e8fa")
+      version("0.2.0", sha256="a77499bbfd0b8f4d7070b06c491e062fa608fdd7e939d6c37796bdafdbbaa35a")
+      version("0.1.0", sha256="2e99e2ff2b955b9d17645367a0a7eeb485162d9336cdbf0034b9d95d464f3157")
+
+      depends_on("cxx", type="build")
 
       # FIXME: Add dependencies if required.
-      # depends_on('foo')
+      # depends_on("foo")
 
       def cmake_args(self):
           # FIXME: Add arguments other than
@@ -118,6 +129,7 @@ To make things simpler from Step 2 onwards, create a container from the [spack/u
           args = []
           return args
   ```
+
 
   At least the `FIXME` statements should be fixed before releasing the package. The Spack package recipe is written in Python so we can also do common Python magic here.
 
@@ -182,7 +194,7 @@ To make things simpler from Step 2 onwards, create a container from the [spack/u
   spack edit helloworld
   ```
 
-  or open `package.py` file in `.spack/package_repos/fncqgg4/repos/spack_repo/builtin/packages/helloworld/package.py`.
+  or open `package.py` file in `spack location -p helloworld`.
 
 - Add the `main` branch as a version
 

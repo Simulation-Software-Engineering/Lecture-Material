@@ -215,6 +215,12 @@ To make things simpler from Step 2 onwards, create a container from the [spack/u
 
   This states that the package depends on Python version `3.0.0` or newer if we use `helloworld` of version `0.3.0` or newer. The software also requires at most `zlib` in version `1.2.10`
 
+- Remove all installed versions to avoid Spack reusing installed specs
+
+  ```bash
+  spack uninstall --all helloworld
+  ```
+
 - Show new dependencies
 
   ```bash
